@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Sp)(type KiCad)(uri ${KIPRJMOD}/Sp.pretty)(options "")(descr Sp))
+  (lib (name Sp-433)(type KiCad)(uri /media/leruste/SAUVEGARDE1/Données/SCAO/kicad/e-r-433/Sp.pretty)(options "")(descr ""))
+)

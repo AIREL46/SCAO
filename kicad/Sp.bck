@@ -1,0 +1,34 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 3.3V
+K POWER, PWR
+$ENDCMP
+#
+$CMP CONN_01X01_teensy
+D Connector 01x01
+$ENDCMP
+#
+$CMP Capuchon
+D Button
+K Switch
+$ENDCMP
+#
+$CMP SW_PUSH_m
+D Button
+K Switch
+$ENDCMP
+#
+$CMP TEST_1P_R
+D point
+K point tp
+$ENDCMP
+#
+$CMP VBAT
+K POWER, PWR
+$ENDCMP
+#
+$CMP VUSB
+K POWER, PWR
+$ENDCMP
+#
+#End Doc Library

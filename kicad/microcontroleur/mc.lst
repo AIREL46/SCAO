@@ -1,0 +1,20 @@
+eeschema (2013-jul-07)-stable  >> Creation date: Wed 04 Feb 2015 16:52:12 CET
+#Cmp ( order = Reference )
+| _20k       R1          
+| _7404      DIL14       
+| AD595      DIL14       
+| P01        J01         
+| PIC16F1459-EP DIL20       
+| WE         USB-MINI-B  
+#End Cmp
+
+#Cmp ( order = Value )
+| R1           _20k      
+| DIL14        _7404     
+| DIL14        AD595     
+| J01          P01       
+| DIL20        PIC16F1459-EP
+| USB-MINI-B   WE        
+#End Cmp
+
+#End List
