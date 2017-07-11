@@ -1,0 +1,38 @@
+De: france.support@ni.com
+Envoyé: mardi 3 mars 2009 09:00
+À: regis.leruste@free.fr
+Objet: Re: (Reference#7232301) Phone Support E-Mail
+
+
+
+II est important de ne pas supprimer ou modifier le numéro de référence inclus dans le sujet de ce mail, sinon votre message sera rejeté
+
+Mr Leruste,
+
+Je me permets de vous écrire un mail pour faire suite à votre demande de support technique.
+
+Si j'ai bien compris votre demande, je vous propose de regarder l'exemple en piece jointe.
+
+Il permets de sélectionner une portion glissante d'une waveform pour en sélectionner ensuite le maximun et t le minimun. Ainsi vous obtenez deux courbes représentant le niveau haut et le niveau bas de votre signal d'origine.
+
+Je vous prie de ne pas hésiter à me contacter par mail ou par téléphoen au
+01 57 66 24 24 muni du numéro de dossier 7232301 afin de me faire part de vos remarques ou commentaires.
+
+Dans l'attente de votre réponse, je vous souhaite une bonne journée,
+
+Cordialement,
+
+Florent Argod
+National Instruments France | Application Engineer
+
+**************************************************************************************************************************************************************************************************************************
+
+Téléchargez les présentations techniques NIDays 2009 : www.nidays.com
+
+
+National Instruments France
+2, rue Hennape
+92735 Nanterre Cedex, France
+Tel.: +33 (0)1 57 66 24 24
+Fax: +33 (0)1 57 66 24 14
+Société de droit américain  – capital social 1.000,00 dollars US – 11500 North Mopac Expressway, Austin-Texas USA – 10056236 RCS Nanterre – SIRET B 344 497 649 00048 – APE 516J – N.I.I. FR 57344497649
