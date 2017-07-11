@@ -1,0 +1,55 @@
+National Instruments - Informations sur la demande d’activation de licence
+
+Informations concernant la demande d’activation
+
+    Produit :                LabVIEW Système de développement
+    Version :                8.2
+    Numéro de série :        M62X93295
+    ID d’ordinateur :        5CFG-8FBB-ZWKN-35N7
+
+Instructions :
+
+1. Pour activer votre licence par Internet, allez sur ni.com/activate
+   et suivez les instructions. Toutes les informations dont vous aurez
+   besoin sont listées ci-dessus.
+
+2. Pour activer votre licence par email, joignez ce fichier à un
+   e-mail vide sans ligne de sujet et envoyez-le à activate@ni.com. Vous
+   recevrez en retour un e-mail contenant votre code d’activation dans le
+   jour ouvrable suivant l’envoi de votre demande, le temps de réponse
+   typique étant néanmoins inférieur à dix minutes.
+
+3. Pour activer votre licence par téléphone, contactez un représentant
+   du service à la clientèle de National Instruments. Si vous résidez
+   aux États-Unis ou au Canada, veuillez appeler le (888) 280-7645.
+   Sinon, contactez le bureau de la filiale National Instruments la
+   plus proche.
+
+
+NE MODIFIEZ PAS LES LIGNES SUIVANTES
+****************************************
+
+email=
+FirstName=LERUSTE
+LastName=REGIS
+Organization=Particulier
+SerialNum=M62X93295
+Feature=LabVIEW_ADE_080200
+Version=8.2
+MachineId=5CFG-8FBB-ZWKN-35N7
+OsType=Windows
+Locale=F
+ExpDate=
+BatchFeatures=LabVIEW_ADE_080000%2CLabVIEW_ADE_080200%2CLabVIEW_AppBuilder_PKG%2CLabVIEW_AppBuilder_PKG%2CLabVIEW_RemotePanelConnection%2CLabVIEW_RemotePanelConnection%2CSignalExpress_ADE_030500%2CVILogger_Core_PKG
+BatchVersions=8.0%2C8.2%2C8.0%2C8.2%2C8.0%2C8.2%2C3.5%2C2.0
+NiLmVersion=3.2
+registerProduct=N
+rPhone=
+rFax=
+rAddress1=
+rAddress2=
+rCity=
+rStateProv=
+rPostalCode=
+rCountry=
+rEmail=
