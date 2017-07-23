@@ -161,8 +161,8 @@ e-p-433
 Text Notes 3450 3500 0    30   ~ 0
 * : Cut to separate VIN from VUSB,\nif using a battery charger or external\npower for USB device mode
 $Bitmap
-Pos 9200 6850
-Scale 0,200000
+Pos 9625 6825
+Scale 0,100000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 0F 81 00 00 05 90 08 02 00 00 00 61 88 44 
 58 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC DC B1 52 14 5B 
