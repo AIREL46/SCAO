@@ -45,7 +45,7 @@ Comment3 "1 rue du LANGUERNAIS"
 Comment4 "Régis LERUSTE"
 $EndDescr
 Text Notes 5900 2050 0    60   ~ 0
-Chargeur Li-Ion
+Battery manager
 $Comp
 L LED D3
 U 1 1 5800E0A0
@@ -155,14 +155,14 @@ Text Notes 8300 1500 2    30   ~ 0
 Text Notes 8200 1500 2    30   ~ 0
 -
 Text Notes 8325 1325 2    30   ~ 0
-Batterie
+LI-ON\nBattery
 Text Notes 6900 5725 0    160  ~ 32
 e-p-433
 Text Notes 3450 3500 0    30   ~ 0
 * : Cut to separate VIN from VUSB,\nif using a battery charger or external\npower for USB device mode
 $Bitmap
-Pos 9200 6850
-Scale 0,200000
+Pos 9625 6825
+Scale 0,100000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 0F 81 00 00 05 90 08 02 00 00 00 61 88 44 
 58 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC DC B1 52 14 5B 
@@ -4960,7 +4960,7 @@ CB 41 07 00 00 00 00 00 00 00 00 00 00 E0 72 D0 01 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 2E 07 1D 00 00 00 00 00 00 00 00 00 00 80 CB 41 07 00 00 00 00 00 00 
 00 00 00 00 E0 72 D0 01 00 00 00 00 00 00 00 00 00 00 B8 1C 74 00 00 00 00 00 00 00 00 00 00 00 
 2E 07 1D 00 00 00 00 00 00 00 00 00 00 80 2B 9B 72 A2 EA 82 B7 AD 55 00 00 00 00 49 45 4E 44 AE 
-42 60 82 0D 
+42 60 82 00 
 EndData
 $EndBitmap
 Text Notes 4625 4150 0    30   ~ 0
@@ -5044,7 +5044,7 @@ F 9 "2,20 €" H 7700 2225 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 Text Notes 5375 4000 0    50   ~ 0
-Mesures
+Calibration
 NoConn ~ 3800 4250
 NoConn ~ 3800 4350
 NoConn ~ 3800 4450
