@@ -44,121 +44,108 @@ Comment2 "44350 St MOLF"
 Comment3 "1 rue du LANGUERNAIS"
 Comment4 "Régis LERUSTE"
 $EndDescr
-Text Notes 5900 2050 0    60   ~ 0
+Text Notes 8145 975  0    100  ~ 20
 Battery manager
 $Comp
 L LED D2
 U 1 1 5800E0A0
-P 5625 2375
-F 0 "D2" H 5625 2475 30  0000 C CNN
-F 1 "Jaune" H 5625 2275 30  0000 C CNN
-F 2 "LEDs:LED_0603" H 5625 2375 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519971-da-01-ml-LED_LYL29K_J1K2_26_de_en.pdf" H 5625 2375 50  0001 C CNN
-F 4 "LED CMS 0603 jaune 4.5 mcd 160 ° 2 mA 1.8 V" H 5625 2375 60  0001 C CNN "Désignation"
-F 5 "OSRAM" H 5625 2375 60  0001 C CNN "Fabricant"
-F 6 "LY L29K-J1K2-26" H 5625 2375 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5625 2375 60  0001 C CNN "Distributeur"
-F 8 "519971 - 62" H 5625 2375 60  0001 C CNN "Ref-distri"
-F 9 "0,20 €" H 5625 2375 60  0001 C CNN "Prix"
-	1    5625 2375
+P 8125 1525
+F 0 "D2" H 8260 1455 60  0000 C CNB
+F 1 "Jaune" H 8125 1625 60  0000 C CNB
+F 2 "LEDs:LED_0603" H 8125 1525 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519971-da-01-ml-LED_LYL29K_J1K2_26_de_en.pdf" H 8125 1525 50  0001 C CNN
+F 4 "LED CMS 0603 jaune 4.5 mcd 160 ° 2 mA 1.8 V" H 8125 1525 60  0001 C CNN "Désignation"
+F 5 "OSRAM" H 8125 1525 60  0001 C CNN "Fabricant"
+F 6 "LY L29K-J1K2-26" H 8125 1525 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 8125 1525 60  0001 C CNN "Distributeur"
+F 8 "519971 - 62" H 8125 1525 60  0001 C CNN "Ref-distri"
+F 9 "0,20 €" H 8125 1525 60  0001 C CNN "Prix"
+	1    8125 1525
 	0    -1   -1   0   
 $EndComp
 $Comp
 L R R15
 U 1 1 5800E0FF
-P 5775 2575
-F 0 "R15" V 5855 2575 30  0000 C CNN
-F 1 "470" V 5775 2575 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 5705 2575 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457723-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__470E.pdf" H 5775 2575 50  0001 C CNN
-F 4 "Résistance à couche épaisse 470 Ω CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 5775 2575 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 5775 2575 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0471T5E" H 5775 2575 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5775 2575 60  0001 C CNN "Distributeur"
-F 8 "1457723 - 62" H 5775 2575 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 5775 2575 60  0001 C CNN "Prix"
-	1    5775 2575
-	0    1    1    0   
+P 8125 1875
+F 0 "R15" V 8130 1875 60  0000 C CNB
+F 1 "470" V 8215 1880 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 8055 1875 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457723-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__470E.pdf" H 8125 1875 50  0001 C CNN
+F 4 "Résistance à couche épaisse 470 Ω CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 8125 1875 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 8125 1875 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0471T5E" H 8125 1875 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 8125 1875 60  0001 C CNN "Distributeur"
+F 8 "1457723 - 62" H 8125 1875 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 8125 1875 60  0001 C CNN "Prix"
+	1    8125 1875
+	-1   0    0    1   
 $EndComp
 $Comp
 L R R18
 U 1 1 5800E220
-P 6675 2425
-F 0 "R18" V 6755 2425 30  0000 C CNN
-F 1 "4.7K" V 6675 2425 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 6605 2425 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 6675 2425 50  0001 C CNN
-F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 6675 2425 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 6675 2425 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0472T5E" H 6675 2425 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 6675 2425 60  0001 C CNN "Distributeur"
-F 8 "1457796 - 62" H 6675 2425 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 6675 2425 60  0001 C CNN "Prix"
-	1    6675 2425
+P 9125 1950
+F 0 "R18" V 9135 1950 60  0000 C CNB
+F 1 "4.7K" V 9225 1960 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 9055 1950 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 9125 1950 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 9125 1950 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 9125 1950 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 9125 1950 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 9125 1950 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 9125 1950 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 9125 1950 60  0001 C CNN "Prix"
+	1    9125 1950
 	-1   0    0    1   
 $EndComp
-NoConn ~ 3800 5050
-NoConn ~ 3800 4950
-NoConn ~ 3800 4850
-NoConn ~ 3800 4750
-NoConn ~ 3800 4650
-NoConn ~ 3800 4050
-NoConn ~ 3800 3950
 $Comp
 L CONN_01X06 P5
 U 1 1 58025B97
-P 8525 3575
-F 0 "P5" V 8525 3950 50  0000 C CNN
-F 1 "Transmitter" V 8525 3125 30  0000 C CNN
-F 2 "Connect:PINHEAD1-6" H 8525 3575 50  0001 C CNN
-F 3 "https://cdn.sparkfun.com/datasheets/Prototyping/SP-140520-XX-001.pdf" H 8525 3575 50  0001 C CNN
-F 4 "Arduino 6-Pin Stackable Headers" H 8525 3575 60  0001 C CNN "Désignation"
-F 5 "GCT" H 8525 3575 60  0001 C CNN "Fabricant"
-F 6 "SP-140520-06-001" H 8525 3575 60  0001 C CNN "Ref-fab"
-F 7 "Sparkfun" H 8525 3575 60  0001 C CNN "Distributeur"
-F 8 "PRT09280" H 8525 3575 60  0001 C CNN "Ref-distri"
-F 9 "0,50 €" H 8525 3575 60  0001 C CNN "Prix"
-	1    8525 3575
+P 9695 4305
+F 0 "P5" V 9695 4680 50  0000 C CNN
+F 1 "Transmitter" H 10000 4680 60  0000 C CNB
+F 2 "Connect:PINHEAD1-6" H 9695 4305 50  0001 C CNN
+F 3 "https://cdn.sparkfun.com/datasheets/Prototyping/SP-140520-XX-001.pdf" H 9695 4305 50  0001 C CNN
+F 4 "Arduino 6-Pin Stackable Headers" H 9695 4305 60  0001 C CNN "Désignation"
+F 5 "GCT" H 9695 4305 60  0001 C CNN "Fabricant"
+F 6 "SP-140520-06-001" H 9695 4305 60  0001 C CNN "Ref-fab"
+F 7 "Sparkfun" H 9695 4305 60  0001 C CNN "Distributeur"
+F 8 "PRT09280" H 9695 4305 60  0001 C CNN "Ref-distri"
+F 9 "0,50 €" H 9695 4305 60  0001 C CNN "Prix"
+	1    9695 4305
 	1    0    0    1   
 $EndComp
-Text Notes 8675 3775 1    30   ~ 0
-Shield transmitter
-Text Notes 8275 3830 2    30   ~ 0
+Text Notes 9945 4555 1    60   ~ 12
+Shield\ntransmitter
+Text Notes 9485 4570 2    60   ~ 12
 GND
-Text Notes 8275 3730 2    30   ~ 0
+Text Notes 9475 4470 2    60   ~ 12
 DATA
-Text Notes 8275 3630 2    30   ~ 0
+Text Notes 9480 4350 2    60   ~ 12
 VCC
-Text Notes 8275 3530 2    30   ~ 0
+Text Notes 9445 4245 2    60   ~ 12
 ANT
-Text Notes 4575 4850 0    50   ~ 0
+Text Notes 6575 5050 0    100  ~ 20
 T2
 $Comp
 L CONN_01X02 P4
 U 1 1 5804BEA6
-P 8250 1575
-F 0 "P4" V 8250 1725 30  0000 C CNN
-F 1 "Batterie" V 8250 1375 30  0000 C CNN
-F 2 "Sp:con_bat" H 8250 1575 50  0001 C CNN
-F 3 "http://www.robotshop.com/media/files/pdf/datasheet-prt-09749.pdf" H 8250 1575 50  0001 C CNN
-F 4 "Embase JST à 2 broches à angle droit SFE" H 8250 1575 60  0001 C CNN "Désignation"
-F 5 "4UCON TECHNOLOGY INC." H 8250 1575 60  0001 C CNN "Fabricant"
-F 6 "RB-Spa-454" H 8250 1575 60  0001 C CNN "Ref-fab"
-F 7 "Roboshop" H 8250 1575 60  0001 C CNN "Distributeur"
-F 8 "PRT-09749" H 8250 1575 60  0001 C CNN "Ref-distri"
-F 9 "1,25 €" H 8250 1575 60  0001 C CNN "Prix"
-	1    8250 1575
+P 10585 1700
+F 0 "P4" V 10575 1510 60  0000 C CNB
+F 1 "Bat." V 10580 1345 60  0000 C CNB
+F 2 "Sp:con_bat" H 10585 1700 50  0001 C CNN
+F 3 "http://www.robotshop.com/media/files/pdf/datasheet-prt-09749.pdf" H 10585 1700 50  0001 C CNN
+F 4 "Embase JST à 2 broches à angle droit SFE" H 10585 1700 60  0001 C CNN "Désignation"
+F 5 "4UCON TECHNOLOGY INC." H 10585 1700 60  0001 C CNN "Fabricant"
+F 6 "RB-Spa-454" H 10585 1700 60  0001 C CNN "Ref-fab"
+F 7 "Roboshop" H 10585 1700 60  0001 C CNN "Distributeur"
+F 8 "PRT-09749" H 10585 1700 60  0001 C CNN "Ref-distri"
+F 9 "1,25 €" H 10585 1700 60  0001 C CNN "Prix"
+	1    10585 1700
 	0    -1   -1   0   
 $EndComp
-Text Notes 8300 1500 2    30   ~ 0
-+
-Text Notes 8200 1500 2    30   ~ 0
--
-Text Notes 8325 1325 2    30   ~ 0
-LI-ON\nBattery
-Text Notes 6900 5725 0    160  ~ 32
+Text Notes 8790 6380 0    160  ~ 32
 CI CMS e-p-433
-Text Notes 3450 3500 0    30   ~ 0
+Text Notes 3450 1320 0    100  ~ 20
 * : Cut to separate VIN from VUSB,\nif using a battery charger or external\npower for USB device mode
 $Bitmap
 Pos 9625 6825
@@ -4963,156 +4950,151 @@ CB 41 07 00 00 00 00 00 00 00 00 00 00 E0 72 D0 01 00 00 00 00 00 00 00 00 00 00
 42 60 82 00 
 EndData
 $EndBitmap
-Text Notes 4625 4150 0    30   ~ 0
+Text Notes 6510 2950 0    60   ~ 12
 3.3V
-Text Notes 4625 4350 0    30   ~ 0
+Text Notes 6510 3550 0    60   ~ 12
 VBAT
-Text Notes 4625 4250 0    30   ~ 0
+Text Notes 6490 3250 0    60   ~ 12
 VUSB
-Text Notes 5375 4075 0    30   ~ 0
+Text Notes 8145 3620 1    60   ~ 12
 3 X diviseur par 2
 $Comp
 L LED D3
 U 1 1 580638D6
-P 5750 5050
-F 0 "D3" H 5650 5075 30  0000 C CNN
-F 1 "Jaune" H 5950 5075 30  0000 C CNN
-F 2 "LEDs:LED_0603" H 5750 5050 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519971-da-01-ml-LED_LYL29K_J1K2_26_de_en.pdf" H 5750 5050 50  0001 C CNN
-F 4 "LED CMS 0603 jaune 4.5 mcd 160 ° 2 mA 1.8 V" H 5750 5050 60  0001 C CNN "Désignation"
-F 5 "OSRAM" H 5750 5050 60  0001 C CNN "Fabricant"
-F 6 "LY L29K-J1K2-26" H 5750 5050 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5750 5050 60  0001 C CNN "Distributeur"
-F 8 "519971 - 62" H 5750 5050 60  0001 C CNN "Ref-distri"
-F 9 "0,20 €" H 5750 5050 60  0001 C CNN "Prix"
-	1    5750 5050
+P 7125 5675
+F 0 "D3" H 7250 5730 60  0000 C CNB
+F 1 "Jaune" H 7120 5530 60  0000 C CNB
+F 2 "LEDs:LED_0603" H 7125 5675 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519971-da-01-ml-LED_LYL29K_J1K2_26_de_en.pdf" H 7125 5675 50  0001 C CNN
+F 4 "LED CMS 0603 jaune 4.5 mcd 160 ° 2 mA 1.8 V" H 7125 5675 60  0001 C CNN "Désignation"
+F 5 "OSRAM" H 7125 5675 60  0001 C CNN "Fabricant"
+F 6 "LY L29K-J1K2-26" H 7125 5675 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7125 5675 60  0001 C CNN "Distributeur"
+F 8 "519971 - 62" H 7125 5675 60  0001 C CNN "Ref-distri"
+F 9 "0,20 €" H 7125 5675 60  0001 C CNN "Prix"
+	1    7125 5675
 	-1   0    0    1   
 $EndComp
 $Comp
 L LED D4
 U 1 1 58063C6E
-P 6300 5150
-F 0 "D4" H 6200 5175 30  0000 C CNN
-F 1 "Verte" H 6475 5175 30  0000 C CNN
-F 2 "LEDs:LED_0603" H 6300 5150 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519967-da-01-ml-LED_LGL29K_F2J1_24_de_en.pdf" H 6300 5150 50  0001 C CNN
-F 4 "LED CMS 0603 OSRAM LG L29K-F2J1-24 vert 1.4 mcd 160 ° 2 mA 1.7 V" H 6300 5150 60  0001 C CNN "Désignation"
-F 5 "OSRAM" H 6300 5150 60  0001 C CNN "Fabricant"
-F 6 "LG L29K-F2J1-24" H 6300 5150 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 6300 5150 60  0001 C CNN "Distributeur"
-F 8 "519967 - 62" H 6300 5150 60  0001 C CNN "Ref-distri"
-F 9 "0,20 €" H 6300 5150 60  0001 C CNN "Prix"
-	1    6300 5150
+P 7125 5975
+F 0 "D4" H 7240 6030 60  0000 C CNB
+F 1 "Verte" H 7110 5840 60  0000 C CNB
+F 2 "LEDs:LED_0603" H 7125 5975 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519967-da-01-ml-LED_LGL29K_F2J1_24_de_en.pdf" H 7125 5975 50  0001 C CNN
+F 4 "LED CMS 0603 OSRAM LG L29K-F2J1-24 vert 1.4 mcd 160 ° 2 mA 1.7 V" H 7125 5975 60  0001 C CNN "Désignation"
+F 5 "OSRAM" H 7125 5975 60  0001 C CNN "Fabricant"
+F 6 "LG L29K-F2J1-24" H 7125 5975 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7125 5975 60  0001 C CNN "Distributeur"
+F 8 "519967 - 62" H 7125 5975 60  0001 C CNN "Ref-distri"
+F 9 "0,20 €" H 7125 5975 60  0001 C CNN "Prix"
+	1    7125 5975
 	-1   0    0    1   
 $EndComp
 $Comp
 L LED D1
 U 1 1 58063F1D
-P 5250 4950
-F 0 "D1" H 5150 4975 30  0000 C CNN
-F 1 "Rouge" H 5425 4975 30  0000 C CNN
-F 2 "LEDs:LED_0603" H 5250 4950 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519969-da-01-ml-LED_LSL29K_H1J2_1_de_en.pdf" H 5250 4950 50  0001 C CNN
-F 4 "LED CMS 0603 OSRAM LS L29K-H1J2-1 super rouge 2.8 mcd 160 ° 2 mA 1.8 V" H 5250 4950 60  0001 C CNN "Désignation"
-F 5 "OSRAM" H 5250 4950 60  0001 C CNN "Fabricant"
-F 6 "LS L29K-H1J2-1" H 5250 4950 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5250 4950 60  0001 C CNN "Distributeur"
-F 8 "519969 - 62" H 5250 4950 60  0001 C CNN "Ref-distri"
-F 9 "0,25 €" H 5250 4950 60  0001 C CNN "Prix"
-	1    5250 4950
+P 7125 5375
+F 0 "D1" H 7250 5420 60  0000 C CNB
+F 1 "Rouge" H 7120 5230 60  0000 C CNB
+F 2 "LEDs:LED_0603" H 7125 5375 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519969-da-01-ml-LED_LSL29K_H1J2_1_de_en.pdf" H 7125 5375 50  0001 C CNN
+F 4 "LED CMS 0603 OSRAM LS L29K-H1J2-1 super rouge 2.8 mcd 160 ° 2 mA 1.8 V" H 7125 5375 60  0001 C CNN "Désignation"
+F 5 "OSRAM" H 7125 5375 60  0001 C CNN "Fabricant"
+F 6 "LS L29K-H1J2-1" H 7125 5375 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7125 5375 60  0001 C CNN "Distributeur"
+F 8 "519969 - 62" H 7125 5375 60  0001 C CNN "Ref-distri"
+F 9 "0,25 €" H 7125 5375 60  0001 C CNN "Prix"
+	1    7125 5375
 	-1   0    0    1   
 $EndComp
-Text Notes 4625 4550 0    50   ~ 0
+Text Notes 6550 4150 0    60   ~ 12
 STAT
-Text Notes 4625 4450 0    50   ~ 0
+Text Notes 6550 3850 0    60   ~ 12
 PROG
 $Comp
 L SWITCH_INV SW3
 U 1 1 5813189E
-P 7700 2225
-F 0 "SW3" H 7500 2375 50  0000 C CNN
-F 1 "SWITCH_INV" H 7550 2075 50  0000 C CNN
-F 2 "Sp:SW_Micro_SPST_Angled" H 7700 2225 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/700000-724999/711771-da-01-en-MINI_SCHIEBESCHALTER_450302014072.pdf" H 7700 2225 50  0001 C CNN
-F 4 "Interrupteur à glissière 1 x On/On" H 7700 2225 60  0001 C CNN "Désignation"
-F 5 "Würth Elektronik" H 7700 2225 60  0001 C CNN "Fabricant"
-F 6 "450302014072" H 7700 2225 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 7700 2225 60  0001 C CNN "Distributeur"
-F 8 "711771-62" H 7700 2225 60  0001 C CNN "Ref-distri"
-F 9 "2,20 €" H 7700 2225 60  0001 C CNN "Prix"
-	1    7700 2225
-	-1   0    0    1   
+P 9865 1870
+F 0 "SW3" H 9805 1965 60  0000 C CNB
+F 1 "SWITCH_INV" H 9660 1715 60  0000 C CNB
+F 2 "Sp:SW_Micro_SPST_Angled" H 9865 1870 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/700000-724999/711771-da-01-en-MINI_SCHIEBESCHALTER_450302014072.pdf" H 9865 1870 50  0001 C CNN
+F 4 "Interrupteur à glissière 1 x On/On" H 9865 1870 60  0001 C CNN "Désignation"
+F 5 "Würth Elektronik" H 9865 1870 60  0001 C CNN "Fabricant"
+F 6 "450302014072" H 9865 1870 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 9865 1870 60  0001 C CNN "Distributeur"
+F 8 "711771-62" H 9865 1870 60  0001 C CNN "Ref-distri"
+F 9 "2,20 €" H 9865 1870 60  0001 C CNN "Prix"
+	1    9865 1870
+	0    -1   -1   0   
 $EndComp
-Text Notes 5375 4000 0    50   ~ 0
+Text Notes 8050 3460 1    60   ~ 12
 Calibration
-NoConn ~ 3800 4250
-NoConn ~ 3800 4350
-NoConn ~ 3800 4450
-NoConn ~ 3800 4550
-Text Notes 5025 4650 2    30   ~ 0
+Text Notes 7440 4450 2    60   ~ 12
 Data to transmiter
 $Comp
 L 3.3V #PWR17
 U 1 1 582B4AFD
-P 8150 3625
-F 0 "#PWR17" H 8150 3475 50  0001 C CNN
-F 1 "3.3V" H 8150 3765 30  0000 C CNN
-F 2 "" H 8150 3625 50  0000 C CNN
-F 3 "" H 8150 3625 50  0000 C CNN
-F 4 "0,00 €" H 8150 3625 60  0001 C CNN "Prix"
-	1    8150 3625
+P 9320 4355
+F 0 "#PWR17" H 9320 4205 50  0001 C CNN
+F 1 "3.3V" H 9320 4495 60  0000 C CNB
+F 2 "" H 9320 4355 50  0000 C CNN
+F 3 "" H 9320 4355 50  0000 C CNN
+F 4 "0,00 €" H 9320 4355 60  0001 C CNN "Prix"
+	1    9320 4355
 	0    -1   -1   0   
 $EndComp
 $Comp
 L VBAT #PWR16
 U 1 1 582B4B5B
-P 7200 2125
-F 0 "#PWR16" H 7200 1975 50  0001 C CNN
-F 1 "VBAT" H 7200 2265 30  0000 C CNN
-F 2 "" H 7200 2125 50  0000 C CNN
-F 3 "" H 7200 2125 50  0000 C CNN
-F 4 "0,00 €" H 7200 2125 60  0001 C CNN "Prix"
-	1    7200 2125
+P 9965 1200
+F 0 "#PWR16" H 9965 1050 50  0001 C CNN
+F 1 "VBAT" H 9965 1340 60  0000 C CNB
+F 2 "" H 9965 1200 50  0000 C CNN
+F 3 "" H 9965 1200 50  0000 C CNN
+F 4 "0,00 €" H 9965 1200 60  0001 C CNN "Prix"
+	1    9965 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L 3.3V #PWR13
 U 1 1 582B5D56
-P 4875 2175
-F 0 "#PWR13" H 4875 2025 50  0001 C CNN
-F 1 "3.3V" H 4875 2315 30  0000 C CNN
-F 2 "" H 4875 2175 50  0000 C CNN
-F 3 "" H 4875 2175 50  0000 C CNN
-F 4 "0,00 €" H 4875 2175 60  0001 C CNN "Prix"
-	1    4875 2175
+P 6695 1190
+F 0 "#PWR13" H 6695 1040 50  0001 C CNN
+F 1 "3.3V" H 6695 1330 60  0000 C CNB
+F 2 "" H 6695 1190 50  0000 C CNN
+F 3 "" H 6695 1190 50  0000 C CNN
+F 4 "0,00 €" H 6695 1190 60  0001 C CNN "Prix"
+	1    6695 1190
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4600 3950
-Text Notes 4575 4750 0    50   ~ 0
+Text Notes 6575 4750 0    100  ~ 20
 T1
 $Comp
 L C C5
 U 1 1 582C67BB
-P 4875 2325
-F 0 "C5" H 4900 2425 30  0000 L CNN
-F 1 "4.7µF" H 4825 2225 30  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 4913 2175 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457914-da-01-en-KERAMIK_KONDENSATOR_C0603C475K9PAC.pdf" H 4875 2325 50  0001 C CNN
-F 4 "Condensateur céramique CMS 4.7 µF 6.3 V 10 % X5R" H 4875 2325 60  0001 C CNN "Désignation"
-F 5 "Kemet" H 4875 2325 60  0001 C CNN "Fabricant"
-F 6 "C0603C475K9PAC" H 4875 2325 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 4875 2325 60  0001 C CNN "Distributeur"
-F 8 "457914 - 62" H 4875 2325 60  0001 C CNN "Ref-distri"
-F 9 "0,15 €" H 4875 2325 60  0001 C CNN "Prix"
-	1    4875 2325
+P 7005 1490
+F 0 "C5" H 7015 1390 60  0000 L CNB
+F 1 "4.7µF" V 6850 1360 60  0000 L CNB
+F 2 "Capacitors_SMD:C_0603" H 7043 1340 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457914-da-01-en-KERAMIK_KONDENSATOR_C0603C475K9PAC.pdf" H 7005 1490 50  0001 C CNN
+F 4 "Condensateur céramique CMS 4.7 µF 6.3 V 10 % X5R" H 7005 1490 60  0001 C CNN "Désignation"
+F 5 "Kemet" H 7005 1490 60  0001 C CNN "Fabricant"
+F 6 "C0603C475K9PAC" H 7005 1490 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7005 1490 60  0001 C CNN "Distributeur"
+F 8 "457914 - 62" H 7005 1490 60  0001 C CNN "Ref-distri"
+F 9 "0,15 €" H 7005 1490 60  0001 C CNN "Prix"
+	1    7005 1490
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R3
 U 1 1 582C70D5
 P 1300 2200
-F 0 "R3" V 1300 2150 30  0000 C CNN
-F 1 "10K" V 1300 2250 30  0000 C CNN
+F 0 "R3" V 1310 2200 60  0000 C CNB
+F 1 "10K" V 1200 2200 80  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 1230 2200 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457841-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__10K.pdf" H 1300 2200 50  0001 C CNN
 F 4 "Résistance à couche épaisse 0.1 W 5 %" H 1300 2200 60  0001 C CNN "Désignation"
@@ -5128,8 +5110,8 @@ $Comp
 L C C1
 U 1 1 582C70E1
 P 1450 2450
-F 0 "C1" H 1350 2550 30  0000 L CNN
-F 1 "0.1µF" H 1500 2550 30  0000 L CNN
+F 0 "C1" H 1530 2550 60  0000 C CNB
+F 1 "0.1µF" V 1290 2450 60  0000 C CNB
 F 2 "Capacitors_SMD:C_0603" H 1488 2300 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457901-da-01-en-KONDENSATOR_0_1UF_10Pr_50V_X7R_0603.pdf" H 1450 2450 50  0001 C CNN
 F 4 "Condensateur céramique CMS 0.1 µF 50 V 10 % X7R" H 1450 2450 60  0001 C CNN "Désignation"
@@ -5141,22 +5123,22 @@ F 9 "0,05 €" H 1450 2450 60  0001 C CNN "Prix"
 	1    1450 2450
 	1    0    0    -1  
 $EndComp
-Text Notes 875  2525 2    30   ~ 0
+Text Notes 875  2525 2    80   ~ 16
 th+
-Text Notes 875  2625 2    30   ~ 0
+Text Notes 875  2625 2    80   ~ 16
 th-
-Text Notes 1075 1750 0    80   ~ 16
+Text Notes 1080 1650 0    100  ~ 20
 Ampli thermocouple 1
-Text Notes 750  2900 1    50   ~ 10
-Thermocouple type K
-Text Notes 3100 2525 2    50   ~ 10
+Text Notes 760  3550 1    80   ~ 16
+Thermocouple
+Text Notes 3300 2525 2    100  ~ 20
 T1
 $Comp
 L R R4
 U 1 1 582C70FF
 P 1300 2900
-F 0 "R4" V 1300 2850 30  0000 C CNN
-F 1 "10K" V 1300 2950 30  0000 C CNN
+F 0 "R4" V 1310 2900 60  0000 C CNB
+F 1 "10K" V 1200 2900 80  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 1230 2900 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457841-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__10K.pdf" H 1300 2900 50  0001 C CNN
 F 4 "Résistance à couche épaisse 0.1 W 5 %" H 1300 2900 60  0001 C CNN "Désignation"
@@ -5171,26 +5153,26 @@ $EndComp
 $Comp
 L R R1
 U 1 1 582C710B
-P 1150 3050
-F 0 "R1" V 1150 3000 30  0000 C CNN
-F 1 "1M" V 1150 3100 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 1080 3050 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457827-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__1M.pdf" H 1150 3050 50  0001 C CNN
-F 4 "Résistance à couche épaisse 1 MΩ 0.1 W 5 %" H 1150 3050 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 1150 3050 60  0001 C CNN "Fabricant"
-F 6 "SAJ0105T5E" H 1150 3050 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 1150 3050 60  0001 C CNN "Distributeur"
-F 8 "1457827 - 62" H 1150 3050 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 1150 3050 60  0001 C CNN "Prix"
-	1    1150 3050
+P 1150 3100
+F 0 "R1" V 1160 3100 60  0000 C CNB
+F 1 "1M" V 1050 3090 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 1080 3100 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457827-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__1M.pdf" H 1150 3100 50  0001 C CNN
+F 4 "Résistance à couche épaisse 1 MΩ 0.1 W 5 %" H 1150 3100 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 1150 3100 60  0001 C CNN "Fabricant"
+F 6 "SAJ0105T5E" H 1150 3100 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 1150 3100 60  0001 C CNN "Distributeur"
+F 8 "1457827 - 62" H 1150 3100 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 1150 3100 60  0001 C CNN "Prix"
+	1    1150 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C2
 U 1 1 582C7117
 P 1450 3050
-F 0 "C2" H 1500 3150 30  0000 C CNN
-F 1 "0.1µF" H 1450 3050 30  0000 C CNN
+F 0 "C2" H 1520 3130 60  0000 C CNB
+F 1 "0.1µF" V 1310 3010 60  0000 C CNB
 F 2 "Capacitors_SMD:C_0603" H 1488 2900 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457901-da-01-en-KONDENSATOR_0_1UF_10Pr_50V_X7R_0603.pdf" H 1450 3050 50  0001 C CNN
 F 4 "Condensateur céramique CMS 0.1 µF 50 V 10 % X7R" H 1450 3050 60  0001 C CNN "Désignation"
@@ -5205,21 +5187,21 @@ $EndComp
 $Comp
 L 3.3V #PWR5
 U 1 1 582C7122
-P 2275 2100
-F 0 "#PWR5" H 2275 1950 50  0001 C CNN
-F 1 "3.3V" H 2275 2240 30  0000 C CNN
-F 2 "" H 2275 2100 50  0000 C CNN
-F 3 "" H 2275 2100 50  0000 C CNN
-F 4 "0,00 €" H 2275 2100 60  0001 C CNN "Prix"
-	1    2275 2100
+P 2275 2050
+F 0 "#PWR5" H 2275 1900 50  0001 C CNN
+F 1 "3.3V" H 2275 2190 60  0000 C CNB
+F 2 "" H 2275 2050 50  0000 C CNN
+F 3 "" H 2275 2050 50  0000 C CNN
+F 4 "0,00 €" H 2275 2050 60  0001 C CNN "Prix"
+	1    2275 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_01X02 P1
 U 1 1 582C7130
 P 950 2550
-F 0 "P1" H 950 2700 30  0000 C CNN
-F 1 "CONN_01X02" V 950 2250 30  0000 C CNN
+F 0 "P1" H 950 2700 60  0000 C CNB
+F 1 "CONN_01X02" V 950 2140 60  0000 C CNB
 F 2 "Connect:PINHEAD1-2" H 950 2550 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/583107.pdf?_ga=1.176360613.1823820493.1466675868" H 950 2550 50  0001 C CNN
 F 4 "Bornier à vis fil-à-carte - 2.54 mm - 2 Voies" H 950 2550 60  0001 C CNN "Désignation"
@@ -5234,55 +5216,55 @@ $EndComp
 $Comp
 L C C7
 U 1 1 582CA0D1
-P 7025 2475
-F 0 "C7" H 7050 2575 30  0000 L CNN
-F 1 "4.7µF" H 6975 2375 30  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7063 2325 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457914-da-01-en-KERAMIK_KONDENSATOR_C0603C475K9PAC.pdf" H 7025 2475 50  0001 C CNN
-F 4 "Condensateur céramique CMS 4.7 µF 6.3 V 10 % X5R" H 7025 2475 60  0001 C CNN "Désignation"
-F 5 "Kemet" H 7025 2475 60  0001 C CNN "Fabricant"
-F 6 "C0603C475K9PAC" H 7025 2475 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 7025 2475 60  0001 C CNN "Distributeur"
-F 8 "457914 - 62" H 7025 2475 60  0001 C CNN "Ref-distri"
-F 9 "0,15 €" H 7025 2475 60  0001 C CNN "Prix"
-	1    7025 2475
+P 9520 1700
+F 0 "C7" H 9535 1785 60  0000 L CNB
+F 1 "4.7µF" V 9370 1590 60  0000 L CNB
+F 2 "Capacitors_SMD:C_0603" H 9558 1550 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457914-da-01-en-KERAMIK_KONDENSATOR_C0603C475K9PAC.pdf" H 9520 1700 50  0001 C CNN
+F 4 "Condensateur céramique CMS 4.7 µF 6.3 V 10 % X5R" H 9520 1700 60  0001 C CNN "Désignation"
+F 5 "Kemet" H 9520 1700 60  0001 C CNN "Fabricant"
+F 6 "C0603C475K9PAC" H 9520 1700 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 9520 1700 60  0001 C CNN "Distributeur"
+F 8 "457914 - 62" H 9520 1700 60  0001 C CNN "Ref-distri"
+F 9 "0,15 €" H 9520 1700 60  0001 C CNN "Prix"
+	1    9520 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L VBAT #PWR11
 U 1 1 582CBA63
-P 4600 3850
-F 0 "#PWR11" H 4600 3700 50  0001 C CNN
-F 1 "VBAT" H 4600 3990 30  0000 C CNN
-F 2 "" H 4600 3850 50  0000 C CNN
-F 3 "" H 4600 3850 50  0000 C CNN
-F 4 "0,00 €" H 4600 3850 60  0001 C CNN "Prix"
-	1    4600 3850
+P 6525 1600
+F 0 "#PWR11" H 6525 1450 50  0001 C CNN
+F 1 "VBAT" H 6525 1740 60  0000 C CNB
+F 2 "" H 6525 1600 50  0000 C CNN
+F 3 "" H 6525 1600 50  0000 C CNN
+F 4 "0,00 €" H 6525 1600 60  0001 C CNN "Prix"
+	1    6525 1600
 	1    0    0    -1  
 $EndComp
 $Comp
 L TEST_1P W2
 U 1 1 582C7143
-P 3150 2450
-F 0 "W2" H 3150 2720 30  0000 C CNN
-F 1 "T1" H 3150 2650 30  0000 C CNN
-F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 3350 2450 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 3350 2450 50  0001 C CNN
-F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 3150 2450 60  0001 C CNN "Désignation"
-F 5 "HARWIN" H 3150 2450 60  0001 C CNN "Fabricant"
-F 6 "S1751-46R" H 3150 2450 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 3150 2450 60  0001 C CNN "Distributeur"
-F 8 "2293786" H 3150 2450 60  0001 C CNN "Ref-distri"
-F 9 "0,24 €" H 3150 2450 60  0001 C CNN "Prix"
-	1    3150 2450
+P 3400 2450
+F 0 "W2" H 3400 2750 60  0000 C CNB
+F 1 "T1" H 3400 2660 60  0000 C CNB
+F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 3600 2450 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 3600 2450 50  0001 C CNN
+F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 3400 2450 60  0001 C CNN "Désignation"
+F 5 "HARWIN" H 3400 2450 60  0001 C CNN "Fabricant"
+F 6 "S1751-46R" H 3400 2450 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 3400 2450 60  0001 C CNN "Distributeur"
+F 8 "2293786" H 3400 2450 60  0001 C CNN "Ref-distri"
+F 9 "0,24 €" H 3400 2450 60  0001 C CNN "Prix"
+	1    3400 2450
 	1    0    0    -1  
 $EndComp
 $Comp
 L AD8495ARMZ U1
 U 1 1 582C70C9
 P 2275 2550
-F 0 "U1" H 2125 2550 50  0000 L CNN
-F 1 "AD8495ARMZ" H 1775 2550 30  0000 L CNN
+F 0 "U1" H 2125 2550 120 0000 C CNB
+F 1 "AD8495ARMZ" V 1900 2550 80  0000 C CNB
 F 2 "Sp:ampli" H 2275 2550 50  0001 C CNN
 F 3 "http://pdf1.alldatasheet.com/datasheet-pdf/view/347566/AD/AD8495ARMZ.html" H 2275 2550 50  0001 C CNN
 F 4 "Amplificateur de mesure" H 2275 2550 60  0001 C CNN "Désignation"
@@ -5297,353 +5279,288 @@ $EndComp
 $Comp
 L VUSB #PWR14
 U 1 1 582CEF1B
-P 5300 2175
-F 0 "#PWR14" H 5300 2025 50  0001 C CNN
-F 1 "VUSB" H 5300 2315 30  0000 C CNN
-F 2 "" H 5300 2175 50  0000 C CNN
-F 3 "" H 5300 2175 50  0000 C CNN
-	1    5300 2175
+P 7610 1200
+F 0 "#PWR14" H 7610 1050 50  0001 C CNN
+F 1 "VUSB" H 7610 1340 60  0000 C CNB
+F 2 "" H 7610 1200 50  0000 C CNN
+F 3 "" H 7610 1200 50  0000 C CNN
+	1    7610 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C6
 U 1 1 582CEF28
-P 5425 2475
-F 0 "C6" H 5450 2575 30  0000 L CNN
-F 1 "4.7µF" H 5375 2375 30  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 5463 2325 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457914-da-01-en-KERAMIK_KONDENSATOR_C0603C475K9PAC.pdf" H 5425 2475 50  0001 C CNN
-F 4 "Condensateur céramique CMS 4.7 µF 6.3 V 10 % X5R" H 5425 2475 60  0001 C CNN "Désignation"
-F 5 "Kemet" H 5425 2475 60  0001 C CNN "Fabricant"
-F 6 "C0603C475K9PAC" H 5425 2475 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5425 2475 60  0001 C CNN "Distributeur"
-F 8 "457914 - 62" H 5425 2475 60  0001 C CNN "Ref-distri"
-F 9 "0,15 €" H 5425 2475 60  0001 C CNN "Prix"
-	1    5425 2475
+P 7610 1705
+F 0 "C6" H 7630 1595 60  0000 L CNB
+F 1 "4.7µF" V 7465 1595 60  0000 L CNB
+F 2 "Capacitors_SMD:C_0603" H 7648 1555 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457914-da-01-en-KERAMIK_KONDENSATOR_C0603C475K9PAC.pdf" H 7610 1705 50  0001 C CNN
+F 4 "Condensateur céramique CMS 4.7 µF 6.3 V 10 % X5R" H 7610 1705 60  0001 C CNN "Désignation"
+F 5 "Kemet" H 7610 1705 60  0001 C CNN "Fabricant"
+F 6 "C0603C475K9PAC" H 7610 1705 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7610 1705 60  0001 C CNN "Distributeur"
+F 8 "457914 - 62" H 7610 1705 60  0001 C CNN "Ref-distri"
+F 9 "0,15 €" H 7610 1705 60  0001 C CNN "Prix"
+	1    7610 1705
 	1    0    0    -1  
 $EndComp
 $Comp
 L MCP_73831 U4
 U 1 1 582EDD53
-P 6225 2275
-F 0 "U4" H 6225 2225 20  0000 C CNN
-F 1 "MCP_73831" H 6225 2325 20  0000 C CNN
-F 2 "Sp:SOT23-5" H 6225 2275 60  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/650000-674999/651522-da-01-en-CONTR__MCP73831T_2ATI_OT_SOT_23_5_MCP.pdf" H 6225 2275 60  0001 C CNN
-F 4 "Gestion de batterie  SOT-23-5 Li-Ion" H 6225 2275 60  0001 C CNN "Désignation"
-F 5 "Microchip Technology" H 6225 2275 60  0001 C CNN "Fabricant"
-F 6 "MCP73831T-2ATI/OT" H 6225 2275 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 6225 2275 60  0001 C CNN "Distributeur"
-F 8 "651522-62" H 6225 2275 60  0001 C CNN "Ref-distri"
-F 9 "0,96 €" H 6225 2275 60  0001 C CNN "Prix"
-	1    6225 2275
+P 8625 1700
+F 0 "U4" H 8625 1475 120 0000 C CNB
+F 1 "MCP_73831" H 8625 1950 60  0000 C CNB
+F 2 "Sp:SOT23-5" H 8625 1700 60  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/650000-674999/651522-da-01-en-CONTR__MCP73831T_2ATI_OT_SOT_23_5_MCP.pdf" H 8625 1700 60  0001 C CNN
+F 4 "Gestion de batterie  SOT-23-5 Li-Ion" H 8625 1700 60  0001 C CNN "Désignation"
+F 5 "Microchip Technology" H 8625 1700 60  0001 C CNN "Fabricant"
+F 6 "MCP73831T-2ATI/OT" H 8625 1700 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 8625 1700 60  0001 C CNN "Distributeur"
+F 8 "651522-62" H 8625 1700 60  0001 C CNN "Ref-distri"
+F 9 "0,96 €" H 8625 1700 60  0001 C CNN "Prix"
+	1    8625 1700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7200 2325
 $Comp
 L VUSB #PWR10
 U 1 1 582F4DB9
-P 4400 3425
-F 0 "#PWR10" H 4400 3275 50  0001 C CNN
-F 1 "VUSB" H 4400 3565 30  0000 C CNN
-F 2 "" H 4400 3425 50  0000 C CNN
-F 3 "" H 4400 3425 50  0000 C CNN
-	1    4400 3425
+P 5825 1550
+F 0 "#PWR10" H 5825 1400 50  0001 C CNN
+F 1 "VUSB" H 5825 1690 60  0000 C CNB
+F 2 "" H 5825 1550 50  0000 C CNN
+F 3 "" H 5825 1550 50  0000 C CNN
+	1    5825 1550
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R13
 U 1 1 5832F0E0
-P 5125 4350
-F 0 "R13" V 5175 4200 30  0000 C CNN
-F 1 "4.7K" V 5125 4350 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 5055 4350 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5125 4350 50  0001 C CNN
-F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 5125 4350 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 5125 4350 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0472T5E" H 5125 4350 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5125 4350 60  0001 C CNN "Distributeur"
-F 8 "1457796 - 62" H 5125 4350 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 5125 4350 60  0001 C CNN "Prix"
-	1    5125 4350
-	0    -1   -1   0   
+P 6850 3575
+F 0 "R13" V 6865 3575 60  0000 C CNB
+F 1 "4.7K" V 6765 3575 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 6780 3575 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 6850 3575 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 6850 3575 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 6850 3575 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 6850 3575 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 6850 3575 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 6850 3575 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 6850 3575 60  0001 C CNN "Prix"
+	1    6850 3575
+	0    1    1    0   
 $EndComp
 $Comp
 L R R8
 U 1 1 5832F4F4
-P 4775 5400
-F 0 "R8" V 4800 5250 30  0000 C CNN
-F 1 "4.7K" V 4775 5400 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4705 5400 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 4775 5400 50  0001 C CNN
-F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 4775 5400 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 4775 5400 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0472T5E" H 4775 5400 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 4775 5400 60  0001 C CNN "Distributeur"
-F 8 "1457796 - 62" H 4775 5400 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 4775 5400 60  0001 C CNN "Prix"
-	1    4775 5400
-	-1   0    0    1   
+P 7450 2975
+F 0 "R8" V 7455 2975 60  0000 C CNB
+F 1 "4.7K" V 7555 2985 80  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 7380 2975 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7450 2975 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 7450 2975 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 7450 2975 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 7450 2975 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7450 2975 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 7450 2975 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 7450 2975 60  0001 C CNN "Prix"
+	1    7450 2975
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R9
 U 1 1 5832F6EF
-P 4875 5400
-F 0 "R9" V 4900 5250 30  0000 C CNN
-F 1 "4.7K" V 4875 5400 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4805 5400 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 4875 5400 50  0001 C CNN
-F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 4875 5400 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 4875 5400 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0472T5E" H 4875 5400 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 4875 5400 60  0001 C CNN "Distributeur"
-F 8 "1457796 - 62" H 4875 5400 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 4875 5400 60  0001 C CNN "Prix"
-	1    4875 5400
-	-1   0    0    1   
+P 7450 3275
+F 0 "R9" V 7455 3275 60  0000 C CNB
+F 1 "4.7K" V 7545 3275 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 7380 3275 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7450 3275 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 7450 3275 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 7450 3275 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 7450 3275 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7450 3275 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 7450 3275 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 7450 3275 60  0001 C CNN "Prix"
+	1    7450 3275
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R11
 U 1 1 5832F908
-P 4975 5400
-F 0 "R11" V 5000 5250 30  0000 C CNN
-F 1 "4.7K" V 4975 5400 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4905 5400 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 4975 5400 50  0001 C CNN
-F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 4975 5400 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 4975 5400 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0472T5E" H 4975 5400 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 4975 5400 60  0001 C CNN "Distributeur"
-F 8 "1457796 - 62" H 4975 5400 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 4975 5400 60  0001 C CNN "Prix"
-	1    4975 5400
-	-1   0    0    1   
+P 7450 3575
+F 0 "R11" V 7455 3575 60  0000 C CNB
+F 1 "4.7K" V 7545 3575 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 7380 3575 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7450 3575 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 7450 3575 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 7450 3575 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 7450 3575 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7450 3575 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 7450 3575 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 7450 3575 60  0001 C CNN "Prix"
+	1    7450 3575
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R14
 U 1 1 5832FAF1
-P 5450 5400
-F 0 "R14" V 5525 5400 30  0000 C CNN
-F 1 "1K" V 5450 5400 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 5380 5400 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5450 5400 50  0001 C CNN
-F 4 "Résistance à couche épaisse 1 kΩ CMS 0603 0.1 W 5 %" H 5450 5400 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 5450 5400 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0102T5E" H 5450 5400 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5450 5400 60  0001 C CNN "Distributeur"
-F 8 "1457724 - 62" H 5450 5400 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 5450 5400 60  0001 C CNN "Prix"
-	1    5450 5400
-	-1   0    0    1   
+P 7575 5375
+F 0 "R14" V 7580 5380 60  0000 C CNB
+F 1 "1K" V 7680 5380 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 7505 5375 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7575 5375 50  0001 C CNN
+F 4 "Résistance à couche épaisse 1 kΩ CMS 0603 0.1 W 5 %" H 7575 5375 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 7575 5375 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0102T5E" H 7575 5375 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7575 5375 60  0001 C CNN "Distributeur"
+F 8 "1457724 - 62" H 7575 5375 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 7575 5375 60  0001 C CNN "Prix"
+	1    7575 5375
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R12
 U 1 1 58330094
-P 5025 4250
-F 0 "R12" V 5075 4100 30  0000 C CNN
-F 1 "4.7K" V 5025 4250 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4955 4250 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5025 4250 50  0001 C CNN
-F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 5025 4250 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 5025 4250 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0472T5E" H 5025 4250 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5025 4250 60  0001 C CNN "Distributeur"
-F 8 "1457796 - 62" H 5025 4250 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 5025 4250 60  0001 C CNN "Prix"
-	1    5025 4250
-	0    -1   -1   0   
+P 6850 3275
+F 0 "R12" V 6865 3275 60  0000 C CNB
+F 1 "4.7K" V 6765 3275 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 6780 3275 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 6850 3275 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 6850 3275 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 6850 3275 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 6850 3275 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 6850 3275 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 6850 3275 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 6850 3275 60  0001 C CNN "Prix"
+	1    6850 3275
+	0    1    1    0   
 $EndComp
 $Comp
 L R R10
 U 1 1 58330234
-P 4925 4150
-F 0 "R10" V 4975 4300 30  0000 C CNN
-F 1 "4.7K" V 4925 4150 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4855 4150 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 4925 4150 50  0001 C CNN
-F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 4925 4150 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 4925 4150 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0472T5E" H 4925 4150 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 4925 4150 60  0001 C CNN "Distributeur"
-F 8 "1457796 - 62" H 4925 4150 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 4925 4150 60  0001 C CNN "Prix"
-	1    4925 4150
-	0    -1   -1   0   
+P 6850 2975
+F 0 "R10" V 6865 2985 60  0000 C CNB
+F 1 "4.7K" V 6755 2975 80  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 6780 2975 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 6850 2975 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 6850 2975 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 6850 2975 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 6850 2975 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 6850 2975 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 6850 2975 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 6850 2975 60  0001 C CNN "Prix"
+	1    6850 2975
+	0    1    1    0   
 $EndComp
 $Comp
 L TEST_1P W4
 U 1 1 583318B5
-P 5000 2175
-F 0 "W4" H 5050 2225 30  0000 C CNN
-F 1 "3.3V" H 5000 2375 30  0000 C CNN
-F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 5200 2175 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 5200 2175 50  0001 C CNN
-F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 5000 2175 60  0001 C CNN "Désignation"
-F 5 "HARWIN" H 5000 2175 60  0001 C CNN "Fabricant"
-F 6 "S1751-46R" H 5000 2175 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 5000 2175 60  0001 C CNN "Distributeur"
-F 8 "2293786" H 5000 2175 60  0001 C CNN "Ref-distri"
-F 9 "0,24 €" H 5000 2175 60  0001 C CNN "Prix"
-	1    5000 2175
+P 7130 1190
+F 0 "W4" H 7125 1415 60  0000 C CNB
+F 1 "3.3V" H 7130 1515 60  0000 C CNB
+F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 7330 1190 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 7330 1190 50  0001 C CNN
+F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 7130 1190 60  0001 C CNN "Désignation"
+F 5 "HARWIN" H 7130 1190 60  0001 C CNN "Fabricant"
+F 6 "S1751-46R" H 7130 1190 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 7130 1190 60  0001 C CNN "Distributeur"
+F 8 "2293786" H 7130 1190 60  0001 C CNN "Ref-distri"
+F 9 "0,24 €" H 7130 1190 60  0001 C CNN "Prix"
+	1    7130 1190
 	1    0    0    -1  
 $EndComp
 $Comp
 L TEST_1P W5
 U 1 1 58331E90
-P 5425 2175
-F 0 "W5" H 5475 2225 30  0000 C CNN
-F 1 "VUSB" H 5425 2375 30  0000 C CNN
-F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 5625 2175 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 5625 2175 50  0001 C CNN
-F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 5425 2175 60  0001 C CNN "Désignation"
-F 5 "HARWIN" H 5425 2175 60  0001 C CNN "Fabricant"
-F 6 "S1751-46R" H 5425 2175 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 5425 2175 60  0001 C CNN "Distributeur"
-F 8 "2293786" H 5425 2175 60  0001 C CNN "Ref-distri"
-F 9 "0,24 €" H 5425 2175 60  0001 C CNN "Prix"
-	1    5425 2175
+P 7930 1200
+F 0 "W5" H 7930 1415 60  0000 C CNB
+F 1 "VUSB" H 7930 1510 60  0000 C CNB
+F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 8130 1200 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 8130 1200 50  0001 C CNN
+F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 7930 1200 60  0001 C CNN "Désignation"
+F 5 "HARWIN" H 7930 1200 60  0001 C CNN "Fabricant"
+F 6 "S1751-46R" H 7930 1200 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 7930 1200 60  0001 C CNN "Distributeur"
+F 8 "2293786" H 7930 1200 60  0001 C CNN "Ref-distri"
+F 9 "0,24 €" H 7930 1200 60  0001 C CNN "Prix"
+	1    7930 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L TEST_1P W6
 U 1 1 5833217B
-P 6850 2125
-F 0 "W6" H 6900 2175 30  0000 C CNN
-F 1 "GND" H 6850 2325 30  0000 C CNN
-F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 7050 2125 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 7050 2125 50  0001 C CNN
-F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 6850 2125 60  0001 C CNN "Désignation"
-F 5 "HARWIN" H 6850 2125 60  0001 C CNN "Fabricant"
-F 6 "S1751-46R" H 6850 2125 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 6850 2125 60  0001 C CNN "Distributeur"
-F 8 "2293786" H 6850 2125 60  0001 C CNN "Ref-distri"
-F 9 "0,24 €" H 6850 2125 60  0001 C CNN "Prix"
-	1    6850 2125
+P 7930 2425
+F 0 "W6" H 7935 2620 60  0000 C CNB
+F 1 "GND" H 7930 2710 60  0000 C CNB
+F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 8130 2425 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 8130 2425 50  0001 C CNN
+F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 7930 2425 60  0001 C CNN "Désignation"
+F 5 "HARWIN" H 7930 2425 60  0001 C CNN "Fabricant"
+F 6 "S1751-46R" H 7930 2425 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 7930 2425 60  0001 C CNN "Distributeur"
+F 8 "2293786" H 7930 2425 60  0001 C CNN "Ref-distri"
+F 9 "0,24 €" H 7930 2425 60  0001 C CNN "Prix"
+	1    7930 2425
 	1    0    0    -1  
 $EndComp
 $Comp
 L TEST_1P W7
 U 1 1 5833249C
-P 7025 2125
-F 0 "W7" H 7075 2175 30  0000 C CNN
-F 1 "VBAT" H 7025 2325 30  0000 C CNN
-F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 7225 2125 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 7225 2125 50  0001 C CNN
-F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 7025 2125 60  0001 C CNN "Désignation"
-F 5 "HARWIN" H 7025 2125 60  0001 C CNN "Fabricant"
-F 6 "S1751-46R" H 7025 2125 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 7025 2125 60  0001 C CNN "Distributeur"
-F 8 "2293786" H 7025 2125 60  0001 C CNN "Ref-distri"
-F 9 "0,24 €" H 7025 2125 60  0001 C CNN "Prix"
-	1    7025 2125
+P 9520 1200
+F 0 "W7" H 9520 1395 60  0000 C CNB
+F 1 "VBAT" H 9520 1495 60  0000 C CNB
+F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 9720 1200 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 9720 1200 50  0001 C CNN
+F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 9520 1200 60  0001 C CNN "Désignation"
+F 5 "HARWIN" H 9520 1200 60  0001 C CNN "Fabricant"
+F 6 "S1751-46R" H 9520 1200 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 9520 1200 60  0001 C CNN "Distributeur"
+F 8 "2293786" H 9520 1200 60  0001 C CNN "Ref-distri"
+F 9 "0,24 €" H 9520 1200 60  0001 C CNN "Prix"
+	1    9520 1200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4400 5400
-NoConn ~ 4300 5400
-NoConn ~ 4200 5400
-NoConn ~ 4100 5400
-NoConn ~ 4000 5400
-Text Notes 2300 6950 0    50   ~ 0
-Ce circuit imprimé est monté sur la e-poignée.\nIl comporte : \n. 2 amplificateurs de thermocouple (type K),\n. un connecteur prévu pour enficher un shield émetteur 433 MHZ,\n. un microcontrôleur,\n. un chargeur LI-ION.
 Wire Notes Line
-	8575 3275 8725 3275
+	9745 4005 9895 4005
 Wire Notes Line
-	8725 3275 8725 3875
-Wire Notes Line
-	8725 3875 8575 3875
-Wire Notes Line
-	8575 3875 8575 3275
-Wire Notes Line
-	8150 1425 8350 1425
-Wire Notes Line
-	8350 1425 8350 1175
-Wire Notes Line
-	8350 1175 8150 1175
-Wire Wire Line
-	4750 2175 5000 2175
+	9745 4605 9745 4005
 Connection ~ 1450 3275
-Wire Wire Line
-	1150 3200 1150 3275
-Connection ~ 4875 2175
-Wire Wire Line
-	5300 2175 5925 2175
-Connection ~ 5425 2175
-Connection ~ 5625 2175
-Wire Wire Line
-	5925 2375 5925 4550
-Wire Wire Line
-	6525 2175 7025 2175
-Wire Wire Line
-	7025 2125 7025 2325
-Wire Wire Line
-	7025 2125 7200 2125
-Connection ~ 7025 2175
-Wire Wire Line
-	6525 2275 6775 2275
-Wire Wire Line
-	6675 2575 6675 2800
-Connection ~ 6675 2800
-Wire Wire Line
-	6525 2375 6525 2800
-Connection ~ 6525 2800
-Wire Wire Line
-	7025 2800 7025 2625
-Connection ~ 7025 2800
-Wire Wire Line
-	6850 2125 6850 2800
-Connection ~ 6850 2800
-Wire Wire Line
-	4875 2800 8400 2800
-Wire Wire Line
-	5425 2800 5425 2625
-Wire Wire Line
-	5425 2325 5425 2175
-Wire Wire Line
-	3650 3850 3800 3850
-Wire Wire Line
-	4875 2800 4875 2475
-Connection ~ 5425 2800
-Wire Notes Line
-	8150 1175 8150 1425
-Connection ~ 6675 2275
-Connection ~ 5925 2575
 $Comp
 L Teensy_3-2 U3
 U 1 1 583882A5
-P 4200 4500
-F 0 "U3" H 4200 5450 50  0000 C CNN
-F 1 "Teensy_3-2" V 4200 4500 50  0000 C CNN
-F 2 "Sp:Teensy_3-1" H 4200 4500 50  0001 C CNN
-F 3 "https://www.pjrc.com/teensy/teensy31.html" H 4200 4500 50  0001 C CNN
-F 4 "Teensy 3.2" H 4200 4500 60  0001 C CNN "Désignation"
-F 5 "PJRC" H 4200 4500 60  0001 C CNN "Fabricant"
-F 6 "Teensy 3.2" H 4200 4500 60  0001 C CNN "Ref-fab"
-F 7 "Go TRONIC" H 4200 4500 60  0001 C CNN "Distributeur"
-F 8 "34516" H 4200 4500 60  0001 C CNN "Ref-distri"
-F 9 "28,49 €" H 4200 4500 60  0001 C CNN "Prix"
-	1    4200 4500
+P 5375 4025
+F 0 "U3" H 5375 4000 300 0000 C CNB
+F 1 "Teensy_3-2" V 5375 2875 150 0000 C CNB
+F 2 "Sp:Teensy_3-1" H 5375 4025 50  0001 C CNN
+F 3 "https://www.pjrc.com/teensy/teensy31.html" H 5375 4025 50  0001 C CNN
+F 4 "Teensy 3.2" H 5375 4025 60  0001 C CNN "Désignation"
+F 5 "PJRC" H 5375 4025 60  0001 C CNN "Fabricant"
+F 6 "Teensy 3.2" H 5375 4025 60  0001 C CNN "Ref-fab"
+F 7 "Go TRONIC" H 5375 4025 60  0001 C CNN "Distributeur"
+F 8 "34516" H 5375 4025 60  0001 C CNN "Ref-distri"
+F 9 "28,49 €" H 5375 4025 60  0001 C CNN "Prix"
+	1    5375 4025
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR15
 U 1 1 583C7F0C
-P 7025 2800
-F 0 "#PWR15" H 7025 2550 50  0001 C CNN
-F 1 "GND" H 7025 2650 50  0000 C CNN
-F 2 "" H 7025 2800 50  0000 C CNN
-F 3 "" H 7025 2800 50  0000 C CNN
-	1    7025 2800
+P 7610 2425
+F 0 "#PWR15" H 7610 2175 50  0001 C CNN
+F 1 "GND" H 7610 2265 60  0000 C CNB
+F 2 "" H 7610 2425 50  0000 C CNN
+F 3 "" H 7610 2425 50  0000 C CNN
+	1    7610 2425
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR9
 U 1 1 583C8ED8
-P 3650 3850
-F 0 "#PWR9" H 3650 3600 50  0001 C CNN
-F 1 "GND" H 3650 3700 50  0000 C CNN
-F 2 "" H 3650 3850 50  0000 C CNN
-F 3 "" H 3650 3850 50  0000 C CNN
-	1    3650 3850
+P 3950 2100
+F 0 "#PWR9" H 3950 1850 50  0001 C CNN
+F 1 "GND" H 3950 1930 60  0000 C CNB
+F 2 "" H 3950 2100 50  0000 C CNN
+F 3 "" H 3950 2100 50  0000 C CNN
+	1    3950 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -5651,7 +5568,7 @@ L GND #PWR3
 U 1 1 583C91DA
 P 1450 2600
 F 0 "#PWR3" H 1450 2350 50  0001 C CNN
-F 1 "GND" H 1450 2450 50  0000 C CNN
+F 1 "GND" H 1560 2480 60  0000 C CNB
 F 2 "" H 1450 2600 50  0000 C CNN
 F 3 "" H 1450 2600 50  0000 C CNN
 	1    1450 2600
@@ -5662,7 +5579,7 @@ L GND #PWR1
 U 1 1 583C94B0
 P 1150 3275
 F 0 "#PWR1" H 1150 3025 50  0001 C CNN
-F 1 "GND" H 1150 3125 50  0000 C CNN
+F 1 "GND" H 1150 3110 60  0000 C CNB
 F 2 "" H 1150 3275 50  0000 C CNN
 F 3 "" H 1150 3275 50  0000 C CNN
 	1    1150 3275
@@ -5671,309 +5588,182 @@ $EndComp
 $Comp
 L GND #PWR18
 U 1 1 583C9DE2
-P 8325 3825
-F 0 "#PWR18" H 8325 3575 50  0001 C CNN
-F 1 "GND" H 8325 3675 50  0000 C CNN
-F 2 "" H 8325 3825 50  0000 C CNN
-F 3 "" H 8325 3825 50  0000 C CNN
-	1    8325 3825
+P 9495 4555
+F 0 "#PWR18" H 9495 4305 50  0001 C CNN
+F 1 "GND" H 9495 4405 50  0000 C CNN
+F 2 "" H 9495 4555 50  0000 C CNN
+F 3 "" H 9495 4555 50  0000 C CNN
+	1    9495 4555
 	1    0    0    -1  
 $EndComp
 $Comp
 L TEST_1P W1
 U 1 1 583F0D66
-P 2100 2075
-F 0 "W1" H 2100 2345 30  0000 C CNN
-F 1 "T3V" H 2100 2275 30  0000 C CNN
-F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 2300 2075 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 2300 2075 50  0001 C CNN
-F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 2100 2075 60  0001 C CNN "Désignation"
-F 5 "HARWIN" H 2100 2075 60  0001 C CNN "Fabricant"
-F 6 "S1751-46R" H 2100 2075 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 2100 2075 60  0001 C CNN "Distributeur"
-F 8 "2293786" H 2100 2075 60  0001 C CNN "Ref-distri"
-F 9 "0,24 €" H 2100 2075 60  0001 C CNN "Prix"
-	1    2100 2075
+P 2100 2025
+F 0 "W1" H 2100 2330 60  0000 C CNB
+F 1 "T3V" H 2100 2240 60  0000 C CNB
+F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 2300 2025 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 2300 2025 50  0001 C CNN
+F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 2100 2025 60  0001 C CNN "Désignation"
+F 5 "HARWIN" H 2100 2025 60  0001 C CNN "Fabricant"
+F 6 "S1751-46R" H 2100 2025 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 2100 2025 60  0001 C CNN "Distributeur"
+F 8 "2293786" H 2100 2025 60  0001 C CNN "Ref-distri"
+F 9 "0,24 €" H 2100 2025 60  0001 C CNN "Prix"
+	1    2100 2025
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 4150 4775 4150
-Wire Wire Line
-	5075 4150 5075 4050
-Wire Wire Line
-	5075 4050 4600 4050
-Wire Wire Line
-	4775 4150 4775 5250
 $Comp
 L GND #PWR12
 U 1 1 583C80AA
-P 4775 5550
-F 0 "#PWR12" H 4775 5300 50  0001 C CNN
-F 1 "GND" H 4775 5400 50  0000 C CNN
-F 2 "" H 4775 5550 50  0000 C CNN
-F 3 "" H 4775 5550 50  0000 C CNN
-	1    4775 5550
+P 7725 6150
+F 0 "#PWR12" H 7725 5900 50  0001 C CNN
+F 1 "GND" H 7730 5990 60  0000 C CNB
+F 2 "" H 7725 6150 50  0000 C CNN
+F 3 "" H 7725 6150 50  0000 C CNN
+	1    7725 6150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 4250 4875 4250
-Wire Wire Line
-	4875 4250 4875 5250
-Wire Wire Line
-	4975 4350 4975 5250
-Wire Wire Line
-	4600 4350 4975 4350
 $Comp
 L R R16
 U 1 1 58407AA4
-P 5950 5400
-F 0 "R16" V 6025 5400 30  0000 C CNN
-F 1 "1K" V 5950 5400 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 5880 5400 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5950 5400 50  0001 C CNN
-F 4 "Résistance à couche épaisse 1 kΩ CMS 0603 0.1 W 5 %" H 5950 5400 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 5950 5400 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0102T5E" H 5950 5400 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 5950 5400 60  0001 C CNN "Distributeur"
-F 8 "1457724 - 62" H 5950 5400 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 5950 5400 60  0001 C CNN "Prix"
-	1    5950 5400
-	-1   0    0    1   
+P 7575 5675
+F 0 "R16" V 7580 5670 60  0000 C CNB
+F 1 "1K" V 7680 5680 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 7505 5675 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7575 5675 50  0001 C CNN
+F 4 "Résistance à couche épaisse 1 kΩ CMS 0603 0.1 W 5 %" H 7575 5675 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 7575 5675 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0102T5E" H 7575 5675 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7575 5675 60  0001 C CNN "Distributeur"
+F 8 "1457724 - 62" H 7575 5675 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 7575 5675 60  0001 C CNN "Prix"
+	1    7575 5675
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R17
 U 1 1 58407F65
-P 6500 5400
-F 0 "R17" V 6575 5400 30  0000 C CNN
-F 1 "1K" V 6500 5400 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 6430 5400 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 6500 5400 50  0001 C CNN
-F 4 "Résistance à couche épaisse 1 kΩ CMS 0603 0.1 W 5 %" H 6500 5400 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 6500 5400 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0102T5E" H 6500 5400 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 6500 5400 60  0001 C CNN "Distributeur"
-F 8 "1457724 - 62" H 6500 5400 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 6500 5400 60  0001 C CNN "Prix"
-	1    6500 5400
-	-1   0    0    1   
+P 7575 5975
+F 0 "R17" V 7580 5970 60  0000 C CNB
+F 1 "1K" V 7730 5980 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 7505 5975 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7575 5975 50  0001 C CNN
+F 4 "Résistance à couche épaisse 1 kΩ CMS 0603 0.1 W 5 %" H 7575 5975 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 7575 5975 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0102T5E" H 7575 5975 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 7575 5975 60  0001 C CNN "Distributeur"
+F 8 "1457724 - 62" H 7575 5975 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 7575 5975 60  0001 C CNN "Prix"
+	1    7575 5975
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4400 3650 5175 3650
-Wire Wire Line
-	5175 3650 5175 4250
-Wire Wire Line
-	4600 3850 5275 3850
-Wire Wire Line
-	5275 3850 5275 4350
-Wire Wire Line
-	4600 4950 5050 4950
-Wire Wire Line
-	4600 5050 5550 5050
-Wire Wire Line
-	4600 5150 6100 5150
-Wire Wire Line
-	5450 4950 5450 5250
-Wire Wire Line
-	5950 5250 5950 5050
-Wire Wire Line
-	6500 5150 6500 5250
-Wire Wire Line
-	4775 5550 6500 5550
-Connection ~ 4875 5550
-Connection ~ 4975 5550
-Connection ~ 5450 5550
-Wire Wire Line
-	4700 4750 4600 4750
-Wire Wire Line
-	4600 4850 4650 4850
-Wire Wire Line
-	6775 2275 6775 4450
-Wire Wire Line
-	6775 4450 4600 4450
-Wire Wire Line
-	5925 4550 4600 4550
-Wire Wire Line
-	8150 3625 8325 3625
-Connection ~ 5950 5550
-Wire Wire Line
-	4600 4650 7250 4650
-Wire Wire Line
-	7250 4650 7250 3725
-Wire Wire Line
-	7250 3725 8325 3725
-Wire Wire Line
-	4750 2175 4750 4050
-Connection ~ 4750 4050
-Wire Wire Line
-	4650 4850 4650 5650
-Wire Wire Line
-	4700 5600 4700 4750
-Text Notes 8375 1475 0    50   ~ 0
-Vue de dessus le + est à droite
-Wire Wire Line
-	8300 1775 8300 2225
-Wire Wire Line
-	8300 2225 8200 2225
-Wire Wire Line
-	8200 1775 8200 1850
-Wire Wire Line
-	8200 1850 8400 1850
-Wire Wire Line
-	8400 1850 8400 2800
+	9320 4355 9495 4355
+Text Notes 10985 2620 2    60   ~ 12
+P4 : vue de dessus\nle + est à droite
 $Comp
 L Capuchon SW1
 U 1 1 5845B03C
-P 3750 1925
-F 0 "SW1" H 3900 2035 50  0000 C CNN
-F 1 "Capuchon vert" H 3525 2000 30  0000 C CNN
-F 2 "Sp:Capuchon" H 3750 1925 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/10865.pdf?_ga=1.143335733.1823820493.1466675868" H 3750 1925 50  0001 C CNN
-F 4 "Capuchon de commutateur - TP Series Momentary Pushbutton Switches - Vert" H 3750 1925 60  0001 C CNN "Désignation"
-F 5 "APEM" H 3750 1925 60  0001 C CNN "Fabricant"
-F 6 "U573" H 3750 1925 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 3750 1925 60  0001 C CNN "Distributeur"
-F 8 "1082526" H 3750 1925 60  0001 C CNN "Ref-distri"
-F 9 "0,33 €" H 3750 1925 60  0001 C CNN "Prix"
-	1    3750 1925
+P 3925 5800
+F 0 "SW1" H 4075 5910 50  0000 C CNB
+F 1 "Capuchon vert" V 3930 6250 60  0000 C CNB
+F 2 "Sp:Capuchon" H 3925 5800 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/10865.pdf?_ga=1.143335733.1823820493.1466675868" H 3925 5800 50  0001 C CNN
+F 4 "Capuchon de commutateur - TP Series Momentary Pushbutton Switches - Vert" H 3925 5800 60  0001 C CNN "Désignation"
+F 5 "APEM" H 3925 5800 60  0001 C CNN "Fabricant"
+F 6 "U573" H 3925 5800 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 3925 5800 60  0001 C CNN "Distributeur"
+F 8 "1082526" H 3925 5800 60  0001 C CNN "Ref-distri"
+F 9 "0,33 €" H 3925 5800 60  0001 C CNN "Prix"
+	1    3925 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L 3.3V #PWR7
 U 1 1 5845BA73
-P 3450 2100
-F 0 "#PWR7" H 3450 1950 50  0001 C CNN
-F 1 "3.3V" H 3450 2240 50  0000 C CNN
-F 2 "" H 3450 2100 50  0000 C CNN
-F 3 "" H 3450 2100 50  0000 C CNN
-	1    3450 2100
+P 3625 5975
+F 0 "#PWR7" H 3625 5825 50  0001 C CNN
+F 1 "3.3V" H 3620 6130 60  0000 C CNB
+F 2 "" H 3625 5975 50  0000 C CNN
+F 3 "" H 3625 5975 50  0000 C CNN
+	1    3625 5975
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R7
 U 1 1 5845BAE5
-P 4175 2250
-F 0 "R7" V 4255 2250 50  0000 C CNN
-F 1 "47K" V 4175 2250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4105 2250 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457808-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__47K.pdf" H 4175 2250 50  0001 C CNN
-F 4 "Résistance à couche épaisse 47 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 4175 2250 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 4175 2250 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0473T5E" H 4175 2250 60  0001 C CNN "Ref-fab"
-F 7 "CONRAD" H 4175 2250 60  0001 C CNN "Distributeur"
-F 8 "1457808 - 62 " H 4175 2250 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 4175 2250 60  0001 C CNN "Prix"
-	1    4175 2250
+P 4225 6125
+F 0 "R7" V 4240 6120 60  0000 C CNB
+F 1 "47K" V 4340 6120 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 4155 6125 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457808-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__47K.pdf" H 4225 6125 50  0001 C CNN
+F 4 "Résistance à couche épaisse 47 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 4225 6125 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 4225 6125 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0473T5E" H 4225 6125 60  0001 C CNN "Ref-fab"
+F 7 "CONRAD" H 4225 6125 60  0001 C CNN "Distributeur"
+F 8 "1457808 - 62 " H 4225 6125 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 4225 6125 60  0001 C CNN "Prix"
+	1    4225 6125
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR8
 U 1 1 5845BB66
-P 4175 2400
-F 0 "#PWR8" H 4175 2150 50  0001 C CNN
-F 1 "GND" H 4175 2250 50  0000 C CNN
-F 2 "" H 4175 2400 50  0000 C CNN
-F 3 "" H 4175 2400 50  0000 C CNN
-	1    4175 2400
+P 4225 6275
+F 0 "#PWR8" H 4225 6025 50  0001 C CNN
+F 1 "GND" H 4225 6125 60  0000 C CNB
+F 2 "" H 4225 6275 50  0000 C CNN
+F 3 "" H 4225 6275 50  0000 C CNN
+	1    4225 6275
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4400 2100 4050 2100
 $Comp
 L SW_PUSH_m SW2
 U 1 1 58483BFB
-P 3750 2100
-F 0 "SW2" H 3900 2210 50  0000 C CNN
-F 1 "SW_PUSH_m" H 3750 2020 50  0000 C CNN
-F 2 "Sp:SW_Micro_SPST_Angled" H 3750 2100 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/10672.pdf?_ga=1.98306207.1823820493.1466675868" H 3750 2100 50  0001 C CNN
-F 4 "Commutateur à bouton-poussoir - Off-(On) - SPDT - 20 V -500 mA - A souder" H 3750 2100 60  0001 C CNN "Désignation"
-F 5 "APEM" H 3750 2100 60  0001 C CNN "Fabricant"
-F 6 "TP33W0080" H 3750 2100 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 3750 2100 60  0001 C CNN "Distributeur"
-F 8 "1082512" H 3750 2100 60  0001 C CNN "Ref-distri"
-F 9 "4,78 €" H 3750 2100 60  0001 C CNN "Prix"
-	1    3750 2100
+P 3925 5975
+F 0 "SW2" H 4075 6085 50  0000 C CNB
+F 1 "SW_PUSH_m" H 3925 5895 50  0000 C CNB
+F 2 "Sp:SW_Micro_SPST_Angled" H 3925 5975 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/10672.pdf?_ga=1.98306207.1823820493.1466675868" H 3925 5975 50  0001 C CNN
+F 4 "Commutateur à bouton-poussoir - Off-(On) - SPDT - 20 V -500 mA - A souder" H 3925 5975 60  0001 C CNN "Désignation"
+F 5 "APEM" H 3925 5975 60  0001 C CNN "Fabricant"
+F 6 "TP33W0080" H 3925 5975 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 3925 5975 60  0001 C CNN "Distributeur"
+F 8 "1082512" H 3925 5975 60  0001 C CNN "Ref-distri"
+F 9 "4,78 €" H 3925 5975 60  0001 C CNN "Prix"
+	1    3925 5975
 	1    0    0    -1  
 $EndComp
-Connection ~ 4175 2100
-NoConn ~ 3800 4150
-Wire Wire Line
-	3525 5150 3800 5150
-NoConn ~ 4350 4150
-NoConn ~ 4350 4250
-NoConn ~ 4350 4350
-Wire Wire Line
-	4400 3950 4350 3950
-Wire Wire Line
-	4400 3425 4400 3950
-Connection ~ 4400 3650
+Connection ~ 4225 5975
 $Comp
 L CONN_01X01 P3
 U 1 1 5899B57D
-P 7750 3075
-F 0 "P3" H 7750 3175 50  0000 C CNN
-F 1 "ant" V 7850 3075 50  0000 C CNN
-F 2 "Sp:Ant" H 7750 3075 50  0001 C CNN
-F 3 "" H 7750 3075 50  0000 C CNN
-F 4 "0,00 €" H 7750 3075 60  0001 C CNN "Prix"
-	1    7750 3075
-	1    0    0    -1  
+P 9395 3855
+F 0 "P3" H 9395 3955 60  0000 C CNB
+F 1 "ant" V 9495 3855 60  0000 C CNB
+F 2 "Sp:Ant" H 9395 3855 50  0001 C CNN
+F 3 "" H 9395 3855 50  0000 C CNN
+F 4 "0,00 €" H 9395 3855 60  0001 C CNN "Prix"
+	1    9395 3855
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	8325 3325 8325 3525
-Connection ~ 8325 3425
-Wire Wire Line
-	8325 3325 7550 3325
-Wire Wire Line
-	7550 3325 7550 3075
-Wire Wire Line
-	1450 2200 1575 2200
-Wire Wire Line
-	1450 2900 1575 2900
 Wire Wire Line
 	1150 3275 2275 3275
 Wire Wire Line
 	1450 3200 1450 3275
-NoConn ~ 2375 2950
-Wire Wire Line
-	2375 2150 2975 2150
-Wire Wire Line
-	2975 2150 2975 2550
-Wire Wire Line
-	3150 2550 3150 2450
-Wire Wire Line
-	2100 2075 2100 2100
-Wire Wire Line
-	2100 2100 2275 2100
-Wire Wire Line
-	3650 2250 4000 2250
-Wire Wire Line
-	4000 2250 4000 2400
-Wire Wire Line
-	4000 2400 4175 2400
-Connection ~ 3850 2250
-Connection ~ 3150 2550
-Wire Wire Line
-	3400 5600 4700 5600
-Wire Wire Line
-	2975 2550 3400 2550
 Wire Wire Line
 	1450 2300 1450 2200
 Wire Wire Line
 	1150 2200 1150 2500
 Wire Wire Line
-	1150 2600 1150 2900
-Wire Wire Line
-	2275 3275 2275 3000
-Wire Wire Line
-	2175 3050 2175 3275
-Connection ~ 2175 3275
+	1150 2600 1150 2950
 $Comp
 L R R5
 U 1 1 5981F7FB
 P 1300 4825
-F 0 "R5" V 1300 4775 30  0000 C CNN
-F 1 "10K" V 1300 4875 30  0000 C CNN
+F 0 "R5" V 1315 4825 60  0000 C CNB
+F 1 "10K" V 1200 4825 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 1230 4825 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457841-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__10K.pdf" H 1300 4825 50  0001 C CNN
 F 4 "Résistance à couche épaisse 0.1 W 5 %" H 1300 4825 60  0001 C CNN "Désignation"
@@ -5989,8 +5779,8 @@ $Comp
 L C C3
 U 1 1 5981F807
 P 1450 5075
-F 0 "C3" H 1350 5175 30  0000 L CNN
-F 1 "0.1µF" H 1500 5175 30  0000 L CNN
+F 0 "C3" H 1465 4970 60  0000 L CNB
+F 1 "0.1µF" V 1300 4950 60  0000 L CNB
 F 2 "Capacitors_SMD:C_0603" H 1488 4925 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457901-da-01-en-KONDENSATOR_0_1UF_10Pr_50V_X7R_0603.pdf" H 1450 5075 50  0001 C CNN
 F 4 "Condensateur céramique CMS 0.1 µF 50 V 10 % X7R" H 1450 5075 60  0001 C CNN "Désignation"
@@ -6002,22 +5792,16 @@ F 9 "0,05 €" H 1450 5075 60  0001 C CNN "Prix"
 	1    1450 5075
 	1    0    0    -1  
 $EndComp
-Text Notes 875  5150 2    30   ~ 0
-th+
-Text Notes 875  5250 2    30   ~ 0
-th-
-Text Notes 1100 4500 0    80   ~ 16
+Text Notes 1100 4325 0    100  ~ 20
 Ampli thermocouple 2
-Text Notes 750  5525 1    50   ~ 10
-Thermocouple type K
-Text Notes 3100 5150 2    50   ~ 10
+Text Notes 3275 5150 2    100  ~ 20
 T2
 $Comp
 L R R6
 U 1 1 5981F818
 P 1300 5525
-F 0 "R6" V 1300 5475 30  0000 C CNN
-F 1 "10K" V 1300 5575 30  0000 C CNN
+F 0 "R6" V 1310 5520 60  0000 C CNB
+F 1 "10K" V 1225 5525 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 1230 5525 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457841-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__10K.pdf" H 1300 5525 50  0001 C CNN
 F 4 "Résistance à couche épaisse 0.1 W 5 %" H 1300 5525 60  0001 C CNN "Désignation"
@@ -6032,26 +5816,26 @@ $EndComp
 $Comp
 L R R2
 U 1 1 5981F824
-P 1150 5675
-F 0 "R2" V 1150 5625 30  0000 C CNN
-F 1 "1M" V 1150 5725 30  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 1080 5675 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457827-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__1M.pdf" H 1150 5675 50  0001 C CNN
-F 4 "Résistance à couche épaisse 1 MΩ 0.1 W 5 %" H 1150 5675 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 1150 5675 60  0001 C CNN "Fabricant"
-F 6 "SAJ0105T5E" H 1150 5675 60  0001 C CNN "Ref-fab"
-F 7 "Conrad" H 1150 5675 60  0001 C CNN "Distributeur"
-F 8 "1457827 - 62" H 1150 5675 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 1150 5675 60  0001 C CNN "Prix"
-	1    1150 5675
+P 1150 5725
+F 0 "R2" V 1160 5715 60  0000 C CNB
+F 1 "1M" V 1065 5725 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 1080 5725 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457827-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__1M.pdf" H 1150 5725 50  0001 C CNN
+F 4 "Résistance à couche épaisse 1 MΩ 0.1 W 5 %" H 1150 5725 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 1150 5725 60  0001 C CNN "Fabricant"
+F 6 "SAJ0105T5E" H 1150 5725 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 1150 5725 60  0001 C CNN "Distributeur"
+F 8 "1457827 - 62" H 1150 5725 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 1150 5725 60  0001 C CNN "Prix"
+	1    1150 5725
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C4
 U 1 1 5981F830
 P 1450 5675
-F 0 "C4" H 1500 5775 30  0000 C CNN
-F 1 "0.1µF" H 1450 5675 30  0000 C CNN
+F 0 "C4" H 1515 5575 60  0000 C CNB
+F 1 "0.1µF" V 1315 5640 60  0000 C CNB
 F 2 "Capacitors_SMD:C_0603" H 1488 5525 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457901-da-01-en-KONDENSATOR_0_1UF_10Pr_50V_X7R_0603.pdf" H 1450 5675 50  0001 C CNN
 F 4 "Condensateur céramique CMS 0.1 µF 50 V 10 % X7R" H 1450 5675 60  0001 C CNN "Désignation"
@@ -6066,21 +5850,21 @@ $EndComp
 $Comp
 L 3.3V #PWR6
 U 1 1 5981F837
-P 2275 4725
-F 0 "#PWR6" H 2275 4575 50  0001 C CNN
-F 1 "3.3V" H 2275 4865 30  0000 C CNN
-F 2 "" H 2275 4725 50  0000 C CNN
-F 3 "" H 2275 4725 50  0000 C CNN
-F 4 "0,00 €" H 2275 4725 60  0001 C CNN "Prix"
-	1    2275 4725
+P 2275 4675
+F 0 "#PWR6" H 2275 4525 50  0001 C CNN
+F 1 "3.3V" H 2275 4815 60  0000 C CNB
+F 2 "" H 2275 4675 50  0000 C CNN
+F 3 "" H 2275 4675 50  0000 C CNN
+F 4 "0,00 €" H 2275 4675 60  0001 C CNN "Prix"
+	1    2275 4675
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_01X02 P2
 U 1 1 5981F843
 P 950 5175
-F 0 "P2" H 950 5325 30  0000 C CNN
-F 1 "CONN_01X02" V 950 4875 30  0000 C CNN
+F 0 "P2" H 950 5325 60  0000 C CNB
+F 1 "CONN_01X02" V 950 4750 60  0000 C CNB
 F 2 "Connect:PINHEAD1-2" H 950 5175 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/583107.pdf?_ga=1.176360613.1823820493.1466675868" H 950 5175 50  0001 C CNN
 F 4 "Bornier à vis fil-à-carte - 2.54 mm - 2 Voies" H 950 5175 60  0001 C CNN "Désignation"
@@ -6095,26 +5879,26 @@ $EndComp
 $Comp
 L TEST_1P W3
 U 1 1 5981F84F
-P 3150 5075
-F 0 "W3" H 3150 5345 30  0000 C CNN
-F 1 "T1" H 3150 5275 30  0000 C CNN
-F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 3350 5075 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 3350 5075 50  0001 C CNN
-F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 3150 5075 60  0001 C CNN "Désignation"
-F 5 "HARWIN" H 3150 5075 60  0001 C CNN "Fabricant"
-F 6 "S1751-46R" H 3150 5075 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 3150 5075 60  0001 C CNN "Distributeur"
-F 8 "2293786" H 3150 5075 60  0001 C CNN "Ref-distri"
-F 9 "0,24 €" H 3150 5075 60  0001 C CNN "Prix"
-	1    3150 5075
+P 3075 4650
+F 0 "W3" H 3075 5025 100 0000 C CNB
+F 1 "T2" H 3075 4875 100 0000 C CNB
+F 2 "Sp:Measurement_Point_Square-SMD-Pad_Big" H 3275 4650 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1688119.pdf?_ga=1.202990993.1823820493.1466675868" H 3275 4650 50  0001 C CNN
+F 4 "Point de test PCB - Série S1751 - Montage en surface - Alliage de cuivre - Contacts plaqués étain" H 3075 4650 60  0001 C CNN "Désignation"
+F 5 "HARWIN" H 3075 4650 60  0001 C CNN "Fabricant"
+F 6 "S1751-46R" H 3075 4650 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 3075 4650 60  0001 C CNN "Distributeur"
+F 8 "2293786" H 3075 4650 60  0001 C CNN "Ref-distri"
+F 9 "0,24 €" H 3075 4650 60  0001 C CNN "Prix"
+	1    3075 4650
 	1    0    0    -1  
 $EndComp
 $Comp
 L AD8495ARMZ U2
 U 1 1 5981F85B
 P 2275 5175
-F 0 "U2" H 2125 5175 50  0000 L CNN
-F 1 "AD8495ARMZ" H 1775 5175 30  0000 L CNN
+F 0 "U2" H 2125 5175 120 0000 C CNB
+F 1 "AD8495ARMZ" V 1875 5175 80  0000 C CNB
 F 2 "Sp:ampli" H 2275 5175 50  0001 C CNN
 F 3 "http://pdf1.alldatasheet.com/datasheet-pdf/view/347566/AD/AD8495ARMZ.html" H 2275 5175 50  0001 C CNN
 F 4 "Amplificateur de mesure" H 2275 5175 60  0001 C CNN "Désignation"
@@ -6127,8 +5911,6 @@ F 9 "3,00 €" H 2275 5175 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 Connection ~ 1450 5900
-Wire Wire Line
-	1150 5825 1150 5900
 $Comp
 L GND #PWR4
 U 1 1 5981F863
@@ -6152,52 +5934,339 @@ F 3 "" H 1150 5900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1450 4825 1575 4825
-Wire Wire Line
-	1450 5525 1575 5525
-Wire Wire Line
 	1150 5900 2275 5900
 Wire Wire Line
 	1450 5825 1450 5900
-NoConn ~ 2375 5575
-Wire Wire Line
-	2375 4775 2975 4775
-Wire Wire Line
-	2975 4775 2975 5175
-Wire Wire Line
-	3150 5075 3150 5650
-Connection ~ 3150 5175
-Wire Wire Line
-	2975 5175 3150 5175
 Wire Wire Line
 	1450 4925 1450 4825
 Wire Wire Line
 	1150 4825 1150 5125
 Wire Wire Line
-	1150 5225 1150 5525
+	1150 5225 1150 5575
 Wire Wire Line
-	2275 5900 2275 5625
+	3400 2450 3400 6700
 Wire Wire Line
-	2175 5675 2175 5900
-Connection ~ 2175 5900
+	8125 1200 8125 1325
 Wire Wire Line
-	3400 2550 3400 5600
+	9125 1700 9250 1700
+Connection ~ 1150 5525
 Wire Wire Line
-	3150 5650 4650 5650
+	1150 5900 1150 5875
+Connection ~ 1150 2900
 Wire Wire Line
-	4400 2100 4400 3125
+	1150 3275 1150 3250
 Wire Wire Line
-	4400 3125 3525 3125
+	1450 2200 1475 2200
 Wire Wire Line
-	3525 3125 3525 5150
+	1475 2900 1450 2900
+Wire Wire Line
+	2275 2050 2100 2050
+Wire Wire Line
+	2100 2050 2100 2025
+NoConn ~ 2425 3000
+Wire Wire Line
+	2275 3275 2275 3050
+Wire Wire Line
+	2125 3150 2125 3275
+Connection ~ 2125 3275
+Wire Wire Line
+	3075 2550 3400 2550
+Connection ~ 3400 2550
+Wire Wire Line
+	2425 2100 3075 2100
+Wire Wire Line
+	3075 2100 3075 2550
+Wire Wire Line
+	1450 4825 1475 4825
+Wire Wire Line
+	1475 5525 1450 5525
+NoConn ~ 2425 5625
+Wire Wire Line
+	2275 5900 2275 5675
+Wire Wire Line
+	2125 5775 2125 5900
+Connection ~ 2125 5900
+Wire Wire Line
+	2425 4725 3075 4725
+Wire Wire Line
+	3075 4650 3075 5175
+Wire Wire Line
+	3300 5175 3300 6775
+Wire Wire Line
+	3075 5175 3300 5175
+Connection ~ 3075 4725
+Wire Wire Line
+	3825 6125 4075 6125
+Wire Wire Line
+	4075 6125 4075 6275
+Wire Wire Line
+	4075 6275 4225 6275
+Connection ~ 4025 6125
+Wire Wire Line
+	6525 4775 6750 4775
+Wire Wire Line
+	6750 4775 6750 6700
+Wire Wire Line
+	6750 6700 3400 6700
+Wire Wire Line
+	3300 6775 6850 6775
+Wire Wire Line
+	6850 6775 6850 5075
+Wire Wire Line
+	6850 5075 6525 5075
+Wire Wire Line
+	5825 2375 5825 1550
+Connection ~ 5825 1850
+Wire Wire Line
+	5825 1850 7075 1850
+Wire Wire Line
+	6525 2975 6700 2975
+Wire Wire Line
+	6525 3275 6700 3275
+Wire Wire Line
+	6525 3575 6700 3575
+Wire Wire Line
+	6525 2675 7000 2675
+Wire Wire Line
+	7000 2675 7000 2975
+Wire Wire Line
+	7000 3275 7300 3275
+Wire Wire Line
+	7075 1850 7075 3275
+Wire Wire Line
+	7000 3575 7300 3575
+Wire Wire Line
+	7000 2975 7300 2975
+Connection ~ 7075 3275
+Wire Wire Line
+	6525 2075 6525 1600
+Wire Wire Line
+	6525 2075 7175 2075
+Wire Wire Line
+	7175 2075 7175 3575
+Connection ~ 7175 3575
+Wire Wire Line
+	7650 3575 7600 3575
+Wire Wire Line
+	7600 2975 7650 2975
+Connection ~ 7650 2975
+Wire Wire Line
+	7600 3275 7855 3275
+Connection ~ 7650 3275
+Wire Wire Line
+	6525 4175 8400 4175
+Wire Wire Line
+	6525 5375 6925 5375
+Wire Wire Line
+	6525 5675 6925 5675
+Wire Wire Line
+	6525 5975 6925 5975
+Wire Wire Line
+	7325 5375 7425 5375
+Wire Wire Line
+	7325 5675 7425 5675
+Wire Wire Line
+	7325 5975 7425 5975
+Wire Wire Line
+	7725 5375 7725 6150
+Connection ~ 7725 5675
+Connection ~ 7725 5975
+Wire Wire Line
+	4225 2075 3950 2075
+Wire Wire Line
+	3950 2075 3950 2100
+NoConn ~ 4225 2375
+NoConn ~ 4225 2675
+NoConn ~ 4225 2975
+NoConn ~ 4225 3275
+NoConn ~ 4225 3575
+NoConn ~ 4225 3875
+NoConn ~ 4225 4175
+NoConn ~ 4225 4475
+NoConn ~ 4225 4775
+NoConn ~ 4225 5075
+NoConn ~ 4225 5375
+NoConn ~ 4225 5675
+NoConn ~ 4775 6525
+NoConn ~ 5075 6525
+NoConn ~ 5375 6525
+NoConn ~ 5675 6525
+NoConn ~ 5975 6525
+Text Notes 760  2360 1    80   ~ 16
+(type K)
+Wire Wire Line
+	7005 1340 7005 1190
+Text Notes 10490 1635 0    60   ~ 12
+- +
+Text Notes 10430 1420 0    60   ~ 12
+LION\nBattery
+Wire Wire Line
+	10635 2370 10635 1900
+Wire Wire Line
+	9865 2370 10635 2370
+Wire Wire Line
+	10535 2425 10535 1900
+NoConn ~ 9765 1370
 Wire Notes Line
-	8350 1625 9075 1625
+	10385 995  10790 995 
 Wire Notes Line
-	9075 1625 9075 6225
+	10790 995  10790 1525
 Wire Notes Line
-	9075 6225 1000 6225
+	10790 1525 10385 1525
 Wire Notes Line
-	1000 6225 1000 1625
+	10385 1525 10385 1000
 Wire Notes Line
-	1000 1625 8150 1625
+	9900 4005 9985 4005
+Wire Notes Line
+	9985 4005 9985 4600
+Wire Notes Line
+	9985 4600 9745 4600
+Text Notes 870  5180 2    80   ~ 16
+th+
+Text Notes 870  5280 2    80   ~ 16
+th-
+Text Notes 755  6205 1    80   ~ 16
+Thermocouple
+Text Notes 755  5015 1    80   ~ 16
+(type K)
+Wire Wire Line
+	6525 4475 9495 4475
+Wire Wire Line
+	9495 4475 9495 4455
+Wire Notes Line
+	10685 1645 10685 1650
+Wire Notes Line
+	11050 6490 6925 6490
+Wire Notes Line
+	6925 6490 6925 6895
+Wire Notes Line
+	6925 6895 1000 6895
+Wire Notes Line
+	1000 6895 1000 625 
+Wire Notes Line
+	1000 625  10315 625 
+Wire Notes Line
+	10315 625  10315 1650
+Wire Notes Line
+	6130 2765 8245 2765
+Wire Notes Line
+	6490 3660 8245 3660
+Text Notes 7945 5865 1    60   ~ 12
+3XLEDS
+Wire Notes Line
+	6140 5165 8045 5165
+Wire Notes Line
+	8045 5165 8045 6365
+Wire Notes Line
+	8045 6365 6125 6365
+Wire Notes Line
+	6125 6365 6125 6110
+Wire Notes Line
+	6485 3660 6130 3660
+Wire Notes Line
+	6130 3660 6130 2765
+Wire Notes Line
+	10315 1655 10315 1750
+Wire Notes Line
+	10315 1750 11145 1750
+Wire Notes Line
+	11145 1750 11145 6490
+Wire Notes Line
+	11145 6490 11060 6490
+Wire Wire Line
+	9125 1800 9125 1700
+Wire Wire Line
+	9250 1700 9250 2530
+Wire Wire Line
+	6525 3875 8520 3875
+Wire Wire Line
+	9495 4055 9495 4255
+Connection ~ 9495 4155
+Wire Wire Line
+	9495 4055 9395 4055
+Wire Notes Line
+	8920 3710 10375 3710
+Wire Notes Line
+	10375 3710 10375 4840
+Wire Notes Line
+	10375 4840 8915 4840
+Wire Notes Line
+	8915 4840 8915 3720
+$Comp
+L GND #PWR?
+U 1 1 59958A01
+P 7855 3275
+F 0 "#PWR?" H 7855 3025 50  0001 C CNN
+F 1 "GND" H 7855 3115 60  0000 C CNB
+F 2 "" H 7855 3275 50  0000 C CNN
+F 3 "" H 7855 3275 50  0000 C CNN
+	1    7855 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2975 7650 3575
+Wire Notes Line
+	8245 3660 8245 2765
+$Comp
+L GND #PWR?
+U 1 1 59959D4F
+P 7005 1640
+F 0 "#PWR?" H 7005 1390 50  0001 C CNN
+F 1 "GND" H 7005 1480 60  0000 C CNB
+F 2 "" H 7005 1640 50  0000 C CNN
+F 3 "" H 7005 1640 50  0000 C CNN
+	1    7005 1640
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6695 1190 7130 1190
+Connection ~ 7005 1190
+Wire Wire Line
+	6695 1190 6695 2675
+Connection ~ 6695 2675
+Wire Wire Line
+	8125 2025 8125 2535
+Wire Wire Line
+	7610 1200 8125 1200
+Connection ~ 7930 1200
+Wire Wire Line
+	7610 1200 7610 1555
+Wire Wire Line
+	7610 1855 7610 2425
+Wire Wire Line
+	7610 2425 10535 2425
+Wire Wire Line
+	9125 2425 9125 2100
+Connection ~ 7930 2425
+Connection ~ 9125 2200
+Wire Wire Line
+	9125 1200 9965 1200
+Connection ~ 9520 1200
+Wire Wire Line
+	9965 1200 9965 1370
+Wire Wire Line
+	9520 1550 9520 1205
+Connection ~ 9125 2425
+Wire Wire Line
+	9250 2530 8520 2530
+Wire Wire Line
+	8520 2530 8520 3875
+Wire Wire Line
+	8125 2535 8400 2535
+Wire Wire Line
+	8400 2535 8400 4175
+Connection ~ 8125 2200
+Wire Wire Line
+	9520 1850 9520 2425
+Connection ~ 9520 2425
+Wire Notes Line
+	7395 735  11050 735 
+Wire Notes Line
+	11050 735  11050 2650
+Wire Notes Line
+	11050 2650 7375 2650
+Wire Notes Line
+	7375 2650 7375 750 
+Text Notes 8150 2625 0    60   ~ 12
+To microcontroler
 $EndSCHEMATC

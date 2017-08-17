@@ -23,6 +23,10 @@ D point
 K point tp
 $ENDCMP
 #
+$CMP Teensy_3-2
+D Teensy 3-2
+$ENDCMP
+#
 $CMP VBAT
 K POWER, PWR
 $ENDCMP
