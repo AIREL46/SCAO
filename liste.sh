@@ -1,2 +1,2 @@
 #!/bin/bash
-cat liste-ad-sites.csv
+cat -n liste-ad-sites.csv
