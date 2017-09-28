@@ -1,4 +1,3 @@
-include <dim1.scad>
+//include <dim1.scad>
 $fn=100;
-cylinder(h = e, r = 1.2*R, center = true);
-translate([0,0,(e/2)+3])cylinder(h = 6, r = 2.5, center = true);
+color([206/255,206/255,206/255]) rotate_extrude(angle = 360, convexity = 2) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/couvercle.dxf", layer = "extrusion");};
