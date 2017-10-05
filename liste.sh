@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -n SCAO/liste-ad-sites.csv
+cat -n /home/leruste/SCAO/liste-ad-sites.csv

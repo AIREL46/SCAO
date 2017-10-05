@@ -1,3 +1,5 @@
+<!-- Ce fichier .html a pour objet 1 la mise à disposition du document sur un site web -->
+<!-- Ce fichier .html a pour objet 2 l'édition de la documention -->
 <DOCTYPE html>
 <html>
 	<head>
@@ -7,21 +9,21 @@
 	</head>
 <h1><mark>Contexte</mark></h1>
 
-<p>Dans le cadre du <strong>S</strong>ystème de <strong>C</strong>uisson <strong>A</strong>ssistée par <strong>O</strong>rdinateur <a href="http://fablabo.net/wiki/SCAO"><strong>SCAO</strong></a> et de son <a href="http://fablabo.net/wiki/SCAO#Prototype_n.C2.B03">prototype N°3</a>, la e-poignée 433MHZ <a href="http://fablabo.net/wiki/E-poign%C3%A9e-433">e-p-433</a> est l'un des objets connectés de ce prototype.</p>
+<p>Dans le cadre du <strong>S</strong>ystème de <strong>C</strong>uisson <strong>A</strong>ssistée par <strong>O</strong>rdinateur <a href="http://fablabo.net/wiki/SCAO"><strong>SCAO</strong></a> et de son <a href="http://fablabo.net/wiki/SCAO#Prototype_n.C2.B03">prototype N°3</a>, la <a href="http://fablabo.net/wiki/E-poign%C3%A9e-433">e-poignée 433MHZ</a> est l'un des objets connectés de ce prototype. L'abréviation utilisée pour la désigner est <strong>e-p-433</strong>.</p>
 
-<p>Le prototypage définit par le <a href="http://fablabo.net/wiki/SCAO#Prototypage">SCAO</a> est interprété, au sens large, comme regroupant toutes les activités qui concourent à la réalisation du prototype.</p>
+<p>Le terme de prototypage est défini dans le wiki <a href="http://fablabo.net/wiki/SCAO#Prototypage">SCAO</a>, il est interprété, au sens large, comme regroupant toutes les activités qui concourent à la réalisation du prototype.</p>
 
 <h1>Objet</h1>
 
-<p>L'objet de la e-poignée 433 MHZ est double :
-* la mesure de la température sur le couvercle de la casserole
-* la transmission de la valeur mesurée au e-rupteur 433 MHZ.</p>
+<p>L'objet de la e-p-433 est double :
+<ul><li>la mesure de la température sur le couvercle de la casserole</li>
+<li>la transmission de la valeur mesurée au e-rupteur 433 MHZ.</li></ul></p>
 
 <h1>Description physique</h1>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_d.png" alt="Assemblage de la e-poignée 433 MHZ" title="" /></p>
+<p><img src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_d.png" alt="Assemblage de la e-p-433" title="" /></p>
 
-<p>La e-poignée 433 MHZ communique avec le e-rupteur par  radio.
+<p>La e-p-433 communique avec le e-rupteur par  radio.
 Elle est équipé de 2 amplificateurs de thermocouple, une batterie LI-ION, un chargeur de batterie, d'un microcontrôleur Teensy 3.2 et un émetteur 433 MHZ. Dans un effort de miniaturisation, un circuit imprimé regroupe ces composants (CMS et traversants).</p>
 
 <h1>Nomenclature</h1>
@@ -50,21 +52,21 @@ Elle est équipé de 2 amplificateurs de thermocouple, une batterie LI-ION, un c
 </p>
 
 <p>La modélisation des différents sous-ensembles fait appel principalement à deux logiciels :
-* <a href="http://www.openscad.org/">Openscad</a> pour les pièces fabriquées en impression 3D.
-* <a href="http://www.kicad-pcb.org/">kicad</a> pour le CI CMS e-p-433.</p>
+<ul><li><a href="http://www.openscad.org/">Openscad</a> pour les pièces fabriquées en impression 3D.</li>
+<li><a href="http://www.kicad-pcb.org/">kicad</a> pour le CI CMS e-p-433.</li></ul></p>
 
 <h1>Description fonctionnelle</h1>
 
-<p><img src="http://fablabo.net/mediawiki/images/1/16/E-p-433.png" alt="Schéma fonctionnel de la e-poignée 433 MHZ" title="" />
-La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_de_la_temp.C3.A9rature">mesure de la température</a> sur l'entretoise de fixation [16] et sa transmission en mode radio au e-rupteur <a href="http://fablabo.net/wiki/E-rupteur-433">e-r-433</a>. Cette fonction se décline par :
-* La capture avec contact de la température sur l'entretoise [16] à l'aide d'un capteur de température [17]
-* Le traitement du signal délivré par le thermocouple (filtrage, amplification, conversion analogique digitale)
-* La transmission radio vers le e-r-433
-* Des fonctions secondaires : Battery manager, calibration, <a href="https://fr.wikipedia.org/wiki/Interactions_homme-machine">IHM</a>. </p>
+<p><img src="http://fablabo.net/mediawiki/images/1/16/E-p-433.png" alt="Schéma fonctionnel de la e-p-433" title="" /></p>
+<p>La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_de_la_temp.C3.A9rature">mesure de la température</a> sur l'entretoise de fixation [16] et sa transmission en mode radio au e-rupteur <a href="http://fablabo.net/wiki/E-rupteur-433">e-r-433</a>. Cette fonction se décline par :
+<ul><li>La capture avec contact de la température sur l'entretoise [16] à l'aide d'un capteur de température [17]</li>
+<li>Le traitement du signal délivré par le thermocouple (filtrage, amplification, conversion analogique digitale)</li>
+<li>La transmission radio vers le e-r-433</li>
+<li>Des fonctions secondaires : Battery manager, calibration, <a href="https://fr.wikipedia.org/wiki/Interactions_homme-machine">IHM</a>. </li></ul></p>
 
 <h1>Description détaillée</h1>
 
-<p>Ce paragraphe est structuré selon les articles de la nomenclature de la e-poignée 433MHZ.</p>
+<p>Ce paragraphe est structuré selon les articles de la nomenclature de la e-p-433.</p>
 
 <p>Les articles de visserie repérés [1], [2], [5], [6], [10], [11], [12], [14], [15], ne font pas l'objet de paragraphes spécifiques.</p>
 
@@ -81,16 +83,15 @@ La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_
 <h4>Version 1</h4>
 
 <p>L'entretoise de fixation [16] est constituée d'une entretoise M5. Elle est modifiée en atelier selon les indications suivantes :
-* <a href="http://fablabo.net/wiki/20170409091838">Usinage d'une fraisure</a>
-<img src="http://fablabo.net/mediawiki/images/b/b0/Ent-M5.png" alt="Entretoise M5" width=100%; height=auto; title="" />
-* Perçage d'un trou, de 1mm de diamêtre, à mi-hauteur de la partie hexagonale, pour permettre l'introduction du thermocouple.</p>
+<ul><li><a href="http://fablabo.net/wiki/20170409091838">Usinage d'une fraisure</a>
+<img src="http://fablabo.net/mediawiki/images/b/b0/Ent-M5.png" alt="Entretoise M5" width=100%; height=auto; title="" /></li>
+<li>Perçage d'un trou, de 1mm de diamêtre, à mi-hauteur de la partie hexagonale, pour permettre l'introduction du thermocouple.</li></ul></p>
 
 <h4>Version 2</h4>
 
-<p>L'entretoise de fixation [16] est constituée d'une entretoise spécifique en aluminium :
-<img src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/ent-alu.png" alt="Entretoise aluminium de la e-poignée 433 MHZ" title="" /></p>
-
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-photo.png" alt="Entretoise aluminium de la e-poignée 433 MHZ" title="" /></p>
+<p>L'entretoise de fixation [16] est constituée d'une entretoise spécifique en aluminium :</p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/wiki/ent-alu-photo.png" alt="Entretoise de fixation de la e-p-433 +" title="" /></p>
+<p><img src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-photo.png" alt="Entretoise aluminium de la e-p-433" title="" /></p>
 
 <h2>Capteur de température [17]</h2>
 
@@ -114,15 +115,15 @@ La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_
 <p><img src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-cable.png" alt="Câble du thermocouple" title="" /></p>
 
 <p>Il provient d'un thermocouple de <a href="https://fr.wikipedia.org/wiki/Thermocouple#Type_K">type K</a>, à l'origine, le câble était trop long, il a donc été coupé, ce câble :
-* longueur = 90 mm
-* la gaine est blanche/verte
-* les 2 fils :
-  * vert (recouvert d'une gaine thermorétractable bleue)
-  * blanc (recouvert d'une gaine thermorétractable blanche)</p>
+<ul><li>longueur = 90 mm</li>
+<li>la gaine est blanche/verte</li>
+les 2 fils :
+<ul><li>vert (recouvert d'une gaine thermorétractable bleue)</li>
+<li>blanc (recouvert d'une gaine thermorétractable blanche).</li></ul></ul></p>
 
 <p>Les mesures à l'Ohmêtre des 2 fils donnent :
-* R(vert) = 8 Ohms
-* R(blanc) = 3,5 Ohms.</p>
+<li>R(vert) = 8 Ohms</li>
+<li>R(blanc) = 3,5 Ohms.</li></ul></p>
 
 <h4>Version 1</h4>
 
@@ -159,7 +160,7 @@ La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_
 
 <h3>Conception</h3>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/isolateur-433.png" alt="Isolateur de la e-poignée 433 MHZ" title="" /></p>
+<p><img src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/isolateur-433.png" alt="Isolateur de la e-p-433" title="" /></p>
 
 <h3>Réalisation</h3>
 
@@ -174,14 +175,14 @@ La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_
 <h3>Conception</h3>
 
 <p>La <a href="https://www.sparkfun.com/products/13851">Lithium Ion Battery - 400mAh</a> est décrite sur les sites Wikipédia français et anglais :
-* <a href="https://fr.wikipedia.org/wiki/Accumulateur_lithium-ion">Accumulateur lithium-ion</a>
-* <a href="https://en.wikipedia.org/wiki/Lithium-ion_battery">Lithium-ion battery</a>.</p>
+<ul><li><a href="https://fr.wikipedia.org/wiki/Accumulateur_lithium-ion">Accumulateur lithium-ion</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lithium-ion_battery">Lithium-ion battery</a>.</li><ul></p>
 
 <p>Son utilisation nécessite :
-*  un chargeur adapté à ce type de technologie <a href="https://www.sparkfun.com/products/10217">SparkFun LiPo Charger Basic - Micro-USB</a>
-* une attention particulière à la température en fonctionnement conduisant au strict respect des recommandations du constructeur. La <a href="https://cdn.sparkfun.com/datasheets/Prototyping/spe-00-502535-400mah-en-1.0ver.pdf">datasheet</a> du constructeur, concernant "Operating Temperature Range", en fonction du mode de fonctionnement, indique :
-<em>* Charge 0 ~ 45°C
-*</em> Discharge –20 ~ 60°C.</p>
+<ul><li>un chargeur adapté à ce type de technologie <a href="https://www.sparkfun.com/products/10217">SparkFun LiPo Charger Basic - Micro-USB</a></li>
+<li>une attention particulière à la température en fonctionnement conduisant au strict respect des recommandations du constructeur. La <a href="https://cdn.sparkfun.com/datasheets/Prototyping/spe-00-502535-400mah-en-1.0ver.pdf">datasheet</a> du constructeur, concernant "Operating Temperature Range", en fonction du mode de fonctionnement, indique :</li>
+<ul><em><li>Charge 0 ~ 45°C</li>
+</em> <li>Discharge –20 ~ 60°C.</li></ul></ul></p>
 
 <h3>Réalisation</h3>
 
@@ -227,18 +228,21 @@ La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_
 <h3>Réalisation (WBS)</h3>
 
 <p>La réalisation du CI CMS e-p-433 [3] est traitée en un projet séparé. Il fait appel à un <a href="https://en.wikipedia.org/wiki/Work_breakdown_structure">"Work Breakdown Structure" (WBS)</a>. Le principe du WBS consiste à décomposer le projet en tâches élémentaires. Ces tâches sont représentées par le tableau ci-dessous :</p>
+<table>
+<caption><mark>Work Breakdown Structure</mark></caption>
+<th>Désignation de la tâche</th><th>Founisseur</th><th>Type</th><th>Ref1</th><th>Ref2</th><th>Note</th>
+<tr><td>Projet</td><td><a href="http://kicad-pcb.org/">Kicad</a></td><td></td><td><a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.pro">e-p-433.pro</a></td><td></td><td></td></tr>
+<tr><td>Schéma électrique</td><td><a href="http://kicad-pcb.org/">Kicad</a></td><td><a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a></td><td><a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.sch">e-p-433.sch</a></td><td></td><td></td></tr>
+<tr><td>Génération netlist</td><td><a href="http://kicad-pcb.org/">Kicad</a></td><td><a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a></td><td><a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.net">e-p-433.net</a></td><td></td><td></td></tr>
+<tr><td>Génération BOM</td><td><a href="http://kicad-pcb.org/">Kicad</a></td><td><a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a></td><td>e-p-433</td><td><a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.ods">e-p-433.ods</a></td><td>LibreOffice Calc</td></tr>
+<tr><td>Edition PCB</td><td><a href="http://kicad-pcb.org/">Kicad</a></td><td><a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a></td><td>e-p-433.kicad_pcb</td><td>e-p-433.net</td><td></td></tr>
+<tr><td>Génération fichiers GERBER</td><td><a href="http://kicad-pcb.org/">Kicad</a></td><td><a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a></td><td><a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.kicad_pcb">e-p-433.kicad_pcb</a></td><td>Gerber</td><td></td></tr>
+<tr><td>Génération plan de perçage</td><td><a href="http://kicad-pcb.org/">Kicad</a></td><td><a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a></td><td>e-p-433.kicad_pcb</td><td><a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.drl">e-p-433.drl</a></td><td></td></tr>
+<tr><td>CI nu et stencil</td><td>A définir</td><td>Achat</td><td>Fichiers Gerber</td><td></td><td></td></tr>
+<tr><td>Lot de composants</td><td>A définir</td><td>Achat</td><td>BOM</td><td></td><td></td></tr>
+<tr><td>CI - CMS</td><td><a href="http://www.citedelobjetconnecte.com/">Iot city</a></td><td>Fabrication</td><td>BOM + schémas</td><td></td><td></td></tr>
 
-<p>Designation de la tâche | Founisseur | Type | Ref1| Ref2 | Note
-------------|------------|-------------|-------------|-------------|-------------
- Projet |<a href="http://kicad-pcb.org/">Kicad</a> |  | <a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.pro">e-p-433.pro</a> || |
- Schéma électrique | <a href="http://kicad-pcb.org/">Kicad</a> | <a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a> | <a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.sch">e-p-433.sch</a> |  | 
- Génération netlist | <a href="http://kicad-pcb.org/">Kicad</a> | <a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a> | <a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.net">e-p-433.net</a> |  | 
- Génération BOM | <a href="http://kicad-pcb.org/">Kicad</a> | <a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a> | e-p-433 | <a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.ods">e-p-433.ods</a> | LibreOffice Calc
-  Edition PCB | <a href="http://kicad-pcb.org/">Kicad</a> | <a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a> | e-p-433.kicad<em>pcb | e-p-433.net |
-  Génération fichiers GERBER | <a href="http://kicad-pcb.org/">Kicad</a> | <a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a> | <a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.kicad_pcb">e-p-433.kicad</em>pcb</a> | Gerber | 
-  Génération plan de per## CI CMS e-p-433 [3]çage | <a href="http://kicad-pcb.org/">Kicad</a> | <a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a> | e-p-433.kicad_pcb |<a href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.drl">e-p-433.drl</a> | 
-  CI nu et stencil | A définir | Achat | Fichiers Gerber |  | 
-  Lot de composants | A définir | Achat | BOM |  | 
-  CI - CMS | <a href="http://www.citedelobjetconnecte.com/">Iot city</a> | Fabrication | BOM + schémas |  | 
-  CI - Composants traversants | <a href="http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS">RL</a> | Fabrication | BOM + schémas |  </p>
+<tr><td>CI - Composants traversants</td><td><a href="http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS">RL</a></td><td>Fabrication</td><td>BOM + schémas</td><td></td><td></td></tr>
+
+</table>
 </html>

@@ -1,9 +1,58 @@
-table
+/* Ce fichier .css gére la mise en forme du texte contenu dans le fichier .html */
+*
+{
+	
+	background-color: rgb(206,206,206);
+//	background-image: url('SCAO/Design/logo/quietcook-01.jpg');
+}
+h1
+{
+	font-size: 2.25em;	
+	
+}
+h2
+{
+	font-size: 2em;	
+	
+}
+h3
+{
+	font-size: 1.75em;	
+	
+}
+h4
+{
+	font-size: 1.5em;	
+	
+}
+h5
+{
+	font-size: 1.25em;	
+	
+}
+h6
+{
+	font-size: 1.125em;	
+	
+}
+p
 
 {
 
-    border-collapse: collapse;
+    text-align=justify;
+	font-size: 1.35em;	
 
+}
+caption
+{
+	font-size: 2.25em;
+}
+table
+
+{
+	text-align=center;
+    border-collapse: collapse;
+	font-size: 1.35em;
 }
 
 td, th /* Mettre une bordure sur les td ET les th */
