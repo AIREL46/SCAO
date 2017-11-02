@@ -1,9 +1,27 @@
 /* Ce fichier .css gére la mise en forme du texte contenu dans le fichier .html */
+#conteneur
+{
+	display: flex; /*mise en page avec flexbox*/
+	//border: 2px solid black; /*bordure a activée pour vérifier le centrage vertical et horizontal*/
+}
+.element
+{
+	margin: auto; /*marge extérieure - centrage vertical et horizontal (flexbox)*/
+	padding: 12px; /*marge intérieure*/
+	font-size: 1.15em; /*taille de la police*/
+	//border: 2px solid black; /*bordure a activée pour vérifier le centrage vertical et horizontal*/
+}
+img
+{
+	width: 100%; /* largeur */
+	margin: auto; /* On peut donc demander à ce que le bloc soit centré avec auto */
+	padding: 1px;  /*marge intérieure*/
+}
 *
 {
 	
-	background-color: rgb(206,206,206);
-//	background-image: url('SCAO/Design/logo/quietcook-01.jpg');
+	background-color: rgb(206,206,206);  /*couleur du fond*/
+	//background-image: url('https://raw.githubusercontent.com/AIREL46/SCAO/master/Design/logo/quietcook-02.jpg');  /*image du fond*/
 }
 h1
 {
@@ -35,13 +53,15 @@ h6
 	font-size: 1.125em;	
 	
 }
-p
-
+li
 {
-
-    text-align=justify;
+	font-size: 1.25em;	
+	
+}
+p
+{
+	text-align=justify;
 	font-size: 1.35em;	
-
 }
 caption
 {
@@ -51,7 +71,7 @@ table
 
 {
 	text-align=center;
-    border-collapse: collapse;
+	border-collapse: collapse;
 	font-size: 1.35em;
 }
 
@@ -59,7 +79,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 
 {
 
-    border: 2px solid black;
+	border: 2px solid black;
 
 }
 

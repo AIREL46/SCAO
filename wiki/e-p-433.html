@@ -21,7 +21,7 @@
 
 <h1>Description physique</h1>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_d.png" alt="Assemblage de la e-p-433" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/Ping/openscad/Assemblage_d.png" align="center" width=100% height=auto alt="Assemblage de la e-p-433" title="" /></p>
 
 <p>La e-p-433 communique avec le e-rupteur par  radio.
 Elle est équipé de 2 amplificateurs de thermocouple, une batterie LI-ION, un chargeur de batterie, d'un microcontrôleur Teensy 3.2 et un émetteur 433 MHZ. Dans un effort de miniaturisation, un circuit imprimé regroupe ces composants (CMS et traversants).</p>
@@ -57,7 +57,7 @@ Elle est équipé de 2 amplificateurs de thermocouple, une batterie LI-ION, un c
 
 <h1>Description fonctionnelle</h1>
 
-<p><img src="http://fablabo.net/mediawiki/images/1/16/E-p-433.png" alt="Schéma fonctionnel de la e-p-433" title="" /></p>
+<p><img src="http://fablabo.net/mediawiki/images/1/16/E-p-433.png" align=middle width=100% height=auto alt="Schéma fonctionnel de la e-p-433" title="" /></p>
 <p>La fonction globale e-p-433 est la <a href="http://fablabo.net/wiki/SCAO#Mesure_de_la_temp.C3.A9rature">mesure de la température</a> sur l'entretoise de fixation [16] et sa transmission en mode radio au e-rupteur <a href="http://fablabo.net/wiki/E-rupteur-433">e-r-433</a>. Cette fonction se décline par :
 <ul><li>La capture avec contact de la température sur l'entretoise [16] à l'aide d'un capteur de température [17]</li>
 <li>Le traitement du signal délivré par le thermocouple (filtrage, amplification, conversion analogique digitale)</li>
@@ -90,8 +90,8 @@ Elle est équipé de 2 amplificateurs de thermocouple, une batterie LI-ION, un c
 <h4>Version 2</h4>
 
 <p>L'entretoise de fixation [16] est constituée d'une entretoise spécifique en aluminium :</p>
-<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/wiki/ent-alu-photo.png" alt="Entretoise de fixation de la e-p-433 +" title="" /></p>
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-photo.png" alt="Entretoise aluminium de la e-p-433" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/wiki/ent-alu-photo.png" align=middle alt="Entretoise de fixation de la e-p-433 +" title="" /></p>
+
 
 <h2>Capteur de température [17]</h2>
 
@@ -105,16 +105,23 @@ Elle est équipé de 2 amplificateurs de thermocouple, une batterie LI-ION, un c
 
 <p>Un article de la revue Mesures atteste que <a href="http://www.mesures.com/component/k2/item/14381-les-capteurs-de-temperature-a-la-fete">les thermocouples devraient représenter la plus grande part du marché en 2023</a>.</p>
 
-<p>La photo ci-contre  montre la <a href="https://fr.wikipedia.org/wiki/Thermocouple">soudure chaude</a>
-<img src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-soud.png" alt="Thermocouple soudure" title="" /> d'un thermocouple de type K.</p>
+<!--Création d'un conteneur contenant 2 éléments-->
+<div id="conteneur">
+    <div class="element">
+<img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/wiki/thermo-soud.png" align=middle alt="Thermocouple soudure" title="" />
 
-<p>En principe, un thermocouple peut être  fabriquer soi-même de  <a href="http://forums.futura-sciences.com/electronique/173470-fabrication-dun-thermocouple.html">manière "artisanal"</a>, j'ai moi-même essayé mais sans succès pour le moment. La difficulté est de réaliser la soudure du chromel et de l'alumel. Il faut faire appel à une source de chaleur qui permette d'atteindre la fusion des 2 alliages. De mon expérience, un briquet, la gazinière ou une lampe à souder de type "camping gaz" sont insuffisants. Dans le meilleur des cas, l'intensité de la source de chaleur permet aux 2 alliages de prendre la couleur rouge clair. En conclusion, un poste de soudure de type <a href="https://fr.wikipedia.org/wiki/Chalumeau_(outil">chalumeau</a>) est nécessaire. Par exemple le <a href="https://www.multirex.net/micro-chalumeau-2800,fr,4,200024.cfm">micro chalumeau</a>.</p>
+</div>
+    <div class="element"><p>La photo ci-contre  montre la <a href="https://fr.wikipedia.org/wiki/Thermocouple">soudure chaude</a>
+d'un thermocouple de type K. En principe, un thermocouple peut être  fabriquer par soi-même de  <a href="http://forums.futura-sciences.com/electronique/173470-fabrication-dun-thermocouple.html">manière "artisanal"</a>, j'ai essayé mais sans succès pour le moment. La difficulté est de réaliser la soudure du chromel et de l'alumel. Il faut faire appel à une source de chaleur qui permette d'atteindre la fusion des 2 alliages. De mon expérience, un briquet, la gazinière ou une lampe à souder de type "camping gaz" sont insuffisants. Dans le meilleur des cas, l'intensité de la source de chaleur permet aux 2 alliages de prendre la couleur rouge clair. En conclusion, un poste de soudure de type <a href="https://fr.wikipedia.org/wiki/Chalumeau_(outil)">chalumeau</a> est nécessaire. Par exemple le <a href="https://www.multirex.net/micro-chalumeau-2800,fr,4,200024.cfm">micro chalumeau</a>.</p>
+</div>    
+</div>
 
-<p>Un exemple de câble de thermocouple est montré ci-dessous :</p>
+<!--Création d'un conteneur contenant 2 éléments-->
+<div id="conteneur">  
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-cable.png" alt="Câble du thermocouple" title="" /></p>
+    <div class="element"><img src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-cable.png?raw=true" align=middle alt="Câble du thermocouple" title="" /></div>
 
-<p>Il provient d'un thermocouple de <a href="https://fr.wikipedia.org/wiki/Thermocouple#Type_K">type K</a>, à l'origine, le câble était trop long, il a donc été coupé, ce câble :
+    <div class="element"><p>Un exemple de câble de thermocouple est montré ci-contre : Il provient d'un thermocouple de <a href="https://fr.wikipedia.org/wiki/Thermocouple#Type_K">type K</a>, à l'origine, le câble était trop long, il a donc été coupé, cette chute de câble a pour caractéristiques :
 <ul><li>longueur = 90 mm</li>
 <li>la gaine est blanche/verte</li>
 les 2 fils :
@@ -123,7 +130,9 @@ les 2 fils :
 
 <p>Les mesures à l'Ohmêtre des 2 fils donnent :
 <li>R(vert) = 8 Ohms</li>
-<li>R(blanc) = 3,5 Ohms.</li></ul></p>
+<li>R(blanc) = 3,5 Ohms.</li></ul></p></div>
+
+</div>
 
 <h4>Version 1</h4>
 
@@ -136,7 +145,7 @@ les 2 fils :
 </ul></li>
 </ul>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-equ.png" alt="Thermocouple équipé" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/wiki/thermo-equ.png" align=middle alt="Thermocouple équipé" title="" /></p>
 
 <h2>La jupe [9]</h2>
 
@@ -146,7 +155,7 @@ les 2 fils :
 
 <h3>Conception</h3>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/jupe-433.png" alt="jupe-433" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/Ping/openscad/jupe-433.png" align=middle alt="jupe-433" title="" /></p>
 
 <h3>Réalisation</h3>
 
@@ -160,7 +169,7 @@ les 2 fils :
 
 <h3>Conception</h3>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/isolateur-433.png" alt="Isolateur de la e-p-433" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/Ping/LibreCAD/isolateur-433.png" width=80% height=auto alt="Isolateur de la e-p-433" title="" /></p>
 
 <h3>Réalisation</h3>
 
@@ -196,34 +205,34 @@ les 2 fils :
 
 <h3>Conception</h3>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.png" alt="Schéma du circuit CMS e-p-433" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433/e-p-433.png" width=100% height=auto alt="Schéma du circuit CMS e-p-433" title="" /></p>
 
 <h4>Conception des fonctions</h4>
 
 <h5>Amplificateur de thermocouple</h5>
 
 <p>L'amplificateur de thermocouple est conçu à partir du circuit intégré <a href="https://fr.wikipedia.org/wiki/Composant_mont%C3%A9_en_surface">CMS</a> <a href="http://www.analog.com/en/index.html">ANALOG DEVICES</a> <a href="http://pdf.datasheetcatalog.com/datasheet/analogdevices2/AD8494_8495_8496_8497.pdf">AD8495</a>. Son schéma électrique :
-<img src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-amp.png" alt="Schéma de l'amplificateur de thermocouple" title="" /></p>
+<img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433/e-p-433-amp.png" alt="Schéma de l'amplificateur de thermocouple" title="" /></p>
 
 <h5>Microcontrôleur</h5>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-mic.png" alt="Schéma du microcontrôleur" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433/e-p-433-mic.png" align=middle width=30% height=auto alt="Schéma du microcontrôleur" title="" /></p>
 
 <h5>Calibration</h5>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-cal.png" alt="Schéma du circuit calibration" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433/e-p-433-cal.png" width=100% height=auto alt="Schéma du circuit calibration" title="" /></p>
 
 <h5>Battery manager</h5>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-bm.png" alt="Schéma Battery manager" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433/e-p-433-bm.png" width=100% height=auto alt="Schéma Battery manager" title="" /></p>
 
 <h5>3XLEDS</h5>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-led.png" alt="Schéma du circuit LEDS" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433/e-p-433-led.png" width=100% height=auto alt="Schéma du circuit LEDS" title="" /></p>
 
 <h5>Emetteur 433MHZ</h5>
 
-<p><img src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-tr.png" alt="Schéma du circuit Emetteur" title="" /></p>
+<p><img src="https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433/e-p-433-tr.png" width=100% height=auto alt="Schéma du circuit Emetteur" title="" /></p>
 
 <h3>Réalisation (WBS)</h3>
 
