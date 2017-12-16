@@ -158,7 +158,7 @@ aside
     border-radius: 5px;
     padding: 10px;
     color: white;
-    font-size: 0.94em;
+    font-size: 1.20em;
 }
 aside p img
 {
@@ -209,7 +209,7 @@ footer h1
 
 #mes_photos
 {
-    width: 59%;
+    width: 100%;
 }
 
 #mes_amis
