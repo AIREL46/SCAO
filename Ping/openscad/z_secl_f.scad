@@ -1,0 +1,21 @@
+include <dim1.scad>
+z1=20; //Vis M3
+z2=21; //Rondelles M3
+z3=11; //CI
+z4=4.3; //Batterie
+z5=13; //Entretoise M3 femelle
+z6=-2; //Rondelles M3
+z7=0; //Capteur de température (batterie)
+z8=0; //Jupe
+z9=-6; //entretoises M3
+z10=4; //Vis M3
+z11=5; //Rondelles M3
+z12=-7.3+e/2; //isolateur
+z13=-11; //Rondelles M3
+z14=-10.5; //Vis M3
+z15=-0.5; //Entretoise M3
+z16=-15.7; //Entretoise de fixation
+z17=-25.2; //Capteur de température (couvercle)
+z18=-25; //Vis de fixation du capteur de température (couvercle)
+z19=-25; //Couvercle
+h=16;
