@@ -1,3 +1,4 @@
+include <dim1.scad>
 z1=10.3; 
 z2=12; 
 z3=11; 

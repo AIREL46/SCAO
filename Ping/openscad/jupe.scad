@@ -60,9 +60,9 @@ translate([-L2/2,-l2/2,hj/2])cylinder(h = hj/2, r = r, center = true);
 translate([-L2/2,l2/2,hj/2])cylinder(h = hj/2, r = r, center = true);
 translate([L2/2,-l2/2,hj/2])cylinder(h = hj/2, r = r, center = true);
 //Percage du trou central
-translate([0,0,hj/2])cylinder(h = hj/2, r = 3.5*r, center = true);
+//translate([0,0,hj/2])cylinder(h = hj/2, r = 3.5*r, center = true);
 //coupe pour representation de l'assemblage :
-    translate([0,-l1/2,-e])cube(size = [L1,l1,hj], center = true);
+    translate([0,-l1/2,-e])cube(size = [L1,l1/2,hj], center = true);
 
 //Ouverture pour le passage du cable du thermocouple dans la goulotte :
 minkowski(){
@@ -75,10 +75,12 @@ if (usb) {
 translate([0,0,hj/2])cylinder(h = hj/2, r = L2/2, center = true);
 }
 if (v433) {
-air (-L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
+scale([2,1.03,1.03])translate([-1,0,(hj/2)-1.85])rotate([180, 0, 0]){rotate([0, 90, 0])import("capteur.stl");}
+translate([-12,0,(hj/2)-1])cube(size = [11,6,5], center = true);
+//air (-L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
 air (-1+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
 air (4+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
-rotate([0,0,90]) air (0,0,(hj/2)-e/2,11,1.1*e,1.5);
+//rotate([0,0,90]) air (0,0,(hj/2)-e/2,11,1.1*e,1.5);
 rotate([0,0,90]) air (14,0,(hj/2)-e/2,11,1.1*e,1.5);
 rotate([0,0,90]) air (-14,0,(hj/2)-e/2,11,1.1*e,1.5);
 //trous pour sangler la batterie avec du fil à coudre
@@ -131,10 +133,16 @@ translate([-xe,-ye,ze2])cylinder(h = e, r = 2*r, center = true);
 }
 }//union
 //Construction du petit cube :
+difference(){
 translate([0,0,-e])minkowski(){
 cube(size = [L1,l1,hj/2], center = true);
 cylinder(h = hj/2, r = e, center = true);
 }//minkowski
+//Renfort pour le logement du capteur de température
+if (v433) {
+translate([0,0,(hj/2)-3.5])cube([10,10,4], center=true);
+}//if
+}//difference
 if (percement) {
 per_jupe ();
 }//if
