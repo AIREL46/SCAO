@@ -34,11 +34,7 @@ rond_M(3, 1, -L2/2, -l2/2, z2);
 //}
 //Plateforme d'essais (3) - version essais
 union()translate([0,0,z3]){
-difference(){
-translate([0,0,0])color([206/255,206/255,206/255]) scale([CC,CC,CC])linear_extrude(height = 0.2, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "contour");}; //Plateforme
-translate([0,0,e])scale([CC,CC,CC]) linear_extrude(height = 0.2, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "lamage-dessus");}; //Lamage du dessus
-translate([0,0,-e])scale([CC,CC,CC]) linear_extrude(height = 0.2, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "lamage-dessous");}; //Lamage du dessous
-}
+include <plateforme-essais.scad>
 //Chargeur
 color(orange)translate([0,0,+8*e])scale([CC,CC,CC]) linear_extrude(height = 0.02, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "chargeur");}; //CI chargeur
 x=-1.95*CC; y=-0.6*CC; //Coordonnées du CI chargeur
