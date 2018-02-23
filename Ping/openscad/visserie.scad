@@ -18,6 +18,7 @@ cylinder(h = 2*ep, r1 = M/2, r2 = M/2, center = true);
 }
 }
 }
+//ent_M(3,4.7,8.1,4.8,true,0,0,0); //Exemple
 //Module Entretoise
 //M est le métrique
 //l1_e est la longueur de la partie hexagonale
