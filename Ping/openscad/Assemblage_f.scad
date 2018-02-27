@@ -106,7 +106,7 @@ color( gris)ent_M(3,4.7,8.1,4.8,true,-8.5,8.5,z15);
 color( gris)ent_M(3,4.7,8.1,4.8,true,8.5,-8.5,z15);
 color( gris)ent_M(3,4.7,8.1,4.8,true,-8.5,-8.5,z15);
 //Entretoise en aluminium (16)
-translate([0,0,z16])rotate([0,0,0])color( [255/255, 0/255, 0/255]){import("ent-alu.stl");}
+translate([0,0,z16])rotate([0,0,0])color( [255/255, 0/255, 0/255]){import("ent-fixation.stl");}
 //Capteur de température (17)
 translate([x17,0,z17])rotate([0,90,0])color( noir){import("capteur.stl");}
 //Vis de serrage du capteur (18)
