@@ -34,6 +34,7 @@ usb=false; v433=true; ent=false; lamage=true;
 //2 fois celle du rayon du cylindre (celui situe sur la partie gauche et celui situe sur la partie droite de la jupe).
 
 //Initialisation des parametres
+vert=([151/255, 191/255, 13/255]);
 $fn=120;
 include <dim1.scad>
 hj=0.975*CC;//hauteur de la jupe
@@ -62,7 +63,7 @@ translate([L2/2,-l2/2,hj/2])cylinder(h = hj/2, r = r, center = true);
 //Percage du trou central
 //translate([0,0,hj/2])cylinder(h = hj/2, r = 3.5*r, center = true);
 //coupe pour representation de l'assemblage :
-    translate([0,-l1/2,-e])cube(size = [L1,l1/2,hj], center = true);
+  //  translate([0,-l1/2,-e])cube(size = [L1,l1/2,hj], center = true);
 
 //Ouverture pour le passage du cable du thermocouple dans la goulotte :
 minkowski(){
@@ -113,7 +114,7 @@ translate([-xe,-ye,ze2])cylinder(h = 2*e, r = r, center = true);//Percage
 //Début module jupe
 jupe(percement);
 module jupe(percement){
-rotate([0,0,0]){
+color([151/255, 191/255, 13/255])rotate([0,0,0]){
 //Construction de la jupe
 difference(){
 
