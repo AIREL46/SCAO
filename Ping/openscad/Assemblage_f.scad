@@ -32,17 +32,27 @@ rond_M(3, 1, -L2/2, -l2/2, z2);
   //cylinder(r=2,h=e/2);
 //}//Trou pour les câbles des capteurs de température (prévoir de l'agrandir)
 //}
-//Plateforme d'essais (3) - version essais
+//Plateforme d'essais équipée (3) - version essais
 union()translate([0,0,z3]){
-include <plateforme-essais.scad>
-//Chargeur
-color(orange)translate([0,0,+8*e])scale([CC,CC,CC]) linear_extrude(height = 0.02, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "chargeur");}; //CI chargeur
 x=-1.95*CC; y=-0.6*CC; //Coordonnées du CI chargeur
-color( gris)ent_M(2.5,4.8,6,5,true, x, y, 5.5*e); //Entretoise M2.5
-rond_M(3, 1, x, y, -2*e);
-color( gris)Ecrou(2.5,1.7, 4.8, x, y,-3*e); //Ecrou M2.5
-//Platine
+//Vis M2.5 (3a)
+color( gris)vis_M(2.5, 6.7, 1.5, true, x, y, 12*e);
+//Platine breadboard (3b)
 color(bleu)translate([0,0,+10*e])scale([CC,CC,CC]) linear_extrude(height = 0.36, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "platine");};
+//Rondelle isolante 2.5 ep=1.3 (3c)
+rond_M(2.5, 1.3, x, y, 10*e);
+//Chargeur (3d)
+color(orange)translate([0,0,+8.5*e])scale([CC,CC,CC]) linear_extrude(height = 0.02, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "chargeur");}; //CI chargeur
+//Rondelle isolante 2.5 ep=1.3 (3e)
+rond_M(2.5, 1.3, x, y, 7*e);
+//Entretoise M2.5 (3f)
+color( gris)ent_M(2.5,4.8,6,5,true, x, y, 5.5*e); 
+//Plateforme d'essais (3g)
+include <plateforme-essais.scad>
+//Rondelle M2.5 (3h)
+rond_M(2.5, 1, x, y, -2*e);
+//Ecrou M2.5 (3i)
+color( gris)Ecrou(2.5,1.7, 4.8, x, y,-3*e);
 }
 //Batterie (4)
 color( [255/255, 0/255, 0/255]) translate([0,0,z4]) cube([23.6,35.2,5.7], center=true);
