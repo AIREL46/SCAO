@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="ateliers.svg"
-   inkscape:export-filename="/media/leruste/SAUVEGARDE1/Données/SCAO/wiki/ateliers.png"
+   inkscape:export-filename="/home/leruste/SCAO/wiki/ateliers.png"
    inkscape:export-xdpi="217.8"
    inkscape:export-ydpi="217.8">
   <defs
@@ -103,15 +103,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.039566"
-     inkscape:cx="529.54789"
-     inkscape:cy="372.04724"
+     inkscape:cx="265.01442"
+     inkscape:cy="370.12336"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer3"
      showgrid="false"
-     inkscape:window-width="1221"
-     inkscape:window-height="1000"
-     inkscape:window-x="59"
-     inkscape:window-y="24"
+     inkscape:window-width="1280"
+     inkscape:window-height="975"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -244,18 +244,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="725.27545"
-       y="559.24384"
+       x="717.57996"
+       y="567.90131"
        id="text8300"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8302"
-         x="725.27545"
-         y="559.24384"
+         x="717.57996"
+         y="567.90131"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">A1 : Atelier salon</tspan><tspan
          sodipodi:role="line"
-         x="725.27545"
-         y="590.49384"
+         x="717.57996"
+         y="599.15131"
          id="tspan8306"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start" /></text>
     <path
@@ -263,98 +263,134 @@
        d="m 769.46657,456.3268 146.14908,0.96098"
        id="path8308"
        inkscape:connector-curvature="0" />
-    <rect
-       style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:#0000ff;stroke-width:3.54330707;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect8310"
-       width="98.117867"
-       height="26.934317"
-       x="770.86108"
-       y="460.4509" />
-    <rect
-       style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:#0000ff;stroke-width:3.54330707;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect8315"
-       width="20.200737"
-       height="30.782076"
-       x="770.78485"
-       y="487.42706" />
-    <rect
-       style="display:inline;opacity:1;fill:#00ff00;fill-opacity:1;stroke:#0000ff;stroke-width:3.54330707;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect8317"
-       width="43.287292"
-       height="26.934317"
-       x="870.60168"
-       y="460.77628" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="701.67688"
-       y="452.29535"
+       x="725.7254"
+       y="448.4476"
        id="text8358"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8360"
-         x="701.67688"
-         y="452.29535"
+         x="725.7254"
+         y="448.4476"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">Cloison</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="867.34998"
-       y="502.45016"
+       x="851.95898"
+       y="508.2218"
        id="text8358-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8360-0"
-         x="867.34998"
-         y="502.45016"
+         x="851.95898"
+         y="508.2218"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">Rangement</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="801.2113"
-       y="477.20465"
-       id="text8358-4"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan8360-8"
-         x="801.2113"
-         y="477.20465"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">Câblage</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="718.78888"
-       y="508.94867"
+       x="683.90625"
+       y="506.06284"
        id="text8358-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8360-89"
-         x="718.78888"
-         y="508.94867"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">Etau</tspan></text>
+         x="683.90625"
+         y="506.06284"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle">Etau</tspan><tspan
+         sodipodi:role="line"
+         x="683.90625"
+         y="521.68787"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="tspan8207">A4 : atelier photos</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="836.8031"
-       y="530.11139"
+       x="773.31506"
+       y="535.88306"
        id="text8358-64"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8360-3"
-         x="836.8031"
-         y="530.11139"
+         x="773.31506"
+         y="535.88306"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">Tabouret</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="710.8291"
-       y="476.07062"
+       x="687.74255"
+       y="474.14673"
        id="text8358-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8360-7"
-         x="710.8291"
-         y="476.07062"
+         x="687.74255"
+         y="474.14673"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">Perçage</tspan></text>
+    <image
+       y="460.06714"
+       x="751.30249"
+       id="image8204"
+       xlink:href="data:image/png;base64,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
+"
+       preserveAspectRatio="none"
+       height="64.053459"
+       width="165.82729" />
+    <ellipse
+       style="opacity:1;fill:#00f500;fill-opacity:1;stroke:#000000;stroke-width:13.54300022;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8209"
+       cx="804.18176"
+       cy="512.74792"
+       rx="3.8477595"
+       ry="4.3287296" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="790.10565"
+       y="501.53339"
+       id="text8211"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-x="-6.7335792"
+       inkscape:transform-center-y="-0.96193988"><tspan
+         sodipodi:role="line"
+         id="tspan8213"
+         x="790.10565"
+         y="501.53339"
+         style="font-size:12.5px">Etabli</tspan></text>
   </g>
 </svg>
