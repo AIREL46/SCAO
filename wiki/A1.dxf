@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-construction
+gris
   9
 $CELTYPE
   6
@@ -2263,7 +2263,7 @@ AcDbLayerTableRecord
   2
 axe
  70
-    1
+    0
  62
     7
   6
@@ -2285,7 +2285,7 @@ AcDbLayerTableRecord
   2
 construction
  70
-    0
+    1
  62
     9
   6
@@ -2329,7 +2329,7 @@ AcDbLayerTableRecord
   2
 cotation
  70
-    0
+    1
  62
     7
   6
@@ -2351,7 +2351,7 @@ AcDbLayerTableRecord
   2
 gris
  70
-    1
+    0
  62
     1
   6
