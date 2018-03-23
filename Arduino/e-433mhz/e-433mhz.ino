@@ -1,5 +1,7 @@
-//Programme d'émission
+//Chargement de la librairie VirtualWire - Gestion de l'émetteur 433 MHZ
 #include <VirtualWire.h>
+//Chargement de la librairie OneWire - Gestion des thermomètres digitaux
+#include <OneWire.h>
 
 const int led_pin_v = 13;
 const int led_pin_j = 14;

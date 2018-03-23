@@ -38,11 +38,11 @@ x=-1.95*CC; y=-0.6*CC; //Coordonnées du CI chargeur
 //Vis M2.5 (3a)
 color( gris)vis_M(2.5, 6.7, 1.5, true, x, y, 12*e);
 //Platine breadboard (3b)
-color(bleu)translate([0,0,+10*e])scale([CC,CC,CC]) linear_extrude(height = 0.36, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "platine");};
+color(bleu)translate([0,0,+10*e]) linear_extrude(height = 10, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "platine");};
 //Rondelle isolante 2.5 ep=1.3 (3c)
 rond_M(2.5, 1.3, x, y, 10*e);
 //Chargeur (3d)
-color(orange)translate([0,0,+8.5*e])scale([CC,CC,CC]) linear_extrude(height = 0.02, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "chargeur");}; //CI chargeur
+color(orange)translate([0,0,+8.5*e])scale([1,1,1]) linear_extrude(height = 1, center = true, convexity = 10, scale = 1.0) {import(file = "/home/leruste/SCAO/Ping/LibreCAD/plateforme-essais.dxf", layer = "chargeur");}; //CI chargeur
 //Rondelle isolante 2.5 ep=1.3 (3e)
 rond_M(2.5, 1.3, x, y, 7*e);
 //Entretoise M2.5 (3f)
@@ -99,7 +99,7 @@ rond_M(3, 1, -8.5, 8.5, z11);
 rond_M(3, 1, 8.5, -8.5, z11);
 rond_M(3, 1, -8.5, -8.5, z11);
 //isolateur (12)
-translate([0,0,z12])color(orange){import("isolateur-bruno.stl");}
+translate([0,0,z12])color(orange){import("isolateur-433-v2.stl");}
 //rondelles (13)
 rond_M(3, 1, L2/2, l2/2, z13);
 rond_M(3, 1, -L2/2, l2/2, z13);

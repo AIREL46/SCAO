@@ -1,4 +1,4 @@
-include <dim1.scad>
+//include <dim1.scad>
 //z=-20;
 z1=40; //Vis M3
 z2=40; //Rondelles M3
