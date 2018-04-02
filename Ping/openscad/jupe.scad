@@ -37,7 +37,7 @@ usb=false; v433=true; ent=false; lamage=true;
 vert=([151/255, 191/255, 13/255]);
 $fn=120;
 include <dim1.scad>
-hj=0.975*CC;//hauteur de la jupe
+hj=23.34;//hauteur de la jupe
 //Coordonnées des entretoises composées chacune d'un cylindre, d'un lamage et d'un percage
 xe=L2/2;//Coordonnée x du cylindre
 ye=l2/2;//Coordonnée y du cylindre
@@ -85,14 +85,8 @@ air (4+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
 rotate([0,0,90]) air (14,0,(hj/2)-e/2,11,1.1*e,1.5);
 rotate([0,0,90]) air (-14,0,(hj/2)-e/2,11,1.1*e,1.5);
 //trous pour sangler la batterie avec du fil à coudre
-translate([12.2,9,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
-translate([12.2,7,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
-translate([-12.2,9,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
-translate([-12.2,7,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
-translate([12.2,-9,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
-translate([12.2,-7,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
-translate([-12.2,-9,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
-translate([-12.2,-7,(hj/2)-e/2])cylinder(h = 1.1*e, r = 0.5, center = true);
+translate([0,8,(hj/2)-e/2])cube(size = [2.5,1.5,1.1*e], center = true);
+translate([0,-8,(hj/2)-e/2])cube(size = [2.5,1.5,1.1*e], center = true);
 }
 if (lamage) {
 //Lamage et percage des 4 entretoises :
