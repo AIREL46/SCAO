@@ -1,4 +1,4 @@
-usb=false; v433=true; ent=false; lamage=true;
+usb=false; v433=true; ent=false; lamage=false;
 //Ce fichier permet la modélisation de 2 versions de jupe, la version USB et la version 433MHZ. En option ajout : 4 entretoises pour sureleve le CI et 4 lamages.
 //Parmi les 3 pieces de la e-poinee, la jupe a pour objet de constituer l'habillage de la partie inferieure.
 //Elle a la forme d'un parallelepipede (cube) dont les angles sont arrondis,
@@ -79,14 +79,13 @@ if (v433) {
 scale([2,1.03,1.03])translate([-1,0,(hj/2)-1.85])rotate([180, 0, 0]){rotate([0, 90, 0])import("capteur.stl");}
 translate([-12,0,(hj/2)-1])cube(size = [11,6,5], center = true);
 //air (-L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
-air (-1+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
+//air (-1+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
 air (4+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
-//rotate([0,0,90]) air (0,0,(hj/2)-e/2,11,1.1*e,1.5);
-rotate([0,0,90]) air (14,0,(hj/2)-e/2,11,1.1*e,1.5);
-rotate([0,0,90]) air (-14,0,(hj/2)-e/2,11,1.1*e,1.5);
 //trous pour sangler la batterie avec du fil à coudre
-translate([0,8,(hj/2)-e/2])cube(size = [2.5,1.5,1.1*e], center = true);
-translate([0,-8,(hj/2)-e/2])cube(size = [2.5,1.5,1.1*e], center = true);
+translate([L2/2,l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
+translate([L2/2,-l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
+translate([-L2/2,l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
+translate([-L2/2,-l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
 }
 if (lamage) {
 //Lamage et percage des 4 entretoises :

@@ -1,4 +1,5 @@
 //test de la batterie Lipo
+#define mesure_T1 A3 //Mesure de la tension T1
 #define mesure_1 A7 //Mesure de la tension Vbat
 #define mesure_2 A8 //Mesure de la tension Vusb
 #define mesure_3 A9 //Mesure de la tension 3.3V
@@ -17,6 +18,9 @@ void loop() {
   digitalWrite(led_pin, HIGH);
   digitalWrite(digital_0, HIGH);
   delay(100);
+  Serial.print(" VT1 : ");
+  Serial.print(map (analogRead(mesure_T1), 0, MaxConv, 0, MaxVolt));
+  Serial.print(" mV ");
   Serial.print(" Vusb : ");
   Serial.print(map (2.0038*analogRead(mesure_2), 0, MaxConv, 0, MaxVolt));
   Serial.print(" mV ");
