@@ -135,7 +135,7 @@ byte getTemperature(float *temperature, byte reset_search) {
 
 /** 4 - Fonction setup() **/
 void setup() {
-  setTime(19, 06, 0, 01, 05, 2018); 
+  setTime(12, 42, 00, 07, 05, 2018); 
   /* Initialisation du port série */
   //Serial.begin(9600);
   delay(1000);
@@ -151,6 +151,8 @@ void setup() {
  
 /** 5 - Fonction loop() **/
 void loop() {
+ 
+  time_t t = now();
   Serial.begin(9600);
   float temperature[2];//Mesure de la température
    
@@ -163,6 +165,12 @@ void loop() {
     Serial.println(F("Erreur de lecture du capteur 2"));
     return;
   }
+  Serial.print(hour (t));
+  Serial.print(":");
+  Serial.print(minute (t));
+  Serial.print(":");
+  Serial.print(second (t));
+  Serial.print(" - ");
   Serial.print(count);
   Serial.print(" - ");
   /* Affiche la température */

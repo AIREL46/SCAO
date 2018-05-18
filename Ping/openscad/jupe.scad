@@ -76,16 +76,13 @@ if (usb) {
 translate([0,0,hj/2])cylinder(h = hj/2, r = L2/2, center = true);
 }
 if (v433) {
-scale([2,1.03,1.03])translate([-1,0,(hj/2)-1.85])rotate([180, 0, 0]){rotate([0, 90, 0])import("capteur.stl");}
-translate([-12,0,(hj/2)-1])cube(size = [11,6,5], center = true);
+translate([0,0,hj/2])scale([1.3,1,1])cylinder(h = hj/2, r = 10, center = true);
 //air (-L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
 //air (-1+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
 air (4+L2/2,0,(hj/2)-e/2,6,1.1*e,1.5);
-//trous pour sangler la batterie avec du fil à coudre
-translate([L2/2,l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
-translate([L2/2,-l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
-translate([-L2/2,l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
-translate([-L2/2,-l2/3.5,(hj/2)-e/2])cube(size = [1.5,2.5,1.1*e], center = true);
+//trous pour sangler la batterie avec serre câble
+translate([L2/2,0,(hj/2)-e/2])cube(size = [1.5,14,1.1*e], center = true);
+translate([-L2/2,0,(hj/2)-e/2])cube(size = [1.5,14,1.1*e], center = true);
 }
 if (lamage) {
 //Lamage et percage des 4 entretoises :
@@ -118,6 +115,15 @@ minkowski(){
 	cylinder(h = hj/2, r = 2*e, center = true);
 	}//minkowski
 translate([-((L1/2)+(3*e/2)),0,0])cylinder(h = hj, r = 5*r, center = true); //Goulotte
+//Ajouter 4 plots pour soutenir la batterie LI-ON
+if(v433){
+  x=7; y=13; z=(hj/2)+e/2;
+    translate([x,y,z]) union() {translate([0,0,-e/4]) cylinder(h = e/2, r = e/2, center = true); sphere(r=e/2, center=true);}
+    translate([-x,y,z]) union() {translate([0,0,-e/4]) cylinder(h = e/2, r = e/2, center = true); sphere(r=e/2, center=true);}
+    translate([x,-y,z]) union() {translate([0,0,-e/4]) cylinder(h = e/2, r = e/2, center = true); sphere(r=e/2, center=true);}
+    translate([-x,-y,z]) union() {translate([0,0,-e/4]) cylinder(h = e/2, r = e/2, center = true); sphere(r=e/2, center=true);}
+  
+    }
 //Ajouter les 4 cylindres des entretoises
 if (ent) {
 translate([xe,ye,ze2])cylinder(h = e, r = 2*r, center = true);
@@ -132,10 +138,6 @@ translate([0,0,-e])minkowski(){
 cube(size = [L1,l1,hj/2], center = true);
 cylinder(h = hj/2, r = e, center = true);
 }//minkowski
-//Renfort pour le logement du capteur de température
-if (v433) {
-translate([0,0,(hj/2)-3.5])cube([10,10,4], center=true);
-}//if
 }//difference
 if (percement) {
 per_jupe ();

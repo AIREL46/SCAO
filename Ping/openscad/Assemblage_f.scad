@@ -30,7 +30,7 @@ color( gris)vishexa(3,5,1.5,5.5,true,-L2/2,-l2/2,z1);
 //}
 //Plateforme d'essais équipée (3) - version essais
 union()translate([22,0,z3]){
-x=-1.95*CC; y=-0.6*CC; //Coordonnées du CI chargeur
+x=-49.53; y=-19.48; //Coordonnées du CI chargeur
 //Vis M2.5 (3a)
 color( gris)vis_M(2.5, 6.7, 1.5, true, x, y, 12*e);
 //Platine breadboard (3b)
@@ -51,7 +51,7 @@ rond_M(2.5, 0.5, x, y, -2*e);
 color( gris)Ecrou(2.5,1.7, 4.8, x, y,-3*e);
 }
 //Batterie (4)
-color( [255/255, 0/255, 0/255]) translate([0,0,z4]) cube([23.6,35.2,5.7], center=true);
+color([255/255, 0/255, 0/255]) translate([0,0,z4]) linear_extrude(height = 6, center = true, convexity = 10, scale = 1.0) {import(file = "../LibreCAD/batterie.dxf", layer = "contour");};
 //Entretoises hexagonales M3 femelles (5)
 color( gris) Ecrou(3,10, 5.5, L2/2, l2/2,z5);
 color( gris) Ecrou(3,10, 5.5, -L2/2, l2/2,z5);
