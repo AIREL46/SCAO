@@ -8,6 +8,7 @@ vert=[151/255, 191/255, 13/255];
 gris=[112/255, 113/255, 115/255];
 noir=[0/255, 0/255, 0/255];
 bleu=[51/255, 51/255, 255/255];
+rotate([0,0,$t*360]){
 //Assemblage des pièces de la e-p-433-v2
 //vis M3 (1)
 color( gris)vishexa(3,5,1.5,5.5,true,L2/2,l2/2,z1);
@@ -99,3 +100,4 @@ translate([-8.5,0,z18])color( noir)cylinder(4,1.75,1.75,center=true);
 //couvercle (19)
 translate([0,0,z19])color( [190/255, 190/255, 190/255]){import("Couvercle.stl");}
 
+}
