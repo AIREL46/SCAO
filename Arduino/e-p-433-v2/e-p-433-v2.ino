@@ -1,4 +1,4 @@
-/**
+/**Mise à jour le 22 juillet 2018
  * e-p-433-v2
  * 1 - Introduction
  *Dans le cadre du concept culinaire Quiet cook http://quiet-cook.com/ 
