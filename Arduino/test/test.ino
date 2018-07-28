@@ -4,7 +4,7 @@
  
 /* Dépendance pour le bus 1-Wire */
 #include <OneWire.h>
-/* Broche du bus 1-Wire */
+/* Broches des 2 bus 1-Wire */
 const byte BROCHE_ONEWIRE_1 = 16;
 const byte BROCHE_ONEWIRE_2 = 17;
 /* Code de retour de la fonction getT1() */
@@ -16,7 +16,7 @@ enum DS18B20_RCODES {
 };
 
 
-/* Création de l'objet OneWire pour manipuler le bus 1-Wire */
+/* Création des 2 objets OneWire pour manipuler les 2 bus 1-Wire */
 OneWire ds1(BROCHE_ONEWIRE_1);
 OneWire ds2(BROCHE_ONEWIRE_2);
 const int led_pin_v = 13;//Led verte
