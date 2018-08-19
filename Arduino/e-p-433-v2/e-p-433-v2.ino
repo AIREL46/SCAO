@@ -2,7 +2,7 @@
  * e-p-433-v2
  * 1 - Introduction
  *Dans le cadre du concept culinaire Quiet cook http://quiet-cook.com/ 
- *et de son SCAO http://fablabo.net/wiki/SCAO. 
+ *et de son Système de Cuisson Assistée par Ordinateur (SCAO) http://fablabo.net/wiki/SCAO. 
  *Le prototypage (prototype N°3) de la e-poignée (433MHZ en version 2)
  *est réalisé par Régis LERUSTE http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS
  *et Olivier MARAIS http://fablabo.net/wiki/Cahier_de_recettes#Les_recettes_d.27Olivier
@@ -13,33 +13,51 @@
  *- la capture des températures délivrées par 2 thermomètres digitaux.
  *- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
  *Ce programme est dévelloppé sous licence creative commons CC-BY-SA.
- *Il utile les librairies et codes sources dévelloppés par :
- *- Paul Stoffregem, accesibles par les liens :
+ *Il utile des ressources extérieures (librairies et codes sources) développées par des informaticiens. 
+ *Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, indique les liens permettant d'accéder à la librairie et aux codes sources.
+ *
+ * 1a - Acquisitions des températures
+ * - Paul Stoffregem, accesibles par les liens :
  *- https://www.pjrc.com/teensy/td_libs_OneWire.html
  *- https://github.com/PaulStoffregen/OneWire
- *- Mike McCauley, accesibles par les liens :
- *- https://www.pjrc.com/teensy/td_libs_VirtualWire.html
- *- http://www.airspayce.com/mikem/arduino/VirtualWire.pdf
- *- Michael Margolis, accesibles par les liens :
- *- https://www.pjrc.com/teensy/td_libs_Time.html
- *- https://github.com/PaulStoffregen/Time
- *- Colin Duffy, pour le "mode sleep" (snooze) accesibles par le lien : 
- *- https://github.com/duff2013
  *Il utile le code source dévelloppé par :
  *- Fabien Batteix (Skywood) qui est le rédacteur en chef et administrateur du site Carnet du Maker, ainsi que le gérant de l'entreprise TamiaLab qui édite le site.
  *- selon l'article https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino/
  *- en tenant compte que pour des raisons de sécurité inhérant au projet SCAO qu'il est indispensable que la capture de données en provenance
  * des 2 thermomètres digitaux DB18B20 se réalise toujours dans le même ordre, en particulier après un changement de l'un ou des deux thermomètres.
- * 1a - Acquisitions des températures
+ * 
  * 1b - Mesure des tensions
+ * 
  * 1c - BITE
+ * 
  * 1d - Transmission
- * 1e - Horodatage
+ * - Mike McCauley, accesibles par les liens :
+ *- https://www.pjrc.com/teensy/td_libs_VirtualWire.html
+ *- http://www.airspayce.com/mikem/arduino/VirtualWire.pdf
+ * 
+ * 1e - Horodatage - Chronomètre
+ * Horodatage
+ * - Michael Margolis, accesibles par les liens :
+ *- https://www.pjrc.com/teensy/td_libs_Time.html
+ *- https://github.com/PaulStoffregen/Time
+ * 
+ * Chrono library for Arduino or Wiring by Sofian Audry and Thomas Ouellet Fredericks
+ * - http://github.com/SofaPirate/Chrono
+ * 
  * 1f - Visualisation des résultats
+ * 
  * 1g - Mode Sleep
+ * - Colin Duffy, pour le "mode sleep" (snooze) accesibles par le lien : 
+ *- https://github.com/duff2013
  */
 /**
  * 2 - Initialisation des paramètres
+ * Paramètres communs
+ */
+ unsigned long tt=0;//temps de travail
+ unsigned long ti=30000000;//temps itératif
+ unsigned long ts=0;//temps de sleep
+/**  
  * 2a - Acquisition des températures
  * Code pour lire plusieurs un thermomètre digital DS18B20 sur un bus 1-Wire.
  */
@@ -90,10 +108,16 @@ const int MaxVolt = 3272;
 const int transmit_pin = 18;//Pin de sortie de l'émetteur
 byte count = 1;//Initialisation du numéro du message 
 /**
- * 2e - Horodatage
- * Chargement de la librairie TimeLib.h
+ * 2e - Horodatage - Chronomètre
+ * Horodatage 
  */
-#include "TimeLib.h"
+#include "TimeLib.h" //Include IimeLib.h library
+/**
+ * Chronomètre 
+  */
+#include <Chrono.h> //Include Chrono.h Library
+Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
+
 /**
  * 2f - Visualisation des résultats
  *  Les résultats du BITE sont visalisés par 3 leds :
@@ -114,11 +138,6 @@ const int led_pin_r = 15;//Led rouge
 // Load timer and USBSerial drivers
 SnoozeTimer timer;
 SnoozeUSBSerial usb;
-time_t td=0; //Horodatage du début de travail
-time_t tf=0; //Horodatage de la fin de travail
-time_t tt=0; //Temps de travail
-time_t ts(30); //Temps de sommeil
-time_t ti(30); //Durée itérative
 
 /***********************************************************
  Install drivers to a SnoozeBlock, timer to wake and USB Serial Driver to
@@ -242,7 +261,7 @@ byte getT2(float *T2, byte reset_search) {
  * 3b - Fonction mesure des tensions et calibration
  * 3c - BITE
  * 3d - Tranmission
- * 3e - Horodatage
+ * 3e - Horodatage - Chronomètre
  * 3f - Visualisation des résultats
  * 3g - Mode sleep
  */
@@ -262,7 +281,7 @@ void setup() {
     // Initialise the IO and ISR
   vw_set_tx_pin(transmit_pin);
   vw_setup(2000);   // Bits per sec
-  //e) Horodatage
+  //e) Horodatage - Chronomètre
   setTime(12, 05, 00, 29, 07, 2018);
  
   //f) Visualisation des résultats
@@ -283,7 +302,7 @@ void setup() {
  
 /** 5 - Fonction loop() **/
 void loop() {
-  td = now();
+  Chrono.restart();  // restart the Chrono 
   //a) Acquisition des températures
   float T1;
   /* Lit la température ambiante à ~1Hz */
@@ -326,7 +345,7 @@ void loop() {
   count = count + 1;
   //delay(100);
 
-  //e) Horodatage
+  //e) Horodatage - Chronomètre
   time_t t = now();
   
   //f) Visualisation des résultats
@@ -370,10 +389,13 @@ void loop() {
   Serial.println(" mV ");
       
   //g) Mode sleep
+  
       /********************************************************
      Set Low Power Timer wake up in milliseconds.
      ********************************************************/
-  timer.setTimer(1000*ti);// milliseconds
+  tt = (Chrono.elapsed());
+  ts = ti - tt;
+  timer.setTimer(ts/1000);// milliseconds
   int who = 0; // what woke us up
   delay(100);
   digitalWrite(led_pin_v, LOW);
@@ -398,19 +420,11 @@ idx++;
   Serial.println("Bonjour Quiet cook");
   //Serial.print(ibat);
   digitalWrite(led_pin_v, HIGH);
-  tf = now();
   delay(20);
-  tt = (tf-td)-ti;
-  delay(20);
-  ts = ti-tt;
   Serial.print(" ti : ");
   Serial.print(ti);
   Serial.print(" tt : ");
   Serial.print(tt);
-  Serial.print(" tf : ");
-  Serial.print(tf);
-  Serial.print(" td : ");
-  Serial.print(td);
   Serial.print(" ts : ");
   Serial.println(ts);
   }
