@@ -1,3 +1,4 @@
+bool sleep = false;
 /**
  * e-p-433-v2
  * 1 - Introduction
@@ -47,15 +48,16 @@
  * 1f - Visualisation des résultats
  * 
  * 1g - Mode Sleep
- * - Colin Duffy, pour le "mode sleep" (snooze) accesibles par le lien : 
- *- https://github.com/duff2013
+ * - Colin Duffy, pour le "mode sleep" (snooze) avec la gestion de la liaison série, accesible par le lien : 
+ *- https://github.com/duff2013/Snooze/blob/master/examples/deepsleep/deepSleep_usb_serial/deepSleep_usb_serial.ino
  */
 /**
  * 2 - Initialisation des paramètres
  * Paramètres communs
  */
- unsigned long tt=0;//temps de travail
- unsigned long ti=30000000;//temps itératif
+ unsigned long tt1=0;//temps de travail 1
+ unsigned long tt2=0;//temps de travail 2
+ unsigned long ti=5000000;//temps itératif
  unsigned long ts=0;//temps de sleep
 /**  
  * 2a - Acquisition des températures
@@ -88,7 +90,7 @@ const int Vbat_demie_2 = A7; //Mesure de la moitié de la tension Vbat_2 après 
 float Vbat_1;
 float Vbat_2;
 float ibat;
-const float Vbat_limite = 4210;
+const float Vbat_limite = 4300;
 const float Vbat_nominal = 3700;
 const float Vbat_min = 3600;
 const float Vbat_cut_off = 2800;
@@ -144,7 +146,6 @@ SnoozeUSBSerial usb;
  fix printing to serial monitor after sleeping.
  ***********************************************************/
 SnoozeBlock config_teensy32(usb, timer);
-int idx;
 /**
  * 3 - Fonctions spécifiques
  * 3a-1 - Fonction d'acquisition de la température via le 1er thermomètre digital DS18B20 (ds1).
@@ -291,46 +292,40 @@ void setup() {
   
  //g) Mode sleep
   digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
-  while (!Serial);
+  //while (!Serial);
     delay(100);
     digitalWrite(led_pin_r, LOW);
     Serial.println("Starting...");
     delay(100);
-    // sleep index
-  idx = 0;
-}
- 
-/** 5 - Fonction loop() **/
+    }
+ /** 5 - Fonction loop() **/
 void loop() {
   Chrono.restart();  // restart the Chrono 
   //a) Acquisition des températures
   float T1;
-  /* Lit la température ambiante à ~1Hz */
+  /* Lit la température T1 */
   if (getT1(&T1, true) != READ_OK) {
     Serial.println(F("Erreur de lecture du capteur"));
     return;
   }
-  /* Affiche la température */
   float T2;
   /* Lit la température ambiante à ~1Hz */
   if (getT2(&T2, true) != READ_OK) {
     Serial.println(F("Erreur de lecture du capteur"));
     return;
   }
-  /* Affiche la température */
  
-
-
   //b) Mesure des tensions
   Vusb=map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
   Vbat_1=map (2.0038*analogRead(Vbat_demie_1), 0, MaxConv, 0, MaxVolt);
   Vbat_2=map (2.0038*analogRead(Vbat_demie_2), 0, MaxConv, 0, MaxVolt);
   ibat=Vbat_1 - Vbat_2;
   V33=map (2.0038*analogRead(V33_demie), 0, MaxConv, 0, MaxVolt);
+
   //c) BITE
   int tmax=25;
   if (T2 >= tmax){digitalWrite(led_pin_r, HIGH);} else {digitalWrite(led_pin_r, LOW);}
-  if (Vbat_2 <= Vbat_limite && Vbat_2 > Vbat_min){digitalWrite(led_pin_v, HIGH);} else {digitalWrite(led_pin_v, LOW);}
+  //if (Vbat_2 <= Vbat_limite && Vbat_2 > Vbat_min){digitalWrite(led_pin_v, HIGH);} else {digitalWrite(led_pin_v, LOW);}
   if (Vbat_2 > Vbat_limite || Vbat_2 <= Vbat_cut_off){digitalWrite(led_pin_r, HIGH);} else {digitalWrite(led_pin_r, LOW);}
 
   //d) Transmission
@@ -343,12 +338,39 @@ void loop() {
   vw_wait_tx(); // Wait until the whole message is gone
   digitalWrite(led_pin_j, LOW);
   count = count + 1;
-  //delay(100);
+  delay(100);
 
   //e) Horodatage - Chronomètre
   time_t t = now();
   
+  //g) Mode sleep
+  
+      /********************************************************
+     Set Low Power Timer wake up in milliseconds.
+     ********************************************************/
+  tt1 = (Chrono.elapsed());
+  ts = ti - (tt1 + tt2);
+  timer.setTimer(ts/1000);// milliseconds
+  delay(200);
+  if (sleep) {Snooze.deepSleep( config_teensy32 );}// return module that woke processor
+  if (!sleep) {delay(ts/1000);}
+  Chrono.restart();  // restart the Chrono 
+  // wait for serial monitor
+    elapsedMillis time = 0;
+    while (!Serial && time < 1000) {
+        Serial.write(0x00);// print out a bunch of NULLS to serial monitor
+        digitalWriteFast(led_pin_v, HIGH);
+        delay(30);
+        digitalWriteFast(led_pin_v, LOW);
+        delay(30);
+    }
+    // normal delay for Arduino Serial Monitor
+    delay(200);
+    delay(1000);
+    
   //f) Visualisation des résultats
+  Serial.print(count);
+  Serial.print(" - ");
   Serial.print(day (t));
   Serial.print("/");
   Serial.print(month (t));
@@ -360,8 +382,6 @@ void loop() {
   Serial.print(minute (t));
   Serial.print(":");
   Serial.print(second (t));
-  Serial.print(" - ");
-  Serial.print(count);
   Serial.print(" - ");
   /* Affiche T1 et T2 */
   Serial.print(F("T1 : "));
@@ -387,44 +407,13 @@ void loop() {
   Serial.print(" V33 : ");
   Serial.print(V33);
   Serial.println(" mV ");
-      
-  //g) Mode sleep
-  
-      /********************************************************
-     Set Low Power Timer wake up in milliseconds.
-     ********************************************************/
-  tt = (Chrono.elapsed());
-  ts = ti - tt;
-  timer.setTimer(ts/1000);// milliseconds
-  int who = 0; // what woke us up
-  delay(100);
-  digitalWrite(led_pin_v, LOW);
-  Serial.println("Bonne nuit Quiet cook");
-  delay(100);
-  who = Snooze.deepSleep( config_teensy32 );// return module that woke processor
-  // wait for serial monitor
-    elapsedMillis time = 0;
-    while (!Serial && time < 1000) {
-        Serial.write(0x00);// print out a bunch of NULLS to serial monitor
-        digitalWriteFast(led_pin_v, HIGH);
-        delay(30);
-        digitalWriteFast(led_pin_v, LOW);
-        delay(30);
-    }
-    // normal delay for Arduino Serial Monitor
-    delay(200);
-    // print who woke the teensy up, i.e. timer || digital
-    Serial.printf("Timer Driver number indicator: %i | index: %i\n", who, idx);
-    delay(100);
-idx++;
-  Serial.println("Bonjour Quiet cook");
-  //Serial.print(ibat);
-  digitalWrite(led_pin_v, HIGH);
-  delay(20);
   Serial.print(" ti : ");
   Serial.print(ti);
-  Serial.print(" tt : ");
-  Serial.print(tt);
+  Serial.print(" tt1 : ");
+  Serial.print(tt1);
+  tt2 = (Chrono.elapsed());
+  Serial.print(" tt2 : ");
+  Serial.print(tt2);
   Serial.print(" ts : ");
-  Serial.println(ts);
+  Serial.println(ts);   
   }
