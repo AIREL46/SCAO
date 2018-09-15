@@ -1,4 +1,4 @@
-bool sleep = false;
+bool sleep = true;
 /**
  * e-p-433-v2
  * 1 - Introduction
@@ -61,7 +61,7 @@ bool sleep = false;
  unsigned long ts=0;//temps de sleep
 /**  
  * 2a - Acquisition des températures
- * Code pour lire plusieurs un thermomètre digital DS18B20 sur un bus 1-Wire.
+ * Code pour lire un thermomètre digital DS18B20 sur un bus 1-Wire.
  */
  
 /* Dépendance pour le bus 1-Wire */
@@ -157,7 +157,7 @@ byte getT1(float *T1, byte reset_search) {
   // data[] : Données lues depuis le scratchpad
   // addr[] : Adresse du module 1-Wire détecté
   
-  /* Reset le bus 1-Wire ci nécessaire (requis pour la lecture du premier capteur) */
+  /* Reset le bus 1-Wire si nécessaire (requis pour la lecture du premier capteur) */
   if (reset_search) {
     ds1.reset_search();
   }

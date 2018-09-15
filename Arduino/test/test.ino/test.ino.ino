@@ -1,24 +1,20 @@
-#include <telemetry_version.h>
+#include <Telemetry.h>
+int32_t i;
 const int led_pin_v = 13;//Led verte
-int it = 0;
-char message[13] = "Hello Régis";
 
 void setup() {
-   /* Initialisation du port série */
-  Serial.begin(9600);
+  Serial.begin(9600); // Do not forget to initialize serial
+  i = 0;
   delay(1000);
   pinMode(led_pin_v, OUTPUT);
 }
 
 void loop() {
-  //while (!Serial);
-  delay(500);
-  if (it==0) {Serial.print("N°;"); Serial.println("Evénement");}
-  Serial.print(it);
-  Serial.println(";Bonjour SCAO");
+  // Send counter value under topic `foo`
+  Telemetry.pub_i32("foo", i);
   digitalWrite(led_pin_v, HIGH);
   delay(1000);
   digitalWrite(led_pin_v, LOW);
-  delay(500);
-  it++;
+  delay(1000);
+  i++;
 }
