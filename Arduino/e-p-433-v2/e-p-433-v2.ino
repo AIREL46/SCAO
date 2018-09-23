@@ -50,6 +50,9 @@ bool sleep = true;
  * 1g - Mode Sleep
  * - Colin Duffy, pour le "mode sleep" (snooze) avec la gestion de la liaison série, accesible par le lien : 
  *- https://github.com/duff2013/Snooze/blob/master/examples/deepsleep/deepSleep_usb_serial/deepSleep_usb_serial.ino
+ * 
+ * 1h - Bilan énergétique de la batterie
+ * Calculs de l'énegie électrique consommée et du ratio par rapport à la capacité nominale de 400 mAh
  */
 /**
  * 2 - Initialisation des paramètres
@@ -57,7 +60,7 @@ bool sleep = true;
  */
  unsigned long tt1=0;//temps de travail 1
  unsigned long tt2=0;//temps de travail 2
- unsigned long ti=5000000;//temps itératif
+ unsigned long ti=10000000;//temps itératif
  unsigned long ts=0;//temps de sleep
 /**  
  * 2a - Acquisition des températures
@@ -146,6 +149,14 @@ SnoozeUSBSerial usb;
  fix printing to serial monitor after sleeping.
  ***********************************************************/
 SnoozeBlock config_teensy32(usb, timer);
+/**
+ * 2h - Bilan énergétique de la batterie
+ * Chargement de la librairie
+ */
+unsigned long Etot=0; //Energie électrique totale consommée en joule
+unsigned long Et=0; //Energie électrique consommée pendant le travail
+unsigned long Es=0; //Energie électrique consommée pendant le sommeil (sleep)
+unsigned long Ec=0; //Energie électrique consommée cumulée
 /**
  * 3 - Fonctions spécifiques
  * 3a-1 - Fonction d'acquisition de la température via le 1er thermomètre digital DS18B20 (ds1).
@@ -265,6 +276,7 @@ byte getT2(float *T2, byte reset_search) {
  * 3e - Horodatage - Chronomètre
  * 3f - Visualisation des résultats
  * 3g - Mode sleep
+ * 3h - Bilan énergétique de la batterie
  */
 
 /** 4 - Fonction setup() **/
@@ -272,7 +284,7 @@ void setup() {
   /* Initialisation du port série */
   Serial.begin(9600);
   delay(1000);
-  Serial.println("Bonjour SCAO");
+  Serial.println("N°;date;heure;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
   //a) Acquisition des températures
   //b) Mesure des tensions
   analogReadResolution(13);
@@ -295,9 +307,10 @@ void setup() {
   //while (!Serial);
     delay(100);
     digitalWrite(led_pin_r, LOW);
-    Serial.println("Starting...");
+    //Serial.println("Starting...");
     delay(100);
     }
+ //h) - Bilan énergétique de la batterie
  /** 5 - Fonction loop() **/
 void loop() {
   Chrono.restart();  // restart the Chrono 
@@ -370,50 +383,59 @@ void loop() {
     
   //f) Visualisation des résultats
   Serial.print(count);
-  Serial.print(" - ");
+  Serial.print(";");
   Serial.print(day (t));
   Serial.print("/");
   Serial.print(month (t));
   Serial.print("/");
   Serial.print(year (t));
-  Serial.print(" - ");
+  Serial.print(";");
   Serial.print(hour (t));
   Serial.print(":");
   Serial.print(minute (t));
   Serial.print(":");
   Serial.print(second (t));
-  Serial.print(" - ");
+  Serial.print(";");
   /* Affiche T1 et T2 */
-  Serial.print(F("T1 : "));
+  //Serial.print(F("T1 : "));
   Serial.print(T1, 2);
-  Serial.write(" degrés "); // Caractère degré
-  Serial.write('C');
-  Serial.print(" - ");
-  Serial.print(F("T2 : "));
+  Serial.write(";"); // Caractère degré
+  //Serial.write('C');
+  //Serial.print(";");
+  //Serial.print(F("T2 : "));
   Serial.print(T2, 2);
-  Serial.write(" degrés "); // Caractère degré
-  Serial.write('C');
-  Serial.print(" ");
+  Serial.write(";"); // Caractère degré
+  //Serial.write('C');
+  //Serial.print(";");
   /* Affiche les tensions et le courant consommé ibat*/
-  Serial.print(" - Vusb : ");
+  //Serial.print(" - Vusb : ");
   Serial.print(Vusb);
-  Serial.print(" mV ");
-  Serial.print(" Vbat : ");
+  Serial.print(";");
+  //Serial.print(" Vbat : ");
   Serial.print(Vbat_1);
-  Serial.print(" mV ");
-  Serial.print(" ibat : ");
+  Serial.print(";");
+  //Serial.print(" ibat : ");
   Serial.print(ibat);
-  Serial.print(" mA ");
-  Serial.print(" V33 : ");
+  Serial.print(";");
+  //Serial.print(" V33 : ");
   Serial.print(V33);
-  Serial.println(" mV ");
-  Serial.print(" ti : ");
-  Serial.print(ti);
-  Serial.print(" tt1 : ");
-  Serial.print(tt1);
+  Serial.print(";");
+  //Serial.println(";");
+  //Serial.print(" ti : ");
+  //Serial.print(ti);
+  //Serial.print(" tt1 : ");
+  //Serial.print(tt1);
   tt2 = (Chrono.elapsed());
-  Serial.print(" tt2 : ");
-  Serial.print(tt2);
-  Serial.print(" ts : ");
-  Serial.println(ts);   
-  }
+  //Serial.print(" tt2 : ");
+  //Serial.print(tt2);
+  //Serial.print(" ts : ");
+  //Serial.println(ts);   
+
+ //h) - Bilan énergétique de la batterie
+ Et = ((Vbat_1/1000) * ibat)*((tt1 + tt2)/1000000);
+ Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);
+ Etot = Et + Es;
+ Ec = Ec + Etot;
+ //Serial.print(" Energie électrique Ec (joules) : ");
+ Serial.println(Ec);
+   }

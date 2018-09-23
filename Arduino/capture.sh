@@ -1,74 +1,54 @@
+#Dans le cadre du concept culinaire Quiet cook http://quiet-cook.com/ et de son Système de Cuisson Assistée par Ordinateur (SCAO) http://fablabo.net/wiki/SCAO. Le prototypage (prototype N°3) de la e-poignée (433MHZ en version 2) est réalisé par Régis LERUSTE http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS et Olivier MARAIS http://fablabo.net/wiki/Cahier_de_recettes#Les_recettes_d.27Olivier . Ce programme est dévelloppé sous licence creative commons CC-BY-SA. Il est complémentaire au programme e-p-433-v2.ino. Il a pour objet la capture périodique des données transmises par le microcontrôleur. Ces données son stockées au fur et à mesure dans un fichier "journal". Ce programme est exécuté sur l'ordinateur tandis que l'e-p-433-v2.ino est téléversé dans le microcontrôleur.
+#Il demande à l'utilisateur de fixer la durée de la capture.
+#En option, il permet de lancer la plateforme Arduino IDE.
+#Il s'arrête quand la durée de capture est écoulée.
+#Il met à la disposition de l'utilisateur le fichier journal.txt.
 #!/bin/bash
-if [ -e bonjour.txt ] ; then
-rm bonjour.txt
+if [ -e journal.txt ] ; then #test l'existence du fichier journal
+rm journal.txt #détruit le précédent fichier journal
 fi
-#echo "Début du programme de capture" >> bonjour.txt
-#Entrer la Durée de Cuisson
-echo "Entrer la Durée de Cuisson (DC)"
+#Entrer la Durée de Capture
+echo "Entrer la Durée de Capture (mm)"
 read DC
-#Lancer Arduino IDE
-echo "Lancer Arduino IDE ? o/n"
+#Lancer la plateforme Arduino IDE
+echo "Lancer la plateforme Arduino IDE ? o/n"
 read ide
-until ([ "$ide" == o ] || [ "$ide" == n ]) #test du caractère entré par l'utilisateur oui/non (o/n)
+#test du caractère entré par l'utilisateur oui/non (o/n)
+until ([ "$ide" == o ] || [ "$ide" == n ]) 
 #la boucle est exécutée tant que le résultat du test est "false"
 do
-	echo "Lancer Arduino IDE ? o/n"
+	echo "Lancer la plateforme Arduino IDE ? o/n"
 	read ide
 	sleep 1
 done
+#Si ide="oui"
 if ([ "$ide" == "o" ]) ; then
 #Ouvrir un terminal dans une autre fenêtre et lancer ard.sh (lancement de l'Arduino IDE)
 gnome-terminal --tab -e "./ard.sh"	
 fi
-#Mettre sous tension le Teensy 3.2 et attendre l'établissement de la liaison série
+#Mettre sous tension le Teensy 3.2 et attendre l'établissement de la liaison série en testant le port série USB /dev/ttyACM0 utilisé par le Teensy 3.2 pour envoyé les message à la console.
 ls -l /dev/ttyACM0
-er1=$?
+er1=$? # $? est la variable d'environnement accessible après l'exécution d'une commande (ls), si elle est égale à 0, le résultat est correct, si elle est égale à 2, le résultat est incorrect.
 er2=2
 echo $?
-while ([ "$er1" -eq "$er2" ])
+#Attente de l'établissement de la liaison série
+while ([ "$er1" -eq "$er2" ]) 
 do
 	echo "Mettre sous tension le Teensy 3.2 et attendre l'établissement de liaison série"	
 	ls -l /dev/ttyACM0
 	er1=$?
 	sleep 1
 done
-#Afficher le contenu du port série /dev/ttyACM0
-#cat /dev/ttyACM0
-#Copier périodiquement le contenu  dans le fichier bonjour.txt
-RM='/bin/rm'
-FTP='/usr/bin/ftp'
-DATE='/bin/date'
-it=0
-while ([ "$it" -le "$DC" ])
+#Boucle de capture
+fin=`date +"%s"` #délaration de la variable "fin" de capture
+let fin=$fin+$DC*60 #calcul de l'heure de fin
+#exécuter la boucle tant que l'heure de fin n'est pas atteinte
+while [ `date +"%s"` -lt $fin ]
 do
-	BEFORE=$($DATE +'%S')
-	#echo $BEFORE	
-	it=$(($it + 1))
-	#echo "N° de l'itération : $it" >> bonjour.txt
-	if [ -e bonjour1.txt ]; then
-	rm bonjour1.txt
-	fi
-	touch bonjour1.txt
-	test -s bonjour1.txt	
-	ip1=0
-	ip2=50
-	while ([ "$ip1" -lt "$ip2" ])
-	do
-		#cat /dev/ttyACM0		
-		cat /dev/ttyACM0 >> bonjour.txt
-		#test -s bonjour.txt
-		#echo $ip1
-		ip1=$(($ip1 + 1))
-		#echo $ip1
-		sleep 0.1
-	done
-	cat bonjour.txt
-	#sleep 2
-	AFTER=$($DATE +'%S')
-	#echo $AFTER
-	ELAPSED=$(($AFTER - $BEFORE))
-	echo $ELAPSED
+#Edition du fichier journal par ajout successif des enregistrements dans le fichier journal.
+cat /dev/ttyACM0 >> journal.txt
+sleep 0.2
 done
-#Afficher à l'écran le contenu du fichier bonjour.txt
-cat bonjour.txt
-echo "Fin de cuisson"
+#Visualisation du fichier journal.
+cat journal.txt
+
