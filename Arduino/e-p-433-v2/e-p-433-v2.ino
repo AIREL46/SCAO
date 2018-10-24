@@ -1,4 +1,4 @@
-bool sleep = true;
+bool sleep = false;
 /**
  * e-p-433-v2
  * 1 - Introduction
@@ -7,15 +7,17 @@ bool sleep = true;
  *Le prototypage (prototype N°3) de la e-poignée (433MHZ en version 2)
  *est réalisé par Régis LERUSTE http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS
  *et Olivier MARAIS http://fablabo.net/wiki/Cahier_de_recettes#Les_recettes_d.27Olivier
- *Dans l'environnement de développement Arduino IDE, 
- *le programe e-p-433-v2.ino constitue le code source qui permet l'édition, 
- *la compilation et le transfert du firmware à destination du micro-contrôleur.
- *L'objet de ce programme est double :
- *- la capture des températures délivrées par 2 thermomètres digitaux.
- *- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
- *Ce programme est dévelloppé sous licence creative commons CC-BY-SA.
- *Il utile des ressources extérieures (librairies et codes sources) développées par des informaticiens. 
- *Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, indique les liens permettant d'accéder à la librairie et aux codes sources.
+*le programe e-p-433-v2.ino constitue le code source qui permet l'édition, 
+la compilation et le transfert du firmware à destination du micro-contrôleur. 
+*L'environnement de développement Arduino IDE est constitué du microcontrôleur Teensy 3.2 relié à l'ordinateur à l'aide d'un câble USB. Ce câble permet l'établissement d'une liaison série. De l'ordinateur vers le microcontrôleur pour téléverser le firmware. Du microcontrôleur vers l'ordinateur pour l'envoi de messages à l'aide du port /dev/ttyACM0, soit pour les afficher sur la console, soit pour les mettre à disposition du programme BASH capture.sh qui édite un fichier "journal".   
+*L'objet du firmware est l'administration du microcontrôleur et de ses périphériques câblés selon le schéma électrique https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433-v2/e-p-433-v2-1.png
+*Ce firmware est dévelloppé sous licence creative commons CC-BY-SA.
+*Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. Il est organisé selon 2 fonctions principales : 
+*- la capture des températures délivrées par 2 thermomètres digitaux.
+*- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
+*Ces fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
+*Il utile des ressources extérieures (librairies et codes sources) développées par des informaticiens. 
+*Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, indique les liens permettant d'accéder à la librairie et aux codes sources.
  *
  * 1a - Acquisitions des températures
  * - Paul Stoffregem, accesibles par les liens :
@@ -60,7 +62,7 @@ bool sleep = true;
  */
  unsigned long tt1=0;//temps de travail 1
  unsigned long tt2=0;//temps de travail 2
- unsigned long ti=10000000;//temps itératif
+ unsigned long ti=30000000;//temps itératif
  unsigned long ts=0;//temps de sleep
 /**  
  * 2a - Acquisition des températures
@@ -283,7 +285,7 @@ byte getT2(float *T2, byte reset_search) {
 void setup() {
   /* Initialisation du port série */
   Serial.begin(9600);
-  delay(1000);
+  delay(10000);
   Serial.println("N°;date;heure;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
   //a) Acquisition des températures
   //b) Mesure des tensions
@@ -304,7 +306,7 @@ void setup() {
   
  //g) Mode sleep
   digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
-  //while (!Serial);
+  while (!Serial);
     delay(100);
     digitalWrite(led_pin_r, LOW);
     //Serial.println("Starting...");
@@ -433,7 +435,8 @@ void loop() {
 
  //h) - Bilan énergétique de la batterie
  Et = ((Vbat_1/1000) * ibat)*((tt1 + tt2)/1000000);
- Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);
+ if (sleep) {Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);}
+ if (!sleep) {Es = ((Vbat_1/1000) * ibat)*(ts/1000000);}
  Etot = Et + Es;
  Ec = Ec + Etot;
  //Serial.print(" Energie électrique Ec (joules) : ");
