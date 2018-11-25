@@ -1,4 +1,4 @@
-bool sleep = false;
+bool sleep = true;
 /**
  * e-p-433-v2
  * 1 - Introduction
