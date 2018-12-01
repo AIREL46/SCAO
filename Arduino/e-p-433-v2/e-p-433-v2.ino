@@ -37,6 +37,7 @@ la compilation et le transfert du firmware à destination du micro-contrôleur.
  * - Mike McCauley, accesibles par les liens :
  *- https://www.pjrc.com/teensy/td_libs_VirtualWire.html
  *- http://www.airspayce.com/mikem/arduino/VirtualWire.pdf
+ *- https://github.com/manashmndl/VirtualWire
  * 
  * 1e - Horodatage - Chronomètre
  * Horodatage
@@ -52,6 +53,7 @@ la compilation et le transfert du firmware à destination du micro-contrôleur.
  * 1g - Mode Sleep
  * - Colin Duffy, pour le "mode sleep" (snooze) avec la gestion de la liaison série, accesible par le lien : 
  *- https://github.com/duff2013/Snooze/blob/master/examples/deepsleep/deepSleep_usb_serial/deepSleep_usb_serial.ino
+ *- https://github.com/duff2013/Snooze
  * 
  * 1h - Bilan énergétique de la batterie
  * Calculs de l'énegie électrique consommée et du ratio par rapport à la capacité nominale de 400 mAh
