@@ -347,11 +347,22 @@ void loop() {
 
   //d) Transmission
   /* Transmission des donnèes à l'e-r-433 */ 
+   struct data_to_transmit {
+   byte count;
+   time_t t;
+   float T1;
+   float T2;
+   float Vusb;
+   float Vbat;
+   float ibat;
+   float V33;
+   unsigned long Ec;
+    };
   char msg[7] = {'h','e','l','l','o',' ','#'};
-  
   msg[6] = count;
   digitalWrite(led_pin_j, HIGH); // Flash a light to show transmitting
   vw_send((uint8_t *)msg, 7);
+  //vw_send(data_to_transmit, 9);
   vw_wait_tx(); // Wait until the whole message is gone
   digitalWrite(led_pin_j, LOW);
   count = count + 1;
