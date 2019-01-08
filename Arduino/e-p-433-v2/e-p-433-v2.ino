@@ -347,22 +347,21 @@ void loop() {
 
   //d) Transmission
   /* Transmission des donnèes à l'e-r-433 */ 
-   struct data_to_transmit {
-   byte count;
-   time_t t;
-   float T1;
-   float T2;
-   float Vusb;
-   float Vbat;
-   float ibat;
-   float V33;
-   unsigned long Ec;
-    };
+  /*La fonction de transmission vw_send(message, length) : transmit a message, "message" is an array of the bytes to send,
+  and "length" is the number of bytes stored in the array.*/
   char msg[7] = {'h','e','l','l','o',' ','#'};
-  msg[6] = count;
+  msg[6] = count;  
+  time_t heure[1] = {now()};
+  float mesure[5]= {T1, T2, Vusb, Vbat_1, ibat};
+  unsigned long Energie[1] = {Ec};
   digitalWrite(led_pin_j, HIGH); // Flash a light to show transmitting
-  vw_send((uint8_t *)msg, 7);
-  //vw_send(data_to_transmit, 9);
+  vw_send((uint8_t *)msg, 7); //Transmission hello et count
+  vw_wait_tx(); // Wait until the whole message is gone
+  vw_send((uint8_t *)heure, 1); //Transmission de l'heure
+  vw_wait_tx(); // Wait until the whole message is gone
+  vw_send((uint8_t *)mesure, 5); //Transmission T1, T2, Vusb, Vbat, ibat
+  vw_wait_tx(); // Wait until the whole message is gone
+  vw_send((uint8_t *)Energie, 1); //Transmission de l'énergie consommée
   vw_wait_tx(); // Wait until the whole message is gone
   digitalWrite(led_pin_j, LOW);
   count = count + 1;
