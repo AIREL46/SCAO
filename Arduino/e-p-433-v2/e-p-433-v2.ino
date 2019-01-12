@@ -39,7 +39,7 @@ la compilation et le transfert du firmware à destination du micro-contrôleur.
  *- http://www.airspayce.com/mikem/arduino/VirtualWire.pdf
  *- https://github.com/manashmndl/VirtualWire
  * 
- * 1e - Horodatage - Chronomètre
+ * 1e - Horodatage & Chronomètre
  * Horodatage
  * - Michael Margolis, accesibles par les liens :
  *- https://www.pjrc.com/teensy/td_libs_Time.html
@@ -117,7 +117,7 @@ const int MaxVolt = 3272;
 const int transmit_pin = 18;//Pin de sortie de l'émetteur
 byte count = 1;//Initialisation du numéro du message 
 /**
- * 2e - Horodatage - Chronomètre
+ * 2e - Horodatage & Chronomètre
  * Horodatage 
  */
 #include "TimeLib.h" //Include IimeLib.h library
@@ -277,7 +277,7 @@ byte getT2(float *T2, byte reset_search) {
  * 3b - Fonction mesure des tensions et calibration
  * 3c - BITE
  * 3d - Tranmission
- * 3e - Horodatage - Chronomètre
+ * 3e - Horodatage & Chronomètre
  * 3f - Visualisation des résultats
  * 3g - Mode sleep
  * 3h - Bilan énergétique de la batterie
@@ -289,24 +289,24 @@ void setup() {
   Serial.begin(9600);
   delay(10000);
   Serial.println("N°;date;heure;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
-  //a) Acquisition des températures
-  //b) Mesure des tensions
+  //4a - Acquisition des températures
+  //4b - Mesure des tensions et calibration
   analogReadResolution(13);
-  //c) BITE
+  //4c - BITE
   
-  //d) Transmission
+  //4d - Transmission
     // Initialise the IO and ISR
   vw_set_tx_pin(transmit_pin);
   vw_setup(2000);   // Bits per sec
-  //e) Horodatage - Chronomètre
+  //4e - Horodatage & Chronomètre
   setTime(12, 05, 00, 29, 07, 2018);
  
-  //f) Visualisation des résultats
+  //4f - Visualisation des résultats
   pinMode(led_pin_v, OUTPUT);
   pinMode(led_pin_j, OUTPUT);
   pinMode(led_pin_r, OUTPUT);
   
- //g) Mode sleep
+ //4g - Mode sleep
   digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
   while (!Serial);
     delay(100);
@@ -314,11 +314,11 @@ void setup() {
     //Serial.println("Starting...");
     delay(100);
     }
- //h) - Bilan énergétique de la batterie
+ //4h - Bilan énergétique de la batterie
  /** 5 - Fonction loop() **/
 void loop() {
   Chrono.restart();  // restart the Chrono 
-  //a) Acquisition des températures
+  //5a - Acquisition des températures
   float T1;
   /* Lit la température T1 */
   if (getT1(&T1, true) != READ_OK) {
@@ -332,20 +332,20 @@ void loop() {
     return;
   }
  
-  //b) Mesure des tensions
+  //5b - Mesure des tensions et calibration
   Vusb=map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
   Vbat_1=map (2.0038*analogRead(Vbat_demie_1), 0, MaxConv, 0, MaxVolt);
   Vbat_2=map (2.0038*analogRead(Vbat_demie_2), 0, MaxConv, 0, MaxVolt);
   ibat=Vbat_1 - Vbat_2;
   V33=map (2.0038*analogRead(V33_demie), 0, MaxConv, 0, MaxVolt);
 
-  //c) BITE
+  //5c - BITE
   int tmax=25;
   if (T2 >= tmax){digitalWrite(led_pin_r, HIGH);} else {digitalWrite(led_pin_r, LOW);}
   //if (Vbat_2 <= Vbat_limite && Vbat_2 > Vbat_min){digitalWrite(led_pin_v, HIGH);} else {digitalWrite(led_pin_v, LOW);}
   if (Vbat_2 > Vbat_limite || Vbat_2 <= Vbat_cut_off){digitalWrite(led_pin_r, HIGH);} else {digitalWrite(led_pin_r, LOW);}
 
-  //d) Transmission
+  //5d - Transmission
   /* Transmission des donnèes à l'e-r-433 */ 
   /*La fonction de transmission vw_send(message, length) : transmit a message, "message" is an array of the bytes to send,
   and "length" is the number of bytes stored in the array.*/
@@ -367,10 +367,10 @@ void loop() {
   count = count + 1;
   delay(100);
 
-  //e) Horodatage - Chronomètre
+  //5e - Horodatage & Chronomètre
   time_t t = now();
   
-  //g) Mode sleep
+  //5g - Mode sleep
   
       /********************************************************
      Set Low Power Timer wake up in milliseconds.
@@ -395,7 +395,7 @@ void loop() {
     delay(200);
     delay(1000);
     
-  //f) Visualisation des résultats
+  //5f - Visualisation des résultats
   Serial.print(count);
   Serial.print(";");
   Serial.print(day (t));
@@ -445,7 +445,7 @@ void loop() {
   //Serial.print(" ts : ");
   //Serial.println(ts);   
 
- //h) - Bilan énergétique de la batterie
+ //5h - Bilan énergétique de la batterie
  Et = ((Vbat_1/1000) * ibat)*((tt1 + tt2)/1000000);
  if (sleep) {Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);}
  if (!sleep) {Es = ((Vbat_1/1000) * ibat)*(ts/1000000);}

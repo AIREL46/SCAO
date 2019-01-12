@@ -27,7 +27,7 @@ $CMP Teensy_3-2
 D Teensy 3-2
 $ENDCMP
 #
-$CMP VBAT
+$CMP VBAT1
 K POWER, PWR
 $ENDCMP
 #

@@ -4923,18 +4923,6 @@ F 4 "0,00 €" H 9445 1355 60  0001 C CNN "Prix"
 	1    9445 1355
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Sp:3.3V #PWR13
-U 1 1 582B5D56
-P 3350 2895
-F 0 "#PWR13" H 3350 2745 50  0001 C CNN
-F 1 "3.3V" H 3350 3035 60  0000 C CNB
-F 2 "" H 3350 2895 50  0000 C CNN
-F 3 "" H 3350 2895 50  0000 C CNN
-F 4 "0,00 €" H 3350 2895 60  0001 C CNN "Prix"
-	1    3350 2895
-	0    -1   -1   0   
-$EndComp
 Text Notes 6910 3015 1    100  ~ 20
 T1
 $Comp
@@ -4953,18 +4941,6 @@ F 8 "457914 - 62" H 3350 3230 60  0001 C CNN "Ref-distri"
 F 9 "0,15 €" H 3350 3230 60  0001 C CNN "Prix"
 	1    3350 3230
 	1    0    0    -1  
-$EndComp
-$Comp
-L Sp:VBAT #PWR11
-U 1 1 582CBA63
-P 3760 3065
-F 0 "#PWR11" H 3760 2915 50  0001 C CNN
-F 1 "VBAT" H 3760 3205 60  0000 C CNB
-F 2 "" H 3760 3065 50  0000 C CNN
-F 3 "" H 3760 3065 50  0000 C CNN
-F 4 "0,00 €" H 3760 3065 60  0001 C CNN "Prix"
-	1    3760 3065
-	0    -1   -1   0   
 $EndComp
 $Comp
 L Sp:VUSB #PWR10
@@ -5280,10 +5256,6 @@ Wire Wire Line
 	8435 5515 8435 5365
 Connection ~ 8285 5565
 Wire Wire Line
-	6935 3065 6935 2840
-Wire Wire Line
-	7235 2740 7235 3065
-Wire Wire Line
 	4535 3765 4010 3765
 Connection ~ 4010 3765
 Wire Wire Line
@@ -5295,8 +5267,6 @@ Wire Wire Line
 Wire Wire Line
 	5735 3065 5735 2890
 Wire Wire Line
-	4835 3065 4835 2895
-Wire Wire Line
 	4835 2590 5135 2590
 Wire Wire Line
 	5435 2590 5435 2515
@@ -5307,8 +5277,6 @@ Wire Wire Line
 Wire Wire Line
 	5135 2590 5135 2290
 Connection ~ 5435 2515
-Wire Wire Line
-	4235 3065 3760 3065
 Wire Wire Line
 	4235 3065 4235 2415
 Wire Wire Line
@@ -5416,16 +5384,9 @@ F 3 "" H 3350 3380 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3350 2895 4835 2895
-Connection ~ 4835 2895
-Wire Wire Line
 	6635 3075 6635 1475
 Wire Wire Line
 	6635 1475 9620 1475
-Wire Wire Line
-	3350 3085 3350 2900
-Wire Wire Line
-	3350 2900 3355 2900
 Wire Wire Line
 	8285 5565 8285 5515
 Wire Wire Line
@@ -5444,6 +5405,172 @@ Wire Wire Line
 	8135 1865 8310 1865
 Wire Wire Line
 	9620 1155 9620 1255
+$Comp
+L e-p-433-v2-rescue:CONN_01X06 P?
+U 1 1 5C3AD164
+P 7925 945
+F 0 "P?" V 7930 1340 50  0000 C CNN
+F 1 "2 X thermomètre digital" H 7970 560 60  0000 C CNB
+F 2 "Connect:PINHEAD1-6" H 7925 945 50  0001 C CNN
+F 3 "https://cdn.sparkfun.com/datasheets/Prototyping/SP-140520-XX-001.pdf" H 7925 945 50  0001 C CNN
+F 4 "Arduino 6-Pin Stackable Headers" H 7925 945 60  0001 C CNN "Désignation"
+F 5 "GCT" H 7925 945 60  0001 C CNN "Fabricant"
+F 6 "SP-140520-06-001" H 7925 945 60  0001 C CNN "Ref-fab"
+F 7 "Sparkfun" H 7925 945 60  0001 C CNN "Distributeur"
+F 8 "PRT09280" H 7925 945 60  0001 C CNN "Ref-distri"
+F 9 "0,50 €" H 7925 945 60  0001 C CNN "Prix"
+	1    7925 945 
+	1    0    0    1   
+$EndComp
 Wire Wire Line
-	4835 2895 4835 2590
+	6935 795  7725 795 
+Wire Wire Line
+	6935 795  6935 3065
+Wire Wire Line
+	7725 1095 7235 1095
+Wire Wire Line
+	7235 1095 7235 3065
+$Comp
+L Sp:3.3V #PWR13
+U 1 1 582B5D56
+P 3350 2900
+F 0 "#PWR13" H 3350 2750 50  0001 C CNN
+F 1 "3.3V" H 3350 3040 60  0000 C CNB
+F 2 "" H 3350 2900 50  0000 C CNN
+F 3 "" H 3350 2900 50  0000 C CNN
+F 4 "0,00 €" H 3350 2900 60  0001 C CNN "Prix"
+	1    3350 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4835 2590 4835 2900
+Wire Wire Line
+	3350 2900 3350 3080
+Wire Wire Line
+	3350 2900 4835 2900
+Connection ~ 3350 2900
+Connection ~ 4835 2900
+Wire Wire Line
+	4835 2900 4835 3065
+Wire Wire Line
+	7725 995  7705 995 
+Wire Wire Line
+	7705 995  7705 695 
+Wire Wire Line
+	7705 695  7725 695 
+Wire Wire Line
+	7725 895  7675 895 
+Wire Wire Line
+	7675 895  7675 1195
+Wire Wire Line
+	7675 1195 7725 1195
+$Comp
+L power:GND #PWR?
+U 1 1 5C3B421C
+P 7250 665
+F 0 "#PWR?" H 7250 415 50  0001 C CNN
+F 1 "GND" H 7250 505 60  0000 C CNB
+F 2 "" H 7250 665 50  0000 C CNN
+F 3 "" H 7250 665 50  0000 C CNN
+	1    7250 665 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 665  7705 665 
+Wire Wire Line
+	7705 665  7705 695 
+Connection ~ 7705 695 
+$Comp
+L Sp:3.3V #PWR?
+U 1 1 5C3B74EB
+P 6390 1405
+F 0 "#PWR?" H 6390 1255 50  0001 C CNN
+F 1 "3.3V" H 6390 1545 60  0000 C CNB
+F 2 "" H 6390 1405 50  0000 C CNN
+F 3 "" H 6390 1405 50  0000 C CNN
+F 4 "0,00 €" H 6390 1405 60  0001 C CNN "Prix"
+	1    6390 1405
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7675 1195
+Text Notes 7530 785  0    60   ~ 12
+DQ
+Text Notes 7530 1085 0    60   ~ 12
+DQ
+Text Notes 8005 820  0    60   ~ 12
+1 - couvercle
+Text Notes 8005 1115 0    60   ~ 12
+2 - batterie
+$Comp
+L Device:R R?
+U 1 1 5C3B8EF8
+P 6745 960
+F 0 "R?" V 6750 915 50  0000 L CNB
+F 1 "47K" V 6655 895 50  0000 L CNB
+F 2 "" V 6675 960 50  0001 C CNN
+F 3 "~" H 6745 960 50  0001 C CNN
+	1    6745 960 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6935 795  6745 795 
+Wire Wire Line
+	6745 795  6745 810 
+Connection ~ 6935 795 
+$Comp
+L Device:R R?
+U 1 1 5C3BA465
+P 7080 1255
+F 0 "R?" V 7085 1210 50  0000 L CNB
+F 1 "47K" V 6995 1185 50  0000 L CNB
+F 2 "" V 7010 1255 50  0001 C CNN
+F 3 "~" H 7080 1255 50  0001 C CNN
+	1    7080 1255
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7235 1095 7080 1095
+Wire Wire Line
+	7080 1095 7080 1105
+Connection ~ 7235 1095
+Wire Wire Line
+	7080 1405 6745 1405
+Wire Wire Line
+	7080 1405 7675 1405
+Wire Wire Line
+	7675 1195 7675 1405
+Connection ~ 7080 1405
+Wire Wire Line
+	6745 1110 6745 1405
+Wire Wire Line
+	6390 1405 6745 1405
+Connection ~ 6745 1405
+Text Notes 7470 1390 0    60   ~ 12
+VDD
+$Comp
+L Sp:VBAT1 #PWR?
+U 1 1 5C3CDFB2
+P 3650 2490
+F 0 "#PWR?" H 3650 2340 50  0001 C CNN
+F 1 "VBAT1" H 3665 2663 50  0000 C CNB
+F 2 "" H 3650 2490 50  0000 C CNN
+F 3 "" H 3650 2490 50  0000 C CNN
+	1    3650 2490
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C3CF5A6
+P 3650 2640
+F 0 "R?" V 3550 2590 50  0000 L CNB
+F 1 "1 OHM" V 3650 2545 35  0000 L CNB
+F 2 "" V 3580 2640 50  0001 C CNN
+F 3 "~" H 3650 2640 50  0001 C CNN
+	1    3650 2640
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2790 3650 3065
+Wire Wire Line
+	3650 3065 4235 3065
 $EndSCHEMATC
