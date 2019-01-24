@@ -1,4 +1,4 @@
-bool sleep = true;
+bool sleep = false;
 /**
  * e-p-433-v2
  * 1 - Introduction
@@ -57,6 +57,8 @@ la compilation et le transfert du firmware à destination du micro-contrôleur.
  * 
  * 1h - Bilan énergétique de la batterie
  * Calculs de l'énegie électrique consommée et du ratio par rapport à la capacité nominale de 400 mAh
+ * 
+ * 1i - Start Stop (StSp) Interrupt Service Routine (ISR) 
  */
 /**
  * 2 - Initialisation des paramètres
@@ -115,7 +117,7 @@ const int MaxVolt = 3272;
  */
 #include <VirtualWire.h>
 const int transmit_pin = 18;//Pin de sortie de l'émetteur
-byte count = 1;//Initialisation du numéro du message 
+byte count = 0;//Initialisation du numéro du message 
 /**
  * 2e - Horodatage & Chronomètre
  * Horodatage 
@@ -161,6 +163,12 @@ unsigned long Etot=0; //Energie électrique totale consommée en joule
 unsigned long Et=0; //Energie électrique consommée pendant le travail
 unsigned long Es=0; //Energie électrique consommée pendant le sommeil (sleep)
 unsigned long Ec=0; //Energie électrique consommée cumulée
+/** 2h - Bilan énergétique de la batterie
+/**2i - Start Stop (StSp) Interrupt Service Routine (ISR)
+ * 
+ */
+const byte interruptPin = 11;
+volatile byte stsp = LOW;
 /**
  * 3 - Fonctions spécifiques
  * 3a-1 - Fonction d'acquisition de la température via le 1er thermomètre digital DS18B20 (ds1).
@@ -281,7 +289,11 @@ byte getT2(float *T2, byte reset_search) {
  * 3f - Visualisation des résultats
  * 3g - Mode sleep
  * 3h - Bilan énergétique de la batterie
+ * 3i - Start Stop (StSp) Interrupt Service Routine (ISR)
  */
+ void StSp(){
+  stsp = !stsp;
+  }
 
 /** 4 - Fonction setup() **/
 void setup() {
@@ -299,7 +311,7 @@ void setup() {
   vw_set_tx_pin(transmit_pin);
   vw_setup(2000);   // Bits per sec
   //4e - Horodatage & Chronomètre
-  setTime(12, 05, 00, 29, 07, 2018);
+  setTime(15, 17, 00, 21, 01, 2019);
  
   //4f - Visualisation des résultats
   pinMode(led_pin_v, OUTPUT);
@@ -313,8 +325,11 @@ void setup() {
     digitalWrite(led_pin_r, LOW);
     //Serial.println("Starting...");
     delay(100);
-    }
  //4h - Bilan énergétique de la batterie
+ //4i - Start Stop (StSp) Interrupt Service Routine (ISR)
+ pinMode(interruptPin, INPUT_PULLDOWN);
+ attachInterrupt(interruptPin, StSp, RISING);
+    }
  /** 5 - Fonction loop() **/
 void loop() {
   Chrono.restart();  // restart the Chrono 
@@ -453,4 +468,6 @@ void loop() {
  Ec = Ec + Etot;
  //Serial.print(" Energie électrique Ec (joules) : ");
  Serial.println(Ec);
+ //5i - Start Stop (StSp) Interrupt Service Routine (ISR)
+ digitalWrite(led_pin_v, stsp);
    }

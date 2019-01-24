@@ -15,10 +15,10 @@ Comment3 "1 rue du LANGUERNAIS"
 Comment4 "Régis LERUSTE"
 $EndDescr
 $Comp
-L e-p-433-v2-rescue:CONN_01X06 P5
+L e-p-433-v2-rescue:CONN_01X06 P2
 U 1 1 58025B97
 P 9765 1990
-F 0 "P5" V 9765 2365 50  0000 C CNN
+F 0 "P2" V 9765 2365 50  0000 C CNN
 F 1 "Transmitter" H 10070 2365 60  0000 C CNB
 F 2 "Connect:PINHEAD1-6" H 9765 1990 50  0001 C CNN
 F 3 "https://cdn.sparkfun.com/datasheets/Prototyping/SP-140520-XX-001.pdf" H 9765 1990 50  0001 C CNN
@@ -43,7 +43,7 @@ Text Notes 9515 1930 2    60   ~ 12
 ANT
 Text Notes 7155 3700 1    100  ~ 20
 T2
-Text Notes 930  5655 0    100  ~ 20
+Text Notes 3615 7175 0    100  ~ 20
 * : Cut to separate VIN from VUSB,\nif using a battery charger or external\npower for USB device mode
 $Bitmap
 Pos 9625 6825
@@ -4848,19 +4848,19 @@ CB 41 07 00 00 00 00 00 00 00 00 00 00 E0 72 D0 01 00 00 00 00 00 00 00 00 00 00
 42 60 82 
 EndData
 $EndBitmap
-Text Notes 5055 3765 1    60   ~ 12
+Text Notes 5055 3285 2    60   ~ 12
 3.3V
-Text Notes 5655 3765 1    60   ~ 12
-VBAT
-Text Notes 5355 3785 1    60   ~ 12
+Text Notes 5670 3085 2    60   ~ 12
+VBAT2
+Text Notes 5360 3200 2    60   ~ 12
 VUSB
 Text Notes 5725 2190 2    60   ~ 12
-3 X diviseur par 2
+4 X diviseur par 2
 $Comp
-L e-p-433-v2-rescue:LED-RESCUE-e-p-433-v2 D3
+L e-p-433-v2-rescue:LED-RESCUE-e-p-433-v2 D2
 U 1 1 580638D6
 P 7780 3150
-F 0 "D3" H 7905 3205 60  0000 C CNB
+F 0 "D2" H 7905 3205 60  0000 C CNB
 F 1 "Jaune" H 7775 3005 60  0000 C CNB
 F 2 "LEDs:LED_0603" H 7780 3150 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519971-da-01-ml-LED_LYL29K_J1K2_26_de_en.pdf" H 7780 3150 50  0001 C CNN
@@ -4874,10 +4874,10 @@ F 9 "0,20 €" H 7780 3150 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:LED-RESCUE-e-p-433-v2 D4
+L e-p-433-v2-rescue:LED-RESCUE-e-p-433-v2 D3
 U 1 1 58063C6E
 P 8080 3150
-F 0 "D4" H 8195 3205 60  0000 C CNB
+F 0 "D3" H 8195 3205 60  0000 C CNB
 F 1 "Verte" H 8065 3015 60  0000 C CNB
 F 2 "LEDs:LED_0603" H 8080 3150 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/500000-524999/519967-da-01-ml-LED_LGL29K_F2J1_24_de_en.pdf" H 8080 3150 50  0001 C CNN
@@ -4912,10 +4912,10 @@ Calibration
 Text Notes 6555 2835 3    60   ~ 12
 Data to transmiter
 $Comp
-L Sp:3.3V #PWR17
+L Sp:3.3V #PWR018
 U 1 1 582B4AFD
 P 9390 2040
-F 0 "#PWR17" H 9390 1890 50  0001 C CNN
+F 0 "#PWR018" H 9390 1890 50  0001 C CNN
 F 1 "3.3V" H 9390 2180 60  0000 C CNB
 F 2 "" H 9390 2040 50  0000 C CNN
 F 3 "" H 9390 2040 50  0000 C CNN
@@ -4926,10 +4926,10 @@ $EndComp
 Text Notes 6855 3700 1    100  ~ 20
 T1
 $Comp
-L e-p-433-v2-rescue:C C5
+L e-p-433-v2-rescue:C C1
 U 1 1 582C67BB
 P 3295 3915
-F 0 "C5" H 3305 3815 60  0000 L CNB
+F 0 "C1" H 3305 3815 60  0000 L CNB
 F 1 "4.7µF" V 3140 3785 60  0000 L CNB
 F 2 "Capacitors_SMD:C_0603" H 3333 3765 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/450000-474999/457914-da-01-en-KERAMIK_KONDENSATOR_C0603C475K9PAC.pdf" H 3295 3915 50  0001 C CNN
@@ -4943,10 +4943,10 @@ F 9 "0,15 €" H 3295 3915 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:VUSB #PWR10
+L Sp:VUSB #PWR010
 U 1 1 582F4DB9
 P 3655 4450
-F 0 "#PWR10" H 3655 4300 50  0001 C CNN
+F 0 "#PWR010" H 3655 4300 50  0001 C CNN
 F 1 "VUSB" H 3655 4590 60  0000 C CNB
 F 2 "" H 3655 4450 50  0000 C CNN
 F 3 "" H 3655 4450 50  0000 C CNN
@@ -4954,10 +4954,10 @@ F 3 "" H 3655 4450 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R13
+L e-p-433-v2-rescue:R R9
 U 1 1 5832F0E0
 P 5680 3425
-F 0 "R13" V 5695 3425 60  0000 C CNB
+F 0 "R9" V 5695 3425 60  0000 C CNB
 F 1 "4.7K" V 5595 3425 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 5610 3425 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5680 3425 50  0001 C CNN
@@ -4971,10 +4971,10 @@ F 9 "0,05 €" H 5680 3425 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R8
+L e-p-433-v2-rescue:R R4
 U 1 1 5832F4F4
 P 5080 2825
-F 0 "R8" V 5085 2825 60  0000 C CNB
+F 0 "R4" V 5085 2825 60  0000 C CNB
 F 1 "4.7K" V 5185 2835 80  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 5010 2825 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5080 2825 50  0001 C CNN
@@ -4988,10 +4988,10 @@ F 9 "0,05 €" H 5080 2825 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R9
+L e-p-433-v2-rescue:R R6
 U 1 1 5832F6EF
 P 5380 2825
-F 0 "R9" V 5385 2825 60  0000 C CNB
+F 0 "R6" V 5385 2825 60  0000 C CNB
 F 1 "4.7K" V 5475 2825 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 5310 2825 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5380 2825 50  0001 C CNN
@@ -5005,10 +5005,10 @@ F 9 "0,05 €" H 5380 2825 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R11
+L e-p-433-v2-rescue:R R8
 U 1 1 5832F908
 P 5680 2825
-F 0 "R11" V 5685 2825 60  0000 C CNB
+F 0 "R8" V 5685 2825 60  0000 C CNB
 F 1 "4.7K" V 5775 2825 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 5610 2825 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5680 2825 50  0001 C CNN
@@ -5022,10 +5022,10 @@ F 9 "0,05 €" H 5680 2825 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R14
+L e-p-433-v2-rescue:R R12
 U 1 1 5832FAF1
 P 7480 2700
-F 0 "R14" V 7485 2705 60  0000 C CNB
+F 0 "R12" V 7485 2705 60  0000 C CNB
 F 1 "1K" V 7585 2705 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 7410 2700 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7480 2700 50  0001 C CNN
@@ -5039,10 +5039,10 @@ F 9 "0,05 €" H 7480 2700 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R12
+L e-p-433-v2-rescue:R R7
 U 1 1 58330094
 P 5380 3425
-F 0 "R12" V 5395 3425 60  0000 C CNB
+F 0 "R7" V 5395 3425 60  0000 C CNB
 F 1 "4.7K" V 5295 3425 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 5310 3425 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5380 3425 50  0001 C CNN
@@ -5056,10 +5056,10 @@ F 9 "0,05 €" H 5380 3425 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R10
+L e-p-433-v2-rescue:R R5
 U 1 1 58330234
 P 5080 3425
-F 0 "R10" V 5095 3435 60  0000 C CNB
+F 0 "R5" V 5095 3435 60  0000 C CNB
 F 1 "4.7K" V 4985 3425 80  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 5010 3425 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5080 3425 50  0001 C CNN
@@ -5077,10 +5077,10 @@ Wire Notes Line
 Wire Notes Line
 	9815 2290 9815 1690
 $Comp
-L Sp:Teensy_3-2 U3
+L Sp:Teensy_3-2 U2
 U 1 1 583882A5
 P 6130 4900
-F 0 "U3" H 6130 4875 300 0000 C CNB
+F 0 "U2" H 6130 4875 300 0000 C CNB
 F 1 "Teensy_3-2" V 6130 3750 150 0000 C CNB
 F 2 "Sp:Teensy_3-1" H 6130 4900 50  0001 C CNN
 F 3 "https://www.pjrc.com/teensy/teensy31.html" H 6130 4900 50  0001 C CNN
@@ -5094,10 +5094,10 @@ F 9 "28,49 €" H 6130 4900 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR9
+L power:GND #PWR012
 U 1 1 583C8ED8
 P 4205 6325
-F 0 "#PWR9" H 4205 6075 50  0001 C CNN
+F 0 "#PWR012" H 4205 6075 50  0001 C CNN
 F 1 "GND" H 4205 6155 60  0000 C CNB
 F 2 "" H 4205 6325 50  0000 C CNN
 F 3 "" H 4205 6325 50  0000 C CNN
@@ -5105,10 +5105,10 @@ F 3 "" H 4205 6325 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR18
+L power:GND #PWR019
 U 1 1 583C9DE2
 P 9565 2240
-F 0 "#PWR18" H 9565 1990 50  0001 C CNN
+F 0 "#PWR019" H 9565 1990 50  0001 C CNN
 F 1 "GND" H 9565 2090 50  0000 C CNN
 F 2 "" H 9565 2240 50  0000 C CNN
 F 3 "" H 9565 2240 50  0000 C CNN
@@ -5116,10 +5116,10 @@ F 3 "" H 9565 2240 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR12
+L power:GND #PWR015
 U 1 1 583C80AA
 P 8255 2550
-F 0 "#PWR12" H 8255 2300 50  0001 C CNN
+F 0 "#PWR015" H 8255 2300 50  0001 C CNN
 F 1 "GND" H 8260 2390 60  0000 C CNB
 F 2 "" H 8255 2550 50  0000 C CNN
 F 3 "" H 8255 2550 50  0000 C CNN
@@ -5127,10 +5127,10 @@ F 3 "" H 8255 2550 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R16
+L e-p-433-v2-rescue:R R13
 U 1 1 58407AA4
 P 7780 2700
-F 0 "R16" V 7785 2695 60  0000 C CNB
+F 0 "R13" V 7785 2695 60  0000 C CNB
 F 1 "1K" V 7885 2705 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 7710 2700 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 7780 2700 50  0001 C CNN
@@ -5144,10 +5144,10 @@ F 9 "0,05 €" H 7780 2700 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R17
+L e-p-433-v2-rescue:R R14
 U 1 1 58407F65
 P 8080 2700
-F 0 "R17" V 8085 2695 60  0000 C CNB
+F 0 "R14" V 8085 2695 60  0000 C CNB
 F 1 "1K" V 8235 2705 60  0000 C CNB
 F 2 "Resistors_SMD:R_0603" V 8010 2700 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 8080 2700 50  0001 C CNN
@@ -5163,83 +5163,83 @@ $EndComp
 Wire Wire Line
 	9390 2040 9565 2040
 $Comp
-L Sp:Capuchon SW1
+L Sp:Capuchon SW2
 U 1 1 5845B03C
-P 9275 5945
-F 0 "SW1" H 9425 6055 50  0000 C CNB
-F 1 "Capuchon vert" V 9280 6395 60  0000 C CNB
-F 2 "Sp:Capuchon" H 9275 5945 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/10865.pdf?_ga=1.143335733.1823820493.1466675868" H 9275 5945 50  0001 C CNN
-F 4 "Capuchon de commutateur - TP Series Momentary Pushbutton Switches - Vert" H 9275 5945 60  0001 C CNN "Désignation"
-F 5 "APEM" H 9275 5945 60  0001 C CNN "Fabricant"
-F 6 "U573" H 9275 5945 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 9275 5945 60  0001 C CNN "Distributeur"
-F 8 "1082526" H 9275 5945 60  0001 C CNN "Ref-distri"
-F 9 "0,33 €" H 9275 5945 60  0001 C CNN "Prix"
-	1    9275 5945
-	0    -1   -1   0   
+P 9460 5830
+F 0 "SW2" H 9610 5940 50  0000 C CNB
+F 1 "Capuchon vert" V 9465 6280 60  0000 C CNB
+F 2 "Sp:Capuchon" H 9460 5830 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/10865.pdf?_ga=1.143335733.1823820493.1466675868" H 9460 5830 50  0001 C CNN
+F 4 "Capuchon de commutateur - TP Series Momentary Pushbutton Switches - Vert" H 9460 5830 60  0001 C CNN "Désignation"
+F 5 "APEM" H 9460 5830 60  0001 C CNN "Fabricant"
+F 6 "U573" H 9460 5830 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 9460 5830 60  0001 C CNN "Distributeur"
+F 8 "1082526" H 9460 5830 60  0001 C CNN "Ref-distri"
+F 9 "0,33 €" H 9460 5830 60  0001 C CNN "Prix"
+	1    9460 5830
+	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:3.3V #PWR7
+L Sp:3.3V #PWR020
 U 1 1 5845BA73
-P 9430 6240
-F 0 "#PWR7" H 9430 6090 50  0001 C CNN
-F 1 "3.3V" H 9425 6395 60  0000 C CNB
-F 2 "" H 9430 6240 50  0000 C CNN
-F 3 "" H 9430 6240 50  0000 C CNN
-	1    9430 6240
-	0    -1   -1   0   
+P 10070 5955
+F 0 "#PWR020" H 10070 5805 50  0001 C CNN
+F 1 "3.3V" H 10065 6110 60  0000 C CNB
+F 2 "" H 10070 5955 50  0000 C CNN
+F 3 "" H 10070 5955 50  0000 C CNN
+	1    10070 5955
+	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-v2-rescue:R R7
+L e-p-433-v2-rescue:R R15
 U 1 1 5845BAE5
-P 9580 5640
-F 0 "R7" V 9575 5635 60  0000 C CNB
-F 1 "47K" V 9665 5640 60  0000 C CNB
-F 2 "Resistors_SMD:R_0603" V 9510 5640 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457808-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__47K.pdf" H 9580 5640 50  0001 C CNN
-F 4 "Résistance à couche épaisse 47 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 9580 5640 60  0001 C CNN "Désignation"
-F 5 "Royalohm" H 9580 5640 60  0001 C CNN "Fabricant"
-F 6 "0603SAJ0473T5E" H 9580 5640 60  0001 C CNN "Ref-fab"
-F 7 "CONRAD" H 9580 5640 60  0001 C CNN "Distributeur"
-F 8 "1457808 - 62 " H 9580 5640 60  0001 C CNN "Ref-distri"
-F 9 "0,05 €" H 9580 5640 60  0001 C CNN "Prix"
-	1    9580 5640
-	0    -1   -1   0   
+P 9165 6135
+F 0 "R15" V 9160 6130 60  0000 C CNB
+F 1 "47K" V 9070 6130 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 9095 6135 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457808-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__47K.pdf" H 9165 6135 50  0001 C CNN
+F 4 "Résistance à couche épaisse 47 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 9165 6135 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 9165 6135 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0473T5E" H 9165 6135 60  0001 C CNN "Ref-fab"
+F 7 "CONRAD" H 9165 6135 60  0001 C CNN "Distributeur"
+F 8 "1457808 - 62 " H 9165 6135 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 9165 6135 60  0001 C CNN "Prix"
+	1    9165 6135
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR8
+L power:GND #PWR017
 U 1 1 5845BB66
-P 9730 5640
-F 0 "#PWR8" H 9730 5390 50  0001 C CNN
-F 1 "GND" H 9730 5490 60  0000 C CNB
-F 2 "" H 9730 5640 50  0000 C CNN
-F 3 "" H 9730 5640 50  0000 C CNN
-	1    9730 5640
-	0    -1   -1   0   
+P 9165 6300
+F 0 "#PWR017" H 9165 6050 50  0001 C CNN
+F 1 "GND" H 9165 6150 60  0000 C CNB
+F 2 "" H 9165 6300 50  0000 C CNN
+F 3 "" H 9165 6300 50  0000 C CNN
+	1    9165 6300
+	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:SW_PUSH_m SW2
+L Sp:SW_PUSH_m SW3
 U 1 1 58483BFB
-P 9430 5940
-F 0 "SW2" H 9580 6050 50  0000 C CNB
-F 1 "SW_PUSH_m" H 9430 5860 50  0000 C CNB
-F 2 "Sp:SW_Micro_SPST_Angled" H 9430 5940 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/10672.pdf?_ga=1.98306207.1823820493.1466675868" H 9430 5940 50  0001 C CNN
-F 4 "Commutateur à bouton-poussoir - Off-(On) - SPDT - 20 V -500 mA - A souder" H 9430 5940 60  0001 C CNN "Désignation"
-F 5 "APEM" H 9430 5940 60  0001 C CNN "Fabricant"
-F 6 "TP33W0080" H 9430 5940 60  0001 C CNN "Ref-fab"
-F 7 "Farnell" H 9430 5940 60  0001 C CNN "Distributeur"
-F 8 "1082512" H 9430 5940 60  0001 C CNN "Ref-distri"
-F 9 "4,78 €" H 9430 5940 60  0001 C CNN "Prix"
-	1    9430 5940
-	0    -1   -1   0   
+P 9465 5985
+F 0 "SW3" H 9615 6095 50  0000 C CNB
+F 1 "SW_PUSH_m" H 9465 5905 50  0000 C CNB
+F 2 "Sp:SW_Micro_SPST_Angled" H 9465 5985 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/10672.pdf?_ga=1.98306207.1823820493.1466675868" H 9465 5985 50  0001 C CNN
+F 4 "Commutateur à bouton-poussoir - Off-(On) - SPDT - 20 V -500 mA - A souder" H 9465 5985 60  0001 C CNN "Désignation"
+F 5 "APEM" H 9465 5985 60  0001 C CNN "Fabricant"
+F 6 "TP33W0080" H 9465 5985 60  0001 C CNN "Ref-fab"
+F 7 "Farnell" H 9465 5985 60  0001 C CNN "Distributeur"
+F 8 "1082512" H 9465 5985 60  0001 C CNN "Ref-distri"
+F 9 "4,78 €" H 9465 5985 60  0001 C CNN "Prix"
+	1    9465 5985
+	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-v2-rescue:CONN_01X01 P3
+L e-p-433-v2-rescue:CONN_01X01 P1
 U 1 1 5899B57D
 P 9465 1540
-F 0 "P3" H 9465 1640 60  0000 C CNB
+F 0 "P1" H 9465 1640 60  0000 C CNB
 F 1 "ant" V 9565 1540 60  0000 C CNB
 F 2 "Sp:Ant" H 9465 1540 50  0001 C CNN
 F 3 "" H 9465 1540 50  0000 C CNN
@@ -5247,13 +5247,6 @@ F 4 "0,00 €" H 9465 1540 60  0001 C CNN "Prix"
 	1    9465 1540
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9580 6040 9580 5840
-Wire Wire Line
-	9580 5790 9730 5790
-Wire Wire Line
-	9730 5790 9730 5640
-Connection ~ 9580 5840
 Wire Wire Line
 	4480 4450 3955 4450
 Connection ~ 3955 4450
@@ -5277,7 +5270,7 @@ Wire Wire Line
 	5080 3275 5080 2975
 Connection ~ 5380 3200
 Wire Wire Line
-	4180 3750 4180 3100
+	4180 3750 4180 3465
 Wire Wire Line
 	4180 3100 5680 3100
 Connection ~ 5680 3100
@@ -5319,8 +5312,6 @@ NoConn ~ 6580 6050
 NoConn ~ 6880 6050
 NoConn ~ 7180 6050
 NoConn ~ 7480 6050
-NoConn ~ 7780 6050
-NoConn ~ 8630 5500
 NoConn ~ 8630 5200
 NoConn ~ 8630 4900
 NoConn ~ 8630 4600
@@ -5333,10 +5324,6 @@ Wire Notes Line
 	10055 2285 9815 2285
 Wire Wire Line
 	9565 2160 9565 2140
-Wire Notes Line
-	4870 4145 4870 2030
-Wire Notes Line
-	5765 3785 5765 2030
 Text Notes 7970 2390 2    60   ~ 12
 3XLEDS
 Wire Notes Line
@@ -5347,20 +5334,16 @@ Wire Notes Line
 	8470 2230 8470 4150
 Wire Notes Line
 	8470 4150 8215 4150
-Wire Notes Line
-	5765 3790 5765 4145
-Wire Notes Line
-	5765 4145 4870 4145
 Wire Wire Line
 	9565 1740 9565 1840
 Connection ~ 9565 1840
 Wire Wire Line
 	9565 1740 9465 1740
 $Comp
-L power:GND #PWR?
+L power:GND #PWR013
 U 1 1 59958A01
 P 5380 2420
-F 0 "#PWR?" H 5380 2170 50  0001 C CNN
+F 0 "#PWR013" H 5380 2170 50  0001 C CNN
 F 1 "GND" H 5380 2260 60  0000 C CNB
 F 2 "" H 5380 2420 50  0000 C CNN
 F 3 "" H 5380 2420 50  0000 C CNN
@@ -5369,13 +5352,11 @@ F 3 "" H 5380 2420 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5080 2625 5380 2625
-Wire Notes Line
-	5765 2030 4870 2030
 $Comp
-L power:GND #PWR?
+L power:GND #PWR08
 U 1 1 59959D4F
 P 3295 4065
-F 0 "#PWR?" H 3295 3815 50  0001 C CNN
+F 0 "#PWR08" H 3295 3815 50  0001 C CNN
 F 1 "GND" H 3295 3905 60  0000 C CNB
 F 2 "" H 3295 4065 50  0000 C CNN
 F 3 "" H 3295 4065 50  0000 C CNN
@@ -5386,8 +5367,6 @@ Wire Wire Line
 	6580 3760 6580 3750
 Wire Wire Line
 	6580 2160 9565 2160
-Wire Wire Line
-	9580 5840 9580 5790
 Wire Wire Line
 	3955 4450 3655 4450
 Wire Wire Line
@@ -5405,10 +5384,10 @@ Wire Wire Line
 Wire Wire Line
 	9565 1840 9565 1940
 $Comp
-L Sp:3.3V #PWR13
+L Sp:3.3V #PWR07
 U 1 1 582B5D56
 P 3295 3585
-F 0 "#PWR13" H 3295 3435 50  0001 C CNN
+F 0 "#PWR07" H 3295 3435 50  0001 C CNN
 F 1 "3.3V" H 3295 3725 60  0000 C CNB
 F 2 "" H 3295 3585 50  0000 C CNN
 F 3 "" H 3295 3585 50  0000 C CNN
@@ -5427,10 +5406,10 @@ Connection ~ 4780 3585
 Wire Wire Line
 	4780 3585 4780 3750
 $Comp
-L Sp:3.3V #PWR?
+L Sp:3.3V #PWR09
 U 1 1 5C3B74EB
 P 3525 915
-F 0 "#PWR?" H 3525 765 50  0001 C CNN
+F 0 "#PWR09" H 3525 765 50  0001 C CNN
 F 1 "3.3V" H 3525 1055 60  0000 C CNB
 F 2 "" H 3525 915 50  0000 C CNN
 F 3 "" H 3525 915 50  0000 C CNN
@@ -5445,10 +5424,10 @@ couvercle
 Text Notes 1650 2025 0    39   ~ 8
 batterie
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5C3B8EF8
 P 3240 1100
-F 0 "R?" V 3245 1055 50  0000 L CNB
+F 0 "R2" V 3245 1055 50  0000 L CNB
 F 1 "47K" V 3150 1035 50  0000 L CNB
 F 2 "" V 3170 1100 50  0001 C CNN
 F 3 "~" H 3240 1100 50  0001 C CNN
@@ -5456,10 +5435,10 @@ F 3 "~" H 3240 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5C3BA465
 P 3855 1100
-F 0 "R?" V 3860 1055 50  0000 L CNB
+F 0 "R3" V 3860 1055 50  0000 L CNB
 F 1 "47K" V 3770 1030 50  0000 L CNB
 F 2 "" V 3785 1100 50  0001 C CNN
 F 3 "~" H 3855 1100 50  0001 C CNN
@@ -5467,62 +5446,49 @@ F 3 "~" H 3855 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:VBAT1 #PWR?
+L Sp:VBAT1 #PWR05
 U 1 1 5C3CDFB2
-P 3595 3175
-F 0 "#PWR?" H 3595 3025 50  0001 C CNN
-F 1 "VBAT1" H 3610 3348 50  0000 C CNB
-F 2 "" H 3595 3175 50  0000 C CNN
-F 3 "" H 3595 3175 50  0000 C CNN
-	1    3595 3175
+P 2740 2935
+F 0 "#PWR05" H 2740 2785 50  0001 C CNN
+F 1 "VBAT1" H 2755 3108 50  0000 C CNB
+F 2 "" H 2740 2935 50  0000 C CNN
+F 3 "" H 2740 2935 50  0000 C CNN
+	1    2740 2935
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5C3CF5A6
-P 3595 3325
-F 0 "R?" V 3495 3275 50  0000 L CNB
-F 1 "1 OHM" V 3595 3230 35  0000 L CNB
-F 2 "" V 3525 3325 50  0001 C CNN
-F 3 "~" H 3595 3325 50  0001 C CNN
-	1    3595 3325
+P 2740 3085
+F 0 "R1" V 2640 3035 50  0000 L CNB
+F 1 "1 OHM" V 2740 2990 35  0000 L CNB
+F 2 "" V 2670 3085 50  0001 C CNN
+F 3 "~" H 2740 3085 50  0001 C CNN
+	1    2740 3085
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3595 3475 3595 3750
-Wire Wire Line
-	3595 3750 4180 3750
 $Comp
-L Connector_Generic:Conn_01x08 J?
+L Connector_Generic:Conn_01x08 J1
 U 1 1 5C3CCF4E
 P 2440 1800
-F 0 "J?" H 2430 2275 50  0000 C CNN
-F 1 "2 X thermomètre digital" V 2565 1775 60  0000 C CNB
+F 0 "J1" H 2430 2275 50  0000 C CNN
+F 1 "2 X thermomètre digital" H 2685 1115 60  0000 C CNB
 F 2 "" H 2440 1800 50  0001 C CNN
 F 3 "~" H 2440 1800 50  0001 C CNN
 	1    2440 1800
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR06
 U 1 1 5C3E4CF3
 P 2945 2150
-F 0 "#PWR?" H 2945 1900 50  0001 C CNN
+F 0 "#PWR06" H 2945 1900 50  0001 C CNN
 F 1 "GND" H 2945 1990 60  0000 C CNB
 F 2 "" H 2945 2150 50  0000 C CNN
 F 3 "" H 2945 2150 50  0000 C CNN
 	1    2945 2150
 	1    0    0    -1  
 $EndComp
-Connection ~ 9730 5640
-Wire Wire Line
-	9430 5640 8475 5640
-Wire Wire Line
-	8475 5640 8475 6050
-Wire Wire Line
-	8475 6050 8080 6050
-Connection ~ 9430 5640
-Connection ~ 4180 3750
 Connection ~ 5080 3275
 Connection ~ 6580 3750
 Wire Wire Line
@@ -5577,11 +5543,9 @@ Méplat
 Wire Wire Line
 	7180 3750 7180 2000
 Wire Wire Line
-	7180 2000 2640 2000
+	7180 2000 3855 2000
 Wire Wire Line
 	6880 3750 6880 1500
-Wire Wire Line
-	6880 1500 3855 1500
 Wire Wire Line
 	2640 1600 2640 1700
 Wire Wire Line
@@ -5610,11 +5574,6 @@ Wire Wire Line
 Wire Wire Line
 	3525 950  3525 915 
 Wire Wire Line
-	3855 1250 3855 1500
-Connection ~ 3855 1500
-Wire Wire Line
-	3855 1500 3240 1500
-Wire Wire Line
 	2640 1400 3085 1400
 Wire Wire Line
 	3085 1400 3085 950 
@@ -5626,15 +5585,15 @@ Wire Wire Line
 Wire Wire Line
 	3085 1900 3085 1400
 Connection ~ 3085 1400
-Text Notes 1320 2320 0    60   ~ 12
+Text Notes 1460 1290 0    60   ~ 12
 2 X DS 18B 2O
 Text Notes 4520 1450 2    49   ~ 10
 T1 -> Teensy 3.2 (D17)
 Text Notes 4525 1950 2    49   ~ 10
 T2 -> Teensy 3.2 (D16)
 $Bitmap
-Pos 1055 1095
-Scale 2.000000
+Pos 1180 1165
+Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 00 A3 00 00 00 A6 08 02 00 00 00 39 C3 A8 
 64 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 10 D5 49 44 41 54 78 9C ED 9D C9 53 1B 59 
@@ -5775,22 +5734,287 @@ BB 4A 14 4D 62 AC 7B 43 5B 4E 3A 9D 4D A7 B3 15 9F 7F B4 BE B5 B5 37 30 10 FC F2
 B0 4C 9B 05 CB B4 59 F8 7F 50 D7 4D 04 C8 26 82 35 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Notes 640  685  0    60   ~ 12
+Text Notes 840  815  0    60   ~ 12
 Entretoise de fixation [16]
 Wire Notes Line
 	2355 1700 1500 1700
-Wire Notes Line
-	1440 1520 845  1520
-Wire Notes Line
-	845  1520 845  1170
-Wire Notes Line
-	500  520  4680 520 
-Wire Notes Line
-	4680 520  4680 2910
-Wire Notes Line
-	4680 2910 500  2910
-Wire Notes Line
-	500  2910 500  525 
-Text Notes 1520 2765 0    99   ~ 20
+Text Notes 2825 2530 0    60   ~ 12
 Interface des thermomètres digitaux
+Wire Notes Line
+	1090 1225 1095 1225
+Wire Notes Line
+	1530 1320 1455 1320
+Wire Notes Line
+	1455 1320 1455 1730
+Wire Notes Line
+	1455 1730 1530 1730
+Wire Notes Line
+	1090 1225 1090 1530
+Wire Notes Line
+	1090 1530 1455 1530
+Wire Wire Line
+	3240 1500 6880 1500
+Wire Wire Line
+	3855 1250 3855 2000
+Connection ~ 3855 2000
+Wire Wire Line
+	3855 2000 2640 2000
+Wire Notes Line
+	2285 675  4625 675 
+Wire Notes Line
+	4625 675  4625 2625
+Wire Notes Line
+	4625 2625 2285 2625
+Wire Notes Line
+	2285 2625 2285 675 
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5C431804
+P 1690 2470
+F 0 "BT1" V 1840 2455 50  0000 L CNN
+F 1 "Batterie LI-ION PRT-13851" H 1480 2760 39  0000 L CNN
+F 2 "" V 1690 2530 50  0001 C CNN
+F 3 "https://www.sparkfun.com/products/13851" V 1690 2530 50  0001 C CNN
+	1    1690 2470
+	0    -1   -1   0   
+$EndComp
+Wire Notes Line
+	1335 1810 1975 1810
+Wire Notes Line
+	1975 1810 1975 2755
+Wire Notes Line
+	1975 2755 1335 2755
+Wire Notes Line
+	1335 2755 1335 1815
+$Comp
+L Sp:PRT-10401 U1
+U 1 1 5C44AA8C
+P 1640 4005
+F 0 "U1" H 1605 3840 60  0000 L CNN
+F 1 "PRT-10401" V 1640 4100 49  0000 L CNN
+F 2 "" H 1640 4005 60  0001 C CNN
+F 3 "" H 1640 4005 60  0001 C CNN
+	1    1640 4005
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1490 2470 1490 3505
+Wire Wire Line
+	1790 3505 1790 2470
+$Comp
+L Sp:VBAT1 #PWR01
+U 1 1 5C45F52D
+P 1270 3490
+F 0 "#PWR01" H 1270 3340 50  0001 C CNN
+F 1 "VBAT1" H 1285 3663 50  0000 C CNB
+F 2 "" H 1270 3490 50  0000 C CNN
+F 3 "" H 1270 3490 50  0000 C CNN
+	1    1270 3490
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5C45F5A1
+P 2020 3520
+F 0 "#PWR03" H 2020 3270 50  0001 C CNN
+F 1 "GND" H 2025 3347 50  0000 C CNN
+F 2 "" H 2020 3520 50  0001 C CNN
+F 3 "" H 2020 3520 50  0001 C CNN
+	1    2020 3520
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1790 3505 2020 3505
+Wire Wire Line
+	2020 3505 2020 3520
+Connection ~ 1790 3505
+Wire Wire Line
+	1490 3505 1270 3505
+Wire Wire Line
+	1270 3505 1270 3490
+Connection ~ 1490 3505
+$Comp
+L Sp:VUSB #PWR02
+U 1 1 5C467B98
+P 1270 4505
+F 0 "#PWR02" H 1270 4355 50  0001 C CNN
+F 1 "VUSB" H 1285 4663 30  0000 C CNN
+F 2 "" H 1270 4505 50  0000 C CNN
+F 3 "" H 1270 4505 50  0000 C CNN
+	1    1270 4505
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5C467C33
+P 2030 4505
+F 0 "#PWR04" H 2030 4255 50  0001 C CNN
+F 1 "GND" H 2035 4332 50  0000 C CNN
+F 2 "" H 2030 4505 50  0001 C CNN
+F 3 "" H 2030 4505 50  0001 C CNN
+	1    2030 4505
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1270 4505 1490 4505
+Wire Wire Line
+	1790 4505 2030 4505
+$Comp
+L Sp:VBAT2 #PWR011
+U 1 1 5C4A350B
+P 3700 2960
+F 0 "#PWR011" H 3700 2810 50  0001 C CNN
+F 1 "VBAT2" H 3715 3133 50  0000 C CNB
+F 2 "" H 3700 2960 50  0000 C CNN
+F 3 "" H 3700 2960 50  0000 C CNN
+	1    3700 2960
+	1    0    0    -1  
+$EndComp
+$Comp
+L e-p-433-v2-rescue:R R11
+U 1 1 5C45CAEF
+P 5980 3425
+F 0 "R11" V 5995 3425 60  0000 C CNB
+F 1 "4.7K" V 5895 3425 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 5910 3425 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5980 3425 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 5980 3425 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 5980 3425 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 5980 3425 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 5980 3425 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 5980 3425 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 5980 3425 60  0001 C CNN "Prix"
+	1    5980 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L e-p-433-v2-rescue:R R10
+U 1 1 5C45CC49
+P 5980 2825
+F 0 "R10" V 5995 2825 60  0000 C CNB
+F 1 "4.7K" V 5895 2825 60  0000 C CNB
+F 2 "Resistors_SMD:R_0603" V 5910 2825 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1400000-1499999/001457796-da-01-en-SMD_WID__DICKS__1_10WS_0603_5__4K7.pdf" H 5980 2825 50  0001 C CNN
+F 4 "Résistance à couche épaisse 4.7 kΩ CMS 0603 0.1 W 5 % 100 ±ppm/°C" H 5980 2825 60  0001 C CNN "Désignation"
+F 5 "Royalohm" H 5980 2825 60  0001 C CNN "Fabricant"
+F 6 "0603SAJ0472T5E" H 5980 2825 60  0001 C CNN "Ref-fab"
+F 7 "Conrad" H 5980 2825 60  0001 C CNN "Distributeur"
+F 8 "1457796 - 62" H 5980 2825 60  0001 C CNN "Ref-distri"
+F 9 "0,05 €" H 5980 2825 60  0001 C CNN "Prix"
+	1    5980 2825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5980 2975 5980 3275
+Wire Wire Line
+	5980 3575 5980 3750
+Wire Wire Line
+	5980 2675 5980 2625
+Wire Wire Line
+	5980 2625 5680 2625
+Connection ~ 5680 2625
+Text Notes 6265 3115 2    60   ~ 12
+VBAT1
+$Comp
+L Sp:VBAT1 #PWR014
+U 1 1 5C469228
+P 6245 2950
+F 0 "#PWR014" H 6245 2800 50  0001 C CNN
+F 1 "VBAT1" H 6260 3123 50  0000 C CNB
+F 2 "" H 6245 2950 50  0000 C CNN
+F 3 "" H 6245 2950 50  0000 C CNN
+	1    6245 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5980 2975 6245 2975
+Wire Wire Line
+	6245 2975 6245 2950
+Connection ~ 5980 2975
+Wire Notes Line
+	6155 3165 6440 3165
+Wire Notes Line
+	6440 3165 6440 2045
+Wire Notes Line
+	6440 2045 4830 2045
+Wire Notes Line
+	4830 2045 4830 4150
+Wire Notes Line
+	4830 4150 6155 4150
+Wire Notes Line
+	6155 3165 6155 4150
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 1 1 5C4733C7
+P 3255 3365
+F 0 "SW1" H 3255 3650 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 3255 3559 50  0000 C CNN
+F 2 "" H 3255 3365 50  0001 C CNN
+F 3 "" H 3255 3365 50  0001 C CNN
+	1    3255 3365
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2740 3235 2740 3365
+Wire Wire Line
+	2740 3365 3055 3365
+Wire Wire Line
+	3455 3465 3700 3465
+Connection ~ 4180 3465
+Wire Wire Line
+	4180 3465 4180 3100
+Wire Wire Line
+	3700 2960 3700 3465
+Connection ~ 3700 3465
+Wire Wire Line
+	3700 3465 4180 3465
+Wire Wire Line
+	9765 5985 10070 5985
+Wire Wire Line
+	10070 5985 10070 5955
+Wire Wire Line
+	9165 5985 8990 5985
+Wire Wire Line
+	8990 5985 8990 6365
+Wire Wire Line
+	8990 6365 7780 6365
+Wire Wire Line
+	7780 6365 7780 6050
+Connection ~ 9165 5985
+$Comp
+L Sp:VBAT1 #PWR016
+U 1 1 5C4C1E96
+P 8885 6035
+F 0 "#PWR016" H 8885 5885 50  0001 C CNN
+F 1 "VBAT1" H 8900 6208 50  0000 C CNB
+F 2 "" H 8885 6035 50  0000 C CNN
+F 3 "" H 8885 6035 50  0000 C CNN
+	1    8885 6035
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8080 6050 8630 6050
+Wire Wire Line
+	8885 6050 8885 6035
+Wire Wire Line
+	8630 5500 8630 6050
+Connection ~ 8630 6050
+Wire Wire Line
+	8630 6050 8885 6050
+Text Notes 8925 5800 1    60   ~ 12
+Alimentation permanente de l'horloge
+Wire Wire Line
+	9565 6135 9365 6135
+Wire Wire Line
+	9165 6300 9165 6285
+Wire Wire Line
+	9165 6285 9330 6285
+Wire Wire Line
+	9330 6285 9330 6135
+Wire Wire Line
+	9330 6135 9365 6135
+Connection ~ 9165 6285
+Connection ~ 9365 6135
+Text Notes 1430 4740 0    60   ~ 12
+Chargeur
 $EndSCHEMATC
