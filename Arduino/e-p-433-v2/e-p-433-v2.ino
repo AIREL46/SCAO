@@ -111,7 +111,6 @@ const int MaxConv = 8192;
 const int MaxVolt = 3272;
 /**
  * 2c - Built In Test Equipment (BITE)
-/**
  * 2d - Transmission
  * Chargement de la librairie VirtualWire - Gestion de l'émetteur 433 MHZ
  */
@@ -137,7 +136,7 @@ verte : l'allumage témoigne d'un bon fonctionnement
 jaune : allumée quand l'émission commence
         éteinte quand l'émission s'arrète
 rouge : l'allumage témoigne d'une ou plusieurs anomalies
- */
+**/
 const int led_pin_v = 13;//Led verte
 const int led_pin_j = 14;//Led jaune
 const int led_pin_r = 15;//Led rouge
@@ -164,7 +163,7 @@ unsigned long Et=0; //Energie électrique consommée pendant le travail
 unsigned long Es=0; //Energie électrique consommée pendant le sommeil (sleep)
 unsigned long Ec=0; //Energie électrique consommée cumulée
 /** 2h - Bilan énergétique de la batterie
-/**2i - Start Stop (StSp) Interrupt Service Routine (ISR)
+*2i - Start Stop (StSp) Interrupt Service Routine (ISR)
  * 
  */
 const byte interruptPin = 11;
@@ -172,7 +171,6 @@ volatile byte stsp = LOW;
 /**
  * 3 - Fonctions spécifiques
  * 3a-1 - Fonction d'acquisition de la température via le 1er thermomètre digital DS18B20 (ds1).
-/**
  * Fonction de lecture de la température via un thermomètre digital DS18B20 câblé sur le 1er bus ds1.
  */
 byte getT1(float *T1, byte reset_search) {
