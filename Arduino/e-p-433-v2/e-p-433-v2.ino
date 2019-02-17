@@ -44,7 +44,11 @@ la compilation et le transfert du firmware à destination du micro-contrôleur.
  * - Michael Margolis, accesibles par les liens :
  *- https://www.pjrc.com/teensy/td_libs_Time.html
  *- https://github.com/PaulStoffregen/Time
- * 
+ *- https://github.com/PaulStoffregen/Time/blob/master/examples/TimeTeensy3/TimeTeensy3.ino (pour la fonction RTC),
+ *  accessible également dans l'Arduino IDE (Fichier - Exemples - Time - TimeTeensy3)
+ *  TimeRTC.pde
+ *  example code illustrating Time library with Real Time Clock.
+ *  
  * Chrono library for Arduino or Wiring by Sofian Audry and Thomas Ouellet Fredericks
  * - http://github.com/SofaPirate/Chrono
  * 
@@ -284,7 +288,52 @@ byte getT2(float *T2, byte reset_search) {
  * 3c - BITE
  * 3d - Tranmission
  * 3e - Horodatage & Chronomètre
- * 3f - Visualisation des résultats
+ */
+ void digitalClockDisplay() {
+  // digital clock display of the time
+  Serial.print(hour());
+  printDigits(minute());
+  printDigits(second());
+  Serial.print(" ");
+  Serial.print(day());
+  Serial.print(" ");
+  Serial.print(month());
+  Serial.print(" ");
+  Serial.print(year()); 
+  Serial.println(); 
+}
+
+time_t getTeensy3Time()
+{
+  return Teensy3Clock.get();
+}
+
+/*  code to process time sync messages from the serial port   */
+#define TIME_HEADER  "T"   // Header tag for serial time sync message
+
+unsigned long processSyncMessage() {
+  unsigned long pctime = 0L;
+  const unsigned long DEFAULT_TIME = 1357041600; // Jan 1 2013 
+
+  if(Serial.find(TIME_HEADER)) {
+     pctime = Serial.parseInt();
+     return pctime;
+     if( pctime < DEFAULT_TIME) { // check the value is a valid time (greater than Jan 1 2013)
+       pctime = 0L; // return 0 to indicate that the time is not valid
+     }
+  }
+  return pctime;
+}
+
+void printDigits(int digits){
+  // utility function for digital clock display: prints preceding colon and leading 0
+  Serial.print(":");
+  if(digits < 10)
+    Serial.print('0');
+  Serial.print(digits);
+}
+
+ /** 3f - Visualisation des résultats
  * 3g - Mode sleep
  * 3h - Bilan énergétique de la batterie
  * 3i - Start Stop (StSp) Interrupt Service Routine (ISR)
@@ -309,8 +358,16 @@ void setup() {
   vw_set_tx_pin(transmit_pin);
   vw_setup(2000);   // Bits per sec
   //4e - Horodatage & Chronomètre
-  setTime(15, 17, 00, 21, 01, 2019);
- 
+  //setTime(15, 17, 00, 21, 01, 2019);
+  // set the Time library to use Teensy 3.0's RTC to keep time
+  setSyncProvider(getTeensy3Time);
+  while (!Serial);  // Wait for Arduino Serial Monitor to open
+  delay(100);
+  if (timeStatus()!= timeSet) {
+    Serial.println("Unable to sync with the RTC");
+  } else {
+    Serial.println("RTC has set the system time");
+  }
   //4f - Visualisation des résultats
   pinMode(led_pin_v, OUTPUT);
   pinMode(led_pin_j, OUTPUT);
@@ -355,7 +412,7 @@ void loop() {
   //5c - BITE
   int tmax=25;
   if (T2 >= tmax){digitalWrite(led_pin_r, HIGH);} else {digitalWrite(led_pin_r, LOW);}
-  //if (Vbat_2 <= Vbat_limite && Vbat_2 > Vbat_min){digitalWrite(led_pin_v, HIGH);} else {digitalWrite(led_pin_v, LOW);}
+  if (Vbat_2 <= Vbat_limite && Vbat_2 > Vbat_min){digitalWrite(led_pin_v, HIGH);} else {digitalWrite(led_pin_v, LOW);}
   if (Vbat_2 > Vbat_limite || Vbat_2 <= Vbat_cut_off){digitalWrite(led_pin_r, HIGH);} else {digitalWrite(led_pin_r, LOW);}
 
   //5d - Transmission
@@ -382,7 +439,15 @@ void loop() {
 
   //5e - Horodatage & Chronomètre
   time_t t = now();
-  
+    if (Serial.available()) {
+    time_t t = processSyncMessage();
+    if (t != 0) {
+      Teensy3Clock.set(t); // set the RTC
+      setTime(t);
+    }
+  }
+  //digitalClockDisplay();  
+  delay(1000);
   //5g - Mode sleep
   
       /********************************************************
