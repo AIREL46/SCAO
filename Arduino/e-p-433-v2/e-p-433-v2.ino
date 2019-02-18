@@ -2,25 +2,29 @@ bool sleep = false;
 /**
  * e-p-433-v2
  * 1 - Introduction
- *Dans le cadre du concept culinaire Quiet cook http://quiet-cook.com/ 
+ *Dans le cadre du concept culinaire Quiet cook http://quiet-cook.com 
  *et de son Système de Cuisson Assistée par Ordinateur (SCAO) http://fablabo.net/wiki/SCAO. 
  *Le prototypage (prototype N°3) de la e-poignée (433MHZ en version 2)
  *est réalisé par Régis LERUSTE http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS
  *et Olivier MARAIS http://fablabo.net/wiki/Cahier_de_recettes#Les_recettes_d.27Olivier
-*le programe e-p-433-v2.ino constitue le code source qui permet l'édition, 
-la compilation et le transfert du firmware à destination du micro-contrôleur. 
+*ce programe e-p-433-v2.ino constitue le code source qui permet l'édition, 
+la compilation et le téléversement du firmware à destination du micro-contrôleur. 
 *L'environnement de développement Arduino IDE est constitué du microcontrôleur Teensy 3.2 relié à l'ordinateur à l'aide d'un câble USB. Ce câble permet l'établissement d'une liaison série. De l'ordinateur vers le microcontrôleur pour téléverser le firmware. Du microcontrôleur vers l'ordinateur pour l'envoi de messages à l'aide du port /dev/ttyACM0, soit pour les afficher sur la console, soit pour les mettre à disposition du programme BASH capture.sh qui édite un fichier "journal".   
-*L'objet du firmware est l'administration du microcontrôleur et de ses périphériques câblés selon le schéma électrique https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433-v2/e-p-433-v2-1.png
+*L'objet du firmware est l'administration du microcontrôleur et de ses composants périphériques câblés selon le schéma électrique https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433-v2/e-p-433-v2-1.png
 *Ce firmware est dévelloppé sous licence creative commons CC-BY-SA.
 *Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. Il est organisé selon 2 fonctions principales : 
 *- la capture des températures délivrées par 2 thermomètres digitaux.
 *- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
-*Ces fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
-*Il utile des ressources extérieures (librairies et codes sources) développées par des informaticiens. 
-*Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, indique les liens permettant d'accéder à la librairie et aux codes sources.
+*Ses fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
+*Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des informaticiens. 
+*Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
  *
- * 1a - Acquisitions des températures
- * - Paul Stoffregem, accesibles par les liens :
+ * 1a - Acquisition des températures
+ * L'acquisition de la température est réalisée à l'aide d'un DS18B20  digital  thermometer  provides  9-bit  to  12-bit  Celsius  temperature  measurements.
+ * The  DS18B20  communicates  over  a  1-Wire  bus.
+ * La librarie OneWire.h met à disposition un ensemble de fonction permettant de gérer l'échange de données entre le DS18B20 et le microcntrôleur.
+ * Le développement de cette librarie est assuré par Paul Stoffregem, accessibles par les liens :
+ * 
  *- https://www.pjrc.com/teensy/td_libs_OneWire.html
  *- https://github.com/PaulStoffregen/OneWire
  *Il utile le code source dévelloppé par :
@@ -49,6 +53,7 @@ la compilation et le transfert du firmware à destination du micro-contrôleur.
  *  TimeRTC.pde
  *  example code illustrating Time library with Real Time Clock.
  *  
+ *  Chronomètre
  * Chrono library for Arduino or Wiring by Sofian Audry and Thomas Ouellet Fredericks
  * - http://github.com/SofaPirate/Chrono
  * 
@@ -98,11 +103,11 @@ OneWire ds2(BROCHE_ONEWIRE_2);
 /**
  * 2b - Mesures des tensions
  */
-const int Vbat_demie_1 = A6; //Mesure de la moitié de la tension Vbat avant la résistance de 1 Ohm
-const int Vbat_demie_2 = A7; //Mesure de la moitié de la tension Vbat_2 après la résistance de 1 Ohm
-float Vbat_1;
-float Vbat_2;
-float ibat;
+const int Vbat_demie_1 = A6; //Initialisation de la variable Vbat_demie_1 et affectation à l'entrée analogique A6 (demie valeur de la tension Vbat avant la résistance de 1 Ohm)
+const int Vbat_demie_2 = A7; //Initialisation de la variable Vbat_demie_2 et affectation à l'entrée analogique A7 (demie valeur de la tension Vbat après la résistance de 1 Ohm)
+float Vbat_1; //Initialisation de la variable Vbat_1 (valeur de la tension Vbat avant la résistance de 1 Ohm)
+float Vbat_2; //Initialisation de la variable Vbat_2 (valeur de la tension Vbat après la résistance de 1 Ohm)
+float ibat; //Initialisation de la variable ibat (valeur du courant qui traverse la résistance de 1 Ohm)
 const float Vbat_limite = 4300;
 const float Vbat_nominal = 3700;
 const float Vbat_min = 3600;
