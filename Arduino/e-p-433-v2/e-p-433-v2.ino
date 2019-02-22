@@ -13,7 +13,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *L'objet du firmware est l'administration du microcontrôleur et de ses composants périphériques câblés selon le schéma électrique https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433-v2/e-p-433-v2-1.png
 *Ce firmware est dévelloppé sous licence creative commons CC-BY-SA.
 *Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. Il est organisé selon 2 fonctions principales : 
-*- la capture des températures délivrées par 2 thermomètres digitaux.
+*- la capture des températures délivrées par 2 thermomètres digitaux, le premier concerne la température sur le couvercle de la casserole, le second la température de la batterie, l'un des éléments qui permet d'assurer la sécurité de la e-poignée. .
 *- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
 *Ses fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
 *Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des informaticiens. 
@@ -22,7 +22,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * 1a - Acquisition des températures
  * L'acquisition de la température est réalisée à l'aide d'un DS18B20  digital  thermometer  provides  9-bit  to  12-bit  Celsius  temperature  measurements.
  * The  DS18B20  communicates  over  a  1-Wire  bus.
- * La librarie OneWire.h met à disposition un ensemble de fonction permettant de gérer l'échange de données entre le DS18B20 et le microcntrôleur.
+ * La librarie OneWire.h met à disposition un ensemble de fonction permettant de gérer l'échange de données entre le DS18B20 et le microcontrôleur.
  * Le développement de cette librarie est assuré par Paul Stoffregem, accessibles par les liens :
  * 
  *- https://www.pjrc.com/teensy/td_libs_OneWire.html
@@ -33,19 +33,34 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *- en tenant compte que pour des raisons de sécurité inhérant au projet SCAO qu'il est indispensable que la capture de données en provenance
  * des 2 thermomètres digitaux DB18B20 se réalise toujours dans le même ordre, en particulier après un changement de l'un ou des deux thermomètres.
  * 
- * 1b - Mesure des tensions
- * 
+ * 1b - Mesure des tensions et calcul du courant ibat
+ * La mesure des tensions est l'un des éléments qui permet d'assurer la sécurité de la e-poignée.
+ * La mesure consiste en une conversion analogique digitale de la tension. Cette conversion est réalisée par le microcontrôleur. La tension à mesurer est appliquée sur l'une de ses entrées analogiques. Pour tenir compte de la tension d'alimentation de 3.3V du microcontrôleur, la tension à mesurer est au préalable divisée par 2 à l'aide d'un pont diviseur constitué de 2 résistances de valeurs égales.
+ * La valeur mesurée est ensuite multipliée par 2, plus exactement par une valeur légérement supérieure à 2 pour compenser l'effet de l'impédance de l'entrée du microcontrôleur.
  * 1c - BITE
+ * L'objet du Build In Test Equipment (BITE) est d'assurer la sécurité de la e-poignée.
+ * Cette sécurité se concrétise par un réseau de surveillance qui détecte d'éventuelles anomalies.
+ * L'utilisateur est informé de l'état du fonctionnement par 3 leds (verte, orange, rouge).
+ * Le BITE surveille la température de la batterie, les tensions continues Vusb, Vbat et V33.
  * 
  * 1d - Transmission
- * - Mike McCauley, accesibles par les liens :
+ * L'objet est la transmission périodique (30s) au e-rupteur (e-r-433) des échantillons.
+ * Les échantillons ont pour objet le regroupement des données.
+ * Chaque échantillon contient : la date et l'heure, la température mesurée sur le couvercle de la casserole ainsi que les données culinaires et de sécurité.
+ * Cette fonction utilise un shield AM Transmitter module QAM-TX1 en version 433 MHZ.
+ * Ce module est connecté à une antenne 1/4 d'onde.
+ * La librarie VirtualWire apporte les fonctions spécifiques qui permettent de gérer cette fonction transmission.
+ * Cette Librarie a été développée par Mike McCauley, elle est accesible par les liens :
  *- https://www.pjrc.com/teensy/td_libs_VirtualWire.html
  *- http://www.airspayce.com/mikem/arduino/VirtualWire.pdf
  *- https://github.com/manashmndl/VirtualWire
  * 
  * 1e - Horodatage & Chronomètre
  * Horodatage
- * - Michael Margolis, accesibles par les liens :
+ * L'objet de l'horodatage est la datation les échantillons.
+ * Un cristal a été ajouté au Teensy 3.2.
+ * La librarie Time apporte les fonctions spécifiques qui permettent de gérer cette fonction d'horodatage.
+ * Cette Librarie a été développée par Michael Margolis, accesibles par les liens :
  *- https://www.pjrc.com/teensy/td_libs_Time.html
  *- https://github.com/PaulStoffregen/Time
  *- https://github.com/PaulStoffregen/Time/blob/master/examples/TimeTeensy3/TimeTeensy3.ino (pour la fonction RTC),
@@ -54,11 +69,15 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *  example code illustrating Time library with Real Time Clock.
  *  
  *  Chronomètre
- * Chrono library for Arduino or Wiring by Sofian Audry and Thomas Ouellet Fredericks
+ *  L'objet du chronomètre est la mesure du temps de travail du microcontrôleur.
+ *  La librarie Chrono apporte les fonctions spécifiques qui permettent de gérer cette fonction.
+ *  Cette Librarie a été développée par Sofian Audry and Thomas Ouellet Fredericks, elle est accesible par les liens :
  * - http://github.com/SofaPirate/Chrono
  * 
- * 1f - Visualisation des résultats
- * 
+ * 1f - Visualisation du contenu des échantillons
+ * L'objet est la visualisation du contenu des échantillons.
+ * Cette fonction utilise la liaison série (câble USB) entre le microcontrôleur et l'ordinateur.
+ * Elle se concrétise par une console sur l'écran de l'ordinateur.
  * 1g - Mode Sleep
  * - Colin Duffy, pour le "mode sleep" (snooze) avec la gestion de la liaison série, accesible par le lien : 
  *- https://github.com/duff2013/Snooze/blob/master/examples/deepsleep/deepSleep_usb_serial/deepSleep_usb_serial.ino
@@ -101,7 +120,7 @@ enum DS18B20_RCODES {
 OneWire ds1(BROCHE_ONEWIRE_1);
 OneWire ds2(BROCHE_ONEWIRE_2);
 /**
- * 2b - Mesures des tensions
+ * 2b - Mesure des tensions et calcul du courant ibat
  */
 const int Vbat_demie_1 = A6; //Initialisation de la variable Vbat_demie_1 et affectation à l'entrée analogique A6 (demie valeur de la tension Vbat avant la résistance de 1 Ohm)
 const int Vbat_demie_2 = A7; //Initialisation de la variable Vbat_demie_2 et affectation à l'entrée analogique A7 (demie valeur de la tension Vbat après la résistance de 1 Ohm)
@@ -138,7 +157,7 @@ byte count = 0;//Initialisation du numéro du message
 Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
 
 /**
- * 2f - Visualisation des résultats
+ * 2f - Visualisation du contenu des échantillons
  *  Les résultats du BITE sont visalisés par 3 leds :
 verte : l'allumage témoigne d'un bon fonctionnement
         l'extinction peut être envisagée en mode sleep
@@ -289,7 +308,7 @@ byte getT2(float *T2, byte reset_search) {
   return READ_OK;
 }
 /**
- * 3b - Fonction mesure des tensions et calibration
+ * 3b - Mesure des tensions et calcul du courant ibat
  * 3c - BITE
  * 3d - Tranmission
  * 3e - Horodatage & Chronomètre
@@ -338,7 +357,7 @@ void printDigits(int digits){
   Serial.print(digits);
 }
 
- /** 3f - Visualisation des résultats
+ /** 3f - Visualisation du contenu des échantillons
  * 3g - Mode sleep
  * 3h - Bilan énergétique de la batterie
  * 3i - Start Stop (StSp) Interrupt Service Routine (ISR)
@@ -354,7 +373,7 @@ void setup() {
   delay(10000);
   Serial.println("N°;date;heure;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
   //4a - Acquisition des températures
-  //4b - Mesure des tensions et calibration
+  //4b - Mesure des tensions et calcul du courant ibat
   analogReadResolution(13);
   //4c - BITE
   
@@ -373,7 +392,7 @@ void setup() {
   } else {
     Serial.println("RTC has set the system time");
   }
-  //4f - Visualisation des résultats
+  //4f - Visualisation du contenu des échantillons
   pinMode(led_pin_v, OUTPUT);
   pinMode(led_pin_j, OUTPUT);
   pinMode(led_pin_r, OUTPUT);
@@ -407,7 +426,7 @@ void loop() {
     return;
   }
  
-  //5b - Mesure des tensions et calibration
+  //5b - Mesure des tensions et calcul du courant ibat
   Vusb=map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
   Vbat_1=map (2.0038*analogRead(Vbat_demie_1), 0, MaxConv, 0, MaxVolt);
   Vbat_2=map (2.0038*analogRead(Vbat_demie_2), 0, MaxConv, 0, MaxVolt);
@@ -478,7 +497,7 @@ void loop() {
     delay(200);
     delay(1000);
     
-  //5f - Visualisation des résultats
+  //5f - Visualisation du contenu des échantillons
   Serial.print(count);
   Serial.print(";");
   Serial.print(day (t));
