@@ -57,7 +57,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * 
  * 1e - Horodatage & Chronomètre
  * Horodatage
- * L'objet de l'horodatage est la datation les échantillons.
+ * L'objet de l'horodatage est la datation des échantillons.
  * Un cristal a été ajouté au Teensy 3.2.
  * La librarie Time apporte les fonctions spécifiques qui permettent de gérer cette fonction d'horodatage.
  * Cette Librarie a été développée par Michael Margolis, accesibles par les liens :
@@ -84,9 +84,13 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *- https://github.com/duff2013/Snooze
  * 
  * 1h - Bilan énergétique de la batterie
- * Calculs de l'énegie électrique consommée et du ratio par rapport à la capacité nominale de 400 mAh
+ * L'objet est l'établissement du bilan énergétique de la batterie
+ * Cette fonction réalise les calculs de l'énegie électrique consommée et le ratio par rapport à la capacité nominale de 400 mAh
  * 
- * 1i - Start Stop (StSp) Interrupt Service Routine (ISR) 
+ * 1i - Start Stop (StSp) Interrupt Service Routine (ISR)
+ * L'objet est l'exécution d'une routine d'interruption suite à l'appui sur un bouton poussoir
+ * Cette fonction peut être utilisée pour gérer le mode de fonctionnement Start Stop ou tout autrevariante de mode de fonctionnement.
+ * Une attention toute particulière doit être apportée au traitement de l'antirebond du bouton poussoir.
  */
 /**
  * 2 - Initialisation des paramètres
@@ -127,16 +131,17 @@ const int Vbat_demie_2 = A7; //Initialisation de la variable Vbat_demie_2 et aff
 float Vbat_1; //Initialisation de la variable Vbat_1 (valeur de la tension Vbat avant la résistance de 1 Ohm)
 float Vbat_2; //Initialisation de la variable Vbat_2 (valeur de la tension Vbat après la résistance de 1 Ohm)
 float ibat; //Initialisation de la variable ibat (valeur du courant qui traverse la résistance de 1 Ohm)
-const float Vbat_limite = 4300;
-const float Vbat_nominal = 3700;
-const float Vbat_min = 3600;
-const float Vbat_cut_off = 2800;
-const int Vusb_demie = A8; //Mesure de la moitié de la tension Vusb
-float Vusb;
-const int V33_demie = A9; //Mesure de la moitié de la tension 3.3V
-float V33;
-const int MaxConv = 8192;
-const int MaxVolt = 3272;
+const float Vbat_limite = 4300; //Limite supérieure de Vbat
+const float Vbat_nominal = 3700; //Valeur nominale de Vbat
+const float Vbat_min = 3600; //Valeur minimun de Vbat
+const float Vbat_cut_off = 2800; //Cut off de Vbat
+const int Vusb_demie = A8; //Initialisation de la variable Vusb_demie
+float Vusb; //Initialisation de la variable Vusb
+const int V33_demie = A9; //Initialisation de la variable V33_demie
+float V33; //Initialisation de la variable V33
+//Initialisation des valeurs utilisées par la fonction de changement d'échelle (fonction mathématique map() de l'arduino)
+const int MaxConv = 8192; //Valeur maximale lue
+const int MaxVolt = 3272; //Valeur de la tension correspondante à la valeur maximale
 /**
  * 2c - Built In Test Equipment (BITE)
  * 2d - Transmission
@@ -346,6 +351,7 @@ unsigned long processSyncMessage() {
        pctime = 0L; // return 0 to indicate that the time is not valid
      }
   }
+  Serial.println(pctime);
   return pctime;
 }
 
@@ -382,9 +388,9 @@ void setup() {
   vw_set_tx_pin(transmit_pin);
   vw_setup(2000);   // Bits per sec
   //4e - Horodatage & Chronomètre
-  //setTime(15, 17, 00, 21, 01, 2019);
+  //setTime(16, 8, 00, 23, 02, 2019);
   // set the Time library to use Teensy 3.0's RTC to keep time
-  setSyncProvider(getTeensy3Time);
+  setSyncProvider(getTeensy3Time); //Configure Time to automatically called the getTimeFunction() regularly. This function should obtain the time from another service and return a time_t number, or zero if the time is not known. 
   while (!Serial);  // Wait for Arduino Serial Monitor to open
   delay(100);
   if (timeStatus()!= timeSet) {
@@ -427,6 +433,8 @@ void loop() {
   }
  
   //5b - Mesure des tensions et calcul du courant ibat
+  //fonction de changement d'échelle (fonction mathématique map() de l'arduino)
+  //La multiplication par 2.0038 compense la division par 2 (pont diviseur) et l'impédance de l'entrée du microcontrôleur pour les chiffres après la virgule.
   Vusb=map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
   Vbat_1=map (2.0038*analogRead(Vbat_demie_1), 0, MaxConv, 0, MaxVolt);
   Vbat_2=map (2.0038*analogRead(Vbat_demie_2), 0, MaxConv, 0, MaxVolt);
@@ -462,7 +470,7 @@ void loop() {
   delay(100);
 
   //5e - Horodatage & Chronomètre
-  time_t t = now();
+  //time_t t = now();
     if (Serial.available()) {
     time_t t = processSyncMessage();
     if (t != 0) {
@@ -470,7 +478,7 @@ void loop() {
       setTime(t);
     }
   }
-  //digitalClockDisplay();  
+  digitalClockDisplay();  
   delay(1000);
   //5g - Mode sleep
   
@@ -498,20 +506,20 @@ void loop() {
     delay(1000);
     
   //5f - Visualisation du contenu des échantillons
-  Serial.print(count);
-  Serial.print(";");
-  Serial.print(day (t));
-  Serial.print("/");
-  Serial.print(month (t));
-  Serial.print("/");
-  Serial.print(year (t));
-  Serial.print(";");
-  Serial.print(hour (t));
-  Serial.print(":");
-  Serial.print(minute (t));
-  Serial.print(":");
-  Serial.print(second (t));
-  Serial.print(";");
+  //Serial.print(count);
+  //Serial.print(";");
+  //Serial.print(day (t));
+  //Serial.print("/");
+  //Serial.print(month (t));
+  //Serial.print("/");
+  //Serial.print(year (t));
+  //Serial.print(";");
+  //Serial.print(hour (t));
+  //Serial.print(":");
+  //Serial.print(minute (t));
+  //Serial.print(":");
+  //Serial.print(second (t));
+  //Serial.print(";");
   /* Affiche T1 et T2 */
   //Serial.print(F("T1 : "));
   Serial.print(T1, 2);
