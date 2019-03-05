@@ -471,7 +471,7 @@ void loop() {
 
   //5e - Horodatage & Chronomètre
   //time_t t = now();
-    if (Serial.available()) {
+    if (Serial.available() > 0) {
     time_t t = processSyncMessage();
     if (t != 0) {
       Teensy3Clock.set(t); // set the RTC
