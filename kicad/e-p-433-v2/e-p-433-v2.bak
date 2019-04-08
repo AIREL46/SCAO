@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:e-p-433-v2-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -47,7 +47,7 @@ Text Notes 3615 7175 0    100  ~ 20
 * : Cut to separate VIN from VUSB,\nif using a battery charger or external\npower for USB device mode
 $Bitmap
 Pos 9625 6825
-Scale 0.000000
+Scale 0.150000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 0F 81 00 00 05 90 08 02 00 00 00 61 88 44 
 58 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC DC B1 52 14 5B 
@@ -6153,12 +6153,6 @@ Text Notes 1830 2695 0    47   ~ 9
 Text Notes 1405 4010 0    47   ~ 9
 [3d]
 Wire Notes Line width 39 style solid
-	2145 600  2145 3180
-Wire Notes Line width 39 style solid
-	2145 3180 760  3180
-Wire Notes Line width 39 style solid
-	760  3180 760  7570
-Wire Notes Line width 39 style solid
 	760  7570 6855 7570
 Wire Notes Line width 39 style solid
 	6855 7570 6855 6425
@@ -6172,4 +6166,10 @@ Text Notes 8070 905  0    197  ~ 39
 Breadboard [3b]
 Text Notes 4660 1325 0    79   ~ 16
 Fichiers associés :\nSCAO/kicad/e-p-433-v2/e-p-433-v2.pdf (-> impression)\nSCAO/kicad/e-p-433-v2/e-p-433-v2-1.png (-> wiki)\nSCAO/kicad/e-p-433-v2/e-p-433-v2-2.png (-> wiki - interface des themomètres digitaux)
+Wire Notes Line width 39 style solid
+	755  7570 755  4730
+Wire Notes Line width 39 style solid
+	755  4730 2140 4730
+Wire Notes Line width 39 style solid
+	2140 4730 2140 605 
 $EndSCHEMATC
