@@ -1,5 +1,11 @@
+//Ce programme permet la représentation de l'assemblage des différentes pièces de la e-p-433-v2.
+//La représentation est réalisable selon un mode statique ou animé.
+//En mode statique la représentation est réelle.
+//En mode animé la représentation évolue progressivement entre une représentation réelle et une représentation éclatée qui permet d'apercevoir le détail des différentes pièces.
+//The $t variable is used for animation. If you enable the animation frame with view->animate and give a value for "FPS" and "Steps", the "Time" field shows the current value of $t.
+//Pour obtenir le mode statique Temps=t FPS=0 Etapes=0 avec t=0 (sans éclaté) t=1 (éclaté)
 include <dim1.scad>
-include <z_f.scad>//ecl=éclaté secl=normal
+include <z_f.scad>//Ce fichier contient pour zn deux séries de valeurs, celles dédiées à une représentation réelle (non éclatée) et celles dédiées à une représentation éclatée. La variable $t évoquée ci-dessus permet l'évolution progressive entre les 2 valeurs en créant ainsi une animation.
 $fn=100;//nombre de facettes
 use <visserie.scad> //Modules écrou, entretoise hexagonale, rondelle et vis
 //Définition des couleurs
@@ -8,7 +14,8 @@ vert=[151/255, 191/255, 13/255];
 gris=[112/255, 113/255, 115/255];
 noir=[0/255, 0/255, 0/255];
 bleu=[51/255, 51/255, 255/255];
-rotate([0,0,$t*90]){
+//Pour mettre en rotation rotate([0,0,$t*90])
+rotate([0,0,0]){
 //Assemblage des pièces de la e-p-433-v2
 //vis M3 (1)
 color( gris)vishexa(3,5,1.5,5.5,true,L2/2,l2/2,z1+$t*(z1_e-z1));
@@ -60,7 +67,7 @@ color( gris) Ecrou(3,10, 5.5, L2/2, -l2/2,z5+$t*(z5_e-z5));
 color( gris) Ecrou(3,10, 5.5, -L2/2, -l2/2,z5+$t*(z5_e-z5));
 //Rondelles (6) supprimées
 //Capteur de température (7)
-translate([0,0,z7+$t*(z7_e-z7)])rotate([0,-90,180])color( noir){import("capteur.stl");}
+translate([0,0,z7+$t*(z7_e-z7)])rotate([0,-90,180]){import("capteur.stl");}
 //Jupe (8)
 translate([0,0,z8+$t*(z8_e-z8)])color( vert){import("jupe.stl");}
 //entretoises M3 (9)
@@ -94,10 +101,14 @@ color( gris)ent_M(3,4.9,8,4.8,true,-8.5,-8.5,z15+$t*(z15_e-z15));
 //Entretoise en aluminium (16)
 translate([0,0,z16+$t*(z16_e-z16)])rotate([0,0,0])color( [255/255, 0/255, 0/255]){import("ent-fixation.stl");}
 //Capteur de température (17)
-translate([x17+$t*(x17_e-x17),0,z17+$t*(z17_e-z17)])rotate([0,90,0])color( noir){import("capteur.stl");}
+translate([x17+$t*(x17_e-x17),2,z17+$t*(z17_e-z17)])rotate([0,90,0]){import("capteur.stl");}
 //Vis de serrage du capteur (18)
-translate([-8.5,0,z18+$t*(z18_e-z18)])color( noir)cylinder(4,1.75,1.75,center=true);
-//couvercle (19)
-translate([0,0,z19+$t*(z19_e-z19)])color( [190/255, 190/255, 190/255]){import("Couvercle.stl");}
+translate([-8.5,2,z18+$t*(z18_e-z18)])color( noir)cylinder(4,1.75,1.75,center=true);
+//Connexion masse mécanique (19)
+translate([x19-5+$t*(x19_e-x19),-3.4,z19+$t*(z19_e-z19)])rotate([0,90,0])color( noir)cylinder(14,0.9,0.9,center=true);
+//Vis de serrage de la masse métallique (20)
+translate([-8.5,-3.4,z20+$t*(z20_e-z20)])color( noir)cylinder(4,1.75,1.75,center=true);
+//couvercle (21)
+translate([0,0,z21+$t*(z21_e-z21)])color( [190/255, 190/255, 190/255]){import("Couvercle.stl");}
 
 }

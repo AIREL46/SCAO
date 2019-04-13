@@ -26,7 +26,9 @@ z15=0; //Entretoise M3
 z16=-7; //Entretoise de fixation
 x17=-10; z17=-6.5; //Capteur de température (couvercle)
 z18=-10; //Vis de fixation du capteur de température (couvercle)
-z19=-12; //Couvercle
+x19=x17; z19=z17;//Connexion masse mécanique
+z20=z18;//Vis de fixation de la masse mécanique
+z21=-12; //Couvercle
 h=16;
 //Valeurs de zn dédiées à une représentation éclatée
 z1_e=40; //Vis M3
@@ -55,4 +57,6 @@ z15_e=-16.5; //Entretoise M3
 z16_e=-35; //Entretoise de fixation
 x17_e=-17; z17_e=z16_e; //Capteur de température (couvercle)
 z18_e=-45; //Vis de fixation du capteur de température (couvercle)
-z19_e=-50; //Couvercle
+x19_e=x17_e; z19_e=z17_e;//Connexion masse mécanique
+z20_e=z18_e;//Vis de fixation de la masse mécanique
+z21_e=-50; //Couvercle
