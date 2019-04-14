@@ -15,7 +15,7 @@ gris=[112/255, 113/255, 115/255];
 noir=[0/255, 0/255, 0/255];
 bleu=[51/255, 51/255, 255/255];
 //Pour mettre en rotation rotate([0,0,$t*90])
-rotate([0,0,0]){
+translate([-10,0,0])rotate([0,0,0]){
 //Assemblage des pièces de la e-p-433-v2
 //vis M3 (1)
 color( gris)vishexa(3,5,1.5,5.5,true,L2/2,l2/2,z1+$t*(z1_e-z1));
