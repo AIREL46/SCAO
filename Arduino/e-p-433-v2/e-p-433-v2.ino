@@ -1,4 +1,4 @@
-bool sleep = false;
+bool sleep = true;
 /**
  * e-p-433-v2
  * 1 - Introduction
@@ -13,13 +13,13 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *L'objet du firmware est l'administration du microcontrôleur et de ses composants périphériques câblés selon le schéma électrique https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433-v2/e-p-433-v2-1.png
 *Ce firmware est dévelloppé sous licence creative commons CC-BY-SA.
 *Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. Il est organisé selon 2 fonctions principales : 
-*- la capture des températures délivrées par 2 thermomètres digitaux, le premier concerne la température sur le couvercle de la casserole, le second la température de la batterie, l'un des éléments qui permet d'assurer la sécurité de la e-poignée. .
+*- la capture des températures délivrées par 2 thermomètres digitaux, le premier concerne la température sur le couvercle de la casserole, le second la température de la batterie, l'une des fonctions secondaires qui assure la sécurité de la e-poignée. .
 *- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
 *Ses fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
 *Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des informaticiens. 
 *Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
  *
- * 1a - Acquisition des températures
+ * 1a - Acquisition : des paramètres de cuisson (setup) et des températures T1 et T2
  * L'acquisition de la température est réalisée à l'aide d'un DS18B20  digital  thermometer  provides  9-bit  to  12-bit  Celsius  temperature  measurements.
  * The  DS18B20  communicates  over  a  1-Wire  bus.
  * La librarie OneWire.h met à disposition un ensemble de fonction permettant de gérer l'échange de données entre le DS18B20 et le microcontrôleur.
@@ -34,7 +34,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * des 2 thermomètres digitaux DB18B20 se réalise toujours dans le même ordre, en particulier après un changement de l'un ou des deux thermomètres.
  * 
  * 1b - Mesure des tensions et calcul du courant ibat
- * La mesure des tensions est l'un des éléments qui permet d'assurer la sécurité de la e-poignée.
+ * La mesure des tensions est l'une des fonctions secondaires qui assure la sécurité de la e-poignée.
  * La mesure consiste en une conversion analogique digitale de la tension. Cette conversion est réalisée par le microcontrôleur. La tension à mesurer est appliquée sur l'une de ses entrées analogiques. Pour tenir compte de la tension d'alimentation de 3.3V du microcontrôleur, la tension à mesurer est au préalable divisée par 2 à l'aide d'un pont diviseur constitué de 2 résistances de valeurs égales.
  * La valeur mesurée est ensuite multipliée par 2, plus exactement par une valeur légérement supérieure à 2 pour compenser l'effet de l'impédance de l'entrée du microcontrôleur.
  * 1c - BITE
@@ -74,23 +74,20 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *  Cette Librarie a été développée par Sofian Audry and Thomas Ouellet Fredericks, elle est accesible par les liens :
  * - http://github.com/SofaPirate/Chrono
  * 
- * 1f - Visualisation du contenu des échantillons
- * L'objet est la visualisation du contenu des échantillons.
+ * 1f Bilan énergétique de la batterie
+ * L'objet est l'établissement du bilan énergétique de la batterie
+ * Cette fonction réalise les calculs de l'énegie électrique consommée et le ratio par rapport à la capacité nominale de 400 mAh
+ * 1g Calcul
+ * 1h - Visualisation du contenu des échantillons
+ *  * L'objet est la visualisation du contenu des échantillons.
  * Cette fonction utilise la liaison série (câble USB) entre le microcontrôleur et l'ordinateur.
  * Elle se concrétise par une console sur l'écran de l'ordinateur.
- * 1g - Mode Sleep
+ * 1i - Mode Sleep
  * - Colin Duffy, pour le "mode sleep" (snooze) avec la gestion de la liaison série, accesible par le lien : 
  *- https://github.com/duff2013/Snooze/blob/master/examples/deepsleep/deepSleep_usb_serial/deepSleep_usb_serial.ino
  *- https://github.com/duff2013/Snooze
  * 
- * 1h - Bilan énergétique de la batterie
- * L'objet est l'établissement du bilan énergétique de la batterie
- * Cette fonction réalise les calculs de l'énegie électrique consommée et le ratio par rapport à la capacité nominale de 400 mAh
  * 
- * 1i - Start Stop (StSp) Interrupt Service Routine (ISR)
- * L'objet est l'exécution d'une routine d'interruption suite à l'appui sur un bouton poussoir
- * Cette fonction peut être utilisée pour gérer le mode de fonctionnement Start Stop ou tout autrevariante de mode de fonctionnement.
- * Une attention toute particulière doit être apportée au traitement de l'antirebond du bouton poussoir.
  */
 /**
  * 2 - Initialisation des paramètres
@@ -101,7 +98,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  unsigned long ti=30000000;//temps itératif
  unsigned long ts=0;//temps de sleep
 /**  
- * 2a - Acquisition des températures
+ * 2a - Acquisition des paramètres de cuisson (setup) et des températures
  * Code pour lire un thermomètre digital DS18B20 sur un bus 1-Wire.
  */
  
@@ -160,9 +157,19 @@ byte count = 0;//Initialisation du numéro du message
   */
 #include <Chrono.h> //Include Chrono.h Library
 Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
-
 /**
- * 2f - Visualisation du contenu des échantillons
+ * 2f - Bilan énergétique de la batterie
+ * Chargement de la librairie
+ */
+unsigned long Etot=0; //Energie électrique totale consommée en joule
+unsigned long Et=0; //Energie électrique consommée pendant le travail
+unsigned long Es=0; //Energie électrique consommée pendant le sommeil (sleep)
+unsigned long Ec=0; //Energie électrique consommée cumulée
+/**
+ * 2g Calcul
+ */
+/**
+ * 2h - Visualisation du contenu des échantillons
  *  Les résultats du BITE sont visalisés par 3 leds :
 verte : l'allumage témoigne d'un bon fonctionnement
         l'extinction peut être envisagée en mode sleep
@@ -174,7 +181,7 @@ const int led_pin_v = 13;//Led verte
 const int led_pin_j = 14;//Led jaune
 const int led_pin_r = 15;//Led rouge
 /**
- * 2g - Mode sleep
+ * 2i - Mode sleep
  * Chargement de la librairie
  */
 #include <Snooze.h>
@@ -187,20 +194,7 @@ SnoozeUSBSerial usb;
  fix printing to serial monitor after sleeping.
  ***********************************************************/
 SnoozeBlock config_teensy32(usb, timer);
-/**
- * 2h - Bilan énergétique de la batterie
- * Chargement de la librairie
- */
-unsigned long Etot=0; //Energie électrique totale consommée en joule
-unsigned long Et=0; //Energie électrique consommée pendant le travail
-unsigned long Es=0; //Energie électrique consommée pendant le sommeil (sleep)
-unsigned long Ec=0; //Energie électrique consommée cumulée
-/** 2h - Bilan énergétique de la batterie
-*2i - Start Stop (StSp) Interrupt Service Routine (ISR)
- * 
- */
-const byte interruptPin = 11;
-volatile byte stsp = LOW;
+
 /**
  * 3 - Fonctions spécifiques
  * 3a-1 - Fonction d'acquisition de la température via le 1er thermomètre digital DS18B20 (ds1).
@@ -323,13 +317,13 @@ byte getT2(float *T2, byte reset_search) {
   Serial.print(hour());
   printDigits(minute());
   printDigits(second());
-  Serial.print(" ");
+  Serial.print(";");
   Serial.print(day());
-  Serial.print(" ");
+  Serial.print(";");
   Serial.print(month());
-  Serial.print(" ");
+  Serial.print(";");
   Serial.print(year()); 
-  Serial.println(); 
+  Serial.print(";"); 
 }
 
 time_t getTeensy3Time()
@@ -363,22 +357,21 @@ void printDigits(int digits){
   Serial.print(digits);
 }
 
- /** 3f - Visualisation du contenu des échantillons
- * 3g - Mode sleep
- * 3h - Bilan énergétique de la batterie
- * 3i - Start Stop (StSp) Interrupt Service Routine (ISR)
+ /**
+ * 3f - Bilan énergétique de la batterie
+ * 3g - Calcul
+ * 3h - Visualisation du contenu des échantillons
+ * 3i - Mode sleep
+ * 
  */
- void StSp(){
-  stsp = !stsp;
-  }
 
 /** 4 - Fonction setup() **/
 void setup() {
   /* Initialisation du port série */
   Serial.begin(9600);
   delay(10000);
-  Serial.println("N°;date;heure;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
-  //4a - Acquisition des températures
+  Serial.println("N°;heure;date;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
+  //4a - Acquisition des paramètres de cuisson
   //4b - Mesure des tensions et calcul du courant ibat
   analogReadResolution(13);
   //4c - BITE
@@ -398,23 +391,21 @@ void setup() {
   } else {
     Serial.println("RTC has set the system time");
   }
-  //4f - Visualisation du contenu des échantillons
+  //4f - Bilan énergétique de la batterie
+  //4g - calcul
+  //4h - Visualisation du contenu des échantillons
   pinMode(led_pin_v, OUTPUT);
   pinMode(led_pin_j, OUTPUT);
   pinMode(led_pin_r, OUTPUT);
   
- //4g - Mode sleep
+ //4i - Mode sleep
   digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
   while (!Serial);
     delay(100);
     digitalWrite(led_pin_r, LOW);
     //Serial.println("Starting...");
     delay(100);
- //4h - Bilan énergétique de la batterie
- //4i - Start Stop (StSp) Interrupt Service Routine (ISR)
- pinMode(interruptPin, INPUT_PULLDOWN);
- attachInterrupt(interruptPin, StSp, RISING);
-    }
+}
  /** 5 - Fonction loop() **/
 void loop() {
   Chrono.restart();  // restart the Chrono 
@@ -478,9 +469,35 @@ void loop() {
       setTime(t);
     }
   }
-  digitalClockDisplay();  
-  delay(1000);
-  //5g - Mode sleep
+ //5f - Bilan énergétique de la batterie
+ tt2 = (Chrono.elapsed());
+ Et = ((Vbat_1/1000) * ibat)*((tt1 + tt2)/1000000);
+ if (sleep) {Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);}
+ if (!sleep) {Es = ((Vbat_1/1000) * ibat)*(ts/1000000);}
+ Etot = Et + Es;
+ Ec = Ec + Etot;  
+
+  //5g - Calcul
+  //5h - Visualisation du contenu des échantillons
+  Serial.print(count);//N° de l'échantillon
+  Serial.print(";");//Séparation des champs par une virgule
+  digitalClockDisplay();//Heure et date
+  delay(100);
+  Serial.print(T1, 2);//Température mesurée T1 en °C sur le couvercle de la casserole
+  Serial.write(";"); //Séparation des champs par une virgule
+  Serial.print(T2, 2);//Température mesurée T2 en °C sur la batterie
+  Serial.write(";"); //Séparation des champs par une virgule
+  Serial.print(Vusb);//Tension mesurée Vusb en mV
+  Serial.print(";");//Séparation des champs par une virgule
+  Serial.print(Vbat_1);//Tension mesurée Vbat1 en mV
+  Serial.print(";");//Séparation des champs par une virgule
+  Serial.print(ibat);//Courant mesuré ibat en mA
+  Serial.print(";");//Séparation des champs par une virgule
+  Serial.print(V33);//Tension mesurée V33 en mV
+  Serial.print(";");//Séparation des champs par une virgule
+  Serial.println(Ec);//Energie mesurée Ec en joules
+
+  //5i - Mode sleep
   
       /********************************************************
      Set Low Power Timer wake up in milliseconds.
@@ -504,65 +521,5 @@ void loop() {
     // normal delay for Arduino Serial Monitor
     delay(200);
     delay(1000);
-    
-  //5f - Visualisation du contenu des échantillons
-  //Serial.print(count);
-  //Serial.print(";");
-  //Serial.print(day (t));
-  //Serial.print("/");
-  //Serial.print(month (t));
-  //Serial.print("/");
-  //Serial.print(year (t));
-  //Serial.print(";");
-  //Serial.print(hour (t));
-  //Serial.print(":");
-  //Serial.print(minute (t));
-  //Serial.print(":");
-  //Serial.print(second (t));
-  //Serial.print(";");
-  /* Affiche T1 et T2 */
-  //Serial.print(F("T1 : "));
-  Serial.print(T1, 2);
-  Serial.write(";"); // Caractère degré
-  //Serial.write('C');
-  //Serial.print(";");
-  //Serial.print(F("T2 : "));
-  Serial.print(T2, 2);
-  Serial.write(";"); // Caractère degré
-  //Serial.write('C');
-  //Serial.print(";");
-  /* Affiche les tensions et le courant consommé ibat*/
-  //Serial.print(" - Vusb : ");
-  Serial.print(Vusb);
-  Serial.print(";");
-  //Serial.print(" Vbat : ");
-  Serial.print(Vbat_1);
-  Serial.print(";");
-  //Serial.print(" ibat : ");
-  Serial.print(ibat);
-  Serial.print(";");
-  //Serial.print(" V33 : ");
-  Serial.print(V33);
-  Serial.print(";");
-  //Serial.println(";");
-  //Serial.print(" ti : ");
-  //Serial.print(ti);
-  //Serial.print(" tt1 : ");
-  //Serial.print(tt1);
-  tt2 = (Chrono.elapsed());
-  //Serial.print(" tt2 : ");
-  //Serial.print(tt2);
-  //Serial.print(" ts : ");
-  //Serial.println(ts);   
-
- //5h - Bilan énergétique de la batterie
- Et = ((Vbat_1/1000) * ibat)*((tt1 + tt2)/1000000);
- if (sleep) {Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);}
- if (!sleep) {Es = ((Vbat_1/1000) * ibat)*(ts/1000000);}
- Etot = Et + Es;
- Ec = Ec + Etot;
- //Serial.print(" Energie électrique Ec (joules) : ");
- Serial.println(Ec);
- //5i - Start Stop (StSp) Interrupt Service Routine (ISR)
- digitalWrite(led_pin_v, stsp);
-   }
+}
+  
