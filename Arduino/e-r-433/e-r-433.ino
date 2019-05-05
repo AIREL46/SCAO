@@ -1,9 +1,12 @@
 
 
 /**
- * 1a - Acquisition des paramètres de cuisson
- * L'objet est l'acquisition des paramètres de cuisson saisis par l'utilisateur
- * 2a - Les paramètres de cuisson sont la Durée de Cuisson (DC) et le Gabarit de cuisson (Gabarit).
+ * 1b - IHM clavier
+ * Acquisition des paramètres de cuisson
+ * L'objet est l'acquisition des paramètres de cuisson saisis par l'utilisateur (setup).
+ * La commande start stop permet le passage du setup à la boucle loop
+ * 2b - IHM clavier
+ * Les paramètres de cuisson sont la Durée de Cuisson (DC) et le Gabarit de cuisson (Gabarit).
  * DC est exprimée en mn sur 3 chiffres
  * Le Gabarit est un nombre entier compris entre 1 et 9.
  * Chaque Gabarit est associé à 9 paramètres :
@@ -18,9 +21,15 @@
  * la durée d'anticipation ta (nombre d'itérations).
  * Ces paramètres sont décrits dans le document "brevet" (page 6 et 28) dont la version Word est accessible par le lien ci-dessous:
  * https://github.com/AIREL46/SCAO/blob/master/Brevet/SCAO/word/La%20description%20du%20SCAO%20-%20d.doc
-  
+ * La commande start stop (stsp) permet de quitter le setup pour entrer dans la boucle loop 
+ * Elle est commandée par un switch ON/OFF SW2 et elle se concrétise par une variable booléenne.
+ * En position OFF, la variable est false correspondant à l'état stop.
+ * En position ON, la variable est true correspondant à l'état start.
+ * A l'état stop l'exécution du programme est maintenu dans une boucle de saisie du setup().
+ * A l'état start l'exécution du programme transite dans la boucle loop().
  */
- 
+const int inPin_stsp = 11;    // SW2 connected to digital pin 10
+bool val_stsp = false;//Création de la variable booléenne start stop (stsp)
 //Création des tableaux (array) des gabarits de cuisson
 float Gabarit1[] = {30, 0.4, 0.275, 70, 25, 30, 2, 1, 4};
 float Gabarit2[] = {30, 0.4, 0.275, 72.5, 22.5, 28, 2.5, 1.25, 4};
@@ -35,8 +44,6 @@ float Gabarit9[] = {30, 0.4, 0.685, 90, 5, 12, 6, 3, 4};
 int p; float G; float I; float Tu; float Tm; int Tau; float Vc; float Ac; int ta;
 //Affectation de la variable led à l'entrée 13
 int led = 13;
-//Création de la variable booléenne start stop (stsp)
-bool stsp = true;
 //Création de la variable booléenne val_saisie
 bool val_saisie = true;
 //Création de la variable Durée de Cuisson (DC) et affectation d'une valeur par défaut
@@ -48,13 +55,13 @@ int flag=1;
 //Création du paramètre i correspondant au nombre de chiffres à saisir pour définir la durée de cuisson
 int i=3;
 int reponse;
+//3b - IHM clavier
+//4b - IHM clavier
 void setup() {                
-  // initialize the digital pin as an output.
-  pinMode(led, OUTPUT);
   Serial.begin (9600);
-  delay(4000);
+  pinMode(inPin_stsp, INPUT);//sets the digital pin 11 as input
+  delay(6000);
   Serial.println ("Systeme de Cuisson Assistee par Ordinateur (SCAO) ");
-
   //Saisie des paramètres de cuisson
   //Saisie de la duree de cuisson DC
   byte a; byte b; byte c; byte x=(15); 
@@ -108,12 +115,14 @@ void setup() {
   }//switch
   Serial.print ("N° de gabarit choisi : ");  Serial.print(Gabarit); Serial.println(" correspondant aux paramètres (p, G, I, Tu, Tm, Tau, Vc, Ac, ta) : ");
   Serial.print (p); Serial.print (" - "); Serial.print (G); Serial.print (" - "); Serial.print (I); Serial.print (" - "); Serial.print (Tu); Serial.print (" - "); Serial.print (Tm); Serial.print (" - "); Serial.print (Tau); Serial.print (" - "); Serial.print (Vc); Serial.print (" - "); Serial.print (Ac); Serial.print (" - "); Serial.println (ta);
-  while (!stsp) {Serial.println ("attente"); delay(1000);}
+  while (!val_stsp) {val_stsp = digitalRead(inPin_stsp); Serial.print(val_stsp); Serial.println (" - attente de la cde start"); delay(1000);}
   }//setup
 
-// the loop routine runs over and over again forever:
+//5b - IHM clavier
 void loop() {
-  Serial.println("Cuisson en cours");
+  val_stsp = digitalRead(inPin_stsp);//read the input pin
+  Serial.print(val_stsp);
+  Serial.println(" - Cuisson en cours");
   digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);               // wait for a second
   digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
