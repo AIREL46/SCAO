@@ -162,10 +162,6 @@ float Gabarit8[] = {30, 0.4, 0.685, 87.5, 7.5, 14, 5.5, 2.75, 4};
 float Gabarit9[] = {30, 0.4, 0.685, 90, 5, 12, 6, 3, 4};
 //Création des variables "paramètres de cuisson"
 int p; float G; float I; float Tu; float Tm; int Tau; float Vc; float Ac; int ta;
-//Affectation de la variable led à l'entrée 13
-int led = 13;
-//Création de la variable booléenne val_saisie
-bool val_saisie = true;
 //Création de la variable Durée de Cuisson (DC) et affectation d'une valeur par défaut
 int DC = 100;
 //Création de la variable Gabarit et affectation d'une valeur par défaut
@@ -288,7 +284,70 @@ SnoozeBlock config_teensy32(usb, timer);
  * 3a - IHM wifi
  * 
  * 3b - IHM clavier
- * 
+ */
+ void saisie(){Serial.println ("Systeme de Cuisson Assistee par Ordinateur (SCAO) ");
+  //Saisie des paramètres de cuisson
+  //Saisie de la duree de cuisson DC
+  byte a; byte b; byte c; byte x=(15); 
+  Serial.println ("Entrer DC (mn) sur 3 chiffres");
+  while (i > 0) {
+  switch (i) {
+  case 3:
+  if (Serial.available () > 0)  {a=Serial.read(); a=a&x; i=i-1; break;}
+  case 2:
+  if (Serial.available () > 0)  {b=Serial.read(); b=b&x; i=i-1; break;}
+  case 1:
+  if (Serial.available () > 0)  {c=Serial.read(); c=c&x; DC=(100*a+10*b+c); Serial.print (DC); Serial.println (" mn "); i=i-1; break;}
+  default: {delay(1000);} 
+    }//Switch
+  } //While DC
+
+  //Saisie du gabarit
+  Serial.println ("Par defaut le gabarit est 5, voulez-vous le changer o/n ?");
+   flag=1;
+   while (flag>0) {if (Serial.available () > 0) {
+   reponse=Serial.read();
+   if (reponse==111 | reponse==79) {
+   Serial.println ("Choisir le gabarit 1 -> 9 ");
+   while (flag>0) {if (Serial.available () > 0) {
+   reponse=Serial.read(); 
+   Gabarit=reponse&x; 
+   if (Gabarit > 0 & Gabarit <=9){flag=flag-1;}
+   delay (1000);
+ }//if serial.available b
+ }//while
+ }//if
+   if (reponse==110 | reponse==78) {flag=flag-1;}
+   delay (1000);
+ }//if Serial.available a
+ }//while
+ 
+ //Visualisation DC et N° de gabarit
+ Serial.print ("Duree de cuisson "), Serial.print (DC); Serial.println (" mn - ");
+  //Visualisation des parametres correspondants au N° du gabarit choisi
+  delay (1000);
+  switch (Gabarit) {
+  case 1: p=Gabarit1[0]; G=Gabarit1[1]; I=Gabarit1[2]; Tu=Gabarit1[3]; Tm=Gabarit1[4]; Tau=Gabarit1[5]; Vc=Gabarit1[6]; Ac=Gabarit1[7]; ta=Gabarit1[8];  break;
+  case 2: p=Gabarit2[0]; G=Gabarit2[1]; I=Gabarit2[2]; Tu=Gabarit2[3]; Tm=Gabarit2[4]; Tau=Gabarit2[5]; Vc=Gabarit2[6]; Ac=Gabarit2[7]; ta=Gabarit2[8];  break;
+  case 3: p=Gabarit3[0]; G=Gabarit3[1]; I=Gabarit3[2]; Tu=Gabarit3[3]; Tm=Gabarit3[4]; Tau=Gabarit3[5]; Vc=Gabarit3[6]; Ac=Gabarit3[7]; ta=Gabarit3[8];  break;
+  case 4: p=Gabarit4[0]; G=Gabarit4[1]; I=Gabarit4[2]; Tu=Gabarit4[3]; Tm=Gabarit4[4]; Tau=Gabarit4[5]; Vc=Gabarit4[6]; Ac=Gabarit4[7]; ta=Gabarit4[8];  break;
+  case 5: p=Gabarit5[0]; G=Gabarit5[1]; I=Gabarit5[2]; Tu=Gabarit5[3]; Tm=Gabarit5[4]; Tau=Gabarit5[5]; Vc=Gabarit5[6]; Ac=Gabarit5[7]; ta=Gabarit5[8];  break;
+  case 6: p=Gabarit6[0]; G=Gabarit6[1]; I=Gabarit6[2]; Tu=Gabarit6[3]; Tm=Gabarit6[4]; Tau=Gabarit6[5]; Vc=Gabarit6[6]; Ac=Gabarit6[7]; ta=Gabarit6[8];  break;
+  case 7: p=Gabarit7[0]; G=Gabarit7[1]; I=Gabarit7[2]; Tu=Gabarit7[3]; Tm=Gabarit7[4]; Tau=Gabarit7[5]; Vc=Gabarit7[6]; Ac=Gabarit7[7]; ta=Gabarit7[8];  break;
+  case 8: p=Gabarit8[0]; G=Gabarit8[1]; I=Gabarit8[2]; Tu=Gabarit8[3]; Tm=Gabarit8[4]; Tau=Gabarit8[5]; Vc=Gabarit8[6]; Ac=Gabarit8[7]; ta=Gabarit8[8];  break;
+  case 9: p=Gabarit9[0]; G=Gabarit9[1]; I=Gabarit9[2]; Tu=Gabarit9[3]; Tm=Gabarit9[4]; Tau=Gabarit9[5]; Vc=Gabarit9[6]; Ac=Gabarit9[7]; ta=Gabarit9[8];  break;
+  }//switch
+  Serial.print ("N° de gabarit choisi : ");  Serial.println(Gabarit); Serial.print("Ce gabarit correspond aux paramètres (p, G, I, Tu, Tm, Tau, Vc, Ac, ta) : ");
+  Serial.print ("{");Serial.print (p); Serial.print (", "); Serial.print (G); Serial.print (", "); Serial.print (I); Serial.print (", "); Serial.print (Tu); Serial.print (", "); Serial.print (Tm); Serial.print (", "); Serial.print (Tau); Serial.print (", "); Serial.print (Vc); Serial.print (", "); Serial.print (Ac); Serial.print (", "); Serial.print (ta);Serial.println ("}");
+  Serial.println ("Voulez-vous continuer ? taper O");
+  flag=1;
+  while (flag>0) {if (Serial.available() > 0)
+    {reponse=Serial.read(); if (reponse==111 | reponse==79){flag=flag-1;}//Si le caractère frappé est O ou o
+    
+    }
+  }
+  }
+ /**
  * 3c-1 - Fonction d'acquisition de la température via le 1er thermomètre digital DS18B20 (ds1).
  * Fonction de lecture de la température via un thermomètre digital DS18B20 câblé sur le 1er bus ds1.
  */
@@ -400,6 +459,20 @@ byte getT2(float *T2, byte reset_search) {
 }
 /**
  * 3d - Mesure des tensions et calcul du courant ibat
+ */
+  //fonction de changement d'échelle (fonction mathématique map() de l'arduino)
+  //La multiplication par 2.0038 compense la division par 2 (pont diviseur) et l'impédance de l'entrée du microcontrôleur pour les chiffres après la virgule.
+  void mesures(){
+  analogReadResolution(13);
+  Vusb=map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
+  Vbat_1=map (2.0038*analogRead(Vbat_demie_1), 0, MaxConv, 0, MaxVolt);
+  Vbat_2=map (2.0038*analogRead(Vbat_demie_2), 0, MaxConv, 0, MaxVolt);
+  ibat=Vbat_1 - Vbat_2;
+  V33=map (2.0038*analogRead(V33_demie), 0, MaxConv, 0, MaxVolt);
+  if (Vusb < 1000) {state_Vusb = false;}
+  if (Vusb > 4000) {state_Vusb = true;}
+  }
+ /** 
  * 3e - BITE
  * 3f - Tranmission
  * 3g - Horodatage & Chronomètre
@@ -483,65 +556,14 @@ void printDigits(int digits){
 void setup() {
   /* Initialisation du port série */
   Serial.begin(9600);
-  delay(10000);
-  Serial.println("N°;heure;date;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
+  delay(2000);
+  mesures();
   //4a - IHM wifi
   //4b - IHM clavier
   pinMode(inPin_stsp, INPUT);//sets the digital pin 11 as input
-  Serial.println ("Systeme de Cuisson Assistee par Ordinateur (SCAO) ");
-  //Saisie des paramètres de cuisson
-  //Saisie de la duree de cuisson DC
-  byte a; byte b; byte c; byte x=(15); 
-  Serial.println ("Entrer DC (mn) sur 3 chiffres");
-  while (i > 0) {
-  switch (i) {
-  case 3:
-  if (Serial.available () > 0)  {a=Serial.read(); a=a&x; i=i-1; break;}
-  case 2:
-  if (Serial.available () > 0)  {b=Serial.read(); b=b&x; i=i-1; break;}
-  case 1:
-  if (Serial.available () > 0)  {c=Serial.read(); c=c&x; DC=(100*a+10*b+c); Serial.print (DC); Serial.println (" mn "); i=i-1; break;}
-  default: {delay(1000);} 
-    }//Switch
-  } //While DC
-
-  //Saisie du gabarit
-  Serial.println ("Par defaut le gabarit est 5, voulez-vous le changer o/n ?");
-   flag=1;
-   while (flag>0) {if (Serial.available () > 0) {
-   reponse=Serial.read();
-   if (reponse==111 | reponse==79) {
-   Serial.println ("Choisir le gabarit 1 -> 9 ");
-   while (flag>0) {if (Serial.available () > 0) {
-   reponse=Serial.read(); 
-   Gabarit=reponse&x; 
-   if (Gabarit > 0 & Gabarit <=9){flag=flag-1;}
-   delay (1000);
- }//if serial.available b
- }//while
- }//if
-   if (reponse==110 | reponse==78) {flag=flag-1;}
-   delay (1000);
- }//if Serial.available a
- }//while
- 
- //Visualisation DC et N° de gabarit
- Serial.print ("Duree de cuisson "), Serial.print (DC); Serial.print (" mn - ");
-  //Visualisation des parametres correspondants au N° du gabarit choisi
-  delay (1000);
-  switch (Gabarit) {
-  case 1: p=Gabarit1[0]; G=Gabarit1[1]; I=Gabarit1[2]; Tu=Gabarit1[3]; Tm=Gabarit1[4]; Tau=Gabarit1[5]; Vc=Gabarit1[6]; Ac=Gabarit1[7]; ta=Gabarit1[8];  break;
-  case 2: p=Gabarit2[0]; G=Gabarit2[1]; I=Gabarit2[2]; Tu=Gabarit2[3]; Tm=Gabarit2[4]; Tau=Gabarit2[5]; Vc=Gabarit2[6]; Ac=Gabarit2[7]; ta=Gabarit2[8];  break;
-  case 3: p=Gabarit3[0]; G=Gabarit3[1]; I=Gabarit3[2]; Tu=Gabarit3[3]; Tm=Gabarit3[4]; Tau=Gabarit3[5]; Vc=Gabarit3[6]; Ac=Gabarit3[7]; ta=Gabarit3[8];  break;
-  case 4: p=Gabarit4[0]; G=Gabarit4[1]; I=Gabarit4[2]; Tu=Gabarit4[3]; Tm=Gabarit4[4]; Tau=Gabarit4[5]; Vc=Gabarit4[6]; Ac=Gabarit4[7]; ta=Gabarit4[8];  break;
-  case 5: p=Gabarit5[0]; G=Gabarit5[1]; I=Gabarit5[2]; Tu=Gabarit5[3]; Tm=Gabarit5[4]; Tau=Gabarit5[5]; Vc=Gabarit5[6]; Ac=Gabarit5[7]; ta=Gabarit5[8];  break;
-  case 6: p=Gabarit6[0]; G=Gabarit6[1]; I=Gabarit6[2]; Tu=Gabarit6[3]; Tm=Gabarit6[4]; Tau=Gabarit6[5]; Vc=Gabarit6[6]; Ac=Gabarit6[7]; ta=Gabarit6[8];  break;
-  case 7: p=Gabarit7[0]; G=Gabarit7[1]; I=Gabarit7[2]; Tu=Gabarit7[3]; Tm=Gabarit7[4]; Tau=Gabarit7[5]; Vc=Gabarit7[6]; Ac=Gabarit7[7]; ta=Gabarit7[8];  break;
-  case 8: p=Gabarit8[0]; G=Gabarit8[1]; I=Gabarit8[2]; Tu=Gabarit8[3]; Tm=Gabarit8[4]; Tau=Gabarit8[5]; Vc=Gabarit8[6]; Ac=Gabarit8[7]; ta=Gabarit8[8];  break;
-  case 9: p=Gabarit9[0]; G=Gabarit9[1]; I=Gabarit9[2]; Tu=Gabarit9[3]; Tm=Gabarit9[4]; Tau=Gabarit9[5]; Vc=Gabarit9[6]; Ac=Gabarit9[7]; ta=Gabarit9[8];  break;
-  }//switch
-  Serial.print ("N° de gabarit choisi : ");  Serial.print(Gabarit); Serial.println(" correspondant aux paramètres (p, G, I, Tu, Tm, Tau, Vc, Ac, ta) : ");
-  Serial.print (p); Serial.print (" - "); Serial.print (G); Serial.print (" - "); Serial.print (I); Serial.print (" - "); Serial.print (Tu); Serial.print (" - "); Serial.print (Tm); Serial.print (" - "); Serial.print (Tau); Serial.print (" - "); Serial.print (Vc); Serial.print (" - "); Serial.print (Ac); Serial.print (" - "); Serial.println (ta);
+  if (state_Vusb) {saisie();}
+  //char recu;
+  //while (Serial.available() > 0) {recu = Serial.read(); Serial.print (recu); break;}
   while (!val_stsp) {val_stsp = digitalRead(inPin_stsp); Serial.print(val_stsp); Serial.println (" - attente de la cde start"); delay(1000);}
 
   //4c - Acquisition des températures T1 et T2
@@ -571,7 +593,8 @@ void setup() {
   //4h - Bilan énergétique de la batterie
   //4i - calcul
   //4j - Visualisation du contenu des échantillons
-    
+  Serial.println ("Cuisson en cours - chaque échantillon contient les champs suivants :");
+  Serial.println("N°;heure;date;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");  
  //4k - Mode sleep
   pinMode(led_pin_b, OUTPUT);  // sets the digital pin 19 as output
   pinMode(inPin_sleep, INPUT);    // sets the digital pin 10 as input
@@ -588,8 +611,7 @@ void loop() {
   //5a - IHM wifi
   
   //5b - IHM clavier
-  if (state_Vusb) {Serial.print("Cuisson en cours - ");}
-  
+    
   //5c - Acquisition des températures T1 et T2
   //float T1;
   /* Lit la température T1 */
@@ -605,21 +627,8 @@ void loop() {
   }
  
   //5d - Mesure des tensions et calcul du courant ibat
-  //fonction de changement d'échelle (fonction mathématique map() de l'arduino)
-  //La multiplication par 2.0038 compense la division par 2 (pont diviseur) et l'impédance de l'entrée du microcontrôleur pour les chiffres après la virgule.
-  Vusb=map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
-  Vbat_1=map (2.0038*analogRead(Vbat_demie_1), 0, MaxConv, 0, MaxVolt);
-  Vbat_2=map (2.0038*analogRead(Vbat_demie_2), 0, MaxConv, 0, MaxVolt);
-  ibat=Vbat_1 - Vbat_2;
-  V33=map (2.0038*analogRead(V33_demie), 0, MaxConv, 0, MaxVolt);
-  if (Vusb < 1000) {state_Vusb = false;}
-  if (Vusb > 4000) {state_Vusb = true;}
-  //Serial.println(state_Vusb);
-  //digitalWrite(led_pin_j, HIGH);
-  //delay(10000);
-  //digitalWrite(led_pin_j, LOW);
-  //delay(10000);
-  
+ mesures();
+      
   //5e - BITE
   float tmax=25;
   if (T2 >= tmax){digitalWrite(led_pin_r, HIGH);} else {digitalWrite(led_pin_r, LOW);}
