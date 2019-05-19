@@ -217,9 +217,19 @@ const int MaxVolt = 3272; //Valeur de la tension correspondante à la valeur max
 bool state_Vusb = false;
 /**
  * 2e - Built In Test Equipment (BITE)
- * 2f - Transmission
+ *Les résultats du BITE sont visalisés par 3 leds :
+verte : l'allumage témoigne d'un bon fonctionnement
+        l'extinction peut être envisagée en mode sleep
+jaune : allumée quand l'émission commence
+        éteinte quand l'émission s'arrète
+rouge : l'allumage témoigne d'une ou plusieurs anomalies
+**/
+const int led_pin_r = 13;//Led rouge
+const int led_pin_j = 14;//Led jaune
+const int led_pin_v = 15;//Led verte
+ /** 2f - Transmission
  * Chargement de la librairie VirtualWire - Gestion de l'émetteur 433 MHZ
- */
+ **/
 #include <VirtualWire.h>
 const int transmit_pin = 18;//Pin de sortie de l'émetteur
 byte count = 0;//Initialisation du numéro du message 
@@ -246,16 +256,6 @@ unsigned long Ec=0; //Energie électrique consommée cumulée
  */
 /**
  * 2j - Visualisation du contenu des échantillons
- *  Les résultats du BITE sont visalisés par 3 leds :
-verte : l'allumage témoigne d'un bon fonctionnement
-        l'extinction peut être envisagée en mode sleep
-jaune : allumée quand l'émission commence
-        éteinte quand l'émission s'arrète
-rouge : l'allumage témoigne d'une ou plusieurs anomalies
-**/
-const int led_pin_v = 13;//Led verte
-const int led_pin_j = 14;//Led jaune
-const int led_pin_r = 15;//Led rouge
 /**
  * 2k Le mode sleep est commandé par un switch ON/OFF SW3, concrétisé par une variable booléenne et visualisé par une led violette,
 en position OFF, la variable est false et la led est éteinte.
@@ -281,6 +281,28 @@ SnoozeBlock config_teensy32(usb, timer);
 
 /**
  * 3 - Fonctions spécifiques
+ * Fonctions spécifiques communes
+ * Wait for serial monitor
+ * Clignotement rapide dans l'attente de l'établissement de la liaison série
+ * L'interprétation de la condition : 
+ * La liaison est établie -> le code n'est pas exécuté
+ * La liaison n'est pas établie -> le code est exécuté pour une durée inférieure à la valeur indiquée par la variable time
+ */
+ void wait_s_m(){
+    elapsedMillis time = 0;
+    while (!Serial && time < 1000) {
+        mesures();//Lance la fonction mesures() pour connaitre l'état de Vusb (state_Vusb)
+        if (!state_Vusb) {digitalWriteFast(led_pin_r, HIGH);}
+        if (state_Vusb) {digitalWriteFast(led_pin_v, HIGH);}
+        delay(30);
+        if (!state_Vusb) {digitalWriteFast(led_pin_r, LOW);}
+        if (state_Vusb) {digitalWriteFast(led_pin_v, LOW);}
+        delay(30);
+    }
+    // normal delay for Arduino Serial Monitor
+    delay(1200);
+  }
+ /**
  * 3a - IHM wifi
  * 
  * 3b - IHM clavier
@@ -474,9 +496,11 @@ byte getT2(float *T2, byte reset_search) {
   }
  /** 
  * 3e - BITE
- * 3f - Tranmission
+  **/
+  
+ /** 3f - Tranmission
  * 3g - Horodatage & Chronomètre
- */
+ **/
  void digitalClockDisplay() {
   // digital clock display of the time
   Serial.print(hour());
@@ -558,32 +582,55 @@ void setup() {
   Serial.begin(9600);
   delay(2000);
   mesures();
+   pinMode(led_pin_v, OUTPUT);
+  pinMode(led_pin_j, OUTPUT);
+  pinMode(led_pin_r, OUTPUT);
+  pinMode(led_pin_b, OUTPUT);  // sets the digital pin 19 as output
+  //Test des leds (mise sous tension)
+  digitalWrite(led_pin_v, HIGH);
+  digitalWrite(led_pin_j, HIGH);
+  digitalWrite(led_pin_r, HIGH);
+  digitalWrite(led_pin_b, HIGH);
+  
   //4a - IHM wifi
   //4b - IHM clavier
   pinMode(inPin_stsp, INPUT);//sets the digital pin 11 as input
   if (state_Vusb) {saisie();}
   //char recu;
   //while (Serial.available() > 0) {recu = Serial.read(); Serial.print (recu); break;}
-  while (!val_stsp) {val_stsp = digitalRead(inPin_stsp); Serial.print(val_stsp); Serial.println (" - attente de la cde start"); delay(1000);}
+  while (!val_stsp) {
+    val_stsp = digitalRead(inPin_stsp);
+    Serial.print(val_stsp);
+    Serial.println (" - attente de la cde start");
+    digitalWrite(led_pin_v, HIGH);
+    digitalWrite(led_pin_j, HIGH);
+    digitalWrite(led_pin_r, HIGH);
+    digitalWrite(led_pin_b, HIGH);
+    delay(1000);
+    digitalWrite(led_pin_v, LOW);
+    digitalWrite(led_pin_j, LOW);
+    digitalWrite(led_pin_r, LOW);
+    digitalWrite(led_pin_b, LOW);
+    delay(1000);
+    }
 
   //4c - Acquisition des températures T1 et T2
   //4d - Mesure des tensions et calcul du courant ibat
   analogReadResolution(13);
   
   //4e - BITE
-  pinMode(led_pin_v, OUTPUT);
-  pinMode(led_pin_j, OUTPUT);
-  pinMode(led_pin_r, OUTPUT);
-  
+   
   //4f - Transmission
     // Initialise the IO and ISR
   vw_set_tx_pin(transmit_pin);
   vw_setup(2000);   // Bits per sec
+  
   //4g - Horodatage & Chronomètre
   //setTime(16, 8, 00, 23, 02, 2019);
   // set the Time library to use Teensy 3.0's RTC to keep time
   setSyncProvider(getTeensy3Time); //Configure Time to automatically called the getTimeFunction() regularly. This function should obtain the time from another service and return a time_t number, or zero if the time is not known. 
-  while (!Serial);  // Wait for Arduino Serial Monitor to open
+  wait_s_m();//Wait for serial monitor 
+  //while (!Serial);  // Wait for Arduino Serial Monitor to open
   delay(100);
   if (timeStatus()!= timeSet) {
     Serial.println("Unable to sync with the RTC");
@@ -596,10 +643,10 @@ void setup() {
   Serial.println ("Cuisson en cours - chaque échantillon contient les champs suivants :");
   Serial.println("N°;heure;date;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");  
  //4k - Mode sleep
-  pinMode(led_pin_b, OUTPUT);  // sets the digital pin 19 as output
   pinMode(inPin_sleep, INPUT);    // sets the digital pin 10 as input
   digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
-  while (!Serial);
+  wait_s_m();//Wait for serial monitor 
+  //while (!Serial);
     delay(100);
     digitalWrite(led_pin_r, LOW);
     //Serial.println("Starting...");
@@ -692,19 +739,8 @@ void loop() {
   delay(200);
   if (val_sleep) {Snooze.deepSleep( config_teensy32 );}// return module that woke processor
   if (!val_sleep) {delay(ts/1000);}
-  Chrono.restart();  // restart the Chrono 
-  // wait for serial monitor
-    elapsedMillis time = 0;
-    while (!Serial && time < 1000) {
-        Serial.write(0x00);// print out a bunch of NULLS to serial monitor
-        digitalWriteFast(led_pin_v, HIGH);
-        delay(30);
-        digitalWriteFast(led_pin_v, LOW);
-        delay(30);
-    }
-    // normal delay for Arduino Serial Monitor
-    delay(200);
-    delay(1000);
-    digitalWrite(led_pin_b, LOW);  // sets the blue LED to LOW
+  Chrono.restart();  // restart the Chrono
+  wait_s_m();//Wait for serial monitor 
+  digitalWrite(led_pin_b, LOW);  // sets the blue LED to LOW
 }
   
