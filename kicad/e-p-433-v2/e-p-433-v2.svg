@@ -8,6 +8,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="29.122374cm"
@@ -1433,7 +1434,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9525"
-     inkscape:cx="312.9155"
+     inkscape:cx="844.19543"
      inkscape:cy="382.01997"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
@@ -1477,7 +1478,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2385,8 +2386,8 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-728.7182"
-       y="922.33234"
+       x="-750.37177"
+       y="923.31659"
        id="text13145-5-9-0-3"
        transform="rotate(-90)"
        inkscape:export-filename="/home/airel/SCAO/kicad/e-p-433/e-p-433-v2.png"
@@ -2394,23 +2395,23 @@
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
          id="tspan13147-09-6-9-8"
-         x="-728.7182"
-         y="922.33234"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">3XLEDS</tspan></text>
+         x="-750.37177"
+         y="923.31659"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">4XLEDS</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="791.4082"
-       y="650.34003"
+       x="778.61292"
+       y="648.37152"
        id="text13145-5-9-0-3-3"
        inkscape:export-filename="/home/airel/SCAO/kicad/e-p-433/e-p-433-v2.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
          id="tspan13147-09-6-9-8-7"
-         x="791.4082"
-         y="650.34003"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">3XR</tspan></text>
+         x="778.61292"
+         y="648.37152"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">4XR=4.7K</tspan></text>
     <path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:1.77165353;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path18696"
@@ -2818,20 +2819,6 @@
          x="356.01471"
          id="tspan19327"
          sodipodi:role="line">SW2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="650.27136"
-       y="976.36896"
-       id="text8941"
-       inkscape:export-filename="/home/airel/SCAO/kicad/e-p-433/e-p-433-v2.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan8943"
-         x="650.27136"
-         y="976.36896"
-         style="font-size:15px;line-height:1.25;font-family:sans-serif">inkscape SCAO/kicad/e-p-433-v2/e-p-433-v2.svg</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:14.17322826;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 436.63017,788.38043 h 35.59178"
@@ -2961,7 +2948,7 @@
            height="46.194225"
            x="413.64828"
            y="52.493439" /></flowRegion><flowPara
-         id="flowPara442"></flowPara></flowRoot>    <path
+         id="flowPara442" /></flowRoot>    <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 421.90406,478.40257 52.9067,-25.97238"
        id="path16167-5"
@@ -3119,5 +3106,97 @@
        inkscape:export-filename="/home/airel/SCAO/kicad/e-p-433/e-p-433-v2.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.93749994"
+       x="-953.19934"
+       y="987.55042"
+       id="text5539"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan5537"
+         x="-953.19934"
+         y="998.60999"
+         style="stroke-width:0.93749994" /><tspan
+         sodipodi:role="line"
+         x="-953.19934"
+         y="1014.235"
+         style="stroke-width:0.93749994"
+         id="tspan5541">https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433-v2/e-p-433-v2.svg</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.93749994"
+       x="874.25"
+       y="953.95966"
+       id="text5545"><tspan
+         sodipodi:role="line"
+         id="tspan5543"
+         x="874.25"
+         y="953.95966"
+         style="stroke-width:0.93749994">22/05/2019</tspan><tspan
+         sodipodi:role="line"
+         x="874.25"
+         y="975.83466"
+         style="stroke-width:0.93749994"
+         id="tspan5549">Régis LERUSTE</tspan><tspan
+         sodipodi:role="line"
+         x="874.25"
+         y="997.70966"
+         style="stroke-width:0.93749994"
+         id="tspan5547" /></text>
+    <image
+       y="890.71191"
+       x="875.87366"
+       id="image5613"
+       xlink:href="data:image/png;base64,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
+"
+       preserveAspectRatio="none"
+       height="41.849998"
+       width="118.8" />
   </g>
 </svg>
