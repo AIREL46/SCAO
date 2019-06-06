@@ -1,4 +1,4 @@
-update=lun. 08 avril 2019 19:55:09 CEST
+update=jeu. 06 juin 2019 20:35:29 CEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -31,7 +31,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=./
+PlotDirectoryName=/home/airel/SCAO/kicad/e-p-433-v2
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
