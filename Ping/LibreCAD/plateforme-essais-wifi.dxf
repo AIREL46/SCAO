@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-71.57296800484247
+104.5169319360056
  22
-45.73893813327211
+83.28324373230245
  13
 0
  23
@@ -1149,7 +1149,7 @@ AcDbViewportTableRecord
  37
 0
  40
-215.989430073785
+360.972699462954
  41
 1.002614379084967
  42
@@ -2285,7 +2285,7 @@ AcDbLayerTableRecord
   2
 batterie
  70
-    1
+    0
  62
     1
   6
@@ -2373,7 +2373,7 @@ AcDbLayerTableRecord
   2
 contour
  70
-    1
+    0
  62
     7
   6
@@ -2483,7 +2483,7 @@ AcDbLayerTableRecord
   2
 micro
  70
-    1
+    0
  62
     3
   6
