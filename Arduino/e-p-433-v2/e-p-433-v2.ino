@@ -176,6 +176,7 @@ int reponse;
  * Code pour lire un thermomètre digital DS18B20 sur un bus 1-Wire.
  */
  float T1;
+ float T1a;
  float T2;
 /* Dépendance pour le bus 1-Wire */
 #include <OneWire.h> //Chargement de la librairie OneWire.h
@@ -254,9 +255,15 @@ unsigned long Ec=0; //Energie électrique consommée cumulée
 /**
  * 2i Calcul
  */
+#include <math.h>
+float vm=0;//Initialisation de la vitesse mesurée (vm) exprimée en °C/mn
+float vma=0;//Initialisation de la vitesse mesurée antérieure (vma) exprimée en °C/mn
+float am=0;//Initialisation de l'accélération mesurée (am) exprimée en °C/mn/mn
+float ama=0;//Initialisation de l'accélération mesurée antérieure (ama) exprimée en °C/mn/mn
+
 /**
  * 2j - Visualisation du contenu des échantillons
-/**
+/*
  * 2k Le mode sleep est commandé par un switch ON/OFF SW3, concrétisé par une variable booléenne et visualisé par une led violette,
 en position OFF, la variable est false et la led est éteinte.
 En position ON, la variable est true et la led est alluméee.
@@ -722,6 +729,14 @@ void loop() {
  Ec = Ec + Etot;  
 
   //5i - Calcul
+  vm=(T1-T1a)/0.5;//calcul de la vitesse
+  am=(vm-vma)/0.5;
+  Serial.print("Vitesse = ");
+  Serial.print(vm);
+  Serial.print(" Accélération = ");
+  Serial.println(am);
+  T1a=T1;//La température mesurée devient la température antérieure
+  vma=vm;//L'accélération mesurée devient l'accélération antérieure
   //5j - Visualisation du contenu des échantillons
  //Appel de la fonction visu() si le Teensy 3.2 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
