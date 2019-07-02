@@ -29,10 +29,12 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *L'environnement de développement Arduino IDE est constitué du microcontrôleur Teensy 3.2 relié à l'ordinateur à l'aide d'un câble USB. Ce câble permet l'établissement d'une liaison série. De l'ordinateur vers le microcontrôleur pour téléverser le firmware. Du microcontrôleur vers l'ordinateur pour l'envoi de messages à l'aide du port /dev/ttyACM0, soit pour les afficher sur la console, soit pour les mettre à disposition du programme BASH capture.sh qui édite un fichier "journal".   
 *Le présent code source est publié sur Github sous licence creative commons CC-BY https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-433-v2/e-p-433-v2.ino
 *L'objet du firmware est l'administration du microcontrôleur et de ses composants périphériques câblés selon le schéma électrique https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433-v2/e-p-433-v2-1.png
-*Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. Il est organisé selon 2 fonctions principales : 
-*- la capture des températures délivrées par 2 thermomètres digitaux, le premier concerne la température sur le couvercle de la casserole, le second la température de la batterie, l'une des fonctions secondaires qui assure la sécurité de la e-poignée. .
-*- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
-*Ses fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
+*Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. 
+*Il est organisé selon 3 fonctions principales qui se répètent périodiquement: 
+*- la capture des températures délivrées par 2 thermomètres digitaux, le premier concerne la température sur le couvercle de la casserole, le second la température de la batterie, l'une des fonctions secondaires qui assure la sécurité de la e-poignée.
+*- la modélisation du flux thermique qui se finalise par le calcul de la durée itérative de chauffe (Dich)
+*- la transmission de cette Dich au e-rupteur (e-r-433).
+*Ses fonctions principales sont complétées de fonctions secondaires (voir ci-dessous.
 *Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des informaticiens. 
 *Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
  *
@@ -101,9 +103,9 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * 1h Bilan énergétique de la batterie
  * L'objet est l'établissement du bilan énergétique de la batterie
  * Cette fonction réalise les calculs de l'énegie électrique consommée et le ratio par rapport à la capacité nominale de 400 mAh
- * 1i Calcul
+ * 1i Modélisation du flux thermique 
  * 1j - Visualisation du contenu des échantillons
- *  * L'objet est la visualisation du contenu des échantillons.
+ * L'objet est la visualisation du contenu des échantillons.
  * Cette fonction utilise la liaison série (câble USB) entre le microcontrôleur et l'ordinateur.
  * Elle se concrétise par une console sur l'écran de l'ordinateur.
  * 1k - Mode Sleep
@@ -176,6 +178,7 @@ int reponse;
  * Code pour lire un thermomètre digital DS18B20 sur un bus 1-Wire.
  */
  float T1;
+ float T1a;
  float T2;
 /* Dépendance pour le bus 1-Wire */
 #include <OneWire.h> //Chargement de la librairie OneWire.h
@@ -252,11 +255,17 @@ unsigned long Et=0; //Energie électrique consommée pendant le travail
 unsigned long Es=0; //Energie électrique consommée pendant le sommeil (sleep)
 unsigned long Ec=0; //Energie électrique consommée cumulée
 /**
- * 2i Calcul
+ * 2i Modélisation du flux thermique
  */
+#include <math.h>
+float vm=0;//Initialisation de la vitesse mesurée (vm) exprimée en °C/mn
+float vma=0;//Initialisation de la vitesse mesurée antérieure (vma) exprimée en °C/mn
+float am=0;//Initialisation de l'accélération mesurée (am) exprimée en °C/mn/mn
+float ama=0;//Initialisation de l'accélération mesurée antérieure (ama) exprimée en °C/mn/mn
+
 /**
  * 2j - Visualisation du contenu des échantillons
-/**
+/*
  * 2k Le mode sleep est commandé par un switch ON/OFF SW3, concrétisé par une variable booléenne et visualisé par une led violette,
 en position OFF, la variable est false et la led est éteinte.
 En position ON, la variable est true et la led est alluméee.
@@ -548,7 +557,7 @@ void printDigits(int digits){
 
  /**
  * 3h - Bilan énergétique de la batterie
- * 3i - Calcul
+ * 3i Modélisation du flux thermique
  * 3j - Visualisation du contenu des échantillons
  */
   void visu(){
@@ -638,7 +647,7 @@ void setup() {
     Serial.println("RTC has set the system time");
   }
   //4h - Bilan énergétique de la batterie
-  //4i - calcul
+  //4i Modélisation du flux thermique
   //4j - Visualisation du contenu des échantillons
   Serial.println ("Cuisson en cours - chaque échantillon contient les champs suivants :");
   Serial.println("N°;heure;date;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");  
@@ -721,7 +730,15 @@ void loop() {
  Etot = Et + Es;
  Ec = Ec + Etot;  
 
-  //5i - Calcul
+  //5i Modélisation du flux thermique
+  vm=(T1-T1a)/0.5;//calcul de la vitesse
+  am=(vm-vma)/0.5;
+  Serial.print("Vitesse = ");
+  Serial.print(vm);
+  Serial.print(" Accélération = ");
+  Serial.println(am);
+  T1a=T1;//La température mesurée devient la température antérieure
+  vma=vm;//L'accélération mesurée devient l'accélération antérieure
   //5j - Visualisation du contenu des échantillons
  //Appel de la fonction visu() si le Teensy 3.2 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
