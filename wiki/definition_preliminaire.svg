@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9525"
-     inkscape:cx="561.25984"
-     inkscape:cy="396.85039"
+     inkscape:cx="317.74242"
+     inkscape:cy="390.07629"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -416,14 +416,102 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">t(mn)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="43.333332"
-       y="191.1111"
+       style="font-style:normal;font-weight:normal;font-size:7.05555534px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="75.873611"
+       y="179.72221"
        id="text1536"><tspan
          sodipodi:role="line"
          id="tspan1534"
-         x="43.333332"
-         y="191.1111"
+         x="75.873611"
+         y="179.72221"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Définitions préliminaires du SCAO</tspan></text>
+    <image
+       y="173.10861"
+       x="259.46945"
+       id="image1786"
+       xlink:href="data:image/png;base64,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
+"
+       style="image-rendering:optimizeQuality"
+       preserveAspectRatio="none"
+       height="8.2020836"
+       width="23.283333" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93888903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="254.95897"
+       y="186.01541"
+       id="text1791"><tspan
+         sodipodi:role="line"
+         id="tspan1789"
+         x="254.95897"
+         y="186.01541"
+         style="stroke-width:0.26458332">06/07/2019</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93888903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="250.27779"
+       y="190.92635"
+       id="text1823"><tspan
+         sodipodi:role="line"
+         id="tspan1821"
+         x="250.27779"
+         y="190.92635"
+         style="stroke-width:0.26458332">Régis Leruste</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93888903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="90.277779"
+       y="196.66667"
+       id="text1827"><tspan
+         sodipodi:role="line"
+         id="tspan1825"
+         x="90.277779"
+         y="196.66667"
+         style="stroke-width:0.26458332">https://github.com/AIREL46/SCAO/blob/master/wiki/definition_preliminaire.png</tspan></text>
   </g>
 </svg>
