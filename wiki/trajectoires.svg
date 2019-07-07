@@ -16,7 +16,10 @@
    version="1.1"
    id="svg1088"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="trajectoires.svg">
+   sodipodi:docname="trajectoires.svg"
+   inkscape:export-filename="/home/airel/SCAO/wiki/trajectoires.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
   <defs
      id="defs1082" />
   <sodipodi:namedview
@@ -27,7 +30,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9525"
-     inkscape:cx="523.84039"
+     inkscape:cx="834.57062"
      inkscape:cy="396.85039"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
@@ -1846,5 +1849,16 @@ T48gCELbTy3xS0Uikej/Az7UCLoVn+3WAAAAAElFTkSuQmCC
          x="246.59785"
          y="191.88147"
          style="stroke-width:0.26458332">Régis Leruste</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93888903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="113.05556"
+       y="196.66667"
+       id="text1848"><tspan
+         sodipodi:role="line"
+         id="tspan1846"
+         x="113.05556"
+         y="196.66667"
+         style="stroke-width:0.26458332">https://github.com/AIREL46/SCAO/blob/master/wiki/trajectoires.png</tspan></text>
   </g>
 </svg>
