@@ -1,5 +1,10 @@
 /**
- * e-p-433-v2
+ * e-p-wifi.ino
+ * Ce programme e-p-wifi.ino résulte d'un portage informatique dû au remplacement du micrôcontrôleur Teensy 3.2 
+ * par le micrôcontrôleur Arduino MKR wifi 1010 https://store.arduino.cc/mkr-wifi-1010. 
+ * Ce portage permet d'atteindre les objectifs suivants :
+ * - ce nouveau microcontrôleur introduit une nouvelle fonction "IHM wifi" 
+ *   qui offre à l'utilisateur la possibilité de piloter l'application SCAO du prototype n°3 à partir d'un smartphone
  * Ce programme est structuré en paragraphes :
  * 1 - Introduction
  * 2 - Initialisation des paramètres
@@ -24,9 +29,14 @@
  *Le prototypage (prototype N°3) de la e-poignée (433MHZ en version 2)
  *est réalisé par Régis LERUSTE http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS
  *et Olivier MARAIS http://fablabo.net/wiki/Cahier_de_recettes#Les_recettes_d.27Olivier
-*ce programe e-p-433-v2.ino constitue le code source qui permet l'édition, 
+*ce programe e-p-wifi.ino constitue le code source qui permet l'édition, 
 la compilation et le téléversement du firmware à destination du micro-contrôleur.
-*L'environnement de développement Arduino IDE est constitué du microcontrôleur Teensy 3.2 relié à l'ordinateur à l'aide d'un câble USB. Ce câble permet l'établissement d'une liaison série. De l'ordinateur vers le microcontrôleur pour téléverser le firmware. Du microcontrôleur vers l'ordinateur pour l'envoi de messages à l'aide du port /dev/ttyACM0, soit pour les afficher sur la console, soit pour les mettre à disposition du programme BASH capture.sh qui édite un fichier "journal".   
+*L'environnement de développement Arduino IDE est constitué du microcontrôleur MKR wifi 1010 relié à l'ordinateur 
+*à l'aide d'un câble USB. Ce câble permet l'établissement d'une liaison série. 
+*De l'ordinateur vers le microcontrôleur pour téléverser le firmware. 
+*Du microcontrôleur vers l'ordinateur pour l'envoi de messages à l'aide du port /dev/ttyACM0, 
+*soit pour les afficher sur la console, 
+*soit pour les mettre à disposition du programme BASH capture.sh qui édite un fichier "journal".   
 *Le présent code source est publié sur Github sous licence creative commons CC-BY https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-433-v2/e-p-433-v2.ino
 *L'objet du firmware est l'administration du microcontrôleur et de ses composants périphériques câblés selon le schéma électrique https://raw.githubusercontent.com/AIREL46/SCAO/master/kicad/e-p-433-v2/e-p-433-v2-1.png
 *Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. Il est organisé selon 2 fonctions principales : 
@@ -239,7 +249,7 @@ const int led_pin_v = 7;//Led verte
  * Chargement de la librairie VirtualWire - Gestion de l'émetteur 433 MHZ
  **/
  
-#include <VirtualWire.h>
+//#include <VirtualWire.h>
 const int transmit_pin = 4;//Pin de sortie de l'émetteur
 byte count = 0;//Initialisation du numéro du message 
 
@@ -247,15 +257,13 @@ byte count = 0;//Initialisation du numéro du message
 /**
  * 2g - Horodatage & Chronomètre
  * Horodatage 
- */
-
- /*
-#include "TimeLib.h" //Include TimeLib.h library
+ **/
+//#include "TimeLib.h" //Include TimeLib.h library
 /**
  * Chronomètre 
   */
-#include <Chrono.h> //Include Chrono.h Library
-Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
+//#include <Chrono.h> //Include Chrono.h Library
+//Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
 /**
  * 2h - Bilan énergétique de la batterie
  * Chargement de la librairie
@@ -282,7 +290,7 @@ bool val_sleep = false;//variable to store the read value
  * Chargement de la librairie
  */
 #include <ArduinoLowPower.h>
-#include <TimeLib.h>
+//#include <TimeLib.h>
 
 /*#include <Snooze.h>
 // Load timer and USBSerial drivers
@@ -643,8 +651,8 @@ void setup() {
     // Initialise the IO and ISR
 
     
-  vw_set_tx_pin(transmit_pin);
-  vw_setup(2000);   // Bits per sec
+  //vw_set_tx_pin(transmit_pin);
+  //vw_setup(2000);   // Bits per sec
 
 
   /*
@@ -678,7 +686,7 @@ void setup() {
 }
  /** 5 - Fonction loop() **/
 void loop() {
-  Chrono.restart();  // restart the Chrono 
+  //Chrono.restart();  // restart the Chrono 
   //5a - IHM wifi
   
   //5b - IHM clavier
@@ -711,23 +719,23 @@ void loop() {
   /*La fonction de transmission vw_send(message, length) : transmit a message, "message" is an array of the bytes to send,
   and "length" is the number of bytes stored in the array.*/
   
-  char msg[7] = {'h','e','l','l','o',' ','#'};
-  msg[6] = count;  
-  time_t heure[1] = {now()};
-  float mesure[5]= {T1, T2, Vusb, Vbat_1, ibat};
-  unsigned long Energie[1] = {Ec};
-  digitalWrite(led_pin_j, HIGH); // Flash a light to show transmitting
-  vw_send((uint8_t *)msg, 7); //Transmission hello et count
-  vw_wait_tx(); // Wait until the whole message is gone
-  vw_send((uint8_t *)heure, 1); //Transmission de l'heure
-  vw_wait_tx(); // Wait until the whole message is gone
-  vw_send((uint8_t *)mesure, 5); //Transmission T1, T2, Vusb, Vbat, ibat
-  vw_wait_tx(); // Wait until the whole message is gone
-  vw_send((uint8_t *)Energie, 1); //Transmission de l'énergie consommée
-  vw_wait_tx(); // Wait until the whole message is gone
-  digitalWrite(led_pin_j, LOW);
+  //char msg[7] = {'h','e','l','l','o',' ','#'};
+  //msg[6] = count;  
+  //time_t heure[1] = {now()};
+  //float mesure[5]= {T1, T2, Vusb, Vbat_1, ibat};
+  //unsigned long Energie[1] = {Ec};
+  //digitalWrite(led_pin_j, HIGH); // Flash a light to show transmitting
+  //vw_send((uint8_t *)msg, 7); //Transmission hello et count
+  //vw_wait_tx(); // Wait until the whole message is gone
+  //vw_send((uint8_t *)heure, 1); //Transmission de l'heure
+  //vw_wait_tx(); // Wait until the whole message is gone
+  //vw_send((uint8_t *)mesure, 5); //Transmission T1, T2, Vusb, Vbat, ibat
+  //vw_wait_tx(); // Wait until the whole message is gone
+  //vw_send((uint8_t *)Energie, 1); //Transmission de l'énergie consommée
+  //vw_wait_tx(); // Wait until the whole message is gone
+  //digitalWrite(led_pin_j, LOW);
   count = count + 1;
-  delay(100);
+  //delay(100);
 
 
 /*
@@ -742,7 +750,7 @@ void loop() {
   }
   */
  //5h - Bilan énergétique de la batterie
- tt2 = (Chrono.elapsed());
+ //tt2 = (Chrono.elapsed());
  Et = ((Vbat_1/1000) * ibat)*((tt1 + tt2)/1000000);
  if (val_sleep) {Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);}
  if (!val_sleep  ) {Es = ((Vbat_1/1000) * ibat)*(ts/1000000);}
@@ -761,13 +769,13 @@ void loop() {
       /********************************************************
      Set Low Power Timer wake up in milliseconds.
      ********************************************************/
-  tt1 = (Chrono.elapsed());
+  //tt1 = (Chrono.elapsed());
   ts = ti - (tt1 + tt2);
   //timer.setTimer(ts/1000);// milliseconds
   delay(200);
   //if (val_sleep) {LowPower.idle( ts );}// return module that woke processor
   if (!val_sleep) {delay(ts/1000);}
-  Chrono.restart();  // restart the Chrono
+  //Chrono.restart();  // restart the Chrono
   wait_s_m();//Wait for serial monitor 
   digitalWrite(led_pin_b, LOW);  // sets the blue LED to LOW
 }
