@@ -48,10 +48,27 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des informaticiens. 
 *Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, 
 *indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
+*
+*********
+* L'IHM *
+*********
  *
- *L'acquisition des paramètres de cuisson peut se faire soit à partir d'un smartphone, soit à partir du clavier.
- * L'objet est l'acquisition des paramètres de cuisson saisis par l'utilisateur (setup).
- * La commande start stop permet le passage du setup à la boucle loop
+ *En référence à Wikipédia, les Interactions Homme-machines (IHM) définissent les moyens mis en œuvre 
+ *afin qu'un humain puisse contrôler et communiquer avec une machine.
+ *Ces moyens, dans le cadre de ce projet, sont soit ceux de l'ordinateur (clavier, souri, écran) ;
+ *soit ceux d'un smartphone ; dans les deux cas, ils sont complétés par ceux propres  du microcontrôleur, 
+ *c'est à dire : 2 boutons poussoirs et un jeu de leds.
+ *Les IHM permettent de dialoguer avec le microcontrôleur, d'y introduire des données et de visualiser des résultats.
+ *Ces IHM sont :
+ *- l'acquisition des paramètres de cuisson saisis par l'utilisateur (setup):
+ *  - à partir d'un smartphone (IHM wifi), 
+ *  - à partir de l'ordinateur (IHM clavier).
+ * dans les 2 cas : 
+ *  - la commande start stop permet le passage du setup à la boucle loop
+ *  - la commande sleep permet le mode sleep.
+ *- la visualisation du contenu des échantillons sur le moniteur série
+ *- la visualisation des états de fonctionnement (BITE) sur le jeu de leds
+ *- la visualisation des températures T1 et T2 ainsi que les durées de cuisson (DC1 et DC2).
  * 
  * 1a - IHM wifi
  * L'acquisition des paramètres de cuisson s'inspire de l'exemple Arduino 
