@@ -49,29 +49,34 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, 
 *indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
 *
-*********
-* L'IHM *
-*********
+***********
+* Les IHM *
+***********
  *
- *En référence à Wikipédia, les Interactions Homme-machines (IHM) définissent les moyens mis en œuvre 
+ *Définition des IHM et de leur fonction associée
+ *En référence à Wikipédia, les IHM (Interactions Homme-machines) définissent les moyens mis en œuvre 
  *afin qu'un humain puisse contrôler et communiquer avec une machine.
- *Ces moyens, dans le cadre de ce projet, sont soit ceux de l'ordinateur (clavier, souri, écran) ;
- *soit ceux du smartphone ; dans les deux cas, ils sont complétés par ceux propres  du microcontrôleur, 
- *c'est à dire : 2 boutons poussoirs et un jeu de leds.
+ *Dans le cadre de ce projet, les moyens mis en œuvre sont soit ceux de l'ordinateur (clavier, souri, écran) ;
+ *soit ceux du smartphone ; dans les deux cas, ils sont complétés par ceux propres du microcontrôleur, 
+ *c'est à dire : 2 inverseurs ("start stop" et "sleep") et un jeu de leds.
  *Les IHM permettent de dialoguer avec le microcontrôleur, d'y introduire des données et de visualiser des résultats.
- *Ces IHM sont :
- *- la saisie par l'utilisateur (setup) et l'acquisition des paramètres de cuisson :
- *  - à partir d'un smartphone (IHM wifi), 
- *  - à partir de l'ordinateur (IHM clavier).
- * dans les 2 cas : 
- *  - la commande start stop permet le passage du setup à la boucle loop
- *  - la commande sleep permet le mode sleep.
- *- sur le moniteur série, la visualisation du contenu des échantillons ainsi que les durées de cuisson (DC1 et DC2).
- *- la visualisation des états de fonctionnement (BITE) sur le jeu de leds.
+ *Ces IHM et leur fonction associée sont :
+ * 1) le smartphone qui communique avec le microcontrôleur à l'aide de leur interface wifi respective, 
+ *    ou l'ordinateur via son clavier qui communique avec le microcontrôleur à l'aide du moniteur série
+ *    l'un ou l'autre permet la saisie des paramètres de cuisson par l'utilisateur et leur acquisition par le microcontrôleur.
+ * 2) le moniteur série permet la visualisation du contenu des échantillons ainsi que les durées de cuisson (DC1 et DC2).
+ * 3) le jeu de leds permet la visualisation des états de fonctionnement (BITE) 
+ * 4) l'inverseur "start stop" à deux positions fournit deux états logiques (0 et 1) interprétés lors du déroullement du firmware 
+ *    de deux manières différentes liées à la fonction en cours d'exécution :
+ *     - dans le cas de la fonction setup() la transition de 0 -> 1 lui permet de quitter cette même fonction pour transiter vers la fonction loop()
+ *     - dans le cas de la fonction loop() la transition de 1 -> 0 lui permet d'inhiber l'autorisation de chauffe Ach
+ * 5) l'inverseur "sleep" à deux positions qui fournit deux états logiques (0 et 1) permet au microcontreur de fonctionner 
+ *    selon l'un des deux modes : normal ou sleep.
+ *Le code source des fonctions associées aux IHM se différencie en fonction du moyen de communication mis en œuvre, 
+ *smartphone ou ordinateur, dans la suite du programme, l'un et l'autre se distinguent par l'appellation "wifi" ou "clavier".
  * 
- * 1a - IHM wifi
- * L'acquisition des paramètres de cuisson s'inspire de l'exemple Arduino 
- * "WiFi Web Server LED Blink" AP_SimpleWebServer.ino associé au fichier arduino_secrets.h
+ * 1a - Le code source des IHM en mode "wifi"
+ * Le code source des IHM en mode "wifi" s'inspire de l'exemple Arduino "WiFi Web Server LED Blink" AP_SimpleWebServer.ino associé au fichier arduino_secrets.h
  * Un serveur Web permet de communiquer les paramètres de cuisson via le Web. 
  * Le principe est basé sur la création d’un point d'accès (sans mot de passe) 
  * suivi du lancement d’un serveur dont l'adresse IP est imprimé sur le moniteur série. 
@@ -82,10 +87,17 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * - SPI allows to communicate with SPI (Serial Peripheral Interface) devices, with the Arduino as the master device.
  * - WiFiNINA allows to use the Arduino MKR 1010 capabilities.
  * - RTCZero allows to use the RTC functionalities for MKR1000
- *  
+ * La fonction client.print() permet d'envoyer au smarphone via le serveur Web du code HTML, par exemple :
+ * client.print("<!DOCTYPE html>");
  * 
- * 1b - IHM clavier
- * 
+ * 1b - Le code source des IHM en mode "clavier"
+ * Le code source des IHM en mode "clavier" utilise principalement des fonctions de la librarie Arduino 
+ * qui permettent d'accéder au buffer de la liaison série :
+ * - Serial.available() permet de connaître le nombre de caractères disponibles dans le buffer de la liaison série
+ * - Serial.read() permet de lire le caractère disponible (utilisée pour lire le gabarit)
+ * - Serial.parseInt() permet de lire plusieurs nombres entiers saisis l'un à la suite de l'autre 
+ *   (utilisée pour lire la Durée de Cuisson (DC)).
+ *   
  * 1c - Acquisition des températures T1 et T2
  * L'acquisition de la température est réalisée à l'aide d'un DS18B20  digital  thermometer  provides  9-bit  to  12-bit  Celsius  temperature  measurements.
  * The  DS18B20  communicates  over  a  1-Wire  bus.
@@ -165,8 +177,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 
 RTCZero rtc; //Create an rtc object
 
-int gabarit;
-int cook_time;
+//int Gabarit;
+//int cook_time;
 String gabarit_url = "GET /?g=";
 String time_url = "&t=";
 String check_gabarit;
@@ -184,8 +196,29 @@ WiFiServer server(80);
 
  /*
   * 2b - IHM clavier
-  */
-
+  * Les paramètres de cuisson sont la Durée de Cuisson (DC) et le Gabarit de cuisson (Gabarit).
+ * DC est exprimée en mn sur 3 chiffres
+ * Le Gabarit est un nombre entier compris entre 1 et 9.
+ * Chaque Gabarit est associé à 9 paramètres :
+ * la période (p), 
+ * le gain (G),
+ * l'Intensité de chauffe(I),
+ * la température d'utilisation (Tu),
+ * le temps de montée Tm (mn)
+ * la constante de temps Tau (mn)
+ * la vitesse de consigne Vc (°C/mn)
+ * l'accélération de consigne A_c (°C/mn2)
+ * la durée d'anticipation ta (nombre d'itérations).
+ * Ces paramètres sont décrits dans le document "brevet" (page 6 et 28) dont la version Word est accessible par le lien ci-dessous:
+ * https://github.com/AIREL46/SCAO/blob/master/Brevet/SCAO/word/La%20description%20du%20SCAO%20-%20d.doc
+ * La commande start stop (stsp) permet de quitter le setup pour entrer dans la boucle loop 
+ * Elle est commandée par un switch ON/OFF SW2 et elle se concrétise par une variable booléenne.
+ * En position OFF, la variable est false correspondant à l'état stop.
+ * En position ON, la variable est true correspondant à l'état start.
+ * A l'état stop l'exécution du programme est maintenu dans une boucle de saisie du setup().
+ * A l'état start l'exécution du programme transite dans la boucle loop().
+ */
+//Initialisation des paramètres communs
 const int inPin_stsp = 1;    // SW2 connected to digital pin 1
 bool val_stsp = false;//Création de la variable booléenne start stop (stsp)
 //Création des tableaux (array) des gabarits de cuisson
@@ -209,9 +242,11 @@ float Vc;//Vitesse de consigne
 float A_c;//Accélération de consigne
 int ta;//temps d'anticipation
 //Création de la variable Durée de Cuisson (DC) et affectation d'une valeur par défaut
-int DC = 100;
+int DC;
 //Création de la variable Gabarit et affectation d'une valeur par défaut
-int Gabarit = 5;
+int Gabarit;
+
+//Initialisation des paramètres "clavier"
 //Création de la variable flag dédiée à la saisie du N° de gabarit
 int flag=1;
 //Création du paramètre i correspondant au nombre de chiffres à saisir pour définir la durée de cuisson
@@ -362,27 +397,150 @@ bool val_sleep = false;//variable to store the read value
   Serial.println(ip);
 
 }
+//Saisie des paramètres de cuisson en wifi
+ // compare the previous status to the current status
+  void saisie_wifi() {if (status != WiFi.status()) {
+    // it has changed update the variable
+    status = WiFi.status();
+
+    if (status == WL_AP_CONNECTED) {
+      // a device has connected to the AP
+      Serial.println("Device connected to AP");
+    } else {
+      // a device has disconnected from the AP, and we are back in listening mode
+      Serial.println("Device disconnected from AP");
+    }
+  }
+  
+  WiFiClient client = server.available();   // listen for incoming clients
+
+  if (client) {                             // if you get a client,
+    Serial.println("new client");           // print a message out the serial port
+    String currentLine = "";                // make a String to hold incoming data from the client
+    while (client.connected()) {            // loop while the client's connected
+      if (client.available()) {             // if there's bytes to read from the client,
+        char c = client.read();             // read a byte, then
+        Serial.write(c);                    // print it out the serial monitor
+        if (c == '\n') {                    // if the byte is a newline character
+
+          // if the current line is blank, you got two newline characters in a row.
+          // that's the end of the client HTTP request, so send a response:
+          if (currentLine.length() == 0) {
+            // HTTP headers always start with a response code (e.g. HTTP/1.1 200 OK)
+            // and a content-type so the client knows what's coming, then a blank line:
+            client.println("HTTP/1.1 200 OK");
+            client.println("Content-type:text/html");
+            client.println();
+
+            // the content of the HTTP response follows the header:
+            // client.print("Click <a href=\"/H\">here</a> turn the LED on<br>");
+            // client.print("Click <a href=\"/L\">here</a> turn the LED off<br>");
+            //SCAO
+            //client.print("<!DOCTYPE html>");
+            //client.print("<head><title>Quiet cook</title></head>");
+            client.print("<center>Quiet cook</center>");
+            client.print("<br>");
+            //client.print("<center><img srcset=images/quietcook-01.jpg></center>");
+            client.print("<form method='get'>");//Tells the browser how to send form data to a web server.
+            client.print("<select name=g required>");//The HTML <select> name Attribute is used to specify a name for the drop-down list.
+            client.print("<option value='0'>Select a Gabarit</option>");//Defines the data sent to the server when a form option item is selected.
+            client.print("<option value='1'>Gabarit 1</option>");
+            client.print("<option value='2'>Gabarit 2</option>");
+            client.print("<option value='3'>Gabarit 3</option>");
+            client.print("<option value='4'>Gabarit 4</option>");
+            client.print("<option value='5'>Gabarit 5</option>");
+            client.print("<option value='6'>Gabarit 6</option>");
+            client.print("<option value='7'>Gabarit 7</option>");
+            client.print("<option value='8'>Gabarit 8</option>");
+            client.print("<option value='9'>Gabarit 9</option></select><br>");
+            client.print("<br>");
+            client.print("<br>");
+            client.print("<br>");
+            client.print("<input type='number' name='t'>DC(mn)<br>");//Defines the input type.
+            client.print("<input type='submit' value='Submit'></form>");
+            client.print(Gabarit);
+            client.print("<br>");
+            client.print(DC);
+            client.print("<br>");
+            client.print(get_gabarit);
+            client.print("<br>");
+            client.print(get_time);
+            // Fin SCAO
+            // The HTTP response ends with another blank line:
+            client.println();
+            // break out of the while loop:
+            break;
+          }
+          else {      // if you got a newline, then clear currentLine:
+            currentLine = "";
+          }
+        }
+        else if (c != '\r') {    // if you got anything else but a carriage return character,
+          currentLine += c;      // add it to the end of the currentLine
+        }
+
+        // SCAO
+        // Check to see the client request
+       
+         int x=0;
+
+         while(x!=10){
+            check_gabarit = gabarit_url + x;
+            //Tests whether or not a String ends with the characters of another String.
+            if(currentLine.endsWith(check_gabarit)){
+                Gabarit = x;
+                get_gabarit = gabarit_url + Gabarit;//Par exemple si le gabarit est 5 : GET/?=5
+                
+              }
+              x++;
+          }
+        
+        int i=0;
+            
+        while(i!=121){
+          get_time = (get_gabarit + time_url) + i;//Par exemple si le gabarit est 5 et la durée 60 mn : GET/?=5&t=60
+          if(currentLine.endsWith(get_time)){
+            DC = i;
+            break;
+          }
+          i++;
+        }
+        
+      }
+    }
+    // Fin SCAO
+    // close the connection:
+    client.stop();
+    Serial.println("client disconnected");
+  }
+  }
+
 /*
  * 3b - IHM clavier
  */
  
+ //Fonction spécifique de saisie en mode "clavier"
  void saisie(){Serial.println ("Systeme de Cuisson Assistee par Ordinateur (SCAO) ");
   //Saisie des paramètres de cuisson
   //Saisie de la duree de cuisson DC
-  byte a; byte b; byte c; byte x=(15); 
+  byte a; byte b; byte c; byte d; byte x=(15); 
   Serial.println ("Entrer DC (mn) sur 3 chiffres");
-  while (i > 0) {
-  switch (i) {
-  case 3:
-  if (Serial.available () > 0)  {a=Serial.read(); a=a&x; i=i-1; break;}
-  case 2:
-  if (Serial.available () > 0)  {b=Serial.read(); b=b&x; i=i-1; break;}
-  case 1:
-  if (Serial.available () > 0)  {c=Serial.read(); c=c&x; DC=(100*a+10*b+c); Serial.print (DC); Serial.println (" mn "); i=i-1; break;}
-  default: {delay(1000);} 
-    }//Switch
-  } //While DC
-
+  bool bidon = true;
+  while (bidon) {while (Serial.available () > 0) DC = Serial.parseInt(); if (DC>0) bidon=false;}
+  Serial.print (DC);
+  Serial.println (" mn ");
+  //while (i > 0) {
+  //switch (i) {
+  //case 3:
+  //if (Serial.available () > 0)  {a=Serial.read(); b=b&x; i=i-1; break;}
+  //case 2:
+  //if (Serial.available () > 0)  {b=Serial.read(); b=b&x; i=i-1; break;}
+  //case 1:
+  //if (Serial.available () > 0)  {c=Serial.read(); c=c&x; DC=(100*a+10*b+c); Serial.print (DC); Serial.println (" mn "); i=i-1; break;}
+  //default: {delay(1000);} 
+  //  }//Switch
+  //} //While DC
+  delay(1000);
   //Saisie du gabarit
   Serial.println ("Par defaut le gabarit est 5, voulez-vous le changer o/n ?");
    flag=1;
@@ -612,7 +770,7 @@ void setup() {
    * Création du point d'accès et du réseau.
    */
 
-    rtc.begin();//Initializes the internal RTC.
+  rtc.begin();//Initializes the internal RTC.
   
   //Initialize serial and wait for port to open:
   Serial.begin(9600);
@@ -668,9 +826,26 @@ void setup() {
    * 4b - IHM clavier
    */
   
-  pinMode(inPin_stsp, INPUT);//sets the digital pin 1 as input
-  if (state_Vusb) {saisie();}
-  //Ajouter l'appel de la fonction de saisie wifi
+  //sets the digital pin 1 as input (SW2)
+  pinMode(inPin_stsp, INPUT);
+  
+  //Choix de la fonction de saisie (wifi ou clavier)
+  Serial.print("Saisie wifi (O) ou clavier (N)");
+  bool wifi_clavier;
+  flag=1;
+  while (flag>0) {if (Serial.available() > 0)
+    {reponse=Serial.read(); if (reponse==111 | reponse==79){flag=flag-1; wifi_clavier = true;}//Si le caractère frappé est O ou o
+    else {flag=flag-1; wifi_clavier = false;}
+    }
+  }
+  delay(2000);
+  
+  //Appel de la fonction "saisie clavier"
+  if (state_Vusb && !wifi_clavier) {saisie();}
+  
+  //Appel de la fonction de saisie wifi
+  while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp);}
+  
   //Boucle d'attente de la commande stsp
   //Les 4 leds clignotent
   //Dès que le switch (SW2) stsp est en position active val_stsp est "true"
@@ -720,126 +895,7 @@ void setup() {
 
 void loop() {
 
-/*
- * 5a - IHM WiFi
- */
-
- // compare the previous status to the current status
-  if (status != WiFi.status()) {
-    // it has changed update the variable
-    status = WiFi.status();
-
-    if (status == WL_AP_CONNECTED) {
-      // a device has connected to the AP
-      Serial.println("Device connected to AP");
-    } else {
-      // a device has disconnected from the AP, and we are back in listening mode
-      Serial.println("Device disconnected from AP");
-    }
-  }
-  
-  WiFiClient client = server.available();   // listen for incoming clients
-
-  if (client) {                             // if you get a client,
-    Serial.println("new client");           // print a message out the serial port
-    String currentLine = "";                // make a String to hold incoming data from the client
-    while (client.connected()) {            // loop while the client's connected
-      if (client.available()) {             // if there's bytes to read from the client,
-        char c = client.read();             // read a byte, then
-        Serial.write(c);                    // print it out the serial monitor
-        if (c == '\n') {                    // if the byte is a newline character
-
-          // if the current line is blank, you got two newline characters in a row.
-          // that's the end of the client HTTP request, so send a response:
-          if (currentLine.length() == 0) {
-            // HTTP headers always start with a response code (e.g. HTTP/1.1 200 OK)
-            // and a content-type so the client knows what's coming, then a blank line:
-            client.println("HTTP/1.1 200 OK");
-            client.println("Content-type:text/html");
-            client.println();
-
-            // the content of the HTTP response follows the header:
-            // client.print("Click <a href=\"/H\">here</a> turn the LED on<br>");
-            // client.print("Click <a href=\"/L\">here</a> turn the LED off<br>");
-            //SCAO
-            //client.print("<!DOCTYPE html>");
-            //client.print("<head><title>Quiet cook</title></head>");
-            client.print("<center>Quiet cook</center>");
-            client.print("<br>");
-            //client.print("<center><img srcset=images/quietcook-01.jpg></center>");
-            client.print("<form method='get'>");//Tells the browser how to send form data to a web server.
-            client.print("<select name=g required>");//The HTML <select> name Attribute is used to specify a name for the drop-down list.
-            client.print("<option value='0'>Select a Gabarit</option>");//Defines the data sent to the server when a form option item is selected.
-            client.print("<option value='1'>Gabarit 1</option>");
-            client.print("<option value='2'>Gabarit 2</option>");
-            client.print("<option value='3'>Gabarit 3</option>");
-            client.print("<option value='4'>Gabarit 4</option>");
-            client.print("<option value='5'>Gabarit 5</option>");
-            client.print("<option value='6'>Gabarit 6</option>");
-            client.print("<option value='7'>Gabarit 7</option>");
-            client.print("<option value='8'>Gabarit 8</option>");
-            client.print("<option value='9'>Gabarit 9</option></select><br>");
-            client.print("<br>");
-            client.print("<br>");
-            client.print("<br>");
-            client.print("<input type='number' name='t'>DC(mn)<br>");//Defines the input type.
-            client.print("<input type='submit' value='Submit'></form>");
-            client.print(gabarit);
-            client.print("<br>");
-            client.print(cook_time);
-            client.print("<br>");
-            client.print(get_gabarit);
-            client.print("<br>");
-            client.print(get_time);
-            // Fin SCAO
-            // The HTTP response ends with another blank line:
-            client.println();
-            // break out of the while loop:
-            break;
-          }
-          else {      // if you got a newline, then clear currentLine:
-            currentLine = "";
-          }
-        }
-        else if (c != '\r') {    // if you got anything else but a carriage return character,
-          currentLine += c;      // add it to the end of the currentLine
-        }
-
-        // SCAO
-        // Check to see the client request
-       
-         int x=0;
-
-         while(x!=10){
-            check_gabarit = gabarit_url + x;
-            //Tests whether or not a String ends with the characters of another String.
-            if(currentLine.endsWith(check_gabarit)){
-                gabarit = x;
-                get_gabarit = gabarit_url + gabarit;//Par exemple si le gabarit est 5 : GET/?=5
-                
-              }
-              x++;
-          }
-        
-        int i=0;
-            
-        while(i!=120){
-          get_time = (get_gabarit + time_url) + i;//Par exemple si le gabarit est 5 et la durée 60 mn : GET/?=5&t=60
-          if(currentLine.endsWith(get_time)){
-            cook_time = i;
-            break;
-          }
-          i++;
-       }
-        
-      }
-    }
-    // Fin SCAO
-    // close the connection:
-    client.stop();
-    Serial.println("client disconnected");
-  }
-
+//5a IHM wifi
 //5b IHM clavier
 //5c - Acquisition des températures T1 et T2
   //float T1;
