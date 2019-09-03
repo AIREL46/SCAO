@@ -75,7 +75,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *Le code source des fonctions associées aux IHM se différencie en fonction du moyen de communication mis en œuvre, 
  *smartphone ou ordinateur, dans la suite du programme, l'un et l'autre se distinguent par l'appellation "wifi" ou "clavier".
  * 
- * 1a - Le code source des IHM en mode "wifi"
+ * 1a Les IHM
+ * 1a-1 Le code source des IHM en mode "wifi"
  * Le code source des IHM en mode "wifi" s'inspire de l'exemple Arduino "WiFi Web Server LED Blink" AP_SimpleWebServer.ino associé au fichier arduino_secrets.h
  * Un serveur Web permet de communiquer les paramètres de cuisson via le Web. 
  * Le principe est basé sur la création d’un point d'accès (sans mot de passe) 
@@ -90,7 +91,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * La fonction client.print() permet d'envoyer au smarphone via le serveur Web du code HTML, par exemple :
  * client.print("<!DOCTYPE html>");
  * 
- * 1b - Le code source des IHM en mode "clavier"
+ * 1a-2 - Le code source des IHM en mode "clavier"
  * Le code source des IHM en mode "clavier" utilise principalement des fonctions de la librarie Arduino 
  * qui permettent d'accéder au buffer de la liaison série :
  * - Serial.available() permet de connaître le nombre de caractères disponibles dans le buffer de la liaison série
@@ -98,6 +99,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * - Serial.parseInt() permet de lire plusieurs nombres entiers saisis l'un à la suite de l'autre 
  *   (utilisée pour lire la Durée de Cuisson (DC)).
  *   
+ * 1b - Libre
+ * 
  * 1c - Acquisition des températures T1 et T2
  * L'acquisition de la température est réalisée à l'aide d'un DS18B20  digital  thermometer  provides  9-bit  to  12-bit  Celsius  temperature  measurements.
  * The  DS18B20  communicates  over  a  1-Wire  bus.
@@ -165,38 +168,9 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  unsigned long tt2=0;//temps de travail 2
  unsigned long ti=30000000;//temps itératif
  unsigned long ts=0;//temps de sleep
-
 /*
- * 2a - IHM WiFi
- */
-
-#include <SPI.h> //allows to communicate with SPI (Serial Peripheral Interface) devices, with the Arduino as the master device.
-#include <WiFiNINA.h> //allows to use the Arduino MKR 1010 capabilities.
-#include "arduino_secrets.h"
-#include <RTCZero.h> //allows to use the RTC functionalities for MKR1000
-
-RTCZero rtc; //Create an rtc object
-
-//int Gabarit;
-//int cook_time;
-String gabarit_url = "GET /?g=";
-String time_url = "&t=";
-String check_gabarit;
-String get_gabarit;
-String get_time;
-
-///////please enter your sensitive data in the Secret tab/arduino_secrets.h
-char ssid[] = SECRET_SSID;        // your network SSID (name)
-char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
-int keyIndex = 0;                // your network key Index number (needed only for WEP)
-
-int led =  LED_BUILTIN;
-int status = WL_IDLE_STATUS;
-WiFiServer server(80);
-
- /*
-  * 2b - IHM clavier
-  * Les paramètres de cuisson sont la Durée de Cuisson (DC) et le Gabarit de cuisson (Gabarit).
+ * 2a Les IHM
+ * Les paramètres de cuisson sont la Durée de Cuisson (DC) et le Gabarit de cuisson (Gabarit).
  * DC est exprimée en mn sur 3 chiffres
  * Le Gabarit est un nombre entier compris entre 1 et 9.
  * Chaque Gabarit est associé à 9 paramètres :
@@ -218,7 +192,7 @@ WiFiServer server(80);
  * A l'état stop l'exécution du programme est maintenu dans une boucle de saisie du setup().
  * A l'état start l'exécution du programme transite dans la boucle loop().
  */
-//Initialisation des paramètres communs
+ //Initialisation des paramètres communs
 const int inPin_stsp = 1;    // SW2 connected to digital pin 1
 bool val_stsp = false;//Création de la variable booléenne start stop (stsp)
 //Création des tableaux (array) des gabarits de cuisson
@@ -246,6 +220,35 @@ int DC;
 //Création de la variable Gabarit et affectation d'une valeur par défaut
 int Gabarit;
 
+/*
+ * 2a-1 IHM WiFi
+ */
+
+#include <SPI.h> //allows to communicate with SPI (Serial Peripheral Interface) devices, with the Arduino as the master device.
+#include <WiFiNINA.h> //allows to use the Arduino MKR 1010 capabilities.
+#include "arduino_secrets.h"
+#include <RTCZero.h> //allows to use the RTC functionalities for MKR1000
+
+RTCZero rtc; //Create an rtc object
+
+String gabarit_url = "GET /?g=";
+String time_url = "&t=";
+String check_gabarit;
+String get_gabarit;
+String get_time;
+
+///////please enter your sensitive data in the Secret tab/arduino_secrets.h
+char ssid[] = SECRET_SSID;        // your network SSID (name)
+char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
+int keyIndex = 0;                // your network key Index number (needed only for WEP)
+
+int led =  LED_BUILTIN;
+int status = WL_IDLE_STATUS;
+WiFiServer server(80);
+
+ /*
+  * 2a-2 IHM clavier
+  */
 //Initialisation des paramètres "clavier"
 //Création de la variable flag dédiée à la saisie du N° de gabarit
 int flag=1;
@@ -377,10 +380,90 @@ bool val_sleep = false;//variable to store the read value
     // normal delay for Arduino Serial Monitor
     delay(1200);
   }
-
+  /*
+   * 3a Les IHM
+   */
+   //Visualisation DC et N° de gabarit
+  void visu_DC_G() {
+  Serial.print ("Duree de cuisson "), Serial.print (DC); Serial.println (" mn - ");
+  //Visualisation des parametres correspondants au N° du gabarit choisi
+  delay (1000);
+  //Affectation des paramètres de cuisson en fonction du gabarit choisi
+  switch (Gabarit) {
+  case 1: p=Gabarit1[0]; G=Gabarit1[1]; I=Gabarit1[2]; Tu=Gabarit1[3]; Tm=Gabarit1[4]; Tau=Gabarit1[5]; Vc=Gabarit1[6]; A_c=Gabarit1[7]; ta=Gabarit1[8];  break;
+  case 2: p=Gabarit2[0]; G=Gabarit2[1]; I=Gabarit2[2]; Tu=Gabarit2[3]; Tm=Gabarit2[4]; Tau=Gabarit2[5]; Vc=Gabarit2[6]; A_c=Gabarit2[7]; ta=Gabarit2[8];  break;
+  case 3: p=Gabarit3[0]; G=Gabarit3[1]; I=Gabarit3[2]; Tu=Gabarit3[3]; Tm=Gabarit3[4]; Tau=Gabarit3[5]; Vc=Gabarit3[6]; A_c=Gabarit3[7]; ta=Gabarit3[8];  break;
+  case 4: p=Gabarit4[0]; G=Gabarit4[1]; I=Gabarit4[2]; Tu=Gabarit4[3]; Tm=Gabarit4[4]; Tau=Gabarit4[5]; Vc=Gabarit4[6]; A_c=Gabarit4[7]; ta=Gabarit4[8];  break;
+  case 5: p=Gabarit5[0]; G=Gabarit5[1]; I=Gabarit5[2]; Tu=Gabarit5[3]; Tm=Gabarit5[4]; Tau=Gabarit5[5]; Vc=Gabarit5[6]; A_c=Gabarit5[7]; ta=Gabarit5[8];  break;
+  case 6: p=Gabarit6[0]; G=Gabarit6[1]; I=Gabarit6[2]; Tu=Gabarit6[3]; Tm=Gabarit6[4]; Tau=Gabarit6[5]; Vc=Gabarit6[6]; A_c=Gabarit6[7]; ta=Gabarit6[8];  break;
+  case 7: p=Gabarit7[0]; G=Gabarit7[1]; I=Gabarit7[2]; Tu=Gabarit7[3]; Tm=Gabarit7[4]; Tau=Gabarit7[5]; Vc=Gabarit7[6]; A_c=Gabarit7[7]; ta=Gabarit7[8];  break;
+  case 8: p=Gabarit8[0]; G=Gabarit8[1]; I=Gabarit8[2]; Tu=Gabarit8[3]; Tm=Gabarit8[4]; Tau=Gabarit8[5]; Vc=Gabarit8[6]; A_c=Gabarit8[7]; ta=Gabarit8[8];  break;
+  case 9: p=Gabarit9[0]; G=Gabarit9[1]; I=Gabarit9[2]; Tu=Gabarit9[3]; Tm=Gabarit9[4]; Tau=Gabarit9[5]; Vc=Gabarit9[6]; A_c=Gabarit9[7]; ta=Gabarit9[8];  break;
+  }//switch
+  Serial.print ("N° de gabarit choisi : ");  Serial.println(Gabarit); Serial.print("Ce gabarit correspond aux paramètres (p, G, I, Tu, Tm, Tau, Vc, Ac, ta) : ");
+  Serial.print ("{");Serial.print (p); Serial.print (", "); Serial.print (G); Serial.print (", "); Serial.print (I); Serial.print (", "); Serial.print (Tu); Serial.print (", "); Serial.print (Tm); Serial.print (", "); Serial.print (Tau); Serial.print (", "); Serial.print (Vc); Serial.print (", "); Serial.print (A_c); Serial.print (", "); Serial.print (ta);Serial.println ("}");
+  }
  /*
-  * 3a - IHM WiFi
-  */
+   * 3a-1 IHM WiFi
+   * Setup des IHM wifi
+   * Initialisation de l'horloge RTC et du port série
+   * Vérification de la version du firmware
+   * Création du point d'accès et du réseau.
+   */
+  //Setup des IHM wifi
+  void setup_wifi() {
+  rtc.begin();//Initializes the internal RTC.
+  
+  //Initialize serial and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+
+  Serial.println("Access Point Web Server");
+
+  pinMode(led, OUTPUT);      // set the LED pin mode
+
+  // WL_NO_MODULE : assigned when the communication with an integrated WiFi module fails
+  // check for the WiFi module:
+  if (WiFi.status() == WL_NO_MODULE) {
+    Serial.println("Communication with WiFi module failed!");
+    // don't continue
+    while (true);
+  }
+
+  String fv = WiFi.firmwareVersion();// Returns the firmware version running on the module as a string. 
+  if (fv < "1.0.0") {
+    Serial.println("Please upgrade the firmware");
+  }
+
+  // by default the local IP address of will be 192.168.4.1
+  // you can override it with the following:
+  // WiFi.config(IPAddress(10, 0, 0, 1));
+
+  // print the network name (SSID);
+  Serial.print("Creating access point named: ");
+  Serial.println(ssid);// ssid: the SSID (Service Set IDentifier) is the name of the WiFi network you want to connect to. 
+  // Create open network. Change this line if you want to create an WEP network:
+  // Initializes the WiFi101 library in Access Point (AP) mode.
+  // Other WiFi devices will be able to disover and connect to the created Access Point.
+  status = WiFi.beginAP(ssid, pass);
+  // WL_AP_LISTENING when creating access point succeeds
+  if (status != WL_AP_LISTENING) {
+    Serial.println("Creating access point failed");
+    // don't continue
+    while (true);
+  }
+
+  // wait 10 seconds for connection:
+  delay(10000);
+
+  // start the web server on port 80
+  server.begin();
+
+  // you're connected now, so print out the status
+  printWiFiStatus();
+  }
 
   void printWiFiStatus() {
   // print the SSID of the network you're attached to:
@@ -405,6 +488,7 @@ bool val_sleep = false;//variable to store the read value
 
     if (status == WL_AP_CONNECTED) {
       // a device has connected to the AP
+      Serial.print("Choisir le gabarit puis saisir la durée de cuisson (DC) - ");
       Serial.println("Device connected to AP");
     } else {
       // a device has disconnected from the AP, and we are back in listening mode
@@ -511,37 +595,29 @@ bool val_sleep = false;//variable to store the read value
     // Fin SCAO
     // close the connection:
     client.stop();
-    Serial.println("client disconnected");
+    visu_DC_G();
+    Serial.print("Modifier le gabarit et la durée de cuisson (DC) ou valider la commande start pour démarrer la cuisson ");
+    Serial.println("(client disconnected)");
   }
   }
 
 /*
- * 3b - IHM clavier
+ * 3a-2 IHM clavier
  */
  
  //Fonction spécifique de saisie en mode "clavier"
- void saisie(){Serial.println ("Systeme de Cuisson Assistee par Ordinateur (SCAO) ");
+ void saisie(){
   //Saisie des paramètres de cuisson
   //Saisie de la duree de cuisson DC
-  byte a; byte b; byte c; byte d; byte x=(15); 
+  byte x=(15); 
   Serial.println ("Entrer DC (mn) sur 3 chiffres");
   bool bidon = true;
   while (bidon) {while (Serial.available () > 0) DC = Serial.parseInt(); if (DC>0) bidon=false;}
   Serial.print (DC);
   Serial.println (" mn ");
-  //while (i > 0) {
-  //switch (i) {
-  //case 3:
-  //if (Serial.available () > 0)  {a=Serial.read(); b=b&x; i=i-1; break;}
-  //case 2:
-  //if (Serial.available () > 0)  {b=Serial.read(); b=b&x; i=i-1; break;}
-  //case 1:
-  //if (Serial.available () > 0)  {c=Serial.read(); c=c&x; DC=(100*a+10*b+c); Serial.print (DC); Serial.println (" mn "); i=i-1; break;}
-  //default: {delay(1000);} 
-  //  }//Switch
-  //} //While DC
   delay(1000);
   //Saisie du gabarit
+  Gabarit=5;
   Serial.println ("Par defaut le gabarit est 5, voulez-vous le changer o/n ?");
    flag=1;
    while (flag>0) {if (Serial.available () > 0) {
@@ -561,24 +637,6 @@ bool val_sleep = false;//variable to store the read value
  }//if Serial.available a
  }//while
  
- //Visualisation DC et N° de gabarit
- Serial.print ("Duree de cuisson "), Serial.print (DC); Serial.println (" mn - ");
-  //Visualisation des parametres correspondants au N° du gabarit choisi
-  delay (1000);
-  //Affectation des paramètres de cuisson en fonction du gabarit choisi
-  switch (Gabarit) {
-  case 1: p=Gabarit1[0]; G=Gabarit1[1]; I=Gabarit1[2]; Tu=Gabarit1[3]; Tm=Gabarit1[4]; Tau=Gabarit1[5]; Vc=Gabarit1[6]; A_c=Gabarit1[7]; ta=Gabarit1[8];  break;
-  case 2: p=Gabarit2[0]; G=Gabarit2[1]; I=Gabarit2[2]; Tu=Gabarit2[3]; Tm=Gabarit2[4]; Tau=Gabarit2[5]; Vc=Gabarit2[6]; A_c=Gabarit2[7]; ta=Gabarit2[8];  break;
-  case 3: p=Gabarit3[0]; G=Gabarit3[1]; I=Gabarit3[2]; Tu=Gabarit3[3]; Tm=Gabarit3[4]; Tau=Gabarit3[5]; Vc=Gabarit3[6]; A_c=Gabarit3[7]; ta=Gabarit3[8];  break;
-  case 4: p=Gabarit4[0]; G=Gabarit4[1]; I=Gabarit4[2]; Tu=Gabarit4[3]; Tm=Gabarit4[4]; Tau=Gabarit4[5]; Vc=Gabarit4[6]; A_c=Gabarit4[7]; ta=Gabarit4[8];  break;
-  case 5: p=Gabarit5[0]; G=Gabarit5[1]; I=Gabarit5[2]; Tu=Gabarit5[3]; Tm=Gabarit5[4]; Tau=Gabarit5[5]; Vc=Gabarit5[6]; A_c=Gabarit5[7]; ta=Gabarit5[8];  break;
-  case 6: p=Gabarit6[0]; G=Gabarit6[1]; I=Gabarit6[2]; Tu=Gabarit6[3]; Tm=Gabarit6[4]; Tau=Gabarit6[5]; Vc=Gabarit6[6]; A_c=Gabarit6[7]; ta=Gabarit6[8];  break;
-  case 7: p=Gabarit7[0]; G=Gabarit7[1]; I=Gabarit7[2]; Tu=Gabarit7[3]; Tm=Gabarit7[4]; Tau=Gabarit7[5]; Vc=Gabarit7[6]; A_c=Gabarit7[7]; ta=Gabarit7[8];  break;
-  case 8: p=Gabarit8[0]; G=Gabarit8[1]; I=Gabarit8[2]; Tu=Gabarit8[3]; Tm=Gabarit8[4]; Tau=Gabarit8[5]; Vc=Gabarit8[6]; A_c=Gabarit8[7]; ta=Gabarit8[8];  break;
-  case 9: p=Gabarit9[0]; G=Gabarit9[1]; I=Gabarit9[2]; Tu=Gabarit9[3]; Tm=Gabarit9[4]; Tau=Gabarit9[5]; Vc=Gabarit9[6]; A_c=Gabarit9[7]; ta=Gabarit9[8];  break;
-  }//switch
-  Serial.print ("N° de gabarit choisi : ");  Serial.println(Gabarit); Serial.print("Ce gabarit correspond aux paramètres (p, G, I, Tu, Tm, Tau, Vc, Ac, ta) : ");
-  Serial.print ("{");Serial.print (p); Serial.print (", "); Serial.print (G); Serial.print (", "); Serial.print (I); Serial.print (", "); Serial.print (Tu); Serial.print (", "); Serial.print (Tm); Serial.print (", "); Serial.print (Tau); Serial.print (", "); Serial.print (Vc); Serial.print (", "); Serial.print (A_c); Serial.print (", "); Serial.print (ta);Serial.println ("}");
   Serial.println ("Voulez-vous continuer ? taper O");
   flag=1;
   while (flag>0) {if (Serial.available() > 0)
@@ -587,7 +645,10 @@ bool val_sleep = false;//variable to store the read value
     }
   }
   }
-
+  /*
+   * 3b - Libre
+   */
+   
    /**
  * 3c-1 - Fonction d'acquisition de la température via le 1er thermomètre digital DS18B20 (ds1).
  * Fonction de lecture de la température via un thermomètre digital DS18B20 câblé sur le 1er bus ds1.
@@ -762,75 +823,15 @@ void setup() {
   digitalWrite(led_pin_j, HIGH);
   digitalWrite(led_pin_r, HIGH);
   digitalWrite(led_pin_b, HIGH);
-
   /*
-   * 4a - IHM WiFi
-   * Initialisation de l'horloge RTC et du port série
-   * Vérification de la version du firmware
-   * Création du point d'accès et du réseau.
+   * 4a Les IHM
    */
-
-  rtc.begin();//Initializes the internal RTC.
-  
-  //Initialize serial and wait for port to open:
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
-  Serial.println("Access Point Web Server");
-
-  pinMode(led, OUTPUT);      // set the LED pin mode
-
-  // WL_NO_MODULE : assigned when the communication with an integrated WiFi module fails
-  // check for the WiFi module:
-  if (WiFi.status() == WL_NO_MODULE) {
-    Serial.println("Communication with WiFi module failed!");
-    // don't continue
-    while (true);
-  }
-
-  String fv = WiFi.firmwareVersion();// Returns the firmware version running on the module as a string. 
-  if (fv < "1.0.0") {
-    Serial.println("Please upgrade the firmware");
-  }
-
-  // by default the local IP address of will be 192.168.4.1
-  // you can override it with the following:
-  // WiFi.config(IPAddress(10, 0, 0, 1));
-
-  // print the network name (SSID);
-  Serial.print("Creating access point named: ");
-  Serial.println(ssid);// ssid: the SSID (Service Set IDentifier) is the name of the WiFi network you want to connect to. 
-  // Create open network. Change this line if you want to create an WEP network:
-  // Initializes the WiFi101 library in Access Point (AP) mode.
-  // Other WiFi devices will be able to disover and connect to the created Access Point.
-  status = WiFi.beginAP(ssid, pass);
-  // WL_AP_LISTENING when creating access point succeeds
-  if (status != WL_AP_LISTENING) {
-    Serial.println("Creating access point failed");
-    // don't continue
-    while (true);
-  }
-
-  // wait 10 seconds for connection:
-  delay(10000);
-
-  // start the web server on port 80
-  server.begin();
-
-  // you're connected now, so print out the status
-  printWiFiStatus();   
-
-  /*
-   * 4b - IHM clavier
-   */
-  
-  //sets the digital pin 1 as input (SW2)
+   //sets the digital pin 1 as input (SW2)
   pinMode(inPin_stsp, INPUT);
   
   //Choix de la fonction de saisie (wifi ou clavier)
-  Serial.print("Saisie wifi (O) ou clavier (N)");
+  Serial.println ("Systeme de Cuisson Assistee par Ordinateur (SCAO) ");
+  Serial.println("Saisie wifi (O) ou clavier (N)");
   bool wifi_clavier;
   flag=1;
   while (flag>0) {if (Serial.available() > 0)
@@ -843,9 +844,21 @@ void setup() {
   //Appel de la fonction "saisie clavier"
   if (state_Vusb && !wifi_clavier) {saisie();}
   
-  //Appel de la fonction de saisie wifi
+  //Appel du setup et de la fonction de saisie wifi
+  if (wifi_clavier) {setup_wifi();}
   while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp);}
+
+  //Appel de la fonction visu_DC_G()
+  visu_DC_G();
   
+  /*   
+   * 4a-1 IHM wifi : Vide
+   */
+
+  /*
+   * 4a-2 IHM clavier
+   */
+    
   //Boucle d'attente de la commande stsp
   //Les 4 leds clignotent
   //Dès que le switch (SW2) stsp est en position active val_stsp est "true"
@@ -894,9 +907,10 @@ void setup() {
 }
 
 void loop() {
-
-//5a IHM wifi
-//5b IHM clavier
+//5a Les IHM
+//5a-1 IHM wifi
+//5a-2 IHM clavier
+//5b - Libre
 //5c - Acquisition des températures T1 et T2
   //float T1;
   /* Lit la température T1 */
