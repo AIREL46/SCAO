@@ -474,7 +474,13 @@ bool val_sleep = false;//variable to store the read value
   IPAddress ip = WiFi.localIP();
   Serial.print("IP Address: ");
   Serial.println(ip);
-
+  
+  // print the received signal strength:
+  long rssi = WiFi.RSSI();
+  Serial.print("signal strength (RSSI):");
+  Serial.print(rssi);
+  Serial.println(" dBm");
+  
   // print where to go in a browser:
   Serial.print("To see this page in action, open a browser to http://");
   Serial.println(ip);
@@ -488,13 +494,15 @@ bool val_sleep = false;//variable to store the read value
 
     if (status == WL_AP_CONNECTED) {
       // a device has connected to the AP
+      //Début SCAO (1)
       Serial.print("Choisir le gabarit puis saisir la durée de cuisson (DC) - ");
+      //Fin SCAO (1)
       Serial.println("Device connected to AP");
     } else {
       // a device has disconnected from the AP, and we are back in listening mode
       Serial.println("Device disconnected from AP");
     }
-  }
+  }//if (status != WiFi.status())
   
   WiFiClient client = server.available();   // listen for incoming clients
 
@@ -519,7 +527,7 @@ bool val_sleep = false;//variable to store the read value
             // the content of the HTTP response follows the header:
             // client.print("Click <a href=\"/H\">here</a> turn the LED on<br>");
             // client.print("Click <a href=\"/L\">here</a> turn the LED off<br>");
-            //SCAO
+            //Début SCAO (2)
             //client.print("<!DOCTYPE html>");
             //client.print("<head><title>Quiet cook</title></head>");
             client.print("<center>Quiet cook</center>");
@@ -549,21 +557,20 @@ bool val_sleep = false;//variable to store the read value
             client.print(get_gabarit);
             client.print("<br>");
             client.print(get_time);
-            // Fin SCAO
+            //Fin SCAO (2)
             // The HTTP response ends with another blank line:
             client.println();
             // break out of the while loop:
             break;
-          }
+          }//if (currentLine.length() == 0)
           else {      // if you got a newline, then clear currentLine:
             currentLine = "";
           }
-        }
+        }//if (c == '\n')
         else if (c != '\r') {    // if you got anything else but a carriage return character,
           currentLine += c;      // add it to the end of the currentLine
         }
-
-        // SCAO
+        //Début SCAO (3)
         // Check to see the client request
        
          int x=0;
@@ -589,17 +596,16 @@ bool val_sleep = false;//variable to store the read value
           }
           i++;
         }
-        
-      }
-    }
-    // Fin SCAO
+        //Fin SCAO (3)
+      }//if (client.available())
+    }//while (client.connected())
     // close the connection:
     client.stop();
     visu_DC_G();
     Serial.print("Modifier le gabarit et la durée de cuisson (DC) ou valider la commande start pour démarrer la cuisson ");
     Serial.println("(client disconnected)");
-  }
-  }
+  }//if (client)
+  }//saisie_wifi()
 
 /*
  * 3a-2 IHM clavier
