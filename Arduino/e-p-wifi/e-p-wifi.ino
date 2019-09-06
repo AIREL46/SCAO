@@ -405,67 +405,14 @@ bool val_sleep = false;//variable to store the read value
   }
  /*
    * 3a-1 IHM WiFi
-   * Setup des IHM wifi
-   * Initialisation de l'horloge RTC et du port série
-   * Vérification de la version du firmware
-   * Création du point d'accès et du réseau.
+   * Les fonctions sont les suivantes :
+   * 1-printWiFiStatus()
+   * 2-setup_wifi()
+   * 3-saisie_wifi()
+   * 
    */
-  //Setup des IHM wifi
-  void setup_wifi() {
-  rtc.begin();//Initializes the internal RTC.
-  
-  //Initialize serial and wait for port to open:
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
-  Serial.println("Access Point Web Server");
-
-  pinMode(led, OUTPUT);      // set the LED pin mode
-
-  // WL_NO_MODULE : assigned when the communication with an integrated WiFi module fails
-  // check for the WiFi module:
-  if (WiFi.status() == WL_NO_MODULE) {
-    Serial.println("Communication with WiFi module failed!");
-    // don't continue
-    while (true);
-  }
-
-  String fv = WiFi.firmwareVersion();// Returns the firmware version running on the module as a string. 
-  if (fv < "1.0.0") {
-    Serial.println("Please upgrade the firmware");
-  }
-
-  // by default the local IP address of will be 192.168.4.1
-  // you can override it with the following:
-  // WiFi.config(IPAddress(10, 0, 0, 1));
-
-  // print the network name (SSID);
-  Serial.print("Creating access point named: ");
-  Serial.println(ssid);// ssid: the SSID (Service Set IDentifier) is the name of the WiFi network you want to connect to. 
-  // Create open network. Change this line if you want to create an WEP network:
-  // Initializes the WiFi101 library in Access Point (AP) mode.
-  // Other WiFi devices will be able to disover and connect to the created Access Point.
-  status = WiFi.beginAP(ssid, pass);
-  // WL_AP_LISTENING when creating access point succeeds
-  if (status != WL_AP_LISTENING) {
-    Serial.println("Creating access point failed");
-    // don't continue
-    while (true);
-  }
-
-  // wait 10 seconds for connection:
-  delay(10000);
-
-  // start the web server on port 80
-  server.begin();
-
-  // you're connected now, so print out the status
-  printWiFiStatus();
-  }
-
-  void printWiFiStatus() {
+//1-printWiFiStatus()
+void printWiFiStatus() {
   // print the SSID of the network you're attached to:
   Serial.print("SSID: ");
   Serial.println(WiFi.SSID());
@@ -484,26 +431,50 @@ bool val_sleep = false;//variable to store the read value
   // print where to go in a browser:
   Serial.print("To see this page in action, open a browser to http://");
   Serial.println(ip);
-
 }
-//Saisie des paramètres de cuisson en wifi
- // compare the previous status to the current status
-  void saisie_wifi() {if (status != WiFi.status()) {
-    // it has changed update the variable
-    status = WiFi.status();
 
-    if (status == WL_AP_CONNECTED) {
-      // a device has connected to the AP
-      //Début SCAO (1)
-      Serial.print("Choisir le gabarit puis saisir la durée de cuisson (DC) - ");
-      //Fin SCAO (1)
-      Serial.println("Device connected to AP");
-    } else {
-      // a device has disconnected from the AP, and we are back in listening mode
-      Serial.println("Device disconnected from AP");
-    }
-  }//if (status != WiFi.status())
+//2-setup_wifi()
+  void setup_wifi() {
+ rtc.begin();//Initializes the internal RTC.
   
+  //Serial.begin(9600);      // initialize serial communication
+  //pinMode(7, OUTPUT);      // set the LED pin mode
+
+  // check for the WiFi module:
+  if (WiFi.status() == WL_NO_MODULE) {
+    Serial.println("Communication with WiFi module failed!");
+    // don't continue
+    while (true);
+  }
+
+  String fv = WiFi.firmwareVersion();
+  if (fv < "1.0.0") {
+    Serial.println("Please upgrade the firmware");
+  }
+
+  // attempt to connect to Wifi network:
+  while (status != WL_CONNECTED) {
+    Serial.print("Attempting to connect to Network named: ");
+    Serial.print(ssid);                   // print the network name (SSID);
+    Serial.println (" (10 secondes d'attente)");
+    // Connect to WPA/WPA2 network. Change this line if using open or WEP network:
+    status = WiFi.begin(ssid, pass);
+    // wait 10 seconds for connection:
+    delay(10000);
+  }
+  server.begin();                           // start the web server on port 80
+  printWiFiStatus();                        // you're connected now, so print out the status
+  }
+  
+//3-saisie_wifi() - Saisie des paramètres de cuisson en wifi
+ // compare the previous status to the current status
+  void saisie_wifi() {
+  //Début SCAO (1)
+  IPAddress ip = WiFi.localIP();
+  Serial.print("Choisir gabarit et DC en ouvrant à l'aide du navigateur une fenêtre à l'adresse http://");
+  Serial.print (ip);
+  Serial.println (" puis valider stsp.");
+  //Fin SCAO (1)
   WiFiClient client = server.available();   // listen for incoming clients
 
   if (client) {                             // if you get a client,
@@ -525,8 +496,8 @@ bool val_sleep = false;//variable to store the read value
             client.println();
 
             // the content of the HTTP response follows the header:
-            // client.print("Click <a href=\"/H\">here</a> turn the LED on<br>");
-            // client.print("Click <a href=\"/L\">here</a> turn the LED off<br>");
+            //client.print("Click <a href=\"/H\">here</a> turn the LED on pin 7 on<br>");
+            //client.print("Click <a href=\"/L\">here</a> turn the LED on pin 7 off<br>");
             //Début SCAO (2)
             //client.print("<!DOCTYPE html>");
             //client.print("<head><title>Quiet cook</title></head>");
@@ -562,12 +533,10 @@ bool val_sleep = false;//variable to store the read value
             client.println();
             // break out of the while loop:
             break;
-          }//if (currentLine.length() == 0)
-          else {      // if you got a newline, then clear currentLine:
+          } else {    // if you got a newline, then clear currentLine:
             currentLine = "";
           }
-        }//if (c == '\n')
-        else if (c != '\r') {    // if you got anything else but a carriage return character,
+        } else if (c != '\r') {  // if you got anything else but a carriage return character,
           currentLine += c;      // add it to the end of the currentLine
         }
         //Début SCAO (3)
@@ -588,7 +557,7 @@ bool val_sleep = false;//variable to store the read value
         
         int i=0;
             
-        while(i!=121){
+        while(i!=1000){
           get_time = (get_gabarit + time_url) + i;//Par exemple si le gabarit est 5 et la durée 60 mn : GET/?=5&t=60
           if(currentLine.endsWith(get_time)){
             DC = i;
@@ -600,12 +569,12 @@ bool val_sleep = false;//variable to store the read value
       }//if (client.available())
     }//while (client.connected())
     // close the connection:
+    //printWiFiStatus();
     client.stop();
     visu_DC_G();
-    Serial.print("Modifier le gabarit et la durée de cuisson (DC) ou valider la commande start pour démarrer la cuisson ");
-    Serial.println("(client disconnected)");
+    Serial.println("client disonnected");
   }//if (client)
-  }//saisie_wifi()
+}//saisie_wifi()
 
 /*
  * 3a-2 IHM clavier
@@ -852,7 +821,7 @@ void setup() {
   
   //Appel du setup et de la fonction de saisie wifi
   if (wifi_clavier) {setup_wifi();}
-  while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp);}
+  while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp); delay(1000);}
 
   //Appel de la fonction visu_DC_G()
   visu_DC_G();
