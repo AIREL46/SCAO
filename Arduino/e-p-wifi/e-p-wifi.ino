@@ -11,8 +11,8 @@
  * 4 - Fonction setup
  * 5 - Fonction loop
  * Chaque paragraphe est constitué de sous paragraphes :
- * a) IHM wifi
- * b) IHM clavier
+ * a) Les IHM (wifi et calvier)
+ * b) Libre
  * c) Acquisition des températures T1 et T2
  * d) Mesures des tensions et calcul de ibat
  * e) Built In Test Equipment (BITE)
@@ -35,9 +35,10 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *à l'aide d'un câble USB. Ce câble permet l'établissement d'une liaison série. 
 *De l'ordinateur vers le microcontrôleur pour téléverser le firmware. 
 *Du microcontrôleur vers l'ordinateur pour l'envoi de messages à l'aide du port /dev/ttyACM0, 
-*soit pour les afficher sur la console, 
+*soit pour les afficher sur le moniteur série, 
 *soit pour les mettre à disposition du programme BASH capture.sh qui édite un fichier "journal".   
-*Le présent code source est publié sur Github sous licence creative commons CC-BY https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/e-p-wifi.ino
+*Le présent code source est publié sur Github sous licence creative commons CC-BY 
+*https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/e-p-wifi.ino
 *L'objet du firmware est l'administration du microcontrôleur et de ses composants périphériques câblés selon le schéma électrique :
 *https://github.com/AIREL46/SCAO/raw/master/wifi/kicad/schema_electrique_e-p-433-wifi.png
 *Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension. 
@@ -45,8 +46,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *- la capture des températures délivrées par 2 thermomètres digitaux, le premier concerne la température sur le couvercle de la casserole, le second la température de la batterie, l'une des fonctions secondaires qui assure la sécurité de la e-poignée. .
 *- la transmission périodique de ces valeurs au e-rupteur (e-r-433).
 *Ses fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
-*Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des informaticiens. 
-*Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom de l'informaticien, 
+*Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des dévoloppeurs (informaticiens). 
+*Chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom du développeur, 
 *indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
 *
 ***********
@@ -58,7 +59,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *afin qu'un humain puisse contrôler et communiquer avec une machine.
  *Dans le cadre de ce projet, les moyens mis en œuvre sont soit ceux de l'ordinateur (clavier, souri, écran) ;
  *soit ceux du smartphone ; dans les deux cas, ils sont complétés par ceux propres du microcontrôleur, 
- *c'est à dire : 2 inverseurs ("start stop" et "sleep") et un jeu de leds.
+ *c'est à dire : 3 inverseurs ("ON/OFF" "sleep" et "start stop") et un jeu de leds.
  *Les IHM permettent de dialoguer avec le microcontrôleur, d'y introduire des données et de visualiser des résultats.
  *Ces IHM et leur fonction associée sont :
  * 1) le smartphone qui communique avec le microcontrôleur à l'aide de leur interface wifi respective, 
@@ -66,21 +67,24 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *    l'un ou l'autre permet la saisie des paramètres de cuisson par l'utilisateur et leur acquisition par le microcontrôleur.
  * 2) le moniteur série permet la visualisation du contenu des échantillons ainsi que les durées de cuisson (DC1 et DC2).
  * 3) le jeu de leds permet la visualisation des états de fonctionnement (BITE) 
- * 4) l'inverseur "start stop" à deux positions fournit deux états logiques (0 et 1) interprétés lors du déroullement du firmware 
+ * 4) l'inverseur ON/OFF permet d'alimenter le microcontrôleur à partir de la batterie
+ * 5) l'inverseur "sleep" à deux positions qui fournit deux états logiques (0 et 1) permet au microcontreur de fonctionner 
+ *    selon l'un des deux modes : normal ou sleep
+ * 6) l'inverseur "start stop" à deux positions fournit deux états logiques (0 et 1) interprétés lors du déroullement du firmware 
  *    de deux manières différentes liées à la fonction en cours d'exécution :
  *     - dans le cas de la fonction setup() la transition de 0 -> 1 lui permet de quitter cette même fonction pour transiter vers la fonction loop()
- *     - dans le cas de la fonction loop() la transition de 1 -> 0 lui permet d'inhiber l'autorisation de chauffe Ach
- * 5) l'inverseur "sleep" à deux positions qui fournit deux états logiques (0 et 1) permet au microcontreur de fonctionner 
- *    selon l'un des deux modes : normal ou sleep.
+ *     - dans le cas de la fonction loop() la transition de 1 -> 0 lui permet d'inhiber l'autorisation de chauffe Ach.
  *Le code source des fonctions associées aux IHM se différencie en fonction du moyen de communication mis en œuvre, 
  *smartphone ou ordinateur, dans la suite du programme, l'un et l'autre se distinguent par l'appellation "wifi" ou "clavier".
  * 
  * 1a Les IHM
  * 1a-1 Le code source des IHM en mode "wifi"
- * Le code source des IHM en mode "wifi" s'inspire de l'exemple Arduino "WiFi Web Server LED Blink" AP_SimpleWebServer.ino associé au fichier arduino_secrets.h
+ * Le code source des IHM en mode "wifi" s'inspire de l'exemple Arduino "simple web server" SimpleWebServerWiFi.ino 
+ * associé au fichier arduino_secrets.h qui permet de gérer le nom du réseau wifi ainsi que le mot de passe pour y accéder
+ * Le programme SimpleWebServerWiFi.ino a été conçu pour allumer ou èteindre une led?
  * Un serveur Web permet de communiquer les paramètres de cuisson via le Web. 
- * Le principe est basé sur la création d’un point d'accès (sans mot de passe) 
- * suivi du lancement d’un serveur dont l'adresse IP est imprimé sur le moniteur série. 
+ * Le principe est basé sur la connection au serveur wifi "freebox_a3c" de la Freebox puis à la création d'une page web
+ * dont l'adresse IP est imprimé sur le moniteur série. 
  * A partir du navigateur Web, d’un ordinateur ou d’un smartphone,  
  * ouvrir cette adresse IP : http: // « adresse IP » / cde 
  * Où « cde » est la commande à transmettre variable en fonction du contexte.
@@ -215,9 +219,9 @@ int Tau;//Tau
 float Vc;//Vitesse de consigne
 float A_c;//Accélération de consigne
 int ta;//temps d'anticipation
-//Création de la variable Durée de Cuisson (DC) et affectation d'une valeur par défaut
+//Création de la variable Durée de Cuisson (DC)
 int DC;
-//Création de la variable Gabarit et affectation d'une valeur par défaut
+//Création de la variable Gabarit
 int Gabarit;
 
 /*
@@ -381,9 +385,9 @@ bool val_sleep = false;//variable to store the read value
     delay(1200);
   }
   /*
-   * 3a Les IHM
+   * 3a Les IHM - Fonctions spécifiques communes
    */
-   //Visualisation DC et N° de gabarit
+   //F1 - Visualisation DC et N° de gabarit
   void visu_DC_G() {
   Serial.print ("Duree de cuisson "), Serial.print (DC); Serial.println (" mn - ");
   //Visualisation des parametres correspondants au N° du gabarit choisi
@@ -404,14 +408,14 @@ bool val_sleep = false;//variable to store the read value
   Serial.print ("{");Serial.print (p); Serial.print (", "); Serial.print (G); Serial.print (", "); Serial.print (I); Serial.print (", "); Serial.print (Tu); Serial.print (", "); Serial.print (Tm); Serial.print (", "); Serial.print (Tau); Serial.print (", "); Serial.print (Vc); Serial.print (", "); Serial.print (A_c); Serial.print (", "); Serial.print (ta);Serial.println ("}");
   }
  /*
-   * 3a-1 IHM WiFi
+   * 3a-1 IHM WiFi - Fonstions spécifiques wifi
    * Les fonctions sont les suivantes :
-   * 1-printWiFiStatus()
-   * 2-setup_wifi()
-   * 3-saisie_wifi()
+   * F1-printWiFiStatus()
+   * F2-setup_wifi()
+   * F3-saisie_wifi()
    * 
    */
-//1-printWiFiStatus()
+//F1-printWiFiStatus()
 void printWiFiStatus() {
   // print the SSID of the network you're attached to:
   Serial.print("SSID: ");
@@ -433,13 +437,10 @@ void printWiFiStatus() {
   Serial.println(ip);
 }
 
-//2-setup_wifi()
+//F2-setup_wifi()
   void setup_wifi() {
  rtc.begin();//Initializes the internal RTC.
-  
-  //Serial.begin(9600);      // initialize serial communication
-  //pinMode(7, OUTPUT);      // set the LED pin mode
-
+ 
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("Communication with WiFi module failed!");
@@ -466,15 +467,13 @@ void printWiFiStatus() {
   printWiFiStatus();                        // you're connected now, so print out the status
   }
   
-//3-saisie_wifi() - Saisie des paramètres de cuisson en wifi
+//F3-saisie_wifi() - Saisie des paramètres de cuisson en wifi
  // compare the previous status to the current status
   void saisie_wifi() {
-  //Début SCAO (1)
   IPAddress ip = WiFi.localIP();
   Serial.print("Choisir gabarit et DC en ouvrant à l'aide du navigateur une fenêtre à l'adresse http://");
   Serial.print (ip);
   Serial.println (" puis valider stsp.");
-  //Fin SCAO (1)
   WiFiClient client = server.available();   // listen for incoming clients
 
   if (client) {                             // if you get a client,
@@ -496,12 +495,7 @@ void printWiFiStatus() {
             client.println();
 
             // the content of the HTTP response follows the header:
-            //client.print("Click <a href=\"/H\">here</a> turn the LED on pin 7 on<br>");
-            //client.print("Click <a href=\"/L\">here</a> turn the LED on pin 7 off<br>");
-            //Début SCAO (2)
-            //client.print("<!DOCTYPE html>");
-            //client.print("<head><title>Quiet cook</title></head>");
-            client.print("<center>Quiet cook</center>");
+            client.print("Quiet cook");
             client.print("<br>");
             //client.print("<center><img srcset=images/quietcook-01.jpg></center>");
             client.print("<form method='get'>");//Tells the browser how to send form data to a web server.
@@ -528,7 +522,6 @@ void printWiFiStatus() {
             client.print(get_gabarit);
             client.print("<br>");
             client.print(get_time);
-            //Fin SCAO (2)
             // The HTTP response ends with another blank line:
             client.println();
             // break out of the while loop:
@@ -539,7 +532,6 @@ void printWiFiStatus() {
         } else if (c != '\r') {  // if you got anything else but a carriage return character,
           currentLine += c;      // add it to the end of the currentLine
         }
-        //Début SCAO (3)
         // Check to see the client request
        
          int x=0;
@@ -565,7 +557,6 @@ void printWiFiStatus() {
           }
           i++;
         }
-        //Fin SCAO (3)
       }//if (client.available())
     }//while (client.connected())
     // close the connection:
@@ -580,7 +571,7 @@ void printWiFiStatus() {
  * 3a-2 IHM clavier
  */
  
- //Fonction spécifique de saisie en mode "clavier"
+ //F1 - Fonction spécifique de saisie en mode "clavier"
  void saisie(){
   //Saisie des paramètres de cuisson
   //Saisie de la duree de cuisson DC
@@ -799,7 +790,7 @@ void setup() {
   digitalWrite(led_pin_r, HIGH);
   digitalWrite(led_pin_b, HIGH);
   /*
-   * 4a Les IHM
+   * 4a Les IHM - Commun
    */
    //sets the digital pin 1 as input (SW2)
   pinMode(inPin_stsp, INPUT);
