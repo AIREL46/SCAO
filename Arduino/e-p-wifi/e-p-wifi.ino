@@ -765,6 +765,8 @@ byte getT2(float *T2, byte reset_search) {
   Serial.print(";");//Séparation des champs par une virgule
   Serial.print(Vbat_1);//Tension mesurée Vbat1 en mV
   Serial.print(";");//Séparation des champs par une virgule
+  Serial.print(Vbat_2);//Tension mesurée Vbat1 en mV
+  Serial.print(";");//Séparation des champs par une virgule
   Serial.print(ibat);//Courant mesuré ibat en mA
   Serial.print(";");//Séparation des champs par une virgule
   Serial.print(V33);//Tension mesurée V33 en mV
