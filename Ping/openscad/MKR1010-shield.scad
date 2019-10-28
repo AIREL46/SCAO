@@ -8,7 +8,7 @@ noir=[0/255, 0/255, 0/255];
 bleu=[51/255, 51/255, 255/255];
 blanc=[255/255, 255/255, 255/255];
 rouge=[255/255, 0/255, 0/255];
-shield();
+translate([0,0,1.5])shield();
 module shield() {
 difference() {
 color(vert)linear_extrude(height = 0.05, center = true, convexity = 10, scale = 1.0) {import(file = "../LibreCAD/MKR1010-shield.dxf", layer = "shield");}
@@ -18,3 +18,4 @@ translate([0,0,0.215])color(noir)linear_extrude(height = 0.37, center = true, co
 translate([0,0,0.185])linear_extrude(height = 0.44, center = true, convexity = 10, scale = 1.0) {import(file = "../LibreCAD/MKR1010-shield.dxf", layer = "trous");}
 color(rouge)translate([0,0,0.165])linear_extrude(height = 0.28, center = true, convexity = 10, scale = 1.0) {import(file = "../LibreCAD/MKR1010-shield.dxf", layer = "bat");}
 }
+
