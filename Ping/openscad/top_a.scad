@@ -1,3 +1,5 @@
+top();
+module top() {
 //Parmi les 3 pieces de la e-poignee, le top a pour objet de reconduire
 //la fonctionnalite traditionnelle de la poignee du couvercle de la casserole, c'est a dire, de permettre sa manutention.
 //Une fonctionnalite complementaire est attendue, c'est celle dite de "milieu de table", le couvercle equipee de la e-poignee,
@@ -69,3 +71,4 @@ Ch(L2,-l2,atan (L2/l2));
 }//union
 
 }
+}//module top

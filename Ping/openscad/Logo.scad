@@ -1,3 +1,5 @@
+logo();
+module logo() {
 //Parmi les 3 pieces de la e-poignee, cette piece a pour objet de recevoir le logo, soit colle, soit incruste.
 //Il est compose d'une plateforme cylindrique equipee :
 //d'une fenetre qui permet la visibilite de l'embase USB du CI
@@ -21,7 +23,7 @@ Rl=R-12;//Rayon du logo
 $fn=100;
 
 //Construction du logo
-rotate([180,0,0]){
+rotate([0,0,0]){
 
 //Construction de la plateforme
 difference(){
@@ -40,3 +42,4 @@ plot(-L2/2,-l2/2);//Plot 3
 plot(L2/2,-l2/2);//Plot 4
 
 }//rotate
+}//module logo

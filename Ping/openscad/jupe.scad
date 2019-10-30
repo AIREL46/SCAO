@@ -1,3 +1,5 @@
+jup();
+module jup() {
 usb=false; v433=true; ent=false; lamage=false;
 //Ce fichier permet la modélisation de 2 versions de jupe, la version USB et la version 433MHZ. En option ajout : 4 entretoises pour sureleve le CI et 4 lamages.
 //Parmi les 3 pieces de la e-poinee, la jupe a pour objet de constituer l'habillage de la partie inferieure.
@@ -147,5 +149,6 @@ per_jupe ();
 if (usb) {
 translate([0.99*(2*e+L1/2), -13.5, -5])rotate([90, 0, 90])linear_extrude(height=1, scale=[1,1])text("USB");}
 if (v433) {
-translate([0.99*(2*e+L1/2), -11, -5])rotate([90, 0, 90])linear_extrude(height=1, scale=[1,1])text("433");}
+translate([0.99*(2*e+L1/2), -11, -5])rotate([90, 0, 90])linear_extrude(height=1, scale=[1,1])text("wifi");}
 }//module jupe
+}//module jup
