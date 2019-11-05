@@ -1,7 +1,7 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP Conn_01x08-a
-D Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)
+$CMP Conn_02x14_MKR1010
+D Generic connector, double row, 02x14, counter clockwise pin numbering scheme (similar to DIP packge numbering), script generated (kicad-library-utils/schlib/autogen/connector/)
 K connector
 F ~
 $ENDCMP
