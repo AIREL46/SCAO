@@ -967,4 +967,6 @@ Text Notes 7514 5535 0    50   ~ 10
 07/11/2019
 Text Notes 7491 5600 0    50   ~ 10
 Régis Leruste
+Text Notes 4716 5686 0    50   ~ 10
+https://github.com/AIREL46/SCAO/raw/master/kicad/e-p-wifi-shield/e-p-wifi.png
 $EndSCHEMATC
