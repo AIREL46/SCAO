@@ -1,6 +1,36 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Sp
 LIBS:e-p-433-cache
-EELAYER 30 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -17,7 +47,7 @@ $EndDescr
 Text Notes 8145 975  0    100  ~ 20
 Battery manager
 $Comp
-L e-p-433-rescue:LED D2
+L LED D2
 U 1 1 5800E0A0
 P 8125 1525
 F 0 "D2" H 8260 1455 60  0000 C CNB
@@ -34,7 +64,7 @@ F 9 "0,20 €" H 8125 1525 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R15
+L R R15
 U 1 1 5800E0FF
 P 8125 1875
 F 0 "R15" V 8130 1875 60  0000 C CNB
@@ -51,7 +81,7 @@ F 9 "0,05 €" H 8125 1875 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-rescue:R R18
+L R R18
 U 1 1 5800E220
 P 9125 1950
 F 0 "R18" V 9135 1950 60  0000 C CNB
@@ -68,7 +98,7 @@ F 9 "0,05 €" H 9125 1950 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-rescue:CONN_01X06 P5
+L CONN_01X06 P5
 U 1 1 58025B97
 P 9695 4305
 F 0 "P5" V 9695 4680 50  0000 C CNN
@@ -97,7 +127,7 @@ ANT
 Text Notes 6575 5050 0    100  ~ 20
 T2
 $Comp
-L e-p-433-rescue:CONN_01X02 P4
+L CONN_01X02 P4
 U 1 1 5804BEA6
 P 10585 1700
 F 0 "P4" V 10575 1510 60  0000 C CNB
@@ -119,7 +149,7 @@ Text Notes 3450 1320 0    100  ~ 20
 * : Cut to separate VIN from VUSB,\nif using a battery charger or external\npower for USB device mode
 $Bitmap
 Pos 9625 6825
-Scale 1.000000
+Scale 0,100000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 0F 81 00 00 05 90 08 02 00 00 00 61 88 44 
 58 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC DC B1 52 14 5B 
@@ -4917,7 +4947,7 @@ CB 41 07 00 00 00 00 00 00 00 00 00 00 E0 72 D0 01 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 2E 07 1D 00 00 00 00 00 00 00 00 00 00 80 CB 41 07 00 00 00 00 00 00 
 00 00 00 00 E0 72 D0 01 00 00 00 00 00 00 00 00 00 00 B8 1C 74 00 00 00 00 00 00 00 00 00 00 00 
 2E 07 1D 00 00 00 00 00 00 00 00 00 00 80 2B 9B 72 A2 EA 82 B7 AD 55 00 00 00 00 49 45 4E 44 AE 
-42 60 82 
+42 60 82 00 
 EndData
 $EndBitmap
 Text Notes 6510 2950 0    60   ~ 12
@@ -4929,7 +4959,7 @@ VUSB
 Text Notes 8145 3620 1    60   ~ 12
 3 X diviseur par 2
 $Comp
-L e-p-433-rescue:LED D3
+L LED D3
 U 1 1 580638D6
 P 7125 5675
 F 0 "D3" H 7250 5730 60  0000 C CNB
@@ -4946,7 +4976,7 @@ F 9 "0,20 €" H 7125 5675 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-rescue:LED D4
+L LED D4
 U 1 1 58063C6E
 P 7125 5975
 F 0 "D4" H 7240 6030 60  0000 C CNB
@@ -4963,7 +4993,7 @@ F 9 "0,20 €" H 7125 5975 60  0001 C CNN "Prix"
 	-1   0    0    1   
 $EndComp
 $Comp
-L e-p-433-rescue:LED D1
+L LED D1
 U 1 1 58063F1D
 P 7125 5375
 F 0 "D1" H 7250 5420 60  0000 C CNB
@@ -4984,7 +5014,7 @@ STAT
 Text Notes 6550 3850 0    60   ~ 12
 PROG
 $Comp
-L e-p-433-rescue:SWITCH_INV SW3
+L SWITCH_INV SW3
 U 1 1 5813189E
 P 9865 1870
 F 0 "SW3" H 9805 1965 60  0000 C CNB
@@ -5005,7 +5035,7 @@ Calibration
 Text Notes 7440 4450 2    60   ~ 12
 Data to transmiter
 $Comp
-L Sp:3.3V #PWR17
+L 3.3V #PWR17
 U 1 1 582B4AFD
 P 9320 4355
 F 0 "#PWR17" H 9320 4205 50  0001 C CNN
@@ -5017,7 +5047,7 @@ F 4 "0,00 €" H 9320 4355 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-rescue:VBAT #PWR16
+L VBAT #PWR16
 U 1 1 582B4B5B
 P 9965 1200
 F 0 "#PWR16" H 9965 1050 50  0001 C CNN
@@ -5029,7 +5059,7 @@ F 4 "0,00 €" H 9965 1200 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:3.3V #PWR13
+L 3.3V #PWR13
 U 1 1 582B5D56
 P 6695 1190
 F 0 "#PWR13" H 6695 1040 50  0001 C CNN
@@ -5043,7 +5073,7 @@ $EndComp
 Text Notes 6575 4750 0    100  ~ 20
 T1
 $Comp
-L e-p-433-rescue:C C5
+L C C5
 U 1 1 582C67BB
 P 7005 1490
 F 0 "C5" H 7015 1390 60  0000 L CNB
@@ -5060,7 +5090,7 @@ F 9 "0,15 €" H 7005 1490 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:R R3
+L R R3
 U 1 1 582C70D5
 P 1300 2200
 F 0 "R3" V 1310 2200 60  0000 C CNB
@@ -5077,7 +5107,7 @@ F 9 "0,05 €" H 1300 2200 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-rescue:C C1
+L C C1
 U 1 1 582C70E1
 P 1450 2450
 F 0 "C1" H 1530 2550 60  0000 C CNB
@@ -5104,7 +5134,7 @@ Thermocouple
 Text Notes 3300 2525 2    100  ~ 20
 T1
 $Comp
-L e-p-433-rescue:R R4
+L R R4
 U 1 1 582C70FF
 P 1300 2900
 F 0 "R4" V 1310 2900 60  0000 C CNB
@@ -5121,7 +5151,7 @@ F 9 "0,05 €" H 1300 2900 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R1
+L R R1
 U 1 1 582C710B
 P 1150 3100
 F 0 "R1" V 1160 3100 60  0000 C CNB
@@ -5138,7 +5168,7 @@ F 9 "0,05 €" H 1150 3100 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:C C2
+L C C2
 U 1 1 582C7117
 P 1450 3050
 F 0 "C2" H 1520 3130 60  0000 C CNB
@@ -5155,7 +5185,7 @@ F 9 "0,05 €" H 1450 3050 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:3.3V #PWR5
+L 3.3V #PWR5
 U 1 1 582C7122
 P 2275 2050
 F 0 "#PWR5" H 2275 1900 50  0001 C CNN
@@ -5167,7 +5197,7 @@ F 4 "0,00 €" H 2275 2050 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:CONN_01X02 P1
+L CONN_01X02 P1
 U 1 1 582C7130
 P 950 2550
 F 0 "P1" H 950 2700 60  0000 C CNB
@@ -5184,7 +5214,7 @@ F 9 "0,85 €" H 950 2550 60  0001 C CNN "Prix"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:C C7
+L C C7
 U 1 1 582CA0D1
 P 9520 1700
 F 0 "C7" H 9535 1785 60  0000 L CNB
@@ -5201,7 +5231,7 @@ F 9 "0,15 €" H 9520 1700 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:VBAT #PWR11
+L VBAT #PWR11
 U 1 1 582CBA63
 P 6525 1600
 F 0 "#PWR11" H 6525 1450 50  0001 C CNN
@@ -5213,7 +5243,7 @@ F 4 "0,00 €" H 6525 1600 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:TEST_1P W2
+L TEST_1P W2
 U 1 1 582C7143
 P 3400 2450
 F 0 "W2" H 3400 2750 60  0000 C CNB
@@ -5230,7 +5260,7 @@ F 9 "0,24 €" H 3400 2450 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:AD8495ARMZ U1
+L AD8495ARMZ U1
 U 1 1 582C70C9
 P 2275 2550
 F 0 "U1" H 2125 2550 120 0000 C CNB
@@ -5247,7 +5277,7 @@ F 9 "3,00 €" H 2275 2550 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:VUSB #PWR14
+L VUSB #PWR14
 U 1 1 582CEF1B
 P 7610 1200
 F 0 "#PWR14" H 7610 1050 50  0001 C CNN
@@ -5258,7 +5288,7 @@ F 3 "" H 7610 1200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:C C6
+L C C6
 U 1 1 582CEF28
 P 7610 1705
 F 0 "C6" H 7630 1595 60  0000 L CNB
@@ -5275,7 +5305,7 @@ F 9 "0,15 €" H 7610 1705 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:MCP_73831 U4
+L MCP_73831 U4
 U 1 1 582EDD53
 P 8625 1700
 F 0 "U4" H 8625 1475 120 0000 C CNB
@@ -5292,7 +5322,7 @@ F 9 "0,96 €" H 8625 1700 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:VUSB #PWR10
+L VUSB #PWR10
 U 1 1 582F4DB9
 P 5825 1550
 F 0 "#PWR10" H 5825 1400 50  0001 C CNN
@@ -5303,7 +5333,7 @@ F 3 "" H 5825 1550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:R R13
+L R R13
 U 1 1 5832F0E0
 P 6850 3575
 F 0 "R13" V 6865 3575 60  0000 C CNB
@@ -5320,7 +5350,7 @@ F 9 "0,05 €" H 6850 3575 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R8
+L R R8
 U 1 1 5832F4F4
 P 7450 2975
 F 0 "R8" V 7455 2975 60  0000 C CNB
@@ -5337,7 +5367,7 @@ F 9 "0,05 €" H 7450 2975 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R9
+L R R9
 U 1 1 5832F6EF
 P 7450 3275
 F 0 "R9" V 7455 3275 60  0000 C CNB
@@ -5354,7 +5384,7 @@ F 9 "0,05 €" H 7450 3275 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R11
+L R R11
 U 1 1 5832F908
 P 7450 3575
 F 0 "R11" V 7455 3575 60  0000 C CNB
@@ -5371,7 +5401,7 @@ F 9 "0,05 €" H 7450 3575 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R14
+L R R14
 U 1 1 5832FAF1
 P 7575 5375
 F 0 "R14" V 7580 5380 60  0000 C CNB
@@ -5388,7 +5418,7 @@ F 9 "0,05 €" H 7575 5375 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R12
+L R R12
 U 1 1 58330094
 P 6850 3275
 F 0 "R12" V 6865 3275 60  0000 C CNB
@@ -5405,7 +5435,7 @@ F 9 "0,05 €" H 6850 3275 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R10
+L R R10
 U 1 1 58330234
 P 6850 2975
 F 0 "R10" V 6865 2985 60  0000 C CNB
@@ -5422,7 +5452,7 @@ F 9 "0,05 €" H 6850 2975 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-rescue:TEST_1P W4
+L TEST_1P W4
 U 1 1 583318B5
 P 7130 1190
 F 0 "W4" H 7125 1415 60  0000 C CNB
@@ -5439,7 +5469,7 @@ F 9 "0,24 €" H 7130 1190 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:TEST_1P W5
+L TEST_1P W5
 U 1 1 58331E90
 P 7930 1200
 F 0 "W5" H 7930 1415 60  0000 C CNB
@@ -5456,7 +5486,7 @@ F 9 "0,24 €" H 7930 1200 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:TEST_1P W6
+L TEST_1P W6
 U 1 1 5833217B
 P 7930 2425
 F 0 "W6" H 7935 2620 60  0000 C CNB
@@ -5473,7 +5503,7 @@ F 9 "0,24 €" H 7930 2425 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:TEST_1P W7
+L TEST_1P W7
 U 1 1 5833249C
 P 9520 1200
 F 0 "W7" H 9520 1395 60  0000 C CNB
@@ -5495,7 +5525,7 @@ Wire Notes Line
 	9745 4605 9745 4005
 Connection ~ 1450 3275
 $Comp
-L Sp:Teensy_3-2 U3
+L Teensy_3-2 U3
 U 1 1 583882A5
 P 5375 4025
 F 0 "U3" H 5375 4000 300 0000 C CNB
@@ -5512,7 +5542,7 @@ F 9 "28,49 €" H 5375 4025 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR15
+L GND #PWR15
 U 1 1 583C7F0C
 P 7610 2425
 F 0 "#PWR15" H 7610 2175 50  0001 C CNN
@@ -5523,7 +5553,7 @@ F 3 "" H 7610 2425 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR9
+L GND #PWR9
 U 1 1 583C8ED8
 P 3950 2100
 F 0 "#PWR9" H 3950 1850 50  0001 C CNN
@@ -5534,7 +5564,7 @@ F 3 "" H 3950 2100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR3
+L GND #PWR3
 U 1 1 583C91DA
 P 1450 2600
 F 0 "#PWR3" H 1450 2350 50  0001 C CNN
@@ -5545,7 +5575,7 @@ F 3 "" H 1450 2600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR1
+L GND #PWR1
 U 1 1 583C94B0
 P 1150 3275
 F 0 "#PWR1" H 1150 3025 50  0001 C CNN
@@ -5556,7 +5586,7 @@ F 3 "" H 1150 3275 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR18
+L GND #PWR18
 U 1 1 583C9DE2
 P 9495 4555
 F 0 "#PWR18" H 9495 4305 50  0001 C CNN
@@ -5567,7 +5597,7 @@ F 3 "" H 9495 4555 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:TEST_1P W1
+L TEST_1P W1
 U 1 1 583F0D66
 P 2100 2025
 F 0 "W1" H 2100 2330 60  0000 C CNB
@@ -5584,7 +5614,7 @@ F 9 "0,24 €" H 2100 2025 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR12
+L GND #PWR12
 U 1 1 583C80AA
 P 7725 6150
 F 0 "#PWR12" H 7725 5900 50  0001 C CNN
@@ -5595,7 +5625,7 @@ F 3 "" H 7725 6150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:R R16
+L R R16
 U 1 1 58407AA4
 P 7575 5675
 F 0 "R16" V 7580 5670 60  0000 C CNB
@@ -5612,7 +5642,7 @@ F 9 "0,05 €" H 7575 5675 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R17
+L R R17
 U 1 1 58407F65
 P 7575 5975
 F 0 "R17" V 7580 5970 60  0000 C CNB
@@ -5633,7 +5663,7 @@ Wire Wire Line
 Text Notes 10985 2620 2    60   ~ 12
 P4 : vue de dessus\nle + est à droite
 $Comp
-L Sp:Capuchon SW1
+L Capuchon SW1
 U 1 1 5845B03C
 P 3925 5800
 F 0 "SW1" H 4075 5910 50  0000 C CNB
@@ -5650,7 +5680,7 @@ F 9 "0,33 €" H 3925 5800 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:3.3V #PWR7
+L 3.3V #PWR7
 U 1 1 5845BA73
 P 3625 5975
 F 0 "#PWR7" H 3625 5825 50  0001 C CNN
@@ -5661,7 +5691,7 @@ F 3 "" H 3625 5975 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:R R7
+L R R7
 U 1 1 5845BAE5
 P 4225 6125
 F 0 "R7" V 4240 6120 60  0000 C CNB
@@ -5678,7 +5708,7 @@ F 9 "0,05 €" H 4225 6125 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR8
+L GND #PWR8
 U 1 1 5845BB66
 P 4225 6275
 F 0 "#PWR8" H 4225 6025 50  0001 C CNN
@@ -5689,7 +5719,7 @@ F 3 "" H 4225 6275 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:SW_PUSH_m SW2
+L SW_PUSH_m SW2
 U 1 1 58483BFB
 P 3925 5975
 F 0 "SW2" H 4075 6085 50  0000 C CNB
@@ -5707,7 +5737,7 @@ F 9 "4,78 €" H 3925 5975 60  0001 C CNN "Prix"
 $EndComp
 Connection ~ 4225 5975
 $Comp
-L e-p-433-rescue:CONN_01X01 P3
+L CONN_01X01 P3
 U 1 1 5899B57D
 P 9395 3855
 F 0 "P3" H 9395 3955 60  0000 C CNB
@@ -5719,7 +5749,7 @@ F 4 "0,00 €" H 9395 3855 60  0001 C CNN "Prix"
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1150 3275 1450 3275
+	1150 3275 2275 3275
 Wire Wire Line
 	1450 3200 1450 3275
 Wire Wire Line
@@ -5727,9 +5757,9 @@ Wire Wire Line
 Wire Wire Line
 	1150 2200 1150 2500
 Wire Wire Line
-	1150 2600 1150 2900
+	1150 2600 1150 2950
 $Comp
-L e-p-433-rescue:R R5
+L R R5
 U 1 1 5981F7FB
 P 1300 4825
 F 0 "R5" V 1315 4825 60  0000 C CNB
@@ -5746,7 +5776,7 @@ F 9 "0,05 €" H 1300 4825 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-rescue:C C3
+L C C3
 U 1 1 5981F807
 P 1450 5075
 F 0 "C3" H 1465 4970 60  0000 L CNB
@@ -5767,7 +5797,7 @@ Ampli thermocouple 2
 Text Notes 3275 5150 2    100  ~ 20
 T2
 $Comp
-L e-p-433-rescue:R R6
+L R R6
 U 1 1 5981F818
 P 1300 5525
 F 0 "R6" V 1310 5520 60  0000 C CNB
@@ -5784,7 +5814,7 @@ F 9 "0,05 €" H 1300 5525 60  0001 C CNN "Prix"
 	0    1    1    0   
 $EndComp
 $Comp
-L e-p-433-rescue:R R2
+L R R2
 U 1 1 5981F824
 P 1150 5725
 F 0 "R2" V 1160 5715 60  0000 C CNB
@@ -5801,7 +5831,7 @@ F 9 "0,05 €" H 1150 5725 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:C C4
+L C C4
 U 1 1 5981F830
 P 1450 5675
 F 0 "C4" H 1515 5575 60  0000 C CNB
@@ -5818,7 +5848,7 @@ F 9 "0,05 €" H 1450 5675 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:3.3V #PWR6
+L 3.3V #PWR6
 U 1 1 5981F837
 P 2275 4675
 F 0 "#PWR6" H 2275 4525 50  0001 C CNN
@@ -5830,7 +5860,7 @@ F 4 "0,00 €" H 2275 4675 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:CONN_01X02 P2
+L CONN_01X02 P2
 U 1 1 5981F843
 P 950 5175
 F 0 "P2" H 950 5325 60  0000 C CNB
@@ -5847,7 +5877,7 @@ F 9 "0,85 €" H 950 5175 60  0001 C CNN "Prix"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L e-p-433-rescue:TEST_1P W3
+L TEST_1P W3
 U 1 1 5981F84F
 P 3075 4650
 F 0 "W3" H 3075 5025 100 0000 C CNB
@@ -5864,7 +5894,7 @@ F 9 "0,24 €" H 3075 4650 60  0001 C CNN "Prix"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sp:AD8495ARMZ U2
+L AD8495ARMZ U2
 U 1 1 5981F85B
 P 2275 5175
 F 0 "U2" H 2125 5175 120 0000 C CNB
@@ -5882,7 +5912,7 @@ F 9 "3,00 €" H 2275 5175 60  0001 C CNN "Prix"
 $EndComp
 Connection ~ 1450 5900
 $Comp
-L power:GND #PWR4
+L GND #PWR4
 U 1 1 5981F863
 P 1450 5225
 F 0 "#PWR4" H 1450 4975 50  0001 C CNN
@@ -5893,7 +5923,7 @@ F 3 "" H 1450 5225 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR2
+L GND #PWR2
 U 1 1 5981F869
 P 1150 5900
 F 0 "#PWR2" H 1150 5650 50  0001 C CNN
@@ -5904,7 +5934,7 @@ F 3 "" H 1150 5900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 5900 1450 5900
+	1150 5900 2275 5900
 Wire Wire Line
 	1450 5825 1450 5900
 Wire Wire Line
@@ -5912,9 +5942,9 @@ Wire Wire Line
 Wire Wire Line
 	1150 4825 1150 5125
 Wire Wire Line
-	1150 5225 1150 5525
+	1150 5225 1150 5575
 Wire Wire Line
-	3400 2450 3400 2550
+	3400 2450 3400 6700
 Wire Wire Line
 	8125 1200 8125 1325
 Wire Wire Line
@@ -5959,14 +5989,14 @@ Connection ~ 2125 5900
 Wire Wire Line
 	2425 4725 3075 4725
 Wire Wire Line
-	3075 4650 3075 4725
+	3075 4650 3075 5175
 Wire Wire Line
 	3300 5175 3300 6775
 Wire Wire Line
 	3075 5175 3300 5175
 Connection ~ 3075 4725
 Wire Wire Line
-	3825 6125 4025 6125
+	3825 6125 4075 6125
 Wire Wire Line
 	4075 6125 4075 6275
 Wire Wire Line
@@ -5985,7 +6015,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 5075 6525 5075
 Wire Wire Line
-	5825 2375 5825 1850
+	5825 2375 5825 1550
 Connection ~ 5825 1850
 Wire Wire Line
 	5825 1850 7075 1850
@@ -5996,15 +6026,15 @@ Wire Wire Line
 Wire Wire Line
 	6525 3575 6700 3575
 Wire Wire Line
-	6525 2675 6695 2675
+	6525 2675 7000 2675
 Wire Wire Line
 	7000 2675 7000 2975
 Wire Wire Line
-	7000 3275 7075 3275
+	7000 3275 7300 3275
 Wire Wire Line
 	7075 1850 7075 3275
 Wire Wire Line
-	7000 3575 7175 3575
+	7000 3575 7300 3575
 Wire Wire Line
 	7000 2975 7300 2975
 Connection ~ 7075 3275
@@ -6019,8 +6049,9 @@ Wire Wire Line
 	7650 3575 7600 3575
 Wire Wire Line
 	7600 2975 7650 2975
+Connection ~ 7650 2975
 Wire Wire Line
-	7600 3275 7650 3275
+	7600 3275 7855 3275
 Connection ~ 7650 3275
 Wire Wire Line
 	6525 4175 8400 4175
@@ -6037,7 +6068,7 @@ Wire Wire Line
 Wire Wire Line
 	7325 5975 7425 5975
 Wire Wire Line
-	7725 5375 7725 5675
+	7725 5375 7725 6150
 Connection ~ 7725 5675
 Connection ~ 7725 5975
 Wire Wire Line
@@ -6149,7 +6180,7 @@ Wire Wire Line
 Wire Wire Line
 	6525 3875 8520 3875
 Wire Wire Line
-	9495 4055 9495 4155
+	9495 4055 9495 4255
 Connection ~ 9495 4155
 Wire Wire Line
 	9495 4055 9395 4055
@@ -6162,7 +6193,7 @@ Wire Notes Line
 Wire Notes Line
 	8915 4840 8915 3720
 $Comp
-L power:GND #PWR?
+L GND #PWR?
 U 1 1 59958A01
 P 7855 3275
 F 0 "#PWR?" H 7855 3025 50  0001 C CNN
@@ -6173,11 +6204,11 @@ F 3 "" H 7855 3275 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 2975 7650 3275
+	7650 2975 7650 3575
 Wire Notes Line
 	8245 3660 8245 2765
 $Comp
-L power:GND #PWR?
+L GND #PWR?
 U 1 1 59959D4F
 P 7005 1640
 F 0 "#PWR?" H 7005 1390 50  0001 C CNN
@@ -6188,28 +6219,28 @@ F 3 "" H 7005 1640 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6695 1190 7005 1190
+	6695 1190 7130 1190
 Connection ~ 7005 1190
 Wire Wire Line
 	6695 1190 6695 2675
 Connection ~ 6695 2675
 Wire Wire Line
-	8125 2025 8125 2200
+	8125 2025 8125 2535
 Wire Wire Line
-	7610 1200 7930 1200
+	7610 1200 8125 1200
 Connection ~ 7930 1200
 Wire Wire Line
 	7610 1200 7610 1555
 Wire Wire Line
 	7610 1855 7610 2425
 Wire Wire Line
-	7610 2425 7930 2425
+	7610 2425 10535 2425
 Wire Wire Line
-	9125 2425 9125 2200
+	9125 2425 9125 2100
 Connection ~ 7930 2425
 Connection ~ 9125 2200
 Wire Wire Line
-	9125 1200 9520 1200
+	9125 1200 9965 1200
 Connection ~ 9520 1200
 Wire Wire Line
 	9965 1200 9965 1370
@@ -6238,56 +6269,4 @@ Wire Notes Line
 	7375 2650 7375 750 
 Text Notes 8150 2625 0    60   ~ 12
 To microcontroler
-Wire Wire Line
-	1450 3275 2125 3275
-Wire Wire Line
-	1450 5900 2125 5900
-Wire Wire Line
-	1150 5525 1150 5575
-Wire Wire Line
-	1150 2900 1150 2950
-Wire Wire Line
-	2125 3275 2275 3275
-Wire Wire Line
-	3400 2550 3400 6700
-Wire Wire Line
-	2125 5900 2275 5900
-Wire Wire Line
-	3075 4725 3075 5175
-Wire Wire Line
-	4025 6125 4075 6125
-Wire Wire Line
-	5825 1850 5825 1550
-Wire Wire Line
-	7075 3275 7300 3275
-Wire Wire Line
-	7175 3575 7300 3575
-Wire Wire Line
-	7650 3275 7855 3275
-Wire Wire Line
-	7650 3275 7650 3575
-Wire Wire Line
-	7725 5675 7725 5975
-Wire Wire Line
-	7725 5975 7725 6150
-Wire Wire Line
-	9495 4155 9495 4255
-Wire Wire Line
-	7005 1190 7130 1190
-Wire Wire Line
-	6695 2675 7000 2675
-Wire Wire Line
-	7930 1200 8125 1200
-Wire Wire Line
-	7930 2425 9125 2425
-Wire Wire Line
-	9125 2200 9125 2100
-Wire Wire Line
-	9520 1200 9965 1200
-Wire Wire Line
-	9125 2425 9520 2425
-Wire Wire Line
-	8125 2200 8125 2535
-Wire Wire Line
-	9520 2425 10535 2425
 $EndSCHEMATC
