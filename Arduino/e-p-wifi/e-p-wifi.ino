@@ -19,7 +19,7 @@
  * f) Transmission
  * g) Horodatage et chronomètre
  * h) Bilan énergétique de la batterie
- * i) Calcul
+ * i) Régulation de la température
  * j) Visualisation du contenu des échantillons
  * k) Mode sleep
  * 1 - Introduction
