@@ -371,6 +371,7 @@ bool val_sleep = false;//variable to store the read value
 /*
  //#include <digitalWriteFast.h> Non supporter par le MKR WiFi 1010
    */
+ //Wait for serial monitor
  void wait_s_m(){
     int time = 0;
     while (!Serial && time < 1000) {
@@ -408,6 +409,19 @@ bool val_sleep = false;//variable to store the read value
   Serial.print ("N° de gabarit choisi : ");  Serial.println(Gabarit); Serial.print("Ce gabarit correspond aux paramètres (p, G, I, Tu, Tm, Tau, Vc, Ac, ta) : ");
   Serial.print ("{");Serial.print (p); Serial.print (", "); Serial.print (G); Serial.print (", "); Serial.print (I); Serial.print (", "); Serial.print (Tu); Serial.print (", "); Serial.print (Tm); Serial.print (", "); Serial.print (Tau); Serial.print (", "); Serial.print (Vc); Serial.print (", "); Serial.print (A_c); Serial.print (", "); Serial.print (ta);Serial.println ("}");
   }
+  //F2 - Clignotements des 4 leds
+  void cli_4leds() {
+    digitalWrite(led_pin_v, HIGH);
+    digitalWrite(led_pin_j, HIGH);
+    digitalWrite(led_pin_r, HIGH);
+    digitalWrite(led_pin_b, HIGH);
+    delay(1000);
+    digitalWrite(led_pin_v, LOW);
+    digitalWrite(led_pin_j, LOW);
+    digitalWrite(led_pin_r, LOW);
+    digitalWrite(led_pin_b, LOW);
+    delay(1000);
+    }
  /*
    * 3a-1 IHM WiFi - Fonstions spécifiques wifi
    * Les fonctions sont les suivantes :
@@ -786,7 +800,7 @@ void setup() {
   Serial.begin(9600);
   delay(2000);
   mesures();
-   pinMode(led_pin_v, OUTPUT);
+  pinMode(led_pin_v, OUTPUT);
   pinMode(led_pin_j, OUTPUT);
   pinMode(led_pin_r, OUTPUT);
   pinMode(led_pin_b, OUTPUT);  // sets the digital pin 19 as output
@@ -798,13 +812,14 @@ void setup() {
   /*
    * 4a Les IHM - Commun
    */
+   //Affectation du switch SW2 sur l'entrée digitale D1 du microcontrôleur
    //sets the digital pin 1 as input (SW2)
   pinMode(inPin_stsp, INPUT);
-  
-  //Choix de la fonction de saisie (wifi ou clavier)
-  Serial.println ("Systeme de Cuisson Assistee par Ordinateur (SCAO) ");
+  //Message d'accueil
+  Serial.println ("Systeme de Cuisson Intelligent (SCI) ");
+  //Choix du mode de saisie des paramètres de cuisson : mode wifi (à l'aide du smartphone)  ou mode clavier
   Serial.println("Saisie wifi (O) ou clavier (N)");
-  bool wifi_clavier;
+  bool wifi_clavier;//Initialisation de la variable logique wifi_clavier (true -> wifi false -> clavier)
   flag=1;
   while (flag>0) {if (Serial.available() > 0)
     {reponse=Serial.read(); if (reponse==111 | reponse==79){flag=flag-1; wifi_clavier = true;}//Si le caractère frappé est O ou o
@@ -814,13 +829,23 @@ void setup() {
   delay(2000);
   
   //Appel de la fonction "saisie clavier"
-  if (state_Vusb && !wifi_clavier) {saisie();}
-  
+  //cette fonction est appellée si les conditions suivantes sont remplies :
+  //1) le moniteur série est connecté par l'intermédiaire du câble série entre l'ordinateur et la plateforme MKR wifi 1010
+  //c'est la variable Serial qui atteste de cette connexion
+  //2) le mode clavier a été choisi par l'utilisateur
+  //3) la commande stsp est à l'état 0 -> stop
+  if (Serial && !wifi_clavier && !val_stsp) {saisie();}
+  //Fonction boucle d'attente de la commande stsp
+  //Les 4 leds clignotent
+  //Dès que le switch (SW2) stsp est en position active val_stsp est "true"
+  //le progamme quitte la fonction setup pour entrer dans la fonction loop
+  while (!val_stsp) {val_stsp = digitalRead(inPin_stsp); cli_4leds(); Serial.print(val_stsp); Serial.println (" - attente de la cmd start");}
   //Appel du setup et de la fonction de saisie wifi
   if (wifi_clavier) {setup_wifi();}
-  while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp); delay(1000);}
+  //Appel de la fonction saisie_wifi suivie de la lecture périodique toutes les secondes de la variable val-stsp qui permet la sortie du "while" quand elle est égale à "true"
+  while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp); delay(1000);}//Harmoniser avec la fonction clavier
 
-  //Appel de la fonction visu_DC_G()
+  //Appel de la fonction visu_DC_G() qui affiche la durée de cuisson et le contenu du gabarit sélectionnés par l'utilisateur
   visu_DC_G();
   
   /*   
@@ -828,29 +853,10 @@ void setup() {
    */
 
   /*
-   * 4a-2 IHM clavier
+   * 4a-2 IHM clavier : vide
    */
-    
-  //Boucle d'attente de la commande stsp
-  //Les 4 leds clignotent
-  //Dès que le switch (SW2) stsp est en position active val_stsp est "true"
-  //le progamme quitte la fonction setup pour entrer dans la fonction loop
-  while (!val_stsp) {
-    val_stsp = digitalRead(inPin_stsp);
-    Serial.print(val_stsp);
-    Serial.println (" - attente de la cmd start");
-    digitalWrite(led_pin_v, HIGH);
-    digitalWrite(led_pin_j, HIGH);
-    digitalWrite(led_pin_r, HIGH);
-    digitalWrite(led_pin_b, HIGH);
-    delay(1000);
-    digitalWrite(led_pin_v, LOW);
-    digitalWrite(led_pin_j, LOW);
-    digitalWrite(led_pin_r, LOW);
-    digitalWrite(led_pin_b, LOW);
-    delay(1000);
-    }
-
+ 
+//4b - Libre
 //4c - Acquisition des températures T1 et T2
 
 /*
