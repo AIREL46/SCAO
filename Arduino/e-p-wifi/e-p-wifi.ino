@@ -835,18 +835,20 @@ void setup() {
   //2) le mode clavier a été choisi par l'utilisateur
   //3) la commande stsp est à l'état 0 -> stop
   if (Serial && !wifi_clavier && !val_stsp) {saisie();}
-  //Fonction boucle d'attente de la commande stsp
-  //Les 4 leds clignotent
-  //Dès que le switch (SW2) stsp est en position active val_stsp est "true"
-  //le progamme quitte la fonction setup pour entrer dans la fonction loop
-  while (!val_stsp) {val_stsp = digitalRead(inPin_stsp); cli_4leds(); Serial.print(val_stsp); Serial.println (" - attente de la cmd start");}
-  //Appel du setup et de la fonction de saisie wifi
+  //Appel du setup wifi
   if (wifi_clavier) {setup_wifi();}
   //Appel de la fonction saisie_wifi suivie de la lecture périodique toutes les secondes de la variable val-stsp qui permet la sortie du "while" quand elle est égale à "true"
   while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp); delay(1000);}//Harmoniser avec la fonction clavier
 
   //Appel de la fonction visu_DC_G() qui affiche la durée de cuisson et le contenu du gabarit sélectionnés par l'utilisateur
   visu_DC_G();
+
+  //Fonction boucle d'attente de la commande stsp
+  //Les 4 leds clignotent
+  //Dès que le switch (SW2) stsp est en position active val_stsp est "true"
+  //le progamme quitte la fonction setup pour entrer dans la fonction loop
+  while (!val_stsp) {val_stsp = digitalRead(inPin_stsp); cli_4leds(); Serial.print(val_stsp); Serial.println (" - attente de la cmd start");}
+  //Appel du setup et de la fonction de saisie wifi
   
   /*   
    * 4a-1 IHM wifi : Vide
