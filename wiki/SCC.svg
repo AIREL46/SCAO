@@ -30,13 +30,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9525"
-     inkscape:cx="316.11549"
+     inkscape:cx="319.79003"
      inkscape:cy="438.84514"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1213"
-     inkscape:window-height="969"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
      inkscape:window-x="67"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -60,14 +60,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.76111126px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="49.722221"
+       x="41.784714"
        y="277.27777"
        id="text2871"><tspan
          sodipodi:role="line"
          id="tspan2869"
-         x="49.722221"
+         x="41.784714"
          y="277.27777"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Evolution des systèmes de cuisson culinaire</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Evolution des systèmes de cuisson culinaire 1/2</tspan></text>
     <rect
        style="opacity:1;fill:#ecff00;fill-opacity:1;stroke:#000000;stroke-width:0.89828181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.08982819, 0.08982819000000000;stroke-dashoffset:0;stroke-opacity:1"
        id="rect2873"
@@ -93,117 +93,43 @@
          x="152.7538"
          sodipodi:role="line">cuisson culinaire</tspan></text>
     <rect
-       style="opacity:1;fill:#ecff00;fill-opacity:1;stroke:#000000;stroke-width:0.89828181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.08982819, 0.08982819000000000;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ecff00;fill-opacity:1;stroke:#000000;stroke-width:0.89828181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.08982819, 0.08982819;stroke-dashoffset:0;stroke-opacity:1"
        id="rect2873-3"
        width="79.072372"
        height="24.517277"
-       x="24.352703"
-       y="153.07469" />
+       x="21.1777"
+       y="176.88687" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="63.430374"
-       y="163.66667"
+       x="61.208153"
+       y="187"
        id="text2912"><tspan
          sodipodi:role="line"
          id="tspan2910"
-         x="63.430374"
-         y="163.66667"
+         x="61.208153"
+         y="187"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332">Systèmes de</tspan><tspan
          sodipodi:role="line"
-         x="63.430374"
-         y="171.60417"
+         x="61.208153"
+         y="194.9375"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
          id="tspan2914">cuisson manuelle</tspan></text>
-    <rect
-       style="opacity:1;fill:#ecff00;fill-opacity:1;stroke:#000000;stroke-width:0.89828181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.08982819, 0.08982819000000000;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect2873-3-6"
-       width="79.072372"
-       height="24.517277"
-       x="112.04994"
-       y="152.79692" />
-    <rect
-       style="opacity:1;fill:#ecff00;fill-opacity:1;stroke:#000000;stroke-width:0.89828181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.08982819, 0.08982819000000000;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect2873-3-7"
-       width="79.072372"
-       height="24.517277"
-       x="197.95"
-       y="152.79691" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="151.4044"
-       y="159.41455"
-       id="text2912-5"><tspan
-         sodipodi:role="line"
-         id="tspan2910-3"
-         x="151.4044"
-         y="159.41455"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332">Systèmes de</tspan><tspan
-         sodipodi:role="line"
-         x="151.4044"
-         y="167.35205"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2914-5">Cuisson Assistée par</tspan><tspan
-         sodipodi:role="line"
-         x="151.4044"
-         y="175.28955"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2958">Ordinateur (SCAO)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="237.79329"
-       y="163.30344"
-       id="text2912-6"><tspan
-         sodipodi:role="line"
-         id="tspan2910-2"
-         x="237.79329"
-         y="163.30344"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332">Systèmes de</tspan><tspan
-         sodipodi:role="line"
-         x="237.79329"
-         y="171.24094"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2914-9">Cuisson Intelligent</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 58.888889,141.72223 c 178.888881,-0.55556 178.888881,-0.55556 178.888881,-0.55556 v 11.38889"
+       style="fill:none;stroke:#000000;stroke-width:3.06663728;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 58.888889,155.1729 c 178.888881,-1.30615 178.888881,-1.30615 178.888881,-1.30615 v 26.77604"
        id="path2981"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 149.72222,133.66667 v 18.88889"
+       style="fill:none;stroke:#000000;stroke-width:2.04364181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 149.72222,133.66667 v 19.72222"
        id="path2983"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 60.225001,152.83334 59.947223,141.72223"
+       style="fill:none;stroke:#000000;stroke-width:2.84158945;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 60.225001,176.85184 59.947223,154.42231"
        id="path2985"
        inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="21.944445"
-       y="207.27779"
-       id="text2989"><tspan
-         sodipodi:role="line"
-         id="tspan2987"
-         x="21.944445"
-         y="207.27779"
-         style="stroke-width:0.26458332">- <tspan
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
-   id="tspan3003">Table de cuisson</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="21.944445"
-         y="214.33334"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-         id="tspan2991">- Casserole</tspan><tspan
-         sodipodi:role="line"
-         x="21.944445"
-         y="221.3889"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-         id="tspan2993">équipée d'un couvercle</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot2995"
@@ -214,161 +140,11 @@
            height="19.947506"
            x="139.63255"
            y="386.35172" /></flowRegion><flowPara
-         id="flowPara3001"></flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="120"
-       y="183.38889"
-       id="text3007"><tspan
-         sodipodi:role="line"
-         id="tspan3005"
-         x="120"
-         y="183.38889"
-         style="stroke-width:0.26458332"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan3009">(Proto n°1 e</tspan><tspan
-           style="-inkscape-font-specification:'sans-serif Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan3011">t n°2)</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="219.05234"
-       y="183.7128"
-       id="text3007-1"><tspan
-         sodipodi:role="line"
-         id="tspan3005-2"
-         x="219.05234"
-         y="183.7128"
-         style="stroke-width:0.26458332"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-           id="tspan3009-7">(Proto n°3)</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:9.87777805px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="96.944443"
-       y="213.3889"
-       id="text3039"><tspan
-         sodipodi:role="line"
-         id="tspan3037"
-         x="96.944443"
-         y="213.3889"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">+</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="113.04166"
-       y="202.83333"
-       id="text3043"><tspan
-         sodipodi:role="line"
-         id="tspan3041"
-         x="113.04166"
-         y="202.83333"
-         style="stroke-width:0.26458332">-<tspan
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
-   id="tspan3051"> PC</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="113.04166"
-         y="210.77083"
-         style="stroke-width:0.26458332"
-         id="tspan3061">- <tspan
-   style="-inkscape-font-specification:'sans-serif Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan3063">e-poignée</tspan> (proto n°2)</tspan><tspan
-         sodipodi:role="line"
-         x="113.04166"
-         y="218.70833"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-         id="tspan3045">- Coffret électronique</tspan><tspan
-         sodipodi:role="line"
-         x="113.04166"
-         y="226.64583"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-         id="tspan3047">(microcontrôleur,</tspan><tspan
-         sodipodi:role="line"
-         x="113.04166"
-         y="234.58333"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-         id="tspan3049">carte relais, etc.)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="201.94444"
-       y="205.33333"
-       id="text3059"><tspan
-         sodipodi:role="line"
-         id="tspan3057"
-         x="201.94444"
-         y="205.33333"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Objets connectés :</tspan><tspan
-         sodipodi:role="line"
-         x="201.94444"
-         y="213.27083"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-         id="tspan3065">- e-poignée</tspan><tspan
-         sodipodi:role="line"
-         x="201.94444"
-         y="221.20833"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332"
-         id="tspan3071"> (MKR wifi 1010)</tspan><tspan
-         sodipodi:role="line"
-         x="201.94444"
-         y="229.14583"
-         style="stroke-width:0.26458332"
-         id="tspan3067"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan3069">- Pri</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan3073">se wifi MEROSS</tspan></tspan></text>
-    <image
+         id="flowPara3001" /></flowRoot>    <image
        y="237.89896"
        x="250.30278"
        id="image3137"
-       xlink:href="data:image/png;base64,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
-"
+       xlink:href="data:image/png;base64,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 "
        style="image-rendering:optimizeQuality"
        preserveAspectRatio="none"
        height="8.2020836"
@@ -383,7 +159,7 @@ T48gCELbTy3xS0Uikej/Az7UCLoVn+3WAAAAAElFTkSuQmCC
          id="tspan3140"
          x="247.22221"
          y="250.8889"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">23/11/2019</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">11/02/2020</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -406,5 +182,55 @@ T48gCELbTy3xS0Uikej/Az7UCLoVn+3WAAAAAElFTkSuQmCC
          x="146.66667"
          y="261.44446"
          style="stroke-width:0.26458332">https://github.com/AIREL46/SCAO/blob/master/wiki/SCC.png</tspan></text>
+    <rect
+       style="opacity:1;fill:#ecff00;fill-opacity:1;stroke:#000000;stroke-width:0.89828181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.08982819, 0.08982819;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2873-3-3"
+       width="79.072372"
+       height="24.517277"
+       x="199.15411"
+       y="179.74136" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="238.62662"
+       y="190.24789"
+       id="text2912-6"><tspan
+         sodipodi:role="line"
+         id="tspan2910-7"
+         x="238.62662"
+         y="190.24789"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332">Systèmes de</tspan><tspan
+         sodipodi:role="line"
+         x="238.62662"
+         y="198.18539"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2914-5">cuisson automatisée</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93888903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="62.237724"
+       y="209.13678"
+       id="text2912-3"><tspan
+         sodipodi:role="line"
+         x="62.237724"
+         y="209.13678"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2914-6">Table de cuisson</tspan><tspan
+         sodipodi:role="line"
+         x="62.237724"
+         y="215.31039"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan936">Casserole équipée d'un couvercle</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93888903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="236.93962"
+       y="213.60907"
+       id="text2912-3-2"><tspan
+         sodipodi:role="line"
+         x="236.93962"
+         y="213.60907"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan936-1">Voir 2/2</tspan></text>
   </g>
 </svg>
