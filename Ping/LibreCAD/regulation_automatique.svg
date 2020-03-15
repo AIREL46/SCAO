@@ -17,7 +17,10 @@
    height="793.33331"
    viewBox="0 0 1122.6667 793.33331"
    sodipodi:docname="regulation_automatique.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/airel/SCAO/Ping/LibreCAD/regulation_automatique.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -36,7 +39,7 @@
      showgrid="false"
      inkscape:zoom="1.0235294"
      inkscape:cx="561.33337"
-     inkscape:cy="396.66666"
+     inkscape:cy="423.56146"
      inkscape:window-x="67"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -2141,7 +2144,7 @@
              id="path1066"
              inkscape:connector-curvature="0" /></g></g></g><image
        y="-247.71121"
-       x="745.5517"
+       x="706.5517"
        id="image1935"
        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAABmJLR0QA/wD/AP+gvaeTAAAJ3klE
 QVRoge2ae1BU1x2Av727iwksIyugojxUViMQeVSkoUrwOdMiWmMeJrrgo8WUaGYUFWijtRMxacRx
@@ -2197,25 +2200,25 @@ T48gCELbTy3xS0Uikej/Az7UCLoVn+3WAAAAAElFTkSuQmCC
        transform="scale(1,-1)" /><text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:14px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-       x="725.01727"
+       x="687.51727"
        y="-207.5345"
        id="text1940"
        transform="scale(1,-1)"><tspan
          sodipodi:role="line"
          id="tspan1938"
-         x="725.01727"
+         x="687.51727"
          y="-207.5345"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.75">15/03/2020</tspan></text>
 <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:12px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-       x="718.83618"
+       x="682.83618"
        y="-191.25"
        id="text1944"
        transform="scale(1,-1)"><tspan
          sodipodi:role="line"
          id="tspan1942"
-         x="718.83618"
+         x="682.83618"
          y="-191.25"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.75">Régis Leruste</tspan></text>
 <text
@@ -2230,4 +2233,16 @@ T48gCELbTy3xS0Uikej/Az7UCLoVn+3WAAAAAElFTkSuQmCC
          x="479.29309"
          y="-200.77586"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.75">e-rupteur</tspan></text>
+<text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+       x="30.226412"
+       y="803.03009"
+       id="text1971"
+       transform="matrix(0,1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan1969"
+         x="30.226412"
+         y="803.03009"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.75">https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/regulation_automatique.png</tspan></text>
 </g></svg>
