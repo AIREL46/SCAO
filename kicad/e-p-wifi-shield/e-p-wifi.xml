@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>E:\Documents\GitHub\meross-mkr1010\docs\e-p-wifi\e-p-wifi.sch</source>
-    <date>19/12/2019 16:04:50</date>
-    <tool>Eeschema (5.1.4)-1</tool>
+    <source>/home/airel/SCAO/kicad/e-p-wifi-shield/e-p-wifi.sch</source>
+    <date>mer. 08 avril 2020 17:08:36 CEST</date>
+    <tool>Eeschema 5.1.5-52549c5~86~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Shield du MKR wifi 1010</title>
@@ -490,16 +490,16 @@
   </libparts>
   <libraries>
     <library logical="Connector_Generic">
-      <uri>D:\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
-      <uri>D:\KiCad\share\kicad\library/Device.lib</uri>
+      <uri>/usr/share/kicad/library/Device.lib</uri>
     </library>
     <library logical="Switch">
-      <uri>D:\KiCad\share\kicad\library/Switch.lib</uri>
+      <uri>/usr/share/kicad/library/Switch.lib</uri>
     </library>
     <library logical="e-p-wifi-rescue">
-      <uri>E:\Documents\GitHub\meross-mkr1010\docs\e-p-wifi/e-p-wifi-rescue.lib</uri>
+      <uri>/home/airel/SCAO/kicad/e-p-wifi-shield/e-p-wifi-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
