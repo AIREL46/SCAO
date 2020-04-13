@@ -1,4 +1,4 @@
-16915834617863664
+16915860774364664
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -75198,8 +75198,8 @@ BP
 
 
 0
-2
-2
+4
+4
 e-p-wifi-v2
 PinSocket_2x14_MKR1010
 Through hole straight socket strip, 2x14, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated

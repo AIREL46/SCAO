@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/airel/SCAO/kicad/e-p-wifi-shield/e-p-wifi.sch)
-    (date "dim. 12 avril 2020 18:35:15 CEST")
+    (date "lun. 13 avril 2020 13:38:59 CEST")
     (tool "Eeschema 5.1.5-52549c5~86~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
