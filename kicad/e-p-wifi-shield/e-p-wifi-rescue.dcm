@@ -12,4 +12,10 @@ K switch normally-open pushbutton push-button
 F ~
 $ENDCMP
 #
+$CMP Via
+D Via easy to drill and solder
+K via
+F ~
+$ENDCMP
+#
 #End Doc Library

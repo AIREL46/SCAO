@@ -291,7 +291,7 @@ U 1 1 5CF41B3B
 P 3346 5362
 F 0 "SW1" H 3346 5095 50  0000 C CNN
 F 1 "StSp - Farnell 986-501" H 3484 5175 50  0000 C CNN
-F 2 "e-p-wifi-v2:jumper-switch" H 3346 5362 50  0001 C CNN
+F 2 "e-p-wifi-v2:jumper-switch-sw1" H 3346 5362 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/58539.pdf?_ga=2.27608380.140208918.1573048803-1966718086.1557591461&_gac=1.121467258.1573048803.Cj0KCQiA-4nuBRCnARIsAHwyuPqR51EVzwLC_rjGxuRlpl_aeelUyUlwni0GneFg4tO4wrwk64y3RFoaAuRiEALw_wcB" H 3346 5362 50  0001 C CNN
 	1    3346 5362
 	1    0    0    -1  
@@ -304,7 +304,7 @@ U 1 1 5CF23CFC
 P 3346 5812
 F 0 "SW2" H 3346 5545 50  0000 C CNN
 F 1 "Sleep - Farnell 986-501" H 3641 5639 50  0000 C CNN
-F 2 "e-p-wifi-v2:jumper-switch" H 3346 5812 50  0001 C CNN
+F 2 "e-p-wifi-v2:jumper-switch-sw2" H 3346 5812 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/58539.pdf?_ga=2.27608380.140208918.1573048803-1966718086.1557591461&_gac=1.121467258.1573048803.Cj0KCQiA-4nuBRCnARIsAHwyuPqR51EVzwLC_rjGxuRlpl_aeelUyUlwni0GneFg4tO4wrwk64y3RFoaAuRiEALw_wcB" H 3346 5812 50  0001 C CNN
 	1    3346 5812
 	1    0    0    -1  
@@ -356,7 +356,7 @@ U 1 1 5DCE889E
 P 6100 2750
 F 0 "J6" V 6487 3697 100 0000 R CNB
 F 1 "Conn_02x14_MKR1010" V 6479 3339 75  0001 R CNB
-F 2 "e-p-wifi-v2:PinSocket_2x14_MKR1010" V 6249 2680 50  0001 C CNN
+F 2 "e-p-wifi-v2:PinSocket_2x14_MKR1010_ov" V 6249 2680 50  0001 C CNN
 F 3 "~" H 6100 2750 50  0001 C CNN
 	1    6100 2750
 	0    -1   -1   0   
@@ -412,7 +412,7 @@ U 1 1 5DC52AE1
 P 2851 3050
 F 0 "J4" H 3013 2998 50  0000 C CNN
 F 1 "Température" H 2867 2655 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2851 3050 50  0001 C CNN
+F 2 "e-p-wifi-v2:PinHeader_1x06_P2.54mm_Vertical_J4" H 2851 3050 50  0001 C CNN
 F 3 "~" H 2851 3050 50  0001 C CNN
 	1    2851 3050
 	-1   0    0    1   
@@ -611,8 +611,6 @@ Wire Notes Line
 	8220 1514 8220 6346
 Wire Notes Line
 	2848 6346 2848 2252
-Text Notes 5650 6261 0    150  ~ 30
-Shield MKR wifi 1010
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5DC5AAED
@@ -950,21 +948,12 @@ Wire Wire Line
 	5800 3900 5800 4100
 Connection ~ 5800 4100
 Wire Wire Line
-	5350 3800 5700 3800
-Wire Wire Line
 	6250 3800 6250 4100
 Connection ~ 6250 4100
-Wire Wire Line
-	5600 3700 6700 3700
 Wire Wire Line
 	6700 3700 6700 4100
 Connection ~ 5600 3700
 Connection ~ 6700 4100
-Wire Wire Line
-	5700 2950 5700 3800
-Connection ~ 5700 3800
-Wire Wire Line
-	5700 3800 6250 3800
 Wire Wire Line
 	5800 2950 5800 3900
 Connection ~ 5800 3900
@@ -1155,4 +1144,15 @@ Wire Notes Line
 	2850 7316 2850 7155
 Wire Notes Line
 	4550 6350 4550 7316
+Wire Wire Line
+	5350 3800 5700 3800
+Wire Wire Line
+	5600 3700 6700 3700
+Connection ~ 5700 3800
+Wire Wire Line
+	5700 3800 6250 3800
+Text Notes 5650 6261 0    150  ~ 30
+Shield MKR wifi 1010
+Wire Wire Line
+	5700 2950 5700 3800
 $EndSCHEMATC

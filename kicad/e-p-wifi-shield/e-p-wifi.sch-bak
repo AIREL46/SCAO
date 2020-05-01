@@ -5,9 +5,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Shield du MKR wifi 1010"
-Date "2019-11-03"
-Rev "1.0"
-Comp "Quiet cook"
+Date "2020-04-13"
+Rev "1.1"
+Comp "A3C Presqu'île"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -291,7 +291,7 @@ U 1 1 5CF41B3B
 P 3346 5362
 F 0 "SW1" H 3346 5095 50  0000 C CNN
 F 1 "StSp - Farnell 986-501" H 3484 5175 50  0000 C CNN
-F 2 "e-p-wifi-v2:jumper-switch" H 3346 5362 50  0001 C CNN
+F 2 "e-p-wifi-v2:jumper-switch-sw1" H 3346 5362 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/58539.pdf?_ga=2.27608380.140208918.1573048803-1966718086.1557591461&_gac=1.121467258.1573048803.Cj0KCQiA-4nuBRCnARIsAHwyuPqR51EVzwLC_rjGxuRlpl_aeelUyUlwni0GneFg4tO4wrwk64y3RFoaAuRiEALw_wcB" H 3346 5362 50  0001 C CNN
 	1    3346 5362
 	1    0    0    -1  
@@ -304,7 +304,7 @@ U 1 1 5CF23CFC
 P 3346 5812
 F 0 "SW2" H 3346 5545 50  0000 C CNN
 F 1 "Sleep - Farnell 986-501" H 3641 5639 50  0000 C CNN
-F 2 "e-p-wifi-v2:jumper-switch" H 3346 5812 50  0001 C CNN
+F 2 "e-p-wifi-v2:jumper-switch-sw2" H 3346 5812 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/58539.pdf?_ga=2.27608380.140208918.1573048803-1966718086.1557591461&_gac=1.121467258.1573048803.Cj0KCQiA-4nuBRCnARIsAHwyuPqR51EVzwLC_rjGxuRlpl_aeelUyUlwni0GneFg4tO4wrwk64y3RFoaAuRiEALw_wcB" H 3346 5812 50  0001 C CNN
 	1    3346 5812
 	1    0    0    -1  
@@ -356,7 +356,7 @@ U 1 1 5DCE889E
 P 6100 2750
 F 0 "J6" V 6487 3697 100 0000 R CNB
 F 1 "Conn_02x14_MKR1010" V 6479 3339 75  0001 R CNB
-F 2 "e-p-wifi-v2:PinSocket_2x14_MKR1010" V 6249 2680 50  0001 C CNN
+F 2 "e-p-wifi-v2:PinSocket_2x14_MKR1010_ov" V 6249 2680 50  0001 C CNN
 F 3 "~" H 6100 2750 50  0001 C CNN
 	1    6100 2750
 	0    -1   -1   0   
@@ -412,7 +412,7 @@ U 1 1 5DC52AE1
 P 2851 3050
 F 0 "J4" H 3013 2998 50  0000 C CNN
 F 1 "Température" H 2867 2655 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2851 3050 50  0001 C CNN
+F 2 "e-p-wifi-v2:PinHeader_1x06_P2.54mm_Vertical_J4" H 2851 3050 50  0001 C CNN
 F 3 "~" H 2851 3050 50  0001 C CNN
 	1    2851 3050
 	-1   0    0    1   
@@ -611,8 +611,6 @@ Wire Notes Line
 	8220 1514 8220 6346
 Wire Notes Line
 	2848 6346 2848 2252
-Text Notes 5650 6261 0    150  ~ 30
-Shield MKR wifi 1010
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5DC5AAED
@@ -821,7 +819,7 @@ E4 E7 E5 93 9F 97 8F AD AD 2D 23 46 BA E3 E2 EA 8C 42 61 8B 54 2A D0 50 DF 40 65
 EndData
 $EndBitmap
 Text Notes 7514 5535 0    50   ~ 10
-07/11/2019
+13/04/2020
 Text Notes 7491 5600 0    50   ~ 10
 Régis Leruste
 Text Notes 4716 5686 0    50   ~ 10
@@ -950,21 +948,12 @@ Wire Wire Line
 	5800 3900 5800 4100
 Connection ~ 5800 4100
 Wire Wire Line
-	5350 3800 5700 3800
-Wire Wire Line
 	6250 3800 6250 4100
 Connection ~ 6250 4100
-Wire Wire Line
-	5600 3700 6700 3700
 Wire Wire Line
 	6700 3700 6700 4100
 Connection ~ 5600 3700
 Connection ~ 6700 4100
-Wire Wire Line
-	5700 2950 5700 3800
-Connection ~ 5700 3800
-Wire Wire Line
-	5700 3800 6250 3800
 Wire Wire Line
 	5800 2950 5800 3900
 Connection ~ 5800 3900
@@ -1086,8 +1075,6 @@ Connection ~ 4700 3700
 Wire Notes Line
 	8200 6350 4550 6350
 Wire Notes Line
-	4550 6350 4550 7150
-Wire Notes Line
 	2850 7150 2850 6350
 Wire Wire Line
 	3552 7041 3554 7041
@@ -1151,4 +1138,35 @@ Wire Notes Line
 	3623 7073 3143 7073
 Wire Notes Line
 	3143 7073 3143 6185
+Wire Notes Line
+	4550 7316 2850 7316
+Wire Notes Line
+	2850 7316 2850 7155
+Wire Notes Line
+	4550 6350 4550 7316
+$Comp
+L e-p-wifi-rescue:Via V1
+U 1 1 5EAADEA1
+P 5700 3300
+F 0 "V1" H 5778 3263 50  0000 L CNN
+F 1 "Via" H 5778 3172 50  0000 L CNN
+F 2 "e-p-wifi-v2:Via-DIY" V 5630 3300 50  0001 C CNN
+F 3 "~" H 5700 3300 50  0001 C CNN
+	1    5700 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3800 5700 3800
+Wire Wire Line
+	5700 2950 5700 3450
+Wire Wire Line
+	5600 3700 6700 3700
+Wire Wire Line
+	5700 3450 5700 3800
+Connection ~ 5700 3450
+Connection ~ 5700 3800
+Wire Wire Line
+	5700 3800 6250 3800
+Text Notes 5650 6261 0    150  ~ 30
+Shield MKR wifi 1010
 $EndSCHEMATC

@@ -6,4 +6,16 @@ K connector
 F ~
 $ENDCMP
 #
+$CMP SW_Push
+D Push button switch, generic, two pins
+K switch normally-open pushbutton push-button
+F ~
+$ENDCMP
+#
+$CMP Via
+D Via easy to drill and solder
+K via
+F ~
+$ENDCMP
+#
 #End Doc Library

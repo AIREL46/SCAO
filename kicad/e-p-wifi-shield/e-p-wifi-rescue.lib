@@ -201,4 +201,20 @@ X 4 4 200 -150 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
+# Via
+#
+DEF Via via 0 0 N Y 1 F N
+F0 "via" 50 50 50 V V C CNN
+F1 "Via" 0 100 50 V V C CNN
+F2 "e-p-wifi-v2:Via-DIY" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ via
+$ENDFPLIST
+DRAW
+C 0 -50 50 0 1 0 N
+X ~ 1 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 #End Library
