@@ -6,7 +6,7 @@
  * voir ->  https://store.arduino.cc/mkr-wifi-1010
  * Pour mémoire, ce SCI (Système de Cuisson Intelligent) est composé principalement de 2 objets connectés et d'un smartphone.
  * (voir le schéma https://github.com/AIREL46/SCAO/raw/master/wiki/sci.png).
- * Le premier objet connecté est cette e-poignée est le second le e-rupteur (prise meross).
+ * Le premier objet connecté est cette e-poignée et le second le e-rupteur (prise meross).
  * Le microcontrôleur introduit la fonction de communication wifi qui offre à l'utilisateur la possibilité de piloter le SCI à partir du smartphone.
  * Ce programme est structuré en paragraphes :
  * 1 - Introduction
