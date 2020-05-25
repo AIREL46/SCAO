@@ -19,15 +19,15 @@
  Serial.write(";"); //Séparation des champs par une virgule
  Serial.print(Vusb);//Tension mesurée Vusb en mV
  Serial.print(";");//Séparation des champs par une virgule
- Serial.print(Vbat_1);//Tension mesurée Vbat1 en mV
- Serial.print(";");//Séparation des champs par une virgule
+ //Serial.print(Vbat_1);//Tension mesurée Vbat1 en mV
+ //Serial.print(";");//Séparation des champs par une virgule
  Serial.print(Vbat_2);//Tension mesurée Vbat1 en mV
  Serial.print(";");//Séparation des champs par une virgule
- Serial.print(ibat);//Courant mesuré ibat en mA
- Serial.print(";");//Séparation des champs par une virgule
+ //Serial.print(ibat);//Courant mesuré ibat en mA
+ //Serial.print(";");//Séparation des champs par une virgule
  Serial.print(V33);//Tension mesurée V33 en mV
- Serial.print(";");//Séparation des champs par une virgule
- Serial.println(Ec);//Energie mesurée Ec en joules
+ Serial.println(";");//Séparation des champs par une virgule
+ //Serial.println(Ec);//Energie mesurée Ec en joules
  delay(2000);
  }
  //4j - Visualisation du contenu des échantillons
