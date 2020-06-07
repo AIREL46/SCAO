@@ -143,7 +143,7 @@ byte count = 0;//Initialisation du numéro du message
  * 2g - Horodatage & Chronomètre
  * Horodatage
  */
-
+//#include "g_wifi_rtc.h"
  /*
 #include "TimeLib.h" //Include TimeLib.h library
 /**
@@ -254,6 +254,12 @@ void setup() {
  * 4d - Mesure des tensions et calcul du courant ibat*/
   setup_d();
   // 4e - Built In Test Equipment (BITE)
+  //4f Transmission
+  //4g Horodatage et chronomètre
+  //setup_g à définir
+  //setup_g();
+  //4h - Bilan énergétique de la batterie
+  //4i Calcul
 
  //4j - Visualisation du contenu des échantillons
  setup_j();
@@ -266,12 +272,6 @@ void setup() {
     digitalWrite(led_pin_r, LOW);
     //Serial.println("Starting...");
     delay(100);
-
-//4f Transmission
-//4g Horodatage et chronomètre
-//4h - Bilan énergétique de la batterie
-//4i Calcul
-
 }
 
 void loop() {
