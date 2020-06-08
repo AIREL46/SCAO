@@ -37,6 +37,14 @@ const int GMT = 2; //change this to adapt it to your time zone
 /*
 3g) Fonctions spécifiques
 */
+
+void print2digits(int number) {
+  if (number < 10) {
+    Serial.print("0");
+  }
+  Serial.print(number);
+}
+
 void printTime()
 {
   print2digits(rtc.getHours() + GMT);
@@ -44,7 +52,7 @@ void printTime()
   print2digits(rtc.getMinutes());
   Serial.print(":");
   print2digits(rtc.getSeconds());
-  Serial.println();
+  //Serial.println();
 }
 
 void printDate()
@@ -55,37 +63,31 @@ void printDate()
   Serial.print("/");
   Serial.print(rtc.getYear());
 
-  Serial.print(" ");
+  //Serial.print(" ");
 }
 
 
-void printWiFiStatus() {
+//void printWiFiStatus() {
   // print the SSID of the network you're attached to:
-  Serial.print("SSID: ");
-  Serial.println(WiFi.SSID());
+  //Serial.print("SSID: ");
+  //Serial.println(WiFi.SSID());
 
   // print your WiFi shield's IP address:
-  IPAddress ip = WiFi.localIP();
-  Serial.print("IP Address: ");
-  Serial.println(ip);
+  //IPAddress ip = WiFi.localIP();
+  //Serial.print("IP Address: ");
+  //Serial.println(ip);
 
   // print the received signal strength:
-  long rssi = WiFi.RSSI();
-  Serial.print("signal strength (RSSI):");
-  Serial.print(rssi);
-  Serial.println(" dBm");
-}
+  //long rssi = WiFi.RSSI();
+  //Serial.print("signal strength (RSSI):");
+  //Serial.print(rssi);
+  //Serial.println(" dBm");
+//}
 
-void print2digits(int number) {
-  if (number < 10) {
-    Serial.print("0");
-  }
-  Serial.print(number);
-}
 /*
 4g) Fonction setup
 */
-setup_g() {
+void setup_g() {
   Serial.begin(9600);
 
   // check if the WiFi module works

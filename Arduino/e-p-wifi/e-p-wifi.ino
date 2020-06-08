@@ -143,7 +143,7 @@ byte count = 0;//Initialisation du numéro du message
  * 2g - Horodatage & Chronomètre
  * Horodatage
  */
-//#include "g_wifi_rtc.h"
+#include "g_wifi_rtc.h"
  /*
 #include "TimeLib.h" //Include TimeLib.h library
 /**
@@ -256,8 +256,8 @@ void setup() {
   // 4e - Built In Test Equipment (BITE)
   //4f Transmission
   //4g Horodatage et chronomètre
-  //setup_g à définir
-  //setup_g();
+  //setup_g
+  setup_g();
   //4h - Bilan énergétique de la batterie
   //4i Calcul
 

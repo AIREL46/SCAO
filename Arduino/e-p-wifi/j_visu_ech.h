@@ -12,6 +12,10 @@
  Serial.print(count);//N° de l'échantillon
  Serial.print(";");//Séparation des champs par une virgule
 //  digitalClockDisplay();//Heure et date
+ printDate();
+ Serial.print(";");//Séparation des champs par une virgule
+ printTime();
+ Serial.print(";");//Séparation des champs par une virgule
  delay(100);
  Serial.print(T1, 2);//Température mesurée T1 en °C sur le couvercle de la casserole
  Serial.write(";"); //Séparation des champs par une virgule
