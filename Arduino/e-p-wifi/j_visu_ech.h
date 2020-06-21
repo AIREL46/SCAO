@@ -12,6 +12,10 @@
  Serial.print(count);//N° de l'échantillon
  Serial.print(";");//Séparation des champs par une virgule
 //  digitalClockDisplay();//Heure et date
+ printDate();
+ Serial.print(";");//Séparation des champs par une virgule
+ printTime();
+ Serial.print(";");//Séparation des champs par une virgule
  delay(100);
  Serial.print(T1, 2);//Température mesurée T1 en °C sur le couvercle de la casserole
  Serial.write(";"); //Séparation des champs par une virgule
@@ -19,15 +23,15 @@
  Serial.write(";"); //Séparation des champs par une virgule
  Serial.print(Vusb);//Tension mesurée Vusb en mV
  Serial.print(";");//Séparation des champs par une virgule
- Serial.print(Vbat_1);//Tension mesurée Vbat1 en mV
- Serial.print(";");//Séparation des champs par une virgule
+ //Serial.print(Vbat_1);//Tension mesurée Vbat1 en mV
+ //Serial.print(";");//Séparation des champs par une virgule
  Serial.print(Vbat_2);//Tension mesurée Vbat1 en mV
  Serial.print(";");//Séparation des champs par une virgule
- Serial.print(ibat);//Courant mesuré ibat en mA
- Serial.print(";");//Séparation des champs par une virgule
+ //Serial.print(ibat);//Courant mesuré ibat en mA
+ //Serial.print(";");//Séparation des champs par une virgule
  Serial.print(V33);//Tension mesurée V33 en mV
- Serial.print(";");//Séparation des champs par une virgule
- Serial.println(Ec);//Energie mesurée Ec en joules
+ Serial.println(";");//Séparation des champs par une virgule
+ //Serial.println(Ec);//Energie mesurée Ec en joules
  delay(2000);
  }
  //4j - Visualisation du contenu des échantillons
