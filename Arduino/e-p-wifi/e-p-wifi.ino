@@ -53,7 +53,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *En application des règles de licences Creative commons, chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom du développeur,
 *indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
 *
-*1a IHM -> a.h
+*1a IHM -> a_ihm.h
  *
  * 1b - Libre
  *
@@ -71,17 +71,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * L'utilisateur est informé de l'état du fonctionnement par 3 leds (verte, orange, rouge).
  * Le BITE surveille la température de la batterie, les tensions continues Vusb, Vbat et V33.
  *
- * 1f - Transmission
- * L'objet est la transmission périodique (30s) au e-rupteur (e-r-433) des échantillons.
- * Les échantillons ont pour objet le regroupement des données.
- * Chaque échantillon contient : la date et l'heure, la température mesurée sur le couvercle de la casserole ainsi que les données culinaires et de sécurité.
- * Cette fonction utilise un shield AM Transmitter module QAM-TX1 en version 433 MHZ.
- * Ce module est connecté à une antenne 1/4 d'onde.
- * La librarie VirtualWire apporte les fonctions spécifiques qui permettent de gérer cette fonction transmission.
- * Cette Librarie a été développée par Mike McCauley, elle est accesible par les liens :
- *- https://www.pjrc.com/teensy/td_libs_VirtualWire.html
- *- http://www.airspayce.com/mikem/arduino/VirtualWire.pdf
- *- https://github.com/manashmndl/VirtualWire
+ * 1f - Libre
  *
  * 1g - Horodatage & Chronomètre
  * Horodatage
@@ -95,8 +85,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  *
  * 1h Bilan énergétique de la batterie
  * L'objet est l'établissement du bilan énergétique de la batterie
- * Cette fonction réalise les calculs de l'énegie électrique consommée et le ratio par rapport à la capacité nominale de 2000 mAh
- * 1i Calcul
+ * Cette fonction réalise les Régulation de la températures de l'énegie électrique consommée et le ratio par rapport à la capacité nominale de 800 mAh
+ * 1i Régulation de la température
  * 1j - Visualisation du contenu des échantillons
  * 1k - Mode Sleep
  * L'objet du mode sleep est l'économie d'énergie de la batterie.
@@ -105,14 +95,14 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 /*
  * 2 - Initialisation des paramètres
  */
-
+ byte count = 0;//Initialisation du numéro du message
  unsigned long tt1=0;//temps de travail 1
  unsigned long tt2=0;//temps de travail 2
  unsigned long ti=30000000;//temps itératif
  unsigned long ts=0;//temps de sleep
  #include "1_def_mat.h"
 /*
- * 2a Les IHM -> a.h
+ * 2a Les IHM -> a_ihm.h
  */
  #include "a_ihm.h"
 
@@ -127,19 +117,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 /*
  * 2e - Built In Test Equipment (BITE)
  */
-
-
-
- /** 2f - Transmission
- * Chargement de la librairie VirtualWire - Gestion de l'émetteur 433 MHZ
- **/
-/*
-#include <VirtualWire.h>
-const int transmit_pin = 4;//Pin de sortie de l'émetteur*/
-byte count = 0;//Initialisation du numéro du message
-
-
-/**
+ /** 2f - Libre
  * 2g - Horodatage & Chronomètre
  * Horodatage
  */
@@ -154,15 +132,8 @@ Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
 
 /**
  * 2h - Bilan énergétique de la batterie
- * Chargement de la librairie
- */
-unsigned long Etot=0; //Energie électrique totale consommée en joule
-unsigned long Et=0; //Energie électrique consommée pendant le travail
-unsigned long Es=0; //Energie électrique consommée pendant le sommeil (sleep)
-unsigned long Ec=0; //Energie électrique consommée cumulée
-
-/**
- * 2i Calcul
+ /**
+ * 2i Régulation de la température
  */
 
 /**
@@ -172,10 +143,7 @@ unsigned long Ec=0; //Energie électrique consommée cumulée
 /*
  * 2k mode sleep
  */
-
 bool val_sleep = false;//variable to store the read value
-
-
  /*
   * 3 - Fonctions spécifiques
   */
@@ -199,7 +167,7 @@ bool val_sleep = false;//variable to store the read value
   }
 
  /*
-  * 3a Les IHM -> a.h
+  * 3a Les IHM -> a_ihm.h
   */
 
   /*
@@ -215,12 +183,12 @@ bool val_sleep = false;//variable to store the read value
  * 3d - Mesure des tensions et calcul du courant ibat
  */
 // 3e - Built In Test Equipment (BITE)
-//3f Transmission
+//3f Libre
 //3g Horodatage et chronomètre
 /** 3h - Bilan énergétique de la batterie
  */
 //3h Bilan énergétique de la batterie
-//3i Calcul
+//3i Régulation de la température
   /**
  * 3j - Visualisation du contenu des échantillons
  */
@@ -241,8 +209,16 @@ void setup() {
   digitalWrite(led_pin_j, HIGH);
   digitalWrite(led_pin_r, HIGH);
   digitalWrite(led_pin_b, HIGH);
+
+  digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
+  wait_s_m();//Wait for serial monitor
+  //while (!Serial);
+    delay(100);
+    digitalWrite(led_pin_r, LOW);
+    //Serial.println("Starting...");
+    delay(100);
  /*
-  * 4a Les IHM - Commun -> a.h
+  * 4a Les IHM - Commun -> a_ihm.h
   */
   setup_a ();
 
@@ -254,27 +230,21 @@ void setup() {
  * 4d - Mesure des tensions et calcul du courant ibat*/
   setup_d();
   // 4e - Built In Test Equipment (BITE)
-  //4f Transmission
+  //4f Libre
   //4g Horodatage et chronomètre
   //setup_g
   setup_g();
   //4h - Bilan énergétique de la batterie
-  //4i Calcul
+  //4i Régulation de la température
 
  //4j - Visualisation du contenu des échantillons
  setup_j();
  //4k - Mode sleep
   pinMode(inPin_sleep, INPUT);    // sets the digital pin 10 as input
-  digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
-  wait_s_m();//Wait for serial monitor
-  //while (!Serial);
-    delay(100);
-    digitalWrite(led_pin_r, LOW);
-    //Serial.println("Starting...");
-    delay(100);
 }
 
 void loop() {
+  count = count +1;
 //5a Les IHM
 //5a-1 IHM wifi
 //5a-2 IHM clavier
@@ -297,22 +267,10 @@ void loop() {
  mesures();
 
 // 5e - Built In Test Equipment (BITE)
- //5f - Transmission
-  /* Transmission des donnèes à l'e-r-433 */
-  /*La fonction de transmission vw_send(message, length) : transmit a message, "message" is an array of the bytes to send,
-  and "length" is the number of bytes stored in the array.*/
-
-  count = count +1;
-
+//5f - Libre
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique de la batterie
- tt2 = (Chrono.elapsed());
- Et = ((Vbat_1/1000) * ibat)*((tt1 + tt2)/1000000);
- if (val_sleep) {Es = ((Vbat_1/1000) * 1.5)*(ts/1000000);}
-// if (!  ) {Es = ((Vbat_1/1000) * ibat)*(ts/1000000);}
- Etot = Et + Es;
- Ec = Ec + Etot;
-//5i Calcul
+//5i Régulation de la température
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
