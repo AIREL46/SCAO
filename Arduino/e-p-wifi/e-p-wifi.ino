@@ -20,7 +20,7 @@
  * c) Acquisition des températures T1 et T2
  * d) Mesures des tensions et calcul de ibat
  * e) Built In Test Equipment (BITE)
- * f) Transmission
+ * f) Libre
  * g) Horodatage et chronomètre
  * h) Bilan énergétique de la batterie
  * i) Régulation de la température
@@ -96,6 +96,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * 2 - Initialisation des paramètres
  */
  byte count = 0;//Initialisation du numéro du message
+ float Tcons=0;//Trajectoire
+ unsigned long t=0;//temps écoulé depuis le début de la cuisson
  unsigned long tt1=0;//temps de travail 1
  unsigned long tt2=0;//temps de travail 2
  unsigned long ti=30000000;//temps itératif
@@ -135,7 +137,7 @@ Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
  /**
  * 2i Régulation de la température
  */
-
+# include <math.h>
 /**
  * 2j - Visualisation du contenu des échantillons
 */
@@ -271,6 +273,14 @@ void loop() {
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique de la batterie
 //5i Régulation de la température
+t=t+1;
+float  x = 0.000;
+x = t/Tau;
+Tcons = Tu*(1-exp(-t/Tau));
+Serial.print ("x : ");
+Serial.print (x);
+Serial.print ("Tu : ");
+Serial.println (Tu);
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
