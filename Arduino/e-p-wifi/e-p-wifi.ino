@@ -139,6 +139,9 @@ Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
  */
 # include <math.h>
 float Tinit;
+float Dich;
+float ecart;
+float Correction;
 
 /**
  * 2j - Visualisation du contenu des échantillons
@@ -252,6 +255,7 @@ void setup() {
 }
 
 void loop() {
+  Chrono.restart();
   count = count +1;
 //5a Les IHM
 //5a-1 IHM wifi
@@ -283,12 +287,27 @@ t=(double)t+0.5;
 double x = 0.000;
 x = (double)t/Tau;
 Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)t/Tau));
-Serial.print ("t : ");
-Serial.print (t);
-Serial.print ("Tcons : ");
-Serial.println (Tcons);
+ecart = Tcons - T2;
+Correction = ecart*G;
+if (Correction <= 0) {Dich = 0;}
+if (Correction > 0 && Correction > 1) {Dich = p*I;}
+if (Correction > 0 && Correction < 1) {Dich = p*I*Correction;}
+Serial.print ("ecart : ");
+Serial.print (ecart);
+Serial.print (" Dich : ");
+Serial.println (Dich);
+digitalWrite(relay, HIGH);
+delay(Dich*1000);
+digitalWrite(relay, LOW);
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
-}
+
 //5k - Mode sleep
+tt1 = Chrono.elapsed();
+Serial.print ("ti : ");
+Serial.print (ti/1000);
+Serial.print (" tt1 : ");
+Serial.println (tt1/1000);
+delay((ti - tt1)/1000);
+}
