@@ -23,7 +23,7 @@
  const int led_pin_v = 5;//Led verte connectée sur l'entrée digitale D5
  const int led_pin_j = 6;//Led jaune connectée sur l'entrée digitale D6
  const int led_pin_r = 7;//Led rouge connectée sur l'entrée digitale D7
- //D8
+ const int relay = 8;//D8
  //D9
  //D10
  //D11
@@ -35,9 +35,3 @@
  //+3V3
  //VIN
  //+5V
- 
-
-
- 
- 
- 

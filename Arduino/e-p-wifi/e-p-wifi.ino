@@ -1,3 +1,4 @@
+
 /**
  * e-p-wifi.ino
  * Le présent code source est publié sur Github sous licence creative commons CC-BY
@@ -58,7 +59,6 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * 1b - Libre
  *
  * 1c - Acquisition des températures T1 et T2
-
  * 1d - Mesure des tensions et calcul du courant ibat
  * La mesure des tensions est l'une des fonctions secondaires qui assure la sécurité de la e-poignée.
  * La mesure consiste en une conversion analogique digitale de la tension. Cette conversion est réalisée par le microcontrôleur. La tension à mesurer est appliquée sur l'une de ses entrées analogiques. Pour tenir compte de la tension d'alimentation de 3.3V du microcontrôleur, la tension à mesurer est au préalable divisée par 2 à l'aide d'un pont diviseur constitué de 2 résistances de valeurs égales.
@@ -97,7 +97,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  */
  byte count = 0;//Initialisation du numéro du message
  float Tcons=0;//Trajectoire
- unsigned long t=0;//temps écoulé depuis le début de la cuisson
+ double t=0;//temps écoulé depuis le début de la cuisson
  unsigned long tt1=0;//temps de travail 1
  unsigned long tt2=0;//temps de travail 2
  unsigned long ti=30000000;//temps itératif
@@ -138,6 +138,8 @@ Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
  * 2i Régulation de la température
  */
 # include <math.h>
+float Tinit;
+
 /**
  * 2j - Visualisation du contenu des échantillons
 */
@@ -235,10 +237,14 @@ void setup() {
   //4f Libre
   //4g Horodatage et chronomètre
   //setup_g
-  setup_g();
+  //setup_g();
   //4h - Bilan énergétique de la batterie
   //4i Régulation de la température
-
+  if (getT2(&T2, true) != READ_OK) {
+    Serial.println(F("Erreur de lecture du capteur"));
+    return;
+  }
+  Tinit = T2;
  //4j - Visualisation du contenu des échantillons
  setup_j();
  //4k - Mode sleep
@@ -273,14 +279,14 @@ void loop() {
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique de la batterie
 //5i Régulation de la température
-t=t+1;
-float  x = 0.000;
-x = t/Tau;
-Tcons = Tu*(1-exp(-t/Tau));
-Serial.print ("x : ");
-Serial.print (x);
-Serial.print ("Tu : ");
-Serial.println (Tu);
+t=(double)t+0.5;
+double x = 0.000;
+x = (double)t/Tau;
+Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)t/Tau));
+Serial.print ("t : ");
+Serial.print (t);
+Serial.print ("Tcons : ");
+Serial.println (Tcons);
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}

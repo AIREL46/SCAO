@@ -9,7 +9,7 @@
 * 3j - Visualisation du contenu des échantillons
 */
  void visu(){
- Serial.print(count);//N° de l'échantillon
+ Serial.print(t);//N° de l'échantillon
  Serial.print(";");//Séparation des champs par une virgule
 //  digitalClockDisplay();//Heure et date
  printDate();
@@ -17,9 +17,11 @@
  printTime();
  Serial.print(";");//Séparation des champs par une virgule
  delay(100);
- Serial.print(T1, 2);//Température mesurée T1 en °C sur le couvercle de la casserole
+ Serial.print(T1, 2);//Température mesurée T1 en °C sur la batterie
  Serial.write(";"); //Séparation des champs par une virgule
- Serial.print(T2, 2);//Température mesurée T2 en °C sur la batterie
+ Serial.print(T2, 2);//Température mesurée T2 en °C sur le couvercle de la casserole
+ Serial.write(";"); //Séparation des champs par une virgule
+ Serial.print(Tcons, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
  Serial.write(";"); //Séparation des champs par une virgule
  Serial.print(Vusb);//Tension mesurée Vusb en mV
  Serial.print(";");//Séparation des champs par une virgule
@@ -37,6 +39,6 @@
  //4j - Visualisation du contenu des échantillons
   void setup_j() {
   Serial.println ("Cuisson en cours - chaque échantillon contient les champs suivants :");
-  Serial.println("N°;heure;date;T1 (degrés C);T2 (degrés C);Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
+  Serial.println("N;heure;date;T1 (degres C);T2 (degres C);Tcons (degres C); Vusb (mV);Vbat (mV);ibat (mA);V33 (mV);Ec (joules)");
   }
   //5j - Visualisation du contenu des échantillons

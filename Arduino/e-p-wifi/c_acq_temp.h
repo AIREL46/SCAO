@@ -18,6 +18,7 @@
 */
 float T1;
 float T2;
+float Ti;
 /* Dépendance pour le bus 1-Wire */
 #include <OneWire.h> //Chargement de la librairie OneWire.h
 
