@@ -4,38 +4,38 @@
 **************************
  *
  *Définition des IHM et de leur fonction associée
- *En référence à Wikipédia, les IHM (Interactions Homme-machines) définissent les moyens mis en œuvre 
+ *En référence à Wikipédia, les IHM (Interactions Homme-machines) définissent les moyens mis en œuvre
  *afin qu'un humain puisse contrôler et communiquer avec une machine.
  *Dans le cadre de ce projet, les moyens mis en œuvre sont soit ceux de l'ordinateur (clavier, souri, écran) ;
- *soit ceux du smartphone ; dans les deux cas, ils sont complétés par ceux propres du microcontrôleur, 
+ *soit ceux du smartphone ; dans les deux cas, ils sont complétés par ceux propres du microcontrôleur,
  *c'est à dire : 3 inverseurs ("ON/OFF" "sleep" et "start stop") et un jeu de leds.
  *Les IHM permettent de dialoguer avec le microcontrôleur, d'y introduire des données et de visualiser des résultats.
  *Ces IHM et leur fonction associée sont :
- * 1) le smartphone qui communique avec le microcontrôleur à l'aide de leur interface wifi respective, 
+ * 1) le smartphone qui communique avec le microcontrôleur à l'aide de leur interface wifi respective,
  *    ou l'ordinateur via son clavier qui communique avec le microcontrôleur à l'aide du moniteur série
  *    l'un ou l'autre permet la saisie des paramètres de cuisson par l'utilisateur et leur acquisition par le microcontrôleur.
  * 2) le moniteur série permet la visualisation du contenu des échantillons ainsi que les durées de cuisson (DC1 et DC2).
- * 3) le jeu de leds permet la visualisation des états de fonctionnement (BITE) 
+ * 3) le jeu de leds permet la visualisation des états de fonctionnement (BITE)
  * 4) l'inverseur ON/OFF permet d'alimenter le microcontrôleur à partir de la batterie
- * 5) l'inverseur "sleep" à deux positions qui fournit deux états logiques (0 et 1) permet au microcontreur de fonctionner 
+ * 5) l'inverseur "sleep" à deux positions qui fournit deux états logiques (0 et 1) permet au microcontreur de fonctionner
  *    selon l'un des deux modes : normal ou sleep
- * 6) l'inverseur "start stop" à deux positions fournit deux états logiques (0 et 1) interprétés lors du déroullement du firmware 
+ * 6) l'inverseur "start stop" à deux positions fournit deux états logiques (0 et 1) interprétés lors du déroullement du firmware
  *    de deux manières différentes liées à la fonction en cours d'exécution :
  *     - dans le cas de la fonction setup() la transition de 0 -> 1 lui permet de quitter cette même fonction pour transiter vers la fonction loop()
  *     - dans le cas de la fonction loop() la transition de 1 -> 0 lui permet d'inhiber l'autorisation de chauffe Ach.
- *Le code source des fonctions associées aux IHM se différencie en fonction du moyen de communication mis en œuvre, 
+ *Le code source des fonctions associées aux IHM se différencie en fonction du moyen de communication mis en œuvre,
  *smartphone ou ordinateur, dans la suite du programme, l'un et l'autre se distinguent par l'appellation "wifi" ou "clavier".
- * 
+ *
  * 1a Les IHM
  * 1a-1 Le code source des IHM en mode "wifi"
- * Le code source des IHM en mode "wifi" s'inspire de l'exemple Arduino "simple web server" SimpleWebServerWiFi.ino 
+ * Le code source des IHM en mode "wifi" s'inspire de l'exemple Arduino "simple web server" SimpleWebServerWiFi.ino
  * associé au fichier arduino_secrets.h qui permet de gérer le nom du réseau wifi ainsi que le mot de passe pour y accéder
  * Le programme SimpleWebServerWiFi.ino a été conçu pour allumer ou èteindre une led?
- * Un serveur Web permet de communiquer les paramètres de cuisson via le Web. 
+ * Un serveur Web permet de communiquer les paramètres de cuisson via le Web.
  * Le principe est basé sur la connection au serveur wifi "freebox_a3c" de la Freebox puis à la création d'une page web
- * dont l'adresse IP est imprimé sur le moniteur série. 
- * A partir du navigateur Web, d’un ordinateur ou d’un smartphone,  
- * ouvrir cette adresse IP : http: // « adresse IP » / cde 
+ * dont l'adresse IP est imprimé sur le moniteur série.
+ * A partir du navigateur Web, d’un ordinateur ou d’un smartphone,
+ * ouvrir cette adresse IP : http: // « adresse IP » / cde
  * Où « cde » est la commande à transmettre variable en fonction du contexte.
  * Les libraries utilisées sont :
  * - SPI allows to communicate with SPI (Serial Peripheral Interface) devices, with the Arduino as the master device.
@@ -43,13 +43,13 @@
  * - RTCZero allows to use the RTC functionalities for MKR1000
  * La fonction client.print() permet d'envoyer au smarphone via le serveur Web du code HTML, par exemple :
  * client.print("<!DOCTYPE html>");
- * 
+ *
  * 1a-2 - Le code source des IHM en mode "clavier"
- * Le code source des IHM en mode "clavier" utilise principalement des fonctions de la librarie Arduino 
+ * Le code source des IHM en mode "clavier" utilise principalement des fonctions de la librarie Arduino
  * qui permettent d'accéder au buffer de la liaison série :
  * - Serial.available() permet de connaître le nombre de caractères disponibles dans le buffer de la liaison série
  * - Serial.read() permet de lire le caractère disponible (utilisée pour lire le gabarit)
- * - Serial.parseInt() permet de lire plusieurs nombres entiers saisis l'un à la suite de l'autre 
+ * - Serial.parseInt() permet de lire plusieurs nombres entiers saisis l'un à la suite de l'autre
  *   (utilisée pour lire la Durée de Cuisson (DC)).
  */
 
@@ -59,7 +59,7 @@
  * DC est exprimée en mn sur 3 chiffres
  * Le Gabarit est un nombre entier compris entre 1 et 9.
  * Chaque Gabarit est associé à 9 paramètres :
- * la période (p), 
+ * la période (p),
  * le gain (G),
  * l'Intensité de chauffe(I),
  * la température d'utilisation (Tu),
@@ -70,7 +70,7 @@
  * la durée d'anticipation ta (nombre d'itérations).
  * Ces paramètres sont décrits dans le document "brevet" (page 6 et 28) dont la version Word est accessible par le lien ci-dessous:
  * https://github.com/AIREL46/SCAO/blob/master/Brevet/SCAO/word/La%20description%20du%20SCAO%20-%20d.doc
- * La commande start stop (stsp) permet de quitter le setup pour entrer dans la boucle loop 
+ * La commande start stop (stsp) permet de quitter le setup pour entrer dans la boucle loop
  * Elle est commandée par un switch ON/OFF SW2 et elle se concrétise par une variable booléenne.
  * En position OFF, la variable est false correspondant à l'état stop.
  * En position ON, la variable est true correspondant à l'état start.
@@ -92,7 +92,7 @@ float Gabarit7[] = {30, 0.4, 0.409, 85, 10, 16, 5, 2.5, 4};
 float Gabarit8[] = {30, 0.4, 0.685, 87.5, 7.5, 14, 5.5, 2.75, 4};
 float Gabarit9[] = {30, 0.4, 0.685, 90, 5, 12, 6, 3.0, 4};
 //Création des variables "paramètres de cuisson"
-int p;//période 
+int p;//période
 float G;//Gain
 float I;//Intensité
 float Tu;//Température d'utilisation
@@ -102,7 +102,7 @@ float Vc;//Vitesse de consigne
 float A_c;//Accélération de consigne
 int ta;//temps d'anticipation
 //Création de la variable Durée de Cuisson (DC)
-int DC;
+long DC;
 //Création de la variable Gabarit
 int Gabarit;
 
@@ -184,7 +184,7 @@ int reponse;
    * F1-printWiFiStatus()
    * F2-setup_wifi()
    * F3-saisie_wifi()
-   * 
+   *
    */
 //F1-printWiFiStatus()
 void printWiFiStatus() {
@@ -196,13 +196,13 @@ void printWiFiStatus() {
   IPAddress ip = WiFi.localIP();
   Serial.print("IP Address: ");
   Serial.println(ip);
-  
+
   // print the received signal strength:
   long rssi = WiFi.RSSI();
   Serial.print("signal strength (RSSI):");
   Serial.print(rssi);
   Serial.println(" dBm");
-  
+
   // print where to go in a browser:
   Serial.print("To see this page in action, open a browser to http://");
   Serial.println(ip);
@@ -211,7 +211,7 @@ void printWiFiStatus() {
 //F2-setup_wifi()
   void setup_wifi() {
  rtc.begin();//Initializes the internal RTC.
- 
+
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("Communication with WiFi module failed!");
@@ -237,7 +237,7 @@ void printWiFiStatus() {
   server.begin();                           // start the web server on port 80
   printWiFiStatus();                        // you're connected now, so print out the status
   }
-  
+
 //F3-saisie_wifi() - Saisie des paramètres de cuisson en wifi
  // compare the previous status to the current status
   void saisie_wifi() {
@@ -304,7 +304,7 @@ void printWiFiStatus() {
           currentLine += c;      // add it to the end of the currentLine
         }
         // Check to see the client request
-       
+
          int x=0;
 
          while(x!=10){
@@ -313,13 +313,13 @@ void printWiFiStatus() {
             if(currentLine.endsWith(check_gabarit)){
                 Gabarit = x;
                 get_gabarit = gabarit_url + Gabarit;//Par exemple si le gabarit est 5 : GET/?=5
-                
+
               }
               x++;
           }
-        
+
         int i=0;
-            
+
         while(i!=1000){
           get_time = (get_gabarit + time_url) + i;//Par exemple si le gabarit est 5 et la durée 60 mn : GET/?=5&t=60
           if(currentLine.endsWith(get_time)){
@@ -341,14 +341,15 @@ void printWiFiStatus() {
 /*
  * 3a-2 IHM clavier
  */
- 
+
  //F1 - Fonction spécifique de saisie en mode "clavier"
  void saisie(){
   //Saisie des paramètres de cuisson
   //Saisie de la duree de cuisson DC
-  byte x=(15); 
-  Serial.println ("Entrer DC (mn) sur 3 chiffres");
+  byte x=(15);
+  Serial.println ("Entrer DC (mn) > 0 (attention : après la frappe du premier chiffre, vous avez 5 secondes pour saisir la valeur)");
   bool bidon = true;
+  Serial.setTimeout(5000);//Laps de temps pour saisir la valeur
   while (bidon) {while (Serial.available () > 0) DC = Serial.parseInt(); if (DC>0) bidon=false;}
   Serial.print (DC);
   Serial.println (" mn ");
@@ -362,8 +363,8 @@ void printWiFiStatus() {
    if (reponse==111 | reponse==79) {
    Serial.println ("Choisir le gabarit 1 -> 9 ");
    while (flag>0) {if (Serial.available () > 0) {
-   reponse=Serial.read(); 
-   Gabarit=reponse&x; 
+   reponse=Serial.read();
+   Gabarit=reponse&x;
    if (Gabarit > 0 & Gabarit <=9){flag=flag-1;}
    delay (1000);
  }//if serial.available b
@@ -373,12 +374,12 @@ void printWiFiStatus() {
    delay (1000);
  }//if Serial.available a
  }//while
- 
+
   Serial.println ("Voulez-vous continuer ? taper O");
   flag=1;
   while (flag>0) {if (Serial.available() > 0)
     {reponse=Serial.read(); if (reponse==111 | reponse==79){flag=flag-1;}//Si le caractère frappé est O ou o
-    
+
     }
   }
   }
@@ -401,7 +402,7 @@ void printWiFiStatus() {
     }
   }
   delay(2000);
-  
+
   //Appel de la fonction "saisie clavier"
   //cette fonction est appellée si les conditions suivantes sont remplies :
   //1) le moniteur série est connecté par l'intermédiaire du câble série entre l'ordinateur et la plateforme MKR wifi 1010
@@ -424,7 +425,7 @@ void printWiFiStatus() {
   while (!val_stsp) {val_stsp = digitalRead(inPin_stsp); cli_4leds(); Serial.print(val_stsp); Serial.println (" - attente de la cmd start");}
   //Appel du setup et de la fonction de saisie wifi
  }
-  /*   
+  /*
    * 4a-1 IHM wifi : Vide
    */
 

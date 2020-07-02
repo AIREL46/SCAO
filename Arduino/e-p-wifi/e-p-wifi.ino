@@ -138,10 +138,13 @@ Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
  * 2i Régulation de la température
  */
 # include <math.h>
-float Tinit;
-float Dich;
-float ecart;
-float Correction;
+float Tinit;//Initialisation de la variable Température initiale
+float Dich;//Initialisation de la variable Durée itérative de chauffe
+float ecart;//Initialisation de la variable écart
+float Correction;//Initialisation de la variable Correction
+double Dur;//Initialisation de la variable Durée de chauffe restante
+double t_deb_cuisson;//Initialisation de la variable temps nécessaire pour atteindre la température de début de cuisson
+bool Ach = false;//Initialisation de la variable Autorisation de chauffe
 
 /**
  * 2j - Visualisation du contenu des échantillons
@@ -243,11 +246,20 @@ void setup() {
   //setup_g();
   //4h - Bilan énergétique de la batterie
   //4i Régulation de la température
+  //Mesure et mémorisation de la température initiale sur le couvercle de la casserole
   if (getT2(&T2, true) != READ_OK) {
     Serial.println(F("Erreur de lecture du capteur"));
     return;
   }
-  Tinit = T2;
+  Tinit = T2;//Température initiale
+  if (Tinit < 55) {
+    t_deb_cuisson = -(Tau*log(1-((55-Tinit)/(Tu-Tinit))));//Calcul théorique du temps nécessaire pour atteindre le début de cuisson
+    Dur = DC + t_deb_cuisson;//Calcul de la durée de cuisson restante
+  }
+  else {
+    Dur = DC;//Calcul de la durée de cuisson restante
+  }
+
  //4j - Visualisation du contenu des échantillons
  setup_j();
  //4k - Mode sleep
@@ -256,6 +268,7 @@ void setup() {
 
 void loop() {
   Chrono.restart();
+  digitalWrite(led_pin_v, HIGH);
   count = count +1;
 //5a Les IHM
 //5a-1 IHM wifi
@@ -283,22 +296,33 @@ void loop() {
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique de la batterie
 //5i Régulation de la température
-t=(double)t+0.5;
-double x = 0.000;
-x = (double)t/Tau;
-Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)t/Tau));
-ecart = Tcons - T2;
-Correction = ecart*G;
+//Positionnement de l'Autorisation de chauffe
+if (Dur > 0) {Ach = true;}
+else {Ach = false;}
+t=(double)t+0.5;//Incrémentation de la variable t
+Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)t/Tau));//Calcul de la température de consigne (trajectire de référence)
+ecart = Tcons - T2;//Calcul de l'écart de température entre la trajectoire de référence et la trajectoire réelle
+Correction = ecart*G;//Calcul de la Correction
+//Calcul de la Durée itérative de chauffe
 if (Correction <= 0) {Dich = 0;}
 if (Correction > 0 && Correction > 1) {Dich = p*I;}
 if (Correction > 0 && Correction < 1) {Dich = p*I*Correction;}
-Serial.print ("ecart : ");
-Serial.print (ecart);
+Serial.print ("Dur : ");
+Serial.print (Dur);
+
 Serial.print (" Dich : ");
 Serial.println (Dich);
-digitalWrite(relay, HIGH);
-delay(Dich*1000);
-digitalWrite(relay, LOW);
+//Réglage du flux thermique de la table de cuisson à l'aide de l'actionneur (relai)
+digitalWrite(led_pin_v, LOW);
+if (Ach) {
+  digitalWrite(led_pin_j, HIGH);
+  digitalWrite(relay, HIGH);//Application de la tension 230VAC sur la table de cuisson
+  delay(Dich*1000);//Maintien sous tension 230VAC de la table de cuisson
+  digitalWrite(relay, LOW);//Coupure de la tension 230VAC de la table de cuisson
+  digitalWrite(led_pin_j, LOW);
+  Dur = (double)Dur -0.5;//Décrémentation de la Durée de chauffe restante
+}
+
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
@@ -309,5 +333,7 @@ Serial.print ("ti : ");
 Serial.print (ti/1000);
 Serial.print (" tt1 : ");
 Serial.println (tt1/1000);
+digitalWrite(led_pin_b, HIGH);
 delay((ti - tt1)/1000);
+digitalWrite(led_pin_b, LOW);
 }
