@@ -248,7 +248,7 @@ void setup() {
   //4i Régulation de la température
   //Mesure et mémorisation de la température initiale sur le couvercle de la casserole
   if (getT2(&T2, true) != READ_OK) {
-    Serial.println(F("Erreur de lecture du capteur"));
+    Serial.println(F("Erreur de lecture du capteur T2"));
     return;
   }
   Tinit = T2;//Température initiale
@@ -284,7 +284,7 @@ void loop() {
   //float T2;
   /* Lit la température ambiante à ~1Hz */
   if (getT2(&T2, true) != READ_OK) {
-    Serial.println(F("Erreur de lecture du capteur"));
+    Serial.println(F("Erreur de lecture du capteur T2"));
     return;
   }
 
@@ -299,7 +299,6 @@ void loop() {
 //Positionnement de l'Autorisation de chauffe
 if (Dur > 0) {Ach = true;}
 else {Ach = false;}
-t=(double)t+0.5;//Incrémentation de la variable t
 Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)t/Tau));//Calcul de la température de consigne (trajectire de référence)
 ecart = Tcons - T2;//Calcul de l'écart de température entre la trajectoire de référence et la trajectoire réelle
 Correction = ecart*G;//Calcul de la Correction
@@ -307,11 +306,11 @@ Correction = ecart*G;//Calcul de la Correction
 if (Correction <= 0) {Dich = 0;}
 if (Correction > 0 && Correction > 1) {Dich = p*I;}
 if (Correction > 0 && Correction < 1) {Dich = p*I*Correction;}
-Serial.print ("Dur : ");
-Serial.print (Dur);
+//Serial.print ("Dur : ");
+//Serial.print (Dur);
 
-Serial.print (" Dich : ");
-Serial.println (Dich);
+//Serial.print (" Dich : ");
+//Serial.println (Dich);
 //Réglage du flux thermique de la table de cuisson à l'aide de l'actionneur (relai)
 digitalWrite(led_pin_v, LOW);
 if (Ach) {
@@ -322,17 +321,16 @@ if (Ach) {
   digitalWrite(led_pin_j, LOW);
   Dur = (double)Dur -0.5;//Décrémentation de la Durée de chauffe restante
 }
-
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
-
+  t=(double)t+0.5;//Incrémentation de la variable t
 //5k - Mode sleep
 tt1 = Chrono.elapsed();
-Serial.print ("ti : ");
-Serial.print (ti/1000);
-Serial.print (" tt1 : ");
-Serial.println (tt1/1000);
+//Serial.print ("ti : ");
+//Serial.print (ti/1000);
+//Serial.print (" tt1 : ");
+//Serial.println (tt1/1000);
 digitalWrite(led_pin_b, HIGH);
 delay((ti - tt1)/1000);
 digitalWrite(led_pin_b, LOW);
