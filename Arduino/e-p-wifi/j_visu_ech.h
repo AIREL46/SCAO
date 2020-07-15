@@ -9,7 +9,7 @@
 * 3j - Visualisation du contenu des échantillons
 */
  void visu(){
- Serial.print("temps                     : ");
+ Serial.print("temps                      : ");
  Serial.print(t);//N° de l'échantillon
  Serial.println(" minutes");
  //Serial.print(";");//Séparation des champs par une virgule
@@ -19,18 +19,23 @@
  //printTime();
  //Serial.print(";");//Séparation des champs par une virgule
  delay(100);
- Serial.print("temperature mesuree       : ");
+ Serial.print("temperature mesuree        : ");
  Serial.print(T2, 2);//Température mesurée T1 en °C sur la batterie
  Serial.println(" degres Celsius");
  //Serial.write(";"); //Séparation des champs par une virgule
  //Serial.print(T2, 2);//Température mesurée T2 en °C sur le couvercle de la casserole
  //Serial.write(";"); //Séparation des champs par une virgule
- Serial.print("temperature de consigne   : ");
+ Serial.print("temperature de consigne    : ");
  Serial.print(Tcons, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
  Serial.println(" degres Celsius");
  Serial.print("duree iterative de chauffe : ");
  Serial.print(Dich, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
  Serial.println(" secondes");
+ Serial.print("autorisation de chauffe    : ");
+ Serial.println(Ach);//Température mesurée Tcons en °C de consigne (trajectoire)
+ Serial.print("duree restante             : ");
+ Serial.print(Dur, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
+ Serial.println(" minutes");
  Serial.println();
  //Serial.write(";"); //Séparation des champs par une virgule
  //Serial.print(Vusb);//Tension mesurée Vusb en mV
