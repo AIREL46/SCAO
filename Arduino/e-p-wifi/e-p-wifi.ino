@@ -167,10 +167,11 @@ bool val_sleep = false;//variable to store the read value
         mesures();//Lance la fonction mesures() pour connaitre l'état de Vusb (state_Vusb)
         if (!state_Vusb) {digitalWrite(led_pin_r, HIGH);}
         if (state_Vusb) {digitalWrite(led_pin_v, HIGH);}
-        delay(30);
+        delay(300);
         if (!state_Vusb) {digitalWrite(led_pin_r, LOW);}
         if (state_Vusb) {digitalWrite(led_pin_v, LOW);}
-        delay(30);
+        delay(300);
+        time = time + 1;
     }
     // normal delay for Arduino Serial Monitor
     delay(1200);
@@ -224,7 +225,7 @@ void setup() {
   wait_s_m();//Wait for serial monitor
   //while (!Serial);
     delay(100);
-    digitalWrite(led_pin_r, LOW);
+    digitalWrite(led_pin_r, HIGH);
     //Serial.println("Starting...");
     delay(100);
  /*
@@ -318,7 +319,6 @@ if (Ach) {
   digitalWrite(relay, HIGH);//Application de la tension 230VAC sur la table de cuisson
   delay(Dich*1000);//Maintien sous tension 230VAC de la table de cuisson
   digitalWrite(relay, LOW);//Coupure de la tension 230VAC de la table de cuisson
-  digitalWrite(led_pin_j, LOW);
   Dur = (double)Dur -0.5;//Décrémentation de la Durée de chauffe restante
 }
 //5j - Visualisation du contenu des échantillons
@@ -331,6 +331,7 @@ tt1 = Chrono.elapsed();
 //Serial.print (ti/1000);
 //Serial.print (" tt1 : ");
 //Serial.println (tt1/1000);
+digitalWrite(led_pin_j, LOW);
 digitalWrite(led_pin_b, HIGH);
 delay((ti - tt1)/1000);
 digitalWrite(led_pin_b, LOW);
