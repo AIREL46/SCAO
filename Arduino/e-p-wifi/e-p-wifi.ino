@@ -97,7 +97,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  */
  byte count = 0;//Initialisation du numéro du message
  float Tcons=0;//Trajectoire
- double t=0;//temps écoulé depuis le début de la cuisson
+ double t=0.5;//temps écoulé depuis le début de la cuisson
+ double palier=1;//
  unsigned long tt1=0;//temps de travail 1
  unsigned long tt2=0;//temps de travail 2
  unsigned long ti=30000000;//temps itératif
@@ -300,7 +301,7 @@ void loop() {
 //Positionnement de l'Autorisation de chauffe
 if (Dur > 0) {Ach = true;}
 else {Ach = false;}
-Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)t/Tau));//Calcul de la température de consigne (trajectire de référence)
+Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)palier/(2*Tau)));//Calcul de la température de consigne (trajectire de référence)
 ecart = Tcons - T2;//Calcul de l'écart de température entre la trajectoire de référence et la trajectoire réelle
 Correction = ecart*G;//Calcul de la Correction
 //Calcul de la Durée itérative de chauffe
@@ -324,7 +325,7 @@ if (Ach) {
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   if (state_Vusb){visu();}
-  t=(double)t+0.5;//Incrémentation de la variable t
+  if (T2 >= Tcons) {palier=(double)palier+1;}//Incrémentation de la variable t
 //5k - Mode sleep
 tt1 = Chrono.elapsed();
 //Serial.print ("ti : ");

@@ -9,9 +9,8 @@
 * 3j - Visualisation du contenu des échantillons
 */
  void visu(){
- Serial.print("temps                      : ");
- Serial.print(t);//N° de l'échantillon
- Serial.println(" minutes");
+ Serial.print("palier                     : ");
+ Serial.println(palier, 0);//N° du palier
  //Serial.print(";");//Séparation des champs par une virgule
 //  digitalClockDisplay();//Heure et date
  //printDate();
