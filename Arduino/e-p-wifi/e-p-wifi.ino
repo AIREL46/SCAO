@@ -54,51 +54,24 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *En application des règles de licences Creative commons, chacun, des sous paragraphes ci-dessous, dédié à une fonction, cite, le nom du développeur,
 *indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
 *
-*1a IHM -> a_ihm.h
- *
- * 1b - Libre
- *
- * 1c - Acquisition des températures T1 et T2
- * 1d - Mesure des tensions et calcul du courant ibat
- * La mesure des tensions est l'une des fonctions secondaires qui assure la sécurité de la e-poignée.
- * La mesure consiste en une conversion analogique digitale de la tension. Cette conversion est réalisée par le microcontrôleur. La tension à mesurer est appliquée sur l'une de ses entrées analogiques. Pour tenir compte de la tension d'alimentation de 3.3V du microcontrôleur, la tension à mesurer est au préalable divisée par 2 à l'aide d'un pont diviseur constitué de 2 résistances de valeurs égales.
- * La valeur mesurée est ensuite multipliée par 2, plus exactement par une valeur légérement supérieure à 2 pour compenser l'effet de l'impédance de l'entrée du microcontrôleur.
- * La figure accessible par le lien ci-après explicite le principe https://github.com/AIREL46/SCAO/raw/master/wiki/map.png
- *
- * 1e - BITE
- * L'objet du Build In Test Equipment (BITE) est d'assurer la sécurité de la e-poignée.
- * Cette sécurité se concrétise par un réseau de surveillance qui détecte d'éventuelles anomalies.
- * L'utilisateur est informé de l'état du fonctionnement par 3 leds (verte, orange, rouge).
- * Le BITE surveille la température de la batterie, les tensions continues Vusb, Vbat et V33.
- *
- * 1f - Libre
- *
- * 1g - Horodatage & Chronomètre
- * Horodatage
- * L'objet de l'horodatage est la datation des échantillons.
- *
- *  Chronomètre
- *  L'objet du chronomètre est la mesure du temps de travail du microcontrôleur.
- *  La librarie Chrono apporte les fonctions spécifiques qui permettent de gérer cette fonction.
- *  Cette Librarie a été développée par Sofian Audry and Thomas Ouellet Fredericks, elle est accesible par les liens :
- * - http://github.com/SofaPirate/Chrono
- *
- * 1h Bilan énergétique de la batterie
- * L'objet est l'établissement du bilan énergétique de la batterie
- * Cette fonction réalise les Régulation de la températures de l'énegie électrique consommée et le ratio par rapport à la capacité nominale de 800 mAh
- * 1i Régulation de la température
- * 1j - Visualisation du contenu des échantillons
- * 1k - Mode Sleep
- * L'objet du mode sleep est l'économie d'énergie de la batterie.
- *
- */
+* 1a IHM -> a_ihm.h
+* 1b - Libre -> b_libre.h
+* 1c - Acquisition des températures T1 et T2 -> c_acq_temp.h
+* 1d - Mesure des tensions et calcul du courant ibat -> d_mes-tensions.h
+* 1e - BITE -> e_bite.h
+* 1f - Libre -> f_libre.h
+* 1g - Horodatage & Chronomètre -> g_horo_chrono.h
+* 1h - Bilan énergétique -> h_bilan_eng.h
+* 1i - Régulation de la température -> i_reg_temp.h
+* 1j - Visualisation du contenu des échantillons -> j_visu_ech.h
+* 1k - Mode Sleep -> k_sleep.h
+*/
 /*
  * 2 - Initialisation des paramètres
  */
  byte count = 0;//Initialisation du numéro du message
  float Tcons=0;//Trajectoire
  double t=0.5;//temps écoulé depuis le début de la cuisson
- double palier=1;//
  unsigned long tt1=0;//temps de travail 1
  unsigned long tt2=0;//temps de travail 2
  unsigned long ti=30000000;//temps itératif
@@ -133,20 +106,13 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 #include <Chrono.h> //Include Chrono.h Library
 Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
 
-/**
- * 2h - Bilan énergétique de la batterie
- /**
- * 2i Régulation de la température
+/*
+ * 2h - Bilan énergétique
  */
-# include <math.h>
-float Tinit;//Initialisation de la variable Température initiale
-float Dich;//Initialisation de la variable Durée itérative de chauffe
-float ecart;//Initialisation de la variable écart
-float Correction;//Initialisation de la variable Correction
-double Dur;//Initialisation de la variable Durée de chauffe restante
-double t_deb_cuisson;//Initialisation de la variable temps nécessaire pour atteindre la température de début de cuisson
-bool Ach = false;//Initialisation de la variable Autorisation de chauffe
-
+# include "h_bilan_eng.h"
+ /* 2i Régulation de la température
+ */
+# include "i_reg_temp.h"
 /**
  * 2j - Visualisation du contenu des échantillons
 */
@@ -197,10 +163,10 @@ bool val_sleep = false;//variable to store the read value
 // 3e - Built In Test Equipment (BITE)
 //3f Libre
 //3g Horodatage et chronomètre
-/** 3h - Bilan énergétique de la batterie
+/** 3h - Bilan énergétique
  */
 //3h Bilan énergétique de la batterie
-//3i Régulation de la température
+//3i Régulation de la température -> i_reg_temp.h
   /**
  * 3j - Visualisation du contenu des échantillons
  */
@@ -246,22 +212,9 @@ void setup() {
   //4g Horodatage et chronomètre
   //setup_g
   //setup_g();
-  //4h - Bilan énergétique de la batterie
+  //4h - Bilan énergétique
   //4i Régulation de la température
-  //Mesure et mémorisation de la température initiale sur le couvercle de la casserole
-  if (getT2(&T2, true) != READ_OK) {
-    Serial.println(F("Erreur de lecture du capteur T2"));
-    return;
-  }
-  Tinit = T2;//Température initiale
-  if (Tinit < 55) {
-    t_deb_cuisson = -(Tau*log(1-((55-Tinit)/(Tu-Tinit))));//Calcul théorique du temps nécessaire pour atteindre le début de cuisson
-    Dur = DC + t_deb_cuisson;//Calcul de la durée de cuisson restante
-  }
-  else {
-    Dur = DC;//Calcul de la durée de cuisson restante
-  }
-
+  setup_i();
  //4j - Visualisation du contenu des échantillons
  setup_j();
  //4k - Mode sleep
@@ -296,36 +249,16 @@ void loop() {
 // 5e - Built In Test Equipment (BITE)
 //5f - Libre
 //5g Horodatage et chronomètre
-//5h - Bilan énergétique de la batterie
+//5h - Bilan énergétique
+//Table de Cuisson
+cout_total = (double)cout_total + ((double)cout_kwh * (((double)puissance) * ((double)Dich/3600)));
 //5i Régulation de la température
-//Positionnement de l'Autorisation de chauffe
-if (Dur > 0) {Ach = true;}
-else {Ach = false;}
-Tcons = Tinit + (Tu-Tinit)*(1-exp(-(double)palier/(2*Tau)));//Calcul de la température de consigne (trajectire de référence)
-ecart = Tcons - T2;//Calcul de l'écart de température entre la trajectoire de référence et la trajectoire réelle
-Correction = ecart*G;//Calcul de la Correction
-//Calcul de la Durée itérative de chauffe
-if (Correction <= 0) {Dich = 0;}
-if (Correction > 0 && Correction > 1) {Dich = p*I;}
-if (Correction > 0 && Correction < 1) {Dich = p*I*Correction;}
-//Serial.print ("Dur : ");
-//Serial.print (Dur);
-
-//Serial.print (" Dich : ");
-//Serial.println (Dich);
-//Réglage du flux thermique de la table de cuisson à l'aide de l'actionneur (relai)
-digitalWrite(led_pin_v, LOW);
-if (Ach) {
-  digitalWrite(led_pin_j, HIGH);
-  digitalWrite(relay, HIGH);//Application de la tension 230VAC sur la table de cuisson
-  delay(Dich*1000);//Maintien sous tension 230VAC de la table de cuisson
-  digitalWrite(relay, LOW);//Coupure de la tension 230VAC de la table de cuisson
-  Dur = (double)Dur -0.5;//Décrémentation de la Durée de chauffe restante
-}
+reg_temp();
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
-  if (state_Vusb){visu();}
-  if (T2 >= Tcons) {palier=(double)palier+1;}//Incrémentation de la variable t
+  //if (state_Vusb){visu_demo();}
+  if (state_Vusb){visu_demo();}
+  t = (double)t + 0.5;//Incrémentation de la variable t
 //5k - Mode sleep
 tt1 = Chrono.elapsed();
 //Serial.print ("ti : ");

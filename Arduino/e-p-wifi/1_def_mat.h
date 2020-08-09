@@ -25,7 +25,7 @@
  const int led_pin_r = 7;//Led rouge connectée sur l'entrée digitale D7
  const int relay = 8;//Relais connecté sur l'entrée digitale D8
  //D9
- //D10
+ const int speaker = 10;//Speaker connecté sur l'entrée digitale D10
  //D11
  //D12
  //D13

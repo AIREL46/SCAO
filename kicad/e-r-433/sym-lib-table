@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Sp)(type Legacy)(uri /home/airel/SCAO/kicad/Sp.lib)(options "")(descr ""))
+)

@@ -96,7 +96,7 @@ int p;//période
 float G;//Gain
 float I;//Intensité
 float Tu;//Température d'utilisation
-float Tm;//Temps de montée
+double Tm;//Temps de montée
 int Tau;//Tau
 float Vc;//Vitesse de consigne
 float A_c;//Accélération de consigne
