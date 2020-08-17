@@ -9,22 +9,16 @@
 * 3j - Visualisation du contenu des échantillons
 */
  void visu_demo(){
+ Serial.print("Phase                      : ");
+ Serial.println(phase),
  Serial.print("t                          : ");
- Serial.println(t);//N° du palier
- delay(100);
- //Serial.print("Duree restante en ph1      : ");
- //Serial.println(Dur_ph1, 2);//Température mesurée T1 en °C sur la batterie
+ Serial.println(t);
  Serial.print("temperature mesuree        : ");
  Serial.print(T2, 2);//Température mesurée T1 en °C sur la batterie
  Serial.println(" degres Celsius");
- //Serial.print("temperature de consigne    : ");
- //Serial.print(Tcons, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
- //Serial.println(" degres Celsius");
  Serial.print("duree iterative de chauffe : ");
  Serial.print(Dich, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
  Serial.println(" secondes");
- //Serial.print("autorisation de chauffe    : ");
- //Serial.println(Ach);//Température mesurée Tcons en °C de consigne (trajectoire)
  Serial.print("duree restante             : ");
  Serial.print(Dur, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
  Serial.println(" minutes");

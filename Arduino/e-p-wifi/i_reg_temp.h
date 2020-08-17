@@ -5,6 +5,7 @@
 * 2i Régulation de la température
 */
 # include <math.h>
+int phase;//Initialisation de la variable phase
 float Tinit;//Initialisation de la variable Température initiale
 float T10pc;//Initialisation de la variable Température T10%
 float Dich;//Initialisation de la variable Durée itérative de chauffe
@@ -26,14 +27,18 @@ void reg_temp() {
   if (Dur_ph1 > 0) {
     Tcons = Tinit + ((T10pc - Tinit)/Tm)*t;
     Dur_ph1 = (double)Dur_ph1 - 0.5;
+    phase = 1;
     if (Dur_ph1 == 0) {
       t = (double)0.0;
-    }//Si la phase 1 est terminée, alors réinitialiser t à la valeur zéro
-  }//Calcul de Tcons durant la phase 1
-  //Calcul de la température de consigne (Tcons) durant la phase 2
+    }//la phase 1 est terminée, alors réinitialiser t à la valeur zéro
+  }
+  //Calcul de la température de consigne (Tcons) durant la phase 2 et suivante
   else {
-    Tcons = Tinit + (T10pc - Tinit) + (Tu-T10pc)*(1-exp(-(double)t/Tau));
-    //Calcul de la température de consigne (trajectire de référence)
+    Tcons = Tinit + (T10pc - Tinit) + (Tu-T10pc)*(1-exp(-(double)t/Tau));//Calcul de la température de consigne (trajectire de référence)
+    phase = 2;
+    if (T2 > 55) {
+      phase = 3;
+    }
   }
   ecart = Tcons - T2;//Calcul de l'écart de température entre la trajectoire de référence et la trajectoire réelle
   Correction = ecart*G;//Calcul de la Correction

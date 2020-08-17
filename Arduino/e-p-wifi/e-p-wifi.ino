@@ -55,7 +55,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
 *
 * 1a IHM -> a_ihm.h
-* 1b - Libre -> b_libre.h
+* 1b - Speaker -> b_speaker.h
 * 1c - Acquisition des températures T1 et T2 -> c_acq_temp.h
 * 1d - Mesure des tensions et calcul du courant ibat -> d_mes-tensions.h
 * 1e - BITE -> e_bite.h
@@ -81,8 +81,10 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  * 2a Les IHM -> a_ihm.h
  */
  #include "a_ihm.h"
-
-
+/*
+ * 2b Speaker -> b_speaker.h
+ */
+#include "b_speaker.h"
 // 2c - Acquisition des températures
  #include "c_acq_temp.h"
 
@@ -149,7 +151,7 @@ bool val_sleep = false;//variable to store the read value
   */
 
   /*
-   * 3b - Libre
+   * 3b Speaker -> b_speaker.h
    */
 
    /**
@@ -201,7 +203,8 @@ void setup() {
   setup_a ();
 
 
-//4b - Libre
+//4b - Speaker -> b_speaker.h
+setup_b();
 //4c - Acquisition des températures T1 et T2
 
 /*
@@ -228,7 +231,12 @@ void loop() {
 //5a Les IHM
 //5a-1 IHM wifi
 //5a-2 IHM clavier
-//5b - Libre
+//5b - Speaker -> b_speaker.h
+if (Dur > 0){
+beep(200);
+}
+else {beep(5000);}
+delay(1000);
 //5c - Acquisition des températures T1 et T2
   //float T1;
   /* Lit la température T1 */
@@ -251,7 +259,10 @@ void loop() {
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique
 //Table de Cuisson
+if (Dur > 0){
+som_dich = (double)som_dich + (double)Dich;
 cout_total = (double)cout_total + ((double)cout_kwh * (((double)puissance) * ((double)Dich/3600)));
+}
 //5i Régulation de la température
 reg_temp();
 //5j - Visualisation du contenu des échantillons
