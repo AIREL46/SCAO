@@ -69,13 +69,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 /*
  * 2 - Initialisation des paramètres
  */
- byte count = 0;//Initialisation du numéro du message
- float Tcons=0;//Trajectoire
- double t=0.5;//temps écoulé depuis le début de la cuisson
- unsigned long tt1=0;//temps de travail 1
- unsigned long tt2=0;//temps de travail 2
- unsigned long ti=30000000;//temps itératif
- unsigned long ts=0;//temps de sleep
+ #include "1_communs.h"
  #include "1_def_mat.h"
 /*
  * 2a Les IHM -> a_ihm.h
@@ -126,26 +120,22 @@ bool val_sleep = false;//variable to store the read value
  /*
   * 3 - Fonctions spécifiques
   */
-/*
- //#include <digitalWriteFast.h> Non supporter par le MKR WiFi 1010
-   */
- //Wait for serial monitor
- void wait_s_m(){
-    int time = 0;
-    while (!Serial && time < 1000) {
-        mesures();//Lance la fonction mesures() pour connaitre l'état de Vusb (state_Vusb)
-        if (!state_Vusb) {digitalWrite(led_pin_r, HIGH);}
-        if (state_Vusb) {digitalWrite(led_pin_v, HIGH);}
-        delay(300);
-        if (!state_Vusb) {digitalWrite(led_pin_r, LOW);}
-        if (state_Vusb) {digitalWrite(led_pin_v, LOW);}
-        delay(300);
-        time = time + 1;
-    }
-    // normal delay for Arduino Serial Monitor
-    delay(1200);
-  }
-
+  //Wait for serial monitor
+  void wait_s_m(){
+     int time = 0;
+     while (!Serial && time < 1000) {
+         mesures();//Lance la fonction mesures() pour connaitre l'état de Vusb (state_Vusb)
+         if (!state_Vusb) {digitalWrite(led_pin_r, HIGH);}
+         if (state_Vusb) {digitalWrite(led_pin_v, HIGH);}
+         delay(300);
+         if (!state_Vusb) {digitalWrite(led_pin_r, LOW);}
+         if (state_Vusb) {digitalWrite(led_pin_v, LOW);}
+         delay(300);
+         time = time + 1;
+     }
+     // normal delay for Arduino Serial Monitor
+     delay(1200);
+   }
  /*
   * 3a Les IHM -> a_ihm.h
   */

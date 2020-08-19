@@ -50,13 +50,13 @@
  * - Serial.available() permet de connaître le nombre de caractères disponibles dans le buffer de la liaison série
  * - Serial.read() permet de lire le caractère disponible (utilisée pour lire le gabarit)
  * - Serial.parseInt() permet de lire plusieurs nombres entiers saisis l'un à la suite de l'autre
- *   (utilisée pour lire la Durée de Cuisson (DC)).
+ *   (utilisée pour lire la Durée de Chauffe (DC1)).
  */
 
 /*
  * 2a Les IHM
- * Les paramètres de cuisson sont la Durée de Cuisson (DC) et le Gabarit de cuisson (Gabarit).
- * DC est exprimée en mn sur 3 chiffres
+ * Les paramètres de cuisson sont la Durée de Chauffe (DC1) et le Gabarit de cuisson (Gabarit).
+ * DC1 est exprimée en mn sur 3 chiffres
  * Le Gabarit est un nombre entier compris entre 1 et 9.
  * Chaque Gabarit est associé à 9 paramètres :
  * la période (p),
@@ -101,10 +101,11 @@ int Tau;//Tau
 float Vc;//Vitesse de consigne
 float A_c;//Accélération de consigne
 int ta;//temps d'anticipation
-//Création de la variable Durée de Cuisson (DC)
-long DC;
-//Création de la variable Gabarit
-int Gabarit;
+long DC1;//Création de la variable Durée de Chauffe (DC1)
+long DC2;//Création de la variable Durée de Cuisson (DC2)
+bool FC1 = false;//Création de la variable Fin de Chauffe (FC1)
+bool FC2 = false;//Création de la variable Fin de Cuisson (FC2)
+int Gabarit;//Création de la variable Gabarit
 
 /*
  * 2a-1 IHM WiFi
@@ -138,16 +139,16 @@ WiFiServer server(80);
 //Initialisation des paramètres "clavier"
 //Création de la variable flag dédiée à la saisie du N° de gabarit
 int flag=1;
-//Création du paramètre i correspondant au nombre de chiffres à saisir pour définir la durée de cuisson
+//Création du paramètre i correspondant au nombre de chiffres à saisir pour définir la Durée de Chauffe
 int i=3;
 int reponse;
 
   /*
    * 3a Les IHM - Fonctions spécifiques communes
    */
-   //F1 - Visualisation DC et N° de gabarit
+   //F1 - Visualisation DC1 et N° de gabarit
   void visu_DC_G() {
-  Serial.print ("Duree de cuisson "), Serial.print (DC); Serial.println (" mn - ");
+  Serial.print ("Duree de cuisson "), Serial.print (DC1); Serial.println (" mn - ");
   //Visualisation des parametres correspondants au N° du gabarit choisi
   delay (1000);
   //Affectation des paramètres de cuisson en fonction du gabarit choisi
@@ -242,7 +243,7 @@ void printWiFiStatus() {
  // compare the previous status to the current status
   void saisie_wifi() {
   IPAddress ip = WiFi.localIP();
-  Serial.print("Choisir gabarit et DC en ouvrant à l'aide du navigateur une fenêtre à l'adresse http://");
+  Serial.print("Choisir gabarit et DC1 en ouvrant à l'aide du navigateur une fenêtre à l'adresse http://");
   Serial.print (ip);
   Serial.println (" puis valider stsp.");
   WiFiClient client = server.available();   // listen for incoming clients
@@ -284,11 +285,11 @@ void printWiFiStatus() {
             client.print("<br>");
             client.print("<br>");
             client.print("<br>");
-            client.print("<input type='number' name='t'>DC(mn)<br>");//Defines the input type.
+            client.print("<input type='number' name='t'>DC1(mn)<br>");//Defines the input type.
             client.print("<input type='submit' value='Submit'></form>");
             client.print(Gabarit);
             client.print("<br>");
-            client.print(DC);
+            client.print(DC1);
             client.print("<br>");
             client.print(get_gabarit);
             client.print("<br>");
@@ -323,7 +324,7 @@ void printWiFiStatus() {
         while(i!=1000){
           get_time = (get_gabarit + time_url) + i;//Par exemple si le gabarit est 5 et la durée 60 mn : GET/?=5&t=60
           if(currentLine.endsWith(get_time)){
-            DC = i;
+            DC1 = i;
             break;
           }
           i++;
@@ -345,13 +346,13 @@ void printWiFiStatus() {
  //F1 - Fonction spécifique de saisie en mode "clavier"
  void saisie(){
   //Saisie des paramètres de cuisson
-  //Saisie de la duree de cuisson DC
+  //Saisie de la duree de cuisson DC1
   byte x=(15);
   Serial.println ("Entrer la duree de cuisson (mn) > 0 (attention : apres la frappe du premier chiffre, vous avez 5 secondes pour saisir la valeur)");
   bool bidon = true;
   Serial.setTimeout(5000);//Laps de temps pour saisir la valeur
-  while (bidon) {while (Serial.available () > 0) DC = Serial.parseInt(); if (DC>0) bidon=false;}
-  Serial.print (DC);
+  while (bidon) {while (Serial.available () > 0) DC1 = Serial.parseInt(); if (DC1>0) bidon=false;}
+  Serial.print (DC1);
   Serial.println (" mn ");
   delay(1000);
   //Saisie du gabarit
@@ -415,7 +416,7 @@ void printWiFiStatus() {
   //Appel de la fonction saisie_wifi suivie de la lecture périodique toutes les secondes de la variable val-stsp qui permet la sortie du "while" quand elle est égale à "true"
   while (!val_stsp && wifi_clavier) {saisie_wifi(); val_stsp = digitalRead(inPin_stsp); delay(1000);}//Harmoniser avec la fonction clavier
 
-  //Appel de la fonction v const int led_pin_b = 19;//blue led connected to digital pin 19isu_DC_G() qui affiche la durée de cuisson et le contenu du gabarit sélectionnés par l'utilisateur
+  //Appel de la fonction v const int led_pin_b = 19;//blue led connected to digital pin 19isu_DC_G() qui affiche la Durée de Chauffe et le contenu du gabarit sélectionnés par l'utilisateur
   visu_DC_G();
 
   //Fonction boucle d'attente de la commande stsp

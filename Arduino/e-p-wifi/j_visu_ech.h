@@ -13,8 +13,14 @@
  Serial.println(phase),
  Serial.print("t                          : ");
  Serial.println(t);
+ Serial.print("T10pc                      : ");
+ Serial.print(T10pc);//
+ Serial.println(" degres Celsius");
  Serial.print("temperature mesuree        : ");
  Serial.print(T2, 2);//Température mesurée T1 en °C sur la batterie
+ Serial.println(" degres Celsius");
+ Serial.print("T98pc                      : ");
+ Serial.print(T98pc);//Température mesurée T1 en °C sur la batterie
  Serial.println(" degres Celsius");
  Serial.print("duree iterative de chauffe : ");
  Serial.print(Dich, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
@@ -31,6 +37,10 @@
  Serial.print("Somme des Dich             : ");
  Serial.print(som_dich, 2);//Somme des Dich
  Serial.println(" secondes");
+ Serial.print("inter98pc                  : ");
+ Serial.println(inter98pc);
+ Serial.print("FC1                        : ");
+ Serial.println(FC1);
  Serial.println();
  delay(2000);
  }
