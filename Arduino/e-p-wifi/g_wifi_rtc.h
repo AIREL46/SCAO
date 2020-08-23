@@ -89,7 +89,7 @@ void printDate()
 */
 void setup_g() {
   Serial.begin(9600);
-
+  
   // check if the WiFi module works
   if (WiFi.status() == WL_NO_SHIELD) {
     Serial.println("WiFi shield not present");

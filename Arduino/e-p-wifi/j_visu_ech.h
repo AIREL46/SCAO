@@ -10,7 +10,7 @@
 */
  void visu_demo(){
  Serial.print("Phase                      : ");
- Serial.println(phase),
+ Serial.println(phase);
  Serial.print("t                          : ");
  Serial.println(t);
  Serial.print("T10pc                      : ");

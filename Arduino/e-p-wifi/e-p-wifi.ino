@@ -164,8 +164,8 @@ bool val_sleep = false;//variable to store the read value
  */
 //3k Mode sleep
 /** 4 - Fonction setup() **/
-
 void setup() {
+  setup_communs();
   /* Initialisation du port série */
   Serial.begin(9600);
   delay(2000);

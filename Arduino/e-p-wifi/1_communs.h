@@ -19,6 +19,11 @@ unsigned long ts=0;//temps de sleep
 /*
 * 4 - Fonction setup
 */
+//digitalWrite(led_pin_r, HIGH);
+void setup_communs() {
+  Serial.println ("Bonjour");
+  
+}
 /*
 * 5 - Fonction loop
 */
