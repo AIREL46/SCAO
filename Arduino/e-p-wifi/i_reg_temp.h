@@ -26,7 +26,7 @@ bool Ach = false;//Initialisation de la variable Autorisation de chauffe
 */
 void reg_temp() {
   //Positionnement de l'Autorisation de chauffe
-  if (Dur > 0) {Ach = true;}
+  if (Dur > 0 && !alarme_batterie) {Ach = true;}
   else {Ach = false;}
   //Calcul de la température de consigne (Tcons) durant la phase 1
   if (Dur_ph1 > 0) {

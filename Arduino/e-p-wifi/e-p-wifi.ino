@@ -16,7 +16,7 @@
  * 4 - Fonction setup
  * 5 - Fonction loop
  * Chaque paragraphe est constitué de sous paragraphes :
- * a) Les IHM (wifi et calvier)
+ * a) Les IHM (wifi et clavier)
  * b) Libre
  * c) Acquisition des températures T1 et T2
  * d) Mesures des tensions et calcul de ibat
@@ -89,6 +89,9 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 /*
  * 2e - Built In Test Equipment (BITE)
  */
+ float T1_cons = 41.5;//Température de consigne de la batterie à ne pas dépasser
+ bool alarme_batterie = false;//Alarme batterie (false=normal, true=alarme)
+ bool alarme_coupure_secteur = false;
  /** 2f - Libre
  * 2g - Horodatage & Chronomètre
  * Horodatage
@@ -201,6 +204,7 @@ setup_b();
  * 4d - Mesure des tensions et calcul du courant ibat*/
   setup_d();
   // 4e - Built In Test Equipment (BITE)
+  pinMode(P230V, INPUT);
   //4f Libre
   //4g Horodatage et chronomètre
   //setup_g
@@ -245,6 +249,24 @@ delay(1000);
  mesures();
 
 // 5e - Built In Test Equipment (BITE)
+if (T1 >= T1_cons) {
+  alarme_batterie = true;
+  digitalWrite(led_pin_r, HIGH);
+}
+else {
+  alarme_batterie = false;
+  digitalWrite(led_pin_r, LOW);
+}
+int val;
+val = digitalRead(P230V);
+if (val == 1) {
+  alarme_coupure_secteur = true;
+  digitalWrite(led_pin_r, HIGH);
+}
+else {
+  alarme_coupure_secteur = false;
+  digitalWrite(led_pin_r, LOW);
+}
 //5f - Libre
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique

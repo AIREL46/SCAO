@@ -16,9 +16,9 @@
 * 2c - Acquisition des températures
 * Code pour lire un thermomètre digital DS18B20 sur un bus 1-Wire.
 */
-float T1;
-float T2;
-float Ti;
+float T1;//Température mesurée sur la batterie
+float T2;//Température mesurée sur le couvercle de la casserole
+float Ti;//Température initiale
 /* Dépendance pour le bus 1-Wire */
 #include <OneWire.h> //Chargement de la librairie OneWire.h
 

@@ -26,7 +26,7 @@
  const int relay = 8;//Relais connecté sur l'entrée digitale D8
  //D9
  const int speaker = 10;//Speaker connecté sur l'entrée digitale D10
- //D11
+ const int P230V = 11;//P203V connecté sur l'entrée digitale D11
  //D12
  //D13
  //D14

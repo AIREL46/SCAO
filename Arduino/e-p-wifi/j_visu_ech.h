@@ -9,39 +9,26 @@
 * 3j - Visualisation du contenu des échantillons
 */
  void visu_demo(){
- //Serial.print("Phase                      : ");
- //Serial.println(phase);
  Serial.print("t                          : ");
  Serial.println(t);
- //Serial.print("T10pc                      : ");
- //Serial.print(T10pc);//
- //Serial.println(" degres Celsius");
  Serial.print("temperature mesuree        : ");
- Serial.print(T2, 2);//Température mesurée T1 en °C sur la batterie
+ Serial.print(T2, 2);//Température mesurée T2 en °C sur le couvercle de la casserole
  Serial.println(" degres Celsius");
  Serial.print("temperature de consigne    : ");
- Serial.print(Tcons, 2);//Température mesurée T1 en °C sur la batterie
+ Serial.print(Tcons, 2);//Température de consigne en °C
  Serial.println(" degres Celsius");
- //Serial.print("T98pc                      : ");
- //Serial.print(T98pc);//Température mesurée T1 en °C sur la batterie
- //Serial.println(" degres Celsius");
  Serial.print("duree iterative de chauffe : ");
- Serial.print(Dich, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
+ Serial.print(Dich, 2);//Durée itérative de chauffe
  Serial.println(" secondes");
  Serial.print("duree restante             : ");
- Serial.print(Dur, 2);//Température mesurée Tcons en °C de consigne (trajectoire)
+ Serial.print(Dur, 2);//Durée restante
  Serial.println(" minutes");
  Serial.print("cout                       : ");
  Serial.print(cout_total, 4);//Coût en €
  Serial.println(" euros");
- //Serial.print("Puissance                  : ");
- //Serial.print(puissance, 2);//Puissance
- //Serial.println(" kilowatts");
  Serial.print("Somme des Dich             : ");
  Serial.print(som_dich, 2);//Somme des Dich
  Serial.println(" secondes");
- //Serial.print("inter98pc                  : ");
- //Serial.println(inter98pc);
  Serial.print("FC1                        : ");
  Serial.println(FC1);
  Serial.println();
