@@ -11,7 +11,10 @@
  void visu_demo(){
  Serial.print("t                          : ");
  Serial.println(t);
- Serial.print("temperature mesuree        : ");
+ Serial.print("temperature mesuree T1     : ");
+ Serial.print(T1, 2);//Température mesurée T2 en °C sur la batterie
+ Serial.println(" degres Celsius");
+ Serial.print("temperature mesuree T2     : ");
  Serial.print(T2, 2);//Température mesurée T2 en °C sur le couvercle de la casserole
  Serial.println(" degres Celsius");
  Serial.print("temperature de consigne    : ");
@@ -31,6 +34,16 @@
  Serial.println(" secondes");
  Serial.print("FC1                        : ");
  Serial.println(FC1);
+ Serial.print("Alarme Vusb                : ");
+ Serial.println(alarme_Vusb);
+ Serial.print("Alarme Vbat_2              : ");
+ Serial.println(alarme_Vbat_2);
+ Serial.print("Alarme temperature bat     : ");
+ Serial.println(alarme_temperature_bat);
+ Serial.print("Alarme V33                 : ");
+ Serial.println(alarme_V33);
+ Serial.print("Alarme coupure secteur     : ");
+ Serial.println(alarme_coupure_secteur);
  Serial.println();
  delay(2000);
  }

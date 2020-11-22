@@ -1,0 +1,65 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "e-rupteur wifi"
+Date "2020-11-12"
+Rev "A"
+Comp "A3C presqu'île"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	5855 2000 5855 2002
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5FACCECA
+P 2200 3000
+F 0 "J1" H 2118 3317 50  0000 C CNN
+F 1 "Bornier fil-à-carte SMKDS" H 2118 3226 50  0000 C CNN
+F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MC_1,5_3-G-5.08_1x03_P5.08mm_Horizontal" H 2200 3000 50  0001 C CNN
+F 3 "https://fr.farnell.com/phoenix-contact/smkds-2-5-3-5-08/terminal-block-wire-to-brd-3pos/dp/1793041" H 2200 3000 50  0001 C CNN
+	1    2200 3000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3000 2400 3000
+Wire Wire Line
+	2400 3100 5800 3100
+$Comp
+L Relay_SolidState:FODM3053 U1
+U 1 1 5FACEE00
+P 2700 2100
+F 0 "U1" H 2700 2425 50  0000 C CNN
+F 1 "SKL10120" H 2700 2334 50  0000 C CNN
+F 2 "SKL10120:SKL10120" H 2500 1900 50  0001 L CIN
+F 3 "https://www.e-catalogue.celduc-relais.com/fr/index.php?controller=attachment&id_attachment=42" H 2700 2100 50  0001 L CNN
+	1    2700 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2200 3000 2900
+Wire Wire Line
+	3000 2900 2400 2900
+Wire Wire Line
+	3000 2000 3200 2000
+Wire Wire Line
+	3200 2000 3200 2900
+Wire Wire Line
+	3200 2900 5800 2900
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5FAD2A49
+P 6000 3000
+F 0 "J2" H 5918 3317 50  0000 C CNN
+F 1 "Bornier fil-à-carte SMKDS" H 5918 3226 50  0000 C CNN
+F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MC_1,5_3-G-5.08_1x03_P5.08mm_Horizontal" H 6000 2700 50  0000 C CNN
+F 3 "https://fr.farnell.com/phoenix-contact/smkds-2-5-3-5-08/terminal-block-wire-to-brd-3pos/dp/1793041" H 6000 3000 50  0001 C CNN
+	1    6000 3000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

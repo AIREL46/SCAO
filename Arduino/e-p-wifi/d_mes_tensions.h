@@ -9,10 +9,6 @@
 float Vbat_1; //Initialisation de la variable Vbat_1 (valeur de la tension Vbat avant la résistance de 1 Ohm)
 float Vbat_2; //Initialisation de la variable Vbat_2 (valeur de la tension Vbat après la résistance de 1 Ohm)
 float ibat; //Initialisation de la variable ibat (valeur du courant qui traverse la résistance de 1 Ohm)
-const float Vbat_limite = 4300; //Limite supérieure de Vbat
-const float Vbat_nominal = 3700; //Valeur nominale de Vbat
-const float Vbat_min = 3600; //Valeur minimun de Vbat
-const float Vbat_cut_off = 2800; //Cut off de Vbat*/
 float Vusb; //Initialisation de la variable Vusb
 float V33; //Initialisation de la variable V33
 //Initialisation des valeurs utilisées par la fonction de changement d'échelle (fonction mathématique map() de l'arduino)
