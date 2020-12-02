@@ -101,7 +101,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  bool alarme_coupure_secteur = false;
 //Initialisation des variables de surveillance de la tension Vusb
  const float Vusb_limite_sup = 5250;//Initialisation de la variable Vusb limite supérieure
- const float Vusb_limite_inf = 4750;//Initialisation de la variable Vusb limite inférieure
+ const float Vusb_limite_inf = 4700;//Initialisation de la variable Vusb limite inférieure
  bool alarme_Vusb = false;
 //Initialisation des variables de surveillance de la tension 3.3V
  const float V33_limite_sup = 3465;//Initialisation de la variable V33 limite supérieure
