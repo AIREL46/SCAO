@@ -27,7 +27,3 @@ void setup_b()  {
   delay(1000);
 }
 //5b - Speaker
-//void loop()  {
-  //beep(200);
-  //delay(1000);
-//}

@@ -77,6 +77,7 @@ void reg_temp() {
 * 4i Régulation de la température
 */
 void setup_i() {
+  pinMode (relay, OUTPUT);
   inter98pc = false;//Initialisation de la variable inter98pc à false
   //Mesure et mémorisation de la température initiale sur le couvercle de la casserole
   if (getT2(&T2, true) != READ_OK) {

@@ -25,8 +25,6 @@ bool state_Vusb = false;
 void mesures(){
 Vusb = map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
 delay(120);//Pour compenser la durée necessaire à la conversion analogique digital
-Vbat_1 = map (2.0038*analogRead(Vbat_demie_1), 0, MaxConv, 0, MaxVolt);
-delay(120);//Pour compenser la durée necessaire à la conversion analogique digital
 Vbat_2 = map (2.0038*analogRead(Vbat_demie_2), 0, MaxConv, 0, MaxVolt);
 delay(120);//Pour compenser la durée necessaire à la conversion analogique digital
 ibat = Vbat_1 - Vbat_2;
