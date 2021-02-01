@@ -42,13 +42,15 @@
  Serial.println(alarme_temperature_bat);
  Serial.print("Alarme V33                 : ");
  Serial.println(alarme_V33);
- Serial.print("Alarme coupure secteur     : ");
+ Serial.print("Alarme coupure secteur      : ");
  Serial.println(alarme_coupure_secteur);
  Serial.println();
  delay(2000);
  }
  void visu_op(){
  Serial.print (t);
+ Serial.write(";"); //Séparation des champs par une virgule
+ Serial.print(T1, 2);//Température mesurée T2 en °C sur le couvercle de la casserole
  Serial.write(";"); //Séparation des champs par une virgule
  Serial.print(T2, 2);//Température mesurée T2 en °C sur le couvercle de la casserole
  Serial.write(";"); //Séparation des champs par une virgule
@@ -65,6 +67,6 @@
  //4j - Visualisation du contenu des échantillons
   void setup_j() {
   Serial.println ("Cuisson en cours");
-  Serial.println("t;T2 (degres C);Tcons (degres C);Dich (s);Dur (mn))");
+  Serial.println("t;T1 (degres C);T2 (degres C);Tcons (degres C);Dich (s);Ach;Dur (mn))");
   }
   //5j - Visualisation du contenu des échantillons

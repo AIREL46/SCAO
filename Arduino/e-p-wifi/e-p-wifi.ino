@@ -207,7 +207,7 @@ reg_temp();
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   //if (state_Vusb){visu_demo();}
-  if (state_Vusb){visu_demo();}
+  if (state_Vusb){visu_op();}
   if (!alarme_coupure_secteur) {
     t = (double)t + 0.5;//Incrémentation de la variable t
   }
