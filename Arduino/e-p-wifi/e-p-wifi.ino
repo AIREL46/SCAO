@@ -173,9 +173,12 @@ void loop() {
 //5a-2 IHM clavier
 //5b - Speaker -> b_speaker.h
 if (Dur > 0){
-beep(200);
-}
-else {beep(5000);}
+  beep(200);
+  }
+else {
+  beep(5000);
+  beep(5000);
+  }
 delay(1000);
 //5c - Acquisition des températures T1 et T2
   // Lit la température T1
@@ -214,11 +217,10 @@ reg_temp();
 //5k - Mode sleep
 tt1 = Chrono.elapsed();
 //Serial.print ("ti : ");
-//Serial.print (ti/1000);
-//Serial.print (" tt1 : ");
-//Serial.println (tt1/1000);
 digitalWrite(led_pin_j, LOW);
 digitalWrite(led_pin_b, HIGH);
+//WiFi.lowPowerMode();
 delay((ti - tt1)/1000);
+//WiFi.noLowPowerMode();
 digitalWrite(led_pin_b, LOW);
 }
