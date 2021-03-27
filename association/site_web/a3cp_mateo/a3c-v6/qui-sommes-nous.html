@@ -1,11 +1,11 @@
 <!--
      "Qui sommes nous ?" - A3C Website
 
-     @version 3
+     @version 6
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
     <head>
         <title>Qui sommes-nous ?</title>
@@ -19,7 +19,7 @@
         <div id="menu">
             <!-- Menu - Logo -->
             <div id="menu-logo">
-                <img src="images/logo-a3c.png" alt="logo-a3c" id="logo-img">
+                <img src="https://fablabo.net/mediawiki/images/8/89/A3c-hd.png" alt="" id="logo-img">
             </div>
             <!-- Menu - Items -->
             <div id="menu-container">
@@ -34,10 +34,21 @@
 
         <!-- Backrgound-->
         <div id="background">
+            <div class="bar">
+                <a href="#presentation-association" class="bar-block">
+                    <p>Présentation de l'association</p>
+                </a>
+                <a href="#nos-projets" class="bar-block">
+                    <p>Nos projets 2020 - 2021</p>
+                </a>
+                <a href="#organisation-association" class="bar-block" style="border-right:none;">
+                    <p>Organisation de l'association</p>
+                </a>
+            </div>
             <!-- Box Sheet-->
-            <div id="box">  
-                <div id="text-container">
-                    <h1 style="margin-top: 10px;">Pr&eacute;sentation de l'association</h1>
+            <div class="box" style="border-top: none;">  
+                <div class="text-container">
+                    <h1 style="margin-top: 10px;" id="presentation-association">Pr&eacute;sentation de l'association</h1>
                     <p>
                         L’A3C Presqu’île a pour objet de revisiter le concept culinaire traditionnel en faisant évoluer l’art de la table. 
                         Les objectifs principaux sont la préservation nutritionnelle des aliments, le gain d’énergie et le bien-être de la 
@@ -51,25 +62,28 @@
                         en <a href="https://fr.wikipedia.org/wiki/Presqu%27île_guérandaise" target="_blank">Presqu’île de Guérande</a>. 
                     </p>
                     <p>
-                        Au sein de <a href="https://fablabo.net/wiki/SCAO#Cr.C3.A9ation_de_l.27association_A3C_Presqu.27ile" target="_blank">l'association A3C Presqu'île</a>, 
+                        Au sein de <a href="https://fablabo.net/wiki/A3CP" target="_blank">l'association A3C Presqu'île</a>, 
                         une équipe participe à ce développement. Ses activités sont bénévoles. 
                         Elles sont diversifiées, cuisine, design, mécanique, électronique, électricité, informatique, 
                         <a href="https://fr.wikipedia.org/wiki/Conception_de_site_web" target="_blank">conception de site web</a>. 
                         A l'attention des personnes qui souhaitent rejoindre l'équipe projet, 
                         <a href="https://www.benevolt.fr/association/quiet-cook" target="_blank">la plateforme benevolt</a>
-                        propose différentes missions. Ses <a href="https://fablabo.net/wiki/SCAO#Int.C3.A9gration_du_SCAO_dans_la_maison" target="_blank">moyens</a>
+                        propose différentes missions. Ses <a href="https://fablabo.net/wiki/SCC#Int.C3.A9gration_des_SCC_dans_la_maison" target="_blank">moyens</a>
                          sont intégrés au siège de l’association, à <a href="http://www.mairie-saint-molf.fr/-l-office-de-tourisme-" target="_blank">St Molf</a>. Ils sont 
                         principalement une <a href="https://fablabo.net/wiki/SCC#Documentation" target="_blank">documentation</a>, 
                         <a href="http://fablabo.net/wiki/SCC#Les_ateliers_de_prototypage" target="_blank"> 3 ateliers de prototypage</a> (atelier salon, atelier logiciel et atelier culinaire) 
                         et un <a href="https://fablabo.net/wiki/SCC#Magasin" target="_blank">magasin</a> (boîtes projet, stock de pièces électriques et électroniques).
                     </p>
                     <p>
-                        <a href="https://fablabo.net/wiki/SCC#La_protection_des_droits_du_projet_d.27invention_des_SCC" target="_blank">La protection des droits du projet 
+                        <a href="https://fablabo.net/wiki/A3CP#La_protection_des_droits_du_projet_d.27invention_des_SCC" target="_blank">La protection des droits du projet 
                         d'invention des SCC</a> est du domaine de <a href="https://fr.wikipedia.org/wiki/Culture_libre" target="_blank">la culture libre</a> et elle fait appel aux 
                         <a href="https://fr.wikipedia.org/wiki/Licence_Creative_Commons" target="_blank">licences Creative Commons</a> de la responsabilité de Creative Commons France.
                     </p>
-
-                    <h1>Nos projets 2020 - 2021</h1>
+                </div>
+            </div>
+            <div class="box">
+                <div class="text-container">
+                    <h1 id="nos-projets" style="margin-top: 10px;">Nos projets 2020 - 2021</h1>
                     <p>Les projets sont: 
                     </p>
                     <p>1. Reconnaissance d’intérêt général :</p>
@@ -79,7 +93,7 @@
                             demande initiale</a> r&eacute;dig&eacute;e par Marie-Sarah Laroche
                         </li>
                         <li>
-                            La <a href="https://github.com/AIREL46/SCAO/tree/master/association/interet_general/nantes/reponse" target="_blank">
+                            La <a href="https://github.com/AIREL46/SCAO/blob/master/association/interet_general/nantes/reponse_a3c/reponse_courrier_admin_fiscale.pdf" target="_blank">
                                 r&eacute;ponse &agrave; la demande de renseignements compl&eacute;mentaires</a>
                             r&eacute;dig&eacute;e par Regis Leruste et Jos&eacute;phine LAMBERT. 
                         </li>
@@ -95,33 +109,48 @@
                         cahier de recettes</a>
                         </li>
                         <li>
-                            <a href="https://github.com/AIREL46/SCAO/blob/master/association/rencontres_culinaires/liste_repas_et_aperos_projet/liste.ods" target="_blank">
+                            <a href="https://github.com/AIREL46/SCAO/blob/master/association/rencontres_culinaires/liste_repas_et_aperos_degustation/liste.pdf" target="_blank">
                                 Voir la liste des dernières rencontres culinaires
                             </a>
                         </li>
                     </ul>
-                    <div id="container-button" style="margin: 25px 0 35px 0;">
+                    <div id="container-button">
                         <a id="button-core" href="contact.html">
                             <p>Participer à une rencontre culinaire</p>
                         </a>
                     </div>
-
-                    <h1>Organisation de l'association</h1>
+                </div>
+            </div>
+            <div class="box">
+                <div class="text-container">
+                    <h1 id="organisation-association" style="margin-top: 10px;">Organisation de l'association</h1>
                     <div class="container-img">
                         <img src="https://fablabo.net/mediawiki/images/6/66/Composition_A3CP.png" alt="">
                     </div>
 
-                    <h1>Organigramme du Bureau d'A3CP</h1>
+                    <div class="bar" style="margin-top: 50px; width: 100%;" id="second-bar">
+                        <a href="#bureau-a3cp" class="bar-block" style="border-left: #A96107 3px solid;border-bottom: dashed #A96107 2px; border-top: dashed #A96107 2px;">
+                            <p>Organigramme du Bureau D'A3CP</p>
+                        </a>
+                        <a href="#adherents-a3cp" class="bar-block" style="border-bottom: dashed #A96107 2px; border-top: dashed #A96107 2px;">
+                            <p>Adhérents d'A3CP</p>
+                        </a>
+                        <a href="#conseil-administration" class="bar-block" style="border-bottom: dashed #A96107 2px; border-top: dashed #A96107 2px;">
+                            <p>Conseil d'Administration</p>
+                        </a>
+                    </div>
+
+                    <h1 id="bureau-a3cp">Organigramme du Bureau d'A3CP</h1>
                     <div class="container-img">
                         <img src="https://fablabo.net/mediawiki/images/1/16/Organigramme_Bureau.png" alt="">
                     </div>
 
-                    <h1>Organigramme des adh&eacute;rents d'A3CP</h1>
+                    <h1 id="adherents-a3cp">Organigramme des adh&eacute;rents d'A3CP</h1>
                     <div class="container-img">
                         <img src="https://fablabo.net/mediawiki/images/2/2e/Organigramme_membre_adhérent.png" alt="">
                     </div>
 
-                    <h1>Organigramme du Conseil d'Administration d'A3CP</h1>
+                    <h1 id="conseil-administration">Organigramme du Conseil d'Administration d'A3CP</h1>
                     <div class="container-img">
                         <img src="https://fablabo.net/mediawiki/images/9/9e/Organigramme_CA_.png" alt="">
                     </div>
@@ -134,16 +163,13 @@
                         Si vous êtes intéressé par la prise de responsabilité au sein du conseil d'administration, nous vous invitons à consulter notre 
                         <a href="https://www.benevolt.fr/association/quiet-cook" target="_blank">page benevolt</a>.
                     </p>
-
                 </div>
-
                 <!-- Bouton "En savoir plus sur l'association"-->
                 <div id="container-button">
                     <a id="button-core" href="https://fablabo.net/wiki/A3CP" target="_blank">
                         <p>En savoir plus sur l'association</p>
                     </a>
                 </div>
-
             </div>
         </div>
 

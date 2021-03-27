@@ -202,6 +202,33 @@
     background-color: #42938b;
 }
 
+/* Bar */
+#bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bar-block{
+    width: 25%;
+    border-right: #A96107 3px solid;
+    border-bottom: dashed #A96107 2px;
+    border-top: dashed #A96107 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px 15px 0px;
+    background-color: #F7F4E9;
+}
+.bar-block:hover{
+    background-color: #FFFFFF;
+}
+.bar-block p{
+    text-align: center;
+    color: #A96107;
+    margin: 0px 0px 0px 0px;
+    font-weight: bold;
+}
 
 /* Footer */
 footer{
@@ -237,6 +264,23 @@ footer a, p{
     /* Boxes Contact et Rencontres Culinaires */
     .form-contact{
         width: 65%;
+    }
+
+    /* Bar */
+    #bar{
+        width: 70%;
+        margin-top: 50px;
+    }
+    .bar-block{
+        background-color: #FFFFFF;
+        border-top: none;
+        border-bottom: none;
+    }
+    #bar p{
+        font-size: 18px;
+    }
+    .bar-block:hover{
+        background-color: #F7F4E9;
     }
 
     /* Footer */
