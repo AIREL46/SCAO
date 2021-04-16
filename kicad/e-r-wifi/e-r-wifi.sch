@@ -65,7 +65,7 @@ U 1 1 5FAE24A2
 P 2600 2000
 F 0 "J3" H 2600 2200 50  0000 C CNN
 F 1 "cde relais Celduc" H 2750 2100 50  0000 C CNN
-F 2 "" H 2600 2000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 2600 2000 50  0001 C CNN
 F 3 "~" H 2600 2000 50  0001 C CNN
 	1    2600 2000
 	-1   0    0    -1  
@@ -84,7 +84,7 @@ U 1 1 5FAE6DEE
 P 2600 1350
 F 0 "J4" H 2600 1550 50  0000 C CNN
 F 1 "5V" H 2600 1450 50  0000 C CNN
-F 2 "" H 2600 1350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 2600 1350 50  0001 C CNN
 F 3 "~" H 2600 1350 50  0001 C CNN
 	1    2600 1350
 	-1   0    0    -1  
@@ -117,7 +117,7 @@ U 1 1 5FAED66A
 P 2950 2000
 F 0 "D1" H 2943 2217 50  0000 C CNN
 F 1 "LED" H 2943 2126 50  0000 C CNN
-F 2 "" H 2950 2000 50  0001 C CNN
+F 2 "Diode_THT:D_5KPW_P7.62mm_Vertical_AnodeUp" H 2950 2000 50  0001 C CNN
 F 3 "https://asset.conrad.com/media10/add/160267/c1/-/en/000180129DS01/fiche-technique-180129-led-3-mm-jaune-kingbright-l-7104yd-l-7104yd-rond-15-mcd-40-20-ma-21-v-1-pcs.pdf" H 2950 2000 50  0001 C CNN
 	1    2950 2000
 	-1   0    0    -1  
