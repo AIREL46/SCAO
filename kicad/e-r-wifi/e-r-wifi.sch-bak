@@ -27,7 +27,7 @@ F 3 "https://fr.farnell.com/phoenix-contact/smkds-2-5-3-5-08/terminal-block-wire
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Relay_SolidState:FODM3053 U1
+L Relay_SolidState:S102S01 U1
 U 1 1 5FACEE00
 P 4000 1900
 F 0 "U1" H 4000 2225 50  0000 C CNN

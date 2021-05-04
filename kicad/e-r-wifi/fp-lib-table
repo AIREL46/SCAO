@@ -1,4 +1,3 @@
 (fp_lib_table
-  (lib (name ${KIPRJMOD})(type KiCad)(uri /home/airel/SCAO/kicad/e-r-wifi)(options "")(descr ""))
   (lib (name SKL10120)(type KiCad)(uri ${KIPRJMOD}/SKL10120.pretty)(options "")(descr ""))
 )
