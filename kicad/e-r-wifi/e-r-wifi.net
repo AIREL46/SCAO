@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/airel/SCAO/kicad/e-r-wifi/e-r-wifi.sch)
-    (date "ven. 30 avril 2021 16:10:19")
+    (date "sam. 08 mai 2021 16:45:25")
     (tool "Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
