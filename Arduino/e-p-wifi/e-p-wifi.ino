@@ -15,13 +15,13 @@
  * 3 - Fonctions spécifiques
  * 4 - Fonction setup
  * 5 - Fonction loop
- * Chaque paragraphe est constitué de sous paragraphes :
+ * Chaque paragraphe est constitué de sous paragraphes correspondants à des modules logiciels distincts :
  * a) Les IHM (wifi et clavier)
  * b) Speaker
  * c) Acquisition des températures T1 et T2
  * d) Mesures des tensions
  * e) Built In Test Equipment (BITE)
- * f) Libre
+ * f) Communication e-r-wifi
  * g) Horodatage et chronomètre
  * h) Bilan énergétique de la batterie
  * i) Régulation de la température
@@ -57,7 +57,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 * 1c - Acquisition des températures T1 et T2 -> c_acq_temp.h
 * 1d - Mesure des tensions -> d_mes-tensions.h
 * 1e - BITE -> e_bite.h
-* 1f - Libre -> f_libre.h
+* 1f - Communication e-r-wifi -> f_communication.h
 * 1g - Horodatage & Chronomètre -> g_horo_chrono.h
 * 1h - Bilan énergétique -> h_bilan_eng.h
 * 1i - Régulation de la température -> i_reg_temp.h
@@ -77,7 +77,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  #include "d_mes_tensions.h"
 //2e - Built In Test Equipment (BITE)
  #include "e_bite.h"
- //2f - Libre
+ //2f - Communication e-r-wifi
  //2g - Horodatage & Chronomètre
  //Horodatage
  #include "g_wifi_rtc.h"
@@ -116,7 +116,7 @@ bool val_sleep = false;//variable to store the read value
  //3c - Fonction d'acquisition de la température via 2 thermomètres digitaux DS18B20.
  //3d - Mesure des tensions et calcul du courant ibat
  //3e - Built In Test Equipment (BITE)
- //3f Libre
+ //3f Communication e-r-wifi
  //3g Horodatage et chronomètre
  //3h - Bilan énergétique
  //3h Bilan énergétique de la batterie
@@ -152,7 +152,7 @@ void setup() {
   setup_d();
 //4e - Built In Test Equipment (BITE)
   setup_e();
-  //4f Libre
+  //4f Communication e-r-wifi
   //4g Horodatage et chronomètre
   //setup_g
   //setup_g();
@@ -197,7 +197,7 @@ delay(1000);
 
 // 5e - Built In Test Equipment (BITE)
 bite();
-//5f - Libre
+//5f - Communication e-r-wifi
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique
 //Table de Cuisson
