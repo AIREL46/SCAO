@@ -1,4 +1,4 @@
-(module SKL10120 (layer F.Cu) (tedit 60969724)
+(module SKL10120 (layer F.Cu) (tedit 609A8A6D)
   (fp_text reference Celduc (at 0 2.54) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
