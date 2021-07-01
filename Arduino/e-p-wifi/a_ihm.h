@@ -3,14 +3,14 @@
 * Les IHM wifi et clavier*
 **************************
  *
- *Définition des IHM et de leur fonction associée
+ *Définition des IHM et de leurs fonctions associées
  *En référence à Wikipédia, les IHM (Interactions Homme-machines) définissent les moyens mis en œuvre
  *afin qu'un humain puisse contrôler et communiquer avec une machine.
  *Dans le cadre de ce projet, les moyens mis en œuvre sont soit ceux de l'ordinateur (clavier, souri, écran) ;
  *soit ceux du smartphone ; dans les deux cas, ils sont complétés par ceux propres du microcontrôleur,
  *c'est à dire : 3 inverseurs ("ON/OFF" "sleep" et "start stop") et un jeu de leds.
  *Les IHM permettent de dialoguer avec le microcontrôleur, d'y introduire des données et de visualiser des résultats.
- *Ces IHM et leur fonction associée sont :
+ *Ces IHM et leurs fonctions associées sont :
  * 1) le smartphone qui communique avec le microcontrôleur à l'aide de leur interface wifi respective,
  *    ou l'ordinateur via son clavier qui communique avec le microcontrôleur à l'aide du moniteur série
  *    l'un ou l'autre permet la saisie des paramètres de cuisson par l'utilisateur et leur acquisition par le microcontrôleur.
@@ -30,10 +30,10 @@
  * 1a-1 Le code source des IHM en mode "wifi"
  * Le code source des IHM en mode "wifi" s'inspire de l'exemple Arduino "simple web server" SimpleWebServerWiFi.ino
  * associé au fichier arduino_secrets.h qui permet de gérer le nom du réseau wifi ainsi que le mot de passe pour y accéder
- * Le programme SimpleWebServerWiFi.ino a été conçu pour allumer ou èteindre une led?
+ * Le programme SimpleWebServerWiFi.ino a été conçu pour allumer ou èteindre une led
  * Un serveur Web permet de communiquer les paramètres de cuisson via le Web.
  * Le principe est basé sur la connection au serveur wifi "freebox_a3c" de la Freebox puis à la création d'une page web
- * dont l'adresse IP est imprimé sur le moniteur série.
+ * dont l'adresse IP est imprimée sur le moniteur série.
  * A partir du navigateur Web, d’un ordinateur ou d’un smartphone,
  * ouvrir cette adresse IP : http: // « adresse IP » / cde
  * Où « cde » est la commande à transmettre variable en fonction du contexte.
