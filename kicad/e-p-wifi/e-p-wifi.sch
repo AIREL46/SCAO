@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:e-p-wifi-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -609,8 +608,6 @@ Wire Notes Line
 Wire Notes Line
 	2848 1514 8220 1514
 Wire Notes Line
-	8220 1514 8220 6346
-Wire Notes Line
 	2848 6346 2848 2252
 Text Notes 5650 6261 0    150  ~ 30
 Shield MKR wifi 1010
@@ -1109,4 +1106,48 @@ Wire Notes Line
 	4550 7150 2850 7150
 Wire Notes Line
 	2850 7150 2850 6350
+$Comp
+L Connector:RJ45 J?
+U 1 1 612B81E4
+P 8650 3250
+F 0 "J?" H 8320 3254 50  0000 R CNN
+F 1 "RJ45" H 8320 3345 50  0000 R CNN
+F 2 "Connector_RJ:RJ45_OST_PJ012-8P8CX_Vertical" V 8650 3275 50  0001 C CNN
+F 3 "~" V 8650 3275 50  0001 C CNN
+	1    8650 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 612CC513
+P 8700 2200
+F 0 "Q?" H 8890 2246 50  0000 L CNN
+F 1 "2N2219" H 8890 2155 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 8900 2125 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 8700 2200 50  0001 L CNN
+	1    8700 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Speaker LS?
+U 1 1 612CE3C8
+P 8750 1650
+F 0 "LS?" H 8920 1646 50  0000 L CNN
+F 1 "Speaker" H 8920 1555 50  0000 L CNN
+F 2 "" H 8750 1450 50  0001 C CNN
+F 3 "~" H 8740 1600 50  0001 C CNN
+	1    8750 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 612CF765
+P 8700 2600
+F 0 "R?" V 8493 2600 50  0000 C CNN
+F 1 "R" V 8584 2600 50  0000 C CNN
+F 2 "" V 8630 2600 50  0001 C CNN
+F 3 "~" H 8700 2600 50  0001 C CNN
+	1    8700 2600
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
