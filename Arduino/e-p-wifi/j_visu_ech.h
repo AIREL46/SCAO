@@ -34,16 +34,10 @@
  Serial.println(" secondes");
  Serial.print("FC1                        : ");
  Serial.println(FC1);
- Serial.print("Alarme Vusb                : ");
- Serial.println(alarme_Vusb);
- Serial.print("Alarme Vbat_2              : ");
- Serial.println(alarme_Vbat_2);
- Serial.print("Alarme temperature bat     : ");
- Serial.println(alarme_temperature_bat);
- Serial.print("Alarme V33                 : ");
- Serial.println(alarme_V33);
- Serial.print("Alarme coupure secteur      : ");
- Serial.println(alarme_coupure_secteur);
+ Serial.print("courant                    : ");
+ Serial.println(courant);
+ Serial.print("puissance                  : ");
+ Serial.println(puissance);
  Serial.println();
  delay(2000);
  }

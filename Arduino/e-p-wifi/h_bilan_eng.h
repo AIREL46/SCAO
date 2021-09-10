@@ -11,9 +11,9 @@
 //Table de cuisson
 double cout_kwh = 0.17;//Coût du kilowatt/heure en euros
 double cout_total = 0;//Initialisation de la variable coût total
-double courant = 6.56;//Courant alternatif mesuré sut la table de cuisson Riviera et Bar n°2
+double courant = 0;//Initialisation du courant alternatif mesuré sut la table de cuisson Riviera et Bar n°2
 double tension = 239;//Tension alternative mesurée en volts
-double puissance = (courant * tension)/1000;//Puissance en kilowatts
+double puissance = 0;//Initialisation de la puissance en kilowatts
 double som_dich = 0;//Initialisation de la variable somme des durées itératives de chauffe
 //Batterie
 /*

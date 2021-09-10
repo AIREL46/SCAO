@@ -54,12 +54,17 @@ void reg_temp() {
   //Réglage du flux thermique de la table de cuisson à l'aide de l'actionneur (relai)
     digitalWrite(led_pin_j, HIGH);
     digitalWrite(relay, HIGH);//Application de la tension 230VAC sur la table de cuisson
-    delay(Dich*1000);//Maintien sous tension 230VAC de la table de cuisson
+    delay((Dich*1000)/2);//Maintien sous tension 230VAC de la table de cuisson (première moitiè)
+    courant = (analogRead(itc)*42.04*0.826)/5000;//Conversion analogique/digitale de la valeur délivrée par le module phidgets 1122
+    Serial.print("courant : ");
+    Serial.println(courant);
+    delay((Dich*1000)/2);//Maintien sous tension 230VAC de la table de cuisson (seconde motiée)
     digitalWrite(relay, LOW);//Coupure de la tension 230VAC de la table de cuisson
     Dur = (double)Dur - 0.5;//Décrémentation de la Durée de chauffe restante
   }
   else {
     Dich = 0;
+    courant = 0;
   }
   if (T10pc > T2 > T98pc){
     phase = 2;

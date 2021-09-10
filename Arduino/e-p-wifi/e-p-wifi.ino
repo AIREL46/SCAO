@@ -202,15 +202,16 @@ bite();
 //5h - Bilan énergétique
 //Table de Cuisson
 if (Dur > 0){
-som_dich = (double)som_dich + (double)Dich;
-cout_total = (double)cout_total + ((double)cout_kwh * (((double)puissance) * ((double)Dich/3600)));
+som_dich = (double)som_dich + (double)Dich;//Calcul de la somme cumulée des dich
+puissance = (courant * tension)/1000;//Calcul de la puissance en KW
+cout_total = (double)cout_total + ((double)cout_kwh * (((double)puissance) * ((double)Dich/3600)));//Calcul du coût total cumulé
 }
 //5i Régulation de la température
 reg_temp();
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   //if (state_Vusb){visu_demo();}
-  if (state_Vusb){visu_op();}
+  if (state_Vusb){visu_demo();}
   if (!alarme_coupure_secteur) {
     t = (double)t + 0.5;//Incrémentation de la variable t
   }

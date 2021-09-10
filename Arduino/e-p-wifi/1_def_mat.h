@@ -13,7 +13,8 @@
  const int Vbat_demie_2 = A2; //Initialisation de la variable Vbat_demie_2 et affectation à l'entrée analogique A2 (demie valeur de la tension Vbat après la résistance de 1 Ohm)
  const int relay = 18; //Relais connecté sur l'entrée digitale D18 (A3)
  const int led_pin_b = 19;//blue led connected to digital pin D19 (A4)
- const int BPmeross = A5;//Initialisation de la variable BPmeross et affectation de l'entrée analogique A5 (bouton poussoir de test de la prise meross)
+ const int itc = A5;//Initialisation de la valeur mesurée par le module phidgets 1122
+ //const int BPmeross = A5;//Initialisation de la variable BPmeross et affectation de l'entrée analogique A5 (bouton poussoir de test de la prise meross)
  const int P230V = 21;//Initialisation de la variable P230V et affectation de l'entrée analogique A6 (un chargeur 5V atteste de la présence 230V)
  //const int meross = A6;//Initialisation de la variable meross et affectation de l'entrée analogique A6 (un chargeur 5V atteste de la présence 230V)
  const byte BROCHE_ONEWIRE_1 = 0;//Initialisation de la variable BROCHE_ONEWIRE_1 et affectation de l'entrée digitale D0 (connection du thermomètre digital DS18B20 pour la mesure T2)
