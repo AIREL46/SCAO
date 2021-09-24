@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:e-p-wifi-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -364,10 +363,7 @@ F 3 "~" H 6100 2750 50  0001 C CNN
 $EndComp
 NoConn ~ 5600 1750
 Wire Wire Line
-	5700 1750 5700 1670
-Wire Wire Line
 	5500 1750 5500 1700
-NoConn ~ 6700 2950
 Wire Wire Line
 	6000 2950 6000 3000
 Wire Wire Line
@@ -608,8 +604,6 @@ Wire Notes Line
 	2848 2251 2848 1514
 Wire Notes Line
 	2848 1514 8220 1514
-Wire Notes Line
-	8220 1514 8220 6346
 Wire Notes Line
 	2848 6346 2848 2252
 Text Notes 5650 6261 0    150  ~ 30
@@ -1109,4 +1103,76 @@ Wire Notes Line
 	4550 7150 2850 7150
 Wire Notes Line
 	2850 7150 2850 6350
+$Comp
+L Connector:RJ45 J?
+U 1 1 612B81E4
+P 9800 1950
+F 0 "J?" H 9470 1954 50  0000 R CNN
+F 1 "RJ45" H 9470 2045 50  0000 R CNN
+F 2 "Connector_RJ:RJ45_OST_PJ012-8P8CX_Vertical" V 9800 1975 50  0001 C CNN
+F 3 "~" V 9800 1975 50  0001 C CNN
+	1    9800 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 612CC513
+P 8500 3050
+F 0 "Q?" H 8690 3096 50  0000 L CNN
+F 1 "2N2222A" H 8690 3005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-18-3" H 8700 2975 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 8500 3050 50  0001 L CNN
+	1    8500 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Speaker LS?
+U 1 1 612CE3C8
+P 8800 3500
+F 0 "LS?" H 8970 3496 50  0000 L CNN
+F 1 "Speaker" H 8970 3405 50  0000 L CNN
+F 2 "e-p-wifi:mini_speaker" H 8800 3300 50  0001 C CNN
+F 3 "http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf" H 8790 3450 50  0001 C CNN
+	1    8800 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 3050 6700 3050
+Wire Wire Line
+	6700 3050 6700 2950
+Wire Wire Line
+	8600 3250 8600 3500
+$Comp
+L power:GND #PWR?
+U 1 1 615137D3
+P 8600 3750
+F 0 "#PWR?" H 8600 3500 50  0001 C CNN
+F 1 "GND" H 8605 3577 50  0000 C CNN
+F 2 "" H 8600 3750 50  0001 C CNN
+F 3 "" H 8600 3750 50  0001 C CNN
+	1    8600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 3750 8600 3600
+Wire Wire Line
+	8600 2850 8600 1550
+Wire Wire Line
+	8600 1550 5700 1550
+Wire Wire Line
+	5700 1550 5700 1670
+Connection ~ 5700 1670
+Wire Wire Line
+	5700 1670 5700 1750
+$Comp
+L Device:R R?
+U 1 1 6152EC58
+P 8150 3050
+F 0 "R?" V 8149 2978 50  0000 L CNN
+F 1 "470" V 8050 3000 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8080 3050 50  0001 C CNN
+F 3 "~" H 8150 3050 50  0001 C CNN
+	1    8150 3050
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
