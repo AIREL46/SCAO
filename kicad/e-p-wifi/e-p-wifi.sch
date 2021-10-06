@@ -80,8 +80,6 @@ F 3 "~" H 3400 2450 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 2750 3051 2750
-Wire Wire Line
 	3300 2750 3300 2300
 Wire Wire Line
 	3300 2300 3400 2300
@@ -89,8 +87,6 @@ Connection ~ 3300 2750
 Wire Wire Line
 	3400 2300 3600 2300
 Connection ~ 3400 2300
-Wire Wire Line
-	3850 2600 3850 3150
 Wire Wire Line
 	3400 2600 3400 2850
 $Comp
@@ -111,12 +107,6 @@ Wire Wire Line
 	3600 2300 3850 2300
 Text Notes 3212 2751 2    50   ~ 0
 VDD\n
-Text Notes 3150 2850 2    50   ~ 0
-DQ
-Text Notes 3187 3043 2    50   ~ 0
-VDD
-Text Notes 3153 3129 2    50   ~ 0
-DQ
 Wire Wire Line
 	3500 2850 3400 2850
 Text Notes 4251 3082 2    50   ~ 0
@@ -187,9 +177,7 @@ F 3 "https://produktinfo.conrad.com/datenblaetter/700000-724999/711771-da-01-en-
 	1    0    0    -1  
 $EndComp
 Text Notes 4250 4200 0    50   ~ 0
-VBAT2
-Text Notes 3229 4333 0    50   ~ 0
-VBAT1
+VBAT
 Text Notes 4296 5262 3    50   ~ 0
 D1
 Text Notes 4296 5462 3    50   ~ 0
@@ -199,7 +187,7 @@ L Device:R R10
 U 1 1 5CF19F3B
 P 5350 4250
 F 0 "R10" V 5349 4178 50  0000 L CNN
-F 1 "4.7k" V 5400 3950 50  0000 L CNN
+F 1 "47k" V 5400 3950 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5280 4250 50  0001 C CNN
 F 3 "~" H 5350 4250 50  0001 C CNN
 	1    5350 4250
@@ -238,23 +226,10 @@ F 3 "~" H 5200 3900 50  0001 C CNN
 	1    5200 3900
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Device:R R9
-U 1 1 5CF2C74C
-P 5200 4000
-F 0 "R9" V 5199 3928 50  0000 L CNN
-F 1 "4.7k" V 5237 4128 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5130 4000 50  0001 C CNN
-F 3 "~" H 5200 4000 50  0001 C CNN
-	1    5200 4000
-	0    -1   -1   0   
-$EndComp
 Text Notes 5350 3800 0    50   ~ 0
 VUSB/2
 Text Notes 5350 3900 0    50   ~ 0
-VBAT2/2
-Text Notes 5350 4000 0    50   ~ 0
-VBAT1/2
+VBAT/2
 Wire Wire Line
 	3500 3100 3500 2850
 Text Notes 3039 5195 0    100  ~ 20
@@ -328,7 +303,7 @@ Text Notes 5350 3700 0    45   ~ 0
 Wire Wire Line
 	4500 3900 4500 4200
 Text Notes 6650 5150 2    70   ~ 14
-Mesures des tensions\n(4 X diviseur par 2)
+Mesures des tensions\n(3 X diviseur par 2)
 $Comp
 L power:GND #PWR010
 U 1 1 5DCF1342
@@ -368,7 +343,6 @@ Wire Wire Line
 	6000 2950 6000 3000
 Wire Wire Line
 	6000 3000 7100 3000
-NoConn ~ 6200 2950
 NoConn ~ 5500 2950
 NoConn ~ 5900 1750
 NoConn ~ 6000 1750
@@ -382,8 +356,8 @@ $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 5DC3481A
 P 2851 2500
-F 0 "J3" H 2966 2469 50  0000 L CNN
-F 1 "Masse T1" H 2622 2301 50  0000 L CNN
+F 0 "J3" H 2966 2469 50  0000 L CNB
+F 1 "Masse T1" H 2622 2301 50  0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2851 2500 50  0001 C CNN
 F 3 "~" H 2851 2500 50  0001 C CNN
 	1    2851 2500
@@ -403,43 +377,8 @@ $EndComp
 Wire Wire Line
 	3051 2400 3051 2500
 Connection ~ 3051 2500
-$Comp
-L Connector_Generic:Conn_01x06 J4
-U 1 1 5DC52AE1
-P 2851 3050
-F 0 "J4" H 3013 2998 50  0000 C CNN
-F 1 "Température" H 2867 2655 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2851 3050 50  0001 C CNN
-F 3 "~" H 2851 3050 50  0001 C CNN
-	1    2851 3050
-	-1   0    0    1   
-$EndComp
-Connection ~ 3051 2750
-Wire Wire Line
-	3051 2750 3300 2750
 Wire Wire Line
 	3300 3050 3300 2750
-Wire Wire Line
-	3300 3050 3051 3050
-Wire Wire Line
-	3051 3150 3850 3150
-Connection ~ 3850 3150
-Wire Wire Line
-	3850 3150 3850 3250
-Wire Wire Line
-	3051 2950 3193 2950
-Wire Wire Line
-	3193 2950 3193 3250
-Wire Wire Line
-	3193 3250 3051 3250
-Connection ~ 3051 3250
-Wire Wire Line
-	3051 2850 3400 2850
-Connection ~ 3400 2850
-Text Notes 2697 2900 0    50   ~ 0
-T1
-Text Notes 2694 3188 0    50   ~ 0
-T2
 Wire Notes Line
 	4300 3443 4300 2004
 Wire Notes Line
@@ -603,8 +542,6 @@ Wire Notes Line
 Wire Notes Line
 	2848 2251 2848 1514
 Wire Notes Line
-	2848 1514 8220 1514
-Wire Notes Line
 	2848 6346 2848 2252
 Text Notes 5650 6261 0    150  ~ 30
 Shield MKR wifi 1010
@@ -613,7 +550,7 @@ L Connector_Generic:Conn_01x02 J2
 U 1 1 5DC5AAED
 P 2850 3751
 F 0 "J2" H 2995 3704 50  0000 C CNN
-F 1 "Vbat1" H 2845 3560 50  0000 C CNN
+F 1 "Vbat" H 2845 3560 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2850 3751 50  0001 C CNN
 F 3 "~" H 2850 3751 50  0001 C CNN
 	1    2850 3751
@@ -642,20 +579,6 @@ Wire Wire Line
 	3099 3651 3099 4201
 Wire Wire Line
 	3099 4201 3100 4201
-Connection ~ 3100 4201
-Wire Wire Line
-	3100 4201 3100 4350
-$Comp
-L Connector_Generic:Conn_01x02 J5
-U 1 1 5DCA0235
-P 2853 4548
-F 0 "J5" H 2998 4501 50  0000 C CNN
-F 1 "Vbat2" H 2848 4357 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2853 4548 50  0001 C CNN
-F 3 "~" H 2853 4548 50  0001 C CNN
-	1    2853 4548
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3896 5062 3996 5062
 Wire Wire Line
@@ -666,22 +589,8 @@ Connection ~ 3996 5062
 Connection ~ 3600 4200
 Wire Wire Line
 	3600 4200 4500 4200
-$Comp
-L power:GND #PWR04
-U 1 1 5DD10D30
-P 3053 4548
-F 0 "#PWR04" H 3053 4298 50  0001 C CNN
-F 1 "GND" H 3058 4375 50  0000 C CNN
-F 2 "" H 3053 4548 50  0001 C CNN
-F 3 "" H 3053 4548 50  0001 C CNN
-	1    3053 4548
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3053 4448 3301 4448
 Wire Wire Line
 	3600 4200 3600 4448
-Connection ~ 3301 4448
 Wire Wire Line
 	3301 4448 3600 4448
 Wire Wire Line
@@ -728,7 +637,7 @@ Text Notes 5501 2108 0    60   ~ 12
 Text Notes 5505 2668 0    60   ~ 12
 8 + 6 pin stackable header
 $Bitmap
-Pos 7852 5376
+Pos 9652 5526
 Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 00 58 00 00 00 1F 08 06 00 00 00 63 C8 0A 
@@ -815,11 +724,11 @@ E4 E7 E5 93 9F 97 8F AD AD 2D 23 46 BA E3 E2 EA 8C 42 61 8B 54 2A D0 50 DF 40 65
 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Notes 7514 5535 0    50   ~ 10
+Text Notes 9314 5685 0    50   ~ 10
 07/11/2019
-Text Notes 7491 5600 0    50   ~ 10
+Text Notes 9291 5750 0    50   ~ 10
 Régis Leruste
-Text Notes 4716 5686 0    50   ~ 10
+Text Notes 6516 5836 0    50   ~ 10
 https://github.com/AIREL46/SCAO/raw/master/kicad/e-p-wifi-shield/e-p-wifi.png
 Wire Wire Line
 	6500 3150 7650 3150
@@ -843,21 +752,6 @@ Wire Wire Line
 	5350 3700 5600 3700
 Wire Wire Line
 	5600 2950 5600 3700
-$Comp
-L Device:C C2
-U 1 1 5DDE0633
-P 5200 4250
-F 0 "C2" H 5050 4350 50  0000 L CNN
-F 1 "0.1mF" H 4950 4150 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5238 4100 50  0001 C CNN
-F 3 "~" H 5200 4250 50  0001 C CNN
-	1    5200 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5200 4100 5350 4100
-Wire Wire Line
-	5200 4400 5350 4400
 $Comp
 L Device:R R12
 U 1 1 5DDFCD3D
@@ -938,7 +832,6 @@ Wire Wire Line
 	6550 4400 6700 4400
 Wire Wire Line
 	5350 4000 5350 4100
-Connection ~ 5350 4100
 Wire Wire Line
 	5350 3900 5800 3900
 Wire Wire Line
@@ -966,25 +859,17 @@ Connection ~ 5800 3900
 Wire Wire Line
 	5900 4000 5350 4000
 Wire Wire Line
-	5900 2950 5900 4000
-Connection ~ 5350 4000
+	5900 2950 5900 3450
 Wire Wire Line
 	4900 3800 5050 3800
 Wire Wire Line
 	5050 3900 4500 3900
-Wire Wire Line
-	5050 4000 4550 4000
-Wire Wire Line
-	4550 4000 4550 4350
-Wire Wire Line
-	4550 4350 3100 4350
 Wire Wire Line
 	5350 4400 5350 4600
 Wire Wire Line
 	5350 4600 5800 4600
 Wire Wire Line
 	6700 4600 6700 4400
-Connection ~ 5350 4400
 Connection ~ 6700 4400
 Wire Wire Line
 	5800 4400 5800 4600
@@ -1096,83 +981,203 @@ Wire Wire Line
 Connection ~ 5350 4600
 Connection ~ 4700 3700
 Wire Notes Line
-	8200 6350 4550 6350
-Wire Notes Line
 	4550 6350 4550 7150
 Wire Notes Line
 	4550 7150 2850 7150
 Wire Notes Line
 	2850 7150 2850 6350
 $Comp
-L Connector:RJ45 J?
+L Connector:RJ45 J7
 U 1 1 612B81E4
 P 9800 1950
-F 0 "J?" H 9470 1954 50  0000 R CNN
+F 0 "J7" H 9470 1954 50  0000 R CNN
 F 1 "RJ45" H 9470 2045 50  0000 R CNN
-F 2 "Connector_RJ:RJ45_OST_PJ012-8P8CX_Vertical" V 9800 1975 50  0001 C CNN
+F 2 "Connector_RJ:RJ45_Wuerth_7499010001A_Horizontal" V 9800 1975 50  0001 C CNN
 F 3 "~" V 9800 1975 50  0001 C CNN
 	1    9800 1950
 	-1   0    0    1   
 $EndComp
 $Comp
-L Transistor_BJT:2N2219 Q?
+L Transistor_BJT:2N2219 Q1
 U 1 1 612CC513
-P 8500 3050
-F 0 "Q?" H 8690 3096 50  0000 L CNN
-F 1 "2N2222A" H 8690 3005 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-18-3" H 8700 2975 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 8500 3050 50  0001 L CNN
-	1    8500 3050
-	1    0    0    -1  
+P 8200 3050
+F 0 "Q1" H 8390 3096 50  0000 L CNN
+F 1 "2N2222A" H 7950 3250 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-18-3" H 8400 2975 50  0001 L CIN
+F 3 "https://html.alldatasheet.com/html-pdf/15068/PHILIPS/2N2222A/246/1/2N2222A.html" H 8200 3050 50  0001 L CNN
+	1    8200 3050
+	1    0    0    1   
 $EndComp
 $Comp
-L Device:Speaker LS?
+L Device:Speaker LS1
 U 1 1 612CE3C8
-P 8800 3500
-F 0 "LS?" H 8970 3496 50  0000 L CNN
-F 1 "Speaker" H 8970 3405 50  0000 L CNN
-F 2 "e-p-wifi:mini_speaker" H 8800 3300 50  0000 C CNN
-F 3 "http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf" H 8790 3450 50  0001 C CNN
-	1    8800 3500
+P 8500 3850
+F 0 "LS1" H 8670 3846 50  0000 L CNN
+F 1 "Speaker" H 8670 3755 50  0000 L CNN
+F 2 "e-p-wifi:mini_speaker" H 8500 3650 50  0000 C CNN
+F 3 "http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf" H 8490 3800 50  0001 C CNN
+	1    8500 3850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8000 3050 6700 3050
 Wire Wire Line
 	6700 3050 6700 2950
-Wire Wire Line
-	8600 3250 8600 3500
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 615137D3
-P 8600 3750
-F 0 "#PWR?" H 8600 3500 50  0001 C CNN
-F 1 "GND" H 8605 3577 50  0000 C CNN
-F 2 "" H 8600 3750 50  0001 C CNN
-F 3 "" H 8600 3750 50  0001 C CNN
-	1    8600 3750
+P 8300 4100
+F 0 "#PWR04" H 8300 3850 50  0001 C CNN
+F 1 "GND" H 8305 3927 50  0000 C CNN
+F 2 "" H 8300 4100 50  0001 C CNN
+F 3 "" H 8300 4100 50  0001 C CNN
+	1    8300 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8600 3750 8600 3600
-Wire Wire Line
-	8600 2850 8600 1550
-Wire Wire Line
-	8600 1550 5700 1550
+	8300 4100 8300 3950
 Wire Wire Line
 	5700 1550 5700 1670
 Connection ~ 5700 1670
 Wire Wire Line
 	5700 1670 5700 1750
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 6152EC58
-P 8150 3050
-F 0 "R?" V 8149 2978 50  0000 L CNN
-F 1 "470" V 8050 3000 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8080 3050 50  0001 C CNN
-F 3 "~" H 8150 3050 50  0001 C CNN
-	1    8150 3050
+P 7850 3050
+F 0 "R9" V 7849 2978 50  0000 L CNN
+F 1 "470" V 7750 3000 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 3050 50  0001 C CNN
+F 3 "~" H 7850 3050 50  0001 C CNN
+	1    7850 3050
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	9400 1650 9400 1450
+Wire Wire Line
+	9400 1450 5500 1450
+Wire Wire Line
+	5500 1450 5500 1700
+Connection ~ 5500 1700
+Wire Wire Line
+	8600 1850 8600 3350
+Wire Wire Line
+	6200 3350 6200 2950
+Wire Wire Line
+	8650 1950 8650 3400
+Wire Wire Line
+	6100 3400 6100 3300
+Connection ~ 6100 3300
+Wire Wire Line
+	8700 2050 8700 3450
+Connection ~ 5900 3450
+Wire Wire Line
+	5900 3450 5900 4000
+$Comp
+L power:GND #PWR014
+U 1 1 61578905
+P 9400 2350
+F 0 "#PWR014" H 9400 2100 50  0001 C CNN
+F 1 "GND" H 9405 2177 50  0000 C CNN
+F 2 "" H 9400 2350 50  0001 C CNN
+F 3 "" H 9400 2350 50  0001 C CNN
+	1    9400 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 2150 9400 2250
+Wire Wire Line
+	9400 2250 9400 2350
+Connection ~ 9400 2250
+Connection ~ 9400 2350
+Wire Wire Line
+	8300 3250 8300 3850
+Text Notes 9200 1650 0    50   ~ 10
++5V
+Text Notes 9250 1750 0    50   ~ 10
+VCC
+Text Notes 9150 1850 0    50   ~ 10
+P230V
+Text Notes 9300 1950 0    50   ~ 10
+itc
+Text Notes 9000 2050 0    50   ~ 10
+Cde relais
+Wire Wire Line
+	7700 3050 6700 3050
+Wire Wire Line
+	8300 1550 8300 1750
+Wire Wire Line
+	8300 1550 5700 1550
+Wire Wire Line
+	9400 1750 8300 1750
+Connection ~ 8300 1750
+Wire Wire Line
+	8300 1750 8300 2850
+Wire Wire Line
+	8600 3350 6200 3350
+Wire Wire Line
+	8650 3400 6100 3400
+Wire Wire Line
+	8700 3450 5900 3450
+Wire Wire Line
+	8600 1850 9400 1850
+Wire Wire Line
+	8650 1950 9400 1950
+Wire Wire Line
+	8700 2050 9400 2050
+Wire Notes Line
+	2850 1550 2850 1350
+Wire Notes Line
+	2850 1350 9950 1350
+Wire Notes Line
+	9950 1350 9950 6350
+Wire Notes Line
+	4550 6350 9950 6350
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 615DC44A
+P 2850 2850
+F 0 "J4" H 3000 2850 50  0000 C CNB
+F 1 "T1" H 2900 2850 50  0000 C CNB
+F 2 "" H 2850 2850 50  0001 C CNN
+F 3 "~" H 2850 2850 50  0001 C CNN
+	1    2850 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 615F715B
+P 2850 3150
+F 0 "J5" H 3000 3150 50  0000 C CNB
+F 1 "T2" H 2900 3150 50  0000 C CNB
+F 2 "" H 2850 3150 50  0001 C CNN
+F 3 "~" H 2850 3150 50  0001 C CNN
+	1    2850 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3050 2750 3300 2750
+Wire Wire Line
+	3050 2950 3150 2950
+Wire Wire Line
+	3150 2950 3150 3250
+Wire Wire Line
+	3150 3250 3051 3250
+Connection ~ 3051 3250
+Wire Wire Line
+	3051 3250 3050 3250
+Wire Wire Line
+	3050 3050 3300 3050
+Text Notes 3200 2850 2    50   ~ 0
+DQ
+Wire Wire Line
+	3050 2850 3400 2850
+Connection ~ 3400 2850
+Wire Wire Line
+	3850 2600 3850 3150
+Wire Wire Line
+	3050 3150 3850 3150
+Connection ~ 3850 3150
+Wire Wire Line
+	3850 3150 3850 3250
+Text Notes 7150 2900 0    50   ~ 0
+Pour le routage du transistor voir : \nhttps://fablabo.net/wiki/Atelier_logiciel#Routage_d.27un_transistor_sous_kicad
 $EndSCHEMATC
