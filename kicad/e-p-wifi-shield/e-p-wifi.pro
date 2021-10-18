@@ -1,6 +1,6 @@
-update=jeu. 30 avril 2020 14:34:06 CEST
+update=sam. 09 oct. 2021 12:40:46 CEST
 version=1
-last_client=pcbnew
+last_client=kicad
 [general]
 version=1
 RootSch=
@@ -267,3 +267,13 @@ uViaDrill=0.2
 dPairWidth=0.2
 dPairGap=0.2
 dPairViaGap=0.25
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
