@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/airel/SCAO/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf.sch</source>
+    <date>jeu. 09 déc. 2021 15:34:36 CET</date>
+    <tool>Eeschema 5.1.6-c6e7f7d~87~ubuntu18.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>e-r-wifi-lf - Liaison filaire</title>
+        <company>A3C Presqu'île</company>
+        <rev>A</rev>
+        <date>2021-11-25</date>
+        <source>e-r-wifi-lf.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>RJ45_conrad_922647</value>
+      <footprint>e-p-wifi-lf:RJ45</footprint>
+      <datasheet>https://asset.conrad.com/media10/add/160267/c1/-/de/000922647DS01/fiche-technique-922647-embase-modulaire-femelle-horizontale-bkl-electronic-143206-rj45-femelle-coude-pole-8p8c-gris-1-pcs.pdf</datasheet>
+      <libsource lib="e-p-wifi-lf" part="RJ45-e-p-wifi-cache" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>619FA387</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>3.3V</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>619FA923</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>Reset</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>619FBE34</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>P230V</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>619FDB19</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>itc</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>619FE742</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Cde relais</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>619FEEEF</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>Reset</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <datasheet>https://www.gotronic.fr/pj-609.pdf</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61A513AF</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>+5V</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61A78B29</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="e-p-wifi-lf" part="RJ45-e-p-wifi-cache">
+      <footprints>
+        <fp>8P8C*</fp>
+        <fp>RJ31*</fp>
+        <fp>RJ32*</fp>
+        <fp>RJ33*</fp>
+        <fp>RJ34*</fp>
+        <fp>RJ35*</fp>
+        <fp>RJ41*</fp>
+        <fp>RJ45*</fp>
+        <fp>RJ49*</fp>
+        <fp>RJ61*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">RJ45-e-p-wifi-cache</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="power_out"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/usr/share/kicad/library/Switch.lib</uri>
+    </library>
+    <library logical="e-p-wifi-lf">
+      <uri>/home/airel/SCAO/kicad/e-p-wifi-lf/e-p-wifi-lf-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(J1-Pad5)">
+      <node ref="J5" pin="1"/>
+      <node ref="J1" pin="5"/>
+    </net>
+    <net code="2" name="Net-(J1-Pad2)">
+      <node ref="J1" pin="2"/>
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="J4" pin="2"/>
+      <node ref="J1" pin="9"/>
+      <node ref="J6" pin="2"/>
+      <node ref="J7" pin="2"/>
+      <node ref="J1" pin="3"/>
+      <node ref="J1" pin="10"/>
+      <node ref="J1" pin="1"/>
+      <node ref="J2" pin="2"/>
+      <node ref="J3" pin="2"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="4" name="Net-(J1-Pad4)">
+      <node ref="J1" pin="4"/>
+      <node ref="J6" pin="1"/>
+      <node ref="SW1" pin="1"/>
+    </net>
+    <net code="5" name="Net-(J1-Pad8)">
+      <node ref="J1" pin="8"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="6" name="Net-(J1-Pad6)">
+      <node ref="J4" pin="1"/>
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="7" name="Net-(J1-Pad7)">
+      <node ref="J1" pin="7"/>
+      <node ref="J3" pin="1"/>
+    </net>
+  </nets>
+</export>

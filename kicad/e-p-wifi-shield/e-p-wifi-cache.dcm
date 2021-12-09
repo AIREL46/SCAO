@@ -1,0 +1,63 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 8P8C
+D RJ connector, 8P8C (8 positions 8 connected), RJ31/RJ32/RJ33/RJ34/RJ35/RJ41/RJ45/RJ49/RJ61
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ31_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ32_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ33_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ34_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ35_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ41_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ45_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ49_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+$CMP RJ61_copy
+D RJ connector, 8P8C (8 positions 8 connected)
+K 8P8C RJ female connector
+F ~
+$ENDCMP
+#
+#End Doc Library

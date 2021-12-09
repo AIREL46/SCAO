@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "e-rupteur wifi"
+Title "e-rupteur wifi - Carte cde relais"
 Date "2020-11-12"
 Rev "A"
 Comp "A3C presqu'île"
