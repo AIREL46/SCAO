@@ -29,7 +29,7 @@ L Connector_Generic:Conn_01x02 J7
 U 1 1 619FA923
 P 3500 2850
 F 0 "J7" H 3450 2950 50  0000 L CNN
-F 1 "3.3V" H 3550 2800 50  0000 L CNN
+F 1 "3.3V" H 3600 2800 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 2850 50  0001 C CNN
 F 3 "~" H 3500 2850 50  0001 C CNN
 	1    3500 2850
@@ -51,7 +51,7 @@ L Connector_Generic:Conn_01x02 J6
 U 1 1 619FBE34
 P 3500 2550
 F 0 "J6" H 3450 2650 50  0000 L CNN
-F 1 "Reset" H 3550 2500 50  0000 L CNN
+F 1 "Reset" H 3600 2500 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 2550 50  0001 C CNN
 F 3 "~" H 3500 2550 50  0001 C CNN
 	1    3500 2550
@@ -66,7 +66,7 @@ L Connector_Generic:Conn_01x02 J4
 U 1 1 619FDB19
 P 3500 1950
 F 0 "J4" H 3450 2050 50  0000 L CNN
-F 1 "P230V" H 3550 1900 50  0000 L CNN
+F 1 "P230V" H 3600 1900 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 1950 50  0001 C CNN
 F 3 "~" H 3500 1950 50  0001 C CNN
 	1    3500 1950
@@ -77,7 +77,7 @@ L Connector_Generic:Conn_01x02 J3
 U 1 1 619FE742
 P 3500 1650
 F 0 "J3" H 3450 1750 50  0000 L CNN
-F 1 "itc" H 3550 1600 50  0000 L CNN
+F 1 "itc" H 3600 1600 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 1650 50  0001 C CNN
 F 3 "~" H 3500 1650 50  0001 C CNN
 	1    3500 1650
@@ -88,7 +88,7 @@ L Connector_Generic:Conn_01x02 J2
 U 1 1 619FEEEF
 P 3500 1350
 F 0 "J2" H 3450 1450 50  0000 L CNN
-F 1 "Cde relais" H 3550 1300 50  0000 L CNN
+F 1 "Cde relais" H 3600 1300 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 1350 50  0001 C CNN
 F 3 "~" H 3500 1350 50  0001 C CNN
 	1    3500 1350
@@ -157,7 +157,7 @@ L Connector_Generic:Conn_01x02 J5
 U 1 1 61A78B29
 P 3500 2250
 F 0 "J5" H 3450 2350 50  0000 L CNN
-F 1 "+5V" H 3550 2200 50  0000 L CNN
+F 1 "+5V" H 3600 2200 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 2250 50  0001 C CNN
 F 3 "~" H 3500 2250 50  0001 C CNN
 	1    3500 2250
@@ -192,4 +192,8 @@ Wire Wire Line
 Connection ~ 2550 2950
 Wire Wire Line
 	2550 2950 2400 2950
+Text Notes 1550 2350 0    118  ~ 24
+RJ45
+Text Notes 1550 1600 0    118  ~ 24
+Liaison filaire
 $EndSCHEMATC
