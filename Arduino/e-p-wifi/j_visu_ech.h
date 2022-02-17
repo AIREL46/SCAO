@@ -34,6 +34,8 @@
  Serial.println(" secondes");
  Serial.print("FC1                        : ");
  Serial.println(FC1);
+ Serial.print("Ach                        : ");
+ Serial.println(Ach);
  Serial.print("courant                    : ");
  Serial.println(courant);
  Serial.print("puissance                  : ");

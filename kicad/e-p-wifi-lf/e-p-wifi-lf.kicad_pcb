@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 23)
+    (drawings 24)
     (tracks 72)
     (zones 0)
     (modules 7)
@@ -72,7 +72,7 @@
       (plotframeref true)
       (viasonmask false)
       (mode 1)
-      (useauxorigin false)
+      (useauxorigin true)
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
@@ -396,6 +396,9 @@
     )
   )
 
+  (gr_text e-p-wifi-lf (at 71.628 121.412) (layer B.Fab)
+    (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+  )
   (gr_line (start 95.25 134.62) (end 88.9 134.62) (layer Edge.Cuts) (width 0.05) (tstamp 6197B046))
   (gr_line (start 95.25 109.22) (end 95.25 134.62) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 88.9 109.22) (end 95.25 109.22) (layer Edge.Cuts) (width 0.05))

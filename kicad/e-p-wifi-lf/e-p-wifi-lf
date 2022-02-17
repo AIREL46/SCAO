@@ -1,0 +1,8 @@
+Reference, Quantity, Value, Footprint, Datasheet
+J1 ,1,"Speaker","e-p-wifi-lf:pastille","~"
+J2 ,1,"liaison_filaire","e-p-wifi-lf:PinHeader_1x08","~"
+J3 ,1,"RJ45","e-p-wifi-lf:RJ45",""
+LS1 ,1,"Device_Speaker","e-p-wifi:mini_speaker",""
+Q1 ,1,"2N2222A","Package_TO_SOT_THT:TO-18-3","http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
+R1 ,1,"470","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+R2 ,1,"0","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
