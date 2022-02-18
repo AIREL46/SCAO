@@ -193,7 +193,7 @@ Wire Wire Line
 Wire Wire Line
 	2550 2050 2550 2600
 $Comp
-L e-p-wifi-lf-rescue:RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue J3
+L e-p-wifi-lf-rescue:RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue-e-p-wifi-lf-rescue J3
 U 1 1 62075E51
 P 3450 2250
 F 0 "J3" H 3120 2254 50  0000 R CNN

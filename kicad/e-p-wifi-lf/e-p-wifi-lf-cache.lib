@@ -120,11 +120,11 @@ X 2 2 -200 -100 100 R 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# e-p-wifi-lf-rescue_RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue
+# e-p-wifi-lf-rescue_RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue-e-p-wifi-lf-rescue
 #
-DEF e-p-wifi-lf-rescue_RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue J 0 40 Y Y 1 F N
+DEF e-p-wifi-lf-rescue_RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue-e-p-wifi-lf-rescue J 0 40 Y Y 1 F N
 F0 "J" -200 550 50 H V R CNN
-F1 "e-p-wifi-lf-rescue_RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue" 100 550 50 H V L CNN
+F1 "e-p-wifi-lf-rescue_RJ45-e-p-wifi-cache-e-p-wifi-lf-rescue-e-p-wifi-lf-rescue" 100 550 50 H V L CNN
 F2 "" 0 25 50 V I C CNN
 F3 "" 0 25 50 V I C CNN
 $FPLIST
@@ -157,8 +157,8 @@ X ~ 3_GND 400 -100 100 L 50 50 1 1 P
 X _ 4_RESET 400 0 100 L 50 50 1 1 P
 X ~ 5_5V 400 100 100 L 50 50 1 1 P
 X ~ 6_P230V 400 200 100 L 50 50 1 1 P
-X ~ 7_itc 400 300 100 L 50 50 1 1 P
-X ~ 8_cde_rel 400 400 100 L 50 50 1 1 P
+X ~ 7_cde_rel 400 300 100 L 50 50 1 1 P
+X ~ 8_itc 400 400 100 L 50 50 1 1 P
 X GND 9 0 -500 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
