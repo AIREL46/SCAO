@@ -18,9 +18,9 @@ L e-p-wifi-lf:RJ45-e-p-wifi-cache J1
 U 1 1 619FA387
 P 2400 2350
 F 0 "J1" H 2400 2400 50  0000 R CNN
-F 1 "RJ45_conrad_922647" V 2050 2800 50  0000 R CNN
+F 1 "RJ45" H 2450 2300 50  0000 R CNB
 F 2 "e-p-wifi-lf:RJ45" V 2400 2375 50  0001 C CNN
-F 3 "https://asset.conrad.com/media10/add/160267/c1/-/de/000922647DS01/fiche-technique-922647-embase-modulaire-femelle-horizontale-bkl-electronic-143206-rj45-femelle-coude-pole-8p8c-gris-1-pcs.pdf" V 2400 2375 50  0001 C CNN
+F 3 "Embase RJ45 - BKL Electronic 143206 - Conrad 922647" H 2850 1500 50  0000 C CNB
 	1    2400 2350
 	1    0    0    -1  
 $EndComp
@@ -28,10 +28,10 @@ $Comp
 L Connector_Generic:Conn_01x02 J7
 U 1 1 619FA923
 P 3500 2850
-F 0 "J7" H 3450 2950 50  0000 L CNN
+F 0 "J7" H 3450 2950 50  0000 L CNB
 F 1 "3.3V" H 3600 2800 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 2850 50  0001 C CNN
-F 3 "~" H 3500 2850 50  0001 C CNN
+F 3 "PCB Terminal Block 2.54mm, 2 Pole - Farnell 3817460 - https://www.farnell.com/datasheets/3577186.pdf" H 3850 2350 50  0000 C CNB
 	1    3500 2850
 	1    0    0    -1  
 $EndComp
@@ -50,10 +50,10 @@ $Comp
 L Connector_Generic:Conn_01x02 J6
 U 1 1 619FBE34
 P 3500 2550
-F 0 "J6" H 3450 2650 50  0000 L CNN
+F 0 "J6" H 3450 2650 50  0000 L CNB
 F 1 "Reset" H 3600 2500 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 2550 50  0001 C CNN
-F 3 "~" H 3500 2550 50  0001 C CNN
+F 3 "PCB Terminal Block 2.54mm, 2 Pole - Farnell 3817460 - https://www.farnell.com/datasheets/3577186.pdf" H 3500 2550 50  0001 C CNN
 	1    3500 2550
 	1    0    0    -1  
 $EndComp
@@ -65,10 +65,10 @@ $Comp
 L Connector_Generic:Conn_01x02 J4
 U 1 1 619FDB19
 P 3500 1950
-F 0 "J4" H 3450 2050 50  0000 L CNN
+F 0 "J4" H 3450 2050 50  0000 L CNB
 F 1 "P230V" H 3600 1900 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 1950 50  0001 C CNN
-F 3 "~" H 3500 1950 50  0001 C CNN
+F 3 "PCB Terminal Block 2.54mm, 2 Pole - Farnell 3817460 - https://www.farnell.com/datasheets/3577186.pdf" H 3500 1950 50  0001 C CNN
 	1    3500 1950
 	1    0    0    -1  
 $EndComp
@@ -76,10 +76,10 @@ $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 619FE742
 P 3500 1650
-F 0 "J3" H 3450 1750 50  0000 L CNN
+F 0 "J3" H 3450 1750 50  0000 L CNB
 F 1 "cde relais" H 3600 1600 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 1650 50  0001 C CNN
-F 3 "~" H 3500 1650 50  0001 C CNN
+F 3 "PCB Terminal Block 2.54mm, 2 Pole - Farnell 3817460 - https://www.farnell.com/datasheets/3577186.pdf" H 3500 1650 50  0001 C CNN
 	1    3500 1650
 	1    0    0    -1  
 $EndComp
@@ -87,10 +87,10 @@ $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 619FEEEF
 P 3500 1350
-F 0 "J2" H 3450 1450 50  0000 L CNN
+F 0 "J2" H 3450 1450 50  0000 L CNB
 F 1 "itc" H 3600 1300 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 1350 50  0001 C CNN
-F 3 "~" H 3500 1350 50  0001 C CNN
+F 3 "PCB Terminal Block 2.54mm, 2 Pole - Farnell 3817460 - https://www.farnell.com/datasheets/3577186.pdf" H 3500 1350 50  0001 C CNN
 	1    3500 1350
 	1    0    0    -1  
 $EndComp
@@ -120,10 +120,10 @@ $Comp
 L Switch:SW_Push SW1
 U 1 1 61A513AF
 P 3050 2350
-F 0 "SW1" H 2850 2400 50  0000 C CNN
-F 1 "Reset" H 3050 2300 50  0000 C CNN
+F 0 "SW1" H 3050 2500 50  0000 C CNB
+F 1 "Reset" H 3050 2300 50  0000 C CNB
 F 2 "Button_Switch_THT:SW_PUSH_6mm" H 3050 2550 50  0001 C CNN
-F 3 "https://www.gotronic.fr/pj-609.pdf" H 3050 2550 50  0001 C CNN
+F 3 "BP subminiature KRS0610 - Gotronic - 07127 - https://www.gotronic.fr/pj-609.pdf" H 3400 1200 50  0000 C CNB
 	1    3050 2350
 	1    0    0    -1  
 $EndComp
@@ -156,10 +156,10 @@ $Comp
 L Connector_Generic:Conn_01x02 J5
 U 1 1 61A78B29
 P 3500 2250
-F 0 "J5" H 3450 2350 50  0000 L CNN
+F 0 "J5" H 3450 2350 50  0000 L CNB
 F 1 "+5V" H 3600 2200 118 0000 L CNB
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 2250 50  0001 C CNN
-F 3 "~" H 3500 2250 50  0001 C CNN
+F 3 "PCB Terminal Block 2.54mm, 2 Pole - Farnell 3817460 - https://www.farnell.com/datasheets/3577186.pdf" H 3500 2250 50  0001 C CNN
 	1    3500 2250
 	1    0    0    -1  
 $EndComp
@@ -192,8 +192,6 @@ Wire Wire Line
 Connection ~ 2550 2950
 Wire Wire Line
 	2550 2950 2400 2950
-Text Notes 1550 2350 0    118  ~ 24
-RJ45
 Text Notes 1550 1600 0    118  ~ 24
 Liaison filaire
 $Bitmap
@@ -1316,6 +1314,6 @@ A5 2E B4 00 60 68 68 F4 20 3D 43 24 12 A5 A7 A7 F3 78 3C A6 C3 01 2D 2E 57 5F 20
 01 1C 24 2D AD 34 3C CC 49 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Notes 4250 3000 0    118  ~ 24
+Text Notes 4550 2800 0    79   ~ 16
 Source : https://fr.wikipedia.org/wiki/RJ45
 $EndSCHEMATC
