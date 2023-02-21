@@ -413,3 +413,3115 @@ t;T1 (degres C);T2 (degres C);Tcons (degres C);Dich (s);Ach;Dur (mn))
 191.50;23.69;32.50;84.38;0.00;0;-0.44;
 192.00;23.62;32.38;84.38;0.00;0;-0.44;
 192.50;23.62;32.31;84.38;0.00;0;-0.44;
+Systeme de Cuisson Intelligent (SCI) 
+Saisie wifi (O) ou clavier (N)
+Entrer la duree de cuisson (mn) > 0 (attention : apres la frappe du premier chiffre, vous avez 5 secondes pour saisir la valeur)
+70 mn 
+Par defaut le gabarit est 5, voulez-vous le changer o/n ?
+Voulez-vous continuer ? taper O
+Duree de cuisson 70 mn - 
+Le gabarit choisi est : 5
+1 - attente de la cmd start
+Cuisson en cours
+t;T1 (degres C);T2 (degres C);Tcons (degres C);Dich (s);Ach;Dur (mn))
+courant : 10.40
+t                          : 0.50
+temperature mesuree T1     : 25.19 degres Celsius
+temperature mesuree T2     : 25.00 degres Celsius
+temperature de consigne    : 25.18 degres Celsius
+duree iterative de chauffe : 0.60 secondes
+duree restante             : 100.27 minutes
+cout                       : 0.0000 euros
+Somme des Dich             : 0.00 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 10.40
+puissance                  : 0.00
+
+courant : 10.10
+t                          : 1.00
+temperature mesuree T1     : 25.25 degres Celsius
+temperature mesuree T2     : 25.00 degres Celsius
+temperature de consigne    : 25.37 degres Celsius
+duree iterative de chauffe : 1.21 secondes
+duree restante             : 99.77 minutes
+cout                       : 0.0001 euros
+Somme des Dich             : 0.60 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 10.10
+puissance                  : 2.48
+
+courant : 9.83
+t                          : 1.50
+temperature mesuree T1     : 25.25 degres Celsius
+temperature mesuree T2     : 24.94 degres Celsius
+temperature de consigne    : 25.55 degres Celsius
+duree iterative de chauffe : 2.02 secondes
+duree restante             : 99.27 minutes
+cout                       : 0.0002 euros
+Somme des Dich             : 1.81 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 9.83
+puissance                  : 2.42
+
+courant : 9.99
+t                          : 2.00
+temperature mesuree T1     : 25.25 degres Celsius
+temperature mesuree T2     : 24.94 degres Celsius
+temperature de consigne    : 25.73 degres Celsius
+duree iterative de chauffe : 2.63 secondes
+duree restante             : 98.77 minutes
+cout                       : 0.0004 euros
+Somme des Dich             : 3.84 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 9.99
+puissance                  : 2.35
+
+courant : 9.99
+t                          : 2.50
+temperature mesuree T1     : 25.25 degres Celsius
+temperature mesuree T2     : 24.94 degres Celsius
+temperature de consigne    : 25.92 degres Celsius
+duree iterative de chauffe : 3.23 secondes
+duree restante             : 98.27 minutes
+cout                       : 0.0007 euros
+Somme des Dich             : 6.46 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 9.99
+puissance                  : 2.39
+
+courant : 9.74
+t                          : 3.00
+temperature mesuree T1     : 25.25 degres Celsius
+temperature mesuree T2     : 24.94 degres Celsius
+temperature de consigne    : 26.10 degres Celsius
+duree iterative de chauffe : 3.84 secondes
+duree restante             : 97.77 minutes
+cout                       : 0.0011 euros
+Somme des Dich             : 9.69 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 9.74
+puissance                  : 2.39
+
+courant : 4.23
+t                          : 3.50
+temperature mesuree T1     : 25.31 degres Celsius
+temperature mesuree T2     : 24.87 degres Celsius
+temperature de consigne    : 26.28 degres Celsius
+duree iterative de chauffe : 4.65 secondes
+duree restante             : 97.27 minutes
+cout                       : 0.0015 euros
+Somme des Dich             : 13.53 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.23
+puissance                  : 2.33
+
+courant : 4.49
+t                          : 4.00
+temperature mesuree T1     : 25.31 degres Celsius
+temperature mesuree T2     : 24.87 degres Celsius
+temperature de consigne    : 26.47 degres Celsius
+duree iterative de chauffe : 5.25 secondes
+duree restante             : 96.77 minutes
+cout                       : 0.0017 euros
+Somme des Dich             : 18.18 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.49
+puissance                  : 1.01
+
+courant : 4.45
+t                          : 4.50
+temperature mesuree T1     : 25.31 degres Celsius
+temperature mesuree T2     : 24.87 degres Celsius
+temperature de consigne    : 26.65 degres Celsius
+duree iterative de chauffe : 5.86 secondes
+duree restante             : 96.27 minutes
+cout                       : 0.0020 euros
+Somme des Dich             : 23.43 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.45
+puissance                  : 1.07
+
+courant : 4.24
+t                          : 5.00
+temperature mesuree T1     : 25.37 degres Celsius
+temperature mesuree T2     : 24.87 degres Celsius
+temperature de consigne    : 26.83 degres Celsius
+duree iterative de chauffe : 6.46 secondes
+duree restante             : 95.77 minutes
+cout                       : 0.0023 euros
+Somme des Dich             : 29.29 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.24
+puissance                  : 1.06
+
+courant : 4.60
+t                          : 5.50
+temperature mesuree T1     : 25.37 degres Celsius
+temperature mesuree T2     : 24.87 degres Celsius
+temperature de consigne    : 27.02 degres Celsius
+duree iterative de chauffe : 7.07 secondes
+duree restante             : 95.27 minutes
+cout                       : 0.0026 euros
+Somme des Dich             : 35.75 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.60
+puissance                  : 1.01
+
+courant : 4.38
+t                          : 6.00
+temperature mesuree T1     : 25.37 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 27.20 degres Celsius
+duree iterative de chauffe : 7.88 secondes
+duree restante             : 94.77 minutes
+cout                       : 0.0030 euros
+Somme des Dich             : 42.82 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.38
+puissance                  : 1.10
+
+courant : 4.28
+t                          : 6.50
+temperature mesuree T1     : 25.44 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 27.38 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 94.27 minutes
+cout                       : 0.0034 euros
+Somme des Dich             : 50.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.28
+puissance                  : 1.05
+
+courant : 4.29
+t                          : 7.00
+temperature mesuree T1     : 25.44 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 27.57 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 93.77 minutes
+cout                       : 0.0038 euros
+Somme des Dich             : 58.95 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.29
+puissance                  : 1.02
+
+courant : 4.12
+t                          : 7.50
+temperature mesuree T1     : 25.44 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 27.75 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 93.27 minutes
+cout                       : 0.0042 euros
+Somme des Dich             : 67.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.12
+puissance                  : 1.02
+
+courant : 4.33
+t                          : 8.00
+temperature mesuree T1     : 25.44 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 27.93 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 92.77 minutes
+cout                       : 0.0045 euros
+Somme des Dich             : 75.45 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.33
+puissance                  : 0.98
+
+courant : 4.35
+t                          : 8.50
+temperature mesuree T1     : 25.50 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 28.12 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 92.27 minutes
+cout                       : 0.0049 euros
+Somme des Dich             : 83.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.35
+puissance                  : 1.04
+
+courant : 4.35
+t                          : 9.00
+temperature mesuree T1     : 25.50 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 28.30 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 91.77 minutes
+cout                       : 0.0054 euros
+Somme des Dich             : 91.95 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.35
+puissance                  : 1.04
+
+courant : 4.24
+t                          : 9.50
+temperature mesuree T1     : 25.56 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 28.48 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 91.27 minutes
+cout                       : 0.0058 euros
+Somme des Dich             : 100.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.24
+puissance                  : 1.04
+
+courant : 4.23
+t                          : 10.00
+temperature mesuree T1     : 25.56 degres Celsius
+temperature mesuree T2     : 24.81 degres Celsius
+temperature de consigne    : 28.67 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 90.77 minutes
+cout                       : 0.0062 euros
+Somme des Dich             : 108.45 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.23
+puissance                  : 1.01
+
+courant : 4.38
+t                          : 10.50
+temperature mesuree T1     : 25.56 degres Celsius
+temperature mesuree T2     : 24.87 degres Celsius
+temperature de consigne    : 28.85 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 90.27 minutes
+cout                       : 0.0065 euros
+Somme des Dich             : 116.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.38
+puissance                  : 1.01
+
+courant : 4.14
+t                          : 11.00
+temperature mesuree T1     : 25.62 degres Celsius
+temperature mesuree T2     : 24.94 degres Celsius
+temperature de consigne    : 29.03 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 89.77 minutes
+cout                       : 0.0070 euros
+Somme des Dich             : 124.95 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.14
+puissance                  : 1.05
+
+courant : 4.33
+t                          : 11.50
+temperature mesuree T1     : 25.62 degres Celsius
+temperature mesuree T2     : 25.00 degres Celsius
+temperature de consigne    : 29.22 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 89.27 minutes
+cout                       : 0.0073 euros
+Somme des Dich             : 133.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.33
+puissance                  : 0.99
+
+courant : 4.41
+t                          : 12.00
+temperature mesuree T1     : 25.69 degres Celsius
+temperature mesuree T2     : 25.12 degres Celsius
+temperature de consigne    : 29.40 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 88.77 minutes
+cout                       : 0.0077 euros
+Somme des Dich             : 141.45 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.41
+puissance                  : 1.03
+
+courant : 4.70
+t                          : 12.50
+temperature mesuree T1     : 25.69 degres Celsius
+temperature mesuree T2     : 25.31 degres Celsius
+temperature de consigne    : 29.58 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 88.27 minutes
+cout                       : 0.0082 euros
+Somme des Dich             : 149.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.70
+puissance                  : 1.05
+
+courant : 4.26
+t                          : 13.00
+temperature mesuree T1     : 25.75 degres Celsius
+temperature mesuree T2     : 25.69 degres Celsius
+temperature de consigne    : 29.77 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 87.77 minutes
+cout                       : 0.0086 euros
+Somme des Dich             : 157.95 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.26
+puissance                  : 1.12
+
+courant : 4.52
+t                          : 13.50
+temperature mesuree T1     : 25.75 degres Celsius
+temperature mesuree T2     : 26.31 degres Celsius
+temperature de consigne    : 29.95 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 87.27 minutes
+cout                       : 0.0090 euros
+Somme des Dich             : 166.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.52
+puissance                  : 1.02
+
+courant : 4.99
+t                          : 14.00
+temperature mesuree T1     : 25.81 degres Celsius
+temperature mesuree T2     : 27.19 degres Celsius
+temperature de consigne    : 30.13 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 86.77 minutes
+cout                       : 0.0094 euros
+Somme des Dich             : 174.45 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.99
+puissance                  : 1.08
+
+courant : 4.31
+t                          : 14.50
+temperature mesuree T1     : 25.94 degres Celsius
+temperature mesuree T2     : 28.37 degres Celsius
+temperature de consigne    : 30.32 degres Celsius
+duree iterative de chauffe : 6.41 secondes
+duree restante             : 86.27 minutes
+cout                       : 0.0099 euros
+Somme des Dich             : 182.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.31
+puissance                  : 1.19
+
+courant : 4.79
+t                          : 0.00
+temperature mesuree T1     : 26.00 degres Celsius
+temperature mesuree T2     : 30.06 degres Celsius
+temperature de consigne    : 30.50 degres Celsius
+duree iterative de chauffe : 1.44 secondes
+duree restante             : 85.77 minutes
+cout                       : 0.0102 euros
+Somme des Dich             : 189.10 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.79
+puissance                  : 1.03
+
+courant : 0.00
+t                          : 0.50
+temperature mesuree T1     : 26.06 degres Celsius
+temperature mesuree T2     : 31.94 degres Celsius
+temperature de consigne    : 31.72 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 85.27 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 1.14
+
+courant : 0.00
+t                          : 1.00
+temperature mesuree T1     : 26.19 degres Celsius
+temperature mesuree T2     : 34.06 degres Celsius
+temperature de consigne    : 32.91 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 84.77 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 1.50
+temperature mesuree T1     : 26.31 degres Celsius
+temperature mesuree T2     : 36.13 degres Celsius
+temperature de consigne    : 34.08 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 84.27 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.07
+t                          : 2.00
+temperature mesuree T1     : 26.37 degres Celsius
+temperature mesuree T2     : 37.63 degres Celsius
+temperature de consigne    : 35.21 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 83.77 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.07
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 2.50
+temperature mesuree T1     : 26.56 degres Celsius
+temperature mesuree T2     : 38.88 degres Celsius
+temperature de consigne    : 36.32 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 83.27 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.02
+
+courant : 0.08
+t                          : 3.00
+temperature mesuree T1     : 26.69 degres Celsius
+temperature mesuree T2     : 39.88 degres Celsius
+temperature de consigne    : 37.39 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 82.77 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.08
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 3.50
+temperature mesuree T1     : 26.81 degres Celsius
+temperature mesuree T2     : 40.69 degres Celsius
+temperature de consigne    : 38.45 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 82.27 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.02
+
+courant : 0.12
+t                          : 4.00
+temperature mesuree T1     : 26.94 degres Celsius
+temperature mesuree T2     : 41.38 degres Celsius
+temperature de consigne    : 39.47 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 81.77 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.12
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 4.50
+temperature mesuree T1     : 27.06 degres Celsius
+temperature mesuree T2     : 42.00 degres Celsius
+temperature de consigne    : 40.47 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 81.27 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.03
+
+courant : 0.00
+t                          : 5.00
+temperature mesuree T1     : 27.19 degres Celsius
+temperature mesuree T2     : 42.56 degres Celsius
+temperature de consigne    : 41.45 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 80.77 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.26
+t                          : 5.50
+temperature mesuree T1     : 27.31 degres Celsius
+temperature mesuree T2     : 43.00 degres Celsius
+temperature de consigne    : 42.40 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 80.27 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.26
+puissance                  : 0.00
+
+courant : 0.09
+t                          : 6.00
+temperature mesuree T1     : 27.37 degres Celsius
+temperature mesuree T2     : 43.38 degres Celsius
+temperature de consigne    : 43.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 79.77 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.09
+puissance                  : 0.06
+
+courant : 4.42
+t                          : 6.50
+temperature mesuree T1     : 27.50 degres Celsius
+temperature mesuree T2     : 43.75 degres Celsius
+temperature de consigne    : 44.23 degres Celsius
+duree iterative de chauffe : 1.60 secondes
+duree restante             : 79.27 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 190.55 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.42
+puissance                  : 0.02
+
+courant : 4.62
+t                          : 7.00
+temperature mesuree T1     : 27.56 degres Celsius
+temperature mesuree T2     : 44.06 degres Celsius
+temperature de consigne    : 45.12 degres Celsius
+duree iterative de chauffe : 3.48 secondes
+duree restante             : 78.77 minutes
+cout                       : 0.0103 euros
+Somme des Dich             : 192.15 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.62
+puissance                  : 1.06
+
+courant : 4.06
+t                          : 7.50
+temperature mesuree T1     : 27.69 degres Celsius
+temperature mesuree T2     : 44.25 degres Celsius
+temperature de consigne    : 45.98 degres Celsius
+duree iterative de chauffe : 5.71 secondes
+duree restante             : 78.27 minutes
+cout                       : 0.0105 euros
+Somme des Dich             : 195.63 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.06
+puissance                  : 1.10
+
+courant : 4.54
+t                          : 8.00
+temperature mesuree T1     : 27.81 degres Celsius
+temperature mesuree T2     : 44.44 degres Celsius
+temperature de consigne    : 46.82 degres Celsius
+duree iterative de chauffe : 7.86 secondes
+duree restante             : 77.77 minutes
+cout                       : 0.0108 euros
+Somme des Dich             : 201.34 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.54
+puissance                  : 0.97
+
+courant : 4.17
+t                          : 8.50
+temperature mesuree T1     : 27.87 degres Celsius
+temperature mesuree T2     : 44.56 degres Celsius
+temperature de consigne    : 47.64 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 77.27 minutes
+cout                       : 0.0112 euros
+Somme des Dich             : 209.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.17
+puissance                  : 1.09
+
+courant : 4.12
+t                          : 9.00
+temperature mesuree T1     : 27.94 degres Celsius
+temperature mesuree T2     : 44.63 degres Celsius
+temperature de consigne    : 48.44 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 76.77 minutes
+cout                       : 0.0116 euros
+Somme des Dich             : 217.45 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.12
+puissance                  : 1.00
+
+courant : 4.54
+t                          : 9.50
+temperature mesuree T1     : 28.00 degres Celsius
+temperature mesuree T2     : 44.75 degres Celsius
+temperature de consigne    : 49.22 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 76.27 minutes
+cout                       : 0.0120 euros
+Somme des Dich             : 225.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.54
+puissance                  : 0.98
+
+courant : 4.51
+t                          : 10.00
+temperature mesuree T1     : 28.19 degres Celsius
+temperature mesuree T2     : 44.81 degres Celsius
+temperature de consigne    : 49.98 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 75.77 minutes
+cout                       : 0.0124 euros
+Somme des Dich             : 233.95 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.51
+puissance                  : 1.08
+
+courant : 4.54
+t                          : 10.50
+temperature mesuree T1     : 28.25 degres Celsius
+temperature mesuree T2     : 44.94 degres Celsius
+temperature de consigne    : 50.72 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 75.27 minutes
+cout                       : 0.0128 euros
+Somme des Dich             : 242.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.54
+puissance                  : 1.08
+
+courant : 4.37
+t                          : 11.00
+temperature mesuree T1     : 28.31 degres Celsius
+temperature mesuree T2     : 45.38 degres Celsius
+temperature de consigne    : 51.44 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 74.77 minutes
+cout                       : 0.0132 euros
+Somme des Dich             : 250.45 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.37
+puissance                  : 1.08
+
+courant : 4.19
+t                          : 11.50
+temperature mesuree T1     : 28.37 degres Celsius
+temperature mesuree T2     : 46.44 degres Celsius
+temperature de consigne    : 52.15 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 74.27 minutes
+cout                       : 0.0136 euros
+Somme des Dich             : 258.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.19
+puissance                  : 1.04
+
+courant : 4.73
+t                          : 12.00
+temperature mesuree T1     : 28.44 degres Celsius
+temperature mesuree T2     : 48.00 degres Celsius
+temperature de consigne    : 52.83 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 73.77 minutes
+cout                       : 0.0140 euros
+Somme des Dich             : 266.95 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.73
+puissance                  : 1.00
+
+courant : 4.48
+t                          : 12.50
+temperature mesuree T1     : 28.62 degres Celsius
+temperature mesuree T2     : 49.56 degres Celsius
+temperature de consigne    : 53.50 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 73.27 minutes
+cout                       : 0.0145 euros
+Somme des Dich             : 275.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.48
+puissance                  : 1.13
+
+courant : 4.38
+t                          : 13.00
+temperature mesuree T1     : 28.69 degres Celsius
+temperature mesuree T2     : 51.38 degres Celsius
+temperature de consigne    : 54.16 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 72.77 minutes
+cout                       : 0.0149 euros
+Somme des Dich             : 283.45 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.38
+puissance                  : 1.07
+
+courant : 4.46
+t                          : 13.50
+temperature mesuree T1     : 28.87 degres Celsius
+temperature mesuree T2     : 53.38 degres Celsius
+temperature de consigne    : 54.80 degres Celsius
+duree iterative de chauffe : 4.69 secondes
+duree restante             : 72.27 minutes
+cout                       : 0.0153 euros
+Somme des Dich             : 291.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.46
+puissance                  : 1.05
+
+courant : 0.00
+t                          : 14.00
+temperature mesuree T1     : 29.06 degres Celsius
+temperature mesuree T2     : 55.44 degres Celsius
+temperature de consigne    : 55.42 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 71.77 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 1.07
+
+courant : 0.02
+t                          : 14.50
+temperature mesuree T1     : 29.19 degres Celsius
+temperature mesuree T2     : 57.19 degres Celsius
+temperature de consigne    : 56.03 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 71.27 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.02
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 15.00
+temperature mesuree T1     : 29.44 degres Celsius
+temperature mesuree T2     : 58.56 degres Celsius
+temperature de consigne    : 56.62 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 70.77 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 15.50
+temperature mesuree T1     : 29.56 degres Celsius
+temperature mesuree T2     : 59.69 degres Celsius
+temperature de consigne    : 57.20 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 70.27 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.08
+t                          : 16.00
+temperature mesuree T1     : 29.75 degres Celsius
+temperature mesuree T2     : 60.44 degres Celsius
+temperature de consigne    : 57.76 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 69.77 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.08
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 16.50
+temperature mesuree T1     : 29.87 degres Celsius
+temperature mesuree T2     : 60.94 degres Celsius
+temperature de consigne    : 58.31 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 69.27 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.02
+
+courant : 0.08
+t                          : 17.00
+temperature mesuree T1     : 30.00 degres Celsius
+temperature mesuree T2     : 61.25 degres Celsius
+temperature de consigne    : 58.84 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 68.77 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.08
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 17.50
+temperature mesuree T1     : 30.12 degres Celsius
+temperature mesuree T2     : 61.44 degres Celsius
+temperature de consigne    : 59.37 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 68.27 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.02
+
+courant : 0.08
+t                          : 18.00
+temperature mesuree T1     : 30.31 degres Celsius
+temperature mesuree T2     : 61.50 degres Celsius
+temperature de consigne    : 59.87 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 67.77 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.08
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 18.50
+temperature mesuree T1     : 30.50 degres Celsius
+temperature mesuree T2     : 61.56 degres Celsius
+temperature de consigne    : 60.37 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 67.27 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.02
+
+courant : 0.00
+t                          : 19.00
+temperature mesuree T1     : 30.69 degres Celsius
+temperature mesuree T2     : 61.56 degres Celsius
+temperature de consigne    : 60.86 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 66.77 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 19.50
+temperature mesuree T1     : 30.81 degres Celsius
+temperature mesuree T2     : 61.50 degres Celsius
+temperature de consigne    : 61.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 66.27 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 4.51
+t                          : 20.00
+temperature mesuree T1     : 30.94 degres Celsius
+temperature mesuree T2     : 61.50 degres Celsius
+temperature de consigne    : 61.79 degres Celsius
+duree iterative de chauffe : 0.96 secondes
+duree restante             : 65.77 minutes
+cout                       : 0.0155 euros
+Somme des Dich             : 296.39 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.51
+puissance                  : 0.00
+
+courant : 4.60
+t                          : 20.50
+temperature mesuree T1     : 31.06 degres Celsius
+temperature mesuree T2     : 61.38 degres Celsius
+temperature de consigne    : 62.24 degres Celsius
+duree iterative de chauffe : 2.85 secondes
+duree restante             : 65.27 minutes
+cout                       : 0.0156 euros
+Somme des Dich             : 297.35 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.60
+puissance                  : 1.08
+
+courant : 4.65
+t                          : 21.00
+temperature mesuree T1     : 31.12 degres Celsius
+temperature mesuree T2     : 61.31 degres Celsius
+temperature de consigne    : 62.68 degres Celsius
+duree iterative de chauffe : 4.51 secondes
+duree restante             : 64.77 minutes
+cout                       : 0.0157 euros
+Somme des Dich             : 300.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.65
+puissance                  : 1.10
+
+courant : 4.44
+t                          : 21.50
+temperature mesuree T1     : 31.25 degres Celsius
+temperature mesuree T2     : 61.19 degres Celsius
+temperature de consigne    : 63.11 degres Celsius
+duree iterative de chauffe : 6.33 secondes
+duree restante             : 64.27 minutes
+cout                       : 0.0160 euros
+Somme des Dich             : 304.70 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.44
+puissance                  : 1.11
+
+courant : 4.37
+t                          : 22.00
+temperature mesuree T1     : 31.37 degres Celsius
+temperature mesuree T2     : 61.06 degres Celsius
+temperature de consigne    : 63.52 degres Celsius
+duree iterative de chauffe : 8.12 secondes
+duree restante             : 63.77 minutes
+cout                       : 0.0163 euros
+Somme des Dich             : 311.03 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.37
+puissance                  : 1.06
+
+courant : 4.32
+t                          : 22.50
+temperature mesuree T1     : 31.44 degres Celsius
+temperature mesuree T2     : 60.88 degres Celsius
+temperature de consigne    : 63.93 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 63.27 minutes
+cout                       : 0.0167 euros
+Somme des Dich             : 319.15 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.32
+puissance                  : 1.04
+
+courant : 4.22
+t                          : 23.00
+temperature mesuree T1     : 31.56 degres Celsius
+temperature mesuree T2     : 60.81 degres Celsius
+temperature de consigne    : 64.33 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 62.77 minutes
+cout                       : 0.0171 euros
+Somme des Dich             : 327.40 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.22
+puissance                  : 1.03
+
+courant : 4.43
+t                          : 23.50
+temperature mesuree T1     : 31.62 degres Celsius
+temperature mesuree T2     : 60.75 degres Celsius
+temperature de consigne    : 64.71 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 62.27 minutes
+cout                       : 0.0175 euros
+Somme des Dich             : 335.65 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.43
+puissance                  : 1.01
+
+courant : 4.15
+t                          : 24.00
+temperature mesuree T1     : 31.69 degres Celsius
+temperature mesuree T2     : 60.75 degres Celsius
+temperature de consigne    : 65.09 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 61.77 minutes
+cout                       : 0.0179 euros
+Somme des Dich             : 343.90 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.15
+puissance                  : 1.06
+
+courant : 4.40
+t                          : 24.50
+temperature mesuree T1     : 31.75 degres Celsius
+temperature mesuree T2     : 61.13 degres Celsius
+temperature de consigne    : 65.46 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 61.27 minutes
+cout                       : 0.0183 euros
+Somme des Dich             : 352.15 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.40
+puissance                  : 0.99
+
+courant : 4.29
+t                          : 25.00
+temperature mesuree T1     : 31.81 degres Celsius
+temperature mesuree T2     : 62.06 degres Celsius
+temperature de consigne    : 65.82 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 60.77 minutes
+cout                       : 0.0187 euros
+Somme des Dich             : 360.40 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.29
+puissance                  : 1.05
+
+courant : 4.29
+t                          : 25.50
+temperature mesuree T1     : 31.94 degres Celsius
+temperature mesuree T2     : 63.31 degres Celsius
+temperature de consigne    : 66.17 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 60.27 minutes
+cout                       : 0.0191 euros
+Somme des Dich             : 368.65 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.29
+puissance                  : 1.02
+
+courant : 4.33
+t                          : 26.00
+temperature mesuree T1     : 32.00 degres Celsius
+temperature mesuree T2     : 64.81 degres Celsius
+temperature de consigne    : 66.51 degres Celsius
+duree iterative de chauffe : 5.60 secondes
+duree restante             : 59.77 minutes
+cout                       : 0.0195 euros
+Somme des Dich             : 376.90 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.33
+puissance                  : 1.03
+
+courant : 4.56
+t                          : 26.50
+temperature mesuree T1     : 32.13 degres Celsius
+temperature mesuree T2     : 66.37 degres Celsius
+temperature de consigne    : 66.84 degres Celsius
+duree iterative de chauffe : 1.54 secondes
+duree restante             : 59.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 382.50 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.56
+puissance                  : 1.04
+
+courant : 0.00
+t                          : 27.00
+temperature mesuree T1     : 32.31 degres Celsius
+temperature mesuree T2     : 68.00 degres Celsius
+temperature de consigne    : 67.17 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 58.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 1.09
+
+courant : 0.00
+t                          : 27.50
+temperature mesuree T1     : 32.50 degres Celsius
+temperature mesuree T2     : 69.50 degres Celsius
+temperature de consigne    : 67.48 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 58.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 28.00
+temperature mesuree T1     : 32.56 degres Celsius
+temperature mesuree T2     : 70.62 degres Celsius
+temperature de consigne    : 67.79 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 57.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 28.50
+temperature mesuree T1     : 32.69 degres Celsius
+temperature mesuree T2     : 71.37 degres Celsius
+temperature de consigne    : 68.09 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 57.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 29.00
+temperature mesuree T1     : 32.88 degres Celsius
+temperature mesuree T2     : 71.87 degres Celsius
+temperature de consigne    : 68.39 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 56.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 29.50
+temperature mesuree T1     : 33.00 degres Celsius
+temperature mesuree T2     : 72.12 degres Celsius
+temperature de consigne    : 68.68 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 56.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.03
+t                          : 30.00
+temperature mesuree T1     : 33.13 degres Celsius
+temperature mesuree T2     : 72.25 degres Celsius
+temperature de consigne    : 68.96 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 55.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.03
+puissance                  : 0.00
+
+courant : 0.13
+t                          : 30.50
+temperature mesuree T1     : 33.25 degres Celsius
+temperature mesuree T2     : 72.37 degres Celsius
+temperature de consigne    : 69.23 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 55.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.13
+puissance                  : 0.01
+
+courant : 0.01
+t                          : 31.00
+temperature mesuree T1     : 33.31 degres Celsius
+temperature mesuree T2     : 72.37 degres Celsius
+temperature de consigne    : 69.49 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 54.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.01
+puissance                  : 0.03
+
+courant : 0.00
+t                          : 31.50
+temperature mesuree T1     : 33.44 degres Celsius
+temperature mesuree T2     : 72.31 degres Celsius
+temperature de consigne    : 69.75 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 54.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.03
+t                          : 32.00
+temperature mesuree T1     : 33.50 degres Celsius
+temperature mesuree T2     : 72.25 degres Celsius
+temperature de consigne    : 70.01 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 53.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.03
+puissance                  : 0.00
+
+courant : 0.24
+t                          : 32.50
+temperature mesuree T1     : 33.56 degres Celsius
+temperature mesuree T2     : 72.12 degres Celsius
+temperature de consigne    : 70.25 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 53.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.24
+puissance                  : 0.01
+
+courant : 0.09
+t                          : 33.00
+temperature mesuree T1     : 33.69 degres Celsius
+temperature mesuree T2     : 72.00 degres Celsius
+temperature de consigne    : 70.49 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 52.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.09
+puissance                  : 0.06
+
+courant : 0.13
+t                          : 33.50
+temperature mesuree T1     : 33.81 degres Celsius
+temperature mesuree T2     : 71.87 degres Celsius
+temperature de consigne    : 70.73 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 52.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.13
+puissance                  : 0.02
+
+courant : 0.00
+t                          : 34.00
+temperature mesuree T1     : 33.88 degres Celsius
+temperature mesuree T2     : 71.75 degres Celsius
+temperature de consigne    : 70.96 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 51.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.03
+
+courant : 0.00
+t                          : 34.50
+temperature mesuree T1     : 34.00 degres Celsius
+temperature mesuree T2     : 71.62 degres Celsius
+temperature de consigne    : 71.18 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 51.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 35.00
+temperature mesuree T1     : 34.13 degres Celsius
+temperature mesuree T2     : 71.50 degres Celsius
+temperature de consigne    : 71.40 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 50.77 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 4.76
+t                          : 35.50
+temperature mesuree T1     : 34.19 degres Celsius
+temperature mesuree T2     : 71.31 degres Celsius
+temperature de consigne    : 71.61 degres Celsius
+duree iterative de chauffe : 0.98 secondes
+duree restante             : 50.27 minutes
+cout                       : 0.0198 euros
+Somme des Dich             : 384.05 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.76
+puissance                  : 0.00
+
+courant : 4.53
+t                          : 36.00
+temperature mesuree T1     : 34.25 degres Celsius
+temperature mesuree T2     : 71.12 degres Celsius
+temperature de consigne    : 71.82 degres Celsius
+duree iterative de chauffe : 2.29 secondes
+duree restante             : 49.77 minutes
+cout                       : 0.0199 euros
+Somme des Dich             : 385.03 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.53
+puissance                  : 1.14
+
+courant : 4.46
+t                          : 36.50
+temperature mesuree T1     : 34.25 degres Celsius
+temperature mesuree T2     : 71.00 degres Celsius
+temperature de consigne    : 72.02 degres Celsius
+duree iterative de chauffe : 3.37 secondes
+duree restante             : 49.27 minutes
+cout                       : 0.0200 euros
+Somme des Dich             : 387.32 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.46
+puissance                  : 1.08
+
+courant : 4.37
+t                          : 37.00
+temperature mesuree T1     : 34.31 degres Celsius
+temperature mesuree T2     : 70.81 degres Celsius
+temperature de consigne    : 72.22 degres Celsius
+duree iterative de chauffe : 4.63 secondes
+duree restante             : 48.77 minutes
+cout                       : 0.0202 euros
+Somme des Dich             : 390.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.37
+puissance                  : 1.07
+
+courant : 4.33
+t                          : 37.50
+temperature mesuree T1     : 34.38 degres Celsius
+temperature mesuree T2     : 70.69 degres Celsius
+temperature de consigne    : 72.41 degres Celsius
+duree iterative de chauffe : 5.68 secondes
+duree restante             : 48.27 minutes
+cout                       : 0.0204 euros
+Somme des Dich             : 395.32 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.33
+puissance                  : 1.04
+
+courant : 4.46
+t                          : 38.00
+temperature mesuree T1     : 34.31 degres Celsius
+temperature mesuree T2     : 70.50 degres Celsius
+temperature de consigne    : 72.60 degres Celsius
+duree iterative de chauffe : 6.92 secondes
+duree restante             : 47.77 minutes
+cout                       : 0.0207 euros
+Somme des Dich             : 401.00 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.46
+puissance                  : 1.03
+
+courant : 4.08
+t                          : 38.50
+temperature mesuree T1     : 34.25 degres Celsius
+temperature mesuree T2     : 70.37 degres Celsius
+temperature de consigne    : 72.78 degres Celsius
+duree iterative de chauffe : 7.93 secondes
+duree restante             : 47.27 minutes
+cout                       : 0.0210 euros
+Somme des Dich             : 407.92 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.08
+puissance                  : 1.07
+
+courant : 4.22
+t                          : 39.00
+temperature mesuree T1     : 34.25 degres Celsius
+temperature mesuree T2     : 70.31 degres Celsius
+temperature de consigne    : 72.96 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 46.77 minutes
+cout                       : 0.0214 euros
+Somme des Dich             : 415.85 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.22
+puissance                  : 0.97
+
+courant : 4.64
+t                          : 39.50
+temperature mesuree T1     : 34.25 degres Celsius
+temperature mesuree T2     : 70.19 degres Celsius
+temperature de consigne    : 73.13 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 46.27 minutes
+cout                       : 0.0218 euros
+Somme des Dich             : 424.10 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.64
+puissance                  : 1.01
+
+courant : 4.49
+t                          : 40.00
+temperature mesuree T1     : 34.31 degres Celsius
+temperature mesuree T2     : 70.25 degres Celsius
+temperature de consigne    : 73.30 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 45.77 minutes
+cout                       : 0.0222 euros
+Somme des Dich             : 432.35 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.49
+puissance                  : 1.11
+
+courant : 4.60
+t                          : 40.50
+temperature mesuree T1     : 34.31 degres Celsius
+temperature mesuree T2     : 70.69 degres Celsius
+temperature de consigne    : 73.47 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 45.27 minutes
+cout                       : 0.0226 euros
+Somme des Dich             : 440.60 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.60
+puissance                  : 1.07
+
+courant : 4.33
+t                          : 41.00
+temperature mesuree T1     : 34.44 degres Celsius
+temperature mesuree T2     : 71.31 degres Celsius
+temperature de consigne    : 73.63 degres Celsius
+duree iterative de chauffe : 7.64 secondes
+duree restante             : 44.77 minutes
+cout                       : 0.0231 euros
+Somme des Dich             : 448.85 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.33
+puissance                  : 1.10
+
+courant : 4.20
+t                          : 41.50
+temperature mesuree T1     : 34.50 degres Celsius
+temperature mesuree T2     : 72.69 degres Celsius
+temperature de consigne    : 73.78 degres Celsius
+duree iterative de chauffe : 3.62 secondes
+duree restante             : 44.27 minutes
+cout                       : 0.0234 euros
+Somme des Dich             : 456.49 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.20
+puissance                  : 1.04
+
+courant : 0.06
+t                          : 42.00
+temperature mesuree T1     : 34.63 degres Celsius
+temperature mesuree T2     : 74.50 degres Celsius
+temperature de consigne    : 73.94 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 43.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.06
+puissance                  : 1.00
+
+courant : 0.00
+t                          : 42.50
+temperature mesuree T1     : 34.75 degres Celsius
+temperature mesuree T2     : 76.19 degres Celsius
+temperature de consigne    : 74.09 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 43.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 43.00
+temperature mesuree T1     : 34.88 degres Celsius
+temperature mesuree T2     : 77.50 degres Celsius
+temperature de consigne    : 74.23 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 42.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 43.50
+temperature mesuree T1     : 34.94 degres Celsius
+temperature mesuree T2     : 78.37 degres Celsius
+temperature de consigne    : 74.38 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 42.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 44.00
+temperature mesuree T1     : 35.06 degres Celsius
+temperature mesuree T2     : 78.94 degres Celsius
+temperature de consigne    : 74.52 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 41.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 44.50
+temperature mesuree T1     : 35.19 degres Celsius
+temperature mesuree T2     : 79.31 degres Celsius
+temperature de consigne    : 74.65 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 41.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.06
+t                          : 45.00
+temperature mesuree T1     : 35.25 degres Celsius
+temperature mesuree T2     : 79.37 degres Celsius
+temperature de consigne    : 74.78 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 40.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.06
+puissance                  : 0.00
+
+courant : 0.07
+t                          : 45.50
+temperature mesuree T1     : 35.38 degres Celsius
+temperature mesuree T2     : 79.44 degres Celsius
+temperature de consigne    : 74.91 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 40.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.07
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 46.00
+temperature mesuree T1     : 35.56 degres Celsius
+temperature mesuree T2     : 79.31 degres Celsius
+temperature de consigne    : 75.04 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 39.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.02
+
+courant : 0.00
+t                          : 46.50
+temperature mesuree T1     : 35.75 degres Celsius
+temperature mesuree T2     : 79.12 degres Celsius
+temperature de consigne    : 75.16 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 39.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.03
+t                          : 47.00
+temperature mesuree T1     : 35.88 degres Celsius
+temperature mesuree T2     : 78.94 degres Celsius
+temperature de consigne    : 75.28 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 38.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.03
+puissance                  : 0.00
+
+courant : 0.03
+t                          : 47.50
+temperature mesuree T1     : 35.88 degres Celsius
+temperature mesuree T2     : 78.75 degres Celsius
+temperature de consigne    : 75.40 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 38.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.03
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 48.00
+temperature mesuree T1     : 35.81 degres Celsius
+temperature mesuree T2     : 78.50 degres Celsius
+temperature de consigne    : 75.51 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 37.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 48.50
+temperature mesuree T1     : 35.94 degres Celsius
+temperature mesuree T2     : 78.25 degres Celsius
+temperature de consigne    : 75.62 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 37.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 49.00
+temperature mesuree T1     : 36.00 degres Celsius
+temperature mesuree T2     : 77.94 degres Celsius
+temperature de consigne    : 75.73 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 36.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.06
+t                          : 49.50
+temperature mesuree T1     : 36.13 degres Celsius
+temperature mesuree T2     : 77.56 degres Celsius
+temperature de consigne    : 75.83 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 36.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.06
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 50.00
+temperature mesuree T1     : 36.25 degres Celsius
+temperature mesuree T2     : 77.19 degres Celsius
+temperature de consigne    : 75.94 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 35.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.01
+
+courant : 0.06
+t                          : 50.50
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 76.87 degres Celsius
+temperature de consigne    : 76.04 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 35.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.06
+puissance                  : 0.00
+
+courant : 0.87
+t                          : 51.00
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 76.56 degres Celsius
+temperature de consigne    : 76.13 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 34.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.87
+puissance                  : 0.01
+
+courant : 0.01
+t                          : 51.50
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 76.31 degres Celsius
+temperature de consigne    : 76.23 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 34.27 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.01
+puissance                  : 0.21
+
+courant : 4.59
+t                          : 52.00
+temperature mesuree T1     : 36.25 degres Celsius
+temperature mesuree T2     : 76.06 degres Celsius
+temperature de consigne    : 76.32 degres Celsius
+duree iterative de chauffe : 0.86 secondes
+duree restante             : 33.77 minutes
+cout                       : 0.0236 euros
+Somme des Dich             : 460.11 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.59
+puissance                  : 0.00
+
+courant : 4.47
+t                          : 52.50
+temperature mesuree T1     : 36.13 degres Celsius
+temperature mesuree T2     : 75.75 degres Celsius
+temperature de consigne    : 76.41 degres Celsius
+duree iterative de chauffe : 2.19 secondes
+duree restante             : 33.27 minutes
+cout                       : 0.0237 euros
+Somme des Dich             : 460.97 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.47
+puissance                  : 1.10
+
+courant : 4.36
+t                          : 53.00
+temperature mesuree T1     : 36.06 degres Celsius
+temperature mesuree T2     : 75.50 degres Celsius
+temperature de consigne    : 76.50 degres Celsius
+duree iterative de chauffe : 3.31 secondes
+duree restante             : 32.77 minutes
+cout                       : 0.0238 euros
+Somme des Dich             : 463.16 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.36
+puissance                  : 1.07
+
+courant : 4.53
+t                          : 53.50
+temperature mesuree T1     : 36.13 degres Celsius
+temperature mesuree T2     : 75.25 degres Celsius
+temperature de consigne    : 76.59 degres Celsius
+duree iterative de chauffe : 4.42 secondes
+duree restante             : 32.27 minutes
+cout                       : 0.0239 euros
+Somme des Dich             : 466.47 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.53
+puissance                  : 1.04
+
+courant : 4.43
+t                          : 54.00
+temperature mesuree T1     : 36.19 degres Celsius
+temperature mesuree T2     : 75.00 degres Celsius
+temperature de consigne    : 76.67 degres Celsius
+duree iterative de chauffe : 5.52 secondes
+duree restante             : 31.77 minutes
+cout                       : 0.0241 euros
+Somme des Dich             : 470.89 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.43
+puissance                  : 1.08
+
+courant : 4.25
+t                          : 54.50
+temperature mesuree T1     : 36.25 degres Celsius
+temperature mesuree T2     : 74.75 degres Celsius
+temperature de consigne    : 76.76 degres Celsius
+duree iterative de chauffe : 6.62 secondes
+duree restante             : 31.27 minutes
+cout                       : 0.0244 euros
+Somme des Dich             : 476.41 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.25
+puissance                  : 1.06
+
+courant : 4.43
+t                          : 55.00
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 74.56 degres Celsius
+temperature de consigne    : 76.84 degres Celsius
+duree iterative de chauffe : 7.50 secondes
+duree restante             : 30.77 minutes
+cout                       : 0.0247 euros
+Somme des Dich             : 483.03 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.43
+puissance                  : 1.02
+
+courant : 4.44
+t                          : 55.50
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 74.31 degres Celsius
+temperature de consigne    : 76.91 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 30.27 minutes
+cout                       : 0.0251 euros
+Somme des Dich             : 490.53 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.44
+puissance                  : 1.06
+
+courant : 4.42
+t                          : 56.00
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 74.12 degres Celsius
+temperature de consigne    : 76.99 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 29.77 minutes
+cout                       : 0.0255 euros
+Somme des Dich             : 498.78 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.42
+puissance                  : 1.06
+
+courant : 4.22
+t                          : 56.50
+temperature mesuree T1     : 36.44 degres Celsius
+temperature mesuree T2     : 74.00 degres Celsius
+temperature de consigne    : 77.06 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 29.27 minutes
+cout                       : 0.0259 euros
+Somme des Dich             : 507.03 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.22
+puissance                  : 1.06
+
+courant : 5.20
+t                          : 57.00
+temperature mesuree T1     : 36.44 degres Celsius
+temperature mesuree T2     : 74.25 degres Celsius
+temperature de consigne    : 77.14 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 28.77 minutes
+cout                       : 0.0263 euros
+Somme des Dich             : 515.28 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 5.20
+puissance                  : 1.01
+
+courant : 4.47
+t                          : 57.50
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 75.00 degres Celsius
+temperature de consigne    : 77.21 degres Celsius
+duree iterative de chauffe : 7.28 secondes
+duree restante             : 28.27 minutes
+cout                       : 0.0268 euros
+Somme des Dich             : 523.53 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.47
+puissance                  : 1.24
+
+courant : 4.69
+t                          : 58.00
+temperature mesuree T1     : 36.56 degres Celsius
+temperature mesuree T2     : 76.37 degres Celsius
+temperature de consigne    : 77.28 degres Celsius
+duree iterative de chauffe : 2.97 secondes
+duree restante             : 27.77 minutes
+cout                       : 0.0272 euros
+Somme des Dich             : 530.82 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.69
+puissance                  : 1.07
+
+courant : 0.05
+t                          : 58.50
+temperature mesuree T1     : 36.44 degres Celsius
+temperature mesuree T2     : 77.87 degres Celsius
+temperature de consigne    : 77.34 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 27.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.05
+puissance                  : 1.12
+
+courant : 0.01
+t                          : 59.00
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 79.19 degres Celsius
+temperature de consigne    : 77.41 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 26.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.01
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 59.50
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 80.31 degres Celsius
+temperature de consigne    : 77.47 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 26.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 60.00
+temperature mesuree T1     : 36.63 degres Celsius
+temperature mesuree T2     : 80.94 degres Celsius
+temperature de consigne    : 77.54 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 25.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 60.50
+temperature mesuree T1     : 36.75 degres Celsius
+temperature mesuree T2     : 81.25 degres Celsius
+temperature de consigne    : 77.60 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 25.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 61.00
+temperature mesuree T1     : 36.75 degres Celsius
+temperature mesuree T2     : 81.25 degres Celsius
+temperature de consigne    : 77.66 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 24.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.04
+t                          : 61.50
+temperature mesuree T1     : 36.69 degres Celsius
+temperature mesuree T2     : 81.12 degres Celsius
+temperature de consigne    : 77.71 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 24.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.04
+puissance                  : 0.00
+
+courant : 0.06
+t                          : 62.00
+temperature mesuree T1     : 36.75 degres Celsius
+temperature mesuree T2     : 80.94 degres Celsius
+temperature de consigne    : 77.77 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 23.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.06
+puissance                  : 0.01
+
+courant : 0.05
+t                          : 62.50
+temperature mesuree T1     : 36.94 degres Celsius
+temperature mesuree T2     : 80.62 degres Celsius
+temperature de consigne    : 77.83 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 23.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.05
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 63.00
+temperature mesuree T1     : 36.81 degres Celsius
+temperature mesuree T2     : 80.31 degres Celsius
+temperature de consigne    : 77.88 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 22.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.01
+
+courant : 0.03
+t                          : 63.50
+temperature mesuree T1     : 37.06 degres Celsius
+temperature mesuree T2     : 80.06 degres Celsius
+temperature de consigne    : 77.93 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 22.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.03
+puissance                  : 0.00
+
+courant : 0.05
+t                          : 64.00
+temperature mesuree T1     : 37.19 degres Celsius
+temperature mesuree T2     : 79.81 degres Celsius
+temperature de consigne    : 77.98 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 21.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.05
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 64.50
+temperature mesuree T1     : 37.25 degres Celsius
+temperature mesuree T2     : 79.56 degres Celsius
+temperature de consigne    : 78.03 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 21.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.01
+
+courant : 0.01
+t                          : 65.00
+temperature mesuree T1     : 37.25 degres Celsius
+temperature mesuree T2     : 79.37 degres Celsius
+temperature de consigne    : 78.08 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 20.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.01
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 65.50
+temperature mesuree T1     : 36.94 degres Celsius
+temperature mesuree T2     : 79.06 degres Celsius
+temperature de consigne    : 78.13 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 20.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 66.00
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 78.75 degres Celsius
+temperature de consigne    : 78.17 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 19.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 66.50
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 78.56 degres Celsius
+temperature de consigne    : 78.22 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 19.27 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 5.07
+t                          : 67.00
+temperature mesuree T1     : 36.69 degres Celsius
+temperature mesuree T2     : 78.19 degres Celsius
+temperature de consigne    : 78.26 degres Celsius
+duree iterative de chauffe : 0.25 secondes
+duree restante             : 18.77 minutes
+cout                       : 0.0273 euros
+Somme des Dich             : 533.79 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 5.07
+puissance                  : 0.00
+
+courant : 4.69
+t                          : 67.50
+temperature mesuree T1     : 36.75 degres Celsius
+temperature mesuree T2     : 77.94 degres Celsius
+temperature de consigne    : 78.31 degres Celsius
+duree iterative de chauffe : 1.22 secondes
+duree restante             : 18.27 minutes
+cout                       : 0.0274 euros
+Somme des Dich             : 534.04 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.69
+puissance                  : 1.21
+
+courant : 4.35
+t                          : 68.00
+temperature mesuree T1     : 36.56 degres Celsius
+temperature mesuree T2     : 77.62 degres Celsius
+temperature de consigne    : 78.35 degres Celsius
+duree iterative de chauffe : 2.39 secondes
+duree restante             : 17.77 minutes
+cout                       : 0.0274 euros
+Somme des Dich             : 535.26 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.35
+puissance                  : 1.12
+
+courant : 4.49
+t                          : 68.50
+temperature mesuree T1     : 36.69 degres Celsius
+temperature mesuree T2     : 77.37 degres Celsius
+temperature de consigne    : 78.39 degres Celsius
+duree iterative de chauffe : 3.35 secondes
+duree restante             : 17.27 minutes
+cout                       : 0.0275 euros
+Somme des Dich             : 537.65 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.49
+puissance                  : 1.04
+
+courant : 4.45
+t                          : 69.00
+temperature mesuree T1     : 36.75 degres Celsius
+temperature mesuree T2     : 77.12 degres Celsius
+temperature de consigne    : 78.43 degres Celsius
+duree iterative de chauffe : 4.30 secondes
+duree restante             : 16.77 minutes
+cout                       : 0.0277 euros
+Somme des Dich             : 540.99 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.45
+puissance                  : 1.07
+
+courant : 4.28
+t                          : 69.50
+temperature mesuree T1     : 36.63 degres Celsius
+temperature mesuree T2     : 76.81 degres Celsius
+temperature de consigne    : 78.47 degres Celsius
+duree iterative de chauffe : 5.46 secondes
+duree restante             : 16.27 minutes
+cout                       : 0.0279 euros
+Somme des Dich             : 545.29 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.28
+puissance                  : 1.06
+
+courant : 4.30
+t                          : 70.00
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 76.56 degres Celsius
+temperature de consigne    : 78.51 degres Celsius
+duree iterative de chauffe : 6.41 secondes
+duree restante             : 15.77 minutes
+cout                       : 0.0282 euros
+Somme des Dich             : 550.75 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.30
+puissance                  : 1.02
+
+courant : 4.42
+t                          : 70.50
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 76.31 degres Celsius
+temperature de consigne    : 78.54 degres Celsius
+duree iterative de chauffe : 7.36 secondes
+duree restante             : 15.27 minutes
+cout                       : 0.0285 euros
+Somme des Dich             : 557.16 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.42
+puissance                  : 1.03
+
+courant : 4.32
+t                          : 71.00
+temperature mesuree T1     : 36.31 degres Celsius
+temperature mesuree T2     : 76.06 degres Celsius
+temperature de consigne    : 78.58 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 14.77 minutes
+cout                       : 0.0289 euros
+Somme des Dich             : 564.52 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.32
+puissance                  : 1.06
+
+courant : 4.20
+t                          : 71.50
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 75.87 degres Celsius
+temperature de consigne    : 78.61 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 14.27 minutes
+cout                       : 0.0293 euros
+Somme des Dich             : 572.77 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.20
+puissance                  : 1.03
+
+courant : 4.52
+t                          : 72.00
+temperature mesuree T1     : 36.44 degres Celsius
+temperature mesuree T2     : 75.94 degres Celsius
+temperature de consigne    : 78.65 degres Celsius
+duree iterative de chauffe : 8.25 secondes
+duree restante             : 13.77 minutes
+cout                       : 0.0297 euros
+Somme des Dich             : 581.02 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.52
+puissance                  : 1.00
+
+courant : 4.55
+t                          : 72.50
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 76.37 degres Celsius
+temperature de consigne    : 78.68 degres Celsius
+duree iterative de chauffe : 7.61 secondes
+duree restante             : 13.27 minutes
+cout                       : 0.0301 euros
+Somme des Dich             : 589.27 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.55
+puissance                  : 1.08
+
+courant : 4.56
+t                          : 73.00
+temperature mesuree T1     : 36.63 degres Celsius
+temperature mesuree T2     : 77.56 degres Celsius
+temperature de consigne    : 78.71 degres Celsius
+duree iterative de chauffe : 3.80 secondes
+duree restante             : 12.77 minutes
+cout                       : 0.0305 euros
+Somme des Dich             : 596.88 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.56
+puissance                  : 1.09
+
+courant : 0.00
+t                          : 73.50
+temperature mesuree T1     : 36.56 degres Celsius
+temperature mesuree T2     : 78.94 degres Celsius
+temperature de consigne    : 78.75 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 12.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 1.09
+
+courant : 0.00
+t                          : 74.00
+temperature mesuree T1     : 36.63 degres Celsius
+temperature mesuree T2     : 80.19 degres Celsius
+temperature de consigne    : 78.78 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 11.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 74.50
+temperature mesuree T1     : 36.81 degres Celsius
+temperature mesuree T2     : 81.19 degres Celsius
+temperature de consigne    : 78.81 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 11.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 75.00
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 81.87 degres Celsius
+temperature de consigne    : 78.84 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 10.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.09
+t                          : 75.50
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 82.25 degres Celsius
+temperature de consigne    : 78.86 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 10.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.09
+puissance                  : 0.00
+
+courant : 0.41
+t                          : 76.00
+temperature mesuree T1     : 37.00 degres Celsius
+temperature mesuree T2     : 82.44 degres Celsius
+temperature de consigne    : 78.89 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 9.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.41
+puissance                  : 0.02
+
+courant : 0.00
+t                          : 76.50
+temperature mesuree T1     : 37.06 degres Celsius
+temperature mesuree T2     : 82.31 degres Celsius
+temperature de consigne    : 78.92 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 9.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.10
+
+courant : 0.00
+t                          : 77.00
+temperature mesuree T1     : 37.00 degres Celsius
+temperature mesuree T2     : 82.19 degres Celsius
+temperature de consigne    : 78.95 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 8.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 77.50
+temperature mesuree T1     : 37.13 degres Celsius
+temperature mesuree T2     : 81.94 degres Celsius
+temperature de consigne    : 78.97 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 8.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.00
+
+courant : 0.20
+t                          : 78.00
+temperature mesuree T1     : 37.19 degres Celsius
+temperature mesuree T2     : 81.62 degres Celsius
+temperature de consigne    : 79.00 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 7.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.20
+puissance                  : 0.00
+
+courant : 0.11
+t                          : 78.50
+temperature mesuree T1     : 37.06 degres Celsius
+temperature mesuree T2     : 81.25 degres Celsius
+temperature de consigne    : 79.02 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 7.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.11
+puissance                  : 0.05
+
+courant : 0.04
+t                          : 79.00
+temperature mesuree T1     : 37.06 degres Celsius
+temperature mesuree T2     : 80.94 degres Celsius
+temperature de consigne    : 79.05 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 6.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.04
+puissance                  : 0.03
+
+courant : 0.03
+t                          : 79.50
+temperature mesuree T1     : 37.13 degres Celsius
+temperature mesuree T2     : 80.69 degres Celsius
+temperature de consigne    : 79.07 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 6.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.03
+puissance                  : 0.01
+
+courant : 0.00
+t                          : 80.00
+temperature mesuree T1     : 37.19 degres Celsius
+temperature mesuree T2     : 80.44 degres Celsius
+temperature de consigne    : 79.09 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 5.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.01
+
+courant : 0.08
+t                          : 80.50
+temperature mesuree T1     : 37.25 degres Celsius
+temperature mesuree T2     : 80.12 degres Celsius
+temperature de consigne    : 79.12 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 5.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.08
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 81.00
+temperature mesuree T1     : 37.25 degres Celsius
+temperature mesuree T2     : 79.87 degres Celsius
+temperature de consigne    : 79.14 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 4.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.02
+
+courant : 0.24
+t                          : 81.50
+temperature mesuree T1     : 37.19 degres Celsius
+temperature mesuree T2     : 79.62 degres Celsius
+temperature de consigne    : 79.16 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 4.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.24
+puissance                  : 0.00
+
+courant : 0.00
+t                          : 82.00
+temperature mesuree T1     : 37.19 degres Celsius
+temperature mesuree T2     : 79.31 degres Celsius
+temperature de consigne    : 79.18 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : 3.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 0.00
+puissance                  : 0.06
+
+courant : 4.79
+t                          : 82.50
+temperature mesuree T1     : 37.13 degres Celsius
+temperature mesuree T2     : 79.06 degres Celsius
+temperature de consigne    : 79.20 degres Celsius
+duree iterative de chauffe : 0.45 secondes
+duree restante             : 3.27 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 600.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.79
+puissance                  : 0.00
+
+courant : 4.74
+t                          : 83.00
+temperature mesuree T1     : 37.06 degres Celsius
+temperature mesuree T2     : 78.75 degres Celsius
+temperature de consigne    : 79.22 degres Celsius
+duree iterative de chauffe : 1.55 secondes
+duree restante             : 2.77 minutes
+cout                       : 0.0307 euros
+Somme des Dich             : 601.13 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.74
+puissance                  : 1.15
+
+courant : 4.66
+t                          : 83.50
+temperature mesuree T1     : 37.13 degres Celsius
+temperature mesuree T2     : 78.44 degres Celsius
+temperature de consigne    : 79.24 degres Celsius
+duree iterative de chauffe : 2.64 secondes
+duree restante             : 2.27 minutes
+cout                       : 0.0308 euros
+Somme des Dich             : 602.68 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.66
+puissance                  : 1.13
+
+courant : 4.54
+t                          : 84.00
+temperature mesuree T1     : 37.13 degres Celsius
+temperature mesuree T2     : 78.19 degres Celsius
+temperature de consigne    : 79.26 degres Celsius
+duree iterative de chauffe : 3.53 secondes
+duree restante             : 1.77 minutes
+cout                       : 0.0309 euros
+Somme des Dich             : 605.33 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.54
+puissance                  : 1.11
+
+courant : 4.35
+t                          : 84.50
+temperature mesuree T1     : 37.00 degres Celsius
+temperature mesuree T2     : 77.87 degres Celsius
+temperature de consigne    : 79.28 degres Celsius
+duree iterative de chauffe : 4.62 secondes
+duree restante             : 1.27 minutes
+cout                       : 0.0311 euros
+Somme des Dich             : 608.86 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.35
+puissance                  : 1.08
+
+courant : 4.33
+t                          : 85.00
+temperature mesuree T1     : 37.00 degres Celsius
+temperature mesuree T2     : 77.56 degres Celsius
+temperature de consigne    : 79.29 degres Celsius
+duree iterative de chauffe : 5.71 secondes
+duree restante             : 0.77 minutes
+cout                       : 0.0313 euros
+Somme des Dich             : 613.48 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.33
+puissance                  : 1.04
+
+courant : 4.49
+t                          : 85.50
+temperature mesuree T1     : 37.00 degres Celsius
+temperature mesuree T2     : 77.25 degres Celsius
+temperature de consigne    : 79.31 degres Celsius
+duree iterative de chauffe : 6.80 secondes
+duree restante             : 0.27 minutes
+cout                       : 0.0316 euros
+Somme des Dich             : 619.20 secondes
+FC1                        : 0
+Ach                        : 1
+courant                    : 4.49
+puissance                  : 1.03
+
+courant : 4.31
+t                          : 86.00
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 76.94 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 7.89 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 1
+courant                    : 4.31
+puissance                  : 1.07
+
+t                          : 86.50
+temperature mesuree T1     : 36.94 degres Celsius
+temperature mesuree T2     : 76.69 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 87.00
+temperature mesuree T1     : 37.00 degres Celsius
+temperature mesuree T2     : 76.50 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 87.50
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 76.44 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 88.00
+temperature mesuree T1     : 36.94 degres Celsius
+temperature mesuree T2     : 76.44 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 88.50
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 76.44 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 89.00
+temperature mesuree T1     : 36.88 degres Celsius
+temperature mesuree T2     : 76.37 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 89.50
+temperature mesuree T1     : 36.81 degres Celsius
+temperature mesuree T2     : 76.37 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 90.00
+temperature mesuree T1     : 36.75 degres Celsius
+temperature mesuree T2     : 76.37 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 90.50
+temperature mesuree T1     : 36.69 degres Celsius
+temperature mesuree T2     : 76.25 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 91.00
+temperature mesuree T1     : 36.69 degres Celsius
+temperature mesuree T2     : 76.19 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 91.50
+temperature mesuree T1     : 36.56 degres Celsius
+temperature mesuree T2     : 76.06 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 92.00
+temperature mesuree T1     : 36.63 degres Celsius
+temperature mesuree T2     : 75.87 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 92.50
+temperature mesuree T1     : 36.63 degres Celsius
+temperature mesuree T2     : 75.75 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 93.00
+temperature mesuree T1     : 36.56 degres Celsius
+temperature mesuree T2     : 75.50 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 93.50
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 75.31 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 94.00
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 75.12 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 94.50
+temperature mesuree T1     : 36.50 degres Celsius
+temperature mesuree T2     : 74.94 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 95.00
+temperature mesuree T1     : 36.44 degres Celsius
+temperature mesuree T2     : 74.75 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 95.50
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 74.56 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 96.00
+temperature mesuree T1     : 36.44 degres Celsius
+temperature mesuree T2     : 74.44 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
+t                          : 96.50
+temperature mesuree T1     : 36.38 degres Celsius
+temperature mesuree T2     : 74.19 degres Celsius
+temperature de consigne    : 79.33 degres Celsius
+duree iterative de chauffe : 0.00 secondes
+duree restante             : -0.23 minutes
+cout                       : 0.0319 euros
+Somme des Dich             : 626.00 secondes
+FC1                        : 1
+Ach                        : 0
+courant                    : 0.00
+puissance                  : 1.07
+
