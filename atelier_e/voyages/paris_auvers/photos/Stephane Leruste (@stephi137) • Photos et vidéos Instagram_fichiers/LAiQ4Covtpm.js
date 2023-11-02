@@ -1,7 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("LSClearAllPublicChatEventStartAndEndTimes",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.resolve(c)}b=a;f["default"]=b}),66);
-__d("LSClearThreadLimits",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.seq([function(a){return b.fe(b.db.table(287).fetch(),function(a){return a["delete"]()})},function(a){return b.resolve(c)}])}b=a;f["default"]=b}),66);
-__d("LSDeleteAllPublicChatFbEventData",["LSClearAllPublicChatEventStartAndEndTimes"],(function(a,b,c,d,e,f){function a(){var a=arguments,c=a[a.length-1];c.n;var d=[];return c.seq([function(a){return c.sp(b("LSClearAllPublicChatEventStartAndEndTimes"))},function(a){return c.resolve(d)}])}c=a;f["default"]=c}),66);
-__d("LSDeleteThenInsertMessagingPrivacySettings",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.seq([function(c){return b.db.table(288).put({userId:a[0],readReceiptsDisabled:a[1]})},function(a){return b.resolve(c)}])}b=a;f["default"]=b}),66);
-__d("LSEpdCookieSettingsUpsert",["LSGetViewerFBID"],(function(a,b,c,d,e,f){function a(){var a=arguments,c=a[a.length-1];c.n;var d=[],e=[];return c.seq([function(e){return c.seq([function(a){return c.sp(b("LSGetViewerFBID")).then(function(a){return a=a,d[0]=a[0],a})},function(b){return c.db.table(163).put({fbTrackersOnOtherCompanies:a[0],otherCompanyTrackersOnFoa:a[1]})}])},function(a){return c.resolve(e)}])}c=a;f["default"]=c}),66);
