@@ -1,0 +1,219 @@
+/* <Style> */
+.ActionExplore-Links-A{
+	width: 70%;
+	background: url('/Art.nsf/artwork-links-background-1024-A.png') no-repeat scroll 0% 0% / 100% 100% transparent;	
+	font-size: 85%;
+	max-width: 1043px;
+}
+
+.ActionExplore-Content { 
+ margin:auto;
+ width:100%;
+ text-align:center;
+ margin-top: -20px;
+}
+ 
+   .ActionExplore-Links {
+    margin:auto;
+    width: 1365px;
+    height: 333px;
+    background: url(/Art.nsf/artwork-links-actionexplore.png) no-repeat;
+    text-align:left;
+    }
+  
+.ActionExplore-Links-Action {
+    color: #fff;
+    padding: 22px 50px 27px 50px;
+    width: 40%;
+    vertical-align: top;
+    
+}
+.ActionExplore-Links h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+    font-weight: normal;
+}
+.ActionExplore-Links-Action ul {
+	padding-left: 13px;
+ }
+.ActionExplore-Links-Action li {
+    list-style: none;
+    padding-bottom:4px;
+    padding-top:4px;
+    font-weight: 700;
+	padding-left: 31px;
+	text-indent: -10px;
+}
+.ActionExplore-Links-Action li div{
+	border-top: 1px solid #774A21;
+	padding-top: 4px;
+}
+
+.ActionExplore-Links-Action li A , .ActionExplore-Links-Action li A:visited,.ActionExplore-Links-Action li A:active, .ActionExplore-Links-Action li A:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:10px;
+    color: #fff;
+}
+.ActionExplore-Links-Action li A:visited, .ActionExplore-Links-Action li A:hover ,  .ActionExplore-Links-Action li A:active {
+    color: #ccc;
+}
+.ActionExplore-Links-Action li.photosize {
+	 list-style-image: none;
+	background:url(/Art.nsf/artwork-links-increaseli.png)no-repeat left center;
+ }
+.ActionExplore-Links-Action li.glass {
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-glassli.png) no-repeat left center;
+}
+.ActionExplore-Links-Action li.order { 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-BuyCaddie.png) no-repeat left center; /* old icon artwork-links-orderli.png*/
+	background-size: 30px;
+	background-position: -5px 3px;
+}
+.ActionExplore-Links-Action li.ecard { 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-ecadli.png) no-repeat left center;
+}
+.ActionExplore-Links-Action li.art { 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-artli.png) no-repeat left center;
+}
+.ActionExplore-Links-Action li.linksbuy { 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-BuyCaddie.png) no-repeat left center;   /*artwork-links-buyli.png  old image*/
+	background-size: 30px;
+	background-position: -5px 3px;
+}
+.ActionExplore-Links-Action li.frame { 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-crossli.png) no-repeat left center;
+ }
+.ActionExplore-Links-Action li.website { 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-websiteli.png) no-repeat left center;
+}
+.ActionExplore-Links-Action li.website { 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-websiteli.png) no-repeat left center;
+}
+.ActionExplore-Links-Action li.favorite{ 
+	 list-style-image: none;
+	background: url(/Art.nsf/artwork-links-Favorite.png) no-repeat left center;
+}
+.ActionExplore-Links-Explore-4Lines,
+ .ActionExplore-Links-Explore-6Lines,
+ .ActionExplore-Links-Explore-8Lines {
+    color: #e6b992;
+    padding: 25px 60px 14px 25px;
+    width: 50%;
+   vertical-align: top;
+}
+.ActionExplore-Links-Explore-4Lines ul,
+ .ActionExplore-Links-Explore-6Lines ul,
+ .ActionExplore-Links-Explore-8Lines ul{
+	padding-left: 25px;
+	padding-bottom: 1vW;
+}
+.ActionExplore-Links-Explore-4Lines li,
+ .ActionExplore-Links-Explore-6Lines li,
+ .ActionExplore-Links-Explore-8Lines li {
+    list-style: url(/Art.nsf/artwork-links-exploreli.png);
+    border-top: 1px solid #774a21;
+    font-weight: 700;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+.ActionExplore-Links-Explore-4Lines li A,
+ .ActionExplore-Links-Explore-6Lines li A,
+ .ActionExplore-Links-Explore-8Lines li A , 
+.ActionExplore-Links-Explore-4Lines li A:visited,
+ .ActionExplore-Links-Explore-6Lines li A:visited,
+ .ActionExplore-Links-Explore-8Lines li A:visited,
+.ActionExplore-Links-Explore-4Lines li A:active,
+ .ActionExplore-Links-Explore-6Lines li A:active,
+ .ActionExplore-Links-Explore-8Lines li A:active, 
+.ActionExplore-Links-Explore-4Lines li A:hover,
+ .ActionExplore-Links-Explore-6Lines li A:hover,
+ .ActionExplore-Links-Explore-8Lines li A:hover {
+   	 font-family: Arial, Helvetica, sans-serif;
+    	 color: #e6b992;
+}
+.ActionExplore-Links-Explore-4Lines li A:visited,
+ .ActionExplore-Links-Explore-6Lines li A:visited,
+ .ActionExplore-Links-Explore-8Lines li A:visited ,
+.ActionExplore-Links-Explore-4Lines li A:hover,
+ .ActionExplore-Links-Explore-6Lines li A:hover,
+ .ActionExplore-Links-Explore-8Lines li A:hover {
+    color: #f6c9A2;
+}
+.ActionExplore-Links-Explore-4Lines img,
+ .ActionExplore-Links-Explore-6Lines img,
+ .ActionExplore-Links-Explore-8Lines img {
+    vertical-align: middle;
+    padding-bottom: 2px;
+}
+.ActionExplore-Links-Explore-4Lines li{
+	font-size: 105%;
+}
+.ActionExplore-Links-Explore-5Lines li{
+	font-size: 100%;
+}
+.ActionExplore-Links-Explore-6Lines li{
+	font-size: 103%;
+}
+.ActionExplore-Links-Explore-8Lines li{
+	font-size: 94%;
+}
+@media only screen and (max-width : 1980px) 
+{
+	.ActionExplore-Links-A {
+		width: 70%;
+		font-size: 106%;
+	}
+}
+@media only screen and (max-width : 1540px) 
+{
+	.ActionExplore-Links-A {
+		width: 72%;
+		font-size: 97%;
+	}
+	
+}
+@media only screen and (max-width : 1400px) 
+{
+	.ActionExplore-Links-A {
+		width: 91%;
+		font-size: 92%;
+	}
+}
+@media only screen and (max-width : 1225px) 
+{	
+	.ActionExplore-Links-Action{
+		width: 37.8% !important;
+		padding: 15px 60px 12px 30px;
+		overflow: hidden;
+	}
+	
+.ActionExplore-Links-Explore-4Lines,
+ .ActionExplore-Links-Explore-6Lines,
+ .ActionExplore-Links-Explore-8Lines{
+		width: 43% !important;
+		padding: 18px 45px 14px 0px;
+	}
+	.ActionExplore-Links-A{
+		width: 100%;
+		background: url('/art.nsf/artwork-links-background-1024-A.png') no-repeat scroll 0% 0% / 100% 100% transparent;	
+		font-size: 85%;
+	}
+	
+}
+/* iPad size style*/
+@media only screen and (max-width : 995px) 
+{
+	.ActionExplore-Links-A {
+		width: 100%;
+		font-size: 80%;
+	}
+	
+}

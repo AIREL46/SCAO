@@ -1,0 +1,386 @@
+/* <Style>  from artwork-L*/
+.Artwork-Wrapper { 
+	width: 100%;
+	margin: auto;
+	}
+.Artwork-Header {
+	background: url(/Art.nsf/artwork-header.jpg);
+	background-position: center;
+	padding-bottom:40px;
+	width:100%;
+	text-align:center;
+	}
+.Artwork-Header .topshadow {
+	background: url(/Art.nsf/artwork-header-shadow.png) repeat-x;
+	height: 49px;
+	width: 100%;
+	}
+.Artwork-Lamp {
+	display:block;
+		width: 100%;
+	height: 222px;
+	background: url(/Art.nsf/artwork-lamp.png) center center no-repeat;
+	margin: none;
+	padding:none;
+	margin-top:-50px;
+	margin-bottom: -100px;
+	}
+.Artwork {	
+    margin:none;
+    width: none;
+    //margin-top: -50px;
+    text-align: center;
+    padding-top:35px;
+    display: inline-block;
+    max-width: 94%;
+}
+.Artwork .Framed { 
+border-width: 133px 113px 133px 113px;
+-moz-border-image: url(/Art.nsf/artwork-frame.jpg) 133 113 133 113 repeat;
+-webkit-border-image: url(/Art.nsf/artwork-frame.jpg) 133 113 133 113 repeat;
+-o-border-image: url(/Art.nsf/artwork-frame.jpg) 133 113 133 113 repeat;
+border-image: url(/Art.nsf/artwork-frame.jpg) 133 113 133 113 repeat;
+}
+.Artwork .Shadow {
+	border:15px solid #FFF;
+	border-image:none; 
+	-moz-border-image:none;
+-webkit-border-image:none;
+-o-border-image:none;
+-moz-box-shadow: 0px 0px 15px #000;
+-webkit-box-shadow: 0px 0px 15px #000;
+box-shadow: 0px 0px 15px #000;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=135, Strength=10, enabled=true);
+} 
+
+.Artwork-Title-Image {
+    font-family: "Times New Roman", Times, serif;
+    width:900px;
+    font-size: 52px;
+    font-weight:normal;
+    color: #ffeaa4;
+    text-shadow: 0px 2px 2px  #000;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=135, Strength=3, enabled=true,ShadowOpacity=true);
+    text-align: center;
+    margin:0px;
+    padding: 20px 0px 0px 0px;
+}
+
+.Artwork-Title-Description {
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #e4ac4e;
+    font-weight:normal;
+    text-shadow: 0px 1px 1px  #000;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=135, Strength=1, enabled=true,ShadowOpacity=true);
+    border-top: solid 1px #c0924d;
+    text-align: justify;
+}
+
+.Artwork-Title-Description A , .Artwork-Title-Description A:visited , .Artwork-Title-Description A:active, .Artwork-Title-Description A:hover {
+    color: #e4ac4e;
+}
+.Artwork-Title-Description-Text
+	{
+	padding: 20px;
+	}
+.Artwork-Title-Description-End {
+    width: 100%;
+    margin: auto;
+	background:url(/Art.nsf/artwork-description-end.png) no-repeat center;
+	height:36px;
+}
+/* description artworks */
+.Artwork-Title-Description-Text H2 { font-size:1.3em;margin-block-end: 0px; color:#ffc769; }
+.Artwork-Title-Description-Text A , .Artwork-Title-Description-Text A:visited , .Artwork-Title-Description-Text A:active, .Artwork-Title-Description-Text A:hover {
+    text-decoration: underline;
+    text-decoration-color:#cb953b;
+}
+/*Album*/
+.Artwork-Album-Table {
+width:auto;
+height:auto;
+Border:none;
+}
+.Artwork-Album-Left {
+	padding-left:40px;
+	vertical-align:middle;
+}
+
+.Artwork-Album-Right {
+	margin-top:20vh;
+	padding-left:5VW;
+	padding-right:5VW;
+	vertical-align:middle;
+}
+	
+.Artwork-Title-Image-Album {
+    Width:100%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 52px;
+    color: #ffeaa4;
+    text-shadow: 0px 2px 2px  #000;
+   filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=135, Strength=3, enabled=true,ShadowOpacity=true);
+    text-align: center;
+    margin:0px;
+    padding: 20px 20px 0px 0px;
+}
+
+.Artwork-Title-Description-Album {
+    zWidth:100%;
+    color: #e4ac4e;
+    margin: auto;
+    font-weight:normal;
+    text-shadow: 0px 1px 1px  #000;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=135, Strength=1, enabled=true,ShadowOpacity=true);
+    border-top: solid 1px #c0924d;
+    text-align: justify;
+    padding: 5px 20px 0px 0px;
+}
+.Artwork-Title-Description-Album A , .Artwork-Title-Description-Album A:visited ,.Artwork-Title-Description-Album A:active, .Artwork-Title-Description-Album A:hover {
+    color: #e4ac4e;
+}
+/*end*/
+.Artwork-Square {
+	vertical-align: middle;
+	width:16px;
+	height:16px;
+	border: 1px solid #FFF;
+	display: inline-block;
+	text-indent:0;
+	line-height:27px;
+	font-size:0;
+	margin-bottom:2px;
+}
+.ArtworkImageBlock {
+display: inline-block;
+}
+/* ------------ Artwork Frame ---------- */
+.Artwork-Frame-wrapper {
+}
+.Artwork-Frame-image-frame {
+}
+.Artwork-Frame-image-frame span {
+	display:inline-block; 
+}
+.Artwork-Frame-image-frame .Artwork-Frame-box{
+	background:#fff url(/Art.nsf/Artwork-Frame-bg-frame-l.jpg) repeat-y;
+}
+.Artwork-Frame-image-frame .Artwork-Frame-r{background:url(/Art.nsf/Artwork-Frame-bg-frame-r.jpg) repeat-y 100% 0;}
+.Artwork-Frame-image-frame .Artwork-Frame-lt{background:url(/Art.nsf/Artwork-Frame-bg-frame-lt.jpg) no-repeat;}
+.Artwork-Frame-image-frame .Artwork-Frame-rt{background:url(/Art.nsf//Artwork-Frame-bg-frame-rt.jpg) no-repeat 100% 0;}
+.Artwork-Frame-image-frame .Artwork-Frame-lb{background:url(/Art.nsf//Artwork-Frame-bg-frame-bl.jpg) no-repeat 0 100%;}
+.Artwork-Frame-image-frame .Artwork-Frame-rb{
+	background:url(/Art.nsf//Artwork-Frame-bg-frame-br.jpg) no-repeat 100% 100%;
+	padding-top: 113px;
+	padding-right: 92px;
+	padding-bottom: 99px;
+	padding-left: 90px;
+}
+
+@media only screen and (max-width: 1400px){
+	
+	.Artwork-Lamp{
+		background-size: 490px;
+	}
+	.Artwork-Title-Image{
+		font-size: 48px;
+	}
+	
+	 .ActionExplore-Links-A {
+		width: 100%;
+		font-size: 98%; 
+	}
+	
+	.ActionExplore-Links-Explore-4Lines,
+	.ActionExplore-Links-Explore-6Lines, 
+	.ActionExplore-Links-Explore-8Lines{
+		padding-top: 30px; 
+	}
+	
+	.ActionExplore-Links-Action{
+		padding-top: 30px;
+		padding-left: 39px; 
+	}
+}
+@media only screen and (max-width: 1225px){
+	
+	 .ActionExplore-Links-A {
+		width: 100%;
+		font-size: 99%; 
+	}
+	
+	.ActionExplore-Links-Explore-4Lines,
+	.ActionExplore-Links-Explore-6Lines, 
+	.ActionExplore-Links-Explore-8Lines{
+		padding-top: 30px; 
+	}
+	
+	.ActionExplore-Links-Action{
+		padding-top: 30px;
+		padding-left: 39px; 
+	}
+}
+@media only screen and (max-width: 1025px){
+	
+	.Artwork-Lamp{
+		background-size: 435px;
+		width: 425px;
+	}
+	.Artwork-Title-Image,
+	.Artwork-Title-Image-Album{
+		font-size: 45px;
+	}
+}
+@media only screen and (max-width: 995px){
+	.ActionExplore-Links-A {
+		width: 100%;
+		font-size: 90%; 
+	}
+	.Artwork-Title-Image,
+	.Artwork-Title-Image-Album{
+		width: auto;
+	}
+}
+  /******************** Arwork zooming by click ****************/
+  
+  .glass_magniflier {
+  width: 10.5vW;
+  height: 10.5vW;
+  position: absolute;
+  border-radius: 50%;
+  cursor: crosshair;
+  
+  /* Multiple box shadows to achieve the glass effect */
+  box-shadow:
+    0 0 0 0.4166vW rgba(255, 255, 255, 0.85),
+    0 0 0.4166vW 0.4166vW rgba(0, 0, 0, 0.25), 
+    inset 0 0 2.3809vW 0.1190vW rgba(0, 0, 0, 0.25);
+  
+  /* hide the glass by default */
+  display: none;
+}
+.magniflier {
+
+cursor: -webkit-zoom-in;
+
+}
+.zoomImg {
+
+max-width: 100%;
+max-height: 90vH;
+
+}
+  
+/******************** Arwork zooming by click END ****************/  
+.WA-Buy-FairUse-Table {
+width:600px;
+}
+.WA-Buy-FairUse-Title {
+Color:#5b2d15;
+font-size:125%;
+text-align:center;
+}
+.WA-Buy-FairUse-Text {
+Color:#855238;
+font-size:100%;
+text-align:justify;
+}
+/* DBRIS block ============================== */
+.DBRISLinks-block {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  //background: #ececec;
+  margin: 2vW;
+}
+.DBRISLinks-Title{
+	padding-top:2VW;
+	font-size: 2vW;
+	font-weight: bold;
+	font-family: Georgia, "Book Antiqua", "Times New Roman", serif;
+	color: #81342b;
+	text-align: center;
+	text-transform: uppercase;
+}
+.DBRIS-Block-Website {
+  display: block;
+  float: left;
+  height: 8VW;
+  width: 45%;
+  padding: 1VW;
+  overflow: hidden;
+  font-family:  Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+.DBRIS-Block-Website DIV a:hover {
+  text-decoration: underline;
+}
+.DBRIS-Block-Website-Img {
+  display: block;
+  float: left;
+  width: 6VW;
+  height: 8VW;
+  padding-right: 1VW;
+}
+.DBRIS-Block-Website-Img img {
+  float: right;
+  max-height: 7vW;
+  max-width: 5vW;
+  min-width: 3vW;
+  box-shadow: -0.1vW 0vW 0.5vW 0vW rgba(0,0,0,0.4);
+}
+.DBRIS-Block-Website-Title {
+  width: auto;
+  height: 1.9VW;
+  font-size: 1.3vW;
+  xxcolor: #81342b;
+  color: #1a0dab;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DBRIS-Block-Website-Title a {
+  xxcolor: #81342b;
+  color: #1a0dab;
+}
+.DBRIS-Block-Website-Link {
+  width: auto;
+  height: 1.6VW;
+  font-size: 1.0vW;
+  xxxcolor: #555;
+  color: #006621;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DBRIS-Block-Website-Description {
+  font-size: 1.0vW;
+  color: #81342b;
+  word-wrap: break-word;
+  width: auto;
+  word-wrap: break-word;
+  max-height: 4VW;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+}
+.DBRIS-Block-Website-ImageLink {
+}
+.DBRIS-Block-Website-ImageLink a {
+  font-size: 1.1vW;
+  xxcolor: #81342b;
+  color: #1a0dab;
+  padding-top: 0.2vw;
+}
+.ArtsDot-Artwork-Links-Artwork-Outsource{
+	
+padding:0!important;
+margin:0!important;
+width:100%!important;
+font-family: "Times New Roman", Times, serif;
+	
+}
+/******************** Outsource Block END ****************/

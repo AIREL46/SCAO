@@ -1,0 +1,287 @@
+/* <Style> */
+/*********************** Similar Artworks Block ***********************/
+/*
+
+There is some Global CSS rules that probably need to remove, but for perfect working example I decide to keep for now
+
+*/
+@font-face {
+  font-family: 'Oswald-ExtraLight';
+  src: url('Oswald-ExtraLight.eot');
+  src: url('Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-ExtraLight.woff2') format('woff2'),
+        url('Oswald-ExtraLight.woff') format('woff'),
+        url('Oswald-ExtraLight.ttf') format('truetype'),
+        url('Oswald-ExtraLight.svg#Oswald-ExtraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: url('Oswald-Bold.eot');
+  src: url('Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-Bold.woff2') format('woff2'),
+        url('Oswald-Bold.woff') format('woff'),
+        url('Oswald-Bold.ttf') format('truetype'),
+        url('Oswald-Bold.svg#Oswald-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-BoldItalic';
+  src: url('Oswald-BoldItalic.eot');
+  src: url('Oswald-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-BoldItalic.woff2') format('woff2'),
+        url('Oswald-BoldItalic.woff') format('woff'),
+        url('Oswald-BoldItalic.ttf') format('truetype'),
+        url('Oswald-BoldItalic.svg#Oswald-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-DemiBold';
+  src: url('Oswald-DemiBold.eot');
+  src: url('Oswald-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-DemiBold.woff2') format('woff2'),
+        url('Oswald-DemiBold.woff') format('woff'),
+        url('Oswald-DemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: url('Oswald-Regular.eot');
+  src: url('Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-Regular.woff2') format('woff2'),
+        url('Oswald-Regular.woff') format('woff'),
+        url('Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-Medium';
+  src: url('Oswald-Medium.eot');
+  src: url('Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-Medium.woff2') format('woff2'),
+        url('Oswald-Medium.woff') format('woff'),
+        url('Oswald-Medium.ttf') format('truetype'),
+        url('Oswald-Medium.svg#Oswald-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-MediumItalic';
+  src: url('Oswald-MediumItalic.eot');
+  src: url('Oswald-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-MediumItalic.woff2') format('woff2'),
+        url('Oswald-MediumItalic.woff') format('woff'),
+        url('Oswald-MediumItalic.ttf') format('truetype'),
+        url('Oswald-MediumItalic.svg#Oswald-MediumItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-Light';
+  src: url('Oswald-Light.eot');
+  src: url('Oswald-Light.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-Light.woff2') format('woff2'),
+        url('Oswald-Light.woff') format('woff'),
+        url('Oswald-Light.ttf') format('truetype'),
+        url('Oswald-Light.svg#Oswald-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-Extra-LightItalic';
+  src: url('Oswald-Extra-LightItalic.eot');
+  src: url('Oswald-Extra-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Oswald-Extra-LightItalic.woff2') format('woff2'),
+        url('Oswald-Extra-LightItalic.woff') format('woff'),
+        url('Oswald-Extra-LightItalic.ttf') format('truetype'),
+        url('Oswald-Extra-LightItalic.svg#Oswald-Extra-LightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.ArtsDot-Content-Block a {
+  text-decoration: none;
+  color: #000;
+}
+.ArtsDot-Content-Block a:hover {
+  text-decoration: none;
+  color: #000;
+}
+.ArtsDot-Content-Block {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+.ArtsDot-Artwork-Similar_Artworks-Block-Text_Header {
+  float: none;
+  padding:1vW;
+  padding-bottom: 0;
+  font-size: 2vW;
+  color: #81342b;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  //font-family: 'Oswald-Bold', Arial, Sans-serif;
+  font-family: Georgia, "Book Antiqua", "Times New Roman", serif;
+}
+.ArtsDot-Artwork-Similar_Artworks-Block {
+  min-height: 29vW;  
+  margin-bottom: 4vW;
+  padding:1vW;
+}
+.ArtsDot-Content-Inline_Image_Slides-Block {
+  padding-top: 1vW;
+  height: 19vW;
+}
+.ArtsDot-Content-Inline_Image_Slides-Block > a {
+  //border: 1px solid transparent;
+  width: 14.45%;
+  height: 18vW;
+  float: left;
+  margin-right: 0.9792vW;
+  margin-bottom: 0.5vW;
+  overflow: hidden;
+  box-shadow: -0.1vW 0vW 0.5vW 0vW rgba(0,0,0,0.5);
+  text-align: center;
+}
+.ArtsDot-Content-Inline_Image_Slides-Block > a:hover {
+  /*border: 1px solid orange;*/
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ArtsDot-Content-Inline_Image_Slides-Block a > img {
+  /* width: 100%; */
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  left: 100%;
+  margin-left: -200%;
+  /* vertical-align: middle; */
+  /* text-align: center; */
+  filter: none; /* Applies to FF + IE */
+  -webkit-filter: none;
+  -webkit-transition: all 0.3s ease-out, transform 1s ease-out;
+  -moz-transition: all 0.3s ease-out, transform 1s ease-out;
+  -o-transition: all 0.3s ease-out, transform 1s ease-out;
+  -ms-transition: all 0.3s ease-out, transform 1s ease-out;
+  transition: all 0.3s ease-out, transform 1s ease-out;
+}
+.ArtsDot-Content-Inline_Image_Slides-Block a:hover > img {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: url('ArtsDot-Grayscale_Filter-Matrix.svg#grayscale');
+  filter: gray;
+  transform: scale(1.02, 1.02);
+  -webkit-transition: all 0.3s ease-out, transform 1s ease-out;
+  -moz-transition: all 0.3s ease-out, transform 1s ease-out;
+  -o-transition: all 0.3s ease-out, transform 1s ease-out;
+  -ms-transition: all 0.3s ease-out, transform 1s ease-out;
+  transition: all 0.3s ease-out, transform 1s ease-out;
+}
+.ArtsDot-Content-Inline_Image_Slides-Block span {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.ArtsDot-Content-Inline_Image_Slides-Block> span > img {
+  width: 22%;
+  height: 18vW;
+  float: right;
+  margin-bottom: 1vW;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Orange,
+.ArtsDot-Content-Inline_Image_Slides-Button-Transparent {
+  position: absolute;
+  width: 12.5vW;
+  padding: 1vW 2vW;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1vW;
+  font-family: 'Oswald-Bold', Arial, Sans-serif;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Orange {
+  top: 4vW;
+  right: 1.7vW;
+  background-color: #dd8200;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Transparent {
+  top: 10vW;
+  right: 1.7vW;
+  color: white!important;
+  border: 0.1vW solid #fff;
+  background-color: transparent;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Orange:hover,
+.ArtsDot-Content-Inline_Image_Slides-Button-Transparent:hover {
+  cursor: pointer;
+  text-decoration: none!important;
+  background-color: #491d02;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Orange a,
+.ArtsDot-Content-Inline_Image_Slides-Button-Transparent a {
+  //font-family: 'Oswald-Bold', Arial, Sans-serif!important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Orange:hover a,
+.ArtsDot-Content-Inline_Image_Slides-Button-Transparent:hover a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Transparent a {
+  color: #fff;
+  max-height: 3.2vW;
+  overflow: hidden;
+  display: inline-block;
+}
+.ArtsDot-Content-Inline_Image_Slides-Button-Transparent:hover {
+  border: 0.1vW solid #7f2d02;
+}
+.ArtsDot-Image-Blocks-Artists_Artworks-Text-Under {
+  width: 14.45%;
+  float: left;
+  margin-right: 0.9792vW;
+  text-align: center;
+  font-size: 1vW;
+}
+.ArtsDot-Image-Blocks-Artists_Artworks-Text-Under-Block {
+  //display: inline-block;
+  width: 100%;
+}
+.ArtsDot-Image-Blocks-Artists_Artworks-Text-Under a {
+  //font-family: 'Oswald-Bold', Arial, Sans-serif!important;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}  
+/*********************** Similar Artworks Block END ***********************/

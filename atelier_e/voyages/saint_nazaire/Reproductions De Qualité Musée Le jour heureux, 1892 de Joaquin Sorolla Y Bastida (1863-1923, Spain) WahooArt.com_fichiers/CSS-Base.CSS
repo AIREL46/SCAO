@@ -1,0 +1,1597 @@
+/* <Style> */
+body	{
+	padding:0px;
+	margin:0px;
+	scrollbar-base-color:#5b2d15;
+	color:#000000;
+	font-family:  Georgia, "Book Antiqua", "Times New Roman", serif; 
+	background-color:#e1d3bd;
+	}
+a	{
+	text-decoration:none;
+	outline:none;
+	}
+a:link, a:visited , a:focus , a:active
+	{
+	color: #8f2d03;
+	} 
+a:hover 
+	{
+	text-decoration:underline; 
+	outline:none;
+	color:#000000;
+	}
+.ND
+	{
+	display:none;
+	}
+.IVO
+	{
+	background: #FFFFFF url(/Art.nsf/Wait.gif) no-repeat center center;
+	}
+PRE {
+	white-space-collapse: break-spaces;
+	text-wrap: pretty;
+	Font-Family:tahoma,verdana,arial,sans-serif;
+}
+ 
+.TblTitrePg
+{
+background-color:#FFFFFF;
+}
+.TableRubriques
+{
+Border:none; 
+padding:5px;
+width:100%;
+}
+.Rubriques
+{
+line-height:1.5em;
+border:outset 1px;
+background:#FAFAFA url(/Art.nsf/FondTBL.gif) repeat-x top left;
+padding:5px;
+}
+.Rubriques a, .Rubriques a:active, .Rubriques a:link, .Rubriques a:visited
+{
+text-decoration:none;
+padding-left:3px;
+padding-right:5px;
+padding-top:2px;
+padding-bottom:3px;
+border:none;
+color:#000000;
+}
+.Rubriques a:hover 
+{
+text-decoration:none;
+padding-left:4px;
+padding-right:2px;
+padding-top:2px;
+padding-bottom:1px;
+border-right:1px solid #ffffff;
+border-bottom:1px solid #ffffff;
+border-left:1px solid #cccccc;
+border-top:1px solid #cccccc;
+cursor:pointer;
+background-color:#FFFFFF;
+}
+/* Drapeaux dans les bio sous les oeuvres */
+.FlagsBio    
+	{
+	float:left;
+	margin-top:3px;
+	margin-right:10px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-khtml-border-radius:2px;
+	border-radius:2px;
+	border:solid 1px #000;
+	box-shadow: 2px 2px 5px #888; 
+	}
+/* Ligne d'info sous les bios sous les oeuvres */
+.InfosSousBios
+	{
+	text-align:right;
+	font-size:75%;
+	font-style:Italic;
+	color:#777;
+	}
+/* Ligne sous les oeuvres */
+.LigneBiographie
+{
+border-left:dotted 2px #808080;
+padding-left:5px;
+padding-right:5px;
+text-align:justify;
+}
+.LigneBiographie IMG
+{
+float:left;
+margin-right:10px;
+}
+/* Ligne sous les oeuvres */
+.LigneAnnonce
+{
+border-left:dotted 2px #808080;
+padding-left:5px;
+padding-right:5px;
+text-align:justify;
+}
+/* Ligne sous les oeuvres */
+.LignePage
+{
+border-left:dotted 2px #808080;
+padding-left:5px;
+padding-right:5px;
+text-align:justify;
+font-size:120%;
+}
+/* icones des sysfichespages_## */
+.PagesIconImg
+	{
+	float:left;
+	height:50px;
+	max-width:150px;
+	margin-top:3px;
+	margin-right:10px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-khtml-border-radius:2px;
+	border-radius:2px;
+	border:solid 1px #000;
+	box-shadow: 2px 2px 5px #888; 
+	}
+.CadreAnnoncesPages
+{
+float:left; 
+padding-right:3px; 
+padding-bottom:5px; 
+margin-right:10px; 
+margin-bottom:5px; 
+border-right:solid 1px #D0D0D0; 
+border-bottom:solid 1px #D0D0D0; 
+Width:25%; 
+text-align:right; 
+color:#333333; 
+overflow:hidden;
+}
+.ActionsArtistesTD
+{
+width:100%;
+padding-top:5px; 
+border-left:dotted 1px #808080;
+padding-left:5px;
+padding-bottom:5px; 
+text-align:justify;
+}
+.ActionsArtistesTD A
+{
+text-decoration:none;
+}
+.ActionsArtistesTD A:hover
+{
+text-decoration:underline;
+}
+.LiensVues1 
+	{
+	Font-Family:tahoma,verdana,arial,sans-serif;
+	text-decoration:none;
+	font-size:125%;
+	font-weight:bold;
+	}	
+.LiensVues2
+	{
+	font-family:tahoma,verdana,arial,sans-serif;
+	text-decoration:none;
+	font-size:100%;
+	font-weight:bold;
+	}	
+.LiensVues3
+	{
+	font-family:tahoma,verdana,arial,sans-serif;
+	text-decoration:none;
+	font-size:90%;
+	}	
+.T_Bg
+	{
+	background-Image:url(/Art.nsf/TitlesBG.gif); 
+	background-position:left center; 
+	background-repeat:no-repeat; 
+	}
+.T_Bg TR TD
+	{
+	vertical-align:middle;
+	height:35px;
+	text-align:right;
+	Font-Family:tahoma,verdana,arial,sans-serif;
+	font-style:Italic;
+	font-size:20px;
+	font-weight:bolder;
+	padding-right:5px;
+	color:#8f2d03;
+	text-shadow: 2px 2px 3px #999999;
+	}
+/* cadre document page publiés recement */
+.IA
+	{
+	border:outset 2px;
+	background-color:#F6F6F6;
+	}
+.BT
+{
+border:outset 2px; 
+background-color:#E4E4E4;
+text-decoration:none;
+margin:5px;
+padding:3px;
+text-align:center;
+}
+.Tc
+{
+height:auto;
+margin:10px;
+Width:auto;
+}
+.Ti
+{
+height:auto;
+margin:10px;
+Width:auto;
+background: rgba(245,231,208,1);
+background: -moz-linear-gradient(45deg, rgba(245,231,208,1) 0%, rgba(255,255,255,1) 35%, rgba(250,239,223,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(245,231,208,1)), color-stop(35%, rgba(255,255,255,1)), color-stop(100%, rgba(250,239,223,1)));
+background: -webkit-linear-gradient(45deg, rgba(245,231,208,1) 0%, rgba(255,255,255,1) 35%, rgba(250,239,223,1) 100%);
+background: -o-linear-gradient(45deg, rgba(245,231,208,1) 0%, rgba(255,255,255,1) 35%, rgba(250,239,223,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(245,231,208,1) 0%, rgba(255,255,255,1) 35%, rgba(250,239,223,1) 100%);
+background: linear-gradient(45deg, rgba(245,231,208,1) 0%, rgba(255,255,255,1) 35%, rgba(250,239,223,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5e7d0', endColorstr='#faefdf', GradientType=1 );
+}
+.Ti
+{
+  		 position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.Ti:before, .Ti:after
+{
+		 content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.Ti:after
+{
+right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+.Tii
+{
+height:auto;
+padding:10px;
+Width:auto;
+}
+ 
+ 
+.OTP1
+{
+Width:9px;
+background:url(/Art.nsf/OTP1.gif) no-repeat left top;
+}
+.OTP2
+{
+Padding:3px 3px 0px 3px;
+background:url(/Art.nsf/OTP2.gif) repeat-X left top;
+}
+.OTP2 A, .OTP2 A:visited, .OTP2 A:link
+{
+background:None;
+Text-decoration:None;
+Font-Family:tahoma,verdana,arial,sans-serif;
+font-size:14px;
+font-weight:normal;
+Color:#FFFFFF;
+}
+.OTP2 A:hover
+{
+Color:#000000;
+}
+.OTP3
+{
+Width:12px;
+background:url(/Art.nsf/OTP3.gif) no-repeat left top;
+}
+.OTP4
+{
+Width:8px;
+background:url(/Art.nsf/OTP4.gif) no-repeat left top;
+}
+.WahooArt-Header-Flags-Language-hidder{
+display: none;-
+}
+.WahooArt-Header-Phone img {
+vertical-align:middle;
+}
+.WahooArt-Header-One-Flag{
+	margin:2px 1% 0px 0%;
+	padding:0px;
+	display:inline;
+}
+.WahooArt-Header-One-Flag img{
+	width: 35px;
+}
+.WahooArt-Header {
+	width: 100%;
+	height:188px;
+	display:block;
+	font-size:1VW;
+	}
+.WahooArt-Header-top-title  {
+width:100%;
+border-spacing: 0px; 
+overlow: hidden;
+Font-Family:tahoma,verdana,arial,sans-serif;
+}
+.WahooArt-Header-top-title-left  {
+width:70%;
+overlow: hidden;
+background-color : #660000;
+color:#FFFFFF;
+color : #e1d3bd;
+padding: 0.50VW;
+padding-left: 20px; 
+}
+.WahooArt-Header-top-title-left H1 {
+margin: 0px;
+font-weight:normal;
+}
+.WahooArt-Header-top-title-right  {
+background-color :none;
+color: #000;
+padding: 0.5VW;
+}
+.WahooArt-Header-logo {
+	width: 15%
+}
+.WahooArt-Header-logo .HeaderLogo img {
+	height: 86px; 
+	padding-left:10px;
+	padding-right: 15px;
+	animation: TransitionFadeInLogo 3s;
+}
+
+@keyframes TransitionFadeInLogo {
+	from	{ opacity:.50;}
+ 	to	{ opacity:1; } 
+}
+
+.WahooArt-Header-td-search-bar {
+	padding-bottom:20px; 
+	width:35VW;
+}
+.WahooArt-Header-search-bar {
+	height:50px;
+	xxxwidth:92%;
+	background:rgba(255,255,255,0.5);
+	border-radius: 4px; 
+}
+.WahooArt-Header-search-bar *{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.WahooArt-Header-search-bar .WahooArt-Header-search-input-text {
+	float:left;
+	background:rgba(255,255,255,1);
+	border:1px solid #155457;
+	width:98%;
+	height: 35px;
+	font-size:20px;
+	color:#838282;
+	font-style:italic;
+	opacity:0.8;
+	margin: 7px 5px 0 6px;
+}
+.WahooArt-Header-search-bar .WahooArt-Header-search-input-text:focus {
+	background:#FFF;
+	color:#000;
+	font-style:none;
+	opacity:1;
+}
+.WahooArt-Header-search-bar .WahooArt-Header-search-go-btn IMG {
+    border: none;
+    height: 45px;
+    padding: 8px 0px 5px 5px;
+    opacity:0.6;
+    cursor: pointer;
+}
+.WahooArt-Header-search-bar .WahooArt-Header-search-go-btn IMG:hover {
+    opacity:1.0;
+}
+/*================= Header Tabs =================*/
+.WahooArt-TopTabs-cont {
+	float:right !important;
+}
+.WahooArt-Header-search-bar    {
+	padding-left:0;
+	padding-right:85px;
+}
+.WahooArt-TopTabs-cont  {
+	padding-left:0;
+	padding-right:25px;
+}
+.WahooArt-TopTabs-cont ul.header-TopTabs {
+	list-style-type:none;
+	clear:right;
+	margin:5px 0px 0px 0px;
+	padding:0px 0px 0px 5px;
+	background:url(/Art.nsf/menu-shadow.png) left no-repeat;
+	float:right;
+	}
+.WahooArt-TopTabs-cont ul.header-TopTabs li{
+	float:left;
+	height:auto;
+	font-size:1.1vW;
+	Font-Family:tahoma,verdana,arial,sans-serif;
+	color:#000000;
+	font-weight:bold;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 12px;
+	background:url(/Art.nsf/menu-left.png) left no-repeat;
+	}
+.WahooArt-TopTabs-cont ul.header-TopTabs li span{
+	float:left;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+	overflow:hidden;
+	display:block;
+	line-height:37px;
+	background:url(/Art.nsf/menu-right.png) right no-repeat;
+	white-space: nowrap;
+	}
+.WahooArt-TopTabs-cont ul.header-TopTabs li span a{
+	color:#000000;
+	text-decoration:none;
+	}
+.WahooArt-TopTabs-cont ul.header-TopTabs li span a:hover{
+	color:#6a3c26;
+	text-decoration:none;
+	}
+
+/*================= Header Tabs selected =================*/
+.WahooArt-TopTabs-cont ul.header-TopTabs li.header-TopTabs-li-selected {
+	color:#000;
+	background:url(/Art.nsf/menu-left-selected.png) left no-repeat;
+	}
+.WahooArt-TopTabs-cont ul.header-TopTabs li.header-TopTabs-li-selected span{
+	background:url(/Art.nsf/menu-right-selected.png) right no-repeat;
+	}
+.WahooArt-TopTabs-cont ul.header-TopTabs li.header-TopTabs-li-selected span a{
+	color:#000;
+	text-decoration:none;
+	}
+.WahooArt-TopTabs-cont ul.header-TopTabs li.header-TopTabs-li-selected span a:hover{
+	color:#6a3c26;
+	text-decoration:none;
+	}	
+/*============ responsive ==========*/
+.WahooArt-Header-menu{
+position: absolute;
+width: 100%;
+height:47px;
+top:141px;
+line-height:47px;
+background-color : #cf000b;
+}
+.WahooArt-TopTabs-cont {
+position: absolute !important;
+right: 0px;
+height: 50px;
+top: 101px;
+float: right !important;
+}
+/*======================================================*/
+/*===============         DROP DOWN MENU         ===============*/
+/*======================================================*/
+#menu {
+  position: absolute;
+  z-index: 999;
+  top: 0px;
+}
+#menu, #menu ul {
+  margin: 0px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+#menu:before,
+ #menu:after {
+  content: "";
+  display: table;
+}
+#menu:after {
+  clear: both;
+}
+#menu {
+}
+#menu li {
+  float: left;
+  position: relative;
+}
+#menu a:first-letter {
+  text-transform: uppercase;
+}
+#menu ul a:first-letter {
+  text-transform: uppercase;
+}
+#menu a {
+  height: 47px;
+  padding: 0px 0EM 0px 1.25EM;
+  font-size: 1.3vW;
+  float: left;
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+}
+#menu a:hover {
+  color: #e1d3bd;
+}
+html #menu li a:hover {
+  / IE6 only */
+  color: #e1d3bd;
+}
+#menu ul {
+  margin: 30px 0 0 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  visibility: hidden;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  background: #fff1db;
+  background: -moz-linear-gradient(-45deg, #fff1db 0%, #ffffff 28%, #efe0c9 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fff1db), color-stop(28%,#ffffff), color-stop(100%,#efe0c9));
+  background: -webkit-linear-gradient(-45deg, #fff1db 0%,#ffffff 28%,#efe0c9 100%);
+  background: -o-linear-gradient(-45deg, #fff1db 0%,#ffffff 28%,#efe0c9 100%);
+  background: -ms-linear-gradient(-45deg, #fff1db 0%,#ffffff 28%,#efe0c9 100%);
+  background: linear-gradient(135deg, #fff1db 0%,#ffffff 28%,#efe0c9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff1db', endColorstr='#efe0c9',GradientType=1 );
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+#menu li ul {
+  visibility: hidden;
+  top: 47px;
+}
+#menu li:hover > ul {
+  top: 47px;
+  visibility: visible;
+  margin: 0;
+}
+#menu ul ul {
+  top: 0;
+  left: 150px;
+  margin: 0 0 0 20px;
+  box-shadow: -1px 0 0 rgba(255,255,255,.3);
+}
+#menu ul li {
+  float: none;
+  display: block;
+  border: 0;
+}
+#menu ul li:last-child {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#menu ul a {
+  height: auto!important;
+  max-width: 350px;
+  min-width: 200px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0px!important;
+  padding-left: 22px!important;
+  padding-right: 6px!important;
+  width: auto;
+  font-weight: normal;
+  font-size: 1.1vW;
+  display: block;
+  white-space: nowrap;
+  float: none;
+  text-transform: none;
+  color: #333;
+  line-height: 1.2EM!important;
+}
+#menu ul a:hover {
+  text-shadow: none;
+  background-position: left center;
+  background-image: url(menu-arrow.jpg);
+  background-repeat: no-repeat;
+  background-color: rgb(246, 246, 246);
+  color: #8f2d03;
+}
+#menu ul li:first-child {
+
+margin-top: 1vW;
+
+}
+#menu ul li:first-child a:hover:after {
+  border-bottom-color: rgb(246, 246, 246);
+}
+#menu ul ul li:first-child a:hover:after {
+  border-right-color: rgb(246, 246, 246);
+  border-bottom-color: transparent;
+}
+#menu li:nth-last-child(1) ul {
+  left: auto;
+  right: -25px;
+}
+#menu li:nth-last-child(2) ul {
+  left: auto;
+  right: -100px;
+}
+ /* ================= HeaderTopMenu ================= */												
+.HeaderTopMenu {
+	position: absolute;
+	top: 1px;
+	left: 0px;
+	z-index: 99;
+ }	
+.FT	{
+	display:block;
+	position:absolute;
+	Z-Index:99;
+	top:151px;
+	width:100%;
+	height:24px;
+	}
+.Menu-Colors
+	{
+	width:85%;
+	min-width:100px;
+	display:block;
+	/*width:120px;*/
+	margin:1px;
+	height:1EM;
+	border:1px solid #CCC;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	}
+	
+	
+ /* ================= FOOTER ================= */												
+.SitePagesFooter{
+	display:block;
+	width:100%;
+	background-color: #8f0009;
+	Font-Family: tahoma,verdana,arial,sans-serif; 
+	}
+.SitePagesFooter .footer-content{
+	display:block;
+	width:100%;
+	margin:auto;
+	margin-left: 15VW;
+	overflow:hidden;
+	padding: 2VW; 
+	}
+		
+.SitePagesFooter .f-heading{
+	color:#FFFFFF;
+	font-size:1.5VW;
+	font-weight:normal;
+	margin:0px 0px 10px 0px;
+	white-space: nowrap;
+	}
+.SitePagesFooter ul.ListColumn {
+	color:#FFFFFF;
+	float:left;
+	width: 14VW;
+	margin:0px 1VW;
+	line-height: 1.1VW; 
+	}
+.SitePagesFooter ul.ListColumn li   {
+	font-size:0.9VW;
+	margin-left: 2px; 
+	list-style: none; 
+	}
+.SitePagesFooter ul.ListColumn li A  {
+	color:#FFFFFF;
+	}
+ 
+ 
+.footer-under-bottom {
+	background-color: #FFFFFF; 
+	font-size:0.85VW;
+	padding-left:20VW; 
+	padding-right:30VW;
+	padding-top:0.5VW;
+	padding-bottom:0.5VW;
+	
+	color:#777777;
+	Font-Family: tahoma,verdana,arial,sans-serif; 
+}
+.footer-under-bottom img {
+	width: 1.5VW; 
+	border:None;
+	}
+
+.Artwork-Artist-Heading {
+    width: 100%;
+    border:none;
+    border-collapse:collapse;
+}
+.Artwork-Artist-Heading-Content {
+   width:90%;
+Font-Family:tahoma,verdana,arial,sans-serif;
+    text-align:left;
+}
+.Artwork-Artist-Heading-Content-Left {
+     background: url(/Art.nsf/Artwork-Artist-shadow-left.png) right bottom no-repeat;
+   width:5%;
+}
+.Artwork-Artist-Heading-Content-Right {
+     background: url(/Art.nsf/Artwork-Artist-shadow-right.png) left bottom no-repeat;
+   width:5%;
+}
+
+.Artwork-Artist-Heading-Header {
+     background: url(/Art.nsf/Artwork-Artist-about-header.png) repeat-x;
+    width:100%;
+}
+.Artwork-Artist-Heading-Header-content {
+    padding:30px 35px 0px 35px;
+}
+.Artwork-Artist-Heading-HeaderLists {
+   background-color: #180c01;
+   width:100%;
+   font-size: 1.1vW;
+}
+.Artwork-Artist-Heading-Header-content A:link , .Artwork-Artist-Heading-Header-content A:hover , .Artwork-Artist-Heading-Header-content A:visited, .Artwork-Artist-Heading-Header-content A:active {
+    color: #e2d4bf;
+    text-decoration: underline;
+}
+.Artwork-Artist-Heading-1-Floor { 
+    height:65px;
+    border:none;
+    border-collapse:collapse;
+}
+.Artwork-Artist-Heading-1-Floor-Title {
+	font-family:  Georgia, "Book Antiqua", "Times New Roman", serif; 
+	font-size: 32px;
+	color: #e2d4bf;
+	line-height:24px;
+	text-align:center;
+}
+.Artwork-Artist-Heading-1-Floor-Title A:link {
+    text-decoration: none;
+}
+.Artwork-Artist-Heading-1-Floor-Separator1 {
+    border-right: 1px solid #e2d4bf;
+    width: 2px;
+    height: 38px;
+}
+.Artwork-Artist-Heading-1-Floor-Text {
+	color: #e2d4bf;
+	font-weight: 700;
+	text-align:center;
+	font-size: 1.2vW;
+}
+.Artwork-Artist-Heading-1-Floor-Text-Flags {
+    float: left;
+}
+.Artwork-Artist-Heading-1-Floor-Separator2 {
+	border-right: 1px solid #e2d4bf;
+	width: 2px;
+	height: 16px;
+	}
+
+.Artwork-Artist-Heading-2-Floor {
+	color: #e2d4bf;
+	text-align:left;
+	}
+.Artwork-Artist-Heading-2-Floor TR TD {
+	vertical-align:top;
+	text-align:justify;
+	}
+.Artwork-Artist-Heading-2-Floor UL {
+	padding:10px;
+	margin:0px;
+	text-align:justify;
+	}
+.Artwork-Artist-Heading-2-Floor a , .Artwork-Artist-Heading-2-Floor a:hover { 
+	color: #e2d4bf;
+	text-decoration:underline;
+	}
+.Artwork-Artist-Heading-2-Floor li {
+    background: url(/Art.nsf/artwork-artist-li-2.png) left center no-repeat;
+    float: left;
+    padding-left: 14px;
+    margin-left:1vW;
+    line-height: 1.4vW;
+    list-style-type: none;
+}
+
+.Artwork-Artist-Bio {
+    background: url(/Art.nsf/Artwork-Artist-about-autor-bg.jpg) repeat;
+    padding:20px;
+}
+.Artwork-Artist-Bio-content {
+    text-align: justify;
+    width:100%;
+}
+.Artwork-Artist-Bio-content A {
+    text-decoration:underline;
+}
+
+
+.Artwork-Artist-3DBottom {
+    background: url(/Art.nsf/Artwork-Artist-footer-small-bg.png) repeat-x;
+    width: 100%;
+    height: 217px;
+    overflow:hidden;
+ }
+
+.Artwork-Artist-3DBottom-Content { 
+}
+
+.Artwork-Artist-Gallery-3D-Title {
+	font-family:  Georgia, "Book Antiqua", "Times New Roman", serif; 
+    color: #e2d4bf;
+    font-size: 32px;
+    text-align:left;
+    padding:30px 0px 0px 40px;
+  zheight:75px;
+}
+.Artwork-Artist-Gallery-3D-Gadget { 
+    text-align:right;
+    font-size: 11px;
+    font-weight: 700;
+    padding:30px 40px 0px 40px;
+    height:75px;
+}
+.Artwork-Artist-Gallery-3D-Gadget a , .Artwork-Artist-Gallery-3D-Gadget a:hover {
+    color: #cc976b;
+    text-decoration:underline;
+}
+
+.Artwork-Artist-3DGalleries { 
+    padding:0px 40px 0px 40px;
+    text-align:left;
+    /*height:130px;*/
+}
+.Artwork-Artist-3DGalleries ul { 
+    color: #cc976b;
+}
+.Artwork-Artist-3DGalleries li { 
+	width:18%; 
+	font-size: 0.875vW;
+	float:left; 
+	padding:0px 5px 0px 10px;
+	margin-bottom: 5px;
+	background:url(/Art.nsf/artwork-artist-li-3.png) left center no-repeat;
+	list-style-type: none;
+}
+
+.Artwork-Artist-3DGalleries ul li a , .Artwork-Artist-3DGalleries ul li a:hover {
+    color: #e2d4bf;
+    text-decoration:underline;
+}
+
+td.zArtwork-Artist-Heading-1-Floor-Text-Flags a img { 
+width: 22px;
+padding: 0;
+margin: 0;
+
+}
+/* responsive */
+@media screen and (max-width: 1520px) {
+td.zArtwork-Artist-Heading-1-Floor-Text-Flags a img { 
+width: 33px;
+padding: 0;
+margin: 0;
+}
+.Artwork-Artist-Heading-1-Floor-Title {
+font-size:26px;
+}
+.Artwork-Artist-Heading-1-Floor-Text {
+font-size:12px;
+}
+}
+@media screen and (max-width: 1430px) {
+
+
+td.zArtwork-Artist-Heading-1-Floor-Text-Flags a img { 
+width: 28px;
+padding: 0;
+margin: 0;
+
+}
+}
+@media screen and (max-width: 1380px) {
+
+
+td.zArtwork-Artist-Heading-1-Floor-Text-Flags a img { 
+width: 17px;
+padding: 0;
+margin: 0;
+
+}
+}
+@media screen and (max-width: 1200px) {
+td.zArtwork-Artist-Heading-1-Floor-Text-Flags a img { 
+display: none;
+
+}
+.Artwork-Artist-Heading-1-Floor-Title {
+
+font-size:25px;
+
+}
+.Artwork-Artist-Heading-1-Floor-Text {
+font-size:11px;
+}
+}
+@media screen and (max-width: 1040px) {
+td.zArtwork-Artist-Heading-1-Floor-Text-Flags a img { 
+display: none;
+
+}
+.Artwork-Artist-Heading-1-Floor-Title {
+
+font-size:23px;
+
+}
+.Artwork-Artist-Heading-1-Floor-Text {
+font-size:10px;
+}
+}
+@media screen and (max-width: 1000px) {
+td.zArtwork-Artist-Heading-1-Floor-Text-Flags a img { 
+display: none;
+
+}
+}
+/* images into new automatic biographies */
+.ImgsArtists
+	{
+	float:left;
+	margin-right:10px;
+	margin-bottom:5px;
+	border:none;
+	}
+.TblBioAjax IMG
+	{
+	Border-Radius:5px;
+	box-shadow: 2px 2px 5px #888; 
+	margin:3px 10px 10px 3px;
+	}
+.BoxAboutUs-Heading {
+    width: 98%;
+    border:none;
+    border-collapse:collapse;
+}
+.BoxAboutUs-Heading-Content {
+
+Font-Family:tahoma,verdana,arial,sans-serif;
+    text-align:left;
+}
+.BoxAboutUs-Heading-Content-Left {
+     background: url(/Art.nsf/Artwork-Artist-shadow-left.png) right bottom no-repeat;
+   width:10px;
+}
+.BoxAboutUs-Heading-Content-Right {
+     background: url(/Art.nsf/Artwork-Artist-shadow-right.png) left bottom no-repeat;
+   width:10px;
+}
+.BoxAboutUs-Heading-Header {
+     background: url(/Art.nsf/Artwork-Artist-about-header.png) repeat-x;
+    height: 95px;
+    width:100%;
+}
+.BoxAboutUs-Heading-Header-content {
+    padding:40px 35px 0px 20px;
+}
+.BoxAboutUs-Heading-1-Floor-Title {
+	font-family:  Georgia, "Book Antiqua", "Times New Roman", serif; 
+    font-size: 32px;
+    color: #e2d4bf;
+}
+.BoxAboutUs-Bio {
+	background: url(/Art.nsf/Artwork-Artist-about-autor-bg.jpg) repeat;
+	}
+.BoxAboutUs-Bio-Padding {
+	padding:20px;
+	}
+.BoxAboutUs-Bio-content {
+    text-align: justify;
+    width:100%;
+}
+.BoxAboutUs-Bio-content A {
+    text-decoration:none;
+}
+
+.BoxAboutUs-Bio-content A:hover {
+    text-decoration:underline;
+}
+.BoxAboutUs-3DBottom {
+    background: url(/Art.nsf/Artwork-Artist-footer-small-bg.png) repeat-x;
+    width: 100%;
+    height: 100px;
+    overflow:hidden;
+ }
+.SearchBoxHome
+	{
+	width:90%;
+	height:35px;
+	font-Size:22px;
+	color:#785116;
+	Background-color:#e2d3be;
+	box-shadow:inset 0 1px 3px #AAA;
+	border-radius: 4px;
+	padding:5px;
+	border:inset 1px #785116;
+	margin:2px;
+	}
+.SearchBoxHomeList
+	{
+	   color:#522f13;
+	border-radius: 2px;
+	Background-color:#e2d3be;
+	padding:2px;
+	box-shadow:inset 0 1px 2px #AAA;
+	border:inset 1px #785116;
+	}
+ 
+.SearchBoxHomeList:focus , .SearchBoxHome:focus
+	{
+	Background-color:#F0F0F0;
+	}
+.HomePage_heading{
+	color: #6B1F0F;
+	font-family:  Georgia, "Book Antiqua", "Times New Roman", serif; 
+    font-size: 28px;
+    padding-bottom:10px;
+	}
+/* Media query for search bar in case when screen width is lower than 1100px*/
+@media screen and (min-width:1016px) and  (max-width:1100px){
+	.search-box{
+		position: absolute;
+		margin: 94px 32px 0px 0px!important;
+		z-index: 1;
+		float: left!important;
+		left: 296px;
+	}
+	 .header-TopTabs-cont{
+		width: auto !important;
+		left: auto !important;
+	}
+}
+.Artwork-Artist-Bio {
+
+padding: 0;
+
+}
+  div#ArtistBiography {
+  
+    text-align: justify;
+  
+  }
+  
+  div#ArtistBiography img {
+  
+    Border-Radius: 0.3vW;
+    box-shadow: 0.11vW 0.11vW 0.3vW #888;
+    margin: 0 1vW 1vW 0!important;
+  }
+.Artwork-Artist-Bio {
+
+padding: 20px;
+
+}
+/************* Home-Articles ***************/
+.Home-Articles_Item {
+    width: 23%;
+    float: left;
+    display: inline-block;
+    margin: auto 1%;
+    text-align: justify;
+}
+.Home-Articles_Item img{
+    float: left;
+    margin: 0 1vW 1vW 0;
+    height: 10vW;
+    -webkit-box-shadow: 0vW 0.2vW 0.4vW 0.05vW rgba(0,0,0,0.4);
+    box-shadow: 0vW 0.2vW 0.4vW 0.05vW rgba(0,0,0,0.4);
+}
+.Home-Articles_Item_Subject {
+    font-size: 1.2vW;
+    padding-bottom: 1vW;
+    display: block;
+}
+.Home-Articles_Item_Text {
+
+display: inline-block;
+height: 4vW;
+line-height: 1vW;
+overflow: hidden;
+
+}
+/************* Home-Articles END ***************/
+  /******************* Promotion bar *******************/
+.ArtsDot-Promotion-Bar-Block {
+	Font-Family:tahoma,verdana,arial,sans-serif;
+  position: relative;
+  width: 100%;
+  top: 0vW;
+  height: 3.0vW;
+  background-color: orange;
+  text-align: center;
+  overflow:hidden;
+}
+.ArtsDot-Promotion-Bar-Block div:hover > a {
+  text-decoration: none;
+}
+.ArtsDot-Promotion-Bar-Left {
+  float: left;
+  height: 3.0vW;
+  width: 15%;
+  padding: 0 0.4vW;
+  background-color: #f66600;
+  text-align: left;
+  font-size: 0.8vW;
+  display: table;
+}
+.ArtsDot-Promotion-Bar-Left > a {
+  color: #efce48;
+    display: table-cell!important;
+  vertical-align: middle;
+}
+.ArtsDot-Promotion-Bar-Left span {
+  color: #fff;
+}
+.ArtsDot-Promotion-Bar-Right {
+  float: right;
+  height: 3.0vW;
+  width: 15%;
+  padding: 0 0.4vW;
+  display: table;
+  background-color: #f66600;
+  text-align: right;
+  font-size: 0.8vW;
+}
+.ArtsDot-Promotion-Bar-Right > p {
+  color: #efce48;
+  display: table-cell;
+  vertical-align: middle;
+}
+.ArtsDot-Promotion-Bar-Right a {
+  color: #fff;
+}
+.ArtsDot-Promotion-Bar-Center {
+  float: left;
+  width: 68%;
+  text-align: center;
+  height: 3.0vW;
+  font-weight: bold;
+  color: #8f2d03;
+  line-height: 3.0vW;
+  font-size: 1.4vW;
+  text-transform: uppercase;
+}
+.ArtsDot-Promotion-Bar-Center > a > span {
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+}
+.ArtsDot-Promotion-Bar-Block-Text-Black {
+  }
+.ArtsDot-Promotion-Bar-Block-Text-White {
+  color: white;
+  padding-left: 2vW;
+}
+/******************* Promotion bar  END *******************/
+  /******************* BuyForms Loader Fixed *******************/
+.loader-fixed {
+  display: none;
+  position:fixed;
+  margin: 0 auto;
+  margin-bottom: 8vW;
+  border: 1vW solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1vW solid #ffd911;
+  border-right: 1vW solid #ff5605;
+  border-bottom: 1vW solid #ff2200;
+  border-left: 1vW solid #b0000a;
+  width: 6vW;
+  height: 6vW;
+  left: 50%;
+  top: 50%;
+  margin-top: -3.75vW;
+  margin-left: -3.75vW;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  z-index: 999;
+  
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
+ .loader-small-B {
+  display: inline-block;
+  position:relative;
+  margin: 0 auto;
+  border: 1vW solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 0.5vW solid #ffd911;
+  border-right: 0.5vW solid #ff5605;
+  border-bottom: 0.5vW solid #ff2200;
+  border-left: 0.5vW solid #b0000a;
+  width: 3vW;
+  height: 3vW;
+  -webkit-animation: spin-B 2s linear infinite;
+  animation: spin-B 2s linear infinite;
+  margin-bottom: 1.25vW;
+}
+@-webkit-keyframes spin-B {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin-B {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  /******************* BuyForms Loader Fixed END *******************/
+/************************ Showcase Text block ***************************/
+.ArtsDot-Articles-Content-Article {
+  float: left;
+  width: 75%;
+  padding: 0 2.5vW;
+  text-align: left;
+  font-size: 1vW;
+}
+.ArtsDot-Articles-Content-Article-FullWidth{
+  float: left;
+  /*width: 100%;*/
+  padding: 0 2.5vW;
+  text-align: left;
+  font-size: 1vW;
+  text-align: justify;
+}
+.diffWidget
+{
+	margin-bottom:0.5vw;
+	border:1px solid rgba(0,0,0,0.3);
+	padding:10px;
+}
+.diffWidget .wrapper
+{
+	width:100%;
+	height:100%;
+	position:relative;
+	z-index:1;
+}
+.diffWidget .first
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:3;
+	top:0;
+	left:0;
+	border-right:1px solid rgba(0,0,0,0.3);
+}
+.diffWidget .second
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:2;
+	top:0;
+	left:0;
+}
+.Showcase-Content {
+    width: 55%;
+    display: inline-block;
+    position: relative;
+    left: 23.5%;
+    text-align: justify;
+    padding-bottom: 4vW;
+    font-size: 0;
+}
+.Showcase-Content-Title {
+	Font-Family:tahoma,verdana,arial,sans-serif;
+    font-size: 1.4vW;
+    color: #c6230d;
+    padding-bottom: 3vW;
+}
+.Showcase-Content-Italic {
+	Font-Family:tahoma,verdana,arial,sans-serif;
+    padding: 2vW;
+    margin-bottom: 3vW;
+    font-size: 1vW;
+    font-style: italic;
+    background-color: #cccccc;
+}
+.Showcase-Content-Text {
+	Font-Family:tahoma,verdana,arial,sans-serif;
+    padding-bottom: 1vW;
+    font-size: 1vW;
+}
+.Showcase-Content-Text p {
+	margin:0;
+}
+.Showcase-diffwidget-width-item span {
+    position: relative;
+    z-index: 1000;
+    font-size: 2vW;
+    font-weight: bold;
+    top: 16vW;
+    left: 3.5vW;
+    text-shadow: 0.1vW 0.1vW 0.1vW rgba(255,255,255,1);
+}
+.Showcase-diffwidget-width table{
+	
+margin-bottom: 2vW;
+	
+}
+.Showcase-diffwidget-width table td{
+	
+font-size: 0.7vW;
+text-align: center;
+	Font-Family:tahoma,verdana,arial,sans-serif;
+	
+}
+.ArtsDot-Content-Block {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    left: 10%;
+    text-align: justify;
+    display: inline-block;
+}
+.ArtsDot-Content-Block h1 {
+    float: none;
+    padding: 2vW 0;
+    font-size: 2vW;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+	Font-Family:tahoma,verdana,arial,sans-serif;
+}
+.articles-page-text-TD-Article-HTML-NoMargin p{
+margin:0;
+}
+/************************ Showcase Text block END ***************************/
+/************************ Artwork Form Zooming CSS ************************/
+.ArtworkImageZoomIn {
+	cursor: -webkit-zoom-in;
+}
+.ArtworkImageZoomOut {
+	cursor: -webkit-zoom-out!important;
+}
+/************************ Artwork Form Zooming CSS END ************************/
+/**********************     FOOTER CSS  START   ***********************/
+.WahooArt-Footer-Block * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+  	padding: 0;
+}
+.WahooArt-Footer-Block {
+  background-color: #660000;
+  height: 31vW;
+  width: 100%;
+}
+.WahooArt-Footer-Block a {
+  color: #d5d5d5;
+  font-family: 'Helvetica', Arial, Sans-serif;
+}
+.WahooArt-Footer-Block h1 {
+  font-size: 2vW;
+  font-family: 'Oswald-Bold', Arial, Sans-serif;
+  text-transform: uppercase;
+}
+.WahooArt-Footer_Title {
+  font-size: 2vW;
+  font-family: 'Oswald-Bold', Arial, Sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+.WahooArt-Footer-Block-Content-Payment-Warranty .WahooArt-Footer_Title {
+    float: left;
+    //padding-top: 1vW;
+    padding-left: 1vW;
+    max-width: 70%;
+}
+.WahooArt-Footer-Block-Content-International .WahooArt-Footer_Title, .WahooArt-Footer-Block-Content-Links .WahooArt-Footer_Title, .WahooArt-Footer-Block-Content-Social .WahooArt-Footer_Title {
+	
+    padding-bottom: 1vW;
+	
+}
+.WahooArt-Footer-Block-Content-Width {
+  position: relative;
+  margin: 0 auto;
+  width: 88vW;
+  top: 5vW;
+}
+.WahooArt-Footer-Block-Content-Payment {
+  width: 35%;
+  float: left;
+  padding-left: 3vW;
+}
+.WahooArt-Footer-Block-Content-Payment-Copyright-Links-Line {
+	width: 100%;
+	float: left;
+}
+.WahooArt-Footer-Block-Content-Payment h1 {
+  color: #fff;
+}
+.WahooArt-Footer-Block-Content-Payment-LogosCreditCard {
+	Width:100%;
+	padding:0;
+	font-size:1vW;
+}
+.WahooArt-Footer-Block-Content-Payment img {
+  padding-top: 1vW;
+  width: 3.7vW;
+}
+.WahooArt-Footer-Block-Content-Payment-Warranty {
+  padding-top: 2vW;
+  height: 10vW;
+}
+.WahooArt-Footer-Block-Content-Payment-Warranty img {
+  float: left;
+  width: 7.6vW;
+  margin-left: -2vW;
+}
+.WahooArt-Footer-Block-Content-Payment-Warranty h1 {
+  float: left;
+  padding-top: 1vW;
+  padding-left: 1vW;
+  max-width: 70%;
+}
+.WahooArt-Footer-Block-Content-Payment-Warranty p {
+  float: left;
+  //padding-top: 0.5vW;
+  //padding-left: 1vW;
+  padding-bottom: 1vW;
+  font-size: 0.9vW;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Oswald-Light', Arial, Sans-serif;
+  font-weight: bold;
+  line-height: 150%;
+}
+.WahooArt-Footer-Block-Content-Payment h2 {
+  color: #fff;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  font-size: 1.2vW;
+  float: left;
+  padding-right: 1.7vW;
+}
+.WahooArt-Footer-Block-Content-Payment .WahooArt-Footer-Block-Content-Payment-DNS {
+  color: #fff;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  font-size: 1.2vW;
+  float: left;
+  padding-right: 1.7vW;
+  font-weight: bold;
+}
+.WahooArt-Footer-Block-Content-Payment h3 {
+  color: #9b9b9b;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  font-size: 1.2vW;
+  float: left;
+}
+.WahooArt-Footer-Block-Content-Payment .WahooArt-Footer-Block-Content-Payment-Copyright {
+color: #FFFFFF;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  font-size: 1.2vW;
+  float: none;
+  font-weight: bold;
+}
+.WahooArt-Footer-Block-Content-Payment span {
+  padding-top: 0.5vW;
+  padding-right: 2vW;
+  color: #fff;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  font-size: 1.2vW;
+  float: left;
+}
+.WahooArt-Footer-Block-Content-Links {
+  width: 15%;
+  float: left;
+}
+.WahooArt-Footer-Block-Content-Links h1 {
+  color: #fff;
+  padding-bottom: 1vW;
+}
+.WahooArt-Footer-Block-Content-Links li {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.5vW;
+  font-size: 1.2vW;
+  line-height: 1.4vW;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  color: #9b9b9b;
+  list-style: none;
+}
+.WahooArt-Footer-Block-Content-International {
+  width: 25%;
+  float: left;
+}
+.WahooArt-Footer-Block-Content-International h1 {
+  color: #fff;
+  padding-bottom: 1vW;
+}
+.WahooArt-Footer-Block-Content-International li {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.5vW;
+  font-size: 1.2vW;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  color: #9b9b9b;
+  list-style: none;
+}
+.WahooArt-Footer-Block-Content-Social {
+  width: 25%;
+  float: left;
+}
+.WahooArt-Footer-Block-Content-Social h1 {
+  color: #fff;
+  padding-bottom: 1vW;
+}
+.WahooArt-Footer-Block-Content-Social-Social_Media {
+  padding-bottom: 3vW;
+}
+.WahooArt-Footer-Block-Content-Social-Social_Media img {
+  width: 2.5vW;
+  margin-right: 1vW;
+}
+.WahooArt-Footer-Block-Content-Social-Partners img {
+  //float: left;
+  width: 9vW;
+  height: 2.7vW;
+  margin: 0.2vW;
+  border-radius: 0.2vW;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.WahooArt-Footer-Block-Content-Social div:nth-child(2) img {
+width: 2.25vW;
+}
+.ND{
+	
+display: none;
+		
+}
+.WahooArt-Footer-Block-Content-Font-IssueFIX {
+	padding-bottom: 1vW;	
+	
+}
+/***********************     FOOTER CSS END     ************************/
