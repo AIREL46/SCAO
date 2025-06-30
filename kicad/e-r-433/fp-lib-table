@@ -1,6 +1,0 @@
-(fp_lib_table
-  (lib (name Transfo)(type KiCad)(uri ${KIPRJMOD}/Transformers_CHK.pretty)(options "")(descr "Quiet cook"))
-  (lib (name BR)(type KiCad)(uri ${KIPRJMOD}/BR.pretty)(options "")(descr "Quiet cook"))
-  (lib (name Socket_Arduino_Uno)(type KiCad)(uri /usr/share/kicad/template/Arduino_As_Uno_R3/Socket_Arduino_Uno.pretty)(options "")(descr ""))
-  (lib (name Sp)(type KiCad)(uri ${KIPRJMOD}/Sp.pretty)(options "")(descr ""))
-)

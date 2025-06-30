@@ -1,8 +1,0 @@
-(module Capuchon (layer F.Cu) (tedit 5845ADA0)
-  (fp_text reference "APEM U573" (at 0 0.5) (layer F.SilkS)
-    (effects (font (size 0.492 0.492) (thickness 0.0484)))
-  )
-  (fp_text value Capuchon (at 0 -0.5) (layer F.Fab)
-    (effects (font (size 0.492 0.492) (thickness 0.0484)))
-  )
-)

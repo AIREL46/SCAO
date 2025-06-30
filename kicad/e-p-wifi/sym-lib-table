@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name e-p-wifi-rescue)(type Legacy)(uri ${KIPRJMOD}/e-p-wifi-rescue.lib)(options "")(descr ""))
-)

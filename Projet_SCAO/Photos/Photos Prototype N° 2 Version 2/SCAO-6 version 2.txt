@@ -1,5 +1,0 @@
-SCAO-6 version 2.vi:
-Chemin du VI: E:\SCAO\Projet SCAO\SCAO6\SCAO-6 version 2.vi
-Dernière modification : 10/11/2011  15:22
-Version : 87
-
