@@ -1,0 +1,562 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:mc-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Module mesure de la température"
+Date "9 mar 2015"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L DIL20 U3
+U 1 1 54D0E3A0
+P 3450 3250
+F 0 "U3" H 3600 3750 70  0000 R BNN
+F 1 "DIL20" V 3500 3250 70  0000 C TNN
+F 2 "none" H 3450 3250 60  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001639B.pdf" H 3450 3250 60  0001 C CNN
+F 4 "Microchip" V 3450 3250 60  0001 C CNN "Fournisseur"
+F 5 "PIC16F1459-EP" V 3450 3250 60  0000 C CNN "Ref"
+	1    3450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIL14 U1
+U 1 1 54D2005E
+P 1650 3250
+F 0 "U1" H 1650 3650 60  0000 C CNN
+F 1 "DIL14" V 1650 3250 50  0000 C CNN
+F 2 "" H 1650 3250 60  0000 C CNN
+F 3 "http://www.farnell.com/datasheets/20524.pdf" H 1650 3250 60  0001 C CNN
+F 4 "Analog Device" H 1650 3250 60  0001 C CNN "Constructeur"
+F 5 "AD595" H 1650 3250 60  0001 C CNN "Ref_c"
+F 6 "Farnell" H 1650 3250 60  0001 C CNN "Fournisseur"
+F 7 "409194" H 1650 3250 60  0001 C CNN "Ref_f"
+F 8 "Channel thermocouple amplifier" H 1650 3250 60  0001 C CNN "Désignation"
+	1    1650 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P1
+U 1 1 54D20500
+P 950 2050
+F 0 "P1" V 900 2050 40  0000 C CNN
+F 1 "CONN_2" V 1000 2050 40  0000 C CNN
+F 2 "Diamètre de perçage 1.3 mm" H 950 2050 60  0001 C CNN
+F 3 "https://www.gotronic.fr/art-bornier-sc02-2-54-15468.htm" H 950 2050 60  0001 C CNN
+F 4 "?" V 950 2050 60  0001 C CNN "Constructeur"
+F 5 "?" V 950 2050 60  0001 C CNN "Ref_c"
+F 6 "GOTRONIC" V 950 2050 60  0001 C CNN "Fournisseur"
+F 7 "48930" V 950 2050 60  0001 C CNN "Ref_f"
+F 8 "Bornier SC02/2.54 - 2 contacts - 2.54" V 950 2050 60  0001 C CNN "Désignation"
+	1    950  2050
+	-1   0    0    1   
+$EndComp
+Connection ~ 1300 3550
+Connection ~ 1300 3250
+Connection ~ 1300 2950
+Connection ~ 2000 2950
+Connection ~ 2000 3250
+Connection ~ 2000 3050
+Wire Wire Line
+	2000 3050 2100 3050
+Wire Wire Line
+	2100 3050 2100 4100
+Connection ~ 2100 4100
+Connection ~ 2000 3550
+Connection ~ 2000 3450
+Connection ~ 2000 3150
+Connection ~ 3800 2900
+Connection ~ 3100 3000
+Connection ~ 3800 3000
+Connection ~ 3100 2900
+$Comp
+L R R1
+U 1 1 54D352D8
+P 2200 2650
+F 0 "R1" V 2200 2550 40  0000 C CNN
+F 1 "20K" V 2200 2700 40  0000 C CNN
+F 2 "~" V 2130 2650 30  0000 C CNN
+F 3 "http://www.farnell.com/datasheets/1497270.pdf" H 2200 2650 30  0001 C CNN
+F 4 "Farnell" V 2200 2650 60  0001 C CNN "Fournisseur"
+F 5 "1751583" V 2200 2650 60  0001 C CNN "Ref_f"
+F 6 "http://fr.farnell.com/te-connectivity-holsworthy/h820kbya/resistance-0-25w-0-1-20k/dp/1751583?Ntt=1751583" V 2200 2650 60  0001 C CNN "Lien"
+	1    2200 2650
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 3700
+Wire Wire Line
+	2050 2350 4650 2350
+Connection ~ 2200 2900
+Wire Wire Line
+	2200 2400 2200 2350
+Connection ~ 2200 2350
+Connection ~ 2200 2400
+Wire Wire Line
+	3100 3000 2750 3000
+Wire Wire Line
+	2750 3000 2750 3550
+Wire Wire Line
+	2750 3550 2000 3550
+Wire Wire Line
+	2000 3550 2000 3450
+Wire Wire Line
+	2000 3250 2250 3250
+Wire Wire Line
+	2050 3250 2050 2350
+Wire Wire Line
+	2000 3150 2200 3150
+Wire Wire Line
+	2200 3150 2200 2900
+$Comp
+L CONN_1 P9
+U 1 1 54D3A281
+P 2950 3700
+F 0 "P9" H 3030 3700 40  0000 L CNN
+F 1 "CONN_1" H 2950 3755 30  0001 C CNN
+F 2 "" H 2950 3700 60  0000 C CNN
+F 3 "" H 2950 3700 60  0000 C CNN
+	1    2950 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P3
+U 1 1 54D3A29E
+P 2950 3100
+F 0 "P3" H 3030 3100 40  0000 L CNN
+F 1 "CONN_1" H 2950 3155 30  0001 C CNN
+F 2 "" H 2950 3100 60  0000 C CNN
+F 3 "" H 2950 3100 60  0000 C CNN
+	1    2950 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P4
+U 1 1 54D3A2AD
+P 2950 3200
+F 0 "P4" H 3030 3200 40  0000 L CNN
+F 1 "CONN_1" H 2950 3255 30  0001 C CNN
+F 2 "" H 2950 3200 60  0000 C CNN
+F 3 "" H 2950 3200 60  0000 C CNN
+	1    2950 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P5
+U 1 1 54D3A2D8
+P 2950 3300
+F 0 "P5" H 3030 3300 40  0000 L CNN
+F 1 "CONN_1" H 2950 3355 30  0001 C CNN
+F 2 "" H 2950 3300 60  0000 C CNN
+F 3 "" H 2950 3300 60  0000 C CNN
+	1    2950 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P6
+U 1 1 54D3A2F8
+P 2950 3400
+F 0 "P6" H 3030 3400 40  0000 L CNN
+F 1 "CONN_1" H 2950 3455 30  0001 C CNN
+F 2 "" H 2950 3400 60  0000 C CNN
+F 3 "" H 2950 3400 60  0000 C CNN
+	1    2950 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P7
+U 1 1 54D3A305
+P 2950 3500
+F 0 "P7" H 3030 3500 40  0000 L CNN
+F 1 "CONN_1" H 2950 3555 30  0001 C CNN
+F 2 "" H 2950 3500 60  0000 C CNN
+F 3 "" H 2950 3500 60  0000 C CNN
+	1    2950 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P8
+U 1 1 54D3A316
+P 2950 3600
+F 0 "P8" H 3030 3600 40  0000 L CNN
+F 1 "CONN_1" H 2950 3655 30  0001 C CNN
+F 2 "" H 2950 3600 60  0000 C CNN
+F 3 "" H 2950 3600 60  0000 C CNN
+	1    2950 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P17
+U 1 1 54D3A668
+P 3950 3700
+F 0 "P17" H 4030 3700 40  0000 L CNN
+F 1 "CONN_1" H 3950 3755 30  0001 C CNN
+F 2 "" H 3950 3700 60  0000 C CNN
+F 3 "" H 3950 3700 60  0000 C CNN
+	1    3950 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P16
+U 1 1 54D3A97F
+P 3950 3600
+F 0 "P16" H 4030 3600 40  0000 L CNN
+F 1 "CONN_1" H 3950 3655 30  0001 C CNN
+F 2 "" H 3950 3600 60  0000 C CNN
+F 3 "" H 3950 3600 60  0000 C CNN
+	1    3950 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P15
+U 1 1 54D3A985
+P 3950 3500
+F 0 "P15" H 4030 3500 40  0000 L CNN
+F 1 "CONN_1" H 3950 3555 30  0001 C CNN
+F 2 "" H 3950 3500 60  0000 C CNN
+F 3 "" H 3950 3500 60  0000 C CNN
+	1    3950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P11
+U 1 1 54D3A991
+P 3950 3100
+F 0 "P11" H 4030 3100 40  0000 L CNN
+F 1 "CONN_1" H 3950 3155 30  0001 C CNN
+F 2 "" H 3950 3100 60  0000 C CNN
+F 3 "" H 3950 3100 60  0000 C CNN
+	1    3950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P12
+U 1 1 54D3A997
+P 3950 3200
+F 0 "P12" H 4030 3200 40  0000 L CNN
+F 1 "CONN_1" H 3950 3255 30  0001 C CNN
+F 2 "" H 3950 3200 60  0000 C CNN
+F 3 "" H 3950 3200 60  0000 C CNN
+	1    3950 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P13
+U 1 1 54D3A99D
+P 3950 3300
+F 0 "P13" H 4030 3300 40  0000 L CNN
+F 1 "CONN_1" H 3950 3355 30  0001 C CNN
+F 2 "" H 3950 3300 60  0000 C CNN
+F 3 "" H 3950 3300 60  0000 C CNN
+	1    3950 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P14
+U 1 1 54D3A9A3
+P 3950 3400
+F 0 "P14" H 4030 3400 40  0000 L CNN
+F 1 "CONN_1" H 3950 3455 30  0001 C CNN
+F 2 "" H 3950 3400 60  0000 C CNN
+F 3 "" H 3950 3400 60  0000 C CNN
+	1    3950 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 3100
+Connection ~ 3800 3200
+Connection ~ 3800 3300
+Connection ~ 3800 3400
+Connection ~ 3800 3500
+Connection ~ 3800 3600
+Connection ~ 3100 3100
+Connection ~ 3100 3200
+Connection ~ 3100 3300
+Connection ~ 3100 3400
+Connection ~ 3100 3500
+Connection ~ 3100 3600
+Connection ~ 3100 3700
+Connection ~ 3100 2800
+Wire Wire Line
+	1250 2950 1250 4100
+Wire Wire Line
+	1250 3550 1300 3550
+Wire Wire Line
+	1300 3250 1250 3250
+Connection ~ 1250 4100
+Connection ~ 1250 3550
+$Comp
+L CONN_1 P21
+U 1 1 54D3AD50
+P 1150 3450
+F 0 "P21" H 1230 3450 40  0000 L CNN
+F 1 "CONN_1" H 1150 3505 30  0001 C CNN
+F 2 "" H 1150 3450 60  0000 C CNN
+F 3 "" H 1150 3450 60  0000 C CNN
+	1    1150 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P20
+U 1 1 54D3AD56
+P 1150 3350
+F 0 "P20" H 1230 3350 40  0000 L CNN
+F 1 "CONN_1" H 1150 3405 30  0001 C CNN
+F 2 "" H 1150 3350 60  0000 C CNN
+F 3 "" H 1150 3350 60  0000 C CNN
+	1    1150 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P19
+U 1 1 54D3AD5C
+P 1150 3150
+F 0 "P19" H 1230 3150 40  0000 L CNN
+F 1 "CONN_1" H 1150 3205 30  0001 C CNN
+F 2 "" H 1150 3150 60  0000 C CNN
+F 3 "" H 1150 3150 60  0000 C CNN
+	1    1150 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P18
+U 1 1 54D3AD62
+P 1150 3050
+F 0 "P18" H 1230 3050 40  0000 L CNN
+F 1 "CONN_1" H 1150 3105 30  0001 C CNN
+F 2 "" H 1150 3050 60  0000 C CNN
+F 3 "" H 1150 3050 60  0000 C CNN
+	1    1150 3050
+	-1   0    0    1   
+$EndComp
+Connection ~ 2000 3350
+Connection ~ 1300 3050
+Connection ~ 1300 3150
+Connection ~ 1300 3350
+Connection ~ 1300 3450
+$Comp
+L USB J1
+U 1 1 54EC49F8
+P 4850 3200
+F 0 "J1" H 4800 3600 60  0000 C CNN
+F 1 "USB" V 4600 3350 60  0000 C CNN
+F 2 "" H 4850 3200 60  0000 C CNN
+F 3 "" H 4850 3200 60  0000 C CNN
+	1    4850 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 2350 4650 2800
+Wire Wire Line
+	3800 2800 4500 2800
+Connection ~ 4400 2800
+Wire Wire Line
+	4300 4100 4300 2800
+Wire Wire Line
+	4300 3550 4400 3550
+Connection ~ 4300 3550
+Connection ~ 3800 2800
+Connection ~ 4300 2800
+Wire Wire Line
+	3100 2800 3100 2350
+Connection ~ 3100 2350
+$Comp
+L C C1
+U 1 1 54EC4DC7
+P 4100 2550
+F 0 "C1" H 4100 2650 40  0000 L CNN
+F 1 "10 microF" H 4106 2465 40  0000 L CNN
+F 2 "~" H 4138 2400 30  0000 C CNN
+F 3 "~" H 4100 2550 60  0000 C CNN
+	1    4100 2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 4100 2350
+Wire Wire Line
+	4100 2800 4100 2750
+Connection ~ 4100 2800
+Connection ~ 4100 2750
+Wire Wire Line
+	4500 3550 4500 3600
+Wire Wire Line
+	4500 3600 4200 3600
+Wire Wire Line
+	4200 3600 4200 3000
+Wire Wire Line
+	4200 3000 3800 3000
+Wire Wire Line
+	4650 3550 4650 3650
+Wire Wire Line
+	4650 3650 4250 3650
+Wire Wire Line
+	4250 3650 4250 2900
+Wire Wire Line
+	4250 2900 3800 2900
+Wire Wire Line
+	1250 4100 4300 4100
+$Comp
+L R R3
+U 1 1 54ED9350
+P 2000 2400
+F 0 "R3" V 1900 2400 40  0000 C CNN
+F 1 "10k" V 2007 2401 40  0000 C CNN
+F 2 "~" V 1930 2400 30  0000 C CNN
+F 3 "~" H 2000 2400 30  0000 C CNN
+	1    2000 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 54ED93F6
+P 1300 2400
+F 0 "R2" V 1380 2400 40  0000 C CNN
+F 1 "R 10k" V 1307 2401 40  0000 C CNN
+F 2 "~" V 1230 2400 30  0000 C CNN
+F 3 "~" H 1300 2400 30  0000 C CNN
+	1    1300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 54EDA22C
+P 1650 2650
+F 0 "C2" H 1650 2750 40  0000 L CNN
+F 1 "C" H 1656 2565 40  0000 L CNN
+F 2 "~" H 1688 2500 30  0000 C CNN
+F 3 "~" H 1650 2650 60  0000 C CNN
+	1    1650 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 2950 1250 2950
+Connection ~ 1250 3250
+$Comp
+L C C4
+U 1 1 54EDA33E
+P 2400 3150
+F 0 "C4" H 2400 3250 40  0000 L CNN
+F 1 "C 10 microF" V 2550 2950 40  0000 L CNN
+F 2 "~" H 2438 3000 30  0000 C CNN
+F 3 "~" H 2400 3150 60  0000 C CNN
+	1    2400 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3350 2000 3350
+Wire Wire Line
+	2400 2950 2050 2950
+Connection ~ 2050 2950
+Connection ~ 2400 2950
+Connection ~ 2400 3350
+$Comp
+L C C3
+U 1 1 54EDA57A
+P 2250 3800
+F 0 "C3" H 2250 3900 40  0000 L CNN
+F 1 "0,1 microF" H 2256 3715 40  0000 L CNN
+F 2 "~" H 2288 3650 30  0000 C CNN
+F 3 "~" H 2250 3800 60  0000 C CNN
+	1    2250 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3250 2250 3600
+Connection ~ 2050 3250
+Wire Wire Line
+	2250 4000 2250 4100
+Connection ~ 2250 4100
+Connection ~ 2250 4000
+Connection ~ 2250 3600
+Wire Wire Line
+	2000 2650 2000 2950
+Wire Wire Line
+	1850 2650 2000 2650
+Wire Wire Line
+	1300 2650 1450 2650
+Wire Wire Line
+	1300 2650 1300 2950
+Wire Wire Line
+	1300 1950 2000 1950
+Wire Wire Line
+	2000 1950 2000 2150
+Connection ~ 2000 2150
+Connection ~ 1300 2150
+Connection ~ 1300 1950
+Connection ~ 1300 2650
+Connection ~ 2000 2650
+Connection ~ 4500 2800
+Connection ~ 4650 3550
+Connection ~ 4500 3550
+Connection ~ 4400 3550
+Connection ~ 4650 2800
+$Comp
+L CONN_1 P2
+U 1 1 54EDF5C6
+P 2500 2700
+F 0 "P2" H 2450 2800 40  0000 L CNN
+F 1 "CONN_1" H 2500 2755 30  0001 C CNN
+F 2 "" H 2500 2700 60  0000 C CNN
+F 3 "" H 2500 2700 60  0000 C CNN
+	1    2500 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P10
+U 1 1 54EDF607
+P 2850 2700
+F 0 "P10" H 2800 2600 40  0000 L CNN
+F 1 "CONN_1" H 2850 2755 30  0001 C CNN
+F 2 "" H 2850 2700 60  0000 C CNN
+F 3 "" H 2850 2700 60  0000 C CNN
+	1    2850 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 2900 3000 2900
+Wire Wire Line
+	3000 2900 3000 2700
+Wire Wire Line
+	2200 2900 2350 2900
+Wire Wire Line
+	2350 2900 2350 2700
+Connection ~ 3000 2700
+Connection ~ 2350 2700
+Wire Wire Line
+	2500 2700 2850 2700
+$EndSCHEMATC

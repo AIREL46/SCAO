@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name e-p-wifi-lf)(type Legacy)(uri /home/airel/SCAO/kicad/e-p-wifi-lf/e-p-wifi-lf-rescue.lib)(options "")(descr ""))
+  (lib (name e-p-wifi-lf1)(type Legacy)(uri /home/airel/SCAO/kicad/e-p-wifi-lf/e-p-wifi-lf-rescue.lib)(options "")(descr ""))
+  (lib (name e-p-wifi)(type Legacy)(uri /home/airel/SCAO/kicad/e-p-wifi/e-p-wifi-cache.lib)(options "")(descr ""))
+)

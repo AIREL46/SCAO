@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:lc="http://www.librecad.org" xmlns:xlink="http://www.w3.org/1999/xlink" width="350mm" height="132.1mm" viewBox="0 0 350 132.1">
+    <g lc:layername="contour" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <circle cx="344.92" cy="15.1511297" r="2"/>
+        <circle cx="344.92" cy="116.84885932" r="2"/>
+        <circle cx="174.99999755" cy="66" r="6.5"/>
+        <line x1="226" y1="61.87689437" x2="226" y2="70.12310563"/>
+        <path d="M226,61.87689437 A8.99999972,8.99999972 0 1,0 226,70.12310563 "/>
+        <circle cx="261" cy="66" r="11.25"/>
+        <circle cx="304" cy="66" r="11.25"/>
+        <circle cx="46" cy="66" r="12.5"/>
+        <circle cx="36.5" cy="77.9999985" r="1.6"/>
+        <circle cx="55.5" cy="54" r="1.6"/>
+        <circle cx="89" cy="66" r="6.5"/>
+        <circle cx="132" cy="66" r="6.5"/>
+        <line x1="344.92098435" y1="0" x2="350" y2="4.98"/>
+        <line x1="350" y1="4.98" x2="350" y2="127.02"/>
+        <line x1="350" y1="127.02" x2="344.92" y2="132.1"/>
+        <line x1="344.92" y1="132.1" x2="5.08" y2="132.1"/>
+        <line x1="5.08" y1="132.1" x2="0" y2="127.02"/>
+        <line x1="0" y1="127.02" x2="0" y2="5.08"/>
+        <line x1="0" y1="5.08" x2="5.08" y2="0"/>
+        <line x1="5.08" y1="0" x2="344.92098435" y2="0"/>
+        <circle cx="5.08" cy="15.15088267" r="2"/>
+        <circle cx="5.08" cy="116.84911177" r="2"/>
+    </g>
+    <g lc:layername="contour_ext" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <line x1="5.08" y1="0" x2="0" y2="5.08"/>
+        <line x1="0" y1="5.08" x2="0" y2="127.02"/>
+        <line x1="0" y1="127.02" x2="5.08" y2="132.1"/>
+        <line x1="5.08" y1="132.1" x2="344.92" y2="132.1"/>
+        <line x1="344.92" y1="132.1" x2="350" y2="127.02"/>
+        <line x1="350" y1="127.02" x2="350" y2="4.98"/>
+        <line x1="350" y1="4.98" x2="344.92098435" y2="0"/>
+        <line x1="344.92098435" y1="0" x2="5.08" y2="0"/>
+        <line x1="5.08" y1="0" x2="0" y2="5.08"/>
+        <line x1="0" y1="5.08" x2="0" y2="127.02"/>
+        <line x1="0" y1="127.02" x2="5.08" y2="132.1"/>
+        <line x1="5.08" y1="132.1" x2="344.92" y2="132.1"/>
+        <line x1="344.92" y1="132.1" x2="350" y2="127.02"/>
+        <line x1="350" y1="127.02" x2="350" y2="4.98"/>
+        <line x1="350" y1="4.98" x2="344.92098435" y2="0"/>
+        <line x1="344.92098435" y1="0" x2="5.08" y2="0"/>
+    </g>
+    <g lc:layername="marquage_1" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+    <g lc:layername="marquage_2" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+    <g lc:layername="marquage_3" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+</svg>

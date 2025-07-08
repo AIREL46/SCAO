@@ -1,0 +1,18 @@
+Source,/home/airel/SCAO/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf.sch
+Kicad Rev,Eeschema 5.1.6-c6e7f7d~87~ubuntu18.04.1
+Generated Date,jeu. 09 déc. 2021 15:34:36 CET
+
+Title,e-r-wifi-lf - Liaison filaire
+Company,A3C Presqu'île
+Revision,A
+Date Issue,2021-11-25
+
+Reference,Value,Library,Library Ref
+J1,RJ45_conrad_922647,e-p-wifi-lf,RJ45-e-p-wifi-cache
+J7,3.3V,Connector_Generic,Conn_01x02
+J6,Reset,Connector_Generic,Conn_01x02
+J4,P230V,Connector_Generic,Conn_01x02
+J3,itc,Connector_Generic,Conn_01x02
+J2,Cde relais,Connector_Generic,Conn_01x02
+SW1,Reset,Switch,SW_Push
+J5,+5V,Connector_Generic,Conn_01x02

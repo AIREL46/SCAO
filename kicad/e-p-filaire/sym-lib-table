@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name New_Library)(type Legacy)(uri ${KIPRJMOD}/New_Library.lib)(options "")(descr ""))
+  (lib (name e-p-wifi-cache)(type Legacy)(uri /home/airel/SCAO/kicad/e-p-wifi-shield/e-p-wifi-cache.lib)(options "")(descr ""))
+  (lib (name e-p-wifi-lf-rescue)(type Legacy)(uri ${KIPRJMOD}/e-p-wifi-lf-rescue.lib)(options "")(descr ""))
+)

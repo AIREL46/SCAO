@@ -1,0 +1,73 @@
+Revenons maintenant sur les expressions et opérateurs que vous avez déjà vus dans les vidéos précédentes.
+Une expression apparaît, par exemple dans une affectation, comme ici.
+Dans ce cas, l'expression est forcément à droite du signe égal puisqu'elle calcule une valeur et cette valeur doit être du même type que la variable qui se trouve à gauche du signe égal, puisqu'on va donner la valeur calculée par l'expression, à la variable.
+Une expression peut être simplement une valeur littérale comme quatre ou trois virgule quatorze.
+Alors, notez au passage qu'on n'écrit pas trois virgule quatorze, mais bien trois point quatorze puisque le C++ utilise la notation anglo-saxonne.
+Mais en règle générale une expression peut être une formule comme ici où je multiplie la valeur de la variable n avec elle-même, j'obtiens donc n au carré simplement.
+La multiplication se note avec le symbole étoile et je peux avoir dans mon expression d'autres symboles mathématiques comme l'addition,la soustraction, je peux également utiliser des parenthèses, c'est donc quelque chose d'assez général.
+Il est important d'être conscient quand on écrit des expressions que les valeurs littérales ont leur propre type, exactement comme les variables.
+Par exemple si j'écris un simplement, ce un est une valeur littérale de type int.
+Si maintenant j'écris un point zéro, ce un point zéro sera de type double.
+Notez au passage que l'on peut écrire tout simplement, un point tout court, au lieu de un point zéro et ce un point sera donc également aussi de type double.
+Ça veut dire que je peux écrire une déclaration de cette façon-ci, avec seulement un point, qui est équivalente à cette déclaration-ci, mais évidemment écrire un point zéro, ce sera toujours plus lisible que d'écrire un point tout court,
+donc préférez la notation un point zéro.
+On peut également utiliser la notation scientifique, c'est à dire que l'on peut écrire deux e trois pour deux multiplié par dix puissance trois, c'est à dire deux mille, donc ce deux e trois vaut deux mille et de façon générale a e b vaut a multiplié par dix puissance b.
+Par exemple dans cette déclaration, j'initialise la variable x à un virgule trois multiplié par dix puissance trois, c'est à dire mille trois cents.
+Dans cette déclaration-ci j'initialise ma variable y à un virgule trois multiplié par dix puissance, cette fois ci, moins trois, c'est à dire que y vaut zéro virgule zéro zéro treize.
+Du coté des opérateurs, on dispose des quatre opérateurs usuels : c'est à dire l'addition qui se note avec le symbole plus, la soustraction qui se note avec le symbole moins.
+J'ai dit que la multiplication se notait avec le caractère étoile et la division se note avec le caractère slash.
+Mais attention, il y a un piège dans le cas de la division, si les deux valeurs qui interviennent dans la division sont des types int, il s'agit de la division entière.
+Par exemple, dans cette division, un et deux sont deux valeurs littérales qui sont toutes les deux de type int et il s'agit donc de la division entière et on va obtenir zéro, alors pourquoi ?
+Parce que un est égal à zéro fois deux et il reste un et le résultat de la division entière est ce zéro.
+Un autre exemple dans le cas de cinq divisé par deux, je vais obtenir deux, pourquoi ?
+Parce que cinq est égal à deux fois deux et il reste un et le résultat de la division est ce deux.
+Si en revanche, une des deux valeurs qui apparaissent dans les divisions est de type double, l'autre valeur va tout d'abord être convertie en double, c'est à dire que ce un va être converti en un double, que je peux noter un point zéro, on va obtenir la division un point zéro divisé par deux point zéro et donc obtenir comme on aurait pu s'y attendre zéro point  cinq.
+En C++, on dispose également des opérateurs plus égal, moins égal; multiplié égal et divisé égal.
+Par exemple, j'ai le droit d'écrire un plus égale cinq et c'est équivalent à écrire a égale a plus cinq.
+Un autre exemple, je peux écrire a multiplié égale b, et c'est équivalent à écrire a égale a fois b.
+Dans le cas des int et dans le cas des int seulement, on dispose également d'un opérateur qui s'appelle modulo et qui se note avec le caractère pourcent et qui renvoie le reste de la division entière. Alors par exemple onze modulo, pourcent, quatre vaut trois, alors pourquoi ?
+Parce que onze est égal à deux fois quatre plus trois. C'est ce reste qui correspond au résultat du modulo.
+Un autre exemple, douze modulo quatre vaut, à votre avis ? zéro.
+Alors pourquoi ? Parce que douze est égal à trois fois quatre plus zéro et c'est ce zéro qui est le résultat du modulo.
+Il existe aussi des opérateurs qui se notent plus plus et moins moins, qui s'appellent des opérateurs d'incrémentation et de décrémentation, c'est à dire qu'ils vont permettre d'ajouter un, ou de se soustraire un à des variables.
+Alors par exemple, j'ai le droit d'écrire plus plus i et c'est équivalent à écrire i égale i plus un qui va donc ajouter un à la variable i.
+J'aurais pu aussi par exemple écrire moins moins a qui sera équivalent à a égale a moins un, ce qui va retirer un à la valeur de la variable a.
+Donc ces opérateurs sont très utilisés dans le cas des boucles for que nous verrons dans une leçon suivante.
+Jusqu'ici nous avons toujours vu des valeurs décimales et des variables de type double d'un coté et d'un autre coté, des valeurs  entières et des variables de type int.
+Que se passe-t-il quand, par exemple, on essaye d'affecter une valeur décimale à une variable de type int ?
+Par exemple, j'ai ici une variable x de type double qui contient la valeur un virgule cinq, je déclare ici une variable n de type int que j'ai représentée ici et dans cette affectation j'essaye d'affecter la valeur de l'expression trois fois x, c'est à dire quatre virgule cinq, à ma variable n qui est de type int et qui est donc prévue que pour contenir des valeurs entières.
+Que se passe-t-il dans ce cas-là ?
+Hé bien le compilateur va convertir la valeur littérale quatre virgule cinq qui est de type double en une valeur qui sera de type int.
+Cette conversion se fait, tout simplement, en perdant la partie fractionnaire, c'est à dire que quatre virgule cinq va être converti en quatre.
+Ce quatre est maintenant de type int et on va pouvoir effectuer l'affectation de ce quatre à la variable n de type int.
+Notez au passage que cette conversion de type double vers type int est un cas très particulier; on dispose également de la conversion de int vers double, mais il s'agit là de deux exceptions.
+En règle générale, le C++ est ce qu'on appelle un langage fortement typé et qui va exiger que dans une affection, par exemple, ce qui est à droite du signe égal soit du même type que ce qui est à gauche.
+Revenons maintenant sur le piège de la division entière.
+Alors j'ai déclaré ici une variable x de type double que j'ai représentée ici et dans cette affectation, j'affecte la valeur de l'expression un divisé par deux à ma variable x.
+Alors à votre avis que contient x après cette affectation ?
+Hé bien, comme un et deux sont tous les deux des valeurs littérales de type int, cette division est la division entière, un divisé par deux, dans le cas de la division entière, vaut zéro et on va donc affecter la valeur zéro à la variable x.
+Le fait que x ait été déclaré de type double ne change rien ici.
+Dans une affectation, on évalue toujours ce qui est à droite du signe égal quel que soit ce qui se trouve à gauche du signe égal.
+Le problème peut se poser en pratique quand, par exemple, on essaye de calculer la moyenne de deux valeurs entières.
+J'ai par exemple ici, déclaré deux variables, note1 initialisée à quatre et note2 initialisée à cinq, elles sont toutes les deux de type int.
+Je veux calculer leur moyenne, donc je devrais obtenir quatre virgule cinq.
+Alors que si je fais cette déclaration, dans cette expression note1 et note2 sont donc de type int, donc note1 plus note2 est également de type int, cette valeur littérale deux est également de type int, il s'agit donc ici, de la division entière.
+Je vais donc obtenir neuf divisé par deux, c'est à dire quatre, alors que je voulais quatre virgule cinq.
+Une solution possible, c'est de faire quelque chose comme ça : ici, ben j'ai toujours note1 et note2 de type int, initialisées toujours à quatre et cinq, j'initialise moyenne au résultat de note1 plus note2.
+Note1 plus note2 ça vaut neuf, de type int, mais je l'affecte à moyenne qui a été déclarée de type double et donc moyenne va contenir neuf, mais un neuf que je pourrais re-écrire neuf point zéro pour bien montrer qu'il est de type double.
+Cette fois-ci quand j'écris moyenne divisée égal deux, alors que je vous rappelle équivalent à moyenne égale moyenne divisée par deux.
+Comme cette fois-ci moyenne est de type double, même si deux est de type int et va être converti en une valeur de type double, que je vais écrire deux point zéro.
+On va donc, calculer neuf point zéro divisé par deux point zéro, qui est la division classique et donc cette fois ci on va bien obtenir quatre virgule cinq et affecter quatre virgule cinq à la variable moyenne.
+On peut également utiliser des fonctions mathématiques dans des expressions.
+Alors pour cela il faut ajouter la ligne dièse include cmath au début du programme et si par exemple je veux calculer le sinus d'un
+angle, hé bien je vais pouvoir utiliser la fonction sin, comme ici.
+Alors au passage, les fonctions trignonométriques en C++, attendent des angles en radians, donc si j'ai un angle de dix degrés, hé bien je vais le convertir comme ici en radians à l'aide de cette expression et je vais donner sa valeur à la fonction sin pour qu'elle me renvoie le sinus de cet angle de dix degrés, voilà. C'est pas plus difficile que ça.
+Voici une liste assez complète des fonctions mathématiques dont on dispose en C plus plus.
+Les fonctions les plus intéressantes sont sans doute les fonctions trigonométriques sin, cos et tan qui attendent, je vous le rappelle, des angles en radians, la fonction exponentielle se note exp, le logarithme népérien qui se note ln en mathématiques, se note log en C++, la fonction puissance x puissance y se note pow x virgule y en C++, la racine carrée se note sqrt pour square root, la valeur absolue se note abs.
+On dispose également de plusieurs constantes mathématiques. Alors même si elles ne sont pas définies officiellement par le standard du C++, la plupart des compilateurs les définissent.
+Alors par exemple, nous avons Pi qui se note M underscore PI en lettres capitales et e qui est la base des logarithmes naturels qui s'écrit M underscore E, également en lettres capitales.
+Alors par exemple, si j'ai un angle exprimé en degrés que je veux convertir en radians, je peux utiliser cette formule-ci, c'est-à-dire multiplier l'angle en degrés par Pi et diviser par cent quatre vingt.
+En C++ ça va s'écrire de cette façon-ci. J'obtiens la valeur de Pi en écrivant M underscore PI, je peux multiplier par l'angle, divisé
+par cent quatre vingt et notez au passage que, comme cette expression est de type double, je n'ai pas de problème de la division entière, lors de cette division.
+
+

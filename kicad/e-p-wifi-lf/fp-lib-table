@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name e-p-wifi)(type KiCad)(uri /home/airel/SCAO/kicad/e-p-wifi-shield)(options "")(descr ""))
+  (lib (name e-p-wifi-lf)(type KiCad)(uri /home/airel/SCAO/kicad/e-p-wifi-shield)(options "")(descr ""))
+)

@@ -1,0 +1,149 @@
+/* Box 1 */
+#box1{
+    width: 100%;
+    background-color:#1D1D2C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+    /* Box 1 - Title */
+#box1 h1{
+    color: #F7F4E9;
+}
+    /* Box 1 - container 1 */
+#box1 div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%; 
+    margin-bottom: 2%;
+}
+        /* Box 1 -  container 1 - image */
+#box1 img{
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+        /* Box 1 - container 1 - text paragraph */
+#box1 p{
+    text-align: center;
+    margin-bottom: 5%;  
+    font-family: 'slabo';
+    font-size: 20px;
+    color: #F7F4E9; 
+}
+#box1 p em{
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: underline 3px solid;
+    text-decoration-color: #32c793;
+}
+
+
+/* Box 2 */
+#box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    /* Box 2 - title */
+#box2 h1{
+    color: #1D1D2C;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+/* Box 2 - image */
+#box2 img{
+    width: 45%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .3);
+}
+
+    /* Box 2 - par*/
+#box2 p{
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    font-family: 'slabo';
+    font-size: 20px;
+    color: #1D1D2C; 
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+#box2 p em{
+    color: #4DB6AC; 
+    font-style: normal;
+    font-weight: bold;
+}
+    /* Box 2 - Button */
+#box2 a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px 10px 20px; 
+    margin: 2% 0 2% 0;
+    border-radius: 24px;
+    background-color: #4DB6AC;
+}
+#box2 a:hover{
+    background-color: #3c8981;
+}
+#box2 a p{
+    color: #F7F4E9;
+    font-family: 'slabo';
+    font-weight: bold;
+    width: 100%;
+}
+        
+
+
+
+
+@media screen and (min-width: 850px){
+
+    /* Box 1 */
+    /* Box 1 - h1 */
+#box1 h1{
+    font-size: 50px;
+}
+    /* Box 1 - container 1 */
+#box1 div{
+    width: 70%;
+    flex-direction: row-reverse;    
+    justify-content: space-between;
+}
+        /* Box 1 -  container 1 - image */
+#box1 img{
+    width: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}   
+        /* Box 1 - container 1 - text paragraph */
+#box1 p{
+    margin-bottom: 0;  
+    width: 50% ;
+    align-items: center;
+}
+
+
+/* Box 2 */
+    /* Box 2 - image */
+#box2 img{
+    width: 30%;
+}
+    /* Box 2 - par*/
+#box2 p{
+    height: 100%;
+    width: 70%;
+}
+
+
+}
