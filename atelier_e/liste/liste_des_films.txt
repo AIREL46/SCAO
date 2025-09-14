@@ -1,0 +1,213 @@
+total 188578369
+      0 drwxrwxrwx 1 root root          0 mars  10  2019 a-l-est-d-eden
+      4 drwxrwxrwx 1 root root       4096 juin  17  2018 amadeus-1
+      0 drwxrwxrwx 1 root root          0 juin  18  2018 amadeus-2
+      1 -rwxrwxrwx 1 root root         33 févr. 21  2018 Autorun.inf
+      0 drwxrwxrwx 1 root root          0 mars  20  2019 beau-travail
+      0 drwxrwxrwx 1 root root          0 janv. 24  2021 betty
+      4 drwxrwxrwx 1 root root       4096 janv. 24  2021 blue_steel
+      0 drwxrwxrwx 1 root root          0 janv. 24  2021 caprice
+      4 drwxrwxrwx 1 root root       4096 sept.  3  2018 casque-d-or
+      0 drwxrwxrwx 1 root root          0 janv. 24  2021 catherine-camus
+      0 drwxrwxrwx 1 root root          0 sept. 16  2018 cesar-rosalie
+      4 drwxrwxrwx 1 root root       4096 janv. 24  2021 chef
+      0 drwxrwxrwx 1 root root          0 févr. 17  2019 claude-chabrol
+      0 drwxrwxrwx 1 root root          0 sept. 20  2018 coincoin1
+      0 drwxrwxrwx 1 root root          0 sept. 27  2018 coincoin2
+      4 drwxrwxrwx 1 root root       4096 févr. 12  2018 coup-de-torchon
+      0 drwxrwxrwx 1 root root          0 janv.  3  2019 crime-presque-parfait
+      4 drwxrwxrwx 1 root root       4096 déc.  19  2018 cyrano-de-bergerac
+      0 drwxrwxrwx 1 root root          0 août  19  2018 dark-shadows
+      4 drwxrwxrwx 1 root root       4096 mars  12  2018 dernier-domicile-connu
+      4 drwxrwxrwx 1 root root       4096 avril 16  2018 desaxes
+      0 drwxrwxrwx 1 root root          0 mars  11  2018 deux-hommes-dans-la-ville
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 dieu-crea-la-femme
+      0 drwxrwxrwx 1 root root          0 juil. 22  2018 diners-de-cons
+      4 drwxrwxrwx 1 root root       4096 sept. 11  2018 dolce-vita
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 drive
+      4 drwxrwxrwx 1 root root       4096 avril  1  2018 et-au-milieu-coule-une-riviere
+      0 drwxrwxrwx 1 root root          0 avril  1  2018 eugene-delacroix
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 eve
+     28 -rwxrwxrwx 1 root root      27071 nov.  10  2018 Extrait-aout-2016.ods
+     20 -rwxrwxrwx 1 root root      19700 nov.  10  2018 Familles.ods
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 fenetre-sur-cour
+      4 drwxrwxrwx 1 root root       4096 mars   4  2019 gilda
+1648220 -rwxrwxrwx 1 root root 1687775992 mars  24  2018 GIORGINO.1994.Drame.DVDRiP.XViD.FRENCH-LDD.avi
+      4 drwxrwxrwx 1 root root       4096 janv. 27  2021 guerre-et-paix
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 henri-georges-clouzot
+      4 drwxrwxrwx 1 root root       4096 mai    7  2018 heritage-de-la-chouette
+      4 drwxrwxrwx 1 root root       4096 nov.  10  2018 hoedic
+      4 drwxrwxrwx 1 root root       4096 janv. 27  2021 il-etait-une-fois-la-revolution
+      4 drwxrwxrwx 1 root root       4096 déc.  20  2018 inconnu-nord-express
+     32 -rwxrwxrwx 1 root root      32768 avril 23  2018 info3.dvr
+      4 drwxrwxrwx 1 root root       4096 sept. 14  2018 jacques-brel
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 jeanne-arc
+      0 drwxrwxrwx 1 root root          0 avril  3  2018 jeanne-moreau
+      0 drwxrwxrwx 1 root root          0 févr.  1  2019 joan-baez
+      4 drwxrwxrwx 1 root root       4096 mai   27  2018 johny-guitar
+      4 drwxrwxrwx 1 root root       4096 juil. 20  2018 journal-de-ma-tete
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 journal-f-de-chambre
+      0 drwxrwxrwx 1 root root          0 janv. 27  2021 la-femme-du-boulanger
+      0 drwxrwxrwx 1 root root          0 mars  28  2018 la-femme-infidele
+4194048 -rwxrwxrwx 1 root root 4294705152 nov.  29  2017 la-lecon-de-piano.mts
+ 436128 -rwxrwxrwx 1 root root  446595072 nov.  29  2017 la-lecon-de-piano.mts1
+      8 -rwxrwxrwx 1 root root       6144 nov.  29  2017 la-lecon-de-piano.mts.meta
+2146848 -rwxrwxrwx 1 root root 2198372352 sept. 28  2017 la-méditation.mts
+      8 -rwxrwxrwx 1 root root       6144 sept. 28  2017 la-méditation.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 sept. 11  2017 la-piscine.mts
+ 525888 -rwxrwxrwx 1 root root  538509312 sept. 11  2017 la-piscine.mts1
+      8 -rwxrwxrwx 1 root root       6144 sept. 11  2017 la-piscine.mts.meta
+      4 drwxrwxrwx 1 root root       4096 avril 29  2018 la-sirene-du-mississippi
+      0 drwxrwxrwx 1 root root          0 mai   12  2018 l-aventure-humaine
+      4 drwxrwxrwx 1 root root       4096 août  27  2018 la-vie-et-rien-d-autre
+4194048 -rwxrwxrwx 1 root root 4294705152 nov.  26  2017 le-cercle-rouge.mts
+ 389616 -rwxrwxrwx 1 root root  398966784 nov.  26  2017 le-cercle-rouge.mts1
+      8 -rwxrwxrwx 1 root root       6144 nov.  26  2017 le-cercle-rouge.mts.meta
+3821040 -rwxrwxrwx 1 root root 3912744960 oct.  16  2017 le-chat.mts
+      8 -rwxrwxrwx 1 root root       6144 oct.  16  2017 le-chat.mts.meta
+3632352 -rwxrwxrwx 1 root root 3719528448 nov.  20  2017 le-corbeau.mts
+      8 -rwxrwxrwx 1 root root       6144 nov.  21  2017 le-corbeau.mts.meta
+      4 drwxrwxrwx 1 root root       4096 mars  14  2018 le-couperet
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  4  2018 le-crime-etait-presque-parfait.mts
+ 595200 -rwxrwxrwx 1 root root  609484800 janv.  4  2018 le-crime-etait-presque-parfait.mts1
+      8 -rwxrwxrwx 1 root root       6144 janv.  4  2018 le-crime-etait-presque-parfait.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 nov.  27  2017 le-deuxieme-souffle.mts
+1245744 -rwxrwxrwx 1 root root 1275641856 nov.  27  2017 le-deuxieme-souffle.mts1
+      8 -rwxrwxrwx 1 root root       6144 nov.  27  2017 le-deuxieme-souffle.mts.meta
+      0 drwxrwxrwx 1 root root          0 mai    2  2018 le-gamin-au-velo
+1433132 -rwxrwxrwx 1 root root 1467525347 févr. 21  2020 Le Grand Soir.mkv
+      0 drwxrwxrwx 1 root root          0 avril 25  2019 le-livre-d-images
+      0 drwxrwxrwx 1 root root          0 oct.  21  2018 le-louvre
+4194048 -rwxrwxrwx 1 root root 4294705152 nov.  28  2017 leon-morin-prete.mts
+1343748 -rwxrwxrwx 1 root root 1375997568 nov.  28  2017 leon-morin-prete.mts1
+      8 -rwxrwxrwx 1 root root       6144 déc.   3  2017 leon-morin-prete.mts.meta
+      0 drwxrwxrwx 1 root root          0 mars  26  2018 les-choses-de-la-vie
+1999632 -rwxrwxrwx 1 root root 2047623168 oct.  22  2017 les-derniers-secrets-de-psychose-1.mts
+      8 -rwxrwxrwx 1 root root       6144 oct.  26  2017 les-derniers-secrets-de-psychose-1.mts.meta
+ 964752 -rwxrwxrwx 1 root root  987906048 oct.  22  2017 les-derniers-secrets-de-psychose-2.mts
+      8 -rwxrwxrwx 1 root root       6144 oct.  27  2017 les-derniers-secrets-de-psychose-2.mts.meta
+      0 drwxrwxrwx 1 root root          0 avril  9  2018 les-diaboliques
+1774752 -rwxrwxrwx 1 root root 1817346048 sept. 27  2017 le-souper.mts
+      8 -rwxrwxrwx 1 root root       6144 sept. 27  2017 le-souper.mts.meta
+      4 drwxrwxrwx 1 root root       4096 mai    1  2018 les-routes-de-l-esclavage
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  4  2018 les-tontons-flingueurs.mts
+1752000 -rwxrwxrwx 1 root root 1794048000 janv.  4  2018 les-tontons-flingueurs.mts1
+      8 -rwxrwxrwx 1 root root       6144 janv.  4  2018 les-tontons-flingueurs.mts.meta
+      0 drwxrwxrwx 1 root root          0 oct.   7  2018 le-train
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  6  2018 l-heure-d-ete.mts
+ 277704 -rwxrwxrwx 1 root root  284368896 janv.  6  2018 l-heure-d-ete.mts1
+      8 -rwxrwxrwx 1 root root       6144 janv.  6  2018 l-heure-d-ete.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  3  2018 l-inconnu-du-nord-express.mts
+ 211392 -rwxrwxrwx 1 root root  216465408 janv.  3  2018 l-inconnu-du-nord-express.mts1
+      8 -rwxrwxrwx 1 root root       6144 janv.  3  2018 l-inconnu-du-nord-express.mts.meta
+4106208 -rwxrwxrwx 1 root root 4204756992 oct.  18  2017 loi-du-marche.mts
+      8 -rwxrwxrwx 1 root root       6144 oct.  21  2017 loi-du-marche.mts.meta
+      0 drwxrwxrwx 1 root root          0 nov.  26  2018 ma-loute
+      0 drwxrwxrwx 1 root root          0 mai   30  2018 mammuth
+3929052 -rwxrwxrwx 1 root root 4023348672 oct.  22  2016 MARAIS.mts
+      8 -rwxrwxrwx 1 root root       6144 nov.  28  2016 MARAIS.mts.meta
+      0 drwxrwxrwx 1 root root          0 mars   9  2018 marguerite
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  4  2018 ma-saison-prefere_la-vie-de-chateau_detective.mts
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  4  2018 ma-saison-prefere_la-vie-de-chateau_detective.mts1
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  4  2018 ma-saison-prefere_la-vie-de-chateau_detective.mts2
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  4  2018 ma-saison-prefere_la-vie-de-chateau_detective.mts3
+      8 -rwxrwxrwx 1 root root       6144 janv.  5  2018 ma-saison-prefere_la-vie-de-chateau_detective.mts.meta
+      0 drwxrwxrwx 1 root root          0 avril 17  2019 ma-vie-de-courgette
+      0 drwxrwxrwx 1 root root          0 nov.  10  2018 menigoute
+      0 drwxrwxrwx 1 root root          0 oct.  14  2018 miro
+      0 drwxrwxrwx 1 root root          0 nov.  18  2018 miro-dans-la-couleur
+      4 drwxrwxrwx 1 root root       4096 juil. 23  2018 mon-oncle
+      4 drwxrwxrwx 1 root root       4096 mars  12  2018 monsieur-ripois
+      4 drwxrwxrwx 1 root root       4096 mai   14  2018 mr-klein
+4194048 -rwxrwxrwx 1 root root 4294705152 juin  19  2017 mulholland-drive.mts
+2510312 -rwxrwxrwx 1 root root 2570559168 juin  19  2017 mulholland-drive.mts1
+      8 -rwxrwxrwx 1 root root       6144 juil. 23  2017 mulholland-drive.mts.meta
+3226644 -rwxrwxrwx 1 root root 3304082688 août  11  2016 OISEAUX,MIGRATEURS.mts
+      8 -rwxrwxrwx 1 root root       6144 nov.  28  2016 OISEAUX,MIGRATEURS.mts.meta
+      4 drwxrwxrwx 1 root root       4096 avril 30  2018 only-lovers-left-alive
+  14904 -rwxrwxrwx 1 root root   15260937 nov.  10  2018 ORNINI1701_ppt1.pptx
+  19952 -rwxrwxrwx 1 root root   20430057 nov.  10  2018 ORNINI1701_ppt2_bis.pptx
+  34324 -rwxrwxrwx 1 root root   35144968 nov.  10  2018 ORNINI1701_ppt3.pptx
+  58936 -rwxrwxrwx 1 root root   60347849 nov.  10  2018 ORNINI1701_ppt4.pptx
+  20764 -rwxrwxrwx 1 root root   21260639 nov.  10  2018 ORNINI1701_ppt5.pptx
+      4 drwxrwxrwx 1 root root       4096 juin  25  2018 pandora
+3965616 -rwxrwxrwx 1 root root 4060790784 janv.  6  2018 papouasie.mts
+      8 -rwxrwxrwx 1 root root       6144 janv.  6  2018 papouasie.mts.meta
+2850192 -rwxrwxrwx 1 root root 2918596608 oct.   2  2017 paul-gauguin-1.mts
+      8 -rwxrwxrwx 1 root root       6144 oct.   3  2017 paul-gauguin-1.mts.meta
+1708320 -rwxrwxrwx 1 root root 1749319680 oct.   2  2017 paul-gauguin-2.mts
+      8 -rwxrwxrwx 1 root root       6144 oct.   3  2017 paul-gauguin-2.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 févr.  8  2018 personna.mts
+4194048 -rwxrwxrwx 1 root root 4294705152 févr.  8  2018 personna.mts1
+      8 -rwxrwxrwx 1 root root       6144 févr.  8  2018 personna.mts.meta
+     12 drwxrwxrwx 1 root root      12288 nov.  10  2018 photos
+      0 drwxrwxrwx 1 root root          0 oct.  28  2018 picasso-braque-
+      0 drwxrwxrwx 1 root root          0 nov.   4  2018 picasso-metamorphose
+      4 drwxrwxrwx 1 root root       4096 avril 11  2018 polisse
+      1 -rwxrwxrwx 1 root root         38 oct.   4  2020 pvr_partition_info.file
+3991344 -rwxrwxrwx 1 root root 4087132992 nov.  13  2017 quai-des-orfevres.mts
+      8 -rwxrwxrwx 1 root root       6144 nov.  14  2017 quai-des-orfevres.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 févr.  7  2018 que-la-fete-commence.mts
+ 103752 -rwxrwxrwx 1 root root  106242048 févr.  7  2018 que-la-fete-commence.mts1
+      8 -rwxrwxrwx 1 root root       6144 févr.  7  2018 que-la-fete-commence.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 nov.   6  2017 reds-1.mts
+2359920 -rwxrwxrwx 1 root root 2416558080 nov.   6  2017 reds-1.mts1
+      8 -rwxrwxrwx 1 root root       6144 nov.   6  2017 reds-1.mts.meta
+2528880 -rwxrwxrwx 1 root root 2589573120 nov.   7  2017 reds-2.mts
+      8 -rwxrwxrwx 1 root root       6144 nov.   7  2017 reds-2.mts.meta
+      0 drwxrwxrwx 1 root root          0 avril 11 11:02 rosetta
+4194048 -rwxrwxrwx 1 root root 4294705152 nov.  26  2017 rostropovitch.mts
+  48452 -rwxrwxrwx 1 root root   49611264 nov.  26  2017 rostropovitch.mts1
+      8 -rwxrwxrwx 1 root root       6144 nov.  26  2017 rostropovitch.mts.meta
+1883904 -rwxrwxrwx 1 root root 1929117696 nov.  10  2017 rumble.mts
+      8 -rwxrwxrwx 1 root root       6144 nov.  10  2017 rumble.mts.meta
+ 716592 -rwxrwxrwx 1 root root  733788172 févr. 21  2020 Sans.Queue.Ni.Tete.zone-telechargement.com.avi
+      4 drwxrwxrwx 1 root root       4096 mars  18  2019 sans-toit-ni-loi
+      0 drwxrwxrwx 1 root root          0 juin  20  2019 Seagate
+4194048 -rwxrwxrwx 1 root root 4294705152 janv. 22  2018 showgirls.mts
+ 488880 -rwxrwxrwx 1 root root  500613120 janv. 22  2018 showgirls.mts1
+      8 -rwxrwxrwx 1 root root       6144 janv. 22  2018 showgirls.mts.meta
+      0 drwxrwxrwx 1 root root          0 juil.  9  2018 sous-le-soleil-de-satan
+      0 drwxrwxrwx 1 root root          0 juin  20  2019 Start_Here_Mac.app
+  17612 -rwxrwxrwx 1 root root   18033016 févr.  8  2018 Start_Here_Win.exe
+      0 drwxrwxrwx 1 root root          0 janv. 20  2021 sunset-boulevard
+      4 drwxrwxrwx 1 root root       4096 juil. 15  2018 sur-la-route-de-madison
+      4 drwxrwxrwx 1 root root       4096 mars  21  2018 talons-aiguilles
+   6016 -rwxrwxrwx 1 root root    6160384 oct.   4  2020 test_write1.dvr
+   6016 -rwxrwxrwx 1 root root    6160384 oct.   4  2020 test_write2.dvr
+4038096 -rwxrwxrwx 1 root root 4135010304 févr.  5  2018 the-reader.mts
+      8 -rwxrwxrwx 1 root root       6144 févr.  5  2018 the-reader.mts.meta
+1201200 -rwxrwxrwx 1 root root 1230028800 sept. 12  2017 titan.mts
+      8 -rwxrwxrwx 1 root root       6144 sept. 12  2017 titan.mts.meta
+3197832 -rwxrwxrwx 1 root root 3274577088 déc.  11  2017 touchez-pas-au-grisbi.mts
+      8 -rwxrwxrwx 1 root root       6144 déc.  11  2017 touchez-pas-au-grisbi.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 sept. 27  2016 TRAVIATA.mts
+ 149232 -rwxrwxrwx 1 root root  152813568 sept. 27  2016 TRAVIATA.mts1
+      8 -rwxrwxrwx 1 root root       6144 nov.  28  2016 TRAVIATA.mts.meta
+      4 drwxrwxrwx 1 root root       4096 mars  18  2018 trois-hommes-a-abatre
+2796288 -rwxrwxrwx 1 root root 2863398912 oct.   6  2017 un-ciel-radieux.mts
+      8 -rwxrwxrwx 1 root root       6144 oct.   6  2017 un-ciel-radieux.mts.meta
+      4 drwxrwxrwx 1 root root       4096 juin  18  2018 une-belle-fille-comme-moi
+2573256 -rwxrwxrwx 1 root root 2635014144 déc.   6  2017 une-femme-de-menage.mts
+      8 -rwxrwxrwx 1 root root       6144 déc.   6  2017 une-femme-de-menage.mts.meta
+4194048 -rwxrwxrwx 1 root root 4294705152 déc.  16  2017 van-gogh.mts
+2149988 -rwxrwxrwx 1 root root 2201583936 déc.  16  2017 van-gogh.mts1
+      8 -rwxrwxrwx 1 root root       6144 déc.  16  2017 van-gogh.mts.meta
+      4 drwxrwxrwx 1 root root       4096 mars   1  2019 Vidéos
+4194048 -rwxrwxrwx 1 root root 4294705152 oct.  16  2017 viridiana.mts
+ 789476 -rwxrwxrwx 1 root root  808419648 oct.  16  2017 viridiana.mts1
+      8 -rwxrwxrwx 1 root root       6144 oct.  17  2017 viridiana.mts.meta
+      4 drwxrwxrwx 1 root root       4096 avril 15  2018 vol-au-dessus-nid-coucous
+      0 drwxrwxrwx 1 root root          0 mai   29  2018 voleur-de-bicyclette
+4194048 -rwxrwxrwx 1 root root 4294705152 sept. 28  2017 voyage-bout-enfer.mts
+1689072 -rwxrwxrwx 1 root root 1729609728 sept. 28  2017 voyage-bout-enfer.mts1
+      8 -rwxrwxrwx 1 root root       6144 sept. 28  2017 voyage-bout-enfer.mts.meta
+   1148 -rwxrwxrwx 1 root root    1172289 juil. 25  2018 Warranty.pdf
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  1  2018 west-side-story.mts
+4194048 -rwxrwxrwx 1 root root 4294705152 janv.  2  2018 west-side-story.mts1
+      8 -rwxrwxrwx 1 root root       6144 janv.  2  2018 west-side-story.mts.meta
+     84 -rwxrwxrwx 1 root root      84480 nov.  10  2018 WI côte Loire-Atlantique 2016 été.xls
+ 714244 -rwxrwxrwx 1 root root  731381787 févr. 21  2020 Wrong.Cops.2013.FANSUB.VOSTFR.HDRiP.XViD-LaTeam@TaMere-www.Zone-Telechargement.com.avi
+ 726380 -rwxrwxrwx 1 root root  743811684 févr. 21  2020 [ www.CpasBien.cm ] Les.Premiers.Les.Derniers.2016.FRENCH.WEBRip.XViD-FUNKKY.avi
+ 711516 -rwxrwxrwx 1 root root  728590294 févr. 21  2020 [ www.CpasBien.cm ] Prejudice.2015.FRENCH.DVDRip.XviD-EXTREME.avi
+      4 drwxrwxrwx 1 root root       4096 janv. 24  2021 zero_dark_thirty
