@@ -18,7 +18,7 @@ R=37.15;//Rayon du cercle de revolution du tore
 //L'experience a montree que la matiere (PLA ou ABS) ramolie a ces temperatures.
 //Cette contrainte est prise en compte par l'insertion de l'isolateur, elle concerne egalement la perimetre inferieur de la jupe.
 
-//---------------CHANGEMENT DE CI = CONSERVATION DES VALEURS POUR LA JUPE-------------------
+//Willy---------------CHANGEMENT DE CI = CONSERVATION DES VALEURS POUR LA JUPE-------------------
 x1=2.25*CC;//entre axes des trous de fixation du CI
 y1=0.8*CC;//entre axes des trous de fixation du CI
 

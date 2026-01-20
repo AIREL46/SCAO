@@ -52,8 +52,8 @@ translate([R,0,0]) rotate([90,0,0]) cylinder(r=Rt,h=20,center=true);//Raccordeme
 translate([-R,0,0]) rotate([90,0,0]) cylinder(r=Rt,h=20,center=true);//Raccordement 2
 
 //Construction des 4 cylindres verticaux
-L=y1;
-l=x1;
+L=y1;//y1=entre axes de fixation du CI
+l=x1;//x1=entre axes de fixation du CI
 Cv(L/2,l/2);
 Cv(L/2,-l/2);
 Cv(-L/2,-l/2);
