@@ -12,6 +12,7 @@
 //Les 4 cylindres horizontaux de raccordement relient le tore aux cylindres verticaux.
 
 //Initialisation des parametres
+rouge_groseille=([207/255, 10/255, 29/255]);
 $fn=100;
 include <dim1.scad>
 Rt=5.5;//Rayon du cercle de la section du tore
@@ -35,7 +36,7 @@ module Ch(x,y,z)
 	translate([x*coef,y*coef,0])rotate([90,0,z])cylinder(h=10,r=Rt/1.1,center=true);
 	}
 //Construction du top
-translate([-25,25,0])rotate([0,0,-90])difference()
+color(rouge_groseille)translate([0,0,0])rotate([0,0,-90])difference()
 {
 union()
 {
@@ -46,10 +47,17 @@ union()
 //"rotate_extrude" "convexity" = 10, qui realise l'extrusion circulaire,
 //"translate" qui exprime le rayon du cercle de revolution,
 //"circle" qui exprime le rayon du cercle de la section du tore.
-translate([0,10,0])rotate_extrude(angle = 180,convexity = 10)translate([R, 0, 0])circle(r = Rt); //rayon du cercle de la section du tore partie 1
-translate([0, -10,0])rotate_extrude(angle =-180,convexity = 10)translate([R, 0, 0])circle(r = Rt); //rayon du cercle de la section du tore partie 2
-translate([R,0,0]) rotate([90,0,0]) cylinder(r=Rt,h=20,center=true);//Raccordement 1
-translate([-R,0,0]) rotate([90,0,0]) cylinder(r=Rt,h=20,center=true);//Raccordement 2
+translate([0,10,0])rotate_extrude(angle = 180,convexity = 10)translate([R, 0, 0])circle(r = Rt); //demie-couronne droite
+translate([0,10,Rt])rotate_extrude(angle = 180,convexity = 10)translate([R, 0, 0])circle(r = 0.45*Rt); //demie-couronne droite du milieu de table
+
+translate([0, -10,0])rotate_extrude(angle =-180,convexity = 10)translate([R, 0, 0])circle(r = Rt); //demie-couronne gauche
+translate([0, -10,Rt])rotate_extrude(angle =-180,convexity = 10)translate([R, 0, 0])circle(r = 0.45*Rt); //demie-couronne gauche du milieu de table
+
+translate([R,0,0]) rotate([90,0,0]) cylinder(r=Rt,h=20,center=true);//Cylindre de raccordement 1
+translate([R,0,Rt]) rotate([90,0,0]) cylinder(r=0.45*Rt,h=20,center=true);//Cylindre de raccordement du milieu de table 1
+
+translate([-R,0,0]) rotate([90,0,0]) cylinder(r=Rt,h=20,center=true);//Cylindre de raccordement 2
+translate([-R,0,Rt]) rotate([90,0,0]) cylinder(r=0.45*Rt,h=20,center=true);//Cylindre de raccordement du milieu de table 2
 
 //Construction des 4 cylindres verticaux
 L=y1;//y1=entre axes de fixation du CI

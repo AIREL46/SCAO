@@ -34,7 +34,11 @@ usb=false; v433=true; ent=false; lamage=false;
 //2 fois celle du rayon du cylindre (celui situe sur la partie gauche et celui situe sur la partie droite de la jupe).
 
 //Initialisation des parametres
-vert=([151/255, 191/255, 13/255]);
+rouge_groseille=([207/255, 10/255, 29/255]);
+//violet_lit_de_vin=([172/255, 30/255, 68/255]);
+//noir_cassis=([58/255, 2/255, 13/255]);
+//jaune_chartreuse=([223/255, 255/255, 0/255]);
+//vert=([151/255, 191/255, 13/255]);
 $fn=120;
 include <dim1.scad>
 hj=23.34;//hauteur de la jupe
@@ -116,7 +120,7 @@ module per_jupe (percement)
 jupe(percement);
 module jupe(percement)
 {
-	color([151/255, 191/255, 13/255])rotate([0,0,0])
+	color(rouge_groseille)rotate([0,0,0])
 	{
 		//Construction de la jupe
 		difference()
@@ -160,6 +164,6 @@ module jupe(percement)
 	}
 	if (v433) 
 	{
-		translate([0.99*(2*e+L1/2), -14, -5])rotate([90, 0, 90])linear_extrude(height=1, scale=[1,1])text("SCI");
+		color(rouge_groseille)translate([0.99*(2*e+L1/2), -14, -5])rotate([90, 0, 90])linear_extrude(height=1, scale=[1,1])text("SCI");
 	}
 }//module jupe

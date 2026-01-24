@@ -117,3 +117,6 @@ translate([xt,yt,zt])difference()
 	rotate([0,0,0])cylinder(r=Di/2,h=lr+2, center = true);
 	}
 }
+
+
+//ent_R(2.2,4,10,0,0,0);

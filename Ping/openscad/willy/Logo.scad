@@ -1,4 +1,4 @@
-logo();
+rotate([0,0,-90])logo();
 module logo() 
 {
 //Parmi les 3 pieces de la e-poignee, cette piece a pour objet de recevoir le logo, soit colle, soit incruste.
@@ -12,7 +12,7 @@ module plot (x,y)
 r1=4.9;//Rayon du cone inferieur
 r2=4.95;//Rayon du cone superieur
 rs=3.5;//Rayon de la sphere
-difference()
+color(rouge_groseille)difference()
 	{
 		translate([x,y,-3*e/2])cylinder(2*e,r1=r1,r2=r2,center=true);
 		translate([x,y,-3*e/2])cylinder(2.1*e,r1=0.6*r1,r2=0.6*r2,center=true);
@@ -24,9 +24,11 @@ include <dim1.scad>
 //Rl=R-12;//Rayon du logo
 Rl=50-12;
 $fn=100;
+rouge_groseille=([207/255, 10/255, 29/255]);
 //Construction du logo
 //Construction de la plateforme
-difference()
+color(rouge_groseille)translate([5,-16,1.5])rotate([0,0,90])linear_extrude(height=1, scale=[1,1], center=true)text("S C I");
+color(rouge_groseille)difference()
 {
 	//Construction du cylindre plateforme
 	translate([0,0,0])cylinder(e,r=Rl,center=true);
@@ -73,3 +75,4 @@ plot(-L/2,l/2);//Plot 2
 plot(-L/2,-l/2);//Plot 3
 plot(L/2,-l/2);//Plot 4
 }//module logo
+//Marquage SCI
