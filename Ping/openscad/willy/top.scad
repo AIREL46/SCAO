@@ -13,7 +13,7 @@
 
 //Initialisation des parametres
 rouge_groseille=([207/255, 10/255, 29/255]);
-$fn=100;
+$fn=50;
 include <dim1.scad>
 Rt=5.5;//Rayon du cercle de la section du tore
 coef=0.67;// Coef translation du cylindre de raccordement
