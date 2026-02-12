@@ -13,9 +13,9 @@
 
 //Initialisation des parametres
 rouge_groseille=([207/255, 10/255, 29/255]);
-$fn=50;
+$fn=100;
 include <dim1.scad>
-Rt=5.5;//Rayon du cercle de la section du tore
+Rt=6.7;//Rayon du cercle de la section du tore
 coef=0.67;// Coef translation du cylindre de raccordement
 
 //module Cylindre vertical (Cv)
@@ -75,13 +75,6 @@ Ch(L,-l,atan (L/l));
 }//union
 //creation du plat
 translate([0,0,-2*Rt/2])cube(size = [4*R,4*R,e/2], center = true);
-difference()
-{
-translate([0,55,0])rotate([90,0,0])polyhedron(
-	points=[ [13,13,0],[13,-13,0],[-13,-13,0],[-13,13,0],[0,0,40]  ], 
-	faces=[ [0,1,4],[1,2,4],[2,3,4],[3,0,4],[1,0,3],[2,1,3] ]
-	);//fenetre USB
-translate([0,25,0])cube([30,30,15],center=true);
-}
+translate([0,R+10,0])cube(size = [12,15,8*e], center = true);//fenetre USB
 }//difference
 
