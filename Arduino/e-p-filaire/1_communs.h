@@ -7,7 +7,7 @@
 */
 #include <Arduino.h>
 byte count = 0;//Initialisation du numéro du message
-float Tcons=0;//Trajectoire
+float Tcons=0;//Température de consigne (trajectoire)
 double t=0.5;//temps écoulé depuis le début de la cuisson
 unsigned long tt1=0;//temps de travail 1
 unsigned long tt2=0;//temps de travail 2

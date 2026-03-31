@@ -1,39 +1,38 @@
 
 /**
- * e-p-wifi.ino
+ * e-p-filaire.ino
  * Le présent code source est publié sur Github sous licence creative commons CC-BY
- * Voir -> https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/e-p-wifi.ino
- * Ce programme e-p-wifi.ino est dédié au microcontrôleur Arduino MKR wifi 1010 qui équipe la e-poignée du prototype N°3 intégrée dans le SCI.
+ * Voir -> https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/e-p-filaire.ino
+ * Ce programme e-p-filaire.ino est dédié au microcontrôleur Arduino MKR wifi 1010 qui équipe la e-poignée du prototype N°3 intégrée dans le SCI.
  * voir ->  https://store.arduino.cc/mkr-wifi-1010
- * Pour mémoire, ce SCI (Système de Cuisson Intelligente) est composé principalement de 2 objets connectés et d'un smartphone.
- * (voir le schéma https://github.com/AIREL46/SCAO/raw/master/wiki/sci.png).
+ * Pour mémoire, ce SCI (Système de Cuisson Intelligente) est composé principalement de 2 objets connectés.
+ * (voir le schéma https://github.com/AIREL46/SCAO/blob/master/wiki/sci_filaire.png).
  * Le premier objet connecté est cette e-poignée et le second le e-rupteur.
- * Le microcontrôleur introduit la fonction de communication wifi qui offre à l'utilisateur la possibilité de piloter le SCI à partir du smartphone.
- * Ce programme est structuré en paragraphes :
+ * Ce programme est édité en cinq paragraphes :
  * 1 - Introduction
  * 2 - Initialisation des paramètres
  * 3 - Fonctions spécifiques
  * 4 - Fonction setup
  * 5 - Fonction loop
  * Chaque paragraphe est constitué de sous paragraphes correspondants à des modules logiciels distincts :
- * a) Les IHM (wifi et clavier)
- * b) Speaker
- * c) Acquisition des températures T1 et T2
+ * a) L'IHM
+ * b) Speaker (beep)
+ * c) Acquisition de la température T
  * d) Mesures des tensions
  * e) Built In Test Equipment (BITE)
  * f) Communication e-r-wifi
  * g) Horodatage et chronomètre
- * h) Bilan énergétique de la batterie
+ * h) Bilan énergétique
  * i) Régulation de la température
  * j) Visualisation du contenu des échantillons
  * k) Mode sleep
  * 1 - Introduction
  *Dans le cadre du concept culinaire Quiet cook
  *et de ce SCI https://fablabo.net/wiki/SCC.
- *Le prototypage (prototype N°3) de la e-poignée (en version wifi)
+ *Le prototypage (prototype N°3) de la e-poignée (en version filaire)
  *est réalisé par Régis LERUSTE http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS
  *et Olivier MARAIS http://fablabo.net/wiki/Cahier_de_recettes#Les_recettes_d.27Olivier
-*ce programe e-p-wifi.ino constitue le code source qui permet l'édition,
+*ce programe e-p-filaire.ino constitue le code source qui permet l'édition,
 la compilation et le téléversement du firmware à destination du micro-contrôleur.
 *L'environnement de développement Arduino CLI est constitué du microcontrôleur MKR wifi 1010 relié à l'ordinateur
 *à l'aide d'un câble USB. Ce câble permet l'établissement d'une liaison série.
@@ -42,10 +41,10 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *soit pour les afficher sur le moniteur série,
 *soit pour les mettre à disposition du programme Minicom qui réalise l'IHM entre le microcontrôleur et l'ordinateur et en option édite un fichier "journal".
 *L'objet du firmware est l'administration du microcontrôleur et de ses composants périphériques câblés sur un shield selon les schéma électriques :
-*Shield -> https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/e-p-wifi.png
+*Shield -> https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/e-p-filaire.png
 *Son exécution par le microcontôleur est systématique dès son téléversement et ensuite à chaque mise sous tension.
 *Il est organisé selon 2 fonctions principales :
-*- la capture des températures délivrées par 2 thermomètres digitaux, le premier concerne la température sur le couvercle de la casserole, le second la température de la batterie, l'une des fonctions secondaires qui assure la sécurité de la e-poignée.
+*- la capture de la température délivrée par le thermomètre digital, il concerne la température sur le couvercle de la casserole.
 *- la commande ON/OFF du e-rupteur (relais Celduc).
 *Ses fonctions principales sont complétées de fonctions secondaires (voir ci-dessous).
 *Il utile des ressources extérieures (librairies, codes sources et exemples) développées par des dévoloppeurs (informaticiens).
@@ -53,8 +52,8 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 *indique les liens permettant d'accéder à la librairie ainsi qu'aux codes sources ou aux exemples.
 *
 * 1a IHM -> a_ihm.h
-* 1b - Speaker -> b_speaker.h
-* 1c - Acquisition des températures T1 et T2 -> c_acq_temp.h
+* 1b - Speaker (beep) -> b_speaker.h
+* 1c - Acquisition de la température T -> c_acq_temp.h
 * 1d - Mesure des tensions -> d_mes-tensions.h
 * 1e - BITE -> e_bite.h
 * 1f - Communication e-r-wifi -> f_communication.h
@@ -73,7 +72,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
  #include "b_speaker.h"
 // 2c - Acquisition des températures
  #include "c_acq_temp.h"
-//2d - Mesure des tensions et calcul du courant ibat
+//2d - Mesure des tensions
  #include "d_mes_tensions.h"
 //2e - Built In Test Equipment (BITE)
  #include "e_bite.h"
@@ -113,8 +112,8 @@ bool val_sleep = false;//variable to store the read value
 
  //3a Les IHM -> a_ihm.h
  //3b Speaker -> b_speaker.h
- //3c - Fonction d'acquisition de la température via 2 thermomètres digitaux DS18B20.
- //3d - Mesure des tensions et calcul du courant ibat
+ //3c - Fonction d'acquisition de la température via le thermomètre digital DS18B20.
+ //3d - Mesure des tensions
  //3e - Built In Test Equipment (BITE)
  //3f Communication e-r-wifi
  //3g Horodatage et chronomètre
@@ -147,7 +146,7 @@ void setup() {
   setup_a ();
  //4b - Speaker -> b_speaker.h
   setup_b();
-//4c - Acquisition des températures T1 et T2
+//4c - Acquisition de la température T
 //4d - Mesure des tensions
   setup_d();
 //4e - Built In Test Equipment (BITE)
@@ -192,7 +191,7 @@ delay(1000);
     return;
   }
 
-  //5d - Mesure des tensions et calcul du courant ibat
+  //5d - Mesure des tensions
  mesures();
 
 // 5e - Built In Test Equipment (BITE)

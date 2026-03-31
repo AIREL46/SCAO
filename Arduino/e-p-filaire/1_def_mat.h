@@ -18,7 +18,7 @@
  //D0 - NU
  //D1 - NU
  //D2 - NU
- const byte BROCHE_ONEWIRE_2 = 3;//Initialisation de la variable BROCHE_ONEWIRE_2 et affectation de l'entrée digitale D3 (connection du thermomètre digital DS18B20 pour la mesure T)
+ const byte BROCHE_ONEWIRE = 3;//Initialisation de la variable BROCHE_ONEWIRE et affectation de l'entrée digitale D3 (connection du thermomètre digital DS18B20 pour la mesure T)
  const int speaker = 4;//Speaker connecté sur l'entrée digitale D4
  const int led_pin_v = 5;//Led verte connectée sur l'entrée digitale D5
  const int led_pin_j = 6;//Led jaune connectée sur l'entrée digitale D6

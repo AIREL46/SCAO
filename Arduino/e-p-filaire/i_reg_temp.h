@@ -43,7 +43,7 @@ void reg_temp() {
 
     }
   }
-  ecart = Tcons - T2;//Calcul de l'écart de température entre la trajectoire de référence et la trajectoire réelle
+  ecart = Tcons - T;//Calcul de l'écart de température entre la trajectoire de référence et la trajectoire réelle
   Correction = ecart*G;//Calcul de la Correction
   digitalWrite(led_pin_v, LOW);
   if (Ach) {
@@ -66,10 +66,10 @@ void reg_temp() {
     Dich = 0;
     courant = 0;
   }
-  if (T10pc > T2 > T98pc){
+  if (T10pc > T > T98pc){
     phase = 2;
   }
-  if ((T2 > T98pc) && (!inter98pc)) {
+  if ((T > T98pc) && (!inter98pc)) {
     inter98pc = true;
     phase = 3;
   }
@@ -85,11 +85,11 @@ void setup_i() {
   pinMode (relay, OUTPUT);
   inter98pc = false;//Initialisation de la variable inter98pc à false
   //Mesure et mémorisation de la température initiale sur le couvercle de la casserole
-  if (getT2(&T2, true) != READ_OK) {
-    Serial.println(F("Erreur de lecture du capteur T2"));
+  if (getT(&T, true) != READ_OK) {
+    Serial.println(F("Erreur de lecture du capteur T"));
     return;
   }
-  Tinit = T2;//Température initiale
+  Tinit = T;//Température initiale
   Tcons = Tinit;//Initialisation de la température de consigne
   if (Tinit < 55) {
     t_deb_cuisson = -(Tau*log(1-((55-Tinit)/(Tu-Tinit))));//Calcul théorique du temps nécessaire pour atteindre le début de cuisson

@@ -9,7 +9,7 @@ Editer le contenu de test.ino et y faire une modification :
 gedit test/test.ino
 
 Lancer la comilation avec la commande :
-arduino-cli compile --fqbn arduino:samd:mkrwifi1010 SCAO/Arduino/e-p-wifi/e-p-wifi.ino
+arduino-cli compile --fqbn arduino:samd:mkrwifi1010 SCAO/Arduino/e-p-filaire/e-p-filaire.ino
 
 Vérifier les 2 fichiers créés par le compilateur :
 SCAO/Arduino/e-p-wifi/e-p-wifi.ino.arduino.samd.mkrwifi1010.bin
@@ -30,12 +30,12 @@ En complément, pour appartenir au groupe dialout, taper la commande :
 sudo adduser airel dialout
 
 Téléverser le firmware dans le mkr 1010 avec la commande :
-arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:samd:mkrwifi1010 SCAO/Arduino/e-p-wifi
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:samd:mkrwifi1010 SCAO/Arduino/e-p-filaire
 
 Simuler le moniteur série avec l'une des commandes :
-1 - sudo minicom -C SCAO/Arduino/e-p-wifi/e-p-wifi.csv (lance minicom et ouvre un fichier de capture.csv [Comma-separated values])
+1 - sudo minicom -C SCAO/Arduino/e-p-filaire/e-p-filaire.csv (lance minicom et ouvre un fichier de capture.csv [Comma-separated values])
 Le fichier texte (champs séparés par des ";") peut être ouvert en mode tableur avec la commande :
-libreoffice SCAO/Arduino/e-p-wifi/e-p-wifi.csv
+libreoffice SCAO/Arduino/e-p-filaire/e-p-filaire.csv
 2 - sudo minicom -D /dev/ttyACM0 -b 9600 (lance minicom en initialisant le port série ACM0)
 
 En complément :
