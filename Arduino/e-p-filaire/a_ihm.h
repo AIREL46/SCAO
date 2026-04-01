@@ -3,17 +3,16 @@
 * L'IHM clavier *
 *****************
  *
- *Définition des IHM et de leurs fonctions associées
+ *Définition de l'IHM clavier et de ses fonctions associées
  *En référence à Wikipédia, les IHM (Interactions Homme-machines) définissent les moyens mis en œuvre
  *afin qu'un humain puisse contrôler et communiquer avec une machine.
  *Dans le cadre de ce projet, les moyens mis en œuvre sont soit ceux de l'ordinateur (clavier, souri, écran) ;
  *qui sont complétés par ceux propres du microcontrôleur, un jeu de leds montés sur le shield.
- *Les IHM permettent de dialoguer avec le microcontrôleur, d'y introduire des données et de visualiser des résultats.
- *Ces IHM et leurs fonctions associées sont :
- * 1) le moniteur série permet la visualisation du contenu des échantillons ainsi que les durées de cuisson (DC1 et DC2).
+ *L'IHM permet de dialoguer avec le microcontrôleur, d'y introduire des données et de visualiser des résultats.
+ *L'IHM et ses fonctions associées sont :
+ * 1) le moniteur série qui permet la visualisation du contenu des échantillons ainsi que les durées de cuisson (DC1 et DC2).
  * 2) le jeu de leds permet la visualisation des états de fonctionnement (BITE)
- * 1 L'IHM mode "clavier"
- * Le code source des IHM en mode "clavier" utilise principalement des fonctions de la librarie Arduino
+ * 3) le code source des IHM en mode "clavier" utilise principalement des fonctions de la librarie Arduino
  * qui permettent d'accéder au buffer de la liaison série :
  * - Serial.available() permet de connaître le nombre de caractères disponibles dans le buffer de la liaison série
  * - Serial.read() permet de lire le caractère disponible (utilisée pour lire le gabarit)
@@ -65,7 +64,7 @@ long DC2;//Création de la variable Durée de Cuisson (DC2)
 bool FC1 = false;//Création de la variable Fin de Chauffe (FC1)
 bool FC2 = false;//Création de la variable Fin de Cuisson (FC2)
 int Gabarit;//Création de la variable Gabarit
-* 2 IHM clavier
+/* 2 IHM clavier
 */
 //Initialisation des paramètres "clavier"
 //Création de la variable flag dédiée à la saisie du N° de gabarit
@@ -75,7 +74,7 @@ int i=3;
 int reponse;
 
   /*
-   * 3a Les IHM - Fonctions spécifiques communes
+   * 3a L'IHM - Fonctions spécifiques
    */
    //F1 - Visualisation DC1 et N° de gabarit
   void visu_DC_G() {
