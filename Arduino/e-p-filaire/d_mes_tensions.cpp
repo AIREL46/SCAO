@@ -6,26 +6,32 @@
 */
 /* 2d - Mesure des tensions
 */
-#ifndef D_MES_TENSIONS_H
-#define D_MES_TENSIONS_H
-#include <Arduino.h>
-extern float Vusb; //Initialisation de la variable Vusb
-extern float V33; //Initialisation de la variable V33
+#include "def_mat.h"
+float Vusb; //Initialisation de la variable Vusb
+float V33; //Initialisation de la variable V33
 //Initialisation des valeurs utilisées par la fonction de changement d'échelle (fonction mathématique map() de l'arduino)
-extern const int MaxConv; //Valeur maximale lue
-extern const int MaxVolt; //Valeur de la tension correspondante à la valeur maximale
+const int MaxConv = 4095; //Valeur maximale lue
+const int MaxVolt = 3300; //Valeur de la tension correspondante à la valeur maximale
 
-extern bool state_Vusb;
+bool state_Vusb = false;
 
 /**
 * 3d - Mesure des tensions et calcul du courant ibat
 */
 //fonction de changement d'échelle (fonction mathématique map() de l'arduino)
 //La multiplication par 2.0038 compense la division par 2 (pont diviseur) et l'impédance de l'entrée du microcontrôleur pour les chiffres après la virgule.
-void mesures();
+void mesures(){
+Vusb = map (2.0038*analogRead(Vusb_demie), 0, MaxConv, 0, MaxVolt);
+delay(120);//Pour compenser la durée necessaire à la conversion analogique digital
+V33 = map (2.0038*analogRead(V33_demie), 0, MaxConv, 0, MaxVolt);
+delay(120);//Pour compenser la durée necessaire à la conversion analogique digital
+if (Vusb < 1000) {state_Vusb = false;}
+if (Vusb > 4000) {state_Vusb = true;}
+}
 
 /*
  * 4d - Mesure des tensions*/
-  void setup_d();
+  void setup_d() {
+  analogReadResolution(12);
+  }
   //5d - Mesure des tensions
- #endif

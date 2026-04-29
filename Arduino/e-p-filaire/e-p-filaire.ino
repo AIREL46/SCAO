@@ -64,34 +64,34 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 * 1k - Mode Sleep -> k_sleep.h
 */
 //2 - Initialisation des paramètres
- #include "1_communs.h"
- #include "1_def_mat.h"
+ #include "communs.h"
+ #include "def_mat.h"
 //2a Les IHM -> a_ihm.h
  #include "a_ihm.h"
 //2b Speaker -> b_speaker.h
  #include "b_speaker.h"
 // 2c - Acquisition des températures
- #include "c_acq_temp.h"
+ //#include "c_acq_temp.h"
 //2d - Mesure des tensions
  #include "d_mes_tensions.h"
 //2e - Built In Test Equipment (BITE)
- #include "e_bite.h"
+//#include "e_bite.h"
  //2f - Communication e-r-wifi
  //2g - Horodatage & Chronomètre
  //Horodatage
- #include "g_wifi_rtc.h"
+//#include "g_wifi_rtc.h"
 //#include "TimeLib.h" //Include TimeLib.h library
 //Chronomètre
-#include <Chrono.h> //Include Chrono.h Library
-Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
+//#include <Chrono.h> //Include Chrono.h Library
+//Chrono Chrono(Chrono::MICROS);//Instanciate a Chrono object
 //2h - Bilan énergétique
-#include "h_bilan_eng.h"
+//#include "h_bilan_eng.h"
 //2i Régulation de la température
-#include "i_reg_temp.h"
+//#include "i_reg_temp.h"
 //2j - Visualisation du contenu des échantillons
-#include "j_visu_ech.h"
+//#include "j_visu_ech.h"
 //2k mode sleep
-bool val_sleep = false;//variable to store the read value
+//bool val_sleep = false;//variable to store the read value
 //3 Fonctions spécifiques
 //Wait for serial monitor
   void wait_s_m(){
@@ -124,6 +124,7 @@ bool val_sleep = false;//variable to store the read value
  //3k Mode sleep
  //4 - Fonction setup()
 void setup() {
+cli_4leds();
   setup_communs();
   mesures();
   //Test des leds (mise sous tension)
@@ -137,40 +138,44 @@ void setup() {
   pinMode(led_pin_b, OUTPUT);  // sets the digital pin 19 as output
   digitalWrite(led_pin_r, HIGH);//USB serial connection is not establihed - Clic on serial monitor icon (right top icon)
   wait_s_m();//Wait for serial monitor
-  //while (!Serial);
+  while (!Serial);
     delay(100);
     digitalWrite(led_pin_r, HIGH);
-    //Serial.println("Starting...");
+    Serial.println("Starting...");
     delay(100);
- // 4a Les IHM - Commun -> a_ihm.h
+     // 4a Les IHM - Commun -> a_ihm.h
   setup_a ();
- //4b - Speaker -> b_speaker.h
+  //4b - Speaker -> b_speaker.h
   setup_b();
+  }
 //4c - Acquisition de la température T
 //4d - Mesure des tensions
-  setup_d();
+  //setup_d();
 //4e - Built In Test Equipment (BITE)
-  setup_e();
+  //setup_e();
   //4f Communication e-r-wifi
   //4g Horodatage et chronomètre
   //setup_g
   //setup_g();
   //4h - Bilan énergétique
   //4i Régulation de la température
-  setup_i();
+  //setup_i();
  //4j - Visualisation du contenu des échantillons
-  setup_j();
+  //setup_j();
  //4k - Mode sleep
-  pinMode(inPin_sleep, INPUT);// sets the digital pin 10 as input
-}
+  //pinMode(inPin_sleep, INPUT);// sets the digital pin 10 as input
+//}
 void loop() {
-  Chrono.restart();
-  digitalWrite(led_pin_v, HIGH);
-  count = count +1;
+Serial.println("Starting...");
+delay(2000);
+  //Chrono.restart();
+  //digitalWrite(led_pin_v, HIGH);
+  //count = count +1;
 //5a Les IHM
 //5a-1 IHM wifi
 //5a-2 IHM clavier
 //5b - Speaker -> b_speaker.h
+double Dur=10;//Ligne à supprimer avant l'intégration de i_reg_temp.h
 if (Dur > 0){
   beep(200);
   }
@@ -181,46 +186,46 @@ else {
 delay(1000);
 //5c - Acquisition des températures T1 et T2
   // Lit la température T1
-  if (getT1(&T1, true) != READ_OK) {
-    Serial.println(F("Erreur de lecture du capteur"));
-    return;
-  }
+  //if (getT1(&T1, true) != READ_OK) {
+    //Serial.println(F("Erreur de lecture du capteur"));
+    //return;
+  //}
   // Lit la température T2
-  if (getT2(&T2, true) != READ_OK) {
-    Serial.println(F("Erreur de lecture du capteur T2"));
-    return;
-  }
+  //if (getT2(&T2, true) != READ_OK) {
+    //Serial.println(F("Erreur de lecture du capteur T2"));
+    //return;
+  //}
 
   //5d - Mesure des tensions
- mesures();
+ //mesures();
 
 // 5e - Built In Test Equipment (BITE)
-bite();
+//bite();
 //5f - Communication e-r-wifi
 //5g Horodatage et chronomètre
 //5h - Bilan énergétique
 //Table de Cuisson
-if (Dur > 0){
-som_dich = (double)som_dich + (double)Dich;//Calcul de la somme cumulée des dich
-puissance = (courant * tension)/1000;//Calcul de la puissance en KW
-cout_total = (double)cout_total + ((double)cout_kwh * (((double)puissance) * ((double)Dich/3600)));//Calcul du coût total cumulé
-}
+//if (Dur > 0){
+//som_dich = (double)som_dich + (double)Dich;//Calcul de la somme cumulée des dich
+//puissance = (courant * tension)/1000;//Calcul de la puissance en KW
+//cout_total = (double)cout_total + ((double)cout_kwh * (((double)puissance) * ((double)Dich/3600)));//Calcul du coût total cumulé
+//}
 //5i Régulation de la température
-reg_temp();
+//reg_temp();
 //5j - Visualisation du contenu des échantillons
 //Appel de la fonction visu() si le MKR wifi 1010 est connecté à l'ordinateur (reçoit du 5V) à l'aide d'un câble USB
   //if (state_Vusb){visu_demo();}
-  if (state_Vusb){visu_demo();}
-  if (!alarme_coupure_secteur) {
-    t = (double)t + 0.5;//Incrémentation de la variable t
-  }
+  //if (state_Vusb){visu_demo();}
+  //if (!alarme_coupure_secteur) {
+    //t = (double)t + 0.5;//Incrémentation de la variable t
+  //}
 //5k - Mode sleep
-tt1 = Chrono.elapsed();
+//tt1 = Chrono.elapsed();
 //Serial.print ("ti : ");
-digitalWrite(led_pin_j, LOW);
-digitalWrite(led_pin_b, HIGH);
+//digitalWrite(led_pin_j, LOW);
+//digitalWrite(led_pin_b, HIGH);
 //WiFi.lowPowerMode();
-delay((ti - tt1)/1000);
+//delay((ti - tt1)/1000);
 //WiFi.noLowPowerMode();
-digitalWrite(led_pin_b, LOW);
+//digitalWrite(led_pin_b, LOW);
 }

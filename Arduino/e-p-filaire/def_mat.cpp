@@ -8,6 +8,7 @@
  //Les 28 pins correspondantes au PinOut du microcontrôleur MKR wifi 1010 sont représentées ci-dessous
  //En rapport au schéma électrique, une variable est initialisée si la pin est utilisée
  //AREF
+#include "def_mat.h"
  const int V33_demie = A0; //Initialisation de la variable V33_demie sur l'entrée analogique A0
  const int Vusb_demie = A1; //Initialisation de la variable Vusb_demie sur l'entrée analogique A1
  //A2 - NU

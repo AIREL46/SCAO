@@ -5,6 +5,7 @@
 /*
 * 2 - Initialisation des paramètres
 */
+#include "communs.h"
 #include <Arduino.h>
 byte count = 0;//Initialisation du numéro du message
 float Tcons=0;//Température de consigne (trajectoire)

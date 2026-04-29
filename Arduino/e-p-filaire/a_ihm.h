@@ -23,15 +23,15 @@
 #define A_IHM_H
 #include <Arduino.h>
 // extern variables Gabarit
-extern float Gabarit1[] = {30, 0.4, 0.275, 70, 25, 30, 2, 1.0, 4};
-extern float Gabarit2[] = {30, 0.4, 0.275, 72.5, 22.5, 28, 2.5, 1.25, 4};
-extern float Gabarit3[] = {30, 0.4, 0.275, 75, 20, 24, 3, 1.5, 4};
-extern float Gabarit4[] = {30, 0.4, 0.275, 77.5, 17.5, 22, 3.5, 1.75, 4};
-extern float Gabarit5[] = {30, 0.4, 0.275, 80, 15, 20, 4, 2.0, 4};
-extern float Gabarit6[] = {30, 0.4, 0.342, 82.5, 12.5, 18, 4.5, 2.25, 4};
-extern float Gabarit7[] = {30, 0.4, 0.409, 85, 10, 16, 5, 2.5, 4};
-extern float Gabarit8[] = {30, 0.4, 0.685, 87.5, 7.5, 14, 5.5, 2.75, 4};
-extern float Gabarit9[] = {30, 0.4, 0.685, 90, 5, 12, 6, 3.0, 4};
+extern float Gabarit1[];
+extern float Gabarit2[];
+extern float Gabarit3[];
+extern float Gabarit4[];
+extern float Gabarit5[];
+extern float Gabarit6[];
+extern float Gabarit7[];
+extern float Gabarit8[];
+extern float Gabarit9[];
 // extern variables "paramètres de cuisson"
 extern int p;//période
 extern float G;//Gain
@@ -44,12 +44,11 @@ extern float A_c;//Accélération de consigne
 extern int ta;//temps d'anticipation
 extern long DC1;//Création de la variable Durée de Chauffe (DC1)
 extern long DC2;//Création de la variable Durée de Cuisson (DC2)
-extern bool FC1 = false;//Création de la variable Fin de Chauffe (FC1)
-extern bool FC2 = false;//variable Fin de Cuisson (FC2)
+extern bool FC1;//Création de la variable Fin de Chauffe (FC1)
+extern bool FC2;//variable Fin de Cuisson (FC2)
 extern int Gabarit;//variable Gabarit
-   * 3a L'IHM - Fonctions spécifiques
-   */
-   //F1 - Visualisation DC1 et N° de gabarit
+// 3a L'IHM - Fonctions spécifiques
+//F1 - Visualisation DC1 et N° de gabarit
   void visu_DC_G();
     //F2 - Clignotements des 4 leds
   void cli_4leds();
