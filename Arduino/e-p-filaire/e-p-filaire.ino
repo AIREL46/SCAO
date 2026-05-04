@@ -64,7 +64,7 @@ la compilation et le téléversement du firmware à destination du micro-contrô
 * 1k - Mode Sleep -> k_sleep.h
 */
 //2 - Initialisation des paramètres
- #include "communs.h"
+ #include "config.h"
  #include "def_mat.h"
 //2a Les IHM -> a_ihm.h
  #include "a_ihm.h"

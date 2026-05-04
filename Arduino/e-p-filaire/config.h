@@ -18,6 +18,15 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 #include <Arduino.h>
+//Communs 1 - Introduction
+// 2 - Initialisation des paramètres
+extern byte count;//Initialisation du numéro du message
+extern float Tcons;//Température de consigne (trajectoire)
+extern double t;//temps écoulé depuis le début de la cuisson
+extern unsigned long tt1;//temps de travail 1
+extern unsigned long tt2;//temps de travail 2
+extern unsigned long ti;//temps itératif
+extern unsigned long ts;//temps de sleep
 //Création des tableaux (array) des gabarits de cuisson
 extern float Gabarit1[];
 extern float Gabarit2[];
@@ -50,4 +59,15 @@ extern int Gabarit;//Création de la variable Gabarit
 //Création du paramètre i correspondant au nombre de chiffres à saisir pour définir la Durée de Chauffe
 //extern int i;
 //extern int reponse;
+/*
+* 3 - Communs - Fonctions spécifiques
+*/
+/*
+* 4 - Communs - Fonction setup
+*/
+//digitalWrite(led_pin_r, HIGH);
+void setup_communs();
+/*
+* 5 - Communs - Fonction loop
+*/
 #endif
