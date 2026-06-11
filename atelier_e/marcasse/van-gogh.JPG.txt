@@ -1,0 +1,44 @@
+date_created: 20211021_182602
+
+----
+
+date_modified: 20220807_161337
+
+----
+
+date_uploaded: 20220807_161314
+
+----
+
+media_filename: van-gogh.JPG
+
+----
+
+type: image
+
+----
+
+fav: false
+
+----
+
+ratio: 0.75
+
+----
+
+file_meta: 
+
+-
+size: 130755
+-
+width: 640
+-
+height: 480
+-
+ratio: 0.7500
+-
+gps: {"GPSLatitudeRef":"N","GPSLatitude":[48,52,36.1],"GPSLongitudeRef":"E","GPSLongitude":[2,15,46.54],"GPSAltitudeRef":0,"GPSAltitude":32.31003039513678,"GPSTimeStamp":[16,25,59],"GPSSpeedRef":"K","GPSSpeed":0,"GPSImgDirectionRef":"T","GPSImgDirection":322.9103448275862,"GPSDestBearingRef":"T","GPSDestBearing":322.9103448275862,"GPSDateStamp":"2021:10:21","GPSHPositioningError":65}
+
+
+----
+

@@ -1,0 +1,44 @@
+date_created: 20220803_131606
+
+----
+
+date_modified: 20220826_105325
+
+----
+
+date_uploaded: 20220803_131607
+
+----
+
+media_filename: text-20220803_131606-eau.md
+
+----
+
+type: text
+
+----
+
+fav: false
+
+----
+
+authors: 
+
+-
+slugFolderName: airel
+
+
+----
+
+caption: VVG
+
+----
+
+file_meta: 
+
+-
+size: 0
+
+
+----
+

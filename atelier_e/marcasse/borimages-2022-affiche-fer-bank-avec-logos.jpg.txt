@@ -1,0 +1,42 @@
+date_created: 20220814_173146
+
+----
+
+date_modified: 20220820_105100
+
+----
+
+date_uploaded: 20220820_105100
+
+----
+
+media_filename: borimages-2022-affiche-fer-bank-avec-logos.jpg
+
+----
+
+type: image
+
+----
+
+fav: false
+
+----
+
+file_meta: 
+
+-
+size: 270492
+-
+width: 741
+-
+height: 1024
+-
+ratio: 1.382
+
+
+----
+
+ratio: 1.382
+
+----
+
