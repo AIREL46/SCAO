@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Anomalie-N°32</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Anomalie-N°32</h1>
+</header>
+<h1 id="fiche-danomalie-n32---microconrôleur-mkr-wifi-1010">Fiche
+d’anomalie N°32 - Microconrôleur MKR wifi 1010</h1>
+<h2 id="solution">Solution</h2>
+<p><a href="https://forum.arduino.cc/index.php?topic=718128.0">Forum
+Arduino</a> ## Liens <a
+href="https://forum.arduino.cc/index.php?topic=574627.0">voir
+tuto</a></p>
+<p><a href="https://www.arduino.cc/en/reference/SPI">voir SPI</a></p>
+<p><a href="https://www.arduino.cc/en/guide/arduino101">Arduino 101</a>
+## SWD ### SD Card Module with Arduino <a
+href="https://create.arduino.cc/projecthub/electropeak/sd-card-module-with-arduino-how-to-read-write-data-37f390">SD
+Card Module with Arduino</a> ## Matériel concerné 2 X plateforme MKR
+wifi 1010 ## Constat La plateforme MKR wifi 1010 n’exécute plus le
+programme de son firmware. En outre, le téléversement d’un nouveau
+programme fait l’objet d’une erreur : “No new serial port detected”.</p>
+<p>The MKR wifi 1010 platform no longer executes its firmware program.
+Additionally, there is an error when uploading a new program: “No new
+serial port detected”. * Les 2 MKR wifi 1010 sont hors service. * La led
+verte est allumée normalement. * Les 2 leds jaunes s’allument faiblement
+et simulent un phénomène de pompage. * Téléverser un nouveau firmware
+est devenu impossible * avec le 2ème MKR wifi 1010, le niveau sonore du
+bip est très faible. ## In-circuit Serial Programmer (ISP) L’ISP est
+constitué, selon le câblage du schéma ci-dessous, des éléments suivants
+: * une plateforme Arduino 101 (dans laquelle est téléversée le sketch
+ArduinoISP) raccordée à l’ordinateur par un câble USB * la plateforme
+MKR wifi 1010 dont le bootloader a été effacé * dans le menu outil, la
+commande “graver la séquence d’initialisation” (bootloader).</p>
+<p>Le détail de la procédure est donné parle <a
+href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/ArduinoISP">tuto
+ArduinoISP</a>.</p>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/isp.JPG"
+alt="ISP" /> <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/isp.png"
+alt="ISP" /></p>
+<p>Le déroulement de la procédure donne le résultat suivant : * Starting
+download script… Flashing is taking longer than expected Try pressing
+MASTER_RESET button ATTENTION: <strong>BLE firmware</strong> is being
+flashed DO NOT DISCONNECT THE BOARD . . . . . . . . . . . . . .
+ATTENTION: RTOS firmware is being flashed DO NOT DISCONNECT THE BOARD .
+SUCCESS: Upload completed</p>
+<p>La procédure aboutit avec succès, par contre le bootloader chargé est
+celui dédié à une plateforme BLE (Bluetooth Low Energie - Arduino 101)
+et non à une plateforme MKR wifi 1010.</p>
+<p>Conclusion : la tentative a échoué.</p>
+<p>N.B. :</p>
+<p>un paragraphe du tuto semble ambigu :</p>
+<p><em>“If all the wires are set, you need to switch to the board type
+you want to program with the bootloader. This step is mandatory to
+select the proper bootloader code and the fuses configurations. The
+programming procedure checks the signature of the microcontroller before
+any writing action is taken, but many boards share the same
+microcontroller and each board has its own bootloader. The port remains
+the one of the ArduinoISP.”</em></p>
+<h2 id="analyse">Analyse</h2>
+<h3 id="mesures-des-tensions-continues">Mesures des tensions
+continues</h3>
+<ul>
+<li>Vusb = 4.88 V stable</li>
+<li>Vbat = 3.963 V stable</li>
+<li>V33 = 3.274 V stable ### Commandes via la console</li>
+<li>lsusb</li>
+</ul>
+<p>Bus 001 Device 009: ID 2341:0054 Arduino SA</p>
+<p><strong>La commande détecte correctement le MKR wifi 1010.</strong> *
+dmesg</p>
+<p>[ 2631.860787] usb 1-3: new full-speed USB device number 7 using
+xhci_hcd [ 2632.010014] usb 1-3: New USB device found, idVendor=2341,
+idProduct=0054 [ 2632.010018] usb 1-3: New USB device strings: Mfr=1,
+Product=2, SerialNumber=0 [ 2632.010022] usb 1-3: Product: Arduino MKR
+WiFi 1010 [ 2632.010025] usb 1-3: Manufacturer: Arduino LLC</p>
+<p><strong>La commande détecte correctement le MKR wifi 1010.</strong> *
+ls -l /dev/ttyACM0</p>
+<p>crw-rw—- 1 airel dialout 166, 0 nov. 29 12:14 /dev/ttyACM0</p>
+<p><strong>La commande détecte correctement le port utilisé par le MKR
+wifi 1010.</strong> * arduino-cli upload -p /dev/ttyACM0 –fqbn
+arduino:samd:mkrwifi1010 SCAO/Arduino/e-p-wifi</p>
+<p>No new serial port detected.</p>
+<p><strong>La commande ne permet pas le téléversement d’un nouveau
+firmware.</strong> ### Historique de la panne La panne est apparue à la
+suite de l’installation de 3 interfaces, chronologiquement : * <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/b_speaker.png">Interface
+speaker le 09/08/2020</a> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/int_celduc.png">Interface
+Celduc le 23/10/2020</a> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/interface_P230V.png">Interface
+P230V le 05/11/2020</a>.</p>
+<p>Ces 3 interfaces ont été installées pour limiter le courant sur les
+entrées/sorties du MKR wifi 1010, ce courant ne doit pas dépasser 7 mA.
+## Vérification des interfaces ### Interface speaker <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/b_speaker.png"
+alt="Interface speaker le 09/08/2020" /> * Déconnecter la sortie D10 du
+microcontrôleur (extrémité de la résistance de 470 Ohms) * insérer un
+milliampéremètre entre le collecteur du transistor et le 3.3V * simuler
+le signal avec le 3.3V et mesurer le courant = 59 mA * un léger
+grésillement est entendu en provenance du speaker * l’interface est OK.
+### Interface Celduc <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/int_celduc.png"
+alt="Interface Celduc le 23/10/2020" /> * Déconnecter la sortie D18 du
+microcontrôleur (extrémité de la résistance de 4.7 KOhms) * simuler le
+signal avec le 3.3V et insérer un milliampéremètre * vérifier
+l’excitation du relais Celduc (led jaune du relais allumée) * mesurer le
+courant = 0.00 mA (bizare !) * l’interface est OK. ### Interface P230V
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/interface_P230V.png"
+alt="Interface P230V le 05/11/2020" />. 1) Isolation galvanique
+(Ohmètre) :</p>
+<ul>
+<li>sortie chargeur + par rapport à la phase et par rapport au neutre
+-&gt; les deux OK</li>
+<li>sortie chargeur - par rapport à la phase et par rapport au neutre
+-&gt; les deux OK</li>
+<li>sortie chargeur + par rapport aux 3 points du connecteur de sortie
+3.3V, P230V et GND les 3 OK</li>
+<li>sortie chargeur - par rapport aux 3 points du connecteur de sortie
+3.3V, P230V et GND les 3 OK</li>
+</ul>
+<ol start="2" type="1">
+<li><p>vérification du câblage : OK</p></li>
+<li><p>essais et mesures :</p></li>
+</ol>
+<ol type="a">
+<li>mesures à l’entrée de l’optocoupleur :</li>
+</ol>
+<ul>
+<li>tension sortie chargeur : 5.34 V</li>
+<li>courant débité par le chargeur : 18.46 mA</li>
+<li>tension aux bornes de la diode de l’optocoupleur : 1.202 V</li>
+</ul>
+<ol start="2" type="a">
+<li>mesures en sortie de l’optocoupleur :</li>
+</ol>
+<ul>
+<li>tension V33 : 3.275</li>
+<li>courant V33 (chargeur connecté) : 1.39 mA</li>
+<li>courant V33 (chargeur déconnecté) : 0.03 mA</li>
+<li>tension sur le collecteur du transistor avec le chargeur non
+connecté :
+<ul>
+<li>P230V non appliqué sur D11 : 1.606 V</li>
+<li>P230V appliqué sur D11 : 2.628 V</li>
+</ul></li>
+<li>tension sur le collecteur du transistor avec le chargeur connecté :
+<ul>
+<li>P230V non appliqué sur D11 : 0.066 V</li>
+<li>P230V appliqué sur D11 : 0.079 V.</li>
+</ul></li>
+</ul>
+<ol start="4" type="1">
+<li>conclusion : la présence de la tension 230 volts (P230V) est
+exprimée en logique négative par une tension proche de zéro. ##
+Solution</li>
+</ol>
+<ul>
+<li>remplacer les transistors par des optocoupleurs.</li>
+</ul>
+</body>
+</html>

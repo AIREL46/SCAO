@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Plateforme-Vidéo-Rapsberry-pi</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Plateforme-Vidéo-Rapsberry-pi</h1>
+</header>
+<p>Plateforme Vidéo Rapsberry pi</p>
+<h2 id="objet">Objet</h2>
+<p>L’objet de la plateforme Vidéo Rapsberry pi est la réalisation des
+fonctions vidéos à partir d’une carte Rapsberry équipé d’un shield TV.
+## Description La réalisation de cette plateforme fait appel à : * pour
+le matériel, d’une carte Raspberry Pi3 model B+ complétée d’une carte
+micro SD et d’un tuner TV DVB TV microHAT monté en shield sur le
+connecteur GPIO * pour les OS, RAPSBIAN et LIBRELEC * pour les
+applications, TVHEADEND et Kodi. L’application TVHEADEND est installée
+dans l’environnement RASBIAN ## <a
+href="https://www.raspberrypi-france.fr/premiere-utilisation-raspberry-pi/">Tutoriel
+“Premiere utilisation Raspberry Pi”</a> ## <a
+href="https://thepihut.com/blogs/raspberry-pi-tutorials/how-to-stream-digital-tv-with-the-raspberry-pi-tv-hat">how-to-stream-digital-tv-with-the-raspberry-pi-tv-hat</a>
+* New Out Of Box Software (NOOBS) is an easy operating system
+installation manager for the Raspberry Pi <a
+href="https://www.raspberrypi.org/downloads/noobs/">NOOBS</a> * Il est
+installé sur la carte micro-SD, 2 fichiers pose problème, recovery.img
+et recovery7.img, ils sont normalement exécutable, mais après les avoir
+copier ils ne sont plus et impossible de changer de statut avec la cde
+chmod. ## Carte SD * Avec la commande lspci : 04:00.0 Unassigned class
+[ff00]: Realtek Semiconductor Co., Ltd. RTL8411B PCI Express Card Reader
+(rev 01) * Avec carte SD “grand format” : impossible de l’identifier *
+Avec carte micro-SD : miracle - l’identification est OK * N.B. : la
+réponse à la commande lspci est la même dans les 2 cas (Unassigned class
+[ff00]).</p>
+<h2 id="récupération-du-wiki-fablabo">Récupération du wiki fablabo</h2>
+<p>Plate-forme vidéo <a
+href="https://doc.ubuntu-fr.org/capture_video">capture vidéo</a> <a
+href="https://doc.ubuntu-fr.org/capture_video_hdmi_sdi">capture video
+hdmi</a>. ### Objectifs : * récupérer les vidéos accumulées sur mon <a
+href="https://fr.wikipedia.org/wiki/Lecteur_enregistreur_de_DVD">lecteur-enregisteur</a>
+* récupérer les vidéos de mon <a
+href="https://fr.wikipedia.org/wiki/D%C3%A9codeur_TNT">décodeur TNT</a>
+stockées sur une <a
+href="https://fr.wikipedia.org/wiki/Cl%C3%A9_USB">clé USB</a> *
+regrouper ces vidéos sur mon ordinateur portable qui fonctionne sous
+linux Ubuntu * connecter l’ordinateur portable sur un écran à l’aide de
+la connectique <a
+href="https://fr.wikipedia.org/wiki/High-Definition_Multimedia_Interface">HDMI</a></p>
+<h3 id="constats">Constats :</h3>
+<ul>
+<li>sur mon <a
+href="https://fr.wikipedia.org/wiki/Lecteur_enregistreur_de_DVD">lecteur-enregisteur</a>,
+j’ai copié 2 vidéos du <a
+href="https://fr.wikipedia.org/wiki/Disque_dur">disque dur</a> vers le
+<a
+href="https://fr.wikipedia.org/wiki/Lecteur_de_disque_optique">lecteur</a>
+et <a
+href="https://fr.wikipedia.org/wiki/Graveur_de_disque_optique">graveur</a>
+de <a href="https://fr.wikipedia.org/wiki/DVD-RW">DVD-RW</a>, j’ai
+ensuite récupéré le DVD-RW pour essayer d’accéder à ses fichiers, sous
+Linux, puis sous windows. Résultats : rien, aucun fichier, etc…</li>
+</ul>
+<p>Les caractéristiques du <a
+href="https://fr.wikipedia.org/wiki/Lecteur_enregistreur_de_DVD">lecteur-enregisteur</a>
+Philips HDR3700 sont : * format d’enregistrement : +VR * fréquence
+d’échantillonnage : 13.5 MHZ * format de compression : <a
+href="https://fr.wikipedia.org/wiki/Moving_Picture_Experts_Group">MPEG</a>
+* Sortie vidéo analogique sur prise Péritel * Sortie vidéo numérique sur
+prise HDMI</p>
+<h3 id="résultats">Résultats :</h3>
+<ul>
+<li>à partir du décodeur TNT, sur la clef USB, je récupère des fichiers
+<a href="http://www.anymp4.fr/tutoriel/mts.html">.mts</a> que je peux
+lire avec totem ou VLC</li>
+<li>à partir du <a
+href="https://fr.wikipedia.org/wiki/Lecteur_enregistreur_de_DVD">lecteur-enregisteur</a>
+Philips HDR3700, là c’est plutôt la catastrophe car je ne récupère rien
+d’intéressant pour le moment. J’ai connecté la sortie Vidéo analogique
+(péritel) à l’entrée de la <a
+href="https://www.pinnaclesys.com/fr/">movie box deluxe</a>. A partir du
+logiciel, il est possible d’effectuer une capture, le résultat est
+intelligible mais de très mauvaise qualité. Les réglages accessibles du
+format de capture sont :</li>
+<li>AVI ou MPEG, en qualité : bonne (M-JPEG normale), meilleure (M-JPEG
+Qualité plus, optimale (qualité DV supér., personnalisée (qualité
+définie par l’utilisateur) qui permet d’accéder à : ** compression : DV
+video encoder, PICVideo MJPEG Compressor, largeur et hauteur de l’image,
+etc…</li>
+</ul>
+<h3 id="recherches">Recherches :</h3>
+<ul>
+<li><a href="https://doc.ubuntu-fr.org/capture_video">Capture
+video</a></li>
+<li><a href="https://doc.ubuntu-fr.org/capture_video_hdmi_sdi">capture
+HDMI</a></li>
+<li><a href="https://www.blackmagicdesign.com/fr/products">matériels
+Blackmagic</a></li>
+<li><a href="http://www.kernellabs.com/blog/?page_id=3895">matériels
+AVerMedia DarkCrystal HD Driver for Linux</a></li>
+<li><a
+href="https://fr.wikipedia.org/wiki/Protection_anticopie">protection
+anticopie</a></li>
+<li><a
+href="https://fr.wikipedia.org/wiki/Rovi_Corporation">Macrovision</a></li>
+</ul>
+<h3 id="molotov">Molotov :</h3>
+<p>En référence à l’article de Planète Linux N°102, Molotov permet de
+regarder toutes les chaînes de la TNT sur un PC. Sous Linux, il n’y a
+pas d’installation, c’est un fichier <a
+href="https://fr.wikipedia.org/wiki/AppImage">AppImage</a> qui
+fonctionne avec <a
+href="https://ubuntu.pkgs.org/16.04/ubuntu-main-i386/libgconf-2-4_3.2.6-3ubuntu6_i386.deb.html">libgconf</a>.</p>
+</body>
+</html>

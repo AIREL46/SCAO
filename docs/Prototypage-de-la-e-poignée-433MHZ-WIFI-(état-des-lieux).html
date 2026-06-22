@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prototypage-de-la-e-poignée-433MHZ-WIFI-(état-des-lieux)</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Prototypage-de-la-e-poignée-433MHZ-WIFI-(état-des-lieux)</h1>
+</header>
+<p>Ce wiki à pour objet l’établissement de l’état des lieux du projet <a
+href="https://github.com/AIREL46/SCAO/wiki/Prototypage-de-la-e-poign%C3%A9e-433MHZ-WIFI">Prototypage
+de la e poignée 433MHZ WIFI</a> conduit par <a
+href="https://www.baptistebouriau.fr/">Baptiste Bouriau</a>.</p>
+<h2 id="identification-des-fichiers.ino">Identification des
+fichiers.ino</h2>
+<p>L’ensemble des fichiers.ino sont regroupés en un seul : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/e-p-wifi.ino">e-p-wifi.ino</a>
+complété par <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/arduino_secrets.h">arduino_secrets.h</a>
+## Les bibliothèques logicielles : Les bibliothèques logicielles doivent
+être compatibles au monde de l’Arduino. Il convient de faire attention
+car sous le même nom, il en existe plusieures. Si une bibliothèque n’est
+pas la bonne, lors de la phase de vérification, le compilateur génère
+une erreur. * ArduinoLowPower
+https://github.com/arduino-libraries/ArduinoLowPower.git *
+arduino_secrets.h * Chrono * digitalWriteFast : *
+https://github.com/watterott/Arduino-Libs.git * ce clonage va installer
+plusieures bibliothèques logicielles sous le répertoire Arduino-Libs *
+il convient de créer un répertoire digitalWriteFast puis avec la
+commande mv de déplacer le contenu de Arduino-Libs/digitalWriteFast *
+OneWire * RTCZero : allows to use the RTC functionalities for MKR1000 *
+Time (TimeLib.h) * SPI : this library allows you to communicate with SPI
+(Serial Peripheral Interface) devices, with the Arduino as the master
+device. * VirtualWire : * sudo git clone
+https://github.com/sparkfun/RF_Links.git * ce clonage va générer des
+répertoires intermédiaires qu’il convient de supprimer * WiFiNINA : this
+library allows you to use the Arduino MKR 1010 capabilities. ## Battery
+LI-ON vide Dans le but de mesurer le courant ibat, le schéma électrique
+initial prévoit une résistance de 1 Ohm montée en série entre le + de la
+batterie et l’entrée correspondante sur l’embase du microcontrôleur MKR
+wifi 1010. Hors l’expérience a montré que la présence de cette
+résistance est incompatible avec le fonctionnement du chargeur
+(BQ24195L) embarqué dans le microcontrôleur. De ce fait cette résistance
+est supprimée.</p>
+<p>L’inconvénient de ce mauvais montage est que la batterie n’a fait que
+se décharger jusqu’à passer en dessous de la tension de cut-off. Une
+mesure avec le multimètre affiche une tension nulle.</p>
+<p>Conclusion, après avoir supprimé la résistance, le chargeur n’a pas
+fonctionné car il n’est pas prévu pour gérer ce genre de situation. <a
+href="https://www.masolise.com/PBFAQ.asp?Question=J%27ai+compl%E8tement+vid%E9+ma+batterie+moto+en+ayant+laiss%E9+allum%E9+mes+feux+est%2Delle+morte+%3F&amp;ItmID=215220">En
+effet ce type de batterie ne tolère pas la décharge compléte</a>. Voici
+<a
+href="https://www.masolise.com/PBFAQ.asp?Question=J%27ai+compl%E8tement+vid%E9+ma+batterie+moto+en+ayant+laiss%E9+allum%E9+mes+feux+est%2Delle+morte+%3F&amp;ItmID=215220">une
+ébauche de solution</a>, mais par précaution, je m’oriente vers une
+charge lente selon le schéma ci-dessous : <img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/bat-LI-ION-vide.png"
+alt="Batterie LI-ON vide" /> Ce montage utilise un chargeur de marque
+Apple, une résistance de 10 Ohms et un multimètre qui réalise la mesure
+de la tension continue aux bornes de la batterie. La résistance permet
+de limiter le courant, elle est calculée avec l’hypotèse que la batterie
+est en court-circuit (le pire des cas) et en respectant le courant
+maximal que le chargeur peut débité, ce qui donne :</p>
+<p><code>ibat = 5/0.5 = 10 Ohms</code></p>
+<p>Deux minutes après la mise sous tension, la valeur de Vbat atteint
+3.232 Volts, 30 minutes plus tard, elle est de 3.417 Volts.</p>
+<p>Ensuite, la batterie est reconnectée au microcontrôleur et le
+chargeur de ce dernier continue la charge normalement. ## Câblage sur la
+breadboard <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/breadboard.png"
+alt="breadboard" /> ## SCI <img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/sci.png"
+alt="SCI" /> ## MKR WIFI 1010 ### Modélisation 2D La modélisation 2D est
+réalisée sous <a href="https://librecad.org/">Librecad</a> le fichier
+correspondant est <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010.dxf">MKR1010.dxf</a>.
+Une exportation permet de générer un premier fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010.pdf">MKR1010.pdf</a>.
+Ensuite sous le logiciel <a href="https://inkscape.org/fr/">inkscape</a>
+des légendes sont ajoutées. En final le dessin est exporté en un fichier
+<a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010.png">MKR1010.png</a>
+qui est celui représenté ci-dessous : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010.png"
+alt="MKR wifi 1010 2D" /> ### Modélisation 3D La modélisation 3D est
+réalisée sous <a href="https://www.openscad.org/">openscad</a> à partir
+du fichier <a href="https://librecad.org/">Librecad</a> <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010.dxf">MKR1010.dxf</a>,
+le fichier est <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/MKR1010.scad">MKR1010.scad</a>.
+En final le dessin est exporté en un fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/MKR1010.png">MKR1010.png</a>
+qui est celui représenté ci-dessous : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/MKR1010.png"
+alt="MKR wifi 1010 3D" /> ## Shield MKR WIFI 1010 ### Modélisation 2D La
+modélisation 2D est réalisée sous <a
+href="https://librecad.org/">Librecad</a> le fichier correspondant est
+<a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.dxf">MKR1010-shield.dxf</a>.
+Une exportation permet de générer un premier fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.pdf">MKR1010-shield.pdf</a>.
+Ensuite sous le logiciel <a href="https://inkscape.org/fr/">inkscape</a>
+des légendes sont ajoutées. En final le dessin est exporté en un fichier
+<a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.png">MKR1010-shield.png</a>
+qui est celui représenté ci-dessous : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.png"
+alt="Shield MKR wifi 1010 2D" /> ### Modélisation 3D La modélisation 3D
+est réalisée sous <a href="https://www.openscad.org/">openscad</a> à
+partir du fichier <a href="https://librecad.org/">Librecad</a> <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.dxf">MKR1010-shield.dxf</a>,
+le fichier est <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/MKR1010-shield.scad">MKR1010-shield.scad</a>.
+En final le dessin est exporté en un fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/MKR1010-shield.png">MKR1010-shield.png</a>
+qui est celui représenté ci-dessous : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/MKR1010-shield.png"
+alt="MKR wifi 1010 3D" /> ### Assemblage de la e-p-wifi <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_g.png"
+alt="Assemblage e-p-wifi" /> ### Schéma électrique du shield MKR wifi
+1010 <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/e-p-wifi.png"
+alt="Shield MKR 1010" /> ### Mesures #### Mesures des tensions continues
+Les mesures des tensions continues sont réalisées, pour chacune, selon
+les étapes suivantes : * la tension analogique à mesurer est divisée par
+deux à l’aide d’un pont diviseur dont les 2 résistances sont d’égales
+valeurs * cette valeur moitié est appliquée sur une entrée analogique du
+microcontrôleur MKR wifi 1010 qui effectue successivement : * la
+conversion analogique digitale sur 12 bits * le changement d’échelle à
+l’aide de la fonction map() qui définit la 1/2 valeur * la
+multiplication par 2.</p>
+<p>La figure ci-dessous illustre les étapes décrites ci-dessus.</p>
+<p>La précision de la mesure est donnée par le bit de poids faible soit
+3300/4095 = 0.8 mV <img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/map.png"
+alt="map" /></p>
+</body>
+</html>

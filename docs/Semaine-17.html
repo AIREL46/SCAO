@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Semaine-17</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Semaine-17</h1>
+</header>
+<h3 id="impression-en-3d-de-lisolateur-et-de-la-plateforme">Impression
+en 3D de l’isolateur et de la plateforme</h3>
+<h4 id="impression-de-la-platforme">Impression de la platforme:</h4>
+<ol type="1">
+<li>Même procédé que pour la jupe (voir [[Semaine 16|Semaine 16]]) ####
+Impression de l’isolateur:</li>
+<li>Aller sur <a href="https://www.eiger.io/signin">eiger.io</a> puis se
+connecter;</li>
+<li>Importer la pièce (ici <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/isolateur-433-v2.stl">isolateur-433-v2.stl</a>);
+##### Paramètre(droite de la page):</li>
+<li>Material (ici de l’ “Onyx”)</li>
+<li>Reinforcement material (ici “none”);</li>
+<li>Printer type (Desktop Series(Onyx,Mark Two));</li>
+<li>Orientation (default);</li>
+<li>Cloud Slicing (true);</li>
+<li>Part setting (default);</li>
+<li>Material Setting (default);</li>
+<li>Cliquer sur “Save” en bas à droite de la page;</li>
+<li>A droite dans les paramètres -&gt; Select printer (Markforged MK2)
+pour les autres paramètres lesser par défaut;</li>
+<li>Cliquer sur “Print” en bas à droite la page;</li>
+<li>Dans la fenêtre qui s’ouvre cliquer sur “Print Now” pour lancer
+l’impression.</li>
+</ol>
+<h3 id="comprendre-les-microcontrôleurs">Comprendre <a
+href="https://www.coursera.org/learn/microcontroleurs/">les
+Microcontrôleurs</a></h3>
+<h3 id="description-du-mooc-comprendre-les-microcontrôleurs">Description
+du MOOC “<a
+href="https://www.coursera.org/learn/microcontroleurs">Comprendre les
+microcontrôleurs</a>”:</h3>
+<h4 id="introduction">Introduction :</h4>
+<p>Un MOOC est l’abréviation de Massive Open Online Course qui signifie
+“cours ouvert en ligne et massif”. Ces cours, dispensés uniquement en
+ligne, sont accessibles à tous par inscription et gratuits. Le MOOC est
+organisé par l’université EPFL (École polytechnique fédérale de
+Lausanne) situé en Suisse et enseigné par deux professeurs, Jean Daniel
+Nicoud et Pierre-Yves Rochat. Enseigné en français ce MOOC a pour
+objectifs de donner les bases théoriques et pratiques nécessaires à une
+bonne compréhension et utilisation des microcontrôleurs. La durée de ce
+MOOC est estimée à 37 heures.</p>
+<h4 id="développement">Développement :</h4>
+<p>Les cours ont une durée de 7 semaines, on y trouve un thème par
+semaine. La première semaine porte sur l’Électronique et la logique,
+afin de poser quelques bases nécessaires à la suite du cours. La
+deuxième semaine introduit les microcontrôleurs aux niveaux matérielle
+et logicielle. Pour la troisième semaine, on aborde le langage C et les
+entrées, sorties du microcontrôleur. Lors de la quatrième semaine l’on
+rentre plus en détails dans la programmation. La cinquième semaine nous
+forme sur les périphériques internes comme les timers et les
+interruptions. Pour la sixième, les sujets portent sur le debug et la
+programmations d’applications (Afficheurs). La septième et dernière
+semaine l’ont peut découvrir des applications des microcontrôleurs dans
+le domaine de la commande de systèmes mécaniques, en particulier dans la
+robotique mobile.</p>
+<p>Chaque thèmes est organisés de manières progressive. Ce MOOC nous
+propose de commencer par des vidéos enseignant les bases du thème
+abordé, ensuite des complément (.pdf) afin de compléter les vidéos. Une
+fois l&amp; théorie finis, des exercices nous sont proposés afin de
+pratiquer. Pour finir, une partie évaluation est à effectué, elle
+comprend 1 quiz et 1 ou 2 exercices. Le quiz évalue la partie théorique
+et les ou l’exercice pour la partie pratique.</p>
+<p>Le MOOC nous met aussi à disposition des outils comme un “Forum”,
+pour communiquer avec les enseignants ou les autres candidats, une
+partie “Message” pour consulter les dernières notifications, un outil
+“Ressources” où l’on nous propose des documents complémentaires, des
+informations complémentaires sur les programmes utilisés ou encore sur
+l’EPFL (École Polytechnique Fédéral de Lausanne). On nous propose aussi
+une partie ;“Informations sur le cours où est renseigner des détails
+spécifiques au cours (Enseignant(s), niveau du cour, durée, etc).</p>
+<h4 id="conclusion">Conclusion :</h4>
+<p>J’ai commencé ce MOOC avec des connaissances en programmation mais
+aucune notion dans le monde des Microcontroleurs. Aujourd’hui ce cours
+m’a permis d’acquérir certaines bases concernant ce monde. Pour conclure
+se MOOC fut très enrichissant, il me permet aujourd’hui de répondre aux
+missions de mon stage dont certaines me demandes d’étudier et de
+programmer un microcontroleur.</p>
+</body>
+</html>

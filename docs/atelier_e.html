@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_e</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_e</h1>
+</header>
+<h1 id="atelier-décriture">Atelier d’écriture</h1>
+<p>L’objet de l’atelier d’écriture est le regroupement chronologique des
+différents événements et documents écrits par Régis Leruste ainsi que
+tous les outils logiciels nécessaires à cet atelier. ## Github pages
+J’ai installé Github pages avec l’aide de chatgpt, voici l’accès au <a
+href="https://airel46.github.io/SCAO/">site SCAO</a>. Ci-dessous
+quelques conseils de Chatgpt : * 🚀 Maintenant tu peux faire</p>
+<pre><code>ajouter des pages HTML dans le repo
+
+organiser ton wiki / documentation
+
+utiliser /Projet_SCAO/, /Documentation/, etc.
+
+GitHub Pages se mettra à jour automatiquement à chaque git push</code></pre>
+<ul>
+<li>💡 Petite recommandation (optionnel mais utile)</li>
+</ul>
+<p>Pour éviter les futurs soucis GitHub Pages :</p>
+<pre><code>garde toujours un index.html ou index.md à la racine
+
+évite les submodules sauf si volontaire
+
+reste en SSH (tu es déjà bien configuré)</code></pre>
+<ul>
+<li><p>Si tu veux, prochaine étape intéressante : 👉 transformer ton
+site en vrai site structuré (menu, navigation, wiki propre, Jekyll ou
+simple HTML)</p></li>
+<li><p>Mais pour l’instant : tout est fonctionnel 👍 ## Atelier
+Reconnaissance optique de caractères (OCR) La <a
+href="https://fr.wikipedia.org/wiki/Reconnaissance_optique_de_caract%C3%A8res">reconnaissance
+optique de caractères</a> désigne les procédés informatiques pour la
+transcription d’images de textes imprimés ou dactylographiés en fichiers
+de texte. ### OCR sous Ubuntu 24.04 LTS #### Procédure pour scanner,
+plusieurs feuilles, et générer un PDF avec OCR fiable (langue anglaise),
+cette procédure a été mise au point en relation avec Chatgpt:</p></li>
+</ul>
+<ol type="a">
+<li>Une commande qui combine le scan des pages du chargeur de
+l’imprimante, regroupe les pages générées en un seul fichier et effectue
+la reconnaissance de caractère, en langue anglaise en générant le
+fichier scan_ocr.pdf :</li>
+</ol>
+<p><code>scanimage … –batch=page-%03d.pnm img2pdf page-*.pnm -o scan.pdf
+ocrmypdf -l eng scan.pdf scan_ocr.pdf</code></p>
+<ol start="2" type="a">
+<li>Extraire le texte brut avec pdftotext</li>
+</ol>
+<p><code>pdftotext scan_ocr.pdf scan_ocr.txt</code></p>
+<ol start="3" type="a">
+<li>Nettoyer le fichier avec le script python nettoie_ocr.py</li>
+</ol>
+<p><code>python3 nettoie_ocr.py scan_ocr.txt scan_ocr_n.txt</code></p>
+<ol start="4" type="a">
+<li><p>Ouvrir scan_ocr_n.txt dans Libreoffice Writer et utiliser le
+correcteur d’orthographe. #### Procédure pour scanner, une seule
+feuille, et générer un PDF avec OCR fiable (langue française), cette
+procédure a été mise au point en relation avec Chatgpt.</p></li>
+<li><p>Scanner en haute qualité (400 DPI, niveaux de gris, format
+TIFF)</p></li>
+</ol>
+<p><code>scanimage –device “escl:http://192.168.1.117:8080” –resolution
+400 –mode Gray –format=tiff &gt; scan.tiff</code></p>
+<pre><code>• --resolution 400 : meilleure reconnaissance de petits caractères
+• --mode Gray : bon contraste, poids réduit
+• --format=tiff : format sans perte, idéal pour OCR</code></pre>
+<ol start="2" type="a">
+<li>Appliquer l’OCR en français avec ocrmypdf</li>
+</ol>
+<p><code>ocrmypdf -l fra scan.tiff scan_ocr.pdf</code></p>
+<pre><code>• -l fra : utilise le moteur OCR français (tesseract-ocr-fra)
+• scan_ocr.pdf : le fichier final, interrogeable et optimisé</code></pre>
+<ol start="3" type="a">
+<li>Extraire le texte brut avec pdftotext</li>
+</ol>
+<p><code>pdftotext scan_ocr.pdf scan_ocr.txt</code></p>
+<ol start="4" type="a">
+<li>Nettoyer le fichier avec le script python nettoie_ocr.py</li>
+</ol>
+<p><code>python3 nettoie_ocr.py scan_ocr.txt scan_ocr_n.txt</code></p>
+<ol start="5" type="a">
+<li>Ouvrir scan_ocr_n.txt dans Libreoffice Writer et utiliser le
+correcteur d’orthographe. ### Traduction en ligne de commande avec le
+logiciel trans</li>
+</ol>
+<p><code>trans -b -no-ansi -no-color -t fr -i scan_test.txt &gt;
+scan_fr.txt</code></p>
+<h2 id="atelier-numérique">Atelier numérique</h2>
+<p>Il s’agit d’un atelier numérique organisé par la mairie de
+Saint-Molf. Il se déroule à la mairie d’Asserac, le professeur est <a
+href="https://www.monassistantnumerique.com/assistant-numerique/inclusion-numerique-saint-nazaire">Hervé
+Bard</a>. Les cours sont axés sur l’utilisation de la tablette et du
+smartphone. C’est l’occasion pour moi de poser des questions à Hervé. En
+particulier, sur les éditeur de texte “intelligent”, il m’oriente sur
+l’<a
+href="https://fr.wikipedia.org/wiki/Auto-compl%C3%A9tion">auto-completion</a>
+qui me fait aboutir sur la suite bureautique KOffice remplacé par <a
+href="https://fr.wikipedia.org/wiki/Calligra_Suite">Calligra Suite</a>
+dont le traitement de texte est <a
+href="https://fr.wikipedia.org/wiki/Calligra_Words">Calligra Words</a>.
+## Livre numérique ### Définition de Wikipédia Le livre numérique est un
+<a href="https://fr.wikipedia.org/wiki/Livre_(document)">livre</a> édité
+et diffusé en version numérique, disponible sous la forme de <a
+href="https://fr.wikipedia.org/wiki/Fichier_informatique">fichiers</a>
+qui peuvent être téléchargés et stockés pour être lus sur un écran<a
+href="https://fr.wikipedia.org/wiki/Livre_num%C3%A9rique#cite_note-JORF-1">1</a>,<a
+href="https://fr.wikipedia.org/wiki/Livre_num%C3%A9rique#cite_note-GDT-2">2</a>
+(<a href="https://fr.wikipedia.org/wiki/Ordinateur_personnel">ordinateur
+personnel</a>, <a
+href="https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9phone_portable">téléphone
+portable</a>, <a
+href="https://fr.wikipedia.org/wiki/Liseuse">liseuse</a>, <a
+href="https://fr.wikipedia.org/wiki/Tablette_tactile">tablette
+tactile</a>), sur une <a
+href="https://fr.wikipedia.org/wiki/Plage_braille">plage braille</a>, un
+dispositif de lecture de <a
+href="https://fr.wikipedia.org/wiki/Livre_audio">livres audio</a>, ou un
+<a href="https://fr.wikipedia.org/wiki/Navigateur_web">navigateur</a>.
+### Liseuse La <a
+href="https://fr.wikipedia.org/wiki/Liseuse">liseuse</a> permet la
+lecture des livres numériques. J’ai acheté en septembre 2024 une liseuse
+française <a href="https://fr.wikipedia.org/wiki/Vivlio">Vivlio</a></p>
+<h3 id="format-epub">Format epub</h3>
+<p>Le <a href="https://fr.wikipedia.org/wiki/EPUB_(format)">format
+epub</a> (<a
+href="https://fr.wikipedia.org/wiki/Acronymie">acronyme</a>)
+d’electronic publication est le format utilisé pour les livres
+numériques. Les fichiers e-pub sont <a
+href="https://fr.wikipedia.org/wiki/ZIP_(format_de_fichier)">zipés</a>,
+ils englobent plusieurs fichiers. Il convient donc de les “déziper” pour
+avoir accès aux différents fichiers : * Texte : titlepage.xhtml suivi
+d’une série de fichiers.xhtml correspondant à l’ensemble du texte du
+livre. * Styles : pages_styles.css et stylesheet.css. * Images : un
+fichier.jpg par image. * Polices : aucun fichier. * Mescellaneous
+(divers) : 1 fichier.pdf, calibre_bookmarks.txt, container.xhtml,
+content.opf, toc.ncx. #### Fichiers texte Les fichiers texte utilisent
+<a href="https://fr.wikipedia.org/wiki/Langage_de_balisage">Langage de
+balisage</a> <a
+href="https://fr.wikipedia.org/wiki/Extensible_Hypertext_Markup_Language">xhtml</a>.
+Le XHTML se fonde sur la syntaxe définie par <a
+href="https://fr.wikipedia.org/wiki/Extensible_Markup_Language">XML</a>.
+Dans le cadre de l’édition du livre numérique “Souvenirs de jeunesse”,
+un extrait du langage de balisage est donné ci-dessous :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/souvenirs_de_jeunesse/memoires/titlepage.png"
+alt="Extrait de titlepage.xhtml" />
+<figcaption aria-hidden="true">Extrait de titlepage.xhtml</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/souvenirs_de_jeunesse/memoires/titlepage.png">Extrait
+de titlepage.xhtml</a></p>
+<p><a href="https://www.youtube.com/watch?v=YAAElTfq6Is">Vidéo la
+syntaxe de base du langage XML</a> Texte de la vidéo : Syntaxe de base
+du langage XML : (balise, élément, attribut.) 1. Balise : Dans un
+document XML, on doit distinguer les balises et le contenu textuel. Les
+balises sont les composants fondamentaux permettant l’écriture de
+documents XML. Elles se distinguent du contenu en utilisant les
+caractères inférieur, slache et supérieur. Une balise est un texte
+commençant par le signe (inférieur) suivi directement par le nom de la
+balise et se terminant par le signe (supérieur). Il existe trois types
+de balises en XML : * Les balises d’ouverture (ou les balises ouvrantes
+ou les balises de début) : elles commencent un élément ; * Les balises
+de fermeture (ou les balises fermantes ou les balises de fin) : elles
+terminent un élément ; * Les balises d’élément vide . Attention : le nom
+de la balise ne commence ni par un point d’interrogation(?) ni par un
+point d’exclamation(!). 2. Élément : Un élément est en général un
+ensemble du texte borné par deux balises, une balise ouvrante et une
+autre balise fermante portant le même nom. On distingue entre un élément
+non-vide et un élément vide : * Un élément non-vide : lorsqu’il y a un
+contenu entre ses deux balises ; * Un élément vide : lorsqu’il n’y a pas
+d’un contenu entre ses deux balises Rq : un élément non-vide est souvent
+représenté par une balise d’élément vide. NB : le contenu, compris entre
+les deux balises, peut-être du texte et/ou d’autres éléments, ou rien
+(élément vide). 3. Attribut : Un attribut est une information
+supplémentaire attachée à un élément, on parle de métadonnée. Il est un
+couple nom/valeur ajouté à la balise ouvrante ou à une balise vide. La
+valeur est un texte indiqué entre apostrophes ou guillemets (au choix).
+Elle peut être vide , mais pas nulle . Un élément peut porter un ou
+plusieurs attributs. Ces attributs sont uniques. La répétition d’un
+attribut de même nom sur le même élément provoquera une erreur de
+l’interpréteur XML. L’ordre des attributs n’est pas significatif, et
+peut ne pas être conservé dans certains traitements. 4. Conclusion : En
+résumé, Chaque document XML contient un ou plusieurs éléments. Chaque
+élément a un type, identifié par son nom, parfois appelé son
+“identifiant générique” (GI), et peut avoir un ensemble d’attributs.
+Chaque attribut est composé d’un couple nom/valeur.</p>
+<h3 id="outils-logiciels">Outils logiciels</h3>
+<p>Les livres numériques, sous la forme de fichiers au format epub,
+nécessitent des outils logiciels dédiés aux fonctions de validation,
+gestion, lecture, édition et conversion. J’ai opté pour le logiciel <a
+href="https://fr.wikipedia.org/wiki/Calibre_(logiciel)">calibre</a>. Un
+autre logiciel, réputé plus complet, est <a
+href="https://fr.wikipedia.org/wiki/Sigil_(logiciel)">Sigil</a>. ###
+Outils logiciels en ligne de commande <a
+href="https://fr.linux-console.net/?p=15771">Comment convertir des
+fichiers Markdown sous Linux</a></p>
+<p><a href="https://pandoc.org/MANUAL.html">Pandoc User’s Guide</a> ###
+Formation <a
+href="https://www.numipage.com/editer-un-fichier-epub-avec-sigil/">Editer
+son ebook en ePub sur PC, Mac et Linux avec Sigil ou Calibre</a> ###
+Correction des erreurs La plateforme multiservices <a
+href="https://comeup.com/fr/">Comeup</a>, en la personne de Laurent
+Hentz, propose, le service payant mais abordable, <a
+href="https://comeup.com/service/163739/corriger-vos-erreurs-epubcheck?affiliation=XsHUsW71">Erreurs-epubcheck</a>
+sur le logiciel <a href="https://sigil-ebook.com/sigil/">Sigil.</a>.
+J’ai envoyé une requête accompagnée d’un paiement de 10€ à Laurent
+Hentz. Le contenu de la requête explique que le <a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/souvenirs_de_jeunesse/memoires/memoires_a5_5.epub">fichier
+e.pub accessible par le lien</a>, de mon livre numérique “Souvenirs de
+jeunesse”, pose problème sur ma liseuse. En effet la lecture se fait
+correctement jusqu’à la page 50, puis la liseuse force le retour au menu
+principal. La réponse de l’équipe Comeup est la suivante : <em>Bonjour
+Régis, à la lecture de votre demande, ce que je propose (la correction
+des erreurs epubcheck) ne semble pas correspondre à votre demande. Je
+préfère ne pas prendre votre commande plutôt que vous soyez déçu du
+résultat. Par contre, si vous souhaitez uniquement que j enlève les
+erreurs générées par epubcheck, reprenez moi la commande. Mais comme dit
+ça ne résoudra pas votre soucis technique actuel. Les erreurs epubcheck
+sont liés à l absence de balise de langue, ça va rien changer pour la
+table des matières</em> . ma réponse est la suivante : Bonjour, merci de
+vos messages, je pense qu’il n’est pas nécessaire de maintenir cette
+commande. Par contre, je travaille actuellement sur Calibre dans un
+environnement Ubuntu et je suis intéressé par une assistance
+informatique pour installer Sigil et epubcheck. Cette requête restera
+sans réponse de la part de <a href="https://comeup.com/fr/">Comeup</a>.
+### epubcheck epubcheck n’est pas disponible dans le logiciel calibre,
+il est nécessaire de l’exécuter en ligne de commande. La version
+officielle d’EpubCheck se trouve<a
+href="https://github.com/w3c/epubcheck">sur Github</a>. ## Regroupement
+chronologique : ### Fichier chronologique de la vie de Vincent Van Gogh
+Le fichier chronologique de la vie de Vincent Van Gogh est un fichier de
+type tableur accessible par la commande : * <code>libreoffice
+SCAO/atelier_e/vvg/chronologie_vvg.ods</code> ### Hommage à Vincent Van
+Gogh les 30 et 31 juillet 2022 * <a
+href="https://youtu.be/hR8Rq2GxHJM">Hommage à Vincent Van Gogh les 30 et
+31 juillet 2022 Interview de Pascal TIERCE</a> * <a
+href="https://dodoc.ecriredanslaville.net/_publications/marcasse-b">Hommage
+à Vincent Van Gogh les 30 et 31 juillet 2022</a> ### Pourquoi Van Gogh
+n’est pas classé parmi les réalistes ? Cette question est posée à
+chatgpt le 3 mai 2026, voici sa réponse :</p>
+<p>On pourrait croire que Van Gogh est réaliste parce qu’il peint des
+paysages, des paysans et des objets du quotidien. Pourtant, il n’est pas
+classé dans le réalisme pour plusieurs raisons essentielles.</p>
+<ol type="1">
+<li><p>Le réalisme cherche à montrer le monde tel qu’il est Le mouvement
+réaliste voulait représenter la réalité de façon objective, presque
+documentaire. Les peintres réalistes cherchaient à peindre fidèlement la
+vie quotidienne, sans dramatisation ni effets émotionnels.</p></li>
+<li><p>Van Gogh peint ce qu’il ressent, pas ce qu’il voit Van Gogh
+transforme la réalité pour exprimer ses émotions et son état intérieur.
+Il déforme volontairement les couleurs, les formes, la perspective et la
+lumière.</p></li>
+<li><p>Des couleurs irréalistes et symboliques Les réalistes utilisent
+des couleurs proches du réel. Van Gogh utilise des couleurs expressives
+et symboliques : jaunes intenses, bleus profonds, contrastes
+forts.</p></li>
+<li><p>Une peinture gestuelle et visible Chez les réalistes, les coups
+de pinceau sont souvent discrets. Chez Van Gogh, ils sont épais,
+visibles et chargés d’énergie.</p></li>
+<li><p>Le post‑impressionnisme Van Gogh appartient au <a
+href="https://fr.wikipedia.org/wiki/Postimpressionnisme">post‑impressionnisme</a>.
+Ce mouvement dépasse l’observation pour exprimer le monde intérieur et
+ouvre la voie à l’art moderne. <img
+src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Poster_Manet_and_the_Post-Impressionists%2C_Grafton_Galleries_1910.jpg"
+alt="Affiche de Manet and the Post-Impressionists (1910), pour l’exposition londonienne montée par Roger Fry." /></p></li>
+</ol>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/4/4f/Poster_Manet_and_the_Post-Impressionists%2C_Grafton_Galleries_1910.jpg">Affiche
+de Manet and the Post-Impressionists (1910), pour l’exposition
+londonienne montée par Roger Fry</a></p>
+<p>Résumé : Le réalisme observe le réel. Van Gogh exprime l’émotion. Il
+peint la réalité ressentie, pas la réalité visible.</p>
+<h3 id="un-projet-unique">Un projet unique</h3>
+<ul>
+<li>Saison 1 : Souvenirs de jeunesse</li>
+<li>Saison 2 : sans titre pour le moment, cette saison correspondra à ma
+période d’activité</li>
+<li>Saison 3 : Carnet de voyage #### Saison 1 - Souvenirs de jeunesse
+##### Organisation des répertoires et des fichiers A partir du
+répertoire courant, les fichiers sont mémorisés dans le répertoire
+:</li>
+<li><code>SCAO/atelier_e/souvenirs_de_jeunesse</code></li>
+</ul>
+<p>Les principaux fichiers se trouvent dans le sous-répertoire : *
+<code>memoires</code></p>
+<p>Le fichier qui a servi à la première publication papier est : *
+<code>SCAO/atelier_e/souvenirs_de_jeunesse/memoires/memoires_a5_3.odt</code></p>
+<p>La version complétée en vue d’une nouvelle publication papier est
+donnée par le fichier : *
+<code>SCAO/atelier_e/souvenirs_de_jeunesse/memoires/memoires_a5_4.odt</code></p>
+<p>Un arbre généalogique de la famille Leruste-Delescluse au moment de
+la guerre est accessible par le fichier : *
+<code>SCAO/atelier_e/genealogie/leruste_delescluse.dia</code>. #####
+Publication des souvenirs de jeunesse * <a
+href="https://dodoc.ecriredanslaville.net/memoires-de-regis/media/memoires-a5-3-r-1*pdf*txt?display=standalone">Publication
+des souvenirs de jeunesse</a> ##### Atelier souvenirs de jeunesse - La
+guerre (version incomplète) * <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_souvenirs_de_jeunesse_la_guerre">Atelier
+souvenirs de jeunesse la guerre</a> #### Saison 2 - Période d’activité
+#### Saison 3 Carnet de voyage <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v">Voir atelier_v</a>
+## Outils logiciels ### Téléchargement sur Arte.tv, édition et lecture
+des vidéos Pour installer les logiciels, il convient de se référencer au
+document <a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/outils_logiciels/Livrable-TelechargementArte.pdf">Téléchargement
+des vidéos sur Arte.tv</a>.</p>
+<p>L’opération s’effectue selon trois phases : * Le téléchargement est
+réalisé à partir de l’extension du navigateur Firefox <a
+href="https://addons.mozilla.org/fr/firefox/addon/video-downloader-pro-firefox/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search">Vidéo
+Downloader Pro</a> * L’édition est réalisée à partir du <a
+href="https://doc.ubuntu-fr.org/pitivi">logiciel de montage vidéo
+Pitivi</a> * La lecture est réalisée à partir de <a
+href="https://www.videolan.org/vlc/index.fr.html">VLC media player</a>.
+### Importation d’une image stockée dans Wikimedia Commons * Aller sur
+le site <a
+href="https://commons.wikimedia.org">commons.wikimedia.org</a> * A
+l’aide du moteur de recherche trouver le(s) image(s), par exemple “musée
+de Tournai” * Sélectionner l’image souhaitée * Faire un clic droit et
+choisir “ouvrir le lien dans un nouvel onglet” * Refaire un clic droit
+et choisir “ouvrir le lien dans un nouvel onglet” * Vérifier la
+structure de l’adresse de l’URL commence par
+<strong>https://upload</strong> * Pour afficher l’image dans le wiki,
+faire précéder de <strong>!</strong>, le dessin de Van Gogh s’affiche *
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/7/75/Gogh_-_Olive_Trees%2C_1889%2C_Fine_Art_Museum_%28Mus%C3%A9e_des_Beaux_Arts%29%2C_Tournai.jpg"
+alt="dessin de van Gogh" /></p>
+<h3 id="wikipédia">Wikipédia</h3>
+<ul>
+<li><a
+href="https://fr.wikipedia.org/w/index.php?title=Charbonnage_de_Marcasse">Charbonnage_de_Marcasse</a></li>
+</ul>
+</body>
+</html>

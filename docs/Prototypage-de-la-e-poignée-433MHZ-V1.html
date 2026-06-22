@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prototypage-de-la-e-poignée-433MHZ-V1</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Prototypage-de-la-e-poignée-433MHZ-V1</h1>
+</header>
+<h1 id="description-physique">Description physique</h1>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_d.png"
+alt="Assemblage de la e-p-433" />
+<figcaption aria-hidden="true">Assemblage de la e-p-433</figcaption>
+</figure>
+<p>La e-p-433 communique avec le e-rupteur par radio. Elle est équipé de
+2 amplificateurs de thermocouple, une batterie LI-ION, un chargeur de
+batterie, d’un microcontrôleur Teensy 3.2 et un émetteur 433 MHZ. Dans
+un effort de miniaturisation, un circuit imprimé regroupe ces composants
+(CMS et traversants). # Nomenclature Une nomenclature permet de
+répertorier les éléments de la e-poignée 433, la première colonne
+indique le niveau de décomposition :</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niv</th>
+<th>Designation</th>
+<th>Founisseur</th>
+<th>Type</th>
+<th>Reference</th>
+<th>Rep</th>
+<th>Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>•</td>
+<td>Vis M3</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Rondelles M3</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>CI CMS e-p-433</td>
+<td><a
+href="http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS">RL</a></td>
+<td>Management</td>
+<td>WBS</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Lithium Ion Battery - 400mAh</td>
+<td><a href="https://www.sparkfun.com">Sparkfun</a></td>
+<td>Achat</td>
+<td><a href="https://www.sparkfun.com/products/13851">PRT-13851</a></td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Entretoises M3</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Rondelles</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>6</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Jupe</td>
+<td><a href="http://www.citedelobjetconnecte.com/">Iot city</a></td>
+<td>IMP3D</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/jupe-433.gcode">jupe-433.gcode</a></td>
+<td>9</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Ecrou M5</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Entretoises M3</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>11</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Rondelle M5</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>12</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Isolateur</td>
+<td><a href="http://www.citedelobjetconnecte.com/">Iot city</a></td>
+<td>Découpe laser</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/Isolateur_a.dxf">Isolateur_a.dxf</a></td>
+<td>13</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Rondelles M3</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>14</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis M3</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>15</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Entretoise de fixation</td>
+<td>https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-dessus.png</td>
+<td>Atelier</td>
+<td></td>
+<td>16</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Capteur de température</td>
+<td></td>
+<td>Atelier</td>
+<td></td>
+<td>17</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Couvercle</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>18</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>La modélisation des différents sous-ensembles fait appel
+principalement à deux logiciels : * <a
+href="http://www.openscad.org/">Openscad</a> pour les pièces fabriquées
+en impression 3D. * <a href="http://www.kicad-pcb.org/">kicad</a> pour
+le CI CMS e-p-433.
+https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-dessus.png #
+Description fonctionnelle <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-v1.png"
+alt="Schéma fonctionnel de la e-poignée 433 MHZ" /> La fonction globale
+e-p-433 est la <a
+href="http://fablabo.net/wiki/SCAO#Mesure_de_la_temp.C3.A9rature">mesure
+de la température</a> sur l’entretoise de fixation [16] et sa
+transmission en mode radio au e-rupteur <a
+href="http://fablabo.net/wiki/E-rupteur-433">e-r-433</a>. Cette fonction
+se décline par : * La capture avec contact de la température sur
+l’entretoise de fixation [16] à l’aide d’un capteur de température [17]
+* Le traitement du signal délivré par le thermocouple (filtrage,
+amplification, conversion analogique digitale) * La transmission radio
+vers le e-r-433 * Des fonctions secondaires : Battery manager,
+calibration et <a
+href="https://fr.wikipedia.org/wiki/Interactions_homme-machine">IHM</a>.
+# Description détaillée Ce paragraphe est structuré selon les articles
+de la nomenclature de la e-poignée 433MHZ.</p>
+<p>Les articles de visserie repérés [1], [2], [5], [6], [10], [11],
+[12], [14], [15], ne font pas l’objet de paragraphes spécifiques.</p>
+<p>Les autres repérés [3], [4], [9], [13], [16] et [17], font l’objet de
+paragraphes spécifiques. ## Entretoise de fixation [16] ### Objet
+L’objet de l’entretoise de fixation [16] est de : * constituer la
+fixation mécanique de la e-p-433 sur le couvercle [18]. * En complément,
+de prévoir le logement du capteur de température [17] pour qu’il puisse
+être correctement maintenu et positionner. ### Conception et réalisation
+Le couvercle de la casserole [18] est représenté sur la photo ci-dessous
+:</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/couv-dessus.png"
+alt="Vue de dessus du couvercle" />
+<figcaption aria-hidden="true">Vue de dessus du couvercle</figcaption>
+</figure>
+<p>Sur ce couvercle : * au centre, une tige filetée M5 soudée, prévue
+par le constructeur pour fixer sa poignée, dans notre cas la e-p-433, *
+sur la photo ci-dessous, une surface circulaire plane, d’un diamêtre
+d’environ 38 mm. Après serrage de l’entretoise, sur cette surface, nous
+pouvons imaginer : * une fixation correcte de l’ensemble e-p-443, * un
+contact thermique dont la qualité va dépendre de 2 paramêtres : *
+l’intimité de contact des deux pièces, * de l’importance de leur surface
+commune.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/couv-plat.png"
+alt="Partie plate du couvercle" />
+<figcaption aria-hidden="true">Partie plate du couvercle</figcaption>
+</figure>
+<p>Sur la photo ci-dessous, le détail de la tige filetée M5 :</p>
+<figure>
+<img src="https://github.com/AIREL46/SCAO/blob/master/wiki/couv-M3.png"
+alt="Tige filletée M3" />
+<figcaption aria-hidden="true">Tige filletée M3</figcaption>
+</figure>
+<h4 id="version-1">Version 1</h4>
+<p>L’entretoise de fixation [16] est constituée d’une entretoise M5.
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-standard.png"
+alt="Entretoise standard M5" /></p>
+<p>Elle est modifiée en atelier selon les indications suivantes : * <a
+href="http://fablabo.net/wiki/20170409091838">Usinage d’une fraisure</a>
+<img src="http://fablabo.net/mediawiki/images/b/b0/Ent-M5.png"
+alt="Entretoise M5" /> * Perçage d’un trou, de 1mm de diamêtre, à
+mi-hauteur de la partie hexagonale, pour permettre l’introduction du
+thermocouple. #### Version 2 L’entretoise de fixation [16] est
+constituée d’une entretoise spécifique en aluminium : * Le dessin de
+l’entretoise : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/ent-alu.png"
+alt="Dessin de l’entretoise aluminium de la e-p-433" /> * La photo de
+l’entretoise vue de dessus :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-dessus.png"
+alt="Vue de dessus de l’entretoise alu" />
+<figcaption aria-hidden="true">Vue de dessus de l’entretoise
+alu</figcaption>
+</figure>
+<ul>
+<li>La photo de l’entretoise vue de dessous :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-dessous.png"
+alt="Vue de dessus de l’entretoise alu" />
+<figcaption aria-hidden="true">Vue de dessus de l’entretoise
+alu</figcaption>
+</figure>
+<ul>
+<li>La photo de l’entretoise avec ses 3 entretoises M3 :</li>
+</ul>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-dessus-3ent.png"
+alt="Entretoise avec ses 3 entretoises M3" /> ## Capteur de température
+[17] ### Objet L’objet du capteur de température est la mise à
+disposition d’une valeur électrique proportionnelle à la température du
+couvercle [18] de la casserole. ### Conception et réalisation Le capteur
+de température [17] est conçu et réalisé à partir d’un thermocouple de
+type K qui utilise une jonction <strong>chromel</strong> (nickel +
+chrome) <strong>/ alumel</strong> (nickel + aluminium).</p>
+<p>Un article de la revue Mesures atteste que <a
+href="http://www.mesures.com/component/k2/item/14381-les-capteurs-de-temperature-a-la-fete">les
+thermocouples devraient représenter la plus grande part du marché en
+2023</a>.</p>
+<p>La photo ci-contre montre la <a
+href="https://fr.wikipedia.org/wiki/Thermocouple">soudure chaude</a>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-soud.png"
+alt="Thermocouple soudure" /> d’un thermocouple de type K.</p>
+<p>En principe, un thermocouple peut être fabriquer soi-même de <a
+href="http://forums.futura-sciences.com/electronique/173470-fabrication-dun-thermocouple.html">manière
+“artisanal”</a>, j’ai moi-même essayé mais sans succès pour le moment.
+La difficulté est de réaliser la soudure du chromel et de l’alumel. Il
+faut faire appel à une source de chaleur qui permette d’atteindre la
+fusion des 2 alliages. De mon expérience, la température atteinte à
+l’aide d’un briquet, de la gazinière ou d’une lampe à souder de type
+“camping gaz” est insuffisante. Dans le meilleur des cas, l’intensité de
+la source de chaleur permet aux 2 alliages de prendre la couleur rouge
+clair. En conclusion, un poste de soudure de type <a
+href="https://fr.wikipedia.org/wiki/Chalumeau_(outil)">chalumeau</a> est
+nécessaire. Par exemple le <a
+href="https://www.multirex.net/micro-chalumeau-2800,fr,4,200024.cfm">micro
+chalumeau</a>.</p>
+<p>Un exemple de câble de thermocouple est montré ci-dessous :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-cable.png"
+alt="Câble du thermocouple" />
+<figcaption aria-hidden="true">Câble du thermocouple</figcaption>
+</figure>
+<p>Il provient d’un thermocouple de <a
+href="https://fr.wikipedia.org/wiki/Thermocouple#Type_K">type K</a>, à
+l’origine, le câble était trop long, il a donc été coupé, ce câble : *
+longueur = 90 mm * la gaine est blanche/verte * les 2 fils : * vert
+(recouvert d’une gaine thermorétractable bleue) * blanc (recouvert d’une
+gaine thermorétractable blanche)</p>
+<p>Les mesures à l’Ohmêtre des 2 fils donnent : * R(vert) = 8 Ohms *
+R(blanc) = 3,5 Ohms.</p>
+<p>Ces mesures mettent en évidence les valeurs non négligeables des
+résistances des 2 fils constituants du thermocouple. #### Version 1 *
+Introduction du thermocouple dans le trou de l’entretoise. Sont maintien
+est assuré par : * une goutte de super glu introduite dans le trou * une
+gaine thermorétractable pour envelopper l’ensemble
+entretoise/thermocouple. #### Version 2 <img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/thermo-equ.png"
+alt="Thermocouple équipé" /></p>
+<ul>
+<li>La photo de l’entretoise avec le capteur de température :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/ent-alu-photo.png"
+alt="Entretoise aluminium de la e-poignée 433 MHZ" />
+<figcaption aria-hidden="true">Entretoise aluminium de la e-poignée 433
+MHZ</figcaption>
+</figure>
+<p>Le capteur de température équipé de son thermocouple est introduit
+dans le trou prévu à cet effet. La vis de serrage noire (visible sur la
+photo) assure le maintien du capteur. Son serrage est effectuer avec une
+clé <a href="https://fr.wikipedia.org/wiki/Cl%C3%A9_Allen">Allen</a> de
+2.</p>
+<p>Les 3 entretoises M3 sont prévues pour assurer la fixation de
+l’isolateur [13]. ## La jupe [9] ### Objet La jupe [9] habille la partie
+inférieure de la e-p-433. ### Conception <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/jupe-433.png"
+alt="jupe-433" /> ### Réalisationson IMP3D ## L’isolateur [13] ### Objet
+L’objet de l’isolateur est de réaliser une isolation thermique entre
+l’entretoise [16] et la jupe [9]. ### Conceptionson <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/isolateur-433.png"
+alt="Isolateur de la e-poignée 433 MHZ" /> ### Réalisation Découpe laser
+## Batterie LI-ION [4] ### Objet L’objet de la batterie LI-ION est
+l’alimentation en tension continue des circuits électroniques du CI CMS
+e-p-433 [3]. ### Conception La <a
+href="https://www.sparkfun.com/products/13851">Lithium Ion Battery -
+400mAh</a> est décrite sur les sites Wikipédia français et anglais : *
+<a
+href="https://fr.wikipedia.org/wiki/Accumulateur_lithium-ion">Accumulateur
+lithium-ion</a> * <a
+href="https://en.wikipedia.org/wiki/Lithium-ion_battery">Lithium-ion
+battery</a>.</p>
+<p>Son utilisation nécessite : * un chargeur adapté à ce type de
+technologie <a href="https://www.sparkfun.com/products/10217">SparkFun
+LiPo Charger Basic - Micro-USB</a> * une attention particulière à la
+température en fonctionnement conduisant au strict respect des
+recommandations du constructeur. La <a
+href="https://cdn.sparkfun.com/datasheets/Prototyping/spe-00-502535-400mah-en-1.0ver.pdf">datasheet</a>
+du constructeur, concernant “Operating Temperature Range”, en fonction
+du mode de fonctionnement, indique : ** Charge 0 ~ 45°C ** Discharge –20
+~ 60°C. ### Réalisation Approvisionnement. ## CI CMS e-p-433 [3] ###
+Objet L’objet du CI CMS e-p-433 [3] est de grouper toutes les composants
+électroniques de l’e-p-433 à l’exception du thermocouple. ### Conception
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.png"
+alt="Schéma du circuit CMS e-p-433" /> #### Conception des fonctions
+##### Amplificateur de thermocouple L’amplificateur de thermocouple est
+conçu à partir du circuit intégré <a
+href="https://fr.wikipedia.org/wiki/Composant_mont%C3%A9_en_surface">CMS</a>
+<a href="http://www.analog.com/en/index.html">ANALOG DEVICES</a> <a
+href="http://pdf.datasheetcatalog.com/datasheet/analogdevices2/AD8494_8495_8496_8497.pdf">AD8495</a>.
+Son schéma électrique : <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-amp.png"
+alt="Schéma de l’amplificateur de thermocouple" /> ##### Microcontrôleur
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-mic.png"
+alt="Schéma du microcontrôleur" /> ##### Calibration <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-cal.png"
+alt="Schéma du circuit calibration" /> ##### Battery manager <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-bm.png"
+alt="Schéma Battery manager" /> ##### 3XLEDS <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-led.png"
+alt="Schéma du circuit LEDS" /> ##### Emetteur 433MHZ <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433-tr.png"
+alt="Schéma du circuit Emetteur" /> ### Réalisation (WBS) La réalisation
+du CI CMS e-p-433 [3] est traitée en un projet séparé. Il fait appel à
+un <a
+href="https://en.wikipedia.org/wiki/Work_breakdown_structure">“Work
+Breakdown Structure” (WBS)</a>. Le principe du WBS consiste à décomposer
+le projet en tâches élémentaires. Ces tâches sont représentées par le
+tableau ci-dessous :</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Designation de la tâche</th>
+<th>Founisseur</th>
+<th>Type</th>
+<th>Ref1</th>
+<th>Ref2</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Projet</td>
+<td><a href="http://kicad-pcb.org/">Kicad</a></td>
+<td></td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.pro">e-p-433.pro</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Schéma électrique</td>
+<td><a href="http://kicad-pcb.org/">Kicad</a></td>
+<td><a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a></td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.sch">e-p-433.sch</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Génération netlist</td>
+<td><a href="http://kicad-pcb.org/">Kicad</a></td>
+<td><a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a></td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.net">e-p-433.net</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Génération BOM</td>
+<td><a href="http://kicad-pcb.org/">Kicad</a></td>
+<td><a href="http://kicad-pcb.org/discover/eeschema/">Eeschema</a></td>
+<td>e-p-433</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.ods">e-p-433.ods</a></td>
+<td>LibreOffice Calc</td>
+</tr>
+<tr class="odd">
+<td>Edition PCB</td>
+<td><a href="http://kicad-pcb.org/">Kicad</a></td>
+<td><a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a></td>
+<td>e-p-433.kicad_pcb</td>
+<td>e-p-433.net</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Génération fichiers GERBER</td>
+<td><a href="http://kicad-pcb.org/">Kicad</a></td>
+<td><a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a></td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.kicad_pcb">e-p-433.kicad_pcb</a></td>
+<td>Gerber</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Génération plan de perçage</td>
+<td><a href="http://kicad-pcb.org/">Kicad</a></td>
+<td><a href="http://kicad-pcb.org/discover/pcbnew/">Pcbnew</a></td>
+<td>e-p-433.kicad_pcb</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433/e-p-433.drl">e-p-433.drl</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CI nu et stencil</td>
+<td>A définir</td>
+<td>Achat</td>
+<td>Fichiers Gerber</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Lot de composants</td>
+<td>A définir</td>
+<td>Achat</td>
+<td>BOM</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CI - CMS</td>
+<td><a href="http://www.citedelobjetconnecte.com/">Iot city</a></td>
+<td>Fabrication</td>
+<td>BOM + schémas</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CI - Composants traversants</td>
+<td><a
+href="http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS">RL</a></td>
+<td>Fabrication</td>
+<td>BOM + schémas</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

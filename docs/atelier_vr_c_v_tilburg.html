@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_vr_c_v_tilburg</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_vr_c_v_tilburg</h1>
+</header>
+<h1 id="voyage-à-tilburg-du-2509-au-02102025">Voyage à Tilburg du 25/09
+au 02/10/2025</h1>
+<h2 id="introduction">Introduction</h2>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/eindhoven/nord_brabant.png"
+alt="Brabant septentrional - Source : Google map modifié par Régis Leruste avec le logiciel Inkscape" />
+<figcaption aria-hidden="true">Brabant septentrional - Source : Google
+map modifié par Régis Leruste avec le logiciel Inkscape</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/eindhoven/nord_brabant.png">Brabant
+septentrional - Source : Google map modifié par Régis Leruste avec le
+logiciel Inkscape</a></p>
+<p>En référence à la carte du Brabant septentrional représentée
+ci-dessus, les quatre lieux d’affectation du père de Vincent, Théodorus
+Van Gogh dans cette province sont chronologiquement : * en 1851 à
+Zundert, à l’issue de son mariage avec Anna Carbentus, Zundert a été
+visité lors d’un précédent voyage dans le Brabant accessible à l’aide du
+lien suivant : <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vo_c_v_brabant#28-mai-2025---zundert--van-vogh-huis">Zundert
+– Van Vogh huis</a>. * en 1871 à Helvoirt, visité durant ce voyage. * en
+1875 à Etten-Leur, visité durant ce voyage. * en 1882 à Nuenem où il
+meurt au printemps 1885, son épouse Anna rejoindra Leiden à la fin de
+cette même année et Vincent la précédera pour partir au mois de novembre
+à Anvers. Nuenen a été visité lors d’un précédent voyage dans le Brabant
+accessible à l’aide du lien suivant : <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vo_c_v_brabant#30-mai-2025---v%C3%A9lo--nuenen">Vélo
+– Nuenen</a> ## Navigation GPS Pour faciliter la navigation GPS, j’ai
+installé sur mon smartphone le planificateur d’itinéraire <a
+href="https://fr.wikipedia.org/wiki/Komoot">Komoot</a>. Le GPX (GPS
+eXchange format) est un <a
+href="https://fr.wikipedia.org/wiki/Format_de_fichier">format de
+fichier</a> permettant l’échange de <a
+href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_g%C3%A9ographiques">coordonnées
+géographiques</a> provenant du <a
+href="https://fr.wikipedia.org/wiki/Global_Positioning_System">GPS</a>.
+Il permet de décrire une collection de points utilisables sous forme de
+<a href="https://fr.wikipedia.org/wiki/Point_de_cheminement">points de
+cheminement</a> (waypoints), traces (tracks) ou itinéraires (routes)[<a
+href="https://fr.wikipedia.org/wiki/GPX_(format_de_fichier)#cite_note-:0-1"></a>.
+Le fichier .gpx peut-être importé dans Komoot. J’ai expérimenté cette
+application en vue de préparer ma randonnée dans le Sahara brabançon :
+<a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vr_c_v_tilburg#randonn%C3%A9e-wandelroute-bosch-en-duin"><em>Wandelroute
+Bosch en Duin</em></a>.</p>
+<h2 id="préparation-du-voyage">Préparation du voyage</h2>
+<ul>
+<li>Le site <a
+href="https://www.visitbrabant.com/fr/experience-brabant-septentrional/van-gogh-brabant">visitbrabant.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Van_Gogh_National_Park">Lien
+Wikipédia vers le Van_Gogh_National_Park</a></li>
+<li><a href="https://www.vangoghnationalpark.com/nl/homepage">Lien vers
+le site officiel du Van_Gogh_National_Park</a></li>
+<li><a
+href="https://en.wikipedia.org/wiki/File:Loonse_en_Drunense_Duinen_drone_video.ogv">Vidéo
+: Loonse_en_Drunense_Duinen_drone_video.ogv</a></li>
+</ul>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2012-08-25_Loonse_en_Drunense_Duinen.jpg/1920px-2012-08-25_Loonse_en_Drunense_Duinen.jpg"
+alt="De Loonse en Drunense Duinen National Park" />
+<figcaption aria-hidden="true">De Loonse en Drunense Duinen National
+Park</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2012-08-25_Loonse_en_Drunense_Duinen.jpg/1920px-2012-08-25_Loonse_en_Drunense_Duinen.jpg">De
+Loonse en Drunense Duinen National Park</a></p>
+<p>Le <a
+href="https://en.wikipedia.org/wiki/Van_Gogh_National_Park">Van_Gogh_National_Park</a>
+occupe une partie importante du Brabant septentrional.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/van_gogh_national_park.png"
+alt="Van_Gogh_National_Park_map" />
+<figcaption aria-hidden="true">Van_Gogh_National_Park_map</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/van_gogh_national_park.png">Van_Gogh_National_Park_map</a></p>
+<p>Si l’on tire une ligne entre Tilburg et Den Bosh, Le parc <a
+href="https://en.wikipedia.org/wiki/De_Loonse_en_Drunense_Duinen_National_Park">De
+Loonse en Drunense Duinen</a> est à gauche de cette ligne,</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/De_Loonse_en_Drunense_Duinen_National_%20Park.png"
+alt="De_Loonse_en_Drunense_Duinen_National_Park_map" />
+<figcaption
+aria-hidden="true">De_Loonse_en_Drunense_Duinen_National_Park_map</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/De_Loonse_en_Drunense_Duinen_National_%20Park.png">De_Loonse_en_Drunense_Duinen_National_Park_map</a></p>
+<p>tandis que le parc <a
+href="https://en.wikipedia.org/wiki/Het_Groene_Woud">Het Groene Woud</a>
+est à droite de cette même ligne.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/Het_Groene_Woud.png"
+alt="Het_Groene_Woud_national_park_map" />
+<figcaption
+aria-hidden="true">Het_Groene_Woud_national_park_map</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/Het_Groene_Woud.png">Het_Groene_Woud_national_park_map</a>.</p>
+<p>Des promenades à vélo sont proposées dans ces deux parcs. ## Tilburg
+[1] <a href="https://fr.wikipedia.org/wiki/Tilbourg">Tilburg</a> est
+central par rapport aux lieux d’affectation du père de Vincent ainsi que
+de <a href="https://fr.wikipedia.org/wiki/Bois-le-Duc">Bois-le-duc</a>
+où se trouve le <a
+href="https://www.hetnoordbrabantsmuseum.nl/en/">Noordbrabants
+museum</a>. Deux visites : * le <a
+href="https://fr.wikipedia.org/wiki/Mus%C3%A9e_du_textile_(Tilbourg)">musée
+du textile</a>. Ce musée est passionnant, installé dans une ancienne
+usine textile, il montre la fabrication du fil à partir de la laine
+brute réceptionnée sous forme de balle. Il montre également la
+fabrication des tissus sur différents métiers à tisser des plus anciens
+au plus récents. Vous-même, sur ordinateur, pouvez concevoir le motif de
+votre tissu. Le <a
+href="https://en.wikipedia.org/wiki/City_Hall_of_Tilburg"><em>City Hall
+of Tilburg</em></a> est anciennement le palais construit par Guillaume
+II qui fut ensuite le collège où Vincent a étudié et aujourd’hui l’hôtel
+de ville. * le City Hall of Tilburg <img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Paleis-raadhuis.jpg/1280px-Paleis-raadhuis.jpg"
+alt="City Hall of Tilburg - Source : Wikipédia" /></p>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Paleis-raadhuis.jpg/1280px-Paleis-raadhuis.jpg">City
+Hall of Tilburg - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/tilburg_city_hall.png"
+alt="Plaque de la scolarité de Vincent sur le tilburg_city_hall" />
+<figcaption aria-hidden="true">Plaque de la scolarité de Vincent sur le
+tilburg_city_hall</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/tilburg_city_hall.png">Plaque
+de la scolarité de Vincent sur le tilburg_city_hall</a></p>
+<p><a href="https://fr.wikipedia.org/wiki/Vincent_van_Gogh">Vincent van
+Gogh</a> passe un an et demi au collège Guillaume II à Tilbourg, jusqu’à
+ses 15 ans. En mars 1868, il quitte précipitamment l’établissement pour
+retourner chez ses parents à <a
+href="https://fr.wikipedia.org/wiki/Zundert">Zundert</a>.</p>
+<h2 id="bois-le-duc-2">Bois-le-duc [2]</h2>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Sint-Jans-Hertogenbosch.jpg"
+alt="Cathédrale de Bois-le-duc - Source : Wikipédia" />
+<figcaption aria-hidden="true">Cathédrale de Bois-le-duc - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/e/eb/Sint-Jans-Hertogenbosch.jpg">Cathédrale
+de Bois-le-duc - Source : Wikipédia</a></p>
+<p><a href="https://fr.wikipedia.org/wiki/Bois-le-Duc">Bois-le-duc</a>
+(en néerlandais ’s-Hertogenbosch et Den Bosch dans le langage courant)
+est une <a
+href="https://fr.wikipedia.org/wiki/Commune_(Pays-Bas)">commune</a> et
+<a
+href="https://fr.wikipedia.org/wiki/Liste_des_villes_des_Pays-Bas">ville</a>
+<a href="https://fr.wikipedia.org/wiki/Pays-Bas">néerlandaise</a>, <a
+href="https://fr.wikipedia.org/wiki/Chef-lieu">chef-lieu</a> de la <a
+href="https://fr.wikipedia.org/wiki/Provinces_des_Pays-Bas">province</a>
+du <a
+href="https://fr.wikipedia.org/wiki/Brabant-Septentrional">Brabant-Septentrional</a>.</p>
+<p>Les principaux lieux culturels de Bois-le-Duc incluent ; * <a
+href="https://fr.wikipedia.org/wiki/Cath%C3%A9drale_de_Bois-le-Duc">Cathédrale
+de Bois-le-Duc</a> ; * Musée municipal de Bois-le-Duc (Stedelijk Museum
+’s-Hertogenbosch) avec des toiles de Picasso, Cocteau et Mendini ; *
+Musée nord-brabançon (Noordbrabants Museum) ; * Centre d’art Jérome
+Bosch (Jheronimus Bosch Art Center), consacré au <a
+href="https://fr.wikipedia.org/wiki/Artiste_peintre">peintre</a> <a
+href="https://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Bosch">Jérôme
+Bosch</a> ; * <a
+href="https://fr.wikipedia.org/wiki/Chartreuse_Sainte-Sophie-de-Constantinople_de_Bois-le-Duc">Chartreuse
+Sainte-Sophie-de-Constantinople</a> (1466-1640). ### Noordbrabants
+museum Avant de rejoindre l’exposition permanenre dédiée à Vincent, je
+m’attarde sur un artiste néerlandais <a
+href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://eelcobrand.nl/&amp;ved=2ahUKEwjiv8vV-p6QAxXANPsDHUPJB_cQFnoECBQQAQ&amp;usg=AOvVaw2P4EwdxgrTvaN06bn6vxLl">Eelco
+Brand (né à rotterdam en 1969)</a>, s’agit d’une oeuvre représenté en
+animation 3D et générée à partir d’une application logicielle.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/2_2_eelco_brand.jpg"
+alt="Eelco Brand (né à rotterdam en 1969) - U.movi (2011) - 3D animation - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Eelco Brand (né à rotterdam en 1969) -
+U.movi (2011) - 3D animation - Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/2_2_eelco_brand.jpg">Eelco
+Brand (né à rotterdam en 1969) - U.movi (2011) - 3D animation - Crédit
+photo : Régis Leruste</a></p>
+<p>Voici le commentaire de l’artiste que j’ai photographié puis saisi
+dans google traduction, ci dessous le rendu bilingue : * Don’t be fooled
+- thisn’t a video or an animated photograph, but an image generated with
+software and brought to life through digital animation. the’s no story;
+the movement has no beginning and no end. its lifeless origin an
+cyclical aimlessness prompt questions about the nature of life itself. *
+Ne vous y trompez pas : ce n’est pas une vidéo ou une photographie
+animée, mais une image générée par un logiciel et animée par une
+animation numérique. Il n’y a pas d’histoire ; le mouvement n’a ni début
+ni fin. Son origine sans vie et son absence de but cyclique suscitent
+des questions sur la nature même de la vie.</p>
+<p>L’exposition “van Gogh’s Brabant period” occupe qu’une petite partie
+du <a href="https://www.hetnoordbrabantsmuseum.nl/en/">Noordbrabants
+museum</a>, voici les principaux tableaux de Vincent qui s’y trouvent
+:</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Vincent-van-Gogh-Collse-watermolen-F48a.jpg/1280px-Vincent-van-Gogh-Collse-watermolen-F48a.jpg"
+alt="Vincent Van Gogh (1853-1890) - Moulin à eau de Kollen près de Nuenen (1884) - Pays-bas, Bois le duc, Noordbrabants museum" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - Moulin à
+eau de Kollen près de Nuenen (1884) - Pays-bas, Bois le duc,
+Noordbrabants museum</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Vincent-van-Gogh-Collse-watermolen-F48a.jpg/1280px-Vincent-van-Gogh-Collse-watermolen-F48a.jpg">Vincent
+Van Gogh (1853-1890) - Moulin à eau de Kollen près de Nuenen (1884) -
+Pays-bas, Bois le duc, Noordbrabants museum</a></p>
+<p>La photo du <a
+href="https://fr.wikipedia.org/wiki/Cartel_(mus%C3%A9ologie)">cartel</a>
+de ce tableau est donné ci-dessous :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/2_6_moulin_eau_etiquette.jpg"
+alt="Cartel du tableau de Vincent Van Gogh (1853-1890) - Moulin à eau de Kollen près de Nuenen (1884) - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Cartel du tableau de Vincent Van Gogh
+(1853-1890) - Moulin à eau de Kollen près de Nuenen (1884) - Crédit
+photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/2_6_moulin_eau_etiquette.jpg">Cartel
+du tableau de Vincent Van Gogh (1853-1890) - Moulin à eau de Kollen près
+de Nuenen (1884) - Crédit photo : Régis Leruste</a></p>
+<p>Sur ce cartel, bizarement le nom du tableau est rédigé en français
+tandis qu’il a été peint par Vincent lors de son séjour à Nuenen, donc
+en pays néerlandais. On serait tenté de croire qu’il ait appartenu
+précédemment à un Français, mais alors pourquoi une faute d’orthographe
+: <em>Moulin à l’eau</em> au lieu de <em>Moulin à eau</em> ?</p>
+<figure>
+<img
+src="https://www.hetnoordbrabantsmuseum.nl/media/dntdmkr0/van_gogh___kop_van_een_vrouw_72dpi___zonder_lijst.jpg?anchor=center&amp;mode=crop&amp;width=960&amp;height=752&amp;format=webp&amp;rnd=132844705352830000&amp;quality=78"
+alt="Vincent Van Gogh (1853-1890) - Head of woman (mars 1885) - Noordbrabants museum - Source : Noordbrabants museum" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - Head of
+woman (mars 1885) - Noordbrabants museum - Source : Noordbrabants
+museum</figcaption>
+</figure>
+<p><a
+href="https://www.hetnoordbrabantsmuseum.nl/media/dntdmkr0/van_gogh___kop_van_een_vrouw_72dpi___zonder_lijst.jpg?anchor=center&amp;mode=crop&amp;width=960&amp;height=752&amp;format=webp&amp;rnd=132844705352830000&amp;quality=78">Vincent
+Van Gogh (1853-1890) - Head of woman (mars 1885) - Noordbrabants museum
+- Source : Noordbrabants museum</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Peasant_Woman%2C_Seated_with_White_Cap_by_Vincent_van_Gogh_-_Noordbrabants_Museum.jpg"
+alt="Vincent Van Gogh (1853-1890) - Head of woman (mars 1885) - Noordbrabants museum - Source : Wikipédia" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - Head of
+woman (mars 1885) - Noordbrabants museum - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Peasant_Woman%2C_Seated_with_White_Cap_by_Vincent_van_Gogh_-_Noordbrabants_Museum.jpg">Vincent
+Van Gogh (1853-1890) - Head of woman (mars 1885) - Noordbrabants museum
+- Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Van_Gogh_-_Stillleben_mit_Bartmannkrug%2C_Kaffeem%C3%BChle_und_Pfeifenetui.jpeg/1280px-Van_Gogh_-_Stillleben_mit_Bartmannkrug%2C_Kaffeem%C3%BChle_und_Pfeifenetui.jpeg"
+alt="Vincent Van Gogh (1853-1890) - Still life with bottles and a cowrie shell (1884) - Noordbrabants museum - Source Wikipédia" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - Still life
+with bottles and a cowrie shell (1884) - Noordbrabants museum - Source
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Van_Gogh_-_Stillleben_mit_Bartmannkrug%2C_Kaffeem%C3%BChle_und_Pfeifenetui.jpeg/1280px-Van_Gogh_-_Stillleben_mit_Bartmannkrug%2C_Kaffeem%C3%BChle_und_Pfeifenetui.jpeg">Vincent
+Van Gogh (1853-1890) - Still life with bottles and a cowrie shell (1884)
+- Noordbrabants museum - Source Wikipédia</a></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/drenthe_a/gordina_de_grotte.png"
+alt="Source : Noordbrabants museum - Vincent Van Gogh (1853-1890) - Tête de femme (Gordina de Groot), (1885) - Noordbrabants museum" />
+<figcaption aria-hidden="true">Source : Noordbrabants museum - Vincent
+Van Gogh (1853-1890) - Tête de femme (Gordina de Groot), (1885) -
+Noordbrabants museum</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/drenthe_a/gordina_de_grotte.png">Source
+: Noordbrabants museum - Vincent Van Gogh (1853-1890) - Tête de femme
+(Gordina de Groot), (1885) - Noordbrabants museum</a></p>
+<p>Ce tableau surnommé <em>Joconde du Brabant</em> a été acquis
+récemment par le Noordbrabants museum, il convient de se reporter au
+récit du <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vk_carnet_voyages_2024_drenthe_leiden#mangeurs-de-pommes-de-terres">voyage
+dans la Drenthe</a> pour connaitre le long parcours qui a permis de
+concrétiser cette acquisition.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Van_Gogh_-_The_Parsonage_Garden_at_Nuenen.jpg/1920px-Van_Gogh_-_The_Parsonage_Garden_at_Nuenen.jpg"
+alt="Vincent Van Gogh (1853-1890) - The Parsonage Garden at Nuenen (1884) - Noordbrabants museum - Source Wikipédia" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - The
+Parsonage Garden at Nuenen (1884) - Noordbrabants museum - Source
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Van_Gogh_-_The_Parsonage_Garden_at_Nuenen.jpg/1920px-Van_Gogh_-_The_Parsonage_Garden_at_Nuenen.jpg">Vincent
+Van Gogh (1853-1890) - The Parsonage Garden at Nuenen (1884) -
+Noordbrabants museum - Source Wikipédia</a></p>
+<p>Ma première visite de cette exposition provoque chez moi un grand
+enthousiasme. En particulier, la découverte de celle que l’on appelle la
+Joconde du Brabant. Son regard est d’une exceptionnelle subtilité. “The
+look in her eyes is not easy to forget. The penetrating gaze speaks of
+the drudgery of peasant life.” “She looks directly at you. Her brown
+eyes look worried but also resigned.” “Son regard est difficile à
+oublier. Son regard pénétrant évoque la pénibilité de la vie paysanne.”
+“Elle vous regarde droit dans les yeux. Ses yeux marrons ont l’air
+inquiets, mais aussi résignés.” (Deux commentaires relevés sur les
+panneaux explicatifs). ## Tilburg - De Pont museum [3]</p>
+<ul>
+<li>le <a
+href="https://fr.wikipedia.org/wiki/Mus%C3%A9e_d%27art_contemporain_De_Pont">Musée
+d’art contemporain De Pont</a></li>
+</ul>
+<p>Le musée est conçu dans une ancienne usine textile, une surface
+impressionnante est mise à la disposition des œuvres. Je commence par
+l’exposition temporaire consacrée à Hamza Halloubi (1982), artiste
+Marocain,Belge. Je regarde son film Vizor (2024). Je continue par
+l’exposition permanente, je n’y comprend pas grand chose. Je termine à
+la cafétéria où la particularité est que les serveurs et serveuses
+marchent en arrière. Ils me font penser à Michael Jackson. Dans cette
+pratique, en particulier, les femmes se sentent peu rassurées. Il
+fallait y penser, c’est sans doute le style avant-gardiste du musée qui
+l’impose !</p>
+<h2 id="etten-leur-1875-4">Etten-Leur (1875) [4]</h2>
+<h3 id="vincent-séjourne-à-etten-à-deux-périodes-distinctes">Vincent
+séjourne à Etten à deux périodes distinctes 👍</h3>
+<ul>
+<li>la première (22 juillet au 15 août 1878), avant celles des 3B
+(Bruxelles, Borinage, Bruxelles), durant laquelle il écrit deux lettres
+à Théo, la 123 lui parle de l’évolution de son art ainsi que des
+démarches faites avec son père et le pasteur Jones d’Isleworth
+concernant sa formation d’évangéliste.</li>
+<li>la seconde (avril à décembre 1881), après celles des 3B, durant
+laquelle il écrit sept lettres à Théo dans lesquelles il lui parle de
+l’évolution de son art et de son amour pour K. ### Sur les traces de
+Vincent :</li>
+<li>van Gogh church (l’ancienne église protestante)</li>
+<li>la maison du bedeau (verger’ house), point d’information
+touristique. Markt 4 4875 CE Etten-Leur</li>
+<li>l’ancien hôtel de ville où Vincent s’est inscrit comme artiste pour
+la première fois, une copie du registre est visible dans l’église,</li>
+<li>l’église catholique Lambertus qu’il a dessiné à plusieurs
+reprises</li>
+<li>l’emplacement du presbytère où il créa son premier atelier, marqué
+aujourd’hui par une statue du sculpteur Hein Vree</li>
+</ul>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Etten-leur_007.jpg"
+alt="Hein Vree (1926-1995) - Statue de Vincent van Gogh - Etten-Leur" />
+<figcaption aria-hidden="true">Hein Vree (1926-1995) - Statue de Vincent
+van Gogh - Etten-Leur</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/a/a6/Etten-leur_007.jpg">Hein
+Vree (1926-1995) - Statue de Vincent van Gogh - Etten-Leur</a> ## Sahara
+brabançon [5]</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/De_Loonse_en_Drunense_Duinen_National_%20Park.png"
+alt="De_Loonse_en_Drunense_Duinen_National_Park_map" />
+<figcaption
+aria-hidden="true">De_Loonse_en_Drunense_Duinen_National_Park_map</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/tilburg/De_Loonse_en_Drunense_Duinen_National_%20Park.png">De_Loonse_en_Drunense_Duinen_National_Park_map</a></p>
+<h3 id="randonnée-wandelroute-bosch-en-duin">Randonnée Wandelroute Bosch
+en Duin</h3>
+<p>🔁 Circuit circulaire au départ de</p>
+<p>Landgoed Bosch &amp; Duin</p>
+<p>(entrée près d’Helvoirt)</p>
+<pre><code>Nom : Wandelroute Bosch en Duin
+
+Distance : environ 8 km (2h à 2h30)
+
+Difficulté : Facile à modérée
+
+Balisage : flèches ou marquage de couleur (à vérifier à l’entrée)
+
+Paysages : dunes de sable, pins, landes, vues dégagées magnifiques.</code></pre>
+<p>📍 Point de départ 👍</p>
+<p>Landgoed Bosch &amp; Duin</p>
+<p>(grand parking + cafétéria à l’entrée) Plan &amp; carte
+officielle</p>
+<pre><code>Le point de départ de la route de 4,4 km “Wandelroute Bosch en Duin, vlak bij Udenhout” est Café‑restaurant Bosch en Duin, Schoorstraat 50, 5071 RC Udenhout (NB).
+[natuurmonumenten.nl+1](https://www.natuurmonumenten.nl/natuurgebieden/nationaal-park-loonse-en-drunense-duinen/route/wandelroute-bosch-en-duin-vlak-bij?utm_source=chatgpt.com)
+
+Tu peux télécharger un PDF ou un fichier GPX pour cette randonnée depuis le site de Natuurmonumenten.</code></pre>
+<p>J’ai préparé sur mon smartphone S24 à l’aide de l’appli Komoot cette
+randonnée pédestre.</p>
+<p><strong>Sahara du Brabant : </strong>Pour faire cette balade (2h
+environ), une partie en longeant les dunes, la seconde partie au travers
+la forêt, il faut d’une partie, l’avoir bien préparée, d’autre part
+disposé d’un GPS performant, ce qui est le cas de mon Samsung S24 et en
+plus de veiller à la charge de sa batterie car le wGPS est très
+gourmand. Sans GPS, ce serait la galère garantie. Le paysage des dunes
+est magnifique et à couper le souffle. Le restaurant Bosch &amp; Duin
+est le point de ralliement des randonneurs. Le territoire “?” Est
+quadrillé de chemins, de pistes cyclable et de pistes cavalières. Les
+dunes constituent la principale attraction et la forêt créée un
+contraste de paysage. ## Helvoirt (1871) [6] Helvoirt est un village
+situé dans la <a
+href="https://fr.wikipedia.org/wiki/Commune_(Pays-Bas)">commune</a> <a
+href="https://fr.wikipedia.org/wiki/Pays-Bas">néerlandaise</a> de <a
+href="https://fr.wikipedia.org/wiki/Vught">Vught</a>, dans la <a
+href="https://fr.wikipedia.org/wiki/Provinces_des_Pays-Bas">province</a>
+du <a
+href="https://fr.wikipedia.org/wiki/Brabant-Septentrional">Brabant-Septentrional</a>.</p>
+<p>From 1871 to 1875 Theodorus van Gogh, father of the artist <a
+href="https://en.wikipedia.org/wiki/Vincent_van_Gogh">Vincent van
+Gogh</a>, served as Reverend of the Dutch Reformed Church.</p>
+<p>Dans le charmant village de Helvoirt, beaucoup de choses ont été
+préservées du temps où Vincent van Gogh est venu et sa famille y vivait.
+L’ancienne église réformée où prêchait le père Théodore, sa Bible
+d’État, la maison du ministre, la tombe de l’oncle Jan et de la tante
+Doortje et la maison de ses trois tantes forment un véritable musée à
+ciel ouvert. Helvoirt est situé sur la piste cyclable Van Gogh et le
+parc national Van Gogh.</p>
+<p>Durant l’été 1874, Vincent a séjourné dans sa famille à Helvoirt. Il
+a fait quelques croquis à cette occasion, dont le croquis “Vue de
+Helvoirt”. Si vous passez par le domaine du château de Zwijnsbergen et
+que vous regardez vers le village et le clocher de l’église, vous avez
+l’impression de vous promener dans son esquisse. Les saules têtards
+complètent l’image. ### La visite d’Helvoirt Situé à treize kilomètres
+de Tilburg , le village d’Helvoirt est petit et effectivement très joli,
+beaucoup de de belles maisons sont enfouies dans la verdure. Le musée à
+ciel ouvert est enthousiasmant, le beau soleil facilite la prise de
+belles photos.</p>
+<h3 id="sur-les-traces-de-vincent">Sur les traces de Vincent :</h3>
+<ul>
+<li>le presbytere : Torenstraat 47</li>
+<li>l’église protestante : Van Grevenbroeckstraat 2</li>
+<li>le tombeau de l’oncle Johannes van Gogh et de ses deux tantes : van
+Goghstraat</li>
+<li>la villa Jaglust : Torenstraat 45</li>
+</ul>
+</body>
+</html>

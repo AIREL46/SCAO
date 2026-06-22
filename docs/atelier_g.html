@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_g</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_g</h1>
+</header>
+<h1 id="atelier-généalogie">Atelier <a
+href="https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9alogie">généalogie</a></h1>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Cousin-fr.png"
+alt="Source : Wikipédia - Illustration des degrés de parenté" />
+<figcaption aria-hidden="true">Source : Wikipédia - Illustration des
+degrés de parenté</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/a/aa/Cousin-fr.png">Source
+: Wikipédia - Illustration des degrés de parenté</a> ## Confidentialité
+de l’arbre généalogique Pour que l’arbre généalogique soit consultable
+par un visiteur auquel vous confier un lien, il faut entrer dans “Menu
+de l’arbre en ligne” - “Paraméter mon arbre” - “Confidentialité” -
+“Affichage de vos individus aux visiteurs de votre arbre” et cocher
+“Contemporains semi-masqués”. ## Création de l’arbre généalogique de la
+famille Leruste-Delescluse J’ai créé l’arbre généalogique de la famille
+Leruste-Delescluse à partir de celui établi par Emanuelle Leruste
+(Manu). Je l’ai ensuite complété, dans la mesure où les informations
+m’aient été connues, (faire-part, bouche à oreilles, recherche sur
+Internet, etc.), par : * la descendance paternelle * mon ascendance
+maternelle, en y joignant la famille Delpierre-Guay. ## Recherches
+Internet à l’aide : * de Geneanet doté de l’option payante “Premium” par
+le biais de l’association “Les amis de Guérande” accessible lors des
+permanences, le jeudi après-midi en particulier. * des archives
+départementales ou de Paris (tables décénales, mentions marginales) * du
+site de l’<a href="https://arbre.app/insee">INSEE</a> qui indique les
+dates et les lieux des décès depuis 1970 * du site du ministère de la
+culture, légion d’honneur, la grande chancellerie, base Léonore ###
+Tables décénales Les <a
+href="https://fr.wikipedia.org/w/index.php?title=Document_g%C3%A9n%C3%A9alogique_en_France&amp;veaction=edit&amp;section=5">tables
+décennales</a> sont des listes établies tous les dix ans depuis 1792,
+regroupant les naissances, mariages et décès d’une commune, facilitant
+ainsi les recherches généalogiques en permettant de retrouver rapidement
+les actes d’état civil correspondants.</p>
+<p>Dans ces listes, la répartition en pourcentage des nombres de médias
+utilisées respectivement par les naissances, les mariages et les décès
+est inégale. Sur la base de l’exemple de la table décénales <a
+href="https://archivesdepartementales.lenord.fr/ark:/33518/l3b9rh4085jc/dc57a252-0e93-4382-9d8d-348635bbff16">TOURCOING
+/ 1873-1882</a>. Elle contient 1437 médias répartis en : * <strong>47,5
+%</strong> pour les naissances, * <strong>20 %</strong> pour les
+mariages, * <strong>32,5 %</strong> pour les décès. ### Exemple pour
+Jacques Delpierre, né à Saint-Omer, département du Pas de Calais, en
+1904, pour lequel je recherche la date de son décès #### Naissance de
+Jacques Delpierre * trouver la confirmation de sa naissance aux <a
+href="https://archives-departementales.com/">archives
+départementales</a> * sur la carte de France, cliquez sur Pas de Calais,
+* un portail s’affiche, cliquer sur le <a
+href="https://archivespasdecalais.fr/">lien</a> * un menu s’affiche et
+propose trois onglets (<code>archives numérisées, chercher dans les
+archives, recherche par commune</code>) * choisir archives numérisées et
+cliquer sur le bouton <code><a
+href="https://www.archivespasdecalais.fr/Chercher/Archives-numerisees">consulter</a></code>
+* plusieurs onglets apparaissent, cliquer sur <code>“<a
+href="https://www.archivespasdecalais.fr/Chercher/Archives-numerisees/Etat-civil">état
+civil</a>”</code> * plusieurs onglets apparaissent, cliquer sur
+<code>“<a
+href="https://archivesenligne.pasdecalais.fr/console/ir_seriel.php?id=56&amp;p=formulaire_tables">tables
+décennales</a>”</code> * après un texte d’introduction intitulé “Tables
+décennales de l’état civil”, tirer vers le bas avec la souris pour faire
+apparaitre le questionnaire permettant de préciser la recherche * saisir
+le lieu : <code>Saint-Omer (Pas-de-Calais, France)</code> * cocher type
+d’acte (naissance, mariage, décès) : <code>naissance</code> * saisir
+l’année de naissance : En : <code>1904</code> * ne rien saisir sur le
+champ “Recherche par cote” * cliquer sur <code><a
+href="">Rechercher</a></code> * Un résultat trouvé : 3 E 749 |
+Saint-Omer | 1903-1912 | Naissance | <code>Consulter</code> * la cote
+est 3 E 749, la ville est Saint-Omer, la table décennale est celle se
+rapportant aux années de 1903 à 1912 * cliquer sur le bouton <code><a
+href="https://archivesenligne.pasdecalais.fr/v2/ad62/visualiseur/tables.html?id=366307019">Consulter</a></code>
+* la table décennale s’affiche dans un visualisateur, elle contient 95
+vues (chaque vue représente les pages de gauche et de droite de la
+table) * en faisant un clic droit, vous avez accès à la fontion “loupe”
+* le classement est alphabétique en regard des noms de famille * dans le
+bas de l’écran vous disposez d’un menu permettant les réglages du
+visualisateur, en particulier, à droite la possibilité de déplacement
+dans les pages de la table (début, -1, -10, +1, +10, fin) * sur la vue
+32/95, page de gauche, avant dernière ligne vous trouvez : Delpierre
+Jacques, Jules, Léon, 26 septembre 1904 * en conclusion, cette recherche
+nous donne la date précise de sa naissance ainsi que ses deuxième et
+troisième prénoms :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/genealogie/actes/jacques_delpierre_naissance.png"
+alt="Source Geneanet - Naissance de Jacques Jules Léon Delpierre le 25/09/1904 à Saint-Omer (62) - Table décennale - vue 32/95 avant dernière ligne de la page de gauche" />
+<figcaption aria-hidden="true">Source Geneanet - Naissance de Jacques
+Jules Léon Delpierre le 25/09/1904 à Saint-Omer (62) - Table décennale -
+vue 32/95 avant dernière ligne de la page de gauche</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/genealogie/actes/jacques_delpierre_naissance.png">Source
+Geneanet - Naissance de Jacques Jules Léon Delpierre le 25/09/1904 à
+Saint-Omer (62) - Table décennale - vue 32/95 avant dernière ligne de la
+page de gauche</a></p>
+<ul>
+<li>l’étape suivante est de trouver son acte de naissance en espérant
+que les mentions marginales nous indiquent la date et le lieu de son
+décès. #### Acte de naissance de Jacques Delpierre</li>
+<li>trouver l’acte de naissance aux <a
+href="https://archives-departementales.com/">archives
+départementales</a></li>
+<li>sur la carte de France, cliquez sur Pas de Calais,</li>
+<li>un portail s’affiche, cliquer sur le <a
+href="https://archivespasdecalais.fr/">lien</a></li>
+<li>un menu s’affiche et propose trois onglets (<code>archives
+numérisées, chercher dans les archives, recherche par
+commune</code>)</li>
+<li>choisir archives numérisées et cliquer sur le bouton <code><a
+href="https://www.archivespasdecalais.fr/Chercher/Archives-numerisees">consulter</a></code></li>
+<li>plusieurs onglets apparaissent, cliquer sur <code>“<a
+href="https://www.archivespasdecalais.fr/Chercher/Archives-numerisees/Etat-civil">état
+civil</a>”</code></li>
+<li>plusieurs onglets apparaissent, cliquer sur <code>“<a
+href="https://archivesenligne.pasdecalais.fr/console/ir_seriel.php?id=56&amp;p=formulaire_etat_civil">Actes
+paroissiaux et détat civil</a>”</code></li>
+<li>après un texte d’introduction intitulé “Registres paroissiaux et
+actes d’état civil”, tirer vers le bas avec la souris pour faire
+apparaitre le questionnaire permettant de préciser la recherche</li>
+<li>saisir le lieu : <code>Saint-Omer (Pas-de-Calais, France)</code>,
+puis l’année <code>1904</code>, puis cocher le type de l’acte
+<code>naissance</code>, ne rien renseigner sur <code>Recherche par la
+cote</code> et cliquer sur <code>Rechercher</code>, puis
+<code>Consulter</code> et préciser la vue 73/108 pour en final trouver
+l’acte de naissance n°355 en bas de la page de droite :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/genealogie/actes/jacques_delpierre_acte_naissance.png"
+alt="Source Geneanet - Naissance de Jacques Jules Léon Delpierre le 25/09/1904 à Saint-Omer (62) - AD 62 3° 765/459 vue 73/108" />
+<figcaption aria-hidden="true">Source Geneanet - Naissance de Jacques
+Jules Léon Delpierre le 25/09/1904 à Saint-Omer (62) - AD 62 3° 765/459
+vue 73/108</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/genealogie/actes/jacques_delpierre_acte_naissance.png">Source
+Geneanet - Naissance de Jacques Jules Léon Delpierre le 25/09/1904 à
+Saint-Omer (62) - AD 62 3° 765/459 vue 73/108</a></p>
+<ul>
+<li>voila, l’acte de naissance est trouvé une mention marginale nous
+renseigne sur son mariage dans le douzième arrondissement de Paris, par
+contre, la date de son décès n’a pas été reporté en mention marginale.
+#### Acte de décès de Jacques Delpierre De mes souvenirs de jeunesse,
+Jacques Delpierre habitait Paris et y est décédé entre 1965 et 1972,
+nous savons qu’il s’y est mariè dans le douzième arrondissement, si nous
+supposons qu’il est resté dans cet arrondissement, nous allons effectué
+nos recherche sur cette base :</li>
+<li><a href="http://www.archives.paris.fr/">Archives de Paris</a></li>
+<li><a
+href="http://www.archives.paris.fr/r/124/etat-civil-de-paris/">Etat
+civil de Paris</a></li>
+<li><a
+href="http://www.archives.paris.fr/r/284/etat-civil-a-partir-de-1860/">Etat
+civil à partir de 1860</a></li>
+<li><a href="https://archives.paris.fr/s/4/etat-civil-actes/?">Actes de
+naissance (1860-1924), mariage (1860-1947) et <strong>décès
+(1860-1986)</strong></a></li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/genealogie/actes/jacques_delpierre_acte_deces.png"
+alt="Acte de décès de Jacques Delpierre" />
+<figcaption aria-hidden="true">Acte de décès de Jacques
+Delpierre</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/genealogie/actes/jacques_delpierre_acte_deces.png">Acte
+de décès de Jacques Delpierre</a></p>
+<h3 id="exemple-pour-amand-leruste">Exemple pour Amand Leruste :</h3>
+<ul>
+<li>né à Tourcoing, département du Nord, 06 septembre 1881, pour lequel
+je cherche à vérifier la date de sa naissance, de son mariage et de son
+décès #### Matricule miltaire</li>
+<li><a href="https://archives-departementales.com/">archives
+départementales</a></li>
+<li>cliquer sur <em>Consulter</em> puis <em>Matricules
+militaires</em></li>
+<li>décendre en bas de la page jusqu’à Accès aux formulaires de
+recherche</li>
+<li>cliquer sur l’onglet : <em>Les tables des états
+signalétiques</em></li>
+<li>dans le champ bureau sélectionner <strong>Lille</strong></li>
+<li>dans le champ <em>Ou année précise</em> renseigner
+<strong>1901</strong> (correspondant à sa date de naissance + 20 ans =
+la classe d’age)</li>
+<li>cliquer sur <strong>rechercher</strong></li>
+<li>un document de 165 médias apparait</li>
+<li>cliquer pour ouvrir le document, le premier média apparaît,
+sélectionner le <strong>deuxième</strong>, il s’agit d’un répertoire
+alphabétique des hommes inscrits au registre matricule</li>
+<li>cliquer sur le média 3 pour constater le début du répertoire qui
+renseigne en 3 colonnes : nom, prénoms et numéro de matricule</li>
+<li>un menu au dessus du média affiché permet de se déplacé dans le
+document : +1, +10, Fin</li>
+<li>se déplacer jusqu’à pointer le média 103/165 où se trouve 3 Leruste
+ayants des prénoms différents</li>
+<li><strong>Leruste - Amand Louis Joseph - 4191</strong></li>
+</ul>
+<h4 id="naissance-damand-leruste">Naissance d’Amand Leruste</h4>
+<ul>
+<li>trouver la confirmation de sa naissance aux <a
+href="https://archives-departementales.com/">archives
+départementales</a></li>
+<li>sur la carte de France, cliquez sur Nord,</li>
+<li>un portail s’affiche, cliquer sur le <a
+href="https://www.archives-departementales.com/index.php?article61/archives-en-ligne-du-nord-numerisees">lien</a></li>
+<li>cliquer sur le <a
+href="https://archivesdepartementales.lenord.fr/?id=archives_online">lien</a></li>
+<li>cliquer sur l’onglet <em>Consulter</em> et choisir <em>Registres
+paroissiaux et d’états civils</em></li>
+<li>après un texte d’introduction, décendre vers le bas de la page pour
+cliquer sur le <em>formulaire de recherche</em></li>
+<li>remplir les champs du formulaire : Commune ou paroisse :
+<strong>Tourcoing</strong>, Types d’actes : <strong>Naissance</strong>,
+Année précise (facultatif) : <strong>1881</strong>, puis cliquer sur
+<strong>Rechercher</strong></li>
+<li>deux documents apparaissent, cliquer sur celui du bas
+<strong>1881-1881</strong></li>
+<li>se déplacer dans le document parmi les 510 médias, jusqu’à trouver
+la date du <a
+href="https://archivesdepartementales.lenord.fr/ark:/33518/n1zkl9xcp4r2/7ef471a1-0f02-4166-9717-9424b35b5988">06
+septembre 1881</a></li>
+<li>nous avons donc trouver l’acte de naissance de <strong>Amand Louis
+Joseph Leruste</strong> qui nous confirme ses prénoms, la date de sa
+naissance, le prénom de son père : <strong>Henri</strong>, les prénoms
+et nom de sa mère : <strong>Elisa Joseph Vandekerkove</strong>, en
+complément, le texte indique qu’ils ont tous les deux 35 ans le jour de
+sa naissance. En mentions marginales, nous obtenons, la date et le lieu
+de son mariage avec Marie-Louise Delescluse : <strong>23/10/1871 à
+Tourcoing</strong>, la date et le lieu de son décès : <strong>24/12/1945
+à Tulle</strong>, par contre, nous n’avons pas d’information sur les
+dates et lieux de naissance et de mariage de ses parents. sachant qu’ils
+avaient tous les deux 35 ans le jour de la naissance d’Amand permet de
+dire qu’ils sont nés tous les deux en 1846 (1881-35) et
+vraisemblablement à Tourcoing.</li>
+</ul>
+<h2 id="lien-inter-arbre">Lien inter arbre</h2>
+<p>J’ai expérimenté la mise en place d’un lien inter arbre (LIA) entre
+mon arbre à l’emplacement de <a
+href="https://gw.geneanet.org/airel46_w?lang=fr&amp;p=caroline&amp;n=debieuvre&amp;oc=0&amp;type=tree">Caroline
+Debieuvre</a> et celui de <a
+href="https://gw.geneanet.org/lpenet?lang=fr&amp;n=debieuvre&amp;oc=0&amp;p=caroline&amp;type=tree">Loïc
+Pénet</a> pour visualiser l’ascendance de caroline. J’ai installé ce LIA
+à l’aide du <a
+href="https://www.geneanet.org/forum/viewtopic.php?t=556121">mode
+d’emploi Geneanet</a>. Ce LIA n’a pas fonctionné, j’ai établi une
+requête sur le forum Geneanet, voici leur réponse : “Plusieurs
+possibilités, mais celle qui me semble la plus”plausible” : vous avez
+mis un lien sur une personne contemporaine. Or le mode d’emploi
+https://www.geneanet.org/forum/viewtopic.php?t=556121 précise qu’il faut
+choisir une personne non “semi masquée”. Comme les règles de
+confidentialité ont évolué, pas mal de fiches se retrouvent passée de
+fait de public à “semi-masqué” et là, ben ca marche peut être pas ( les
+LIA sont toujours en version “test” depuis 2017 et pas forcément
+completement débugée …) autre possiblité : la personne propriétaire de
+l’arbre “visé” a “bloqué” les LIA… ou encore : la fiche sur laquelle
+vous avez “pointé” a été modifiée entre temps, a été ré-indexée et votre
+LIA a perdu la trace (l’ancienne indexation renvoyant “fiche inconnue”…
+). à voir avec d’autres avis ou la technique…”</p>
+<p><a
+href="https://gw.geneanet.org/airel46_w?lang=fr&amp;p=bruno+thierry&amp;n=leruste&amp;oc=0&amp;type=tree">Bruno
+leruste</a></p>
+</body>
+</html>

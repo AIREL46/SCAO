@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_smartphone</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_smartphone</h1>
+</header>
+<h1 id="samsung-s24">Samsung S24</h1>
+<h2 id="importation-des-contacts">Importation des contacts</h2>
+<p>Les données de l’iphone ont été exportées manuellement vers la
+messagerie Thunderbird de l’ordinateur ASUS. Thunderbird permet
+l’exportation des contacts selon plusieurs formats : * séparé par des
+virgules (UTF-8) dans un fichier.csv * délimité par des tabulations
+(UTF-8) * vcard dans un fichier.vcf * LDIF.</p>
+<p>Le format <a href="https://fr.wikipedia.org/wiki/VCard">vcard</a> est
+le plus courant et il existe selon trois version : * 1.0 *
+<strong>2.1</strong> utilisé sur le S24 * 3.0 * <strong>4.0</strong>
+utilisé par la messagerie Thunderbird.</p>
+<p>L’objet est donc de convertir le fichier.vcf, en version 4.0, généré
+lors de l’exportation du carnet d’adresse de Thunderbird, en un autre
+fichier conforme à la version 2.1 du S24. Il existe de nombreux
+convertisseurs, mais aucun n’est compatible à l’environnement Ubuntu. Je
+m’oriente vers une solution qui consiste en : * exportation du carnet
+d’adresses de Tunderbird en un fichier.csv * conversion du fichier.csv
+en un fichier.vcf conforme à la version 2.1 à l’aide d’un script écrit
+en langage Python.</p>
+<p>Avant d’écrire ce script il convient au préalable d’analyser le
+formatage de chaque fichier. La première ligne du fichier texte
+contact.csv qui résulte de l’exportation des <strong>“adresses
+personnelles”</strong> de Thunderbird donne la liste des désignations
+des colonnes : * <code><strong>Prénom,Nom de famille,Nom à
+afficher,Surnom,Adresse e-mail principale,Adresse e-mail secondaire,Nom
+de l’écran,Tél. professionnel,Tél. personnel,Fax,Pager,Portable,Adresse
+privée,Adresse privée 2,Ville,Pays/État,Code postal,Pays/Région
+(domicile),Adresse professionnelle,Adresse professionnelle
+2,Ville,Pays/État,Code postal,Pays/Région
+(bureau),Profession,Service,Société,Site web 1,Site web 2,Année de
+naissance,Mois,Jour,Divers 1,Divers 2,Divers 3,Divers
+4,Notes</strong></code></p>
+<p>Cette première ligne est suivie de 150 autres lignes correspondant à
+mes 150 contacts. Pour donner l’exemple d’un contact : *
+<code><strong>,,LERUSTE
+Arnaud,,leruste11@yahoo.fr,,,0611950274,,,,,,,,,,,Rue Louis Blériot
+304,,Buc,,78530,France,,,,,,,,,,,,,</strong></code> # Récupération des
+données de l’iPhone ## Accéder aux données de l’iPhone : * Connecter
+l’iPhone sur l’une des entrées USB de l’ordinateur * Exécuter la
+commande <code>lsusb</code> * Parmi les différents résultats, celui de
+l’iPhone est : <code>Bus 001 Device 006: ID 05ac:12a8 Apple,
+Inc. iPhone5/5C/5S/6</code> * Pour connaitre la version Ubuntu, exécuter
+la commande <code>lsb_release -d</code> * Le résultat est : <code>Ubuntu
+20.04.6 LTS</code> * Sur Internet, établir la requête suivante :
+<code>Ubuntu 20.04.6 LTS et récupération de données iPhone</code> * Le
+résultat est le suivant : Des informations manquent sur la récupération
+de données iPhone spécifiquement pour Ubuntu 20.04.6 LTS. Cependant, en
+général, pour récupérer des données d’un iPhone sur Ubuntu, vous pouvez
+envisager d’utiliser des outils comme libimobiledevice, qui permet de
+gérer les appareils iOS sans avoir besoin d’iTunes. Voici quelques
+étapes générales : * Installer libimobiledevice : Cela peut être fait
+via le terminal avec la commande suivante : <code>sudo apt install
+libimobiledevice-utils</code> * Connecter l’iPhone : Branchez votre
+iPhone à l’ordinateur Ubuntu. * Accéder aux fichiers : Utilisez des
+commandes comme <code>ifuse</code> pour monter le système de fichiers de
+l’iPhone et accéder aux photos et vidéos. Pour des fonctionnalités
+avancées de récupération de données, des logiciels tiers peuvent être
+nécessaires, mais leur compatibilité avec Ubuntu peut varier. * Pour
+plus de détails, accéder au site :
+<code>https://docs.libimobiledevice.org/libimobiledevice/latest/</code>
+* En ligne de commande, il faut, après avoir pensé à déverrouiller
+l’iphone (si oubli, il suffit de recommencer la commande) :
+<code>idevicepair pair</code>, Il faut aussi accepter sur le lecteur le
+message de confiance en votre propre PC et recommencer encore
+l’instruction ci-dessus. * Enfin, créer un nouveau répertoire ipod avec
+la commande <code>sudo mkdir /media/$USER/ipod</code> * Si le
+propriétaire est sudo, exécuter la commande : <code>sudo chown -R <span
+class="math inline"><em>U</em><em>S</em><em>E</em><em>R</em>/<em>m</em><em>e</em><em>d</em><em>i</em><em>a</em>/</span>USER/ipod</code>
+* Pour monter le système de fichiers de l’iPhone, exécuter la commande :
+<code>ifuse /media/<span
+class="math inline"><em>U</em><em>S</em><em>E</em><em>R</em>/<em>i</em><em>p</em><em>o</em><em>d</em>/ &lt; /<em>c</em><em>o</em><em>d</em><em>e</em> &gt;  * <em>D</em><em>a</em><em>n</em><em>s</em><em>c</em><em>e</em><em>d</em><em>o</em><em>s</em><em>s</em><em>i</em><em>e</em><em>r</em><em>i</em><em>p</em><em>o</em><em>d</em>(/<em>m</em><em>e</em><em>d</em><em>i</em><em>a</em>/</span>USER/ipod),
+se trouve ce qui est présent dans l’appareil. L’ipod est maintenant
+accessible comme un lecteur usb quelconque. Pour démonter correctement
+votre Iphone, exécuter la commande : <code>fusermount -u
+/media/$USER/ipod/</code>. ## Copier les données de l’iPhone sur le
+disque dur de l’ordinateur : * Créer un mouveau répertoire sous le
+dossier personnel en exécutant la commande <code>sudo mkdir
+iphone</code> * Copier l’ensemble des fichiers du répertoire ipod vers
+le nouveau répertoire iphone. ## Analyse des données de l’iPhone : *
+Pour lister les répertoires, exécuter la commande <code>ls -l
+iphone</code>, le résultat est : <code>ls -l iphone total 44 drwxr-xr-x
+3 airel airel 4096 déc. 28 2023 AirFair drwxr-xr-x 5 airel airel 4096
+mars 27 18:57 Books drwxr-xr-x 6 airel airel 4096 déc. 28 2023
+<strong>DCIM</strong> drwxr-xr-x 2 airel airel 4096 févr. 26 14:23
+Downloads drwxr-xr-x 6 airel airel 4096 déc. 28 2023 iTunes_Control
+drwxr-xr-x 2 airel airel 4096 déc. 28 2023 iTunesRestore drwxr-xr-x 3
+airel airel 4096 mars 25 08:05 MediaAnalysis drwxr-xr-x 12 airel airel
+4096 mars 16 22:09 PhotoData drwxr-xr-x 2 airel airel 4096 janv. 2 2024
+Purchases drwxr-xr-x 2 airel airel 4096 janv. 6 2024 Radio drwxr-xr-x 5
+airel airel 4096 déc. 28 2023 Recordings</code> * L’ensemble de ces
+répertoires et leur contenu constitue une <a
+href="https://fr.wikipedia.org/wiki/Structured_Query_Language">base de
+données SQL</a> * Le répertoire <strong>DCIM</strong> contient les
+photos.</p>
+<h3 id="contenu-du-répertoire-airfair">Contenu du répertoire AirFair
+:</h3>
+<ul>
+<li><code>ls -l iphone/AirFair/sync</code> : le répertoire est vide ###
+Contenu du répertoire Books :</li>
+<li><code>ls -l iphone/Books total 28 -rw-r–r– 1 airel airel 216 déc. 28
+2023 Backup-Books<strong>.plist</strong> -rw-r–r– 1 airel airel 216 déc.
+28 2023 Books.plist -rw-r–r– 1 airel airel 326 mars 14 2024
+com.apple.ibooks-sync.plist -rw-r–r– 1 airel airel 1772 déc. 28 2023
+iBooksData2.plist drwxr-xr-x 2 airel airel 4096 déc. 28 2023 Managed
+drwxr-xr-x 3 airel airel 4096 mars 27 18:57 Purchases drwxr-xr-x 4 airel
+airel 4096 janv. 6 2024 Sync</code></li>
+<li>Ce répertoire contient 4 fickiers .plist. Un fichier PLIST (Property
+List) est un format de fichier utilisé principalement par les systèmes
+d’exploitation macOS et iOS pour stocker des données structurées sous
+forme de listes et de dictionnaires.</li>
+<li>Pour connaitre le contenu du sous-répertoire Managed <code>ls -l
+iphone/Books/Managed</code></li>
+<li>Le résultat est : <code>ls -l iphone/Books/Managed total 0</code>,
+le répertoire est vide.</li>
+<li>Le sous-répertoire <code>iphone/Books/Purchases</code> contient
+également des fichiers .plist.</li>
+<li>Le sous-répertoire <code>iphone/Books/Sync/Database<code> contient
+des fichiers <strong>.sqlite</strong>. Un fichier .sqlite est un fichier
+de base de données utilisé par SQLite, un moteur de base de données
+relationnelle léger et embarqué.</li>
+<li>Le sous-répertoire <code>ls -l iphone/DCIM</code>. Le dossier DCIM
+(Digital Camera Images) est un répertoire où sont stockées les photos et
+vidéos prises par un appareil photo numérique ou un smartphone.</li>
+<li>Le sous-répertoire <code>ls -l iphone/Downloads</code> contient
+également des fichiers <strong>.sqlite</strong>.</li>
+<li>Le sous-répertoire <code>ls -l iphone/Recordings</code> contient
+également des fichiers <strong>.db</strong>. Un fichier .db est un
+fichier de base de données qui peut contenir des informations
+structurées, souvent utilisé par des applications comme Skype pour
+stocker l’historique des chats et des appels, et peut être ouvert avec
+des outils comme SQLite Database Browser ou FileViewPro.</li>
+<li>Pour installer SQLite Browser sur Ubuntu, ouvrez le terminal et
+exécutez les commandes suivantes : sudo apt update puis sudo apt install
+sqlitebrowser. Une fois l’installation terminée, vous pouvez lancer
+l’application en recherchant “sqlitebrowser” dans le menu.</li>
+<li>Après l’installation de sqlitebrowser, l’exploitation semble
+difficile, où se trouve les données des contacts que je souhaite
+récupérer ? c’est plus que ténébreux !</li>
+</ul>
+</body>
+</html>

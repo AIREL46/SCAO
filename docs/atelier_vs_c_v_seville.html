@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_vs_c_v_seville</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_vs_c_v_seville</h1>
+</header>
+<h1
+id="les-splendeurs-de-landalousie-au-fil-du-guadalquivir-séville-grenade-cordoue-et-cadix">Les
+splendeurs de l’Andalousie au fil du Guadalquivir : <a
+href="https://fr.wikipedia.org/wiki/S%C3%A9ville">Séville</a>, <a
+href="https://fr.wikipedia.org/wiki/Grenade">Grenade</a>, <a
+href="https://fr.wikipedia.org/wiki/Cordoue">Cordoue</a> et <a
+href="https://fr.wikipedia.org/wiki/Cadix">Cadix</a></h1>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/belle_de_cadix.png"
+alt="Belle de Cadix - Source : Croisi-Europe" />
+<figcaption aria-hidden="true">Belle de Cadix - Source :
+Croisi-Europe</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/belle_de_cadix.png">Belle
+de Cadix - Source : Croisi-Europe</a></p>
+<p>L’anniversaire des 80 ans de Gwenola est à l’origine de cette
+croisière fluviale en Andalousie sur le bateau <a
+href="https://www.croisieurope.com/bateau/ms-la-belle-de-cadix">La Belle
+de Cadix</a>. Lors de notre prospection, notre objectif était la visite
+des sites traditionnels de l’Andalousie. Notre choix pour cette
+croisière fluviale proposée par <a
+href="https://www.croisieurope.com">CroisiEurope</a> nous a paru un bon
+compromis correspondant à cet objectif et offrant en plus l’agrément et
+le confort de la croisière. Par rapport au circuit traditionnel, en se
+déplacent de ville en ville, nécessitant le changement fréquent de
+Chambres d’hôtels, cette solution de croisière nous a libéré du soucis
+d’avoir à refaire à chaque fois sa valise. La vie à bord est agréable.
+<a href="https://fr.wikipedia.org/wiki/La_Belle_de_Cadix">La Belle de
+Cadix</a> emprunte son nom à une opérette française créée en 1945 dont
+le rôle principal est interprété par <a
+href="https://fr.wikipedia.org/wiki/Luis_Mariano">Luis Mariano</a>. Son
+port d’attache est situé à Séville sur le <a
+href="https://fr.wikipedia.org/wiki/Canal_Alphonse-XIII">Canal
+Alphonse-XIII</a>, également appelé darse du <a
+href="https://fr.wikipedia.org/wiki/Guadalquivir">Guadalquivir</a>. Le
+bateau accueille 176 passagers et 34 membres d’équipage. Il est composé
+de quatre ponts, de bas en haut, le pont principal (cabines et
+restaurant), le pont intermédiaire (cabines et bar), le pont supérieur
+accueille des cabines dont la notre, le pont soleil (promenade, piscine,
+transats, terrasse ombragée). Au début, il convient de mémoriser les
+fonctions de ces quatre ponts qui communiquent entre-eux par des
+escaliers symétriques situés sur bâbord et tribord. Quand nous sommes à
+bord, la vie est rythmée par des annonces trilingues (français, anglais,
+allemand) audibles dans la cabine aussi bien que sur les ponts : appels
+pour les repas, les spectacles, les jeux, les départs en excursion. A
+bord, les membres de l’équipage ont à cœur de vous coucou nez, dorlotez,
+vous n’avez pas le temps de vous ennuyer! Les repas sont de bonne
+qualité, les vins également. Le confort de la cabine est correct et il
+n’y a pas de bruits de voisinage. En résumé, c’est la belle vie. Le seul
+inconvénient et il est de taille, c’est l’omniprésence de la
+climatisation. C’est un circuit fermé idéal pour recycler les microbes.
+Vers la fin du séjour, j’attrape des maux de gorge qui se concrétise en
+gros rhume, pour Gwenola, c’est plus sévère, à son retour à Guérande,
+son médecin diagnostiquera une pneumonie et la mettra sous anti-biotique
+pendant une semaine.</p>
+<p>L’Andalousie est l’une des dix-sept <a
+href="https://fr.wikipedia.org/wiki/Communaut%C3%A9s_autonomes_d%27Espagne">communautés
+autonomes</a> d’<a
+href="https://fr.wikipedia.org/wiki/Espagne">Espagne</a>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Comunidades_aut%C3%B3nomas_de_Espa%C3%B1a-fr.svg/1280px-Comunidades_aut%C3%B3nomas_de_Espa%C3%B1a-fr.svg.png"
+alt="Carte des communautés autonomes d’Espagne - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Carte des communautés autonomes d’Espagne
+- Source : Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Comunidades_aut%C3%B3nomas_de_Espa%C3%B1a-fr.svg/1280px-Comunidades_aut%C3%B3nomas_de_Espa%C3%B1a-fr.svg.png">Carte
+des communautés autonomes d’Espagne - Source : Wikimédia Commons</a></p>
+<p>Elle est divisée en provinces :</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Provincias_de_Andaluc%C3%ADa.svg/1920px-Provincias_de_Andaluc%C3%ADa.svg.png"
+alt="Carte des provinces d’Andalousie - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Carte des provinces d’Andalousie - Source
+: Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Provincias_de_Andaluc%C3%ADa.svg/1920px-Provincias_de_Andaluc%C3%ADa.svg.png">Carte
+des provinces d’Andalousie - Source : Wikimédia Commons</a></p>
+<p>Au nord de la région, l’élément principal du relief est la vallée du
+<a href="https://fr.wikipedia.org/wiki/Guadalquivir">Guadalquivir</a>,
+située entre deux chaînes de montagnes, la <a
+href="https://fr.wikipedia.org/wiki/Sierra_Morena">sierra Morena</a> au
+nord et les <a
+href="https://fr.wikipedia.org/wiki/Cordill%C3%A8res_B%C3%A9tiques">cordillères
+Bétiques</a> au sud (dont fait partie la <a
+href="https://fr.wikipedia.org/wiki/Sierra_Nevada_(Espagne)">Sierra
+Nevada</a>).</p>
+<p>Le parcours du <a
+href="https://fr.wikipedia.org/wiki/Guadalquivir">Guadalquivir</a>, long
+de 657 km, est représenté sur la carte ci-dessous :</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/5/51/Guadalquivir.png"
+alt="Parcours du fleuve Guadalquivir - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Parcours du fleuve Guadalquivir - Source
+: Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/5/51/Guadalquivir.png">Parcours
+du fleuve Guadalquivir - Source : Wikimédia Commons</a></p>
+<p>Le <a
+href="https://fr.wikipedia.org/wiki/Guadalquivir">Guadalquivir</a> n’est
+pas navigable entre Cordoue et Séville. Il est navigable entre Séville
+et son estuaire dans l’océan Atlantique.</p>
+<p>La carte ci-dessous nous permet de situer l’emplacement de notre
+bateau et sa proximité avec le Parc Maria Luisa de Séville :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parc_maria_luisa.png"
+alt="Parc Maria Luisa - Source : google maps modifié avec le logiciel Inkscape" />
+<figcaption aria-hidden="true">Parc Maria Luisa - Source : google maps
+modifié avec le logiciel Inkscape</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parc_maria_luisa.png">Parc
+Maria Luisa - Source : google maps modifié avec le logiciel
+Inkscape</a></p>
+<p>La place d’Espagne est située dans ce parc accessible en une
+quinzaine de minutes.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Espagne_S%C3%A9ville_Place_d%27Espagne.JPG/1280px-Espagne_S%C3%A9ville_Place_d%27Espagne.JPG"
+alt="Place d’Espagne de Séville - Une des deux ailes du palais et son bâtiment intermédiaire. Au premier plan, les bancs des provinces espagnoles." />
+<figcaption aria-hidden="true">Place d’Espagne de Séville - Une des deux
+ailes du palais et son bâtiment intermédiaire. Au premier plan, les
+bancs des provinces espagnoles.</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Espagne_S%C3%A9ville_Place_d%27Espagne.JPG/1280px-Espagne_S%C3%A9ville_Place_d%27Espagne.JPG">Place
+d’Espagne de Séville - Une des deux ailes du palais et son bâtiment
+intermédiaire. Au premier plan, les bancs des provinces
+espagnoles.</a></p>
+<p>Cette place est conçue pour l’<a
+href="https://fr.wikipedia.org/wiki/Exposition_ib%C3%A9ro-am%C3%A9ricaine_de_1929">Exposition
+ibéro-américaine de 1929</a>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Expo_sevilla_1929_poster.jpg"
+alt="Poster for the Ibero-American Exposition of 1929, held in Sevilla, Spain - Source : Wikipédia" />
+<figcaption aria-hidden="true">Poster for the Ibero-American Exposition
+of 1929, held in Sevilla, Spain - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/c/c9/Expo_sevilla_1929_poster.jpg">Poster
+for the Ibero-American Exposition of 1929, held in Sevilla, Spain -
+Source : Wikipédia</a></p>
+<p>Le parc Maria Luisa</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Parc_de_Maria_Luisa_%28S%C3%A9ville%29.JPG/1280px-Parc_de_Maria_Luisa_%28S%C3%A9ville%29.JPG"
+alt="Le parc de María Luisa - Source : Wikipédia" />
+<figcaption aria-hidden="true">Le parc de María Luisa - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Parc_de_Maria_Luisa_%28S%C3%A9ville%29.JPG/1280px-Parc_de_Maria_Luisa_%28S%C3%A9ville%29.JPG">Le
+parc de María Luisa - Source : Wikipédia</a></p>
+<p><em>fut offert à la ville en <a
+href="https://fr.wikipedia.org/wiki/1893">1893</a> par l’<a
+href="https://fr.wikipedia.org/wiki/Louise_Fernande_de_Bourbon">infante
+María Luisa</a>, <a
+href="https://fr.wikipedia.org/wiki/Liste_des_comtes_puis_ducs_de_Montpensier">duchesse
+de Montpensier</a>, et faisait à l’époque partie des jardins du <a
+href="https://fr.wikipedia.org/wiki/Palais_de_San_Telmo">Palais de San
+Telmo</a>. Il ne fut que peu modifié jusqu’en 1911 : seule fut créée
+l’avenue de las Acacias qui suivait les chemins existant auparavant. Le
+parc fut entièrement réaménagé à l’occasion de l’<a
+href="https://fr.wikipedia.org/wiki/Exposition_ib%C3%A9ro-am%C3%A9ricaine_de_1929">Exposition
+ibéro-américaine de 1929</a> par l’ingénieur et paysagiste français <a
+href="https://fr.wikipedia.org/wiki/Jean_Claude_Nicolas_Forestier">Jean
+Claude Nicolas Forestier</a>, chargé des travaux en 1911, à qui on
+demanda de conserver le plus possible d’espèces végétales. Le parc fut
+ouvert au public en 1914. À la même époque y furent incorporés, toujours
+pour l’Exposition ibéro-américaine, les terrains de l’ancien Verger de
+Mariana (Huerta de Mariana), où se situe depuis la <a
+href="https://fr.wikipedia.org/wiki/Plaza_de_Am%C3%A9rica">place
+d’Amérique</a>, et d’autres situés à proximité du <a
+href="https://fr.wikipedia.org/wiki/Prado_de_San_Sebasti%C3%A1n">Prado
+de San Sebastián</a> afin de créer la <a
+href="https://fr.wikipedia.org/wiki/Plaza_de_Espa%C3%B1a_(S%C3%A9ville)">place
+d’Espagne</a>.</em> (wikipédia).</p>
+<h2 id="jour-1-guérande---séville">16/10/2025 - Jour 1 : Guérande -
+SÉVILLE</h2>
+<p>Avec ma voiture, Marie nous conduit à l’aéroport de Nantes. Par un
+vol de la compagnie Transavia, nous arrivons à l’aéroport de Séville en
+milieu d’après-midi. Un taxi réservé par CroisiEurope, nous emmène
+jusqu’à la Belle de Cadix où l’embarquement est prévu à 18h. Dans la
+foulée les festivités commencent : présentation de l’équipage et
+cocktail de bienvenue. Autour d’un verre, nous sympathisons avec un
+couple de Douai, Jacqueline et Jean-Claude, ainsi qu’avec André de
+Bruxelles, veuf depuis un peu plus d’un an. Profitant de cette
+complicité récente, un serveur nous prévient de l’affectation de notre
+groupe à la table D4 du restaurant. Cette table sera la notre pour tout
+le séjour, plus question d’en changer. Dès ce premier jour, je prends
+l’habitude d’une promenade digestive avec André. Avec l’aide de mon GPS,
+nous traversons le parc Maria Louisa et rejoignons la place
+d’Espagne.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/place_d_espagne.jpg"
+alt="Séville - Place d’Espagne la nuit - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Séville - Place d’Espagne la nuit -
+Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/place_d_espagne.jpg">Séville
+- Place d’Espagne la nuit - Crédit photo : Régis Leruste</a></p>
+<h2 id="jour-2-séville---cordoue---séville">17/10/2025 - Jour 2 :
+SÉVILLE - Cordoue - SÉVILLE</h2>
+<p>La journée est consacrée à la visite de <a
+href="https://fr.wikipedia.org/wiki/Cordoue">Cordoue</a> et de sa <a
+href="https://fr.wikipedia.org/wiki/Mosqu%C3%A9e-cath%C3%A9drale_de_Cordoue">mosquée-cathédrale</a>.
+Le trajet se fait en car et représente aller-retour quatre bonnes heures
+de route. C’est là que nous nous apercevons de l’inconvénient de ce
+voyage proposé par <a
+href="https://www.croisieurope.com">CroisiEurope</a>. Ce temps de
+transport se ressentira encore davantage lors de notre excursion à
+Grenade, 5h30 de trajet auquel il convient d’additionner le temps passer
+à la visite ainsi que celui passer au restaurant le midi, au point où <a
+href="https://www.croisieurope.com">CroisiEurope</a> déconseille d’y
+participer aux personnes dont la mobilité est restreinte. Cordoue, jadis
+capitale des Émirs et des Califes, située sur la rive nord du
+Guadalquivir, est un exemple vivant des diverses cultures qui s’y sont
+exprimées. Une harmonie réussie entre les peuples musulmans, juifs et
+catholiques qui marquèrent la cité d’une richesse architecturale
+incomparable. La superbe Mezquita (mosquée-cathédrale) est sans conteste
+l’emblème de cette splendeur passée. A notre arrivée, le car nous dépose
+à proximité du pont romain sur le fleuve Guadalquivir. Ce pont étroit
+est entièrement réservé aux piétons et il permet l’accès à la
+Mosquée-Cathédrale.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cordoba%2C_Spain_%2811174784126%29.jpg/2560px-Cordoba%2C_Spain_%2811174784126%29.jpg"
+alt="Le Pont romain de Cordoue sur le fleuve Guadalquivir - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Le Pont romain de Cordoue sur le fleuve
+Guadalquivir - Source : Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cordoba%2C_Spain_%2811174784126%29.jpg/2560px-Cordoba%2C_Spain_%2811174784126%29.jpg">Le
+Pont romain de Cordoue sur le fleuve Guadalquivir - Source : Wikimédia
+Commons</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mezquita_de_C%C3%B3rdoba_desde_el_aire_%28C%C3%B3rdoba%2C_Espa%C3%B1a%29.jpg/1280px-Mezquita_de_C%C3%B3rdoba_desde_el_aire_%28C%C3%B3rdoba%2C_Espa%C3%B1a%29.jpg"
+alt="Cordoue - La mosquée-cathédrale vue du ciel" />
+<figcaption aria-hidden="true">Cordoue - La mosquée-cathédrale vue du
+ciel</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mezquita_de_C%C3%B3rdoba_desde_el_aire_%28C%C3%B3rdoba%2C_Espa%C3%B1a%29.jpg/1280px-Mezquita_de_C%C3%B3rdoba_desde_el_aire_%28C%C3%B3rdoba%2C_Espa%C3%B1a%29.jpg">Cordoue
+- La mosquée-cathédrale vue du ciel</a> ### La mosquée</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spain_Andalusia_Cordoba_BW_2015-10-27_13-40-01.jpg/1280px-Spain_Andalusia_Cordoba_BW_2015-10-27_13-40-01.jpg"
+alt="Cordoue - La mosquée-cathédrale - À gauche, la grille de la chapelle San Pablo" />
+<figcaption aria-hidden="true">Cordoue - La mosquée-cathédrale - À
+gauche, la grille de la chapelle San Pablo</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spain_Andalusia_Cordoba_BW_2015-10-27_13-40-01.jpg/1280px-Spain_Andalusia_Cordoba_BW_2015-10-27_13-40-01.jpg">Cordoue
+- La mosquée-cathédrale - À gauche, la grille de la chapelle San
+Pablo</a></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/mosquee_cathedrale_1.png"
+alt="Cordoue - La mosquée - Source : Extrait de la brochure mise à disposition à la mosquée-cathédrale de Cordoue" />
+<figcaption aria-hidden="true">Cordoue - La mosquée - Source : Extrait
+de la brochure mise à disposition à la mosquée-cathédrale de
+Cordoue</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/mosquee_cathedrale_1.png">Cordoue
+- La mosquée - Source : Extrait de la brochure mise à disposition à la
+mosquée-cathédrale de Cordoue</a></p>
+<p>L’originalité de la mosquée provient de la fixation du <a
+href="https://fr.wikipedia.org/wiki/Construction_modulaire">module
+contructif</a> basé sur la superposition d’une double arche qui élève le
+toit. En outre, l’originalité est l’alternance de couleur apportée par
+la pierre et la brique.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/mosquee_cathedrale_2.png"
+alt="Cordoue - La mosquée - Module contructif - Source : Extrait de la brochure mise à disposition à la mosquée-cathédrale de Cordoue" />
+<figcaption aria-hidden="true">Cordoue - La mosquée - Module contructif
+- Source : Extrait de la brochure mise à disposition à la
+mosquée-cathédrale de Cordoue</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/mosquee_cathedrale_2.png">Cordoue
+- La mosquée - Module contructif - Source : Extrait de la brochure mise
+à disposition à la mosquée-cathédrale de Cordoue</a></p>
+<p><strong>Légende du module constructif</strong> :</p>
+<p><strong>[1] :</strong> Colonne (<strong>a</strong> : Base,
+<strong>b</strong> : Fût, <strong>c</strong> : Chapiteau)</p>
+<p><strong>[2] :</strong> Cimaise</p>
+<p><strong>[3] :</strong> Modillon à copeaux</p>
+<p><strong>[4] :</strong> Pilastre</p>
+<p><strong>[5] :</strong> Arc outrepassé</p>
+<p><strong>[6] :</strong> Voussoir</p>
+<p><strong>[7] :</strong> Arc en plein cintre</p>
+<p><strong>Module constructif</strong> : Au travers de l’influence reçue
+des aqueducs et arcs de triomphe de l’ancienne Rome, l’espace est formé
+par un ensemble de colonnes sur lesquelles repose un système de double
+arcatures superposées. Cette solution créative, qui intègre divers
+éléments architectoniques, est audacieuse et très personnelle, tout en
+transmettant une grande sensation de transparence, sveltesse et légèreté
+(extrait de la brochure de la mosquée-cathédrale).</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Mezquita-catedral_de_C%C3%B3rdoba_interior_11.jpg/500px-Mezquita-catedral_de_C%C3%B3rdoba_interior_11.jpg"
+alt="Cordoue - Mosquée-Cathédrale - Vue sur le maître-autel et le grand retable de la Capilla Mayor" />
+<figcaption aria-hidden="true">Cordoue - Mosquée-Cathédrale - Vue sur le
+maître-autel et le grand retable de la Capilla Mayor</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Mezquita-catedral_de_C%C3%B3rdoba_interior_11.jpg/500px-Mezquita-catedral_de_C%C3%B3rdoba_interior_11.jpg">Cordoue
+- Mosquée-Cathédrale - Vue sur le maître-autel et le grand retable de la
+Capilla Mayor</a></p>
+<h2 id="jour-3-huelva---isla-minima--cadix">18/10/2025 - Jour 3 : Huelva
+- Isla minima- CADIX</h2>
+<h3 id="huelva">Huelva</h3>
+<p>Sur la route, Johannes, notre accompagnateur, nous parle de la <a
+href="https://fr.wikipedia.org/wiki/Feria">Feria</a> et de la <a
+href="https://fr.wikipedia.org/wiki/Tauromachie">torromachie</a>. La
+carte ci-dessous, nous permet de situer Huelva et Séville. Elle est
+également intéressante pour imaginer le trajet de notre croisière future
+sur le <a
+href="https://fr.wikipedia.org/wiki/Guadalquivir">Guadalquivir</a>.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/carte_seville_huelva_cadix.png"
+alt="Carte Séville - Huelva - Cadix - Source : Google maps modifiée avec Inkscape" />
+<figcaption aria-hidden="true">Carte Séville - Huelva - Cadix - Source :
+Google maps modifiée avec Inkscape</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/carte_seville_huelva_cadix.png">Carte
+Séville - Huelva - Cadix - Source : Google maps modifiée avec
+Inkscape</a></p>
+<h4 id="le-monastère-de-la-rabida">Le monastère de la Rabida</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/monastere_de_la_rabida_1.jpg"
+alt="Monastère de la Rabida - Allée fleurie - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Monastère de la Rabida - Allée fleurie -
+Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/monastere_de_la_rabida_1.jpg">Monastère
+de la Rabida - Allée fleurie - Crédit photo : Régis Leruste</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/9/99/Rabida1.jpg"
+alt="Monastère de la Rabida - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Monastère de la Rabida - Source :
+Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/9/99/Rabida1.jpg">Monastère
+de la Rabida - Source : Wikimédia Commons</a></p>
+<p>Nous visitons le <a
+href="https://fr.wikipedia.org/wiki/Monast%C3%A8re_de_La_R%C3%A1bida">monastère
+franciscain</a> de style gothique-mudéjar qui a été construit entre le
+XIVe et le XVe siècle. <a
+href="https://fr.wikipedia.org/wiki/Christophe_Colomb">Christophe
+Colomb</a>, alors qu’il planifiait son départ pour le nouveau monde, y
+séjourna. Une fresque de <a
+href="https://fr.wikipedia.org/wiki/Daniel_V%C3%A1zquez_D%C3%ADaz">Daniel
+Vázquez Díaz</a> (1882-1969) datant de 1930 illustre l’épopée du
+navigateur et rappelle son rôle historique.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Huelva_Spain_08.jpg/1280px-Huelva_Spain_08.jpg"
+alt="Daniel Vázquez Díaz (1882-1969) - Cycle Christophe Colomb (1930) - monastère de La Rábida - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Daniel Vázquez Díaz (1882-1969) - Cycle
+Christophe Colomb (1930) - monastère de La Rábida - Source : Wikimédia
+Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Huelva_Spain_08.jpg/1280px-Huelva_Spain_08.jpg">Daniel
+Vázquez Díaz (1882-1969) - Cycle Christophe Colomb (1930) - monastère de
+La Rábida - Source : Wikimédia Commons</a></p>
+<p>Au fil des siècles, de nouvelles constructions agrandirent le
+monastère. Christophe Colomb, alors qu’il planifié son départ pour le
+tour du monde, y séjourna. Au fil des siècles, de nouvelles
+constructions agrandirent le monastère. #### Parc des caravelles</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/5/54/TresCarabelas.jpg"
+alt="Parc des caravelles - Source : Wikimédia commons" />
+<figcaption aria-hidden="true">Parc des caravelles - Source : Wikimédia
+commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/5/54/TresCarabelas.jpg">Parc
+des caravelles - Source : Wikimédia commons</a></p>
+<p><a
+href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://www.croisieurope.com/excursion/monastere-rabida-parc-caravelles&amp;ved=2ahUKEwiq9sKikKSQAxUZa6QEHZrpBC8QFnoECBsQAQ&amp;usg=AOvVaw2LcKEuyVMfDehHVKISxJ82">Le
+parc des caravelles de Christophe Colomb</a>, c’est d’ici que le grand
+explorateur partit le 03 août 1492. Le site accueille les répliques
+grandeur nature de la Pinta, la Nina et la Santa Maria, les trois
+navires de l’expédition Christophe Colomb.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parc_des_caravelles_1.jpg"
+alt="André sur la caravelle Santa Maria - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">André sur la caravelle Santa Maria -
+Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parc_des_caravelles_1.jpg">André
+sur la caravelle Santa Maria - Crédit photo : Régis Leruste</a></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parc_des_caravelles_2.jpg"
+alt="Parc des caravelles - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Parc des caravelles - Crédit photo :
+Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parc_des_caravelles_2.jpg">Parc
+des caravelles - Crédit photo : Régis Leruste</a> ) #### Croisière Comme
+nous l’avons vu plus haut, La Belle de Cadix est basée dans le port de
+Séville sur le canal Alphonse III. En début d’après-midi, en référence à
+la carte ci-dessous, notre navigation commence sur ce canal par lequel
+nous allons rejoindre l’écluse du Guadalquivir.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/connexion_canal_guadalquivir.png"
+alt="Connexion du canal Alphonse XIII et le Guadalquivir - Source : Google maps modifiée avec le logiciel Inkscape" />
+<figcaption aria-hidden="true">Connexion du canal Alphonse XIII et le
+Guadalquivir - Source : Google maps modifiée avec le logiciel
+Inkscape</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/connexion_canal_guadalquivir.png">Connexion
+du canal Alphonse XIII et le Guadalquivir - Source : Google maps
+modifiée avec le logiciel Inkscape</a></p>
+<p>Après le passage de cette écluse, notre navigation continue sur le
+Guadalquivir en direction de son estuaire. Ensuite, pour atteindre
+Cadix, nous aurons à naviguer sur quelques milles nautiques sur l’océan
+Atlantique.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parcours_de_croisiere.png"
+alt="Parcours de la croisière - Source : Google maps modifiée avec le logiciel Inkscape" />
+<figcaption aria-hidden="true">Parcours de la croisière - Source :
+Google maps modifiée avec le logiciel Inkscape</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/parcours_de_croisiere.png">Parcours
+de la croisière - Source : Google maps modifiée avec le logiciel
+Inkscape</a></p>
+<p>Nous longeons le <a
+href="https://fr.wikipedia.org/wiki/Parc_national_de_Do%C3%B1ana">parc
+de Doñana</a> classé par l’UNESCO “réserve naturelle de la Biosphère”.
+Il s’étend sur la rive droite du Guadalquivir jusqu’à son estuaire.
+Situé entre l’Europe et l’Afrique, il constitue la plus importante zone
+humide d’Europe et attire plusieurs millions d’oiseaux migrateurs. Nous
+pouvons imaginer qu’il constitue une étape importante pour ces oiseaux
+migrateurs, en partance ou en provenance d’Afrique, leur permettant de
+se reposer et de se restaurer, avant ou après, le survol du détroit de
+Gibraltar large de quatorze kilomètres.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/El_Acebuche.jpg/1920px-El_Acebuche.jpg"
+alt="Parque Nacional de Doñana. Observatorio de aves - source : Wikipédia" />
+<figcaption aria-hidden="true">Parque Nacional de Doñana. Observatorio
+de aves - source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/El_Acebuche.jpg/1920px-El_Acebuche.jpg">Parque
+Nacional de Doñana. Observatorio de aves - source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Iberian_Lynx_eating_bird.jpg"
+alt="Le Lynx d’Espagne, espèce menacée (statut critique) est un symbole du parc - Source : Wikipédia" />
+<figcaption aria-hidden="true">Le Lynx d’Espagne, espèce menacée (statut
+critique) est un symbole du parc - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/c/c3/Iberian_Lynx_eating_bird.jpg">Le
+Lynx d’Espagne, espèce menacée (statut critique) est un symbole du parc
+- Source : Wikipédia</a> #### Isla minima</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/8/84/Isla_Minima.jpg"
+alt="Isla minima - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Isla minima - Source : Wikimédia
+Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/8/84/Isla_Minima.jpg">Isla
+minima - Source : Wikimédia Commons</a></p>
+<p>Après trois heures de navigation nous atteignons <a
+href="https://commons.wikimedia.org/wiki/Isla_M%C3%ADnima_del_Guadalquivir">Isla
+Minima</a> où la visite d’une <a
+href="https://fr.wikipedia.org/wiki/Hacienda">hacienda</a> typique
+andalouse est prévue. L’Hacienda était à l’origine un ranch de brava.
+Début 1940, la famille Escobar acquit la quasi-totalité du lieu et y
+fonda la Finca de Isla Minima. Ce fut le lieu idéal, grâce à la qualité
+des pâturages, pour l’élevage du taureau et du cheval chartreux. Les
+maîtres des lieux en firent une ferme modèle. Dans ce décor, nous
+assistons à un spectacle équestre suivi d’un concert de musique
+andalouse et de chants andalous auxquels nous sommes invité à
+participer.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/5/53/Isla_Minima_Ar%C3%A8nes_8.jpg"
+alt="Arènes de Isla Minima - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Arènes de Isla Minima - Source :
+Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://commons.wikimedia.org/wiki/File:Isla_Minima_Ar%C3%A8nes_8.jpg">Arènes
+de Isla Minima - Source : Wikimédia Commons</a></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/isla_minima_1.jpg"
+alt="Isla minima - Arènes - détail d’une porte - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Isla minima - Arènes - détail d’une porte
+- Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/isla_minima_1.jpg">Isla
+minima - Arènes - détail d’une porte - Crédit photo : Régis
+Leruste</a></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/isla_minima_2.jpg"
+alt="Isla minima - Spectacle équestre - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Isla minima - Spectacle équestre - Crédit
+photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/isla_minima_2.jpg">Isla
+minima - Spectacle équestre - Crédit photo : Régis Leruste</a></p>
+<p>A l’issue de cette visite, nous reprenons notre navigation. Au milieu
+de la nuit, durant notre sommeil, nous arrivons au port de Cadix.</p>
+<h2 id="jour-4-cadix---jerez---sanlucar---cadix">19/10/2025 - Jour 4 :
+CADIX - Jerez - Sanlucar - Cadix</h2>
+<p>C’est à notre réveil que nous nous apercevons ce grand port
+dimensionné pour accueillir d’immense paquebots à l’exemple du <a
+href="https://fr.wikipedia.org/wiki/Mardi_Gras_%28paquebot%29">Mardi
+Gras</a> que nous avons en vis-à-vis. A coté de notre Belle de Cadix,
+ses dimensions sont gigantesques et il est conçu pour accueillir 6500
+passagers et 2000 membres d’équipage. Pour préserver notre intimité,
+j’ai une nette préférence pour notre bateau.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mardi_Gras_ship_22-12-2020_front_view.jpg/2560px-Mardi_Gras_ship_22-12-2020_front_view.jpg"
+alt="Paquebot Mardi Gras - Source : Wikimedia Commons" />
+<figcaption aria-hidden="true">Paquebot Mardi Gras - Source : Wikimedia
+Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mardi_Gras_ship_22-12-2020_front_view.jpg/2560px-Mardi_Gras_ship_22-12-2020_front_view.jpg">Paquebot
+Mardi Gras - Source : Wikimedia Commons</a></p>
+<p><a href="https://fr.wikipedia.org/wiki/Cadix">Cadix</a> est la
+capitale de la province de Cadix. La vue aérienne ci-dessous donne une
+première idée de la topographie des lieux :</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Vista_aerea_bahia_Cadiz.JPG/1280px-Vista_aerea_bahia_Cadiz.JPG"
+alt="Vue aérienne depuis l’est - Source : Wikipédia" />
+<figcaption aria-hidden="true">Vue aérienne depuis l’est - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Vista_aerea_bahia_Cadiz.JPG/1280px-Vista_aerea_bahia_Cadiz.JPG">Vue
+aérienne depuis l’est - Source : Wikipédia</a></p>
+<p>Notre matinée est consacrée aux visites de Jerez de la Frontera et de
+Sanlucar de Barrameda. La visite de Cadix se fera dans l’après-midi et
+en fin de soirée nous reprendrons la navigation vers El Puerto de Santa
+Maria. ### Jerez de la Frontera <a
+href="https://fr.wikipedia.org/wiki/Jerez_de_la_Frontera">Jerez de la
+Frontera</a>, aussi appelée Xérès en français, est célèbre pour la
+culture de la vigne. Jerez est héritière d’un riche patrimoine
+historique, conservé principalement dans le périmètre du centre, classé.
+Parmi les monuments les plus importants se trouvent l’<a
+href="https://fr.wikipedia.org/wiki/Ancien_h%C3%B4tel_de_ville_de_Jerez_de_la_Frontera">ancien
+hôtel de ville</a>, datant du XVIe siècle, et la <a
+href="https://fr.wikipedia.org/wiki/Cath%C3%A9drale_de_Jerez_de_la_Frontera">cathédrale
+El Salvador</a>, du <a
+href="https://fr.wikipedia.org/wiki/XVIIe_si%C3%A8cle">XVIIe siècle</a>,
+de styles <a
+href="https://fr.wikipedia.org/wiki/Architecture_gothique">gothiques</a>,
+<a
+href="https://fr.wikipedia.org/wiki/Architecture_Renaissance">renaissance</a>
+et <a
+href="https://fr.wikipedia.org/wiki/Architecture_baroque">baroque</a>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Catedral_de_Jerez.jpg/1280px-Catedral_de_Jerez.jpg"
+alt="cathedrale de Jerez de la Frontera" />
+<figcaption aria-hidden="true">cathedrale de Jerez de la
+Frontera</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Catedral_de_Jerez.jpg/1280px-Catedral_de_Jerez.jpg">Catedral
+de Jerez de la Frontera</a></p>
+<p><a
+href="https://fr.wikipedia.org/wiki/Jerez_de_la_Frontera">Jerez</a> est
+une commune opulente et animée qui s’est enrichie grâce au commerce du
+vin. De plus, ses traditions équestres et le flamenco ont depuis bien
+longtemps dépassé les frontières. Un tour de ville vous permet de
+découvrir les principaux monuments. De l’architecte <a
+href="https://fr.wikipedia.org/wiki/An%C3%ADbal_Gonz%C3%A1lez_(architecte)">Aníbal
+González Álvarez-Ossorio</a>, nous admirons l’une de ses oeuvres, le Coq
+Bleu, en dégustant un café. C’est ce même architecte qui fut
+l’architecte en chef de l’<a
+href="https://fr.wikipedia.org/wiki/Exposition_ib%C3%A9ro-am%C3%A9ricaine_de_1929">Exposition
+ibéro-américaine de 1929</a>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gallo_Azul_Jerez.JPG/800px-Gallo_Azul_Jerez.JPG"
+alt="Le Coq Bleu - Source : Wikipédia" />
+<figcaption aria-hidden="true">Le Coq Bleu - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gallo_Azul_Jerez.JPG/800px-Gallo_Azul_Jerez.JPG">Le
+Coq Bleu - Source : Wikipédia</a></p>
+<h3 id="sanlucar-de-barrameda">Sanlucar de Barrameda</h3>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/sanlucar_de_barrameda_2.jpg.jpg"
+alt="Centre équestre - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Centre équestre - Crédit photo : Régis
+Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/sanlucar_de_barrameda_2.jpg.jpg">Centre
+équestre - Crédit photo : Régis Leruste</a></p>
+<p>Nous visitons les écuries et nous assistons à un spectacle
+équestre.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/sanlucar_de_barrameda_1.jpg"
+alt="Spectacle équestre - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Spectacle équestre - Crédit photo : Régis
+Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/sanlucar_de_barrameda_1.jpg">Spectacle
+équestre - Crédit photo : Régis Leruste</a></p>
+<h3 id="cadix">Cadix</h3>
+<p>L’après-midi, nous visitons à pied le centre historique.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/cadix_zoom.png"
+alt="Carte de la ville de Cadix - Source : Google maps modifiée avec le logiciel Inkscape" />
+<figcaption aria-hidden="true">Carte de la ville de Cadix - Source :
+Google maps modifiée avec le logiciel Inkscape</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/cadix_zoom.png">Carte
+de la ville de Cadix - Source : Google maps modifiée avec le logiciel
+Inkscape</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/C%C3%A1diz_-_Cathedral_-_Exterior_-_2.jpg/1280px-C%C3%A1diz_-_Cathedral_-_Exterior_-_2.jpg"
+alt="La cathédrale, vue depuis l’ouest - Source : wikipédia" />
+<figcaption aria-hidden="true">La cathédrale, vue depuis l’ouest -
+Source : wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/C%C3%A1diz_-_Cathedral_-_Exterior_-_2.jpg/1280px-C%C3%A1diz_-_Cathedral_-_Exterior_-_2.jpg">La
+cathédrale, vue depuis l’ouest - Source : wikipédia</a></p>
+<p>Dressée à l’extrémité d’une langue de terre, Cadix s’étend au cœur
+d’un littoral de lagunes, de plages et de marais salants. Au cours de la
+visite, sur la plaza Mina, matérialisée par un beau jardin, la guide
+attire notre attention sur une plaque apposée sur la maison natale du
+compositeur <a
+href="https://fr.wikipedia.org/wiki/Manuel_de_Falla">Manuel de Falla</a>
+(1876-1946). Pour découvrir l’œuvre de Manuel de Falla tout en explorant
+le <a href="https://fr.wikipedia.org/wiki/Flamenco">Flamenco</a>, j’ai
+écouté le <a
+href="https://fr.wikipedia.org/wiki/Le_Tricorne">Tricorne</a>. Le
+Tricorne est un <a
+href="https://fr.wikipedia.org/wiki/Ballet">ballet</a> en un acte. De ce
+ballet, la danse du gouverneur nous plonge dans l’Andalousie profonde.
+Pour en avoir une petite idée, l’interprétation de <a
+href="https://fr.wikipedia.org/wiki/Patrick_Dupond">Patrick Dupond</a>
+(1959-2021) de cette danse, <a
+href="https://fr.wikipedia.org/wiki/Farruca">farruca</a> (typique du <a
+href="https://fr.wikipedia.org/wiki/Flamenco">flamenco</a>), à l’opéra
+de Paris est accessible sur Youtube par le lien suivant : <a
+href="https://www.youtube.com/watch?v=9cpAMrFfEF4">la danse du
+gouverneur</a>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/5/52/FlamencoSevilla.jpg"
+alt="Danseuses de Flamenco - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Danseuses de Flamenco - Source :
+Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/5/52/FlamencoSevilla.jpg">Danseuses
+de Flamenco - Source : Wikimédia Commons</a></p>
+<p>Le soir, à bord du bateau, nous assistons à un spectacle de flamenco.
+Le flamenco (cante flamenco) est un art créé par le peuple gitan et
+andalou, sur la base d’un folklore populaire issu des diverses cultures
+qui s’épanouirent au long des siècles en Espagne. Mon opinion sur ce
+spectacle est défavorable. Mon ressenti est : beaucoup de bruits sur la
+scène, une danseuse qui n’a pas l’allure d’une andalouse, nous sommes
+loin du cœur de la plus grande des traditions espagnoles vantées par
+CroisiEurope. Dommage, les deux spectacles équestres vus précédemment,
+traduisent correctement les traditions espagnoles tandis que ce
+spectacle de Flamenco déçoit. Dans la nuit, nous reprenons la navigation
+vers El Puerto de Santa Maria.</p>
+<h2 id="jour-5-el-puerto-de-santa-maria-2--">20/10/2025 - Jour 5 : <a
+href="https://fr.wikipedia.org/wiki/El_Puerto_de_Santa_Mar%C3%ADa">EL
+PUERTO DE SANTA MARIA</a> (2) -</h2>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Castillo_de_San_Marcos_en_El_Puerto_de_Santa_Mar%C3%ADa_1.JPG/1280px-Castillo_de_San_Marcos_en_El_Puerto_de_Santa_Mar%C3%ADa_1.JPG"
+alt="Castillo de San Marcos en El Puerto de Santa María - Source : Wikipédia" />
+<figcaption aria-hidden="true">Castillo de San Marcos en El Puerto de
+Santa María - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Castillo_de_San_Marcos_en_El_Puerto_de_Santa_Mar%C3%ADa_1.JPG/1280px-Castillo_de_San_Marcos_en_El_Puerto_de_Santa_Mar%C3%ADa_1.JPG">Castillo
+de San Marcos en El Puerto de Santa María - Source : Wikipédia</a></p>
+<p>Le matin, nous visitons à pied une bodega (Osborne). Nous dégustons 3
+vins accompagnés de tapas. Parmi les nombreuses traditions, le vin a de
+tout temps occupé une place prépondérante dans la culture andalouse. Les
+conditions climatiques exceptionnelles permettent de produire les vins
+de l’Appellation d’Origine Jerez-Xérès-Sherry. A l’issue de la
+dégustation, nous prenons un café à une terrasse puis nous achetons des
+graines de tournesol dans une supérette. Sous le parapluie, ce sera la
+seule averse de tout le séjour, nous revenons pour le déjeuner à bord du
+bateau. Nous n’avons pas acheté de vin à la bodéga, cette dégustation
+présentait l’intérêt de la connaissance de ces vins, par contre nous
+n’avons pas été emballés au point d’en ramener une bouteille. Dans
+l’après-midi, nous reprenons la navigation vers Séville. C’est durant
+notre navigation que nous dégustons une paella :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/paella.jpg"
+alt="Paella - De gauche à droite : André, Jean-Claude et Jacqueline, Gwenola et Régis - Crédit photo : un serveur de la Belle de Cadix" />
+<figcaption aria-hidden="true">Paella - De gauche à droite : André,
+Jean-Claude et Jacqueline, Gwenola et Régis - Crédit photo : un serveur
+de la Belle de Cadix</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/andalousie/paella.jpg">Paella
+- De gauche à droite : André, Jean-Claude et Jacqueline, Gwenola et
+Régis - Crédit photo : un serveur de la Belle de Cadix</a></p>
+<h2 id="jour-6-seville---grenade---seville">21/10/2025 - Jour 6 :
+SEVILLE - Grenade - SEVILLE</h2>
+<p>Compte tenu du temps de route, trois heures, nous démarrons notre
+excursion vers <a
+href="https://fr.wikipedia.org/wiki/Grenade_(Espagne)">Grenade</a> à
+sept heures. Nous visiterons l’<a
+href="https://fr.wikipedia.org/wiki/Alhambra_(Grenade)">Alhambra</a>, le
+<a
+href="https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9ralife">Generalife</a>
+et le centre historique.</p>
+<p>Bâtie sur trois collines, avec en toile de fond, les cimes altières
+et enneigées de la Sierra Nevada, Grenade livre dès son arrivée, son
+plus beau trésor, l’<a
+href="https://fr.wikipedia.org/wiki/Alhambra_(Grenade)">Alhambra</a>.
+Dernière ville reconquise par les rois catholiques au XVe siècle, nous
+sommes transportés dans une atmosphère orientale.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg/1280px-Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg"
+alt="Coucher de soleil sur le palais de Charles-Quint" />
+<figcaption aria-hidden="true">Coucher de soleil sur le palais de
+Charles-Quint</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg/1280px-Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg">Coucher
+de soleil sur le palais de Charles-Quint - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Vue_du_generalife.JPG/1280px-Vue_du_generalife.JPG"
+alt="Vue du Generalife - Source : Wikipédia" />
+<figcaption aria-hidden="true">Vue du Generalife - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Vue_du_generalife.JPG/1280px-Vue_du_generalife.JPG">Vue
+du Generalife - Source : Wikipédia</a></p>
+<p>Le car nous dépose à proximité de l’entrée de l’<a
+href="https://fr.wikipedia.org/wiki/Alhambra_(Grenade)">Alhambra</a> où
+nous sommes pris en charge par un guide de petite taille qui plaît
+beaucoup à Gwenola. Son discours et simple et efficace, il va droit au
+but. Il nous fait visiter l’<a
+href="https://fr.wikipedia.org/wiki/Alhambra_(Grenade)">Alhambra</a>,
+les jardins et le <a
+href="https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9ralife">Generalife</a>.
+Tout est beau et la promenade des jardins qui relient les deux palais
+est très agréable. L’Alhambra est une ancienne cité <a
+href="https://fr.vikidia.org/wiki/Moyen_%C3%82ge">médiévale</a> <a
+href="https://fr.vikidia.org/wiki/Fortification">fortifiée</a> de l’<a
+href="https://fr.vikidia.org/wiki/Espagne_musulmane">époque
+musulmane</a> (dynastie nasride, XIIIe - XVe siècles).</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Alhambra_-_Palacio_Carlos_V._-_South.jpg/2560px-Alhambra_-_Palacio_Carlos_V._-_South.jpg"
+alt="Palais de Charles Quint (Alhambra) - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Palais de Charles Quint (Alhambra) -
+Source : Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Alhambra_-_Palacio_Carlos_V._-_South.jpg/2560px-Alhambra_-_Palacio_Carlos_V._-_South.jpg">Palais
+de Charles Quint (Alhambra) - Source : Wikimédia Commons</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Granada_Alhambra_Palacio_Carlos_V_Interior.jpg/1280px-Granada_Alhambra_Palacio_Carlos_V_Interior.jpg"
+alt="Cour intérieure du palais de Charles Quint (Alhambra) - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Cour intérieure du palais de Charles
+Quint (Alhambra) - Source : Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Granada_Alhambra_Palacio_Carlos_V_Interior.jpg/1280px-Granada_Alhambra_Palacio_Carlos_V_Interior.jpg">Cour
+intérieure du palais de Charles Quint (Alhambra) - Source : Wikimédia
+Commons</a></p>
+<p>Après le déjeuner, nous visitons le centre historique et en
+particulier la <a
+href="https://fr.wikipedia.org/wiki/Cath%C3%A9drale_de_l%27Incarnation_de_Grenade">cathédrale</a></p>
+<h2 id="jour-7-seville">22/10/2025 - Jour 7 : SEVILLE</h2>
+<p><a href="https://fr.wikipedia.org/wiki/S%C3%A9ville">Séville</a> est
+une cité phare de l’histoire espagnole qui distille joie et animation
+dans chacune des rues et places de sa vieille ville. Cœur de
+l’Andalousie, Séville hérite de son riche passé de nombreux joyaux
+architecturaux. Après une grâce matinée bien méritée suivie du déjeuner
+et d’une sieste, nous prenons un taxi, avec Jacqueline et Jean-Claude,
+pour rejoindre notre groupe au départ de la visite de l’<a
+href="https://fr.wikipedia.org/wiki/Alcazar_de_S%C3%A9ville">Alcazar</a>.
+Après une longue attente suivie d’un contrôle de sécurité presque aussi
+sévère que dans un aéroport, nous entrons dans le prestigieux édifice.
+C’est un véritable oasis en plein cœur de la ville, il se compose de
+palais et d’un jardin extraordinaire dans lequel des générations de
+monarques ont laissé leurs empreintes.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Alcazar_Sevilla-Espana1138.JPG/1280px-Alcazar_Sevilla-Espana1138.JPG"
+alt="Alcazar - la porte du Lion - Source : Wikipédia" />
+<figcaption aria-hidden="true">Alcazar - la porte du Lion - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Alcazar_Sevilla-Espana1138.JPG/1280px-Alcazar_Sevilla-Espana1138.JPG">Alcazar
+- la porte du Lion - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Patio_de_la_Monter%C3%ADa%2C_01.jpg/1280px-Patio_de_la_Monter%C3%ADa%2C_01.jpg"
+alt="Patio de la Montería, desde donde se puede contemplar la fachada del palacio de Pedro I y la Casa de la contratación" />
+<figcaption aria-hidden="true">Patio de la Montería, desde donde se
+puede contemplar la fachada del palacio de Pedro I y la Casa de la
+contratación</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Patio_de_la_Monter%C3%ADa%2C_01.jpg/1280px-Patio_de_la_Monter%C3%ADa%2C_01.jpg">Patio
+de la Montería, desde donde se puede contemplar la fachada del palacio
+de Pedro I y la Casa de la contratación</a></p>
+<p>Le soir, nous réserve une soirée de gala, apéritif somptueux suivi
+d’un dîner festif, entre autres plats : foie gras et omelette
+norvégienne. Le service traîne en longueur, le menu est trop copieux,
+j’ai des fourmis dans les jambes, par deux fois je monte sur le pont
+soleil pour m’y faire une promenade digestive. Nous sommes à la veille
+de notre retour, en rejoignant notre cabine pour la nuit, en consultant
+mon smartphone, un SMS de Transavia m’apprend l’annulation du vol en
+raison la tempête Benjamin qui traverse la Loire-Atlantique en cette
+nuit de mercredi à jeudi, soumettant le département à des perturbations
+et des vents forts. Transavia propose : l’annulation, un avoir ou un
+autre vol. Immédiatement j’essaie de trouver un autre vol, Transavia,
+même en attendant plusieurs jours, ne propose aucune alternative.
+Fatigué, je décide de dormir. Contrarié, je me réveille vers deux
+heures, après réflexion je me rends compte de la nécessité imminente de
+trouver une solution alternative. Je consulte Air-France qui propose un
+vol régulier pour l’aéroport de Roissy dans l’après-midi à un tarif
+“badaboum maximum”. N’ayant pas d’autre solution, Gwenola dort
+profondément, pas question de la déranger dans son sommeil! En une heure
+sur mon smartphone, je m’affaire à suivre le long processus de
+réservation de nos deux places sur ce vol Air-France. Dans la foulée, je
+retrouve le sommeil.</p>
+<h2 id="jour-8-seville">23/10/2025 - Jour 8 : SEVILLE</h2>
+<p>A l’issue du petit déjeuner, la prestation de CroisiEurope est
+terminée à l’exception du transfert en taxi vers l’aéroport de Séville.
+Les deux problèmes, qu’ils restent à régler, sont : l’horaire de ce
+transfert et la réservation de notre train entre Roissy et Nantes où
+Marie pourra venir nous chercher. Concernant l’horaire du transfert,
+CroisiEurope nous regroupe avec Jacqueline et Jean-Claude qui ont la
+même destination que nous. Pour la réservation du train, le réseau WI-FI
+à bord du bateau ne fonctionne pas très bien, je cafouille et en final,
+je réussi à réserver deux places dans le dernier train pour Nantes au
+départ de Paris-Montparnasse. Il nous reste du temps avant le départ,
+nous en profitons pour jouir une dernière fois du Parc Maria Louisa.
+Nous y trouvons une terrasse agréable pour y déguster une bière
+accompagnée de sandwichs que j’avais pris soin de préparer durant le
+petit déjeuner. Ensuite, nous nous promenons dans ce très beau parc et
+allons revoir la place d’Espagne. Dans le milieu de l’après-midi un taxi
+nous amène à l’aéroport. Première surprise, ayant vérifier notre vol,
+celui-ci est annoncé avec une heure de retard, en conséquence, rejoindre
+la gare de Paris-Montparnasse me semble fortement compromis. Deuxième
+surprise, aux abords du contrôle de sécurité, impossible de vider ma
+bouteille d’eau, je demande de revenir vers les toilettes ce qui m’est
+refusé, en final, je vide ma bouteille dans un container permettant de
+collecter les bouteilles des passagers ce qui m’est vivement
+reproché!</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aena_Seville.svg/2560px-Aena_Seville.svg.png"
+alt="Logo de l’aéroport de Séville - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Logo de l’aéroport de Séville - Source :
+Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aena_Seville.svg/2560px-Aena_Seville.svg.png">Logo
+de l’aéroport de Séville - Source : Wikimédia Commons</a></p>
+<p>L’avion décolle effectivement avec une heure de retard avec des
+excuses et pour raison : un problème technique. En vol, je tente un
+rapprochement avec une hôtesse de l’air pour essayer de régler notre
+problème en lui demandant si la réservation d’un taxi serait possible.
+Sa réponse est négative et en plus, pour elle, la raison du retard est
+la tempête et non un problème technique! Le retard à notre arrivée
+s’allonge encore un peu car la récupération des bagages est plus longue
+que prévue. Voila, notre certitude est maintenant que notre
+correspondance SNCF est ratée. Par rapport à l’Andalousie, la
+température a baissé de quinze degrés et la cerise sur le gâteau est
+qu’il pleut! L’aérogare est très peu accueillant, il est difficile
+d’obtenir un renseignement. Heureusement, les navettes sont gratuites,
+ce qui simplifie les choses. L’aéroport Roissy Charles de Gaulle est
+gigantesque et il va falloir trouver nos repères. Nous prenons une
+première navette-bus pour rejoindre le Terminal T1, c’est là que se
+trouve la gare SNCF. Nous nous y rendons pour tenter d’annuler notre
+réservation. Nous avons la chance de tomber sur un assistant très
+compétent auquel je confie mon smartphone et qui s’occupe de cette
+annulation. Ensuite, il nous explique qu’il faut prendre le VAL
+(<strong>V</strong>illeneuve-d’<strong>A</strong>scq
+<strong>L</strong>ille, petit métro sans pilote) pour rejoindre
+Roissy-Pôle là où il y a des hôtels. J’ai une petite expérience du <a
+href="https://fr.wikipedia.org/wiki/V%C3%A9hicule_automatique_l%C3%A9ger">VAL</a>
+puisque dans les années soixante-dix, j’ai travaillé à Lille chez
+Philips dans le département qui commercialisait les caméras de
+surveillance jugées indispensables à un tel projet.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cdgval_val208_terminalT3.jpg/1280px-Cdgval_val208_terminalT3.jpg"
+alt="CDGVAL - Source : Wikimédia commons" />
+<figcaption aria-hidden="true">CDGVAL - Source : Wikimédia
+commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cdgval_val208_terminalT3.jpg/1280px-Cdgval_val208_terminalT3.jpg">CDGVAL
+- Source : Wikimédia commons</a></p>
+<p>Ayant rejoint avec ce mode de transport, Roissy-Pôle, nous nous
+orientons vers l’hôtel Ibis où une file d’attente importante nous
+attend. Après quelques complications, du style trouver le bon ascenseur,
+bien-sûr, ce n’est pas un hôtel de province, des ascenseurs, il y en a
+plusieurs! Épuisés, nous trouvons enfin une chambre confortable où nous
+coucherons sans dîner. ## 24/10/2025 - Jour 9 : Roissy Charles de Gaulle
+-&gt; Saint-Molf Gwenola reste se reposer dans la chambre tandis que je
+vais prendre mon petit déjeuner. Dans ce monde hôtelier, au sein d’un
+complexe aéroportuaire gigantesque où l’ère du numérique domine,
+l’ambiance est glaçante. L’anonymat est roi, nous sommes loin de la
+convivialité des petits hôtels de province.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/CDG_P1020431.JPG/1280px-CDG_P1020431.JPG"
+alt="Aéroport international Charles de Gaulle - Source : Wikimédia Commons" />
+<figcaption aria-hidden="true">Aéroport international Charles de Gaulle
+- Source : Wikimédia Commons</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/CDG_P1020431.JPG/1280px-CDG_P1020431.JPG">Aéroport
+international Charles de Gaulle - Source : Wikimédia Commons</a></p>
+<p>Après un rapide coup d’œil, je m’oriente vers une cafétéria.
+Paradoxalement, l’accueil y est excellent. Deux charmantes femmes qui y
+sont affairées pour satisfaire la clientèle. Aimablement, l’une des deux
+femmes m’indique une table pour m’installer. Je me restaure
+copieusement. Avant de sortir, au buffet, je rassemble sachets de tisane
+et quelques viennoiseries pour Gwenola, j’en ai plein les mains, la
+deuxième des deux femmes me remarque et me propose un joli petit sac
+pour rassembler le tout. Voila, je pense à l’expression bien connue : un
+peu de douceur dans un monde de brutes. La suite de notre voyage se
+déroule normalement, Nous retrouvons Marie et ma voiture à la gare de
+Pornichet. La résultante de cette galère est bien évidemment beaucoup de
+fatigue. ## Conclusion La découverte de l’Andalousie en une semaine est
+un objectif qui semble quelque peu présomptueux. Parler de survol, pour
+en avoir une overview comme disent les anglais, me paraît plus adapté.
+Ce joli pays donne envi d’y retourner avec une organisation moins
+stressante. Consacrer une semaine à chaque ville d’importance (Cadix,
+Cordoue, Grenade, Séville) me semble intéressant, sous la forme d’un
+séjour hôtelier limité à la ville choisie.</p>
+</body>
+</html>

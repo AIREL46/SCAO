@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prototypage-de-la-e-poignée-433MHZ-V2</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Prototypage-de-la-e-poignée-433MHZ-V2</h1>
+</header>
+<p>Le présent <a href="https://fr.wikipedia.org/wiki/Wiki">wiki</a>
+rédigé par <a
+href="http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS">Régis
+LERUSTE</a> est publié sur le site <a
+href="https://fr.wikipedia.org/wiki/GitHub">GitHub</a> sous <a
+href="https://fr.wikipedia.org/wiki/Licence_Creative_Commons">licence
+Creative Commons</a> <strong>CC-BY</strong> représenté par le symbole
+ci-dessous :</p>
+<p><img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/CC-BY_icon.svg/88px-CC-BY_icon.svg.png" /></p>
+<p><strong>N.B.</strong> (<strong>CC-BY</strong> - extrait de wikipédia)
+: <em>“l’œuvre peut être librement utilisée, à la condition de
+l’attribuer à l’auteur en citant son nom. Cela ne signifie pas que
+l’auteur est en accord avec l’utilisation qui est fait de ses
+œuvres.”</em> # Objet L’objet de la e-p-433-v2 est de mesurer
+périodiquement la température sur le couvercle [19] de la casserole et
+de la transmettre par radio au e-r-433. # Description physique <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_f.png"
+alt="Assemblage de la e-p-433-v2" /></p>
+<p>La e-p-433-v2 communique avec le e-rupteur par radio. Elle est équipé
+de 2 thermomètres digitaux [17] et [7], une batterie LI-ION [4], un
+chargeur de batterie [3d], d’un microcontrôleur Teensy 3.2 et un
+émetteur 433 MHZ. Les composants électroniques sont regroupés sur une
+breadboard Arduino (3b]. # Nomenclature Une nomenclature permet de
+répertorier les éléments de la e-p-433-v2, la première colonne indique
+le niveau de décomposition</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niv</th>
+<th>Designation</th>
+<th>Founisseur</th>
+<th>Type</th>
+<th>Reference</th>
+<th>Rep</th>
+<th>Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête hexagonale M3 X 6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td><a
+href="https://www.bricovis.fr/std/vis-tete-cylindrique-7.php#Grille">TH03/006A2</a></td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Libre</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Plate-forme d’essais équipée e-p-433-v2</td>
+<td><a
+href="http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS">RL</a></td>
+<td>Management</td>
+<td></td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>••</td>
+<td>Vis à tête ronde fendue M2.5 X 6.7</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>3a</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>••</td>
+<td>Bread board</td>
+<td><a href="http://www.conrad.fr">Conrad</a></td>
+<td>Achat</td>
+<td><a
+href="http://www.conrad.fr/ce/fr/product/1572787/Platine-enfichable-TRU-COMPONENTS-0165-40-8-8010-1398700-transparent-Nbr-total-de-poles-400-L-x-l-x-h-84-x-543-x-9-m/?ref=detview1&amp;rt=detview1&amp;rb=2">1572787
+- 62</a></td>
+<td>3b</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>••</td>
+<td>Rondelle isolante d=2.5 ep=1.3</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>3c</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>••</td>
+<td>Charger-Mini-USB ép=1.8</td>
+<td><a href="https://www.sparkfun.com">SparkFun</a></td>
+<td>Achat</td>
+<td><a href="https://www.sparkfun.com/products/10401">PRT-10401</a></td>
+<td>3d</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>••</td>
+<td>Rondelle isolante d=2.5 ep=1.3</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>3e</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>••</td>
+<td>Entretoise M2.5 X 4.8 - 6</td>
+<td><a
+href="https://www.bricovis.fr/19std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>3f</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>••</td>
+<td>Plate-forme d’essais</td>
+<td><a href="https://bluelab44.fr/">Blue Lab44</a></td>
+<td>IMP3D</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/plateforme-essais.stl">plateforme-essais.stl</a></td>
+<td>3g</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>••</td>
+<td>Rondelle d=3 ep=0.5</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>3h</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>••</td>
+<td>Ecrou M2.5 - ep=1.6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>3i</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Lithium Ion Battery - 400mAh ép=5.6</td>
+<td><a href="https://www.sparkfun.com">Sparkfun</a></td>
+<td>Achat</td>
+<td><a href="https://www.sparkfun.com/products/13851">PRT-13851</a></td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Entretoise hexagonale M3X10</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Libre</td>
+<td></td>
+<td></td>
+<td></td>
+<td>6</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>thermomètre digital DS 18B 2O</td>
+<td><a href="http://www.conrad.fr">Conrad</a></td>
+<td>Achat</td>
+<td><a
+href="http://www.conrad.fr/ce/fr/product/1123323/CI-linaire-Capteur-de-temprature-Maxim-Integrated-DS18B20-Numrique-local-1-Wire-TO-92-3-1-pcs?queryFromSuggest=true">1123323
+- 62</a></td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Jupe</td>
+<td><a href="https://bluelab44.fr/">Blue Lab44</a></td>
+<td>IMP3D</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/jupe-433.stl">jupe-433.stl</a></td>
+<td>8</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Entretoise M3X4.9-8-prof=4.6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>9</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête ronde fendue M3-6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>10</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Rondelle d=3 ep=0.5</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>11</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Isolateur ep=2</td>
+<td><a href="https://bluelab44.fr/">Blue Lab44</a></td>
+<td>IMP3D</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/isolateur-433-v2.stl">isolateur-433-v2.stl</a></td>
+<td>12</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Libre</td>
+<td></td>
+<td></td>
+<td></td>
+<td>13</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête ronde fendue M3X6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>14</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Entretoise M3X4.9-8-prof=4.6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>15</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Entretoise de fixation ep=10</td>
+<td><a
+href="http://fablabo.net/wiki/Cahier_de_recettes">Olivier</a></td>
+<td><a
+href="http://fablabo.net/wiki/SCAO#Les_ateliers_de_prototypage">Usinage</a></td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/ent-fixation.dxf">ent-fixation.dxf</a></td>
+<td>16</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>thermomètre digital DS 18B 2O</td>
+<td><a href="http://www.conrad.fr">Conrad</a></td>
+<td>Achat</td>
+<td><a
+href="http://www.conrad.fr/ce/fr/product/1123323/CI-linaire-Capteur-de-temprature-Maxim-Integrated-DS18B20-Numrique-local-1-Wire-TO-92-3-1-pcs?queryFromSuggest=true">1123323
+- 62</a></td>
+<td>17</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête hexagonale creuse M4 - 4 (thermomètre digital)</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td><a
+href="https://www.bricovis.fr/std/vis-sans-tete-empreinte-hexagonale-creuse-1.php#Grille">STHCPLA04/004NO</a></td>
+<td>18</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Connexion “masse mécanique”</td>
+<td>Magasin</td>
+<td></td>
+<td></td>
+<td>19</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête hexagonale creuse M4 - 4 (masse mécanique)</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td><a
+href="https://www.bricovis.fr/std/vis-sans-tete-empreinte-hexagonale-creuse-1.php#Grille">STHCPLA04/004NO</a></td>
+<td>20</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Couvercle</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>21</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>La modélisation des différents sous-ensembles fait appel
+principalement à trois logiciels : * <a
+href="http://librecad.org/">Librecad</a> pour les pièces fabriquées en
+découpe laser * <a href="http://www.openscad.org/">Openscad</a> pour les
+pièces fabriquées en impression 3D. * <a
+href="http://www.kicad-pcb.org/">kicad</a> pour le schéma électrique de
+l’e-p-433-v2. # Description fonctionnelle <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433-v2/e-p-433-v2.png"
+alt="Schéma fonctionnel de la e-p-433-v2" /> La fonction globale de
+l’e-p-433-v2 est la <a
+href="http://fablabo.net/wiki/SCAO#Mesure_de_la_temp.C3.A9rature">mesure
+de la température</a> sur l’entretoise de fixation [16] et sa
+transmission en mode radio au e-rupteur <a
+href="http://fablabo.net/wiki/E-rupteur-433">e-r-433</a>. Cette fonction
+se décline par : * La capture avec contact des températures : * sur
+l’entretoise de fixation [16] à l’aide d’un premier thermomètre digital
+[17] * sur la batterie [4] à l’aide d’un second thermomètre digital [7]
+* Le traitement des données délivrées par les thermomètres digitaux * La
+transmission radio vers le e-r-433 * Des fonctions secondaires : Battery
+manager, calibration et <a
+href="https://fr.wikipedia.org/wiki/Interactions_homme-machine">IHM</a>.
+# Description matériel Ce paragraphe traite les sous-ensembles
+principaux de la e-p-433-v2, il aborde leur modélisation et leur
+réalisation.</p>
+<p>En fonction de la spécificité de chacun de ces sous-ensembles, la
+réalisation se concrétise soit : * par l’achat * par la sous-traitance *
+au <a href="https://bluelab44.fr/">Blue Lab44</a> de St Nazaire par
+impression 3D sur des machines comme : * <a
+href="https://ultimaker.com/">Ultimaker 3 Extended</a> * <a
+href="https://ultimaker.com/">Utimaker S5</a> * <a
+href="https://markforged.com/">Mark Forged Mark two</a> qui utilise les
+matériaux suivants : onyx, fibre de carbone, fibre de verre, nylon et
+kevlar. * dans l’<a
+href="http://fablabo.net/wiki/SCAO#Les_ateliers_de_prototypage">atelier
+salon</a> de St Molf.</p>
+<p>Il est structuré selon les articles de la nomenclature de la
+e-p-433-v2.</p>
+<p>Les articles de visserie repérés [1], [5], [10], [11], [14], [15],
+[18], ne font pas l’objet de paragraphes spécifiques.</p>
+<p>Les autres repérés [3], [4], [7], [8], [12], [16], [17], et [19],
+font l’objet de paragraphes spécifiques. ## A) Constitution du couvercle
+[19] Le couvercle de la casserole [19] est représenté sur la photo
+ci-dessous :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/couv-dessus.png"
+alt="Vue de dessus du couvercle" />
+<figcaption aria-hidden="true">Vue de dessus du couvercle</figcaption>
+</figure>
+<p>Sur ce couvercle : * au centre, une tige filetée M5 soudée, prévue
+par le constructeur pour fixer sa poignée, dans notre cas la e-p-433-v2,
+* sur la photo ci-dessous, une surface circulaire plane, d’un diamêtre
+d’environ 38 mm. Après serrage de l’entretoise, sur cette surface, nous
+pouvons imaginer : * une fixation correcte de l’ensemble e-p-443-v2, *
+un contact thermique dont la qualité va dépendre de 3 paramêtres : *
+l’intimité de contact des deux pièces, * de l’importance de leur surface
+commune, * des matières respectives des 2 pièces (inox et
+aluminium).</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/couv-plat.png"
+alt="Partie plate du couvercle" />
+<figcaption aria-hidden="true">Partie plate du couvercle</figcaption>
+</figure>
+<p>Sur la photo ci-dessous, le détail de la tige filetée M5 :</p>
+<figure>
+<img src="https://github.com/AIREL46/SCAO/blob/master/wiki/couv-M3.png"
+alt="Tige filletée M3" />
+<figcaption aria-hidden="true">Tige filletée M3</figcaption>
+</figure>
+<h2 id="b-entretoise-de-fixation-16">B) Entretoise de fixation [16]</h2>
+<h3 id="objet">Objet</h3>
+<p>L’objet de l’entretoise de fixation [16] est de : * constituer la
+fixation mécanique de la e-p-433-v2 sur le couvercle [19]. * En
+complément, de prévoir deux logements : * le premier pour le thermomètre
+digital [17] pour qu’il puisse être correctement maintenu et positionné.
+* le deuxième pour insérer le connecteur de masse. ### <a
+href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation">Modélisation</a>
+et réalisation a) <strong>Première approche</strong> : l’entretoise de
+fixation [16] est constituée d’une entretoise spécifique en laiton
+approvisionné chez <a
+href="https://www.octantenligne.com/">L’OCTANT</a>.</p>
+<ol start="2" type="a">
+<li><strong>Seconde approche</strong> : sous-traitance de la réalisation
+à <a href="https://www.usineur.fr/customer/jobList">Usineur.fr</a>.</li>
+</ol>
+<p>Sa <a
+href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation">modélisation
+2D</a> sous <a
+href="https://fr.wikipedia.org/wiki/LibreCAD">librecad</a> : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/ent-fixation.png"
+alt="Dessin en 2D de l’entretoise de fixation de la e-p-433-v2" /></p>
+<p>Sa <a
+href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation_tridimensionnelle">modélisation
+3D</a> sous <a
+href="https://fr.wikipedia.org/wiki/OpenSCAD">openscad</a>: <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/ent-fixation.png"
+alt="Dessin en 3D de l’entretoise de fixation de la e-p-433-v2" /></p>
+<p>Elle est réalisée par <a
+href="https://fr.wikipedia.org/wiki/Usinage">usinage</a> chez <a
+href="https://www.usineur.fr/customer/jobList">Usineur.fr</a> selon le
+plan de la nomenclature.</p>
+<p>Les finitions (taraudages en particulier) sont réalisées par Olivier
+dans l’<a
+href="http://fablabo.net/wiki/SCAO#Les_ateliers_de_prototypage">atelier
+salon</a>. ## C) Thermomètres digitaux [17] et [7] ### Objet L’objet est
+la capture périodique : * pour le thermomètre digital [17], de la
+température mesurée sur le couvercle [19] de la casserole * pour le
+thermomètre digital [7], de la température mesurée sur la batterie [4].
+### Approvisionnement et mise en place des thermomètres digitaux Les 2
+thermomètres digitaux [17] et [7] se concrétisent par des circuits
+DS18B20. Pour leur approvisionnement se reporter à la nomenclature.</p>
+<p>Le thermomètre digital [17] est introduit dans le logement de
+l’entretoise de fixation [16]. La vis de serrage [18] assure son
+maintien. Ce thermomètre constitué de composants électroniques est
+particulièrement vulnérable et ne doit pas être soumis à une pression de
+la vis trop importante. Pour remédier à cet inconvénient, du frein-filet
+médium est utilisé. Il est déposé avant l’introduction de la vis de
+serrage [18]. Le serrage est effectué avec une clé à 6 pans <a
+href="https://fr.wikipedia.org/wiki/Cl%C3%A9_Allen">Allen</a> de 2. En
+outre, ce montage empêche le desserrage en cas de vibration.</p>
+<p>Le thermomètre digital [7] est appliqué sur la batterie et maintenu
+par un serre-câble. Cet ensemble est appliqué sur les plots de la jupe
+[8] et maintenu par un second serre-câble. <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_f-a.png"
+alt="Assemblage jupe-thermomètre-batterie" /> ## D) La jupe [8] ###
+Objet La jupe [8] habille la partie inférieure de la e-p-433-v2. Elle
+garde les mêmes caractéristiques que celle de la <a
+href="http://fablabo.net/wiki/E-poign%C3%A9e">version USB</a>. ###
+Spécificités de la jupe de la e-p-433-v2 Elles sont dues à la batterie
+[4] intallée sur la plate-forme supérieure : * soutenue à l’aide de 4
+plots de soutien * maintenue par un ou deux serre-câbles introduits des
+2 côtés par 2 lumières rectangulaires * ventilée naturellement par une
+ouverture centrale et 1 oblond latéral.</p>
+<p>La hauteur de la jupe <strong>hj</strong> est estimée à l’aide de la
+<a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/jupe-hauteur.ods">feuille
+de calcul <strong>Calc</strong></a>. ### <a
+href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation_tridimensionnelle">Modelisation
+3D</a> <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/jupe-433-v2.png"
+alt="jupe-433" /> ### Réalisation Elle est réalisée, à partir du fichier
+.stl disponible dans la nomenclature, en impression 3D au <a
+href="https://bluelab44.fr/">Blue Lab44</a>. ## E) L’isolateur [12] ###
+Objet L’objet de l’isolateur est de réaliser une isolation thermique
+entre l’entretoise [16] et la jupe [8]. ### Modelisation 2D <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/isolateur-433-v2.png"
+alt="Isolateur de la e-poignée 433 MHZ" /> ### Réalisation Il est
+réalisé, à partir du fichier .stl disponible dans la nomenclature, en 3D
+sur l’imprimante <a href="https://markforged.com/">Markforged</a> au <a
+href="https://bluelab44.fr/">Blue Lab44</a>. ### Essai en température de
+l’onyx L’isolateur est testé en température. L’ensemble <em>“isolateur +
+entretoise de fixation”</em> est visé sur le couvercle d’une casserolle
+contenant de l’eau. Après une montée en température, des mesures sont
+effectuées avec un multimètre équipé d’une sonde de température, les
+résultats sont les suivants : * ébullition de l’eau, soit 100°C * sur le
+couvercle, 88°C * sur l’isolateur en onyx, 62°C.</p>
+<p><strong>Constat</strong> : à cette température l’onyx ne subit ni
+ramolissement, ni déformation. ## F) Batterie LI-ION [4] ### Objet
+L’objet de la batterie LI-ION est de fournir l’énergie électrique
+nécessaire aux circuits électroniques (principalement le microcontôleur)
+de la plateforme d’essais équipée e-p-433-v2 [3]. ### Conception La <a
+href="https://www.sparkfun.com/products/13851">Lithium Ion Battery -
+400mAh</a> est décrite sur les sites Wikipédia français et anglais : *
+<a
+href="https://fr.wikipedia.org/wiki/Accumulateur_lithium-ion">Accumulateur
+lithium-ion</a> * <a
+href="https://en.wikipedia.org/wiki/Lithium-ion_battery">Lithium-ion
+battery</a>.</p>
+<p>Son utilisation nécessite : * un chargeur adapté à ce type de
+technologie <a href="https://www.sparkfun.com/products/10217">SparkFun
+LiPo Charger Basic - Micro-USB</a> * une attention particulière à la
+température en fonctionnement conduisant au strict respect des
+recommandations du constructeur.</p>
+<p>La <a
+href="https://cdn.sparkfun.com/datasheets/Prototyping/spe-00-502535-400mah-en-1.0ver.pdf">datasheet</a>
+du constructeur, concernant “Operating Temperature Range”, en fonction
+du mode de fonctionnement, indique : * charge 0 -&gt; 45°C * discharge
+–20 -&gt; 60°C. Prise en compte d’une consigne de sécurité à 42.5 °C.
+### Réalisation Approvisionnement selon la nomenclature. ###
+Environnement de la batterie LI-ION [4] Sur le schéma fonctionnel
+rappellé ci-dessous, la batterie LI-ION [4] délivre la tension
+Vbat2.</p>
+<p>Elle est : * connectée au chargeur (mini USB) qui recopie la tension
+Vbat2 vers le microcontôleur * surveillée en température à l’aide du
+thermomêtre digital [7] connecté au microcontôleur * connectée (au
+travers l’interrupteur SW2) à une extrémité d’une résistance de 1 Ohm
+dédiée à la mesure du courant ibat, l’autre extrémité marquée Vbat1 est
+reliée à l’entrée VIN du microcontrôleur qui mesure périodiquement les 2
+tensions et calcul le courant.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433-v2/e-p-433-v2.png"
+alt="Schéma fonctionnel de la e-p-433-v2" />
+<figcaption aria-hidden="true">Schéma fonctionnel de la
+e-p-433-v2</figcaption>
+</figure>
+<h3 id="energie-électrique-délivrée-par-la-batterie-li-ion-4">Energie
+électrique délivrée par la batterie LI-ION [4]</h3>
+<p>L’<a
+href="https://fr.wikipedia.org/wiki/%C3%89nergie_%C3%A9lectrique">énergie
+électrique</a> fournie par la batterie est calculée périodiquement par
+le microcontrôleur, sont équation en régime permanent est :</p>
+<p>E=P*t</p>
+<p>E en joules, P en Watts et t en secondes.</p>
+<p>Pour l’exprimer en Watt/heure, 1Wh=3600J. ### Autonomie de la
+batterie LI-ION [4] En référence au paragraphe “Mesures itératives”
+inclu dans ce wiki, l’autonomie de la batterie LI-ION [4] peut être
+estimée dans les 2 modes de fonctionnement (no-sleep et sleep) à partir
+du diagramme <strong>“Evolution de la tension de batterie
+Vbat”</strong>.</p>
+<p>Les 2 <a
+href="https://fr.wikipedia.org/wiki/Droite_(math%C3%A9matiques)">droites</a>
+du <a
+href="https://fr.wikipedia.org/wiki/Diagramme#Math%C3%A9matiques">diagramme</a>
+ont pour <a
+href="https://fr.wikipedia.org/wiki/%C3%89quation">équation</a> :
+<code>y=ax+b</code>.</p>
+<p>Pour estimer l’<a
+href="https://fr.wikipedia.org/wiki/Autonomie#Technologie">autonomie</a>
+de la batterie qui alimente le microcontrôleur en <a
+href="https://fr.wikipedia.org/wiki/%C3%89nergie_%C3%A9lectrique">énergie
+électrique</a>, l’équation devient : <code>Vbat=at+Vbat(0)</code> où : *
+Vbat est la tension aux bornes de la batterie, * a est la <a
+href="https://fr.wikipedia.org/wiki/Pente_(math%C3%A9matiques)">pente</a>
+de la <a
+href="https://fr.wikipedia.org/wiki/Droite_(math%C3%A9matiques)">droite</a>
+* t est le temps exprimé en mn * Vbat(0) est la valeur de la tension en
+mV aux bornes de la batterie à l’instant 0</p>
+<p>Pour exprimer la valeur de la <a
+href="https://fr.wikipedia.org/wiki/Pente_(math%C3%A9matiques)">pente</a>
+de la <a
+href="https://fr.wikipedia.org/wiki/Droite_(math%C3%A9matiques)">droite</a>
+, la formule ci-dessous est appliquée :</p>
+<p><code>a=[Vbat(t2)-Vbat(t1)]/(t2-t1)</code></p>
+<p>En utilisant les données du fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/wiki/journal.ods">journal.ods</a>,
+les valeurs extraites sont copiées dans le tableau ci-dessous :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Instant t</th>
+<th>t (mn)</th>
+<th>Vbat sleep (mV)</th>
+<th>Vbat no-sleep (mV)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>t1</td>
+<td>0.5</td>
+<td>4101</td>
+<td>4052</td>
+</tr>
+<tr class="even">
+<td>t2</td>
+<td>60.5</td>
+<td>4083</td>
+<td>3967</td>
+</tr>
+</tbody>
+</table>
+<p>L’application de la formule donne sucessivement : * pour le mode
+sleep <code>a=(4083-4101)/(60.5-0.5)=-0.3 mV/mn</code> * pour le mode
+no-sleep <code>a=(3967-4052)/(60.5-0.5)=-1.417 mV/mn</code></p>
+<p>Pour calculer l’autonomie de la batterie correspondant à la durée qui
+s’écoule entre la pleine charge (Vbat proche de 4200 mV) et la valeur
+minimun (<code>Vbat_min=3600 mV</code>), la formule Vbat=at+Vbat(0)=3600
+donne : * pour le mode sleep
+<code>-0.3*t + 4101 = 3600 -&gt; t=(3600-4101)/-0.3 -&gt; t=1670 mn t=27.83 h</code>
+* pour le mode no-sleep `-1.417*t + 4052 = 3600 -&gt;
+t=(3600-4052)/-1.417 -&gt; t=319 mn t=5.32 h.</p>
+<p>En conclusion, le ratio des autonomies (modes sleep sur no-sleeep)
+est égale à <strong>27.83 / 5.32</strong>, soit <strong>5.23</strong>.
+En termes plus explicites, le fonctionnement en <strong>mode
+sleep</strong> assure une <strong>autonomie de la batterie 5 fois
+supérieure</strong> par rapport au fonctionnement en <strong>mode
+no-sleep</strong>. Pour faciliter la compréhension de ce résultat,
+durant chaque itération de <strong>30 secondes</strong>, le temps de
+<strong>travail</strong> du microcontrôleur est d’environ <strong>4
+secondes</strong>, le temps restant, soit <strong>26 secondes</strong>,
+il est <strong>endormi</strong> (mode sleep). ## G) Plate-forme d’essais
+équipée e-p-433-v2 [3] ### Objet L’objet de la plate-forme d’essais
+équipée e-p-433-v2 [3] est de grouper toutes les composants
+électroniques à l’exception des 2 thermomètres digitaux. ###
+Constitution La plate-forme d’essais équipée e-p-433-v2 [3] est un
+assemblage constituée : * de visserie repérés [3a], [3c], [3h], [3e] à
+[3i] * du chargeur [3d] et de la breadboard [3b] sur laquelle les
+composants électroniques sont câblés * la plate-forme d’essais [3g].</p>
+<p>N.B. : la breadboard [3b] est collée sur la plate-forme d’essais
+[3g]. ### Modélisation électrique La modélisation électrique concerne :
+* le chargeur [3d] * les composants électroniques câblés sur la
+breadboard [3b]. #### Schéma électrique <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-433-v2/e-p-433-v2-1.png"
+alt="Schéma électrique de l’e-p-433-v2" /> #### Réalisation du câblage
+sur la breadboard [3b] Arduino <img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/e-p-433-v2-breadboard.JPG"
+alt="Photo de l’e-p-433-v2 câblée sur la breadboard" /> #### Réalisation
+de l’antenne L’<a
+href="https://fr.wikipedia.org/wiki/Antenne_radio%C3%A9lectrique">antenne</a>
+est une antenne <strong>“quart d’onde”</strong> constituée d’un simple
+fil rigide, sa longueur est calculée à partir de la formule de la <a
+href="https://fr.wikipedia.org/wiki/Longueur_d%27onde">longueur
+d’onde</a> : * <strong>λ = c/f</strong> , où : * λ est la longueur
+d’onde * c est la vitesse de la lumière soit 3.10 puissance 8 * f est la
+fréquence soit 433.10 puissance 6 * λ = 0.7 m * <strong>λ/4 = 17
+cm</strong>. ### Modélisation de la plate-forme d’essais [3g] ####
+Modélisation 2D <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/plateforme-essais.png"
+alt="Modélisation 2D" /> #### Modélisation 3D <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/plateforme-essais.png"
+alt="Modélisation 3D" /> #### Réalisation La plate-forme d’essais [3g]
+est réalisée, à partir du fichier .stl de la nomenclature, en impression
+3D au <a href="https://bluelab44.fr/">Blue Lab44</a>. # Description
+logicielle ## Introduction Dans l’<a
+href="https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement">environnement
+de développement</a> <a
+href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a>, le <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-433-v2/e-p-433-v2.ino">programe
+e-p-433-v2</a> constitue le <a
+href="https://fr.wikipedia.org/wiki/Code_source">code source</a> qui
+permet l’édition, la compilation et le transfert du <a
+href="https://fr.wikipedia.org/wiki/Firmware">firmware</a> à destination
+du <a
+href="https://fr.wikipedia.org/wiki/Microcontr%C3%B4leur">microcontrôleur</a>.
+## Objet L’objet de ce programme est double : * la capture des
+températures délivrées par 2 thermomètres digitaux. * la transmission
+périodique de ces valeurs au e-rupteur (e-r-433). ## Vocabulaire : * <a
+href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_embarqu%C3%A9">Système
+embarqué</a> * <a
+href="https://en.wikipedia.org/wiki/Embedded_system">Embedded system</a>
+* <a
+href="https://en.wikipedia.org/wiki/Single-board_microcontroller">Single-board
+microcontroller</a> * <a
+href="https://fr.wikipedia.org/wiki/Plate-forme_(informatique)">Plateforme
+informatique</a> * <a
+href="https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement">Environnement
+de développement</a> * <a
+href="https://fr.wikipedia.org/wiki/Arduino">Arduino</a> * <a
+href="https://en.wikipedia.org/wiki/Internet_of_things">Internet of
+things (IoT)</a>. ## Comparison of single-board microcontrollers : * <a
+href="https://en.wikipedia.org/wiki/Comparison_of_single-board_microcontrollers">Comparison
+of single-board microcontrollers</a> ## Single-board microcontroller
+Teensy 3.2 ### Caractéristiques * <a
+href="https://www.pjrc.com/teensy/index.html">Teensy USB Development
+Board</a> * <a
+href="http://www.farnell.com/datasheets/2291968.pdf?_ga=2.119649294.76583199.1524563492-1031362663.1516620873&amp;_gac=1.11808256.1524564310.EAIaIQobChMIkvXUvtHS2gIVFxgbCh2PyAsFEAAYASAAEgKuO_D_BwE">Le
+microcontôleur MK20DX256 32 bit ARM Cortex-M4 72 MHz</a> * Les
+caractéristiques du microcontôleur : * Flash memory : 262 KO * RAM
+memory : 65 KO * EEPROM : 2 KO * Multiple low power modes. * <a
+href="https://www.pjrc.com/teensy/schematic.html">Schéma</a> * <a
+href="http://www.ti.com/product/LP38691">LP 38691 - 500mA Low Dropout
+CMOS Linear Regulators Stable with Ceramic Output Capacitors</a> * <a
+href="https://www.nxp.com/docs/en/data-sheet/KL02P32M48SF0.pdf">Flash
+memory - MKL02Z32VFG4</a> * <a
+href="https://en.wikipedia.org/wiki/EAGLE_(program)">EAGLE (program)</a>
+* <a href="https://www.pjrc.com/teensy/eagle_lib.html">Eagle
+Libraries</a> * <a
+href="https://www.pjrc.com/teensy/td_libs_Time.html">Time Library</a>
+### Teensyduino Dans le cadre de ce projet, <a
+href="https://www.pjrc.com/teensy/teensyduino.html">Teensyduino</a> est
+un complément logiciel permettant d’intégrer le Teensy 3.2 à la
+plateforme Arduino IDE.</p>
+<p>Pour installer ce complément logiciel, il convient de suivre la
+procédure accessible sur le site PJRC à l’aide du lien <a
+href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a> et
+<strong>simultanément</strong> de tenir compte des indications
+complémentaires indiquées ci-dessous : * <strong>Install step 0</strong>
+(attention : le step 0 n’est pas explicité sur le site PJRC) : *
+Télécharger Teensyduino version 1.44, en cliquant sur <strong>linux
+installer (x86 -’ bit)</strong>, dans le répertoire
+<em>Téléchargemements</em> et vérifier si le fichier est éxecutable
+(voir capture d’écran ci-dessous) * Télécharger le fichier
+49.teensy.rules, en cliquant sur <strong>linux udev rules</strong>, le
+fichier s’ouvre à l’aide de l’éditeur de firefox, dans son menu, cliquer
+sur <em>Enregister sous</em> et choisir le répertoire
+<em>Téléchargements</em>. * <strong>Install step 1</strong> : Installer
+l’Arduino IDE 1.8.7 * <strong>Install step 2</strong> Installer udev
+Rules avec la commande : * <code>~ sudo cp -v
+Téléchargements/49-teensy.rules /etc/udev/rules.d</code> *
+<strong>Install step 3</strong> : Lancer le programme d’installation de
+Teensyduino : * <code>~ sudo
+./Téléchargements/TeensyduinoInstall.linux64</code> * choisir le
+répertoire : ~ arduino-1.8.7 * choisir l’installation des libraries *
+Lancer l’Arduino IDE, dans le menu <strong>Outils - Type de
+cartes</strong> choisir Teensy 3.2 * Vérifier le bon fonctionnement de
+l’<strong>Arduino IDE</strong> complété par le logiciel
+<strong>Teensyduino</strong> * Détruire les 2 fichiers du répertoire
+Téléchargement car ils ne sont plus nécessaires.</p>
+<p><strong>N.B.</strong> : la capture d’écran ci-dessous montre : *
+qu’après téléchargement, la présence des 2 fichiers nécessaires à
+l’installation * que le fichier d’installation n’est <strong>pas
+exécutable</strong> (couleur <strong>blanche</strong>) * que la commande
+chmod +x permet de le rendre exécutable * que le fichier d’installation
+<strong>est devenu exécutable</strong> (couleur <strong>verte</strong>).
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/teensyduino.png"
+alt="capture d’écran teensyduino" /> ## Logiciels Arduino de référence
+### Installation de l’Arduino IDE L’Arduino IDE existe selon 2 options :
+* Web Editor * Résident sur l’ordinateur. #### Installation de l’Arduino
+IDE web Editor Sous Ubuntu, le premier lancement l’Arduino Create Agent
+n’assure pas l’installation du plugin, le message d’erreur est <em>“No
+plugin connection uploading is disabled until you reconnect”</em>, pour
+contourner cette difficulté, il convient de cliquer sur <strong>“Install
+the Plugin”</strong>, il en résulte la mise à disposition du fichier
+d’installation <strong>.tar.gz</strong> qui après extraction donne le
+fichier : <strong>ArduinoCreateAgent-1.1-linux-x64.run</strong>, dans
+une console ce fichier est exécuté à l’aide de la commande :+1: :</p>
+<p><code>~ sudo ./ArduinoCreateAgent-1.1-linux-x64.run</code> ####
+Installation de l’Arduino IDE résident sur l’ordinateur L’installation
+de l’Arduino IDE s’effectue selon les étapes suivantes : * choisir
+<em>Download the Arduino IDE (Linux 64 bit)</em> sur le site <a
+href="https://www.arduino.cc/en/Main/Software">Arduino</a> * télécharger
+(choisir : enregistrer le fichier) <code>arduino-1.8.7</code> * vérifier
+la présence dans le répertoire <em>Téléchargements</em> du fichier
+<code>arduino-1.8.7-linux64.tar.xz</code> * extraire avec la commande
+<code>tar Jxvf Téléchargements/arduino-1.8.7-linux64.tar.xz</code> *
+exécuter avec la commande <code>sudo ./arduino-1.8.7/install.sh</code> *
+lancer avec la commande <code>sudo ./arduino-1.8.7/arduino</code>.</p>
+<h3 id="les-ports-séries">Les ports séries</h3>
+<p>L’utilisation des ports séries peut poser problème, pour contourner
+cette difficulté : * <a
+href="https://www.arduino.cc/en/Guide/Environment#toc12">Arduino serial
+monitor</a> * <a
+href="https://doc.ubuntu-fr.org/arduino#utilisation_des_ports_serie_du_menu">Ubuntu
+utilisation des ports séries</a> * <a
+href="https://help.ubuntu.com/community/Minicom">Minicom</a> * <a
+href="https://playground.arduino.cc/Learning/ArduinoSleepCode">Arduino
+Sleep Code</a></p>
+<p>Correspondant au Teensy 3.2, avec la cde :</p>
+<p><strong>lsusb</strong></p>
+<p><strong>Bus 004 Device 048: ID 16c0:0483 Van Ooijen Technische
+Informatica Teensyduino Serial</strong></p>
+<p>Concernant le port série de sortie, avec la cde :</p>
+<p><strong>ls -l /dev/ttyACM0</strong></p>
+<p><strong>crw-rw-rw- 1 root dialout 166, 0 août 3 17:29
+/dev/ttyACM0</strong></p>
+<p>Le fonctionnement en mode “sleep code” inhibe la communication série
+entre l’ordinateur et le teensy 3.2. ## Clonage des Libraries Certaines
+libraries sont déjà présentes suite à l’installation l’Arduino IDE et
+Teensyduino.</p>
+<p>Avant d’effectuer le clonage, il convient de vérifier la présence de
+ces librairies dans le répertoire : *
+<code>~arduino-1.8.7/hardware/teensy/avr/libraries</code> Si elles sont
+absentes, on les trouvent principalement sur Github, leur clonage
+s’effectue en suivant la procédure suivante : * <code>~ cd
+/root/Arduino/libraries</code> * <code>/root/Arduino/libraries$ sudo git
+clone https://github.com/SofaPirate/Chrono.git</code> *
+<code>/root/Arduino/libraries$ sudo git clone
+https://github.com/PaulStoffregen/OneWire.git</code> *
+<code>/root/Arduino/libraries$ sudo git clone
+https://github.com/duff2013/Snooze.git</code> *
+<code>/root/Arduino/libraries$ sudo git clone
+https://github.com/PaulStoffregen/Time.git</code> *
+<code>/root/Arduino/libraries$ sudo git clone
+https://github.com/manashmndl/VirtualWire.git</code> ## Le programme : *
+<a
+href="https://github.com/AIREL46/SCAO/tree/master/Arduino/e-p-433-v2/e-p-433-v2.ino">e-p-433-v2.ino</a>
+### a) Capture de la température (thermomètres digitaux) #### Références
+: * Sur le site <a href="https://www.carnetdumaker.net">Carnet du
+maker</a> : * <a
+href="https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino/">Interfacer
+le capteur DS18B20 avec une carte Arduino</a> * <a
+href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">datasheet
+du DS18B20</a> * <a href="http://eesemi.com/to92.htm">dimensions du
+boîtier TO-92</a> * <a
+href="https://www.pjrc.com/teensy/td_libs_OneWire.html">Librairie one
+wire</a> #### Les thermomètres digitaux (capteurs) Un point important
+est le mode de lecture du capteur : <strong>recherche</strong> ou
+<strong>adressage direct</strong>.</p>
+<p>La e-p-433-v2 utilise deux thermomètres digitaux qui captent : * la
+température T1, relative à la <strong>cuisson des aliments</strong>, en
+provenance du thermomètre digital repéré [17] introduit dans
+l’entretoise de fixation [16] en contact intime avec le couvercle [19]
+de la casserole * la température T2, relative à la <strong>surveillance
+de la batterie [4]</strong>, en provenance du thermomètre digital repéré
+[4] introduit dans le logement de la jupe [8] et en contact intime avec
+la batterie [4].</p>
+<p>Le mode de lecture par <strong>recherche</strong> ne garantit pas
+lequel des 2 thermomètres sera lu en premier. Ce mode présente donc un
+risque d’invertion des valeurs entre T1 et T2.</p>
+<p>Le mode de lecture par <strong>adressage direct</strong> nécessite la
+connaissance préalable des adresses respectives des 2 thermomètres. A
+l’aide du logiciel scanner ces adresses peuvent être lues. Il est
+indispensable que cette lecture soit effectuée avec un seul capteur
+connecté sur le bus onewire. ### b) Mesures des tensions et calibration
+### c) <a
+href="https://en.wikipedia.org/wiki/Built-in_self-test">Built-in test
+(BITE)</a> ### d) Transmission ### e) <a
+href="https://fr.wikipedia.org/wiki/Horodatage">Horodatage</a> et
+chronomètre #### Horodatage La réalisation de la fonction horodatage par
+le microcontrôleur Teensy 3.2 se réfère à <a
+href="https://www.pjrc.com/teensy/td_libs_Time.html#teensy3">TimeTeensy3
+Example Program</a>, elle nécessite : * l’installation d’un cristal
+(micro-soudure) sur les entrées XTAL32 et EXTAL32 du microcontrôleur, ce
+cristal assure la fonction <a
+href="https://fr.wikipedia.org/wiki/Horloge_temps_r%C3%A9el">RTC</a> qui
+permet le maintien de la date et de l’heure quand le microcontrôleur est
+hors tension * l’alimentation permanente de l’entrée
+<strong>Vbat</strong> du microcontrôleur par une tension comprise entre
+1.71 et 3.6 Volts, cette tension est obtenue à partir de celle délivrée
+par la batterie LI-ION [4] <strong>Vbat1</strong> (4.2V max) au travers
+de 2 diodes en séries pour provoquer une chute de tension de 2X0.6V,
+soit <strong>3V</strong>. * de compléter le programme <a
+href="https://github.com/AIREL46/SCAO/tree/master/Arduino/e-p-433-v2/e-p-433-v2.ino">e-p-433-v2.ino</a>
+par des copier/coller adequats du programme TimeTeensy3.ino.</p>
+<p>La micro-soudure a été réalisée par <a
+href="https://fr.linkedin.com/in/st%C3%A9phane-kerbart-ba5912153">Stéphane
+Kerbart</a> au <a href="https://bluelab44.fr/">Blue Lab44</a> de St
+Nazaire avec : * une station de soudure Weller (température réglable) *
+une caméra USB “Digital Microscope” (commande cheese ou avec VLC) *
+pistolet à colle de chez Castorama pour fixer le cristal (colle molle
+après séchage). #### Chronomètre ### f) Visualisation des résultats ###
+g) <a href="https://en.wikipedia.org/wiki/Sleep_mode">Mode sleep</a> <a
+href="https://playground.arduino.cc/Learning/ArduinoSleepCode">Arduino
+Sleep</a> ### h) Bilan énergétique de la batterie # Mesures ## Mesures
+de la température T2 mesurée sur la batterie LI-ON [4] Sans le SCAO, le
+contexte de la mesure est : * la e-p-433-v2 est vissée sur le couvercle
+de la casserole remplie d’eau à mi hauteur, elle est connectée par un
+câble USB au micro-ordinateur portable, la batterie LI-ON [4] est donc
+en charge * sur la gazinière l’eau est chauffée jusqu’à ébullition puis
+maintenue * le firmware déroule son programme au sein du Teensy 3.2 et
+le micro-ordinateur portable recueille les résultats des mesures.</p>
+<p>La température T2 mesurée s’élève progressivement jusqu’à plafonnée à
+48.25°C.</p>
+<p><strong>Constat :</strong></p>
+<p>T2 dépasse de 3.25°C la température maximale autorisée par le
+constructeur en mode charge.</p>
+<p><strong>Conclusion :</strong></p>
+<p>Donner la préférence au mode décharge (chargeur déconnecté), la plage
+de température préconisée par le constructeur est de -20 à 60°C, dans ce
+cas, il nous reste de la marge. ## Mesures de courant débité par la
+batterie (ibat) : Un multimètre (mA) connecté en série entre le + de la
+batterie et l’entrée Vin du microcontrôleur.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Désignation</th>
+<th style="text-align: center;">ibat (mA)</th>
+<th style="text-align: center;">Remarque</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Sans leds</strong></td>
+<td style="text-align: center;">41.5</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Avec led verte et led Teensy
+permanentes</strong></td>
+<td style="text-align: center;">45.5</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Idem + led jaune
+permanente</strong></td>
+<td style="text-align: center;">48.4</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mesures-des-tensions-vusb-vbat-et-v3.3">Mesures des tensions
+(Vusb, Vbat et V3.3) :</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Désignation</th>
+<th style="text-align: center;">Chargeur connecté (mV)</th>
+<th style="text-align: center;">Chargeur déconnecté (mV)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Vusb</strong></td>
+<td style="text-align: center;">4930</td>
+<td style="text-align: center;">5030</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Vbat</strong></td>
+<td style="text-align: center;">4190</td>
+<td style="text-align: center;">4140</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>V3.3</strong></td>
+<td style="text-align: center;">3272</td>
+<td style="text-align: center;">3280</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mesures-itératives">Mesures itératives :</h2>
+<p>Les mesures <a
+href="https://fr.wikipedia.org/wiki/It%C3%A9ration">itératives</a> sont
+réalisées automatiquement par le microcontrôleur, à partir du firmware
+contenu dans sa mémoire flash.</p>
+<p>La périodicité de l’itération est de 30 secondes. A chaque itération,
+le microcontôleur connecté (USB) à l’ordinateur transmets les valeurs
+mesurées à l’e-r-433 ainsi qu’à la console. Un <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/capture.sh">programme
+de capture</a> exécuté par l’ordinateur permet l’édition d’un fichier
+journal (.txt). Ce fichier journal est ensuite importé dans Libreoffice
+Calc pour devenir un fichier <a
+href="https://fr.wikipedia.org/wiki/OpenDocument">open document</a> de
+type tableur ayant pour extension .ods.</p>
+<p>Ce <a
+href="https://github.com/AIREL46/SCAO/blob/master/wiki/journal.ods">fichier
+.ods</a> ouvert dans Libreoffice Calc permet la génération de diagrammes
+présentés dans les paragraphes ci-dessous. La procédure pour générer ces
+diagrammes est expliquée dans le paragraphe <a
+href="http://fablabo.net/wiki/Atelier_logiciel#Les_logiciels_applicatifs">les
+logiciels applicatifs</a> de l’<a
+href="http://fablabo.net/wiki/Atelier_logiciel">atelier logiciel</a>.
+### Mesures itératives de la tension de batterie (Vbat) : <img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/journal-vbat.png"
+alt="Evolution de la tension Vbat" /> ### Mesures itératives de
+l’énergie délivrée par la batterie et consommée par le microcontrôleur :
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/journal-ec.png"
+alt="Energie consommée" /> # Annexes ## Remarques préliminaires La
+e-poignée 433MHZ version V2, dont l’abréviation est e-p-433-v2, est
+caractérisée par : * l’utilisation de capteurs de température DS18B20
+(thermomètre digital), à la place des thermocouples * le fait que cette
+version est une version d’essais regroupant les composants électroniques
+sur une breadboard Arduino. ## Recherche du capteur de température Le
+capteur DS18B20 est un capteur de température numérique (thermomètres
+digitaux) intégrant tout le nécessaire requis pour faire la mesure :
+capteur analogique, convertisseur analogique / numérique, électronique
+de communication. Il communique via un bus 1-Wire et possède une
+résolution numérique de 12 bits avec une plage de mesure de -55°C à
++125°C. La précision analogique du capteur est de 0,5°C entre -10°C et
++85°C.</p>
+</body>
+</html>

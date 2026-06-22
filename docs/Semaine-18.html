@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Semaine-18</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Semaine-18</h1>
+</header>
+<h2
+id="création-du-wiki-wifiprototypage-de-la-e-poignée-433mhz-wifi">Création
+du wiki [[wifi|Prototypage de la e poignée 433MHZ WIFI]]</h2>
+<h2 id="organigramme-du-projet">Organigramme du projet</h2>
+<p><img
+src="https://user-images.githubusercontent.com/47318623/60419300-39bcc780-9be5-11e9-93fa-bf4a7e4fec5d.png"
+alt="Schéma-git" /> ## <a
+href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">DS18b20
+thermomètre numérique 1-Wire</a></p>
+<h3 id="description-générale">Description générale</h3>
+<p>Le thermomètre numérique DS18B20 offre 9 bits à 12 bits de mesures de
+température Celsius et possède une alarme non volatile, programmable par
+l’utilisateur en fonction des points de déclenchement inférieurs et
+supérieure. Le DS18B20 communique sur bus 1-Wire qui, par définition, ne
+nécessite qu’une seule ligne de données (Et la masse) pour une
+communication avec un microprocesseur central.</p>
+<h3 id="configuration-des-broches">Configuration des broches</h3>
+<ul>
+<li>Broche n°1 (GND) : Correspond à la masse.</li>
+<li>Broche n°2 (DQ) : Correspond à l’entrée / sortie de données.
+Open-drain 1-Wire broche d’interface. Il fournit également
+l’alimentation de l’appareil lorsqu’il est utilisé en mode
+parasite.</li>
+<li>Broche n°3(VDD) : Facultatif. VDD doit être mis à la terre pour un
+fonctionnement en mode d’alimentation de parasite.</li>
+</ul>
+<p><img
+src="https://user-images.githubusercontent.com/47318623/57128877-13211280-6d95-11e9-8507-fbb8a02eeddf.png"
+alt="Schéma-git" /> ### Aperçu</p>
+<p>La figure ci-dessous montre un schéma de principe de l’DS18B20.</p>
+<p>Les 64-bit du code de série unique de l’appareil est stocké dans sa
+ROM.</p>
+<p>La mémoire de travail contient le registre de température de 2 octets
+qui stocke la sortie numérique provenant du capteur de température.</p>
+<p>Le scratchpad (bloc-notes) permet d’accéder aux registres -de 1
+octet- d’alarmes supérieur et inférieur de déclenchement (TH et TL) il
+permet en outre d’accéder au registre de configuration -de 1 octet-.</p>
+<p>Le registre de configuration permet à l’utilisateur de régler la
+résolution de la conversion de température-numérique à 9, 10, 11 ou 12
+bits.</p>
+<p>Les TH, TL, et les registres de configuration ne sont pas volatile
+(EEPROM), afin qu’ils conservent les données lorsque l’appareil est hors
+tension.</p>
+<p>Les DS18B20 utilise exclusivement 1-Wire bus Proto-col de Maxim qui
+implémente la communication de bus en utilisant un signal de
+commande.</p>
+<p>Dans ce système de bus, le microprocesseur (le dispositif maître)
+identifie et traite les périphériques sur le bus en utilisant le code 64
+bits unique de chaque appareil.</p>
+<p>Une autre caractéristique de la DS18B20 est la capacité à fonctionner
+sans source d’énergie externe.</p>
+<p>L’alimentation est fournie à travers la résistance de pullup 1-fil
+vers la broche DQ lorsque le bus est élevé (à l’état HAUT).</p>
+<p>Le signal haut du bus permet également de recharger un condensateur
+interne (RPC), qui fournit alors la puissance de l’appareil lorsque le
+bus est faible. Cette méthode de puissance découlant du bus 1-Wire est
+appelé « puissance parasite.” Comme alternative, l’DS18B20 peut
+également être alimenté par une alimentation externe sur VDD.</p>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/47318623/57128939-51b6cd00-6d95-11e9-8c1c-520ea2505fe0.png"
+alt="Shéma" />
+<figcaption aria-hidden="true">Shéma</figcaption>
+</figure>
+<h3 id="opération-mesure-de-la-température">Opération-Mesure de la
+température</h3>
+<p>La fonctionnalité de base de l’DS18B20 est son capteur de température
+« direct-to-digital ». La résolution du capteur de température est de 9,
+10, 11 ou 12 bits configurable par l’utilisateur, ce qui correspond
+respectivement à des incréments de 0,5 ° C, 0.25 ° C, 0.125 ° C, et de
+0,0625 ° C. La résolution par défaut au démarrage est de 12 bits.</p>
+<h3 id="opération-alarme-de-signalisation">Opération-Alarme de
+signalisation</h3>
+<p>Après la conversion de température DS18B20, la valeur de température
+est comparée aux valeurs des deux seuils de déclenchement d’alarme
+définies par l’utilisateur stockées dans les deux compléments de 1
+octets TH et TL du registres (voir la figure 5). Les bit de signe (S)
+indique si la valeur est positive ou négative : pour les nombres
+positifs S = 0 et pour les nombres négatifs S = 1.</p>
+<p>Les registres TH et TL sont non volatile (EEPROM) de sorte qu’ils
+conservent les données lorsque l’appareil est hors tension ou vers le
+bas niveau. TH et TL peuvent être accessibles via octets 2 et 3 du
+scratchpad (bloc-notes) comme il est expliqué dans la section de la
+mémoire.</p>
+<h3 id="wire-bus-système">1-Wire bus système</h3>
+<p>Le système de bus 1-Wire utilise un seul maître de bus pour commander
+un ou plusieurs dispositifs esclaves. Le DS18B20 est toujours un
+esclave. Lorsqu’il n’y a qu’un seul esclave sur le bus, le système est
+considéré comme un système “single-chute”; le système est “chute multi”
+s’il y a plusieurs esclaves sur le bus. Toutes les données et les
+commandes sont transmises par le bit le moins significatif en premier
+sur le bus 1-Wire. La discussion suivante du système de bus 1-Wire est
+décomposé en trois thèmes: la configuration du matériel, la séquence de
+la transaction, et de signalisation 1-Wire (types de signaux et de
+synchronisation).</p>
+</body>
+</html>

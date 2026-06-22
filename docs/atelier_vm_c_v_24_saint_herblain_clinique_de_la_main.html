@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_vm_c_v_24_saint_herblain_clinique_de_la_main</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_vm_c_v_24_saint_herblain_clinique_de_la_main</h1>
+</header>
+<h1
+id="la-clinique-jeanne-darc---institut-de-la-main-de-saint-herblain-nantes">La
+clinique Jeanne d’Arc - Institut de la Main de Saint-Herblain
+(Nantes)</h1>
+<figure>
+<img
+src="https://res.cloudinary.com/void-elsan/image/upload/f_auto/q_90/v1/widgets/images/dji_0021%40g.satre-1-920x554.jpg"
+alt="Elsan Santé Atlantique à Saint-Herblain - Crédit photo : Elsan" />
+<figcaption aria-hidden="true">Elsan Santé Atlantique à Saint-Herblain -
+Crédit photo : Elsan</figcaption>
+</figure>
+<p><a
+href="https://res.cloudinary.com/void-elsan/image/upload/f_auto/q_90/v1/widgets/images/dji_0021%40g.satre-1-920x554.jpg">Elsan
+Santé Atlantique à Saint-Herblain - Crédit photo : Elsan</a></p>
+<p>La clinique Jeanne d’Arc - Institut de la Main est plus communément
+appellée : Clinique de la main. Elle est l’une des cliniques issue du
+regroupement des cliniques de référence de la région nantaise au sein
+d’<a href="https://www.elsan.care/fr/sante-atlantique">Elsan Santé
+Atlantique</a>. Les autres cliniques sont : la Polyclinique de
+l’Atlantique, la clinique Saint-Augustin et la Clinique Sourdille. ## Le
+20 août 2024 - Dr Rouau A l’occasion de ma rencontre (tous les quatre
+mois) avec ma doctoresse Pascale Rouau Perrin pour le renouvellement de
+mon traitement de l’hypertension artérielle, je lui montre ma main
+droite atteinte de la <a
+href="https://fr.wikipedia.org/wiki/Maladie_de_Dupuytren">maladie de
+Dupuytren</a> qui entraîne une rétraction et une flexion progressive et
+irréductible des doigts. Après examen, elle rédige une lettre à
+l’attention du chirurgien qui me prendra en charge au sein de la
+clinique de la main. ## Le 25 septembre 2024 - Clinique de la main - Dr
+Ardouin Après une longue attente liée à une procédure compliquée de
+gestion des patients, je rencontre la secrétaire du Dr Ardouin qui
+renseigne une première partie du dossier administratif, après une
+seconde attente, je rencontre le Dr Ardouin.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/ardouin.png"
+alt="Dr Ludovic Ardouin - Crédit ptoto : clinique de la main" />
+<figcaption aria-hidden="true">Dr Ludovic Ardouin - Crédit ptoto :
+clinique de la main</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/ardouin.png">Dr
+Ludovic Ardouin - Crédit ptoto : clinique de la main</a></p>
+<p>L’anesthésie se fera au niveau du bras droit. Sur ma main, avec un
+stylo à bille, il dessine le périmètre de son intervention. Il prévoit
+des séances de kinésithérapie qui débuteront 5 jours après
+l’intervention (trois à cinq fois par semaine). Il me recommande de
+planifier ces soins auprès d’un kinésithérapeute le plus rapidement
+possible. Après une attente supplémentaire, je rencontre à nouveau la
+secrétaire, nous évoquons le transport et elle établi une prescription
+médicale de transport en deux exemplaires. Comme à mon habitude, je
+vérifie ce document. Le numéro d’immatriculation commence par le chiffre
+deux. La sécurité sociale identifie les hommes par le chiffre un et les
+femmes par le chiffre deux. Il y a donc une erreur ! Je le signale à la
+secrétaire qui édite un nouveau document. Voila, une première partie de
+mon périple se termine. Je viens de passer 2h30 dans cette clinique pour
+une entrevue avec le Dr ardouin qui a duré à peine 10 minutes. J’ai en
+main mon dossier qui me semble déjà bien volumineux. Mon impression
+globale est que nous vivons de plus en plus dans un monde robotisé où
+l’attente est dominante et que la moindre erreur peut vous être
+préjudiciable. Mon lot de consolation est maintenant de rejoindre le
+centre commercial Atlantis. <a
+href="https://www.atlantis-nantes.com/restaurants/comptoir">Le
+comptoir</a> est une brasserie que je connais pour y être allé il y a
+quelques mois avec Marie. Une serveuse y est très accueillante, je me
+souviens d’elle. Je déguste un boudin noir aux deux pommes. C’est elle
+qui m’accueille pour le réglement de la note, j’en profite pour lui
+parler un moment et lui dire que je me souviens de son amabilité lors
+d’un précédent passage. Un petit peu de douceur dans un monde de brutes,
+cela fait du bien ! ## Traitement du dossier administratif Au lendemain
+de ma rencontre avec le docteur Ardouin, je m’attèle à la prise de
+connaissance et au traitement du dossier administratif. Voyons d’abord
+sa constitution. Pour utiliser le verbiage usité par <a
+href="https://www.elsan.care/fr/sante-atlantique">Elsan Santé
+Atlantique</a>, il est composé d’un livret d’accueil et d’un passeport.
+Le livret d’accueil présente le site, donne détails et recommandations
+sur le déroulement du séjour hospitalier ainsi que sur l’offre
+hôtelière, la vie quotidienne, la sécurité des soins et des droits
+médicaux. Il est complété par un passeport édité également par le groupe
+<a href="https://www.elsan.care/fr">Elsan</a>, leader de
+l’hospitalisation en France. Après ma douche froide lors de la
+consultation avec le Dr Ardouin, je me méfie de ce grand groupe qui en
+facade affiche : <em>Patients, vous êtes le fil rouge de nos parcours de
+soins. Accompagnement individualisé, services personnalisés, aide à ceux
+qui vous accompagnent, nous mettons tout en œuvre pour faciliter votre
+prise en charge et votre séjour hospitalier.</em> Pour le moment, je
+suis confiant en mon chirurgien et au personnel qui l’entoure, par
+contre, je le suis beaucoup moins vis à vis d’<a
+href="https://www.elsan.care/fr">Elsan</a>. Il me donne l’impression
+d’être avant tout soucieux de la satisfaction de ses actionnaires. Ce
+jugement est fondé sur le constat que j’ai fait au fil des deux heures
+trente que j’ai passé sur le plateau des consultations des chirurgiens
+le 25 septembre dernier. Le top départ commence après avoir pris un
+tichet à la borne qui transforme le patient en un numéro précédé d’une
+lettre majuscule. Les secrétaires des chirurgiens sont enfermées dans
+une sorte de bocal qui a plutôt l’air d’une cage à lapins. Chaque
+chirurgien recoit dans un bureau impersonnel dont la surface et le
+mobilier ont été strictement optimisés. Revenons au passeport, c’est un
+document de 16 pages insérées dans une couverture dont la première page
+porte les mentions : <em>A rapporter impérativement le jour de
+l’intervention</em> et <em>Document à lire attentivement et à
+compléter</em>. La deuxième de couverture donne le détail du parcours
+étape par étape. La troisième de couverture permet l’insersion des
+documents médicaux. C’est donc là que j’ai installé plusieurs chemises
+intitulées successivement : * Dr Ardouin * Dr Rouau * Dr Willemense *
+Humanis Malakoff (ma mutuelle) * Infirmiers * Kiné * Préadmission *
+Prescription médicale de transport * Services hôteliers. ## Le 16
+octobre 2024 - Téléconsultation avec l’anesthèsiste - Dr Willemse Pour
+participer à cette téléconsultation, il a fallut au préalable créer un
+compte sur la plateforme de télémédecine <a
+href="https://www.medaviz.com/">Medaviz</a>. Cette création est un
+parcours des plus procéduriers qui vous fait décliner votre identité et
+se finalise par la création d’un mot de passe sécurisé. La
+téléconsultation, prévue initialement avec le Dr Tilly Xavia, se
+concrétise avec le Dr Willemse. Elle dure une dizaine de minutes. Le
+jour de l’intervention, l’anesthésie sera locorégionale, le petit
+déjeuner sera pris avant 7h30, il faudra cesser de boire à 11h et avoir
+pris une douche la veille au soir ainsi que le matin. En final, une
+ordonnance d’anti-douleurs ainsi que note d’honoraire sont mises à
+disposition. Le paiement s’effectue par carte de banque. Voila, cette
+consultation donne l’impression d’un dialogue homme/machine et il est à
+parier que le jour de l’intervention se fera avec un troisième
+anesthésiste. ## Le mardi 22 octobre 2024 - Le jour J ### Transport par
+taxi-ambulancier À l’heure convenue, Sabrina Josso est arrivée puis m’a
+installé à l’avant de sa Mercedes flambant neuve. Elle m’a expliqué la
+panoplie des réglages électriques de mon siège. C’est impressionnant de
+constater le confort haut gamme de cette voiture. Nous sommes donc en
+route à destination de la clinique de la main à Saint-Herblain. Très
+naturellement, elle engage la conversation. Nous parlons de la vie à
+Saint-Molf. Elle y habite avec son mari une maison dans un lotissement à
+la sortie du bourg en direction de Pont-d’Armes. Je lui explique
+l’organisation de ma maison en deux appartements, celui du
+Rez-de-chaussée pour moi et celui de l’étage pour mes enfants, ma
+famille ou mes amis. Je lui parle de mes voyages culturels motivés par
+ma passion pour Vincent Van Gogh. Elle n’a pas d’enfants et ne prend
+qu’une semaine de vacances par an. Elle a 37 ans et son mari est plus
+âgé et bientôt à la retraite. Elle travaille principalement à des
+transports médicaux pris en charge par la sécurité sociale. Le milieu
+médical impose ses règles et modifie continuellement les horaires des
+prises en charge des patients. Son planning est sans arrêt chamboulé et
+elle doit en permanence jongler pour satisfaire sa clientèle. Nous
+arrivons à la clinique avec un quart d’heure d’avance. ### Accueil et
+installation Je m’engouffre dans l’immense bâtiment pour commencer mon
+parcours du combattant. J’ai affaire à une hôtesse qui me pose plein de
+questions en vue de vérifier mon identité. Elle m’invite ensuite à me
+rapprocher de la borne pour obtenir un ticket après appui sur le
+rectangle jaune intitulé “<strong>Entrée</strong>”. Ce ticket me donne
+le droit de m’asseoir dans une première salle d’attente. Je m’y installe
+devant le téléviseur qui au bout d’un moment m’indique en regard du
+numéro indiqué sur mon ticket, celui du box où se trouve une secrétaire.
+Elle me demande mes cartes d’identité, Vitale et mutuelle, puis de lui
+indiquer le nom de la personne de confiance, je lui réponds que j’ai
+déjà renseigné cette information lors de l’établissement de ma
+pré-admission. Elle me dit ne pas avoir accès à ce dossier. Je lui
+confie le document que j’ai moi-même pris soins d’imprimer pour qu’elle
+n’est qu’à recopier les données manquantes. Elle m’indique le chemin
+pour parvenir à une deuxième salle d’attente beaucoup plus spacieuse.
+Pour la clinique de la main, il convient de manifester sa présence en
+appuyant sur un bouton poussoir. Une première personne vient vers moi,
+me demande mon dossier et m’invite à m’asseoir. Après quelques minutes,
+je suis reçu par une infirmière. Elle prend ma tension, me pose des
+questions de routine et m’indique que l’attente va être longue et je
+n’aurai pas accès à ma chambre avant l’opération. Une heure et demie
+après une charmante dame m’accueille et à la vue de mes bagages s’étonne
+en me disant : ici, ce n’est pas le club Méditerranée. Je suis bien le
+seul à afficher une allure de touriste, elle n’avait jamais vue cela.
+J’apprends par la suite que ma chambre n’était pas encore disponible et
+que de ce fait le circuit suivi est l’ambulatoire. Je suis invité à me
+déshabiller dans un box. Après cette longue attente, elle me dit qu’il
+n’y a pas de temps à perdre et qu’il convient de mettre le turbo. Dès
+que je suis prêt, je suis installé sur un brancard puis emmené en salle
+d’anesthésie, les choses sérieuses commencent. ### Anesthésie du bras
+droit Une infirmière me badigeonne le bras droit à la <a
+href="https://fr.wikipedia.org/wiki/Povidone_iod%C3%A9e">Bétadine</a>.
+Après une vingtaine de minutes, l’anesthésiste, une femme, pour la <a
+href="https://sante.gouv.fr/soins-et-maladies/prises-en-charge-specialisees/telesante-pour-l-acces-de-tous-a-des-soins-a-distance/la-teleconsultation-11362/article/la-teleconsultation-de-quoi-parle-t-on">téléconsultation</a>,
+j’avais eu affaire au Dr Willemese, la concernant je ne connaîtrais sans
+doute jamais son nom de famille. Au niveau des nerfs, elle pratique une
+<a
+href="https://fr.wikipedia.org/wiki/Anesth%C3%A9sie_loco-r%C3%A9gionale">anesthésie
+locorégionale</a>. Elle m’en explique le principe mais je n’ai pas bien
+compris. Ensuite, une longue attente s’installe et j’en profite pour
+faire une petite sieste. Mon bras est maintenant bien endormi, une
+infirmière, suivie de deux autres, propulse mon brancard jusqu’au bloc
+opératoire. ### Intervention chirurgicale La salle s’ouvre vers
+l’extérieur par une large baie vitrée. Il est 16h30, le soleil est bas
+et illumine la pièce. Précédemment, j’étais persuadé qu’un bloc
+opératoire se trouvait forcément dans un sous-sol, dans une pièce
+borgne. Et bien non, je me suis trompé et je vais pouvoir profiter des
+rayons du soleil durant mon opération. Le staff est composé du Dr
+Ardouin et des trois infirmières. L’une d’elle me tartine le bras d’une
+seconde couche de Bétadine, les deux autres s’affairent aux préparatifs
+des instruments chirurgicaux. Un rideau <a
+href="https://optisante.fr/decouvrez-ce-que-signifient-les-codes-de-couleurs-des-hopitaux-le-code-bleu/">bleu
+“hôpital”</a> est installé entre mon épaule droite et le staff. Je
+n’existe plus. Seule ma main droite leur appartient. Je suis seul avec
+le soleil. Ils sont focalisés sur ma main que mon cerveau ne localise
+plus. J’entends des bruits d’instruments et des murmures. Je m’attendais
+à quelques paroles bienveillantes et je n’ai rien entendu. Après une
+quinzaine de minutes, j’ai surpris une phrase : donnez-moi un fil. Et
+j’ai compris que le chirurgien était entrain de me recoudre et que la
+fin approchait. Une infirmière a levé le rideau et je les ai vue toutes
+les trois croiser mon regard, le chirurgien était déjà affairé à
+d’autres occupations, Je leur ai posé une question : comment cela
+s’est-il passé? L’une d’elle m’a répondu que le Dr Ardouin me donnerait
+toutes les explications. Il a effectivement repris la parole pour
+d’abord dire que l’informatique était en panne et qu’il venait de ce
+fait rédiger les ordonnances à la main. Au moment où il a parlé de
+Kinésithérapie, je suis intervenu pour lui indiquer que je vivais seul
+et comme je ne pourrais pas conduire ma voiture, des séances à domicile
+m’étaient nécessaires. C’est alors que j’ai eu droit à une magistrale
+levée de boucliers. La sécurité sociale est déjà très généreuse, nous
+vivons dans un pays de confort sanitaire extrême, etc. Malgré mes
+arguments en retour, il restait droit dans ses bottes et que maintenant
+c’était à moi de me débrouiller. ### Les brancardiers J’ai été conduit
+dans un endroit baptisé <strong>re-verticalisation</strong>. J’ai deviné
+qu’il s’agisait de s’habituer progressivement de la position allongée à
+celle debout. J’ai attendu plus longtemps que les autres car mon
+problème de chambre n’etait toujours pas réglé. Un <a
+href="https://fr.wikipedia.org/wiki/Brancardier">brancardier</a> s’est
+attellé au problème et j’ai encore attendu pour en final être conduit à
+ma chambre. ### La chambre Je la partage avec un monsieur de 82 ans
+originaire de Cholet et qui vient de subir une opération au genoux. Le
+service des repas a déjà commencé, le mien arrivera plus tard. Je
+sympathise avec mon voisin Choletais et je lui explique que c’est à
+Cholet que j’ai terminé ma carrière chez Thales. Je lui ai dit que j’y
+avais passé cinq ans de ma vie et qu’avec mes enfants, l’été, nous
+aimions passé la journée du dimanche aux Sables d’Olonne. Nous avons
+également parlé des grandes entreprises qui y sont installées :
+Michelin, Thales et Nicol (3 semaines après, j’ai appris avec stupeur
+que Michelin était entrain de supprimer ce site essentiel pour la région
+choltaise). Lui m’a dit qu’il avait démarré sa carrière à l’âge de 14
+ans dans une société spécialisée dans le négoce de pièces détachées pour
+automobile. Avec son épouse, ils avaient acheté un appartement dans une
+petite copropriété et qu’ils en étaient très satisfaits.
+Malheureusement, sa femme est décédée il y a deux ans et que maintenant
+il vit seul. Au début c’était difficile car précédemment leur
+organisation était basée sur le partage des tâches familiales. Au fur et
+à mesure, il s’est habitué et maintenant tout est rentré dans l’ordre.
+Par exemple, il cuisine des choses très basiques et achète des plats
+cuisinés. Après un dîner très léger, je regarde à la télévision un
+documentaire sur les élections présidentielles aux État-Unis (Donald
+Trump contre Kamala Harris). Dans la nuit, mon voisin choltais se lève
+pour aller aux toilettes et il me réveille. Ensuite, je somnole jusqu’à
+l’arrivée de l’infirmière à 6h30. ## Le mercredi 23 octobre 2024 -
+Retour ### La matinée Après le petit-déjeuner, lui aussi très léger, je
+prends ma douche puis prépare mes bagages. Ma main est maintenant bien
+réveillée et je ressens très peu la douleur. La dose de médicaments est
+importante pour l’éviter. L’infirmière vient refaire mon pansement et je
+découvre pour la première fois la plaie et l’importante cicatrice.
+L’ensemble n’est pas très agréable à regarder. Elle me rassure, tout est
+normal. Des photos seront prises par la suite par les infirmiers qui me
+soigneront à Guérande durant ma convalescence. Cinq d’entre elles prises
+environ 10 jours après l’intervention, elles sont assez
+impressionnantes, raison pour laquelle je n’en montre qu’une seule
+ci-dessous :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_2.jpg"
+alt="Auriculaire de la main droite - Dix jours environs après l’opération - Crédit photo : Eddy Touil infirmier à Guérande" />
+<figcaption aria-hidden="true">Auriculaire de la main droite - Dix jours
+environs après l’opération - Crédit photo : Eddy Touil infirmier à
+Guérande</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_2.jpg">Auriculaire
+de la main droite - Dix jours environs après l’opération - Crédit photo
+: Eddy Touil infirmier à Guérande</a></p>
+<p>Les quatre autres photo sont accessibles en cliquant sur les liens
+ci-dessous</p>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_1.jpg">Paume
+et auriculaire de la main droite - Dix jours environs après l’opération
+- Crédit photo : Eddy Touil infirmier à Guérande</a></p>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_3.jpg">Paume
+de la main droite - Dix jours environs après l’opération - Crédit photo
+: Eddy Touil infirmier à Guérande</a></p>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_4.jpg">Paume
+de la main droite - Dix jours environs après l’opération - Crédit photo
+: Eddy Touil infirmier à Guérande</a></p>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_5.jpg">Auriculaire
+de la main droite - Dix jours environs après l’opération - Crédit photo
+: Eddy Touil infirmier à Guérande</a></p>
+<p>Le pansement se termine par une épaisse <a
+href="https://fr.wikipedia.org/wiki/Alfred_Velpeau">bande Velpeau</a>
+qui me fait une main aussi volumineuse que si elle était gantée d’un
+gant de boxe. Dans la foulée, je rassemble mes bagages, le marathon
+final peut alors commencer. Il s’agit d’enchaîner trois étapes, la
+confection de l’<a
+href="https://fr.wikipedia.org/wiki/Orth%C3%A8se">orthèse</a>, la
+rencontre avec le Dr Ardouin et celle avec la kinésithérapeute. Au fur
+et à mesure, je préviens toutes les personnes que je rencontre que le
+rendez-vous avec Sabrina, ma chauffeuse de taxi, est fixé à midi.
+L’infirmière me dit : elle attendra ! Pour l’orthèse, je suis accueilli
+par une jolie jeune-femme. À la vue du pansement, elle déclare
+immédiatement qu’il n’est pas compatible à l’ajout de l’orthèse et qu’il
+faut le refaire. Nous retournons auprès de l’infirmière. Vingt minutes
+sont ainsi perdues.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/orthese.JPG"
+alt="Orthèse sur la main droite de Régis sans pansement - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Orthèse sur la main droite de Régis sans
+pansement - Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/orthese.JPG">Orthèse
+sur la main droite de Régis sans pansement - Crédit photo : Régis
+Leruste</a></p>
+<p>L’orthèse est enfin finalisée et cette charmante jeune-femme me
+conduit auprès du chirurgien, nouvelle attente pour ensuite m’entretenir
+avec lui deux minutes dans un couloir. Il fait les questions et les
+réponses. Il se réjouit de constater que je vais bien et dit avoir
+trouvé une solution miracle auprès de la kinésithérapeute. Il s’agit de
+séances télévisuelles qu’il suffit de planifier avec elle. Après une
+attente supplémentaire, je rencontre la kinésithérapeute Emeline
+Leboeuf. Elle m’explique des exercices que je peux commencer dans
+l’immédiat, me conseille de voir localement un kinésithérapeute et me
+fixe un rendez-vous unique télévisuel dans 3 semaines. Cette séance
+consistera en une supervision et un constat des exercices effectués par
+ailleurs. Visiblement, son planning, bien chargé, offre cette seule
+possibilité. Voilà, le docteur Ardouin est resté inflexible, la
+kinésithérapeute a mis un pansement sur une jambe de bois, mon problème
+reste entier et Sabrina attend depuis une vingtaine de minutes. Je me
+remonte le moral en buvant une tasse de café et je rejoins Sabrina dans
+sa belle Mercedes. ### Transport par taxi-ambulancier Elle ne semble pas
+de très bonne humeur. Mon retard ne l’arrange vraiment pas car elle a
+une autre course juste après la mienne. Elle va devoir gérer ce retard.
+Je lui parle de mon opération ainsi que des péripéties hospitalières.
+### Arrivée chez Gwenola En arrivant chez Gwenola, elle me fait déjeuner
+et j’ai ensuite droit à une bonne sieste. Voilà, je vais maintenant
+cohabiter avec Gwenola, notre entente est excellente, je me conforme à
+ses habitudes et nous profitons des temps libres pour faire des
+promenades. ## Le jeudi 24 octobre 2024 et les jours suivants ### Les
+soins infirmiers Dès le lendemain, j’organise mes rendez-vous avec les
+infirmiers pour les pansements et pour la kinésithérapie. Eddy,
+l’infirmier constate une inflammation anormale, prend une photo de ma
+main et l’envoie au chirurgien. Dans les heures qui suivent, je reçois
+un appel téléphonique de la secrétaire du Dr Ardouin. Elle me fixe un
+rendez-vous impératif le lendemain à 11 heures. Je tombe du haut de
+l’armoire et réagi en lui disant que ce déplacement représente 180
+kilomètres et que mon état ne semble pas le justifier. Elle reviendra
+vers moi, peu de temps après avec une solution alternative. Le
+changement de pansement, initialement prévu tous les deux jours, se fera
+maintenant tous les jours et une crème antibiotique est additionnée. ###
+La kinésithérapie Le lendemain, c’est ma première séance de
+kinésithérapie à La Baule. Je rencontre Claire Philippe. Elle me fait
+faire les mouvements essentiels, c’est à dire les 3 déjà indiqués par la
+kinésithérapeute de la clinique de la main et en additionne un
+quatrième. Elle me donne une série de rendez-vous sur novembre et je
+négocie une semaine de vacances début décembre pour aller à Paris. En
+outre, lui ayant parlé de mon intervention chirurgicale avec le Dr
+Ardouin, elle me recommande le Dr Kerjean. ### Intoxication alimentaire
+Un autre événement va venir chambouler le cours de ma convalescence,
+c’est une intoxication alimentaire qui fait son apparition. Gwenola et
+moi-même souffrons de ce nouveau mal. Il est apparu la nuit dernière et
+s’est concrétisé par une diarrhée sévère et répétitive. En relation avec
+le centre médical proche de chez Gwenola, là où exerce son médecin
+traitant le Dr Audeval ainsi que les infirmiers auxquels j’ai affaire,
+je réussi à obtenir un rendez-vous en urgence pour Gwenola. Quant à moi
+j’attendrai le lendemain pour obtenir un rendez-vous avec ce même
+médecin. La vie se complique encore un peu, Gwenola est très fatiguée et
+passe sa première journée de maladie clouée au lit. Je me transforme en
+homme à tout faire capable d’affronter les différents problèmes
+d’intendance. C’est du style faire la tisane, préparer la bouillotte,
+faire la cuisine, aller chercher les médicaments à la pharmacie, charger
+et vider le lave-vaisselle. Le lendemain, je vais beaucoup mieux, par
+contre Gwenola broie du noir et songe à son transfert à l’hôpital. Lors
+de ma rencontre avec le Dr Audeval, il me conseille de l’en dissuader.
+Il indique la nécessité d’effectuer les examens qu’il a prescrits, Il me
+donne un nouveau rendez-vous le lendemain pour décider de la suite à
+donner en regard des résultats de l’analyse de sang. Aujourd’hui,
+Gwenola reprend des couleurs. Nous sommes allés chez le Dr Audeval. Les
+résultats de l’analyse de sang ne montre rien d’anormal. Il a un contact
+très cordial avec elle, lui sourit et lui explique que sa guérison
+viendra grâce au retour de la joie de vivre. ### La monotonie La
+monotonie s’est installée, Les journées se ressemblent : le matin,
+j’attends l’infirmière, l’après-midi, je fais quelques courses, le soir,
+je regarde la télévision. Un matin, Gwenola va mieux, son angoisse
+s’atténue, elle parle. Son téléphone sonne, le mien aussi, la famille se
+manifeste pour prendre de ses nouvelles. ### La vie normale reprend ses
+droits La vie normale reprend ses droits et ses habitudes. Les fêtes de
+Toussaint sont maintenant derrière nous. Gwenola vient de s’acheter un
+nouvel iMac. Elle doit maintenant s’y habituer. L’icône de la messagerie
+n’est plus la même. C’était un timbre, maintenant c’est différent et
+cela la gêne. C’est François qui a réalisé l’installation. Il a récupéré
+les données de son ancien iMac à l’aide du disque dur externe. Ce matin,
+je suis allé chez la kinésithérapeute. Elle m’a dit que mes cinq doigts
+de ma main droite avaient retrouvé une parfaite motricité. Me voilà donc
+totalement rassuré d’autant plus, selon Anaïs l’infirmière, que la plaie
+est belle et que la cicatrisation évolue normalement. L’état de santé de
+Gwenola ne montre pas d’évolution significative. Elle souhaite même
+faire annuler les festivités prévues pour son anniversaire. Que faire !
+Je vais la promener pour essayer de lui changer les idées. ###
+L’ophtalmologiste Un autre sujet de préoccupation est le rendez-vous de
+Gwenola chez l’ophtalmologiste le 5 novembre. Dans un premier temps, le
+besoin n’ayant aucun caractère d’urgence, elle décide de remettre à plus
+tard ce rendez-vous. La grande question est comment faire pour
+formaliser ce changement. Deux solutions semblent simples et évidentes.
+La première consiste à régler cette formalité en accédant à la
+plateforme Doctolib. La seconde est de contacter le secrétariat du
+patricien pour s’en expliquer verbalement. La réalité des choses va nous
+montrer qu’aucune des deux solutions ne fonctionne. Pendant quarante
+cinq minutes, l’appel téléphonique tournera en boucle sur un répondeur
+robotisé qui ne permettra pas le contact avec un humain. L’accès à la
+plateforme Doctolib indique que pour ce patricien, il est nécessaire de
+le contacter par téléphone! Voilà, la seule chose dont je suis sûre est
+que les actionnaires de ce cabinet d’ophtalmologie doivent être
+satisfaits des économies qui y sont réalisées. La troisième solution que
+nous allons adopter est de nous rendre à ce rendez-vous. En arrivant au
+cabinet, j’essaie de m’en expliquer avec la secrétaire qui nous
+accueille. Elle me montre sa voisine et collège standardiste et affectée
+à cette tâche. Elle m’explique que les appels sont nombreux tout au long
+de la journée. Je lui indique que nous avons attendu quarante cinq
+minutes pour aucun résultat. C’est un dialogue de sourds qui débouche
+sur rien. J’abandonne la partie. À la fin de l’année, Gwenola aura 80
+ans et moi 78. En nous donnant une espérance de vie de dix ans, la
+grande question est comment feront-nous, à l’avenir, pour nous
+débrouiller dans une telle situation? ### Téléconsultation Aujourd’hui,
+la série noire continue, j’ai un rendez-vous en consultation vidéo avec
+la kinésithérapeute de la clinique de la main, Emeline Leboeuf. Comme je
+suis chez Gwenola, je ne peux pas accéder à ma boîte mail. Par deux fois
+je m’en explique avec la kinésithérapeute par l’envoi de SMS. Elle n’y
+comprend pas grand chose et ne répond pas à mes requêtes. Au dernier
+moment et dans la précipitation, elle m’explique que je dois créer un
+nouveau compte sur la plateforme Medaviz avec l’adresse mail de Gwenola.
+Je fais une tentative, la procédure est très compliquée, je me stresse
+puis échoue. Voilà, la consultation se solde par un bref entretien
+téléphonique qui conforte davantage la kinésithérapeute que moi-même!
+### La maison de Gwenola <img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/chelet_maison_gwenola.png"
+alt="Maison de Gwenola - Crédit photo : ?" /></p>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/chelet_maison_gwenola.png">Maison
+de Gwenola - Crédit photo : ?</a></p>
+<p>La maison de Gwenola, 6 faubourg Bizienne à Guérande, a été
+construite, selon les plans de l’architecte Guillaume Quilgars, par son
+grand-père Auguste Chelet entre 1909 et 1911. ## 26 novembre 2024 -</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_guerie.JPG"
+alt="Main droite de Régis - 35 jours après l’opération - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Main droite de Régis - 35 jours après
+l’opération - Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/saint-herblain/main_guerie.JPG">Main
+droite de Régis - 35 jours après l’opération - Crédit photo : Régis
+Leruste</a></p>
+<p>Aujourd’hui, j’ai rendez-vous avec le Dr Ardouin à 11h10. Je me lève
+tôt, passe 3 heures (aller et retour) au volant de ma voiture, une bonne
+heure dans deux salles d’attente successives et 5 minutes avec le Dr
+Ardouin. Il regarde ma main et s’exclame, c’est magnifique, c’est vous
+qui avait fait l’essentiel du travail, bravo! Il me recommande l’usage
+de l’orthèse uniquement la nuit pendant 1 mois, rédige un rapport
+succinct à l’attention de ma doctoresse, empoche 31 euros et 50 ctes et
+me souhaite de bonnes fêtes de fin d’année.</p>
+</body>
+</html>

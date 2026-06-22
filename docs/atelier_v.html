@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_v</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_v</h1>
+</header>
+<h1 id="carnet-de-voyage">Carnet de voyage</h1>
+<p>Chaque voyage est géré par un enregistrement dans un fichier de type
+tableur dont les champs sont : date début, date de fin, lieu
+géographique, événement et C.V. (carnet de voyage). Ce dernier champ
+permet de faire le lien avec une reliure cartonnée qui est constituée de
+pochettes en plastique. Chaque pochette contient des documents divers
+recueillis durant le voyage, en particulier les documents délivrés par
+les offices de tourisme. La reliure est étiquetée “12 Voyages”. Certains
+voyages font l’objet d’un texte rédigé sous la forme d’un <a
+href="https://fr.wikipedia.org/wiki/Wiki">wiki</a>, dans ce cas un
+repère est indiqué dans le champ “C.V.”.Le fichier est accessible par le
+lien suivant <a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/liste_des_voyages.ods">Liste
+des voyages</a></p>
+<p>C’est à l’occasion du voyage à Buc et Auvers-sur-Oise, en
+particulier, le 27 décembre 2023, lors de la visite de l’exposition “Van
+Gogh les derniers voyages” au château d’Auvers-sur-Oise que je tente
+d’établir un lien entre Gabriel Guay et Vincent Van Gogh. Pour accéder
+au wiki de ce voyage, voici le lien <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vf_carnet_voyages_2023_buc_auvers">Voyage
+à Buc et Auvers-sur-Oise</a>.</p>
+<p><strong>Les voyages qui font l’objet d’un Wiki sont répertoriés
+ci-dessous :</strong> ## 1 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v0_carnet_voyages_2015_mons">Mons
+2015</a> ## 2 - Voyage à Amsterdam avec la Volvo (fin juin début juillet
+2017) ## 3 - Anniversaire 40 ans Arnaud juin 2018 ## 4 - Amsterdam juin
+2018 ## 5 - Rieux ## 6 - Hoedic ## 7 - La Frette-sur-Seine octobre 2018
+## 8 - Paris ## 9 - Amsterdam juin 2019 ## 10 - Hoedic juin 2019 ## 11 -
+Bondues ## 12 - Mouvaux ## 13 - Dallas septembre 2021 ## 14 - Dallas
+septembre 2021 ## 15 - Paris ## 16 - La Chapelle-Hermier ## 17 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v0b_carnet_voyages_2020%E2%80%9021_arles">Arles</a>
+2020 et 2021 Lien du musée Réattu d’Arles : <a
+href="http://www.museereattu.arles.fr/van-gogh-lettre-a-gauguin.html">Lettre
+autographe de Vincent van Gogh à Paul Gauguin - Arles, janvier 1889</a>
+## 18 - Les ulis ## 19 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v0b_carnet_voyages_2020%E2%80%9021_arles">Arles</a>
+2020 et 2021 ## 20 - Les Ulis ## 21 - Paris ## 22 - Les Ulis ## 23 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v1_voyages_2022_bruxelles">Bruxelles
+et Mons du 11 au 15/05/2022</a> Avec Gwenola, nous séjournons chez son
+fils Damien, partons une première excursion dans le Borinage, visitons
+l’Atonium, passons une soirée au théâtre de la monaie, visitons la grand
+place et les galeries Saint-Hubert. ## 24 - Paris ## 25 - Mons et
+Amsterdam ## 26 - Mons - Du 29 au 31/07/2022 - Hommage à Vincent van
+Gogh - 132ème anniversaire de sa mort Les fichiers relatifs à cet
+événement sont accessible dans le répertoire <a
+href="https://github.com/AIREL46/SCAO/tree/master/atelier_e/marcasse">atelier_e/marcasse</a></p>
+<p>Ce voyage fait l’objet d’un wiki accessible par le lien <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v1_voyages-2022_anniversaire_vvg">anniversaire_vvg</a>
+## 27 - Paturages et Paris ## 28 - St Albans ## 29 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v2_carnet_voyages_2023_caro_borinage_luxembourg">Caro
+Borinage Luxembourg du 03/02 au 16/02/2023</a> Trois séjours distincts :
+chez caroline à Bondues, chez Luisa dans le Borinage, chez Michel au
+Luxembourg. ## 29bis - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v2_carnet_voyages_2023_luxembourg">Luxembourg
+- du 14 au 16/02/23</a> Troisième séjour du voyage <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v2_carnet_voyages_2023_caro_borinage_luxembourg">Caro
+Borinage Luxembourg</a>. ## 30 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v3_carnet_voyages_2023_expositions_bruno_basquiat_wharhol">Expositions
+: Bruno Leruste - Jean Michel Basquiat - Andy Warhol - du 18 au
+21/04/23</a></p>
+<h2 id="bis---saint-nazaire---vermeer-printemps-2023">30bis - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v3a_carnet_voyages_2023_conference_vermeer">Saint-Nazaire
+- Vermeer</a> Printemps 2023</h2>
+<h2 id="saint-nazaire---coloscopie---du-11-au-120523">31 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v4_carnet_voyages_2023_coloscopie">Saint-Nazaire
+- Coloscopie - du 11 au 12/05/23</a></h2>
+<h2 id="paris---amsterdam---dublin---du-1705-au-040623">32 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v5_carnet_voyages_2023_paris_amsterdam_dublin">Paris
+- Amsterdam - Dublin - du 17/05 au 04/06/23</a></h2>
+<h2 id="saint-molf---mariage-dedina-et-bruno---du-23-au-280623">33 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v6_carnet_voyages_2023_mariage_edina_bruno">Saint-Molf
+- Mariage d’Edina et Bruno - du 23 au 28/06/23</a></h2>
+<h2 id="douarnenez---roscoff---croisière-masculine---du-01-au-080723">34
+- <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v7_carnet_voyages_2023_croisiere_masculine">Douarnenez
+-&gt; Roscoff - Croisière masculine - du 01 au 08/07/23</a></h2>
+<h2 id="douarnenez---du-3107-au-020823">35 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v8_carnet_voyages_2023_douarnenez">Douarnenez
+- du 31/07 au 02/08/23</a></h2>
+<h2 id="pont-aven---automne-2023">36 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_v9_carnet_voyages_2023_pont_aven">Pont
+Aven - Automne 2023</a></h2>
+<h2 id="paris---auvers-sur-oise---du-08-au-151023">37 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_va_carnet_voyages_2023_paris_auvers">Paris
+- Auvers-sur-Oise - du 08 au 15/10/23</a></h2>
+<h2 id="bis---paris---stéphane-vincent---le-151023">37bis - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_va_carnet_voyages_2023_paris_auvers_a">Paris
+- Stéphane-Vincent - le 15/10/23</a></h2>
+<h2 id="nantes---suzanne-valadon---le-291023">38 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vb_carnet_voyages_2023_nantes_suzanne_valadon">Nantes
+- Suzanne Valadon - le 29/10/23</a></h2>
+<h2 id="la-baule---vincent-van-gogh---le-241123">39 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vc_carnet_voyages_2023_la_baule_VVG">La
+Baule - Vincent Van Gogh - Le 24/11/23</a></h2>
+<h2 id="saint-molf---le-mie-de-pain--les-ukrainiens-le-261123">40 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vd_carnet_voyages_2023_la_paroisse">Saint-Molf
+- Le mie de pain- Les Ukrainiens le 26/11/23</a></h2>
+<h2 id="vannes---la-cohue---031223">41 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vda_carnet_voyages_2023_vannes">Vannes
+- La Cohue - 03/12/23</a></h2>
+<h2 id="nantes---frac---101223">42 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vdb_carnet_voyages_2023_nantes">Nantes
+- Frac - 10/12/23</a></h2>
+<h2 id="drenthe---travel-with-vincent---du-13-au-191223">43 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_ve_carnet_voyages_2023_drenthe">Drenthe
+- Travel with Vincent - du 13 au 19/12/23</a></h2>
+<h2 id="buc---auvers-sur-oise---vincent-du-24-au-291223">44 - Buc -
+Auvers-sur-Oise - Vincent du 24 au 29/12/23 :</h2>
+<ul>
+<li><a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vf_carnet_voyages_2023_1_buc">Buc</a></li>
+<li><a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vf_carnet_voyages_2023_2_auvers">Auvers-sur-Oise</a></li>
+</ul>
+<h2 id="saint-molf---déjeuner-avec-les-ukrainiens---le-030224">45 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vg_carnet_voyages_2024_ukraine">Saint-Molf
+- Déjeuner avec les Ukrainiens - le 03/02/24</a></h2>
+<h2 id="divali---cure-ayurvédique---du-08-au-140324">46 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vh_carnet_voyages_2024_divali">Divali
+- Cure ayurvédique - du 08 au 14/03/24</a></h2>
+<h2 id="saint-nazaire---joaquim-sorolla---les-04-1804-et-160524">47 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vi_carnet_voyages_2024_joaquim_sorolla">Saint-Nazaire
+- Joaquim Sorolla - les 04, 18/04 et 16/05/24</a></h2>
+<h2 id="la-baule---frans-hals-le-120424">48 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vj_carnet_voyages_2024_frans_hals">La
+Baule - Frans Hals le 12/04/24</a></h2>
+<h2 id="voyage-aux-pays-bas-du-04-au-14-juin-2024">49 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vk_carnet_voyages_2024_drenthe_leiden">Voyage
+aux Pays-Bas du 04 au 14 juin 2024</a></h2>
+<h2 id="le-voyage-à-nantes-musée-dobrée">50 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vl_carnet_voyages_2024_nantes_dobree">Le
+voyage à Nantes (musée Dobrée)</a></h2>
+<h2 id="clinique-de-la-main">51 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vm_c_v_24_saint_herblain_clinique_de_la_main">Clinique
+de la main</a></h2>
+<h2 id="anvers-et-auvers-sur-oise">52 - Anvers et Auvers-sur-Oise :</h2>
+<ul>
+<li><a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vn1_c_v_anvers_auvers">Préparation
+du voyage</a></li>
+<li><a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vn2_c_v_anvers">Anvers</a></li>
+<li><a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vn3_c_v_auvers">Auvers-sur-Oise</a></li>
+</ul>
+<h2 id="brabant">53 - Brabant</h2>
+<ul>
+<li><a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vo_c_v_brabant">Brabant</a></li>
+<li><a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vo_c_v_brabant_nl">Brabant.nl</a></li>
+</ul>
+<h2 id="saint-jacut-de-la-mer">54 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vp_c_v_st%E2%80%90jacut">Saint-Jacut-de-la-mer</a></h2>
+<h2 id="rieux">55 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vq_c_v_rieux">Rieux</a></h2>
+<h2 id="tilburg">56 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vr_c_v_tilburg">Tilburg</a></h2>
+<h2 id="séville">57 - <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vs_c_v_seville">Séville</a></h2>
+<h2 id="section">58 - <a href=""></a></h2>
+<h2 id="section-1">59 - <a href=""></a></h2>
+</body>
+</html>

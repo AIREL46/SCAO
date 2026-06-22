@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Dossier-de-modification-de-la-e-p-wifi</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Dossier-de-modification-de-la-e-p-wifi</h1>
+</header>
+<p>Le dossier de modification est structuré en 3 parties distinctes : *
+Liaison filaire (interface de communication) * l’assemblage * le shield
+MKR wifi 1010. # Liaison filaire (Interface de communication) <strong>a)
+L’interface de communication</strong> permet le dialogue entre la
+e-poignée (e-p-wifi) et le e-rupteur (e-r-wifi). Il est réalisé par une
+liaison filaire qui fait appel à une embase Ethernet câblée sur chacun
+des 2 circuits imprimés. La connection est réalisée par un câble
+Ethernet de 30 cm de longueur. Les signaux qui transitent sur
+l’interface sont de 1 à 8, les suivants : 1. GND 2. 3.3V (VCC) en
+provenance du MKR wifi 1010 et à destination du CI P230V 3. GND 4. Reset
+5. 5V en provenance du MKR wifi 1010 et à destination du relais câblé
+sur le circuit imprimé 6. P230V en provenance du CI P230V et à
+destination de A6-D21 du MKR wifi 1010 7. itc (courant de la table de
+cuisson) en provenance du module phidgets et à destination de A5 du MKR
+wifi 1010 8. cde relais Celduc en provenance de A3-D18 du MKR wifi
+1010</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf.png"
+alt="Schéma électrique" />
+<figcaption aria-hidden="true">Schéma électrique</figcaption>
+</figure>
+<p>Voir le câblage de la <a
+href="https://fr.wikipedia.org/wiki/RJ45">RJ45</a>.</p>
+<p><strong>b) B.Cu</strong></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-1.png"
+alt="B.Cu" />
+<figcaption aria-hidden="true">B.Cu</figcaption>
+</figure>
+<p><strong>c) Plan de perçage PTH</strong></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-PTH-drl_map.png"
+alt="Plan de perçage PTH" />
+<figcaption aria-hidden="true">Plan de perçage PTH</figcaption>
+</figure>
+<p><strong>d) Plan de perçage NPTH</strong></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-NPTH-drl_map.png"
+alt="Plan de perçage NPTH" />
+<figcaption aria-hidden="true">Plan de perçage NPTH</figcaption>
+</figure>
+<p><strong>e) organisation des fichiers .pdf et .png</strong> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf.png">e-p-wifi-lf.png
+: shéma électrique du CI en couleur</a> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-1.pdf">e-p-wifi-lf-1.pdf
+: vue du CI en couleur</a> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-1.png">e-p-wifi-lf-1.png
+: vue du CI en couleur</a> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-2.pdf">e-p-wifi-lf-2.pdf
+: tipon noir et blanc du CI</a> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-3.pdf">e-p-wifi-lf-3.pdf
+: implantation des composants sur le CI</a> * <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-lf/e-p-wifi-lf-4.pdf">e-p-wifi-lf-4.pdf
+: BOM du CI</a></p>
+<h1 id="modification-de-lassemblage">Modification de l’assemblage</h1>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_h.png"
+alt="Assemblage" /> L’assemblage de la e-p-wifi est représenté par la
+figure ci-dessus : * la modélisation a été réalisée par Willy * les
+annotations sont d’Olivier. <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/nomenclature.png"
+alt="Nomenclature" /> La nomenclature ci-dessus utilise un jeu de
+couleurs : * Citron vert 4 pour les lignes non modifiées * Jaune clair 4
+pour les lignes ajoutées par Olivier * Rouge clair 4 pour les lignes
+modifiées.</p>
+<p>La réalisation de l’assemblage est documentée ci-dessous à l’aide
+d’un jeu de photos complétées de légendes.</p>
+<ul>
+<li>Cette première photos (vue de dessus) laisse apparître le top [6],
+la plateforme MKR wifi 1010 [3] simulée par un rectangle de PVC, le
+shield [2] non câblé. Le logo [7] n’est pas placé, toutes les pièces
+sous le shield sont présentes mais masquées par le shield lui-même.</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/e-p-wifi-a.png"
+alt="e-p-wifi-a" />
+<figcaption aria-hidden="true">e-p-wifi-a</figcaption>
+</figure>
+<ul>
+<li>La photo suivante laisse apparaître l’assemblage constitué par
+l’isolateur [12] et l’entretoise de fixation [16]. Elle met en évidence
+l’<strong>asymétrie</strong> de la visserie d’assemblage : 2 entretoises
+femelles (à gauche), 2 entretoises mâles (à droite).</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/e-p-wifi-c.png"
+alt="e-p-wifi-c" />
+<figcaption aria-hidden="true">e-p-wifi-c</figcaption>
+</figure>
+<ul>
+<li>La photo suivante laisse apparaître l’assemblage constitué par la
+jupe [8], l’isolateur [12] et l’entretoise de fixation [16]. Elle met en
+évidence l’<strong>asymétrie</strong> de la visserie d’assemblage : 4
+vis (dont 2 entretoises mâles) fixent la jupe [8] sur l’isolateur [12]
+et 3 entretoises femelles disposées selon un triangle sont disponibles
+pour fixer le shield [2].</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/e-p-wifi-b.png"
+alt="e-p-wifi-b" />
+<figcaption aria-hidden="true">e-p-wifi-b</figcaption>
+</figure>
+<p>Cette dernière photo laisse apparaître, en vue de dessous,
+l’assemblage constitué par l’entretoise de fixation et de l’isolateur.
+Elle met en évidence : les 2 vis de serrage [18] du thermomètre digital
+et du fils de masse. <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/e-p-wifi-d.png"
+alt="e-p-wifi-d" /></p>
+<p>Les modifications sont les suivantes : * pour le schéma de
+l’assemblage : refaire l’assemblage en vue éclatée, prévoir une rotation
+de 180° et ajouter les repères mentionnés sur la figure ci-dessus *
+modifier le shield [2] (voir paragraphe ci-dessous) * pour le le top [6]
+: * les trous de fixation initialement prévu au diamètre 3.2mm doivent
+être maintenant réduit à 2.2mm * revoir l’emboîtement avec le logo [7] *
+pour le logo [7] : revoir l’emboîtement avec le top [6] * pour la
+rondelle 9a : l’approvisionner. ## Modification du top La modification
+du top est effectuée sous openscad, elle consiste en : * la modification
+du fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/top.scad">top.scad</a>
+* suivi de la génération du fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/top.stl">top.stl</a>
+* et de l’impression 3D au BlueLab. <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/top.png" />
+# Shield MKR wifi 1010 ## MKR wifi 1010 mechanical drawing <img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010.png" />
+## Anomalies constatées et solutions * Kicad : le fichier netlist
+établit la communication entre eschema et pcbnew. Mais il faut faire
+attention car par exemple un footprint modifié sous eschema n’est pas
+pris en compte sous pcbnew. Dans cette situation, sous pcbnew,
+sélectionné le footprint, puis choisir update footprint et appliquer. *
+Décharge de la batterie : la mesure de la tension vbat1 à l’aide d’un
+pont diviseur (2X4.7K) nécessite un courant de 0.37 mA. Il en résulte
+que même hors fonctionnement cette consommation reste effective et finie
+par décharger complétement la batterie. Solution : ne pas câbler la
+résistance R9. ## Modification du shield MKR wifi 1010 Pour accéder aux
+fichiers du shield MKR wifi 1010, il convient de : * effectuer la mise à
+jour du répertoire <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield">https://github.com/<strong>AIREL46</strong>/SCAO/blob/master/kicad/e-p-wifi-shield</a>
+* lancer kicad avec le fichier <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/e-p-wifi.pro">e-p-wifi-shield/e-p-wifi.pro</a>.</p>
+<p>Voici ci-dessous, la réalisation du circuit imprimé : * Le routage en
+double face a été réalisé par Mickaël * la fabrication sans les vias du
+CI a été sous-traitée à Util-pocket * le montage partiel des composants
+a été réalisé par Régis.</p>
+<p><strong>Photo du shield :</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/shield.png"
+alt="Shield MKR wifi 1010" /></p>
+<p>Le constat est le suivant : * les diamètres des trous de perçage
+réalisés par Util-pocket (environ 0.4 mm) sont insuffisants, ils ont été
+agrandis par Régis dans les cas suivants : * connecteurs pin stackable
+header J4 et J6 à 0.5 mm * Leds à 0.5 mm * borniers à vis à 0.8 mm *
+switch ON/OFF SW3 à 1 mm * la fenêtre de passage du câble du thermomètre
+T1 est trop petite * le pitch du SW4 est de 0.2 pouce et non 0.1 pouce,
+les 2 pins de masse n’ont pas été connectés à GND. * l’emplacement
+choisi des connecteurs des thermomètres digitaux J3 et J4 n’est pas
+viable (accès difficile).</p>
+<p>La modification consiste (voir le schéma d’implantation modifié) : *
+agrandir de 0.3 pouce la dimension du shield * agrandir la fenêtre de
+passage du câble du thermomètre T1 de 0.1 à 0.2 pouce * déplacer les
+connecteurs J3 et J4 * faire le routage de SW4 * détourer les trous
+prévus pour la visserie (vis et entretoises) pour assurer l’isolation
+électrique.</p>
+<p><strong>Schéma d’implantation modifié :</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/modif.png"
+alt="Modif" /></p>
+<p><strong>Schéma électrique modifié :</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/e-p-wifi.png"
+alt="Schéma électrique" /></p>
+<p><strong>BOM :</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/bom1.png"
+alt="BOM" /> ## Devis et commande de la réalisation chez Eurocircuits *
+<a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-wifi-shield/devis-eurocircuits.pdf">Devis
+Eurocircuits</a> ## Réalisation du shield <img
+src="https://github.com/AIREL46/SCAO/raw/master/kicad/e-p-wifi-shield/shield_a.JPG"
+alt="Shield" /> ## Procédure de test <img
+src="https://github.com/AIREL46/SCAO/raw/master/kicad/e-p-wifi-shield/procedure_test.png"
+alt="Procédure de test" /></p>
+<p>N.B : le switch <strong>SW1 StSp</strong> (voir cellules rouges
+claires de la procédure de test) a été câblé à l’envers, sur le dessus
+du switch, la flèche est représentée comme celle-ci
+<strong>&lt;-</strong> tandis qu’elle devrait être comme celle-la
+<strong>-&gt;</strong>.</p>
+<h2 id="mesures-du-courant">Mesures du courant</h2>
+<h3 id="mesure-du-courant-consommé-par-la-table-de-cuisson">Mesure du
+courant consommé par la table de cuisson</h3>
+<p><a
+href="https://github.com/AIREL46/SCAO/wiki/Prototypage-du-e-rupteur-e-r-wifi">Voir
+le wiki du e-rupteur</a> ### Mesure du courant consommé par la batterie
+La mesure du courant à l’aide d’une résistance de 1 Ohm n’est pas
+supporté par le chargeur du MKR wifi 1010.</p>
+<p>Une mesure de courant sur la ligne d’alimentation donne : 26mA.</p>
+<p>En conséquence, il faut une résistance faible (0.1 Ohm) et un
+amplificateur qui est un gain important de l’ordre de 1000 <a
+href="https://www.robot-maker.com/forum/topic/8767-mesure-dun-faible-courant/">Mesure
+de courant faible</a></p>
+<ul>
+<li>tension Vin = 26 X 10-3 X 0.1 = 2.6 mV</li>
+<li>tension Vout = 2.6 X 10-3 X 1000 = 2.6 V</li>
+</ul>
+<p>L’amplificateur est de la famille INA28X, INA285 pour gain de 1000
+disponible chez <a
+href="https://www.digikey.com/ordering/shoppingcart">digikey</a></p>
+<p>La <a
+href="https://www.ti.com/lit/ds/symlink/ina286.pdf?ts=1611206536009">datasheet</a>.</p>
+<h2 id="fonction-horodatage">Fonction horodatage</h2>
+<p><a
+href="https://www.arduino.cc/en/Tutorial/WiFiRTC">horodatage</a></p>
+<p>La connexion réseau est utilisée pour accéder à un “Time Server” sur
+Internet et pour en obtenir l’heure correcte, en utilisant le “Network
+Time Protocol” (<a
+href="https://fr.wikipedia.org/wiki/Network_Time_Protocol">NTP</a>)
+intégré dans le module WiFi utilisé. L’heure est ensuite utilisée pour
+configurer le RTC interne (format UTC) de la carte MKR wifi 1010 en
+utilisant le format <a href="https://fr.wikipedia.org/wiki/Epoch">linux
+epoch</a>. ## Mini speaker * <a
+href="https://www.sparkfun.com/products/7950">Mini Speaker - PC Mount
+12mm 2.048kHz</a> * <a
+href="http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf">Mini
+speaker datasheet</a> * <a
+href="https://www.hobbytronics.co.uk/arduino-tutorial7-piezo-beep">Arduino
+UNO Tutorial 7 - Piezo Beep</a> * <a
+href="https://store.arduino.cc/arduino-mkr-wifi-1010">arduino-mkr-wifi-1010</a>
+* PWM Pins 13 (0 .. 8, <strong>10</strong>, 12, 18 / A3, 19 / A4) * DC
+Current per I/O Pin 7 mA * <a
+href="https://www.datasheet.live/index.php?title=Special:PdfViewer&amp;url=https%3A%2F%2Fpdf.datasheet.live%2F2554eeff%2Fbcdsemi.com%2FAP2112K-2.8TRG1.pdf">AP2112K
+- 600mA</a> * Speaker 42 Ohms -&gt; 78.5 mA sous 3.3 V * Insérer un
+transistor 2N2222A * <a
+href="http://xizard.chez.com/Cours/transistor_amplificateur.htm">Calcul</a>
+* <a
+href="https://fastoche.pagesperso-orange.fr/Transistors/Transistorencommutation.htm">Commutation</a>.
+### Réalisation <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/b_speaker.png"
+alt="Speaker.png" /></p>
+<p>L’interface speaker est réalisée selon le schéma ci-dessus : * La
+sortie 10 du MKR 1010 est utilisé en mode PWM * le transistor 2N2222A
+fonctionne en mode bloqué/saturé * le calcul de la résistance : * quand
+le transistor est saturé la tension Vce est proche de zéro * la
+résistance de la bobine du Mini speaker est de 42 Ohms * le courant ic
+en mA est donc : 3300/42 = 78.58 mA * le gain du transistor en mode
+saturé est de 40 * la tension Vbe en mode saturé est 1.2 V * ib = 78/40
+soit environ 2 mA *</p>
+<h2 id="sleep-mode">Sleep mode</h2>
+<ul>
+<li><a href="https://www.arduino.cc/en/Reference/WiFiNINA">WiFiNINA
+library</a></li>
+<li><a
+href="https://www.arduino.cc/en/Reference/WiFiNINALowPowerMode">WiFiNINALowPowerMode</a>
+<em>Il s’agit d’un mode géré automatiquement où le module WiFi NINA
+réduit sa consommation d’énergie, ce qui porte la consommation globale à
+30mA. Toutes les données entrantes sont reçues et l’appareil envoie
+régulièrement le signal de balise chaque 100ms pour maintenir la
+connexion AP en vie.</em> L’essai de cette fonction, en mesurant le
+courant consommé par le circuit batterie, sans cette fonction il est de
+30 mA, avec la fonction, il est de 45 mA. En conclusion le courant est
+plus important, l’utilisation de cette fonction n’est pas
+envisageable.</li>
+<li><a
+href="https://www.arduino.cc/en/Reference/WiFiNINANoLowPowerMode">WiFiNINANoLowPowerMode</a></li>
+<li><a
+href="https://thekurks.net/blog/2018/1/24/guide-to-arduino-sleep-mode">guide-to-arduino-sleep-mode</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/LowPowerSleep">Arduino
+LowPowerSleep</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/ArduinoBLE">ArduinoBLE
+library</a></li>
+</ul>
+<p>Architecture : * Atmel AVR * ARM * <a
+href="https://fr.wikipedia.org/wiki/Arduino">Wikipédia</a> ## Logiciel
+<img src="https://github.com/AIREL46/SCAO/blob/master/wiki/sci.png"
+alt="sci" /> Les fichiers du logiciel sont accessibles dans le <a
+href="https://github.com/AIREL46/SCAO/tree/master/Arduino/e-p-wifi">répertoire</a>,
+dont le fichier principal <a
+href="https://github.com/AIREL46/SCAO/tree/master/Arduino/e-p-wifi">e-p-wifi.ino</a>.
+### Organisation des codes sources du SCI L’organisation des codes
+sources du SCI est structurelle, fonctionnelle et logicielle. ####
+Organisation structurelle de l’édition L’organisation structurelle de
+l’édition est claquée sur celle des scripts Arduino. Elle se concrétise
+en une décomposition en 5 paragraphes numérotés de 1 à 5, en conformité
+avec le diagramme ci-dessous : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/dia/organisation_logiciel_sci.png"
+alt="Organisation des logiciels SCI" /> #### Organisation fonctionnelle
+L’organisation fonctionnelle est relative à la complexité du projet.
+Elle se concrétise en une décomposition de la fonction principale en 11
+fonctions élémentaires en conformité avec le diagramme ci-dessous :</p>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/dia/modules_logiciel.png"
+alt="Modules logiciels" /> ### Organisation logicielle L’organisation
+logicielle est relative à longueur des programmes et en particulier
+celle du fichier e-p-wifi.ino. Pour une fonction élémentaire donnée,
+cette organisation se concrétise en la création d’un fichier séparé de
+type “header” <strong>.h</strong> pour y mettre les définitions, les
+fonctions spécifiques, la fonction setup,… Pour plus de détails, voir la
+<a href="http://www.didel.com/C/FichiersImportes.pdf">fiche didel</a> :
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/dia/organisation_arduino_files.png"
+alt="Organisation des fichiers Arduino" /> ## Echanges des données entre
+la e-poignée et le e-rupteur <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/dia/data_exchange.png"
+alt="Echanges des données entre la e-poignée et le e-rupteur" /> ##
+Organisation de la communication entre les plateformes MKR wifi 1010 de
+la e-poignée et du e-rupteur <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/dia/org_com_e-p_e-r.png"
+alt="Organisation de la communication entre les plateformes MKR wifi 1010 de la e-poignée et du e-rupteur" /></p>
+</body>
+</html>

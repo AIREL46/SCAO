@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_vv_c_v_jo_bonger</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_vv_c_v_jo_bonger</h1>
+</header>
+<h1 id="deux-mois-et-une-éternité">Deux mois et une éternité</h1>
+<p>Deux mois et une éternité est le titre d’un documentaire d’Anne
+Richard diffusé sur Arte qui relate le combat mené par Jo Bonger pour
+valoriser l’œuvre de Vincent. Voir la <a
+href="https://www.telerama.fr/television/van-gogh-deux-mois-et-une-eternite-pourquoi-celle-qui-a-revele-vincent-a-ete-si-longtemps-ignoree-7017651.php?destination=/television/van-gogh-deux-mois-et-une-eternite-pourquoi-celle-qui-a-revele-vincent-a-ete-si-longtemps-ignoree-7017651.php">critique
+de Télérama</a>. Ce documentaire est enregistré sur le disque dur
+externe <strong>2TO</strong> à l’adresse :</p>
+<p><code>‘/media/airel/Seagate Expansion
+Drive/van_gogh/jo_bonger.ogv’</code></p>
+<h1 id="the-woman-who-made-vincent-famous">The woman who made Vincent
+Famous</h1>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/8/88/Jo_van_Gogh-Bonger%2C_by_Woodbury_and_Page.jpg"
+alt="Photographie de Johanna van Gogh en avril 1889 - Source : Wikipédia" />
+<figcaption aria-hidden="true">Photographie de Johanna van Gogh en avril
+1889 - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/8/88/Jo_van_Gogh-Bonger%2C_by_Woodbury_and_Page.jpg">Photographie
+de Johanna van Gogh en avril 1889 - Source : Wikipédia</a></p>
+<p>Il s’agit d’une biographie de Jo van Gogh-Bonger dont je possède la
+version anglaise.</p>
+<h2
+id="introduction-une-fille-damsterdam-version-française">Introduction
+“Une fille d’Amsterdam” (version française)</h2>
+<details>
+<summary>
+🇫🇷 Cliquer ici pour lire la version française
+</summary>
+<p>Le musée Van Gogh d’Amsterdam est l’un des musées les plus célèbres
+au monde. Il attire des millions de visiteurs chaque année, et même ceux
+qui n’y sont jamais allés savent qu’il existe. Cependant, peu de gens
+connaissent l’histoire de ce musée : comment il a vu le jour, sa
+fondation, son histoire. Et encore moins savent que la plus grande
+partie de la collection de peintures de Van Gogh du musée d’aujourd’hui
+était autrefois conservé dans le grenier d’une grande maison
+individuelle à Bussum, une petite ville située à environ dix-huit
+kilomètres au sud-est d’Amsterdam.</p>
+<p>Jo van Gogh-Bonger (1862-1925) et son fils Vincent s’étaient
+installés dans cette maison, Villa Helma, au numéro 4 de la Koningslaan,
+en avril 1891. Elle avait passé dix-huit mois heureux à Paris avec son
+mari Théo, le frère cadet de l’artiste Vincent van Gogh, qu’elle avait
+épousé en 1889. Mais le destin fut cruel. Peu de temps après la mort de
+Vincent, Théo mourut à son tour, en janvier 1891. À partir de ce moment…
+Jo avait vingt-huit ans – elle était seule responsable de l’éducation de
+leur enfant, qui n’avait même pas un an. Elle est également restée veuve
+avec un immense héritage ; Théo, ancien marchand d’art, avait acquis la
+plupart des œuvres de son frère Vincent en échange de son soutien
+financier. Toutes ces peintures et dessins, ainsi que la collection
+d’art de Theo, sont allés à Jo et Vincent, pour moitié chacun. Parce que
+Vincent n’avait qu’un an, Jo est automatiquement devenu son tuteur avec
+le contrôle de ses biens jusqu’à ce qu’il atteigne la majorité à vingt
+et un ans.</p>
+<p>Jo n’est pas retournée à Paris après la mort de Théo. Sur les
+conseils d’amis, elle s’installe à Bussum et, quelques mois plus tard,
+ouvre la Villa Helma comme pension de famille, ce qui est assez typique
+des femmes célibataires et qui se faisait souvent à cette époque. Elle
+s’est mise au travail avec énergie et détermination. Dès son
+emménagement, elle a souscrit une assurance incendie d’un montant de 12
+600 florins. La police d’assurance, datée du 18 avril 1891, comprend les
+éléments suivants :</p>
+<p>2 000 £ 200 tableaux de V. van Gogh</p>
+<p>600 £ 1 portfolio de dessins de V. van Gogh.</p>
+<p>Une source intéressante, cette police d’assurance, mais les chiffres
+et les montants nous paraissent assez étranges au regard de nos
+connaissances actuelles. On sait tout d’abord qu’il y avait bien plus
+d’œuvres d’art : entre avril 1891 et la mort de Jo en septembre 1925, au
+moins 247 Van Gogh de la collection furent vendus – 192 tableaux et
+cinquante-cinq œuvres sur papier – selon le livre de comptes de Jo, ce
+qui n’était même pas un record complet. » Le chiffre de deux cents
+devait être une estimation beaucoup trop basse. En 1962, Vincent, le
+fils de Jo, a constitué plus de 209 peintures et 490 dessins pour la
+Fondation Vincent van Gogh. Ensemble, ces œuvres constituent aujourd’hui
+le noyau de la collection du Musée Van Gogh.</p>
+<p>Les murs de la maison de Jo à Bussum étaient couverts de peintures et
+toutes les lettres et documents laissés par Théo et Vincent (y compris
+les photographies et les carnets de croquis) étaient rangés dans des
+placards. Malgré tout, la plupart des Van Gogh se trouvaient dans le
+grenier. « Sûr » et « assuré » sont des concepts relatifs. L’assurance
+incendie est une belle chose, voire rassurante, mais que se serait-il
+passé si la Villa Helma avait réellement pris feu en 1891 ? Les
+conséquences auraient été incalculables et le développement de l’art
+moderne en Europe aurait été très différent.</p>
+<p>Naturellement, Vincent et son frère Théo ont toujours été au centre
+de l’attention, et Jo, la veuve de Théo, a été éclipsée. Et pourtant,
+elle mérite amplement que les projecteurs soient braqués sur elle. Le
+fait que Vincent van Gogh soit devenu si célèbre après sa mort est dû en
+grande partie à sa diligence et à ses efforts inlassables, et pas
+simplement et uniquement à la qualité de son travail. Cette biographie
+parle de la ténacité de Jo, de son dévouement sans limites et de sa vie
+étonnamment multicouche. Pendant trente-cinq ans, elle a poursuivi avec
+détermination son objectif de faire reconnaître l’œuvre artistique de
+Vincent van Gogh, faisant tout ce qui était en son pouvoir pour asseoir
+sa réputation dans le monde entier. Grâce à son grand amour pour son
+art, sa foi inébranlable en son talent et sa propre personnalité
+énergique, elle a finalement réussi. Elle a su tenir bon dans un monde
+dominé par les hommes et assumer la responsabilité de la gestion de
+l’œuvre de Van Gogh et de sa diffusion. En tant que gardienne de
+l’héritage, elle fut le fondement sur lequel fut construit le culte
+ultérieur de Van Gogh. Après sa mort, son fils a assumé cette tâche avec
+conscience, même s’il a fait remarquer que c’était quelque chose qui lui
+avait été imposé. Dans son discours d’ouverture du Musée Van Gogh en
+1973, il déclarait : « Je n’ai pas demandé à naître parmi tous ces
+tableaux, mais que cela me plaise ou non, j’ai dû m’occuper de la
+collection » (Planche 1).</p>
+<h3 id="les-tournants-de-la-vie-de-jo">Les tournants de la vie de
+Jo</h3>
+<p>L’histoire de la vie d’une personne est déterminée autant par les
+événements, les succès et les désastres que par la naissance,
+l’environnement et l’époque. De tels points culminants se produisent à
+plusieurs reprises dans cette biographie. » La rupture de la relation de
+Jo avec le jeune assistant en anatomie Eduard Stumpff en faisait partie,
+tout comme la mort de Mien Doorman et de Cateau Stumpff. Jo a eu du mal
+à accepter la mort tragiquement prématurée de ces chers amis. Le départ
+de son frère Andries, parti s’installer à Paris à un stade précoce, l’a
+également profondément marqué. Elle l’avait toujours idolâtré. Pendant
+des années, elle cherchait quelqu’un à qui elle pourrait se consacrer de
+la même manière, et Theo van Gogh fut la première personne avec qui cela
+était réellement possible. Se joindre à lui fut sans doute le moment le
+plus décisif de sa vie. Jo avait vingt-six ans. Leur mariage fut heureux
+mais ne dura que deux ans. Et pourtant, cette étape a fixé le cap pour
+le reste de sa vie : Théo ne lui a pas seulement donné un fils, Vincent
+(« il est mon réconfort et mon trésor, mon tout »), mais l’immense
+héritage de son frère Vincent. Jo consacrera le reste de sa vie à ces
+deux Vincent, par amour pour eux deux, mais surtout par amour pour Théo.
+C’était sa façon de supporter sa mort prématurée, qui était un coup si
+dévastateur, et de s’élever en quelque sorte au-dessus. Le fait de se
+concentrer sur les deux homonymes lui a permis de rester très proche de
+Théo. Des moments charnières de sa vie en découlèrent par la suite :
+l’exposition Van Gogh, couronnée de succès, qu’elle organisa au
+Stedelijk Museum d’Amsterdam en 1905, et la publication, très bien
+accueillie, des lettres de Vincent à Théo en 1914, qui offrit au public
+une nouvelle façon de découvrir sa vie et son œuvre.</p>
+<p>Un autre moment de transition important fut le deuxième mariage de Jo
+en 1901 avec l’artiste et critique d’art Johan Cohen Gosschalk. C’était
+un mariage parfois très difficile. La préparation hésitante du mariage
+laissait présager des problèmes à venir. Johan était intelligent et
+artistique, mais en même temps inconstant et névrosé ; il menait une vie
+de retraité. Il estimait que le dynamisme et la persévérance de Jo
+provoquaient dans sa personnalité une certaine dureté qui ne devait pas
+prendre le dessus, comme il lui avait écrit au tout début de leur
+relation :</p>
+<p>« Toi, ma chérie, à côté de beaucoup de persévérance et de ténacité,
+tu as beaucoup de vraie douceur féminine, de tendresse, de finesse de
+sentiment et de pensée. Ne pensez pas que je n’apprécie pas ces qualités
+de persévérance qui se sont peut-être transformées en dureté. Mais je ne
+t’aimerais peut-être pas quand même si tu n’avais pas aussi cette vraie
+féminité. »</p>
+<p>Malgré les difficultés et la grande différence de caractère, ils se
+sont soutenus mutuellement pendant les dix années qu’ils ont passées
+ensemble. Ce n’étaient pas des années faciles. Et Jo n’a pas eu de
+chance avec ses deux maris : Théo est mort quand il avait trente-trois
+ans, Johan avait trente-huit ans quand il est mort.</p>
+<p>Tout cela mis à part, Jo a parcouru deux autres chemins intéressants
+au cours de sa vie. Il y a d’abord son travail d’enseignante et de
+traductrice. Après le lycée, elle a suivi un cours lui permettant
+d’enseigner l’anglais et a enseigné pendant un certain temps dans
+diverses écoles de filles aux Pays-Bas. Elle est ensuite devenue une
+traductrice respectée de romans et d’histoires publiés dans des journaux
+comme De Amsterdammer, De Kroniek et Belang en Recht. La formation, le
+travail de traduction, l’enseignement et une soif culturelle permanente
+ont contribué à son éducation et à son développement, qui ont plus ou
+moins coïncidé avec la première vague d’émancipation féminine de la
+seconde moitié du XIXe siècle.</p>
+<p>La deuxième voie s’est ouverte au sein du mouvement socialiste. Très
+tôt dans la vie, Jo s’est révélée être une personne dotée d’un fort sens
+de la justice, encouragée par son éducation. Elle était socialement
+consciente et optimiste quant au perfectionnement de l’humanité et de la
+société, ainsi qu’à la nouvelle position des femmes dans celle-ci. Elle
+a longtemps été active au sein du Parti travailliste social-démocrate
+(SDAP) et du mouvement des femmes, et a rédigé des critiques pour le
+magazine féministe modéré Belang en Recht.</p>
+<p>Finalement, son fils Vincent, diplômé en génie mécanique, est le seul
+pour qui elle ressent un amour inconditionnel, un amour qu’il ressent
+parfois comme étouffant et auquel il parvient à s’arracher avec beaucoup
+de difficulté. Dans ses dernières années, il était capable de le tolérer
+avec une plus grande sérénité. Jo était très proche de lui et de sa
+femme Josina Wibaut et comptait beaucoup sur eux. À la fin de sa vie,
+ses petits-enfants lui apportaient une grande joie. « En grandissant,
+les jeunes l’aimaient beaucoup et elle les aimait beaucoup, écrit
+Vincent à propos de son rôle dans cette dernière période, où elle
+prenait les choses un peu plus sereinement : « Elle aimait les choses
+simples et était toujours de bonne compagnie. » Dans la famille, Jo
+était connue comme la « gentille tante ». Bien qu’elle ait ralenti le
+rythme durant cette période, elle continua de négocier les droits
+d’auteur des œuvres de Van Gogh et de les vendre. Elle se consacra
+également pleinement à la traduction de ses lettres en anglais et à la
+recherche d’un éditeur. Elle avait traduit les deux tiers des lettres
+lorsqu’elle mourut en 1925, à l’âge de soixante-deux ans.</p>
+<h3 id="une-fille-damsterdam">Une fille d’Amsterdam</h3>
+<p>«Saviez-vous que Theo est fiancé et va bientôt épouser une jeune
+fille d’Amsterdam?», écrivait Vincent van Gogh à son collègue artiste
+Arnold Koning à Winschoten en janvier 1889, suggérant que c’était
+peut-être la raison pour laquelle son jeune frère n’était pas comme
+d’habitude: «Je n’ai absolument rien vu de vos études envoyées à Theo
+(je crois), bien que vous ayez exhorté à faire un échange. Est-ce à
+cause de Théo, qui avait peut-être autre chose en tête, ou à cause de la
+distance non négligeable qui nous sépare ? Vincent n’avait pas encore
+rencontré Jo - cela arriverait plus tard - mais Théo lui avait déjà
+longuement parlé d’elle lors de sa visite à Vincent à l’hôpital d’Arles,
+fin décembre 1888. Ils étaient couchés côte à côte sur le lit, parler,
+comme ils l’avaient souvent fait lorsqu’ils étaient enfants dans le
+Brabant-Septentrional. Théo avait dit à sa mère, qui avait immédiatement
+répondu avec tendresse : « Comme c’est touchant d’évoquer Zundert, tout
+deux la tête, sur le même oreiller. ». Quelques jours plus tard, Théo
+informa également Jo de la situation de Vincent. C’était la première
+lettre dans laquelle il l’impliquait dans les affaires de son frère. Les
+nouvelles n’étaient guère encourageantes. Le frère qui souhaitait si
+ardemment que Théo épouse Jo ne put, au moment venu, y participer
+pleinement car il avait perdu la raison :</p>
+<p>L’année dernière, il n’a cessé de me pousser à essayer de t’épouser,
+donc je crois que dans d’autres circonstances, s’il savait comment les
+choses se passaient entre nous, il donnerait son approbation sans
+réserve. Vous savez à quel point il comptait pour moi et que c’est lui
+qui a favorisé et nourri tout le bien qu’il pouvait y avoir en moi. Même
+lorsque nous vivions ensemble, j’aurais voulu qu’il reste, de près ou de
+loin, ce même conseiller et frère pour nous deux, dans tous les sens du
+terme. Cet espoir a maintenant disparu et nous en sommes tous deux plus
+pauvres.</p>
+<p>Une situation profondément triste, et le seul souci de Théo était
+d’éviter que l’on considère plus tard Vincent comme un fou ou un
+dérangé. Il supposait que Jo ressentait la même chose : Nous honorerons
+sa mémoire, n’est-ce pas, ma chérie ? Car même maintenant, je perçois
+dans les lettres de ma famille que leurs mots de sympathie, tous sauf
+ceux de Wil, dissimulent à peine leur conviction qu’il était bel et bien
+fou.</p>
+<p>Il s’agit d’un passage révélateur qui, avec le recul, se lit presque
+comme une convocation impérieuse – une convocation à une alliance
+partagée, un pacte contre le monde, auquel appartenait dans ce cas sa
+propre famille. Il fallait préserver et protéger la mémoire de Vincent,
+c’était ce qui comptait. Théo sentit combien cela était crucial et
+essentiel, mais c’était pour Jo que cela allait avoir les conséquences
+les plus profondes. Son destin était scellé à jamais. Alors que le
+bonheur de son fils passait toujours avant tout chez elle (« Je n’ai
+qu’un seul objectif : le maintenir en bonne santé et heureux - dans la
+mesure de mes moyens »*), Jo s’est immédiatement retrouvée confrontée à
+un deuxième objectif dès la mort de Théo : s’occuper de l’héritage de
+son beau-frère Vincent. Le titre de la biographie néerlandaise, All for
+Vincent, reflète ce double objectif de la vie – et toujours, en
+arrière-plan, on entend « et tout pour Theo ».</p>
+<p>La jeune fille d’Amsterdam du Weteringschans était une femme
+intelligente qui s’est battue toute sa vie pour mieux se connaître. Elle
+voulait être une personne noble et était parfaitement consciente des
+défauts qu’elle détectait en elle-même. Elle avait les yeux marron
+foncé, un visage légèrement oriental et des cheveux foncés. Elle
+mesurait à peine cinq pieds trois pouces. Ses deux amours, Theo et
+Johan, étaient également petits. » Elle aimait les vêtements dans
+lesquels « l’harmonie des couleurs » prévalait et portait des jupes
+longues qui cachaient ses pieds. Jo prenait la vie très au sérieux et
+n’avait pratiquement aucun sens de l’humour. Selon ses amis, elle était
+une bonne joueuse d’échecs, se laissait rarement envahir par les choses,
+était sensée, sensible et gentille, et elle gâtait les invités de sa
+pension. Ses amitiés étaient très étroites et elle avait un fort sens
+des responsabilités. Elle a assumé de nombreuses tâches et devoirs,
+notamment lorsqu’il s’agissait de promouvoir Vincent. Son caractère
+était un amalgame complexe de méfiance – elle se décrivait à plusieurs
+reprises comme calme et repliée sur elle-même – et de rébellion, avec un
+désir farouche d’indépendance. Avant son mariage, elle était précaire,
+plutôt rêveuse et avait constamment besoin de conseils. Après 1891, où
+elle se retrouve soudain seule à faire face, cette indécision fait vite
+place à la détermination et au dynamisme. Même si elle pouvait compter
+sur une grande aide et un grand soutien de la part de sa famille et de
+ses amis, qu’elle n’hésitait pas à accepter (à plusieurs moments de sa
+vie, elle était aidée par des personnes influentes), dans la mesure où
+l’étiquette le permettait à cette époque, elle faisait ses propres choix
+et prenait ses propres décisions. En cela, elle était tenace et résolue.
+» Les bases de cela ont été posées, comme tout le monde, dans son
+enfance.</p>
+<h3 id="sources-de-la-recherche">Sources de la recherche</h3>
+<p>Écrire une biographie signifie passer de nombreuses heures à raconter
+la vie d’une personne, et il est souvent difficile d’en évaluer les
+circonstances précises. Décrire une vie est une tentative de faire
+revivre la personne en question et en même temps un voyage de
+découverte. Ce que quelqu’un fait ou omet de faire, quelles sont ses
+motivations et ses raisons : ce sont des questions dont les réponses
+peuvent être difficiles à trouver. Il va sans dire qu’un nombre
+important de sources permettent de reconstruire ces choses visibles et
+invisibles. J’avais à ma disposition de nombreuses lettres, le journal
+de Jo, des extraits du journal de son fils Vincent, quelques livres de
+ménage, un livre de comptes, des dizaines de photographies, ses propres
+publications et traductions de différents quotidiens et hebdomadaires,
+ainsi que divers récits écrits de témoins oculaires. Mais quelle
+certitude pouvez-vous tirer de l’encre sèche ?</p>
+<p>Il va sans dire que de telles sources doivent être utilisées avec
+précaution. Jo s’en est mise en garde lorsqu’elle a réalisé, au milieu
+de son premier journal, comment elle avait écrit sur elle-même jusque-là
+: « Je parie que si quelqu’un feuilletait ce livre, il aurait une
+mauvaise impression de mon personnage ». Et, plus déconcertant encore
+pour un biographe : « J’écris sur l’état réel de mon esprit et de mes
+sentiments. » Cela ne peut cependant pas être une raison pour abandonner
+la quête. Après tout, il en reste beaucoup. Les journaux de Jo
+comprennent de nombreux passages écrits directement avec le cœur et, de
+manière révélatrice en 1881, elle décrit le contenu comme « le miroir de
+ma vie intérieure* ». Elle était extrêmement critique envers elle-même
+dans sa jeunesse.</p>
+<p>Les quatre journaux, rédigés entre dix-sept et trente-quatre ans (de
+mars 1880 à mai 1897, avec parfois de longues interruptions), donnent un
+bon aperçu de ses occupations et de ses pensées. Ils sont récemment
+devenus entièrement accessibles en version numérique. Écrites d’une main
+égale et couvrant des centaines de pages, les réflexions sérieuses sont
+entrecoupées d’anecdotes. Jo a écrit sur les gens qu’elle connaissait,
+sur sa famille, ses amis et ses professeurs, ainsi que sur les
+ecclésiastiques dont elle fréquentait les églises. Elle a réfléchi à ce
+qu’elle lisait et aux concerts et spectacles auxquels elle était allée.
+Écrire dans son journal lui a permis de mieux se connaître. La relecture
+de certains passages lui remontait le moral de temps en temps. Elle
+s’est toujours efforcée d’exprimer avec des mots aussi honnêtement que
+possible ses motivations et ses ambitions dans la vie, sa honte, ses
+déceptions, ses désirs et ses amours. Les journaux dressent ainsi un
+autoportrait consciencieux, quoique nécessairement fragmentaire. En
+février 1892, elle ne réalisa que trop bien quelle pourrait être sa plus
+grande importance :</p>
+<p>J’ai mis mon agenda plus ou moins à jour et je le tiendrai
+fidèlement. Plus tard, l’enfant devrait au moins être capable de se
+forger une opinion sur la vie de sa mère, sur ce qu’elle pensait,
+ressentait et voulait. Ses journaux intimes et les lettres de son père
+et de son oncle, il pourra les utiliser pour reconstituer leurs vies
+passées.</p>
+<p>Ses notes remplissaient sans doute cette fonction pour Vincent ; en
+tout cas, il en a cité plusieurs passages dans son édition ultérieure
+des lettres rassemblées de Van Gogh. A son tour, il tenait lui aussi un
+journal, autre source importante pour cette biographie car il en dit
+long sur sa relation avec sa mère et ce qu’il pensait d’elle.</p>
+<p>Outre les journaux intimes, les lettres constituent une source
+cruciale pour la reconstitution de la vie de Jo. Des centaines d’entre
+eux ont survécu, reçus et envoyés à des amis, à ses parents, à son frère
+Andries, Théo), à son fils Vincent et bien d’autres. La plupart de ces
+lettres se trouvent au Musée Van Gogh. Parfois, aujourd’hui encore, des
+acquisitions remarquables viennent enrichir la collection. En mai 2008,
+par exemple, Sylvia Cramer, administratrice de la Fondation Vincent van
+Gogh, a mis à disposition un ajout surprenant : 102 lettres inédites de
+l’artiste Isaac Israels à Jo, dont treize cartes postales et deux cartes
+postales illustrées. Pendant tout ce temps, les lettres étaient en
+possession de la mère de Sylvia, Mathilde Cramer-van Gogh, qui était la
+fille de Vincent et la petite-fille de Jo. Ils font désormais partie de
+la collection de la Fondation Vincent van Gogh. La plupart des lettres
+ne sont pas datées, elles couvrent la période de février 1891 à janvier
+1924, et révèlent une relation courte mais intense jusqu’alors largement
+inconnue du public. Isaac et Jo ont commencé comme amis, sont devenus
+amants pendant un certain temps et ont ensuite noué une étroite amitié.
+Pour autant que nous le sachions, il n’existe aucune lettre de Jo à
+Isaac.</p>
+<p>Les lettres que son frère Andries a écrites à leurs parents, que Jo a
+également lues, apportent un éclairage considérable sur les premières
+années de Jo. Ils nous disent quels problèmes préoccupaient la famille
+et quels sujets étaient considérés comme pertinents : des sujets
+quotidiens comme l’alimentation, les vêtements et l’hygiène personnelle,
+mais aussi des sujets plus élevés comme le maintien des contacts sociaux
+et la poursuite du développement artistique et intellectuel à travers la
+littérature, la musique et les visites de musées et de théâtres. Jo
+était curieuse et lisait beaucoup, non seulement pour le plaisir et la
+distraction, mais parce que c’était pour elle une nécessité absolue dès
+son plus jeune âge. Les idées et les actions des personnages de romans
+qu’elle trouvait sympathiques à plusieurs reprises lui ont fourni
+quelque chose à quoi s’accrocher.</p>
+<p>La correspondance la plus intime et la plus intense de Jo fut avec
+Théo. La plupart datent de l’époque de leurs fiançailles et il existe
+quelques lettres écrites alors qu’ils étaient mariés. Il y a 101 lettres
+en tout. Jusqu’à présent, de toute la correspondance de Jo, seules ces
+lettres entre elle et Theo ont été publiées sous forme de livre, en
+partie à cause de leur contenu fascinant et touchant, mais aussi parce
+qu’elles permettent de retracer en grande partie les dernières années
+tragiques de la vie de Vincent. ” Bien que de nombreuses lettres
+personnelles de Jo aient survécu, la majorité de sa correspondance
+concerne les affaires. Au fil du temps, ses contacts avec des exposants,
+des marchands d’art et des éditeurs se sont développés de plus en plus
+et les piles de correspondance en provenance d’ici et d’ailleurs n’ont
+cessé de croître.</p>
+<p>Beaucoup de choses ont été préservées, mais pas toutes. C’est en
+partie l’œuvre de Jo, si l’on en croit ce qu’elle écrivait en 1889.
+C’était en janvier, alors qu’elle s’apprêtait à partir pour Paris et
+elle écrivit à Théo : « Tu sais, j’ai toujours été fanatique de garder
+les lettres qui m’intéressaient, mais maintenant je dois enfin commencer
+à m’en débarrasser : » Il y a de fortes chances qu’elle l’ait fait, mais
+même si ce n’était pas le cas, son fils n’avait aucun scrupule, du moins
+nous disent les sources, pour un passage du journal de Vincent (écrit
+plusieurs décennies plus tard) révèle une crise de manie du rangement
+encore plus drastique :</p>
+<p>Je suis également tombé sur une boîte de lettres que ma mère avait
+gardées, de Jo et de moi, avant 1920 et quelques-unes après. Tout était
+personnel, avec peu de choses générales, certaines ouvertes par la
+censure. J’ai tout brûlé dans la cheminée de ma chambre – et sans tout
+relire.</p>
+<p>Il existe beaucoup moins de lettres datant de la dernière période de
+la vie de Jo, car elle et les membres de sa famille vivaient à proximité
+les uns des autres et le téléphone avait été introduit.»</p>
+<p>Le livre de comptes mentionné précédemment fournit des informations
+cruciales sur la vie de Jo qui complètent les journaux et les lettres.
+L’organisation et les personnes à qui elle a vendu les œuvres de Van
+Gogh y sont enregistrées, et elle a tenu un registre assez précis des
+sommes qu’elle a reçues pour des peintures et des dessins, de sorte
+qu’il soit possible de suivre la hausse massive du prix de son œuvre au
+cours de sa vie. Néanmoins, le livre de comptes de Jo ne peut pas servir
+de source unique pour la biographie, car il y a bien sûr eu des
+expositions au cours desquelles elle n’a pas mis d’œuvres en vente ou
+n’a rien vendu. Pour les besoins de ce livre, j’ai donc travaillé sur la
+base de toutes les expositions Van Gogh auxquelles Jo a collaboré,
+c’est-à-dire pas seulement celles où elle a effectivement vendu. Ma
+reconstitution d’expositions s’appuie sur la vaste documentation et la
+littérature de la bibliothèque du Musée Van Gogh. Cela signifie que des
+exemples des deux catégories – expositions de vente et expositions «
+ordinaires » – apparaîtront tout au long du livre. Aucune tentative n’a
+été faite pour couvrir chaque exposition. Je n’aborde que les plus
+marquantes et les plus remarquables des innombrables expositions
+auxquelles Jo a contribué avec sa collection. De même, je n’ai traité
+que les plus marquants de ses contacts avec les particuliers. Les
+expositions pouvaient être importantes pour Jo pour diverses raisons :
+parfois elle était convaincue par les visions artistiques et les idéaux
+des organisateurs ou l’importance internationale d’un spectacle, en
+d’autres occasions, elle a agi principalement pour des motifs
+sociaux.</p>
+<p>Cette traduction fait suite à l’édition néerlandaise Alles voor
+Vincent : Het leven van Jo van Gogh-Bonger 2019). Des corrections ont
+été apportées ici et là. Les traductions de la correspondance entre Theo
+et Jo, Kort geluk (1999), sont tirées de l’édition anglaise Brief
+Happiness (1999), à l’exception d’un quelques changements mineurs. Il y
+a également deux révisions importantes. Tout d’abord, l’année où Vincent
+est devenu majeur. C’était en 1911, et non en 1915. La deuxième révision
+concerne une note importante faite par Gustave Coquiot (voir chapitre 14
+(p. 266). Il voulait en savoir plus sur Van Gogh, c’est pourquoi, en
+juin 1922, il rendit visite à Jo au 77 Koninginneweg à Amsterdam.
+Coquiot nota ce qu’il y vit et entendit dans un petit carnet ; plus
+tard, il tapa ses observations et les ajouta à sa vaste documentation
+sur Van Gogh, qui il a conservé dans un grand cahier. Ce livre révèle
+qu’Anton Kröller et Helene Kröller-Müller ont proposé un jour d’acheter
+toute la collection à Jo. ” Sur cette révélation, voir Zwikker 2021.</p>
+<p>Dans cette biographie, je montre comment Jo s’est mise au travail,
+les chemins qu’elle a parcourus, les décisions qu’elle a prises, les
+personnes qu’elle a rencontrées, bref, comment elle a réussi à accomplir
+la tâche qu’elle s’était fixée. Le fait qu’elle ait aussi eu une vie
+quotidienne, avec des hôtes en pension, des femmes de chambre, un fils
+en pleine croissance, des parents, des frères et sœurs, des amis, des
+livres, des animaux de compagnie et un jardin plein de fleurs, jouera
+pleinement son rôle dans les chapitres qui suivront, ne serait-ce que
+parce que Jo appréciait particulièrement ces détails intimes dans une
+biographie. Écrivant sur la biographie de George Eliot dans son journal,
+elle a déclaré qu’elle contenait tout sur la relation intellectuelle
+entre Eliot et son partenaire George Henry Lewes, mais malheureusement
+rien sur les détails et particularités de leur relation : « quelque
+chose dans leur vie quotidienne – ces petits détails révélateurs
+manquent ». Pour elle, c’était clairement une occasion manquée. Jo a été
+une lectrice passionnée et une amoureuse des biographies tout au long de
+sa vie. L’un de ses premiers portraits la montre assise avec un livre
+sur ses genoux.</p>
+</details>
+<h2 id="introduction-an-amsterdam-girl-english-version">Introduction “An
+Amsterdam girl” (english version)</h2>
+<details>
+<summary>
+🇬🇧 Click here to read the English version
+</summary>
+<p>The Van Gogh Museum in Amsterdam is one of the most famous museums in
+the world. It attracts millions of visitors every year, and even people
+who have never been there know that it exists. Few people, however, know
+about the background to this museum—how it came into being, its
+foundation, its history. And even fewer know that the greater part of
+the collection of Van Gogh paintings in the museum today was once stored
+in the attic of a large detached house in Bussum, a small town some
+eighteen miles to the south-east of Amsterdam.</p>
+<p>Jo van Gogh-Bonger (1862-1925) and her infant son Vincent had moved
+into that house, Villa Helma at number 4 Koningslaan, in April 1891. She
+had spent eighteen happy months in Paris with her husband Theo, the
+artist Vincent van Gogh’s younger brother, whom she had married in 1889.
+But fate was cruel. Not long after Vincent’s death, Theo died too, in
+January 1891. From that moment on— Jo was twenty-eight—she bore sole
+responsibility for raising their child, who was not even a year old.</p>
+<p>She was also left as a widow with an immense inheritance; Theo, who
+had been an art dealer, had acquired most of his brother Vincent’s works
+in return for supporting him financially. All these paintings and
+drawings, along with Theos art collection, went to Jo and Vincent, half
+each. Because Vincent was only a year old, Jo automatically became his
+guardian with control over his property until he came of age when he was
+twenty-one.! Jo did not go back to Paris after Theo died. Acting on the
+advice of friends, she moved to Bussum, and a few months later opened
+Villa Helma as a boarding house—something single women quite often did
+at that time. She set to work with energy and determination. As soon as
+she moved in, she took out fire insurance in the amount of 12,600
+guilders. The policy, dated 18 April 1891, includes the following
+items:</p>
+<p>£2,000 200 paintings by V. van Gogh</p>
+<p>£600 1 portfolio of drawings by V. van Gogh.</p>
+<p>An interesting source, this insurance policy, but the numbers and
+amounts strike us as quite odd from the perspective of our current
+knowledge. We know, for a start, that there were far more works of art:
+between April 1891 and Jo’s death in September 1925, at least 247 Van
+Goghs were sold from the collection—192 paintings and fifty-five works
+on paper—according to Jo’s account book,</p>
+<p>which was not even a full record.’ The figure of two hundred must
+have been far too low an estimate. In 1962 Jo’s son Vincent made over
+209 paintings and 490 drawings to the Vincent van Gogh Foundation.‘
+Taken together these works are now the nucleus of the collection in the
+Van Gogh Museum.</p>
+<p>The walls of Jo’s house in Bussum were covered in paintings, and all
+the letters and documents left by Theo and Vincent (including
+photographs and sketchbooks) were stored in cupboards. Even so, most of
+the Van Goghs were in the attic. ‘Safe’ and ‘insured’ are relative
+concepts. Fire insurance is a fine thing, reassuring even, but what
+would have happened if Villa Helma really had gone up in flames in
+1891 ? The consequences would have been incalculable and the development
+of modern art in Europe would have been very different.</p>
+<p>Understandably enough, Vincent and his brother Theo have always been
+the focus of attention, and Jo, Theo’s widow, has been overshadowed. And
+yet she more than deserves to have the spotlight turned on her. The fact
+that Vincent van Gogh became so famous after his death is due in no
+small measure to her unremitting diligence and effort, and not simply
+and solely to the quality of his work. This</p>
+<p>biography is about Jo’s tenacity, her boundless dedication and her
+surprisingly multilayered life. For thirty-five years she
+single-mindedly pursued her goal of achieving recognition for Vincent
+van Gogh’s artistic oeuvre, doing everything in her power to establish
+his reputation all over the world. Thanks to her great love of his art,
+her unshakable faith in his talent and her own energetic personality,
+she eventually succeeded. She was able to stand her ground in a
+male-dominated world and take responsibility for both the stewardship of
+Van Gogh’s work and its dissemination. As the guardian of the legacy,
+she was the foundation on which the later Van Gogh cult was built. After
+her death, her son censcientiously took over the task, although he did
+remark that it was something that had been thrust upon him. In his
+speech at the opening of the Van Gogh Museum in 1973 he said: ‘I didn’t
+ask to be born amongst all those paintings, but like it or not, I had to
+deal with the collection’ (Plate 1).</p>
+<h3 id="turning-points-in-jos-life">Turning points in Jo’s life</h3>
+<p>The story of someone’s life is determined as much by events,
+successes and disasters as by birth, environment and the times. Such
+culmination points occur several times in this biography.’ The break-up
+of Jo’s relationship with the junior anatomy assistant Eduard Stumpff
+was one of them, as were the deaths of Mien Doorman and Cateau Stumpff.
+Jo struggled to come to terms with the tragically premature deaths of
+these dear friends. The departure of her brother Andries, who moved to
+Paris at an carly stage, also had a profound cffcct on her. She had
+always idolized him. For yearo she sought someone to whom she could
+devote herself in the same way, and Theo van Gogh was the first person
+with whom this was really possible. Throwing in her lot with him was
+without doubt the most decisive moment in her life. Jo was twenty-six.
+Their marriage was happy but lasted a scant two years. And yet this step
+set the course for the rest of her life: Theo gave her not orily a son,
+Vincent (‘he’s my solace and my treasure, my everything’), but the
+immense legacy of his brother Vincent. Jo was to devote the rest of her
+life to these two Vincents—out of love for them both, but above all out
+of love for Theo. It was her way of bearing his premature death, which
+came as such a devastating blow, and to some extent rising above it.
+Concentrating on the two namesakes kept her closest to Theo. Later
+pivotal moments in her life stemmed from this: the hugely successful Van
+Gogh exhibition she organized in the Stedelijk Museum in Amsterdam in
+1905, and her well-received publication of Vincent’s letters to Theo in
+1914, which gave the public a new way of finding out about his life and
+work.</p>
+<p>Another important transitional moment was Jo’s second marriage in
+1901, to the artist and art critic Johan Cohen Gosschalk. It was a
+marriage that was very difficult at times. The hesitant run-up to the
+wedding was a portent of trouble to come. Johan was intelligent and
+artistic, but at the same time fickle and neurotic; he led a retired
+life. He felt that Jo’s drive and perseverance caused a certain hardness
+in her personality that should not be allowed to get the upper hand, as
+he wrote to her at the very outset of their relationship:</p>
+<p>« You, my darling, alongside much persistence and toughness, have
+much true feminine softness,tenderness, finenessof feeling and thought.
+Don’t think that I don’t appreciate those qualities of persistence that
+perhaps became hardness. But all the same I might not love you if you
+did not also have that true femininity. »</p>
+<p>Despite the difficulties and the great difference in their
+characters, they supported one another in the ten years they were
+together. These were not easy years. And Jo was unlucky in her two
+husbands: Theo died when he was thirty-three, Johan was thirty-eight
+when he died.</p>
+<p>All this aside, there were two other interesting paths Jo trod during
+her life. Firstly, there was her work as a teacher and translator. After
+high school she took a course qualifying her to teach English and taught
+at various girls’ schools in the Netherlands for some time. She then
+developed into a respected translator of novels and stories that were
+published in papers like De Amsterdammer, De Kroniek and Belang en
+Recht. The training, the translation work, the teaching and a permanent
+cultural hunger contributed to her education and development, which more
+or less coincided with the firstwave of female emancipation in the
+second half of the nineteenth century.</p>
+<p>The second path opened up within the socialist movement. Early in
+life Jo showed herself to be someone with a strong sense of justice,
+encouraged by her upbringing. She was socially aware and optimistic
+about the perfecting of mankind and society, and the new position of
+women in it. For a long time, she was active in the Social Democratic
+Labour Party (SDAP) and the women’s movement, and wrote reviews for the
+moderate feminist magazine Belang en Recht.</p>
+<p>In the end, her son Vincent, who took a degree in mechanical
+engineering, was the only person for whom she felt unconditional love—a
+love that he sometimes felt was stifling and from which he managed to
+wrest himself with considerable difficulty. In her later years he was
+able to tolerate it with greater equanimity. Jo was very close to him
+and his wife Josina Wibaut and relied heavily on them.</p>
+<p>At the end of her life her grandchildren brought her great joy.‘When
+she got older, young people liked her very much and she was fond of
+them, wrote Vincent about her role in this last period, when she took
+things a little more calmly: ’She enjoyed simple things and was always
+good company.” In the family Jo was known as the ’nice aunt. Although
+she took things a little easier in this period, she continued to
+negotiate about Van Gogh’s work and went on selling it. She also devoted
+herself wholeheartedly to translating his letters into English and
+trying to find a publisher for them. She had translated two-thirds of
+the letters when she died in 1925. She was sixty-two.</p>
+<h3 id="an-amsterdam-girl">An Amsterdam girl</h3>
+<p>‘Did you know that Theo is engaged and will marry an Amsterdam girl
+quite soon?’ wrote Vincent van Gogh to his fellow artist Arnold Koning
+in Winschoten in January 1889, suggesting that this might have been why
+his younger brother was not his usual self: ‘I’ve seen absolutely
+nothing of your studies sent to Theo (I believe), despite urging you to
+make an exchange. Is this to do with Theo, who possibly had other things
+on his mind, or with the not inconsiderable distance between us?’
+Vincent had not yet met Jo—that would happen later—but Theo had already
+told him about her at length when he visited Vincent in the hospital in
+Arles at the end of December 1888. They lay side by side on the bed,
+talking, as they had often done as children in North Brabant. Theo had
+told his mother, who immediately responded with tenderness: ‘How
+touching about Zundert, together on one pillow’ A few days later, Theo
+also told Jo about Vincent’s situation. It was the first letter in which
+he involved her in his brother’s fortunes. It was not encouraging news.
+The brother who so fervently wanted Theo to marry Jo could not, when it
+came to it, be a full part of it because he had lost his mind:</p>
+<p>Last year he kept urging me to try to marry you, so I believe that in
+different circumstances, if he knew what things were like between us, he
+would give his wholehearted approval. You know how much he has meant to
+me &amp; that it was he who fostered and nurtured whatever good there
+might be in me. Even when we are living together, I would have wanted
+him, whether near or far, to remain that same advisor &amp; brother to
+both of us, in every sense of the word. That hope has now vanished &amp;
+we are both the poorer for it.</p>
+<p>A profoundly sad situation, and Theo’s sole concern was to prevent
+people later on from regarding Vincent as mad or disturbed. He assumed
+that Jo felt the same way:</p>
+<p>We shall honour his memory, shan’t we, dearest? For even now, I sense
+from the letters from home that their words of sympathy, all except
+Wil’s, barely disguise their conviction that he was actually insane all
+along.</p>
+<p>It is a revealing passage, which with hindsight reads almost like a
+compelling summons—a summons to a shared alliance, a pact against the
+world, to which in this case his own family belonged. Vincent’s memory
+had to be preserved and protected, that was what mattered. Theo felt how
+crucial and essential this was, but it was for Jo that it was to have
+the most far-reaching consequences. Her fate was sealed for ever. While
+her son’s happiness always came before anything else with her (‘I have
+only one goal—to make him healthy and happy—in so far as I can’*) Jo was
+immediately faced with a second goal as soon as Theo died: looking after
+the legacy of her brother-in-law Vincent. The title of the Dutch
+biography, All for Vincent, reflects this dual purpose in life—and
+always, in the background, we hear ’and all for Theo.</p>
+<p>The Amsterdam girl from the Weteringschans was an intelligent woman,
+who wrestled throughout her life to gain insight into herself. She
+wanted to bea noble person and was acutely aware of shortcomings she
+detected in herself. She had dark brown eyes, a faintly oriental cast to
+her round face, and dark hair. She stood barely five foot three inches
+tall. Both her loves, Theo and Johan, were short too.’’ She liked
+clothes in which ‘harmony in colour’ prevailed and wore long skirts that
+hid her feet. Jo took life very seriously and had virtually no sense of
+humour. According to friends she was a good chess player, seldom let
+things get on top of her, was sensible, sensitive and kind, and she
+spoilt the guests in her boarding house.’* Her friendships were very
+close and she had a strong sense of responsibility. She took a great
+many tasks and duties upon herself, particularly when it came to
+bringing up Vincent. Jo’s character was a complex amalgam of
+diffidence—more than once she described herself as quiet and
+inward-looking—and rebellion, with a fierce desire for independence.
+Before her marriage she was insecure, rather dreamy and in constant need
+of guidance. After 1891, when she suddenly had to face things alone,
+this irresolution swiftly made way for determination and drive. Although
+she could count on a great deal of assistance and support from family
+and friends, which she did not hesitate to accept (at various times in
+her life she was aided by some influential people), as far as etiquette
+permitted at that time she made her own choices and took her own
+decisions. In this she was tenacious and resolute.”The foundations for
+this were laid, as everyone’ are, in her childhood.</p>
+<h3 id="sources-for-the-research">Sources for the research</h3>
+<p>Writing a biography means many hours spent in the legacy of someone’s
+life, and it is often difficult to gauge the precise circumstances.
+Describing a life is an attempt to bring the person in question back to
+life and at the same time a voyage of discovery. What someone does or
+omits to do, what their motives and reasons are—these are questions
+whose answers can be hard to find. Needless to say, a substantial number
+of sources provide a foothold for the reconstruction of these visible
+and invisible things. I had at my disposal numerous letters, Jo’s
+diaries, extracts from her son Vincent’s diaries, some household books,
+an account book, dozens of photographs, her own publications and
+translations in different daily and weekly papers, and various written
+accounts by eyewitnesses. But how much certainty can you derive from dry
+ink?</p>
+<p>It goes without saying that sources like this have to be used
+carefully. Jo warned herself against this when she realized, halfway
+through her first diary, how she had been writing about herself up to
+that point: « I wager if someone ever leafed through this book, he would
+get the wrong impression of my character ». And, even more disconcerting
+for a biographer: ’Of the real state of my mind and feelings I write.”
+This cannot, though, be a reason to abandon the quest. There is, after
+all, plenty left over. Jo’s diaries include a great many passages
+written straight from the heart and, tellingly in 1881, she described
+contents as ’the mirror of my inner life.* She was strikingly critical
+of herself in her youth.</p>
+<p>’The four diaries, written between the ages of seventeen and
+thirty-four (from March 1880 to May 1897, sometimes with lengthy
+interruptions), provide a good insight into her occupations and
+thoughts. They have recently become fully accessible in a digital
+version. Written in an even hand and covering hundreds of pages, serious
+reflections are interspersed with trivia. Jo wrote about the people she
+knew, about her family, friends and teachers, and about the clergymen
+whose churches she attended. She reflected on what she read and on the
+concerts and performances she went to. Writing in her diary made her
+more self-aware. Re-reading certain passages cheered her up from time to
+time. She always endeavoured to put into words as honestly as she could
+her motives and ambitions in life, her shame, disappointments, longings
+and loves. The diaries thus paint a conscientious self-portrait, albeit
+necessarily a fragmentary one. In February 1892 she realized only too
+well what its greater importance might be:</p>
+<p>I’ve brought my diary more or less up to date, and will keep it up
+faithfully. Later on, the child should at least be able to form an
+opinion about his mother’s life—what she thought, felt and wanted. Her
+diaries and the letters from his father and his uncle—he’ll be able to
+use them to reconstruct their lives from the past.</p>
+<p>Her notes undoubtedly fulfilled this function for Vincent; in any
+event he quoted several passages from them in his later edition of Van
+Gogh’s collected letters.” In his turn, he too kept a diary, another
+important source for this biography because it reveals much about his
+relationship with his mother and what he thought about her.</p>
+<p>Aside from the diaries, letters are a crucial source for the
+reconstruction of Jo’s life. Hundreds of them have survived) recived
+from and sent to friends, her parents, her brother Andries, Theo) her
+son Vincent and many others. Most of these letters are in the Van Gogh
+Museum. Sometimes, even now, remarkable acquisitions are added to the
+collection. In May 2008, for instance, Sylvia Cramer, a trustee of the
+Vincent van Gogh Foundation, made available a surprising addition: 102
+unpublished letters from the artist Isaac Israéls to Jo, including
+thirteen postcards and two picture postcards. All this time the letters
+had been in the possession of Sylvia’s mother, Mathilde Cramer-van Gogh,
+who was Vincent’s daughter and Jo’s granddaughter. They are now part of
+the collection of the Vincent van Gogh Foundation. Most of the letters
+are undated, they cover the period from February 1891 to January 1924,
+and reveal a short but intense relationship that until now was unknown
+to the public at large.” Isaac and Jo began as friends, became lovers
+for a while and later established a close friendship. As far as we know,
+there are no surviving letters from Jo to Isaac.</p>
+<p>The letters her brother Andries wrote to their parents, which Jo also
+read, shed considerable light on Jo’ early years. They tell us what
+issues occupied the family and which subjects were regarded as relevant:
+everyday subjects like food, clothes and personal hygiene, but also more
+elevated matters such as maintaining social contacts and furthering
+one’s artistic and intellectual development through literature, music
+and visits to museums and theatres. Jo was curious and read a great
+deal, not solely for pleasure and diversion, but because it was an
+absolute necessity for her from an early age. The ideas and actions of
+characters in novels she found sympathetic more than once provided her
+with something to hold on to.</p>
+<p>Jo’s most intimate and intense correspondence was with Theo. The
+greater part dates from the period of their engagement and there are a
+few letters written while they were married. There are 101 letters
+altogether. Until now, of all Jo’s correspondence only these letters
+between her and Theo have been published in book form, in part because
+of their fascinating and touching contents, but also because the last
+tragic years of Vincent’s life can be largely traced through
+them.”Although many of Jo’s personal letters have survived, the majority
+of her correspondence relates to business. As time passed, her contacts
+with exhibition makers, art dealers and publishers expanded ever further
+and the stacks of correspondence from at home and abroad grew
+steadily.</p>
+<p>A good deal has been preserved, but by no means all. In part this was
+Jo’s own doing, if we are to believe what she wrote in 1889. It was in
+January, she was getting ready to leave for Paris and she wrote to Theo:
+’You know I’ve always been fanatical about keeping letters of any
+interest to me, but now I must finally start disposing of them:” There
+is a good chance that she actually did so, but even if that were not the
+case, her son had no qualms—at least so the sources tell us, for a
+passage in Vincent’s diary (written several decades later) reveals an
+even more drastic bout of tidying mania:</p>
+<p>Also came across a box of letters my mother had kept, from Jos and
+from me, from before 1920 and some after that. It was all personal with
+few general things, some opened by the censor. I burnt the whole lot in
+the fireplace in my room—and without reading them all again.”</p>
+<p>There are considerably fewer letters dating from the last period of
+Jo’s life, because she and the members of her family were living close
+to one another and the telephone had been introduced.”</p>
+<p>The account book mentioned previously provides crucial information
+about Jo’s life that supplements the diaries and letters. The
+organization and people to whom she sold Van Gogh’s are recorded in it,
+and she kept a reasonably accurate record of the sums she received for
+paintings and drawings, so that it is possible to follow the massive
+rise in the price of his work during her lifetime.Nevertheless, Jo’s
+account book cannot serve as the only source for the biography, for
+there were of course exhibitions at which she did not put in works for
+sale or sold nothing. For the purposes of this book I have therefore
+worked on the basis of all the Van Gogh exhibitions on which Jo
+collaborated, in other words not only those where she actually sold. My
+reconstruction of exhibitions is base on the extensive documentation and
+literature in the Van Gogh Museum library. This means that examples of
+both categories—selling exhibitions and ‘ordinary’ exhibitions—will crop
+up throughout the book. No attempt has been made to cover every
+exhibition. I discuss only the most salient and nateworthy of the
+countless exhibitions to which Jo contributed with her collection.
+Similarly, I have only treated the most striking of her contacts with
+private individuals. Exhibitions could be important to Jo for a variety
+of reasons: sometimes she was persuaded by the artistic views and ideals
+of the organizers or the international importance of a show, on other
+occasions she acted chiefly for social motives.</p>
+<p>This translation follows the Dutch edition Alles voor Vincent: Het
+leven van Jo van Gogh-Bonger 2019). Corrections have been made here and
+there. The translations from the correspondence between Theo and Jo,
+Kort geluk (1999), were taken from the English edition, Brief Happiness
+( 1999), save for a few minor changes. There are also two important
+revisions. Firstly, the year in which Vincent came of age. It was 1911,
+not 1915. The second revision relates to an important note Gustave
+Coquiot made (see Chapter 14 (p. 266). He wanted to find out more about
+Van Gogh, so in June 1922 he paid Jo a visit at 77 Koninginneweg in
+Amsterdam. Coquiot jotted down what he saw and heard there in a small
+notebook; later he typed out his observations and added them to his
+extensive documentation on Van Gogh, which he kept in a large exercise
+book. This book reveals that Anton Kröller and Helene Kröller-Müller
+once proposed buying the whole collection from Jo.” On this revelation
+see Zwikker 2021.</p>
+<p>In this biography I show how Jo went to work, the paths she trod, the
+decisions she took, the people she met—in short, how she managed to
+accomplish the task she had set herself. The fact that she also had an
+everyday life, with boarding house guests, maids, a growing son,
+parents, brothers and sisters, friends, books, pets and a garden full of
+flowers, will play its full part in the chapters that follow, if for no
+other reason than that Jo particularly appreciated this intimate
+minutiae in a biography. Writing about the biography of George Eliot in
+her diary, she commented that it contained everything about the
+intellectual relationship between Eliot and her partner George Henry
+Lewes, but regrettably nothing about the details and particulars of
+their relationship: ’something about their daily life—those small,
+revealing features are missing. To her that was clearly a missed
+opportunity. Jo was a passionate reader and lover of biographies
+throughout her life. One of her earliest portrait photographs shows her
+sitting with a book on her lap.</p>
+</details>
+<h2 id="hélène-kröller-müller">Hélène Kröller-Müller</h2>
+<p>Le livre comporte un paragraphe sur Hélène Kröller-Müller, le texte
+anglais/français ci-dessous a été obtenu grace à la reconnaissance de
+caractère et à la traduction de l’anglais vers le français avec Google
+traduction.</p>
+<p>In the first two decades of the twentieth century there was one other
+woman, apart from Jo, who contributed significantly to the rise in
+interest in Van Gogh’s work. Helene Kröller-Müller lived in The Hague
+and was married to the fabulously wealthy businessman Anton Kroller.
+Supported by her closest advisor, H.P. Bremmer, she rapidly built up an
+impressive collection of Van Goghs. Bremmer had been a part-time
+employee of hers (for one toone-and-a-half days a week) since 1907 and
+was also her private art history teacher. She had read his book Vincent
+van Gogh. Inleidende beschouwingen and was impressed by Van Gogh’s
+‘spiritual elevation’ and the way he ‘transcended hardship’, as Bremmer
+had described it. Helene spent more than 1.2 million guilders on art
+between 1907 and 1919. At the end of 1919, her husband Anton’s personal
+fortune was estimated at twenty million. Her purchases attracted the art
+trade’s attention to Van Gogh. She made her collection available to the
+general public at an early stage, and in so doing gave the introduction
+and acceptance of modern art in the Netherlands a strong shot in the
+arm. The Kröller-Müller appreciation of Van Gogh’s work must have
+delighted Jo.</p>
+<p>It is remarkable that while Helene was amassing a collection in The
+Hague that starred Van Gogh, there was someone living in Amsterdam who
+owned just such a collection. It is even more remarkable that the two
+women never met. As far as we know, the paths of Jo and Helene, who was
+seven years her junior, never crossed. It is possible that they
+deliberately kept out of each other’s way. For one thing, they held very
+different views and Jo, with her social democratic ideas, probably felt
+little need to seek out the immensely rich couple who could buy whatever
+they wanted. In her view they were out-and-out capitalists. As far as
+Helene was concerned, she probably thought that a visit to Jo was
+beneath her dignity. Evert van Straaten, who later became director of
+the Kröller-Müller Museum, wrote that he could well imagine ‘that the
+class-conscious Mrs Kröller would prefer not to climb the stairs to a
+first floor flat in Amsterdam’. In any case, Helene was not someone who
+found it easy to meet new people or develop new frienship. She was
+obstinate, proud and a loner. In her dealings with people her usual
+attitude was that ‘he who pays the piper calls tune’. There was a
+telling example of her behaviour at the beginnin of 1930s, five years
+after Jo’s death. She did not want Van Goghs from her collection to be
+hung in among those from Vincent’s in Stedelijk museum. This was dispite
+the fact that in the end more than thierty Van Goghs that originally
+been in Jo’s and Vincent’s collection had ended up with the
+Kröller-Müllers through dealers and intermediates</p>
+<p>Durant les deux premières décennies du XXe siècle, une autre femme,
+outre Jo, contribua de manière significative à l’essor de l’intérêt pour
+l’œuvre de Van Gogh. Helene Kröller-Müller vivait à La Haye et était
+mariée au richissime homme d’affaires Anton Kröller. Soutenue par son
+plus proche conseiller, H.P. Bremmer, elle constitua rapidement une
+impressionnante collection de Van Gogh. Bremmer était son employé à
+temps partiel (un jour et demi par semaine) depuis 1907 et était
+également son professeur particulier d’histoire de l’art. Elle avait lu
+son ouvrage « Vincent van Gogh. Inleidende beschouwingen » (Remarques
+introductives) et avait été impressionnée par « l’élévation spirituelle
+» de Van Gogh et par sa capacité à « transcender les épreuves », selon
+les termes de Bremmer. Hélène dépensa plus de 1,2 million de florins en
+art entre 1907 et 1919. Fin 1919, la fortune personnelle de son mari
+Anton était estimée à vingt millions de florins. Ses acquisitions
+attirèrent l’attention du marché de l’art sur Van Gogh. Elle mit sa
+collection à la disposition du public très tôt, contribuant ainsi
+fortement à l’introduction et à la reconnaissance de l’art moderne aux
+Pays-Bas. L’intérêt que portaient les Kröller-Müller à l’œuvre de Van
+Gogh dut ravir Jo.</p>
+<p>Il est remarquable que, tandis qu’Hélène constituait à La Haye une
+collection dont Van Gogh était la vedette, une autre personne, vivant à
+Amsterdam, possédait une collection similaire. Il est encore plus
+remarquable que les deux femmes ne se soient jamais rencontrées. À notre
+connaissance, les chemins de Jo et d’Hélène, de sept ans sa cadette, ne
+se sont jamais croisés. Il est possible qu’elles se soient délibérément
+évitées. D’une part, leurs opinions étaient très différentes et Jo, avec
+ses idées social-démocrates, ne ressentait probablement aucun besoin de
+rechercher ce couple immensément riche qui pouvait s’offrir tout ce
+qu’il désirait. À ses yeux, il s’agissait de capitalistes purs et durs.
+Quant à Hélène, elle pensait sans doute qu’une visite chez Jo était
+indigne de sa dignité. Evert van Straaten, qui devint plus tard
+directeur du musée Kröller-Müller, écrivit qu’il pouvait aisément
+imaginer « que Mme Kröller, soucieuse de son rang social, aurait préféré
+ne pas monter les escaliers jusqu’à un appartement au premier étage à
+Amsterdam ». Quoi qu’il en soit, Hélène n’était pas du genre à faire
+facilement de nouvelles rencontres ni à nouer des amitiés. Obstinée,
+fière et solitaire, elle avait pour principe, dans ses relations avec
+autrui, que « qui paie les musiciens choisit la musique ». Un exemple
+révélateur de son comportement remonte au début des années 1930, cinq
+ans après la mort de Jo. Elle refusait que les Van Gogh de sa collection
+soient exposés aux côtés de ceux de Vincent au Stedelijk Museum. Et ce,
+malgré le fait que, finalement, plus de trente Van Gogh, initialement
+issus des collections de Jo et Vincent, aient fini par rejoindre la
+collection des Kröller-Müller par l’intermédiaire de marchands et
+d’intermédiaires.</p>
+<p>In 1913 Helene Kröller-Miiller told her husband she wanted to stop
+buying Van Gogh’s art: Recently I’ve thought a.great deal about my
+collection, and I’ve come to the conclusion that we shouldn’t buy any
+more Van Goghs now, unless something really special turns up. … In
+general, though, I feel that we have a real wealth of Van Gogh’s work,
+the largest in the world along with Mrs Cohen. That sounds proud,
+doesn’t it? We have Van Goghs from all his periods .. . and it’s easy to
+trace developments in his ability and as a painter.”°</p>
+<p>En 1913, Hélène Kröller-Müller confia à son mari son désir de cesser
+d’acquérir des œuvres de Van Gogh : « J’ai beaucoup réfléchi ces
+derniers temps à ma collection et j’en suis venue à la conclusion que
+nous ne devrions plus acheter de Van Gogh, à moins d’une découverte
+exceptionnelle. […] En général, cependant, j’estime que nous possédons
+une véritable richesse dans l’œuvre de Van Gogh, la plus importante au
+monde avec celle de Mme Cohen. Cela sonne prétentieux, n’est-ce pas ?
+Nous avons des Van Gogh de toutes ses périodes… et il est facile de
+suivre l’évolution de son talent et de son style. »</p>
+<p>She had started collecting Van Goghs seriously in the summer of 1908,
+when she paid 4,800 guilders for Four Sunflowers Gone to Seed (F 452 /
+JH 1330). This still life was sold to her by Jo’s closest advisor De
+Bois, with Bremmer as intermediary.” What Helene wrote to her confidant
+Sam van Deventer on 23 November 1913 is revealing: ’I believe in a
+greater continued existence for myself in my intellectual life than in
+what I leave behind, I believe that the intellectual edifice I leave
+will bear more certain fruits than the corporality I could give through
+the children. She looked on the art she had accumulated as the
+fulfilment of her life. On another occasion, she wrote: ’At the end of
+the day, a person is defined by what they leave behind??* Once again
+Helene was not referring to her children, with whom she had 2 troubled
+relationship. In that regard, the two women could not have been more
+different. Jo’s priorities in life were her child and art in equal
+measure.</p>
+<p>Elle avait commencé à collectionner sérieusement les Van Gogh durant
+l’été 1908, lorsqu’elle déboursa 4 800 florins pour Quatre tournesols en
+graines (F 452 / JH 1330). Cette nature morte lui avait été vendue par
+De Bois, le plus proche conseiller de Jo, avec Bremmer comme
+intermédiaire. Ce qu’Hélène écrivait à son confident Sam van Deventer le
+23 novembre 1913 est révélateur : « Je crois en une existence plus riche
+et continue pour moi-même dans ma vie intellectuelle que dans ce que je
+laisserai derrière moi. Je crois que l’édifice intellectuel que je
+laisserai portera des fruits plus certains que la présence physique que
+je pourrais offrir à travers mes enfants.» Elle considérait l’art
+qu’elle avait accumulé comme l’accomplissement de sa vie. À une autre
+occasion, elle écrivait : « En fin de compte, une personne est définie
+par ce qu’elle laisse derrière elle. »* Là encore, Hélène ne faisait pas
+référence à ses enfants, avec lesquels elle entretenait des relations
+conflictuelles. À cet égard, les deux femmes ne pouvaient être plus
+différentes. Pour Jo, les priorités dans la vie étaient à parts égales
+son enfant et l’art.</p>
+<p>It was usually Helene who bought art, but on occasion Anton made
+impulse purchases. In 1928, for example, he was the one to effectively
+negotiate the acquisition of over a hundred drawings from the Dutch
+collector Hidde Nijland. And he encouraged Bremmer to ‘track down all
+the best Van Goghs.” It is difficult to overestimate the significance of
+Bremmer’s appreciation of and admiration for Van Gogh. He showed how
+crucial ‘aesthetic emotion’ was when contemplating a work of art. As a
+rule, Helene blindly accepted her adviser’s opinion. While she made the
+choices, it was he who proposed purchases, and her selection was in turn
+based on the artistic taste he had instilled in her. The only time that
+man and wife departed from this pattern, things immediately went very
+wrong. In November 1910, when Helene and Anton bought Van Gogh’s Reaper
+with a Scythe (after Jean-Frangois Millet) ’F 688 / JH 1783) from Paul
+Cassirer in Berlin without involving Bremmer, the latter said as soon as
+he saw the painting—undoubtedly prompted by his pique about being left
+out of the deal—that it was a fake, He was the expert and he brushed
+aside the argument that the work had come directly from the Van Gogh
+estate. The sale was promptly cancelled and the painting went back to
+Berlin. Cassirer told Jo about it and asked her for a certificate of
+authenticity. As for Bremmer’s opinion, he wrote: “Has the man gone
+mad?” This was one of the few times that the name Kréller appeared in a
+letter to Jo. Helene even felt it necessary to take the matter to court,
+and her suspicious attitude must have been all the more reason for Jo,
+to whom it came as a most unpleasant surprise, to have nothing to do
+with her.</p>
+<p>C’était généralement Hélène qui achetait des œuvres d’art, mais il
+arrivait qu’Anton cède à des achats impulsifs. En 1928, par exemple,
+c’est lui qui négocia avec succès l’acquisition de plus d’une centaine
+de dessins auprès du collectionneur néerlandais Hidde Nijland. Et il
+encouragea Bremmer à « dénicher les plus beaux Van Gogh ». Il est
+difficile de surestimer l’importance de l’appréciation et de
+l’admiration que Bremmer portait à Van Gogh. Il a démontré combien
+l’émotion esthétique était cruciale face à une œuvre d’art. En règle
+générale, Hélène suivait aveuglément l’avis de son conseiller. Si elle
+faisait les choix, c’était lui qui suggérait les acquisitions, et sa
+sélection reposait sur le goût artistique qu’il lui avait inculqué. La
+seule fois où le couple s’écarta de cette pratique, les choses
+tournèrent immédiatement au vinaigre. En novembre 1910, lorsqu’Hélène et
+Anton achetèrent à Paul Cassirer à Berlin, sans consulter Bremmer, le
+tableau de Van Gogh, La Faucheuse à la faux (d’après Jean-François
+Millet) « F 688 / JH 1783 », sans l’accord de Bremmer, ce dernier
+déclara, dès qu’il vit le tableau – sans doute vexé d’avoir été exclu de
+la transaction – qu’il s’agissait d’un faux. Se prenant pour un expert,
+il rejeta d’emblée l’argument selon lequel l’œuvre provenait directement
+de la succession Van Gogh. La vente fut aussitôt annulée et le tableau
+restitué. À Berlin, Cassirer en informa Jo et lui demanda un certificat
+d’authenticité. Quant à l’avis de Bremmer, il écrivit : « Cet homme
+est-il devenu fou ?» Ce fut l’une des rares fois où le nom de Kréller
+apparut dans une lettre adressée à Jo. Hélène jugea même nécessaire de
+porter l’affaire devant les tribunaux, et son attitude suspicieuse dut
+d’autant plus inciter Jo, à sa grande surprise, à rompre tout contact
+avec elle.</p>
+<p>Bremmer’s biographer Hildelies Balk wrote that a degree of rivalry
+swiftly developed in relations between Bremmer and Jo because they
+shared the objective of distributing Van Gogh’s work far and wide.! The
+Van Gogh researcher Stefan Koldehoff makes a similar comment about the
+relationship between Helene Krôller-Müller and Jo: ’The two women .… saw
+themselves as rivals—although they both contributed significantly to his
+fame. .…. The rivalry between the two was so great that they barely It
+is actually doubtful that Jo saw any rivalry at all. Both acted
+effectively, each in their own way, and the fact that Bremmer was able
+to interest more and more buyers can only have spoke to one another”?
+been good for Jo. It did no harm to her endeavours whatsoever.</p>
+<p>La biographe de Bremmer, Hildelies Balk, a écrit qu’une certaine
+rivalité s’est rapidement développée dans les relations entre Bremmer et
+Jo, car elles partageaient l’objectif de diffuser largement l’œuvre de
+Van Gogh ! Le chercheur sur Van Gogh, Stefan Koldehoff, fait une
+remarque similaire à propos de la relation entre Helene Kröller-Müller
+et Jo : « Les deux femmes… se considéraient comme des rivales, bien
+qu’elles aient toutes deux contribué de manière significative à sa
+renommée… La rivalité entre les deux était si forte qu’elles se
+parlaient à peine. Il est en fait douteux que Jo ait perçu une
+quelconque rivalité. Toutes deux agissaient efficacement, chacune à sa
+manière, et le fait que Bremmer ait pu intéresser de plus en plus
+d’acheteurs n’a pu que profiter à Jo. Cela n’a en rien nui à ses
+efforts. »</p>
+<p>She was certainly aware of some purchases. In April 1912, for
+instance, the Krôller-Müllers hit the headlines when they spent 115,000
+guilders on fifteen paintings and two drawings by Van Gogh in Paris.
+Such an exorbitant purchase attracted the attention of international
+collectors and dealers, as did the sale of Cornelis Hoogendijk®
+collection a month later. On the latter occasion the couple acquired
+four more Van Goghs, paying 16,000 guilders for The Langlois Bridge with
+Washerwomen (F 397 / JH1368) alone. That was more than five times the
+guide price. Such astronomical sums caused a sensation and pushed up
+prices. Jo knew there had been fiercely competitive bidding at the
+auction and that in the end the painting was knocked down to a Dutch art
+lover, according to the NRC of 12 May 1912. The huge numbers were indeed
+impressive. In that one year the couple bought nearly a hundred works
+and paid a total of over 280,000 guilders for them. By way of
+comparison, at that time a university professors annual salary was
+around four thousand guilders.%“ Needless to say, Jo went along with
+this price war. Her cash book reveals that she put fewer paintings on
+the market than before. The prices of Van Gogh’s works, which she had
+increased in 1905, were boosted again after 1912.*</p>
+<p>Elle était certainement au courant de certains achats. En avril 1912,
+par exemple, les Krôller-Müller firent la une des journaux en dépensant
+115 000 florins pour quinze tableaux et deux dessins de Van Gogh à
+Paris. Un tel achat exorbitant attira l’attention des collectionneurs et
+marchands d’art internationaux, tout comme la vente de la collection
+Cornelis Hoogendijk® un mois plus tard. À cette occasion, le couple
+acquit quatre autres Van Gogh, payant 16 000 florins pour Le Pont de
+Langlois avec lavandières (F 397 / JH1368) à lui seul. C’était plus de
+cinq fois le prix estimé. De telles sommes astronomiques firent
+sensation et firent grimper les prix. Jo savait que les enchères avaient
+été âprement disputées et que, finalement, le tableau avait été adjugé à
+un amateur d’art néerlandais, selon le NRC du 12 mai 1912. Ces chiffres
+impressionnants étaient en effet remarquables. Au cours de cette seule
+année, le couple acheta près d’une centaine d’œuvres pour un montant
+total de plus de 280 000 florins. À titre de comparaison, le salaire
+annuel d’un professeur d’université à cette époque était d’environ
+quatre mille florins. Inutile de préciser que Jo participa à cette
+surenchère. Son livre de comptes révèle qu’elle mit moins de tableaux en
+vente qu’auparavant. Les prix des œuvres de Van Gogh, qu’elle avait déjà
+augmentés en 1905, furent de nouveau revus à la hausse après 1912.</p>
+<p>Outside the Netherlands, most of the buyers were Germans, who
+purchased more and more Van Goghs with increasing frequency. The profit
+Cassirer made on the fifty-five works he bought from Jo between 1902 and
+1911 at a cost of some 50,000 guilders was substantial. Thanks in part
+to Cassirer, by 1914 there were 210 Van Goghs in Germany in sixty-four
+collections. Josse and Gaston Bernheim of Galerie Bernheim-Jeune were
+active in France, as were Émile and Amédée Schuffenecker. The fabulously
+wealthy Prince Alexandre Berthier also played a major role. He bought
+and sold some twenty-seven paintings by Van Gogh between 1905 and 1912.%
+There was interest in Russia too, where there were ten Van Goghs at the
+beginning of the century. They had ended up there in various ways.</p>
+<p>En dehors des Pays-Bas, la plupart des acheteurs étaient allemands,
+qui acquéraient de plus en plus de Van Gogh. Le profit réalisé par
+Cassirer sur les cinquante-cinq œuvres qu’il acheta à Jo entre 1902 et
+1911, pour un coût d’environ 50 000 florins, fut substantiel. Grâce
+notamment à Cassirer, on comptait, en 1914, 210 Van Gogh en Allemagne,
+répartis dans soixante-quatre collections. Josse et Gaston Bernheim, de
+la Galerie Bernheim-Jeune, étaient actifs en France, tout comme Émile et
+Amédée Schuffenecker. Le richissime prince Alexandre Berthier joua
+également un rôle majeur. Il acheta et vendit une vingtaine de tableaux
+de Van Gogh entre 1905 et 1912. L’intérêt était également présent en
+Russie, où l’on recensait dix Van Gogh au début du siècle. Ils y étaient
+arrivés de diverses manières.</p>
+</body>
+</html>

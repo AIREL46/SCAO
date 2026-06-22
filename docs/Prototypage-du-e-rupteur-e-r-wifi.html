@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prototypage-du-e-rupteur-e-r-wifi</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Prototypage-du-e-rupteur-e-r-wifi</h1>
+</header>
+<p>Le présent wiki rédigé par Régis LERUSTE est publié sur le site
+GitHub sous licence Creative Commons CC-BY représenté par le symbole
+ci-dessous :</p>
+<p>N.B. (CC-BY - extrait de wikipédia) : “l’œuvre peut être librement
+utilisée, à la condition de l’attribuer à l’auteur en citant son nom.
+Cela ne signifie pas que l’auteur est en accord avec l’utilisation qui
+est fait de ses œuvres.” <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi.png"
+alt="Schéma de principe 1" /> <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/schema_de_principe.png"
+alt="Schéma de principe 2" /> # Dossier de fabrication de la face avant
+## Face avant cotée <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/face_avant_cotation.png"
+alt="Face avant" /> # Dossier de fabrication du Circuit imprimé liaison
+filaire câblé ## Schéma électrique <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf.png"
+alt="Schéma électrique" /></p>
+<h2 id="b.cu"><strong>B.Cu</strong></h2>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf-1.png"
+alt="Circuit imprimé" /> ## Dossier de fabrication du Circuit imprimé
+liaison filaire ### <strong>Tipon noir et blanc du CI</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf-2.png"
+alt="Circuit imprimé" /> ### <strong>Plan de perçage</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf-drl_map.png"
+alt="Plan de perçage" /> ## Dossier de câblage du Circuit imprimé
+liaison filaire ### <strong>Schéma d’implantation des composants sur le
+CI</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf-3.png"
+alt="Circuit imprimé" /> ### <strong>BOM du CI</strong> <img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf-4.png"
+alt="Circuit imprimé" /> ## Approvisionnement des composants : * Embase
+RJ45 - Qte=1 * Embase 2.54 mm - Qte=6 * Bouton poussoir - Qte=1</p>
+<h1 id="mesure-du-courant-consommé-par-la-table-de-cuisson">Mesure du
+courant consommé par la table de cuisson</h1>
+<h2
+id="interface-de-communication-httpsgithub.comairel46scaowikidossier-de-modification-de-la-e-p-wifi">[Interface
+de communication]
+(https://github.com/AIREL46/SCAO/wiki/Dossier-de-modification-de-la-e-p-wifi)</h2>
+<h2 id="phidgets-current-sensor-module">Phidgets current sensor
+module</h2>
+<p>Le module <a
+href="https://www.phidgets.com/?tier=3&amp;catid=16&amp;pcid=14&amp;prodid=93">phidgets
+current sensor P/N 1122 0</a> est représenté ci-dessous sous la forme
+d’un schéma fonctionnel dont les circuits ne sont pas interconnectés car
+le schéma électrique n’est pas connu. Les circuits qu’il utilise sont
+l’ACS712 équivalent à celui du paragraphe suivant, un microcontrôleur et
+un convertisseur digital analogique. En sortie, il est équipé de 2
+connecteurs distincts qui recoivent la tension d’alimentation 5V et
+délivre une tension continue proportionnelle à la valeur du courant,
+l’un est relatif au un courant continu, l’autre au un courant
+alternatif. <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/phidgets_current-senso.png"
+alt="Phidgets current sensor module" /></p>
+<h3 id="mesures">Mesures</h3>
+<p>La formule donnée par <a
+href="https://www.phidgets.com/?tier=3&amp;catid=16&amp;pcid=14&amp;prodid=93">phidgets</a>
+est : * <code><strong>AC Current (<a
+href="https://en.wikipedia.org/wiki/Root_mean_square#In_electrical_engineering">RMS</a>)
+= VoltageRatio×42.04</strong></code></p>
+<p>Pour effectuer les mesures, un multimètre (mode mesure de courant AC)
+est mis en série avec la table de cuisson et un autre multimètre (mode
+mesure de tension continue) est connecté sur la sortie RMS, les valeurs
+relevées sont les suivantes : * <code><strong>0.570 V - 4.7
+A</strong></code> pour le foyer intérieur -&gt;
+<code><strong>(0.570/5)X42.04 = 4.8 A</strong></code> *
+<code><strong>1.200 V - 10 A</strong></code> pour les foyers intérieur
+et extérieur -&gt; <code><strong>(1.200/5)X42.04 = 10.09
+A</strong></code>.</p>
+<p>N.B. : le voltage ratio est obtenu en divisant la valeur mesurée par
+5 (valeur de la tension qui alimente le module).</p>
+<h2 id="acs712">ACS712</h2>
+<p>Le circuit <a
+href="https://pdf1.alldatasheet.com/datasheet-pdf/view/168326/ALLEGRO/ACS712.html">ASC712</a>
+est prévu pour mesurer les courants continu et alternatif. Le courant à
+mesurer traverse une résistance de 1.2 mohm inclus dans le boîtier.
+Cette résistance baigne dans un champ magnétique qui engendre une
+tension perpendiculaire à ce dernier. Il s’agit de l’<a
+href="https://fr.wikipedia.org/wiki/Effet_Hall">effet Hall</a>. Cette
+tension est amplifiée et disponible en sortie du circuit. Cette tension
+est proportionnelle au courant qui traverse la résistance. Dans notre
+cas le courant à mesurer est alternatif, il faut donc prévoir de
+redresser (voir application 4 de la <a
+href="https://pdf1.alldatasheet.com/datasheet-pdf/view/168326/ALLEGRO/ACS712.html">datasheet</a>)
+le signal avant d’envoyer la tension continue résultante sur une entrée
+analogique du microcontrôleur. Ce circuit fait partie d’une famille qui
+se décline en 3 circuits différents (5, 20, 30A).</p>
+<p>La mise en oeuvre de ce circuit demande une attention particulière
+des 2 points suivants : * en fonction de la valeur du courant à mesurer,
+le choix de la variante parmi les 3 proposés : 5, 20 et 30A, la
+<strong>sensibilité</strong> est respectivement : 185, 100, 66 mV/A *
+l’optimisation du niveau de <strong>bruit</strong> implique le choix la
+valeur du condensateur <strong>CF</strong> de filtrage</p>
+<p>La <strong>sensibilité</strong> est mise en évidence sur les deux
+graphiques ci-dessous (la variante 20A n’est pas représentée) : <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/ACS712_5A.png"
+alt="ACS 712 5A" /> <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/ACS712_30A.png"
+alt="ACS 712 20A" /></p>
+<p>Le niveau de <strong>bruit</strong> en sortie du circuit est maîtrisé
+par un filtre dont le condensateur CF est externalisé (pin 6), pour la
+variante 20A : * 4.7 nF pour une bande passante de 20kHz * 47 nF pour
+une bande passante de 2kHz * 1 nF pour une bande passante de 50kHz.</p>
+<p>Le courant consommé par la table de cuisson est au préalable mesuré
+par un multimètre : * <code><strong>4.7 A (foyer
+intérieur)</strong></code> * <code><strong>9.8 A (foyers intérieur et
+extérieur).</strong></code></p>
+<p>L’approvisionnement des composants est effectué chez digikey : * L’<a
+href="https://www.digikey.com/en/products/detail/allegro-microsystems/ACS712ELCTR-20A-T/1284594?s=N4IgjCBcpmCsBmKoDGUBmBDANgZwKYA0IA9lANrgAsATAAxUCcIAusQA4AuUIAypwCcAlgDsA5iAC%2Bk4jQogAggGFeAdjByWkoA">ACS712ELCTR-20A-T</a>
+dont le pitch est 0.05 pouce * Le <a
+href="https://www.digikey.com/en/products/detail/aries-electronics/lcqt-soic8-8/4754588">SOCKET
+ADAPTER SOIC TO 8DIP</a> permet l’adaptation du pitch de 0.05 à 0.1
+pouce, cette adaptation facilite l’essai du circuit sur la breadboard
+Arduino.</p>
+<p>Le schéma électrique réalisé sur la breadboard est celui de
+l’application 4 de la <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/ACS712_appli4.png">datasheet</a>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/ACS712_appli4.png"
+alt="Application 4" /> Le câblage de cette application 4 sur la
+breadboard est donné par la photo ci-dessous :</p>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/ACS712_cablage.JPG"
+alt="Câblage sur la breadboard" /> ## Mesures * Mesures de la tension
+continue (5V) et du courant consommé par le circuit ACS712 et
+comparaison avec les valeurs données par la datasheet : *
+<code><strong>4.98 V</strong></code> * <code><strong>9.68
+mA</strong></code>, valeur cohérente avec Min.=6, Typ.=8, Max.=11 mA. *
+Mesure de la tension continue Vout (pin7) sans courant traversant la
+résistance de 1.2 mOhm et interprétation par rapport à la valeur
+annoncée par la datasheet : * <code><strong>-1.383 V</strong></code>
+(tension pas stable et en diminution progressive), la datasheet indique
+2.5 V ?!… * Mesure de la tension alternative Vout sans courant
+traversant la résistance de 1.2 mOhm, puis avec courant (4.7 A) : *
+1.340 V * 1.890 V * soit une différence de <strong>0.550 V</strong>,
+compte tenu de la sensibilité de 100 mV/A donne 4.7 X 0.1 =
+<strong>0.470 V</strong> * Mesure de la tension continue après la
+cellule de filtrage avec et sans courant traversant la résistance de 1.2
+mOhm : * 0.660 V (la valeur est la même dans les 2 cas et elle est
+fluctuante).</p>
+<h1 id="relais-statique-celduc-pour-circuit-imprimé-skl10120">Relais
+statique CELDUC pour circuit imprimé SKL10120</h1>
+<p>Le relais statique CELDUC <a
+href="https://www.e-catalogue.celduc-relais.com/fr/index.php?controller=attachment&amp;id_attachment=42">SKL10120</a>
+est fabriqué selon une nouvelle technologie <strong>DCB</strong>
+(<strong>D</strong>irect <strong>C</strong>opper
+<strong>B</strong>onding) qui offre l’avantage d’un meilleur
+refroidissement. <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/photos_relais_celduc.png"
+alt="Photos relais Celduc" /> <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/mesure_temp_relais_celduc.png"
+alt="mesure_temp_relais_celduc" /> # Interface Celduc L’objet de
+l’interface Celduc est l’adaptation électrique du signal généré par le
+microcontrôleur Arduino MKR wifi 1010 et le circuit de commande du
+relais statique Celduc SUL 842070. La spécification technique du
+microcontrôleur est : * Circuit Operating Voltage 3.3V * DC Current per
+I/O Pin 7 mA.</p>
+<p>La spécification technique de l’entrée de commande du relais statique
+Celduc SUL 842070 est : * tension de commande : 3V minimum * courant
+minimun : 10 mA.</p>
+<p>Des essais ont montré que : * 3.3V est insuffisant * pour le courant,
+il vaut mieux prévoir environ 15 mA.</p>
+<p>Le schéma ci-dessous répond à ces exigences.</p>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/int_celduc.png"
+alt="Interface Celduc" /> Quand le transistor est saturé, la tension est
+d’environ 4,7 Volts et le courant est au environ des 15 mA. # Interface
+P230V <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/interface_P230V.JPG"
+alt="Interface P230V" /></p>
+<p>L’objet de l’interface P230V est de transmettre au MKR wifi 1010
+l’information de présence (ou d’absence) de l’alimentation 230 Volts de
+la table de cuisson.</p>
+<p>Un chargeur 5 Volts connecté sur la même ligne que la table de
+cuisson fournit : * 5 Volts si la ligne est alimentée * 0 Volts lors
+d’une coupure secteur.</p>
+<p>Un essai de connection directe de la sortie 3.3V du e-rupteur
+(Arduino Uno) a montré que le MKR wifi 1010 n’accepté pas la connection
+d’une deuxième source d’alimentation. Pour régler ce problème, un
+optocoupleur assure l’isolation galvanique. <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/interface_P230V.png"
+alt="Interface P230V" /></p>
+</body>
+</html>

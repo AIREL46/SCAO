@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Description-fonctionnelle-des-systèmes-de-cuisson-automatisée</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Description-fonctionnelle-des-systèmes-de-cuisson-automatisée</h1>
+</header>
+<p>La description fonctionnelle des systèmes de cuisson automatisée (<a
+href="http://fablabo.net/wiki/SCC">SCAO</a> et <a
+href="http://fablabo.net/wiki/SCC">SCI</a>) décline 3 fonctions
+distinctes : * la mesure de la température sur le couvercle de la
+casserole * la <a
+href="https://fr.wikipedia.org/wiki/R%C3%A9gulation_automatique">régulation
+automatique</a> de la température * le réglage du flux thermique.</p>
+<p>Ces trois fonctions sont complétées d’une fonction d’<a
+href="https://fr.wikipedia.org/wiki/Interactions_homme-machine">IHM</a>.</p>
+<p>N.B. : les abréviations utilisées se réfèrent à la <a
+href="https://github.com/AIREL46/SCAO/blob/master/Brevet/SCAO/Gestion_des_figures/Reperes_des_figures.ods">liste
+des abréviations</a>. # IHM L’IHM permet, avant le lancement du
+processus, de choisir un gabarit de cuisson parmi les 9 disponibles, de
+fixer la durée de chauffe DC1, après le lancement du processus, de
+connaître la durée restante jusqu’à la fin de chauffe et d’interrompre
+le déroulement du processus en utilisant le bouton poussoir ON/OFF en
+cas d’anomalie. # Mesure de la température Dans le domaine de la <a
+href="http://fr.wikipedia.org/wiki/Mesure_physique">mesure physique</a>,
+la <a
+href="http://fr.wikipedia.org/wiki/Thermom%C3%A9trie">thermométrie</a>
+est le domaine de la physique concernant la mesure de la température.
+Une illustration de la problématique liée à cette mesure est fréquemment
+observée dans nos villes. L’affichage de la température sur des panneaux
+électroniques est rarement précis ! A la vitrine des opticiens qui
+commercialisent des thermomètres électroniques et des stations météo,
+observez et comparez les valeurs des températures affichées, vous
+trouverez des écarts très significatifs, dans certains cas, jusqu’à plus
+ou moins 2 degrés Celsius. En résumé, cette mesure qui nous semble, à
+priori, relativement simple, a besoin d’être réalisée avec beaucoup de
+rigueur.</p>
+<p>La mesure de la température fait traditionnellement l’objet de 3 sous
+fonctions, la capture, le traitement du signal et la transmission de la
+valeur mesurée. * La capture selon deux méthodes distinctes, avec
+contact et sans contact. * La capture de la température avec contact à
+l’aide d’une <a
+href="http://fr.wikipedia.org/wiki/Sonde_de_temp%C3%A9rature">sonde de
+température</a>, par exemple un <a
+href="http://fr.wikipedia.org/wiki/Thermocouple">thermocouple</a> placé
+en contact intime avec l’élément à mesurer. * La capture de la
+température sans contact à l’aide d’une sonde infra rouge, une <a
+href="http://fr.wikipedia.org/wiki/Thermopile">thermopile</a> par
+exemple. * Le traitement du signal : la sonde est connectée à un
+dispositif électronique qui va effectuer une amplification, un filtrage
+et une conversion analogique / digitale.</p>
+<ul>
+<li>La transmission de la valeur mesurée s’établit selon l’un des modes
+de communication :
+<ul>
+<li>Filaire : <a
+href="http://fr.wikipedia.org/wiki/Ethernet">Ethernet</a>, <a
+href="http://fr.wikipedia.org/wiki/Universal_Serial_Bus">USB</a>.</li>
+<li>Sans fil, en anglais <a
+href="https://en.wikipedia.org/wiki/Wireless">Wireless</a> :
+[http://fr.wikipedia.org/wiki/Wi-Fi WI-FI], <a
+href="https://en.wikipedia.org/wiki/Bluetooth">Bluetooth</a>, <a
+href="https://en.wikipedia.org/wiki/RF_module">Module RF 433
+MHZ</a>.</li>
+</ul></li>
+</ul>
+<p>L’apparition des thermomètres digitaux apporte une organisation
+différente des 3 sous-fonctions décrites ci-dessus. Un exemple de
+thermomètre digital est le <a
+href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">DS18B20</a>
+fabriqué par <a href="https://www.maximintegrated.com/en.html">Maxim
+integrated</a>. # Régulation automatique de la température En référence
+à Wikipédia, <em>la <a
+href="https://fr.wikipedia.org/wiki/R%C3%A9gulation_automatique">régulation
+automatique</a> est l’ensemble des techniques qui permettent de
+contrôler une grandeur physique (ex. : <strong>température</strong>,
+vitesse, pression), sans intervention humaine, pour la maintenir à une
+valeur donnée, appelée consigne. C’est une branche de l’<a
+href="https://fr.wikipedia.org/wiki/Automatique">automatique</a>
+qui,</em> dans le contexte de notre application, fait appel à un <em><a
+href="https://fr.wikipedia.org/wiki/Automatique#Asservissement">asservissement
+en boucle fermée</a>.</em></p>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/regulation_automatique.png" />
+Le schéma simplifié de la régulation automatique ci-dessus donne un
+premier aperçu du fonctionnement de cet asservissement en boucle fermée.
+La variable utilisée est la durée de chauffe. La boucle se répéte selon
+des itérations dont la durée est contante et égale à 30 secondes. Lors
+du déroulement de chaque itération les tâches suivantes sont exécutées :
+* mesure de la température sur le couvercle de la casserole * calcul de
+la <strong>D</strong>urée <strong>I</strong>térative de
+<strong>ch</strong>auffe (<strong>Dich</strong>) * actionner le relai
+pour appliquer la phase au début de la Dich * relacher le relai pour
+déconnecter la phase à la fin de la Dich.</p>
+<p>N.B. : Les valeurs de la Dich vont varier d’une itération sur l’autre
+et ce sont ces variations qui vont permettre la régulation de
+température. ## Définitions préliminaires ### Les gabarits de cuisson
+Neuf gabarits de cuisson sont à la disposition de l’utilisateur. Ils
+sont repérés de 1 à 9 à l’image de la graduation d’un bouton de réglage
+d’une table de cuisson traditionnelle. A chaque numéro de gabarit
+<strong>SEL</strong>ecté (1 à 9) correspond 9 paramères : *
+<strong>p</strong> : la <strong>p</strong>ériode ou durée de l’itération
+exprimée en seconde * <strong>G</strong> : le <strong>G</strong>ain
+exprimé sans unité (0&lt;G&lt;1) * <strong>I</strong> :
+l’<strong>I</strong>ntensité exprimé sans unité (0&lt;I&lt;1) *
+<strong>Tu</strong> : <strong>T</strong>empérature
+d’<strong>u</strong>tilisation exprimée en degrés Celsius (°C) *
+<strong>Tm</strong> : le <strong>T</strong>emps de
+<strong>m</strong>ontée exprimé en minute (mn) * <strong>Tau</strong> :
+lettre grecque qui exprime la constante de temps en minute (mn) *
+<strong>Vc</strong> : la <strong>V</strong>itesse de
+<strong>c</strong>onsigne exprimée en degrés Celsius par minute (°C/mn)
+* <strong>Ac</strong> : l’<strong>A</strong>ccélération de
+<strong>c</strong>onsigne exprimée en degrés Celsius par minute au carré
+(°C/mn2) * <strong>ta</strong> : le nombre d’i<strong>t</strong>érations
+<strong>a</strong>nticipées.</p>
+<p>Pour chaque valeur de gabarit <strong>SEL</strong>ectionnée, le
+tableau ci-dessous donne les valeurs correspondantes des 9 paramètres.
+Fig. 31<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/tablo-gabarits.png"
+alt="Tableau des gabarits" /> Ces paramètres sont mémorisés sous la
+forme d’un tableau dans le programme informatique de l’application.
+L’avantage de cette organisation est de pouvoir les modifier facilement
+lors de l’expérimentation. ### Les durées <strong>a)</strong>
+<strong>DC1</strong> la <strong>D</strong>urée de
+<strong>C</strong>uisson est saisie par l’utilisateur (voir la fonction
+IHM) : * elle est prise en compte à partir du point D, elle est ensuite
+décrémentée à chaque itération * quand elle est égale à zéro, elle
+déclenche FC1.</p>
+<p><strong>b)</strong> <strong>DC2</strong> la <strong>D</strong>urée de
+<strong>C</strong>uisson globale, elle est la somme de DC1 et de la
+durée de la post cuisson.</p>
+<p><strong>c)</strong> La <strong>durée restante</strong>, elle
+correspond au démarrage à la durée cumulée des phases 1, 2 et 3, elle
+est ensuite décrémentée à chaque itération, c’est elle qui est affichée
+à l’usage de l’utilisateur. Elle tient compte des laps de temps où la
+température est encore trop faible pour assurer une cuisson effective.
+### Les trajectoires La <a
+href="https://fr.wikipedia.org/wiki/Trajectoire#Math%C3%A9matiques">trajectoire</a>
+est définie par une <a
+href="https://fr.wikipedia.org/wiki/Fonction_(math%C3%A9matiques)">fonction
+(mathematiques)</a> qui associe la température et le temps. Il y a 2
+types de trajectoire qui se distiguent par la méthode utilisée pour
+définir cette association, pour : * la trajectoire de référence, avec
+une relation mathémathique * la trajectoire réelle, avec la mesure
+périodique de la température.</p>
+<p><strong>a) La trajectoire de référence</strong></p>
+<p>Fig. 4 - Gabarit <strong>SEL</strong>ecté = 5<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/trajectoire.png"
+alt="Trajectoire" /> La courbe de la figure ci-dessus représente la
+trajectoire de température en fonction du temps. Elle est composée de
+deux segments : * le premier (phase 1) est une droite dont la pente est
+<strong>(T10%-Ti)/Tm</strong> * le second (phase 2 et 3) est une courbe
+dont l’équation est :</p>
+<p><strong>Tc23 = T10% + (Tu - T10%).(1 – e – t/tau)</strong>.</p>
+<p><strong>b) Les trajectoires de référence</strong></p>
+<p>Fig. 12<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/trajectoires.png"
+alt="Trajectoires" /> Les courbes de la figure ci-dessus représentent
+les 9 trajectoires de température.</p>
+<p><strong>c) La trajectoire réelle T=f(t)</strong></p>
+<p>Fig. 30<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/definition_preliminaire.png"
+alt="Définitions préliminaires du SCAO" /> En référence à la figure
+ci-dessus, les définitions préliminaires sont établies à l’aide de la
+trajectoire réelle T=f(t), selon l’axe des abscisses t, le déroulement
+du processus de cuisson est décomposé en quatre phases successives : la
+phase 1 dite inertielle, la phase 2 dite ascendante, la phase 3 dite de
+maintien, la phase 4 dite de post cuisson. L’axe des ordonnées T est
+jalonné de points caractéristiques, la température initiale Ti, trois
+températures intermédiaires : T10%, 55°C, T90% et la température imposée
+par l’utilisateur Tu. De ces premières définitions découlent
+implicitement celles du début et de la fin de chacune des quatre phases,
+de la durée de cuisson DC1, de la fin de chauffe FC1, de la durée de
+cuisson DC2 et de la fin de cuisson FC2. Ces définitions permettent la
+mise en place d’une organisation structurelle. Dans les faits, elles
+sont adaptées ou simplifiées au fur et à mesure de la réalisation de
+l’invention. ### L’auto compensateur L’auto compensateur consiste à
+calculer l’écart e, appliqué au correcteur, entre la rajectoire de
+référence et la trajectoire réelle. Fig. 8<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/auto-compensateur.png"
+alt="Auto compensateur" /></p>
+<h3 id="le-correcteur">Le correcteur</h3>
+<p>Fig. 6 Gabarit SELecté=5<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/Dich.png"
+alt="Dich" /> En référence à la figure ci-dessus, le correcteur, à
+partir de l’écart e fourni par l’auto-compensateur, calcule à chaque
+itération, la correction (C=G.e), et la <strong>D</strong>urée
+<strong>i</strong>térative de <strong>ch</strong>auffe
+(<strong>Dich</strong>) selon la formule indiquée sur la figure, où : *
+<strong>p</strong> est la <strong>p</strong>ériode ou la durée de
+l’itération, paramètre issu du gabarit * <strong>I</strong> est
+l’<strong>I</strong>ntenstité, paramètre issu du gabarit *
+<strong>G</strong> est le <strong>G</strong>ain, paramètre issu du
+gabarit * <strong>e</strong> est l’<strong>é</strong>cart, valeur
+calculée par l’autocompensateur</p>
+<p>Pour le gabarit <strong>SEL</strong>ecté égal à <strong>5</strong>,
+les valeurs que peut prendre <strong>Dich</strong> sont comprises entre
+: * <strong>zéro</strong> * et au maximun quand le produit
+<strong>G.e</strong> est supérieur à 1, soit
+Dich=P.I=30X0.275=<strong>8.25 secondes</strong>. ### Autorisation de
+chauffe L’<strong>A</strong>utorisation de <strong>ch</strong>auffe
+<strong>Ach</strong> est un variable booléenne qui prend la valeur vraie
+si les 4 conditions suivantes sont remplies : * la Correction C&gt;=0
+avec C=e.G * la Vitesse future Vf&lt;Vc * l’Accélération mesurée
+Am&lt;=Ac * l’ébulition n’est pas détectée. ### Réglage du flux
+thermique Le réglage du flux thermique <strong>Rfth</strong> élabore la
+commande du relais statique qui va commuté l’alimentation en 230V de la
+table de cuisson. Cette commande est élaboré à partir de la Dich et de
+l’Ach. ### Les phases Le déroulement du processus de cuisson est
+décomposé en quatre phases successives : * la phase 1 (ph1) dite
+inertielle, la trajectoire de référence est une droite dont la pente est
+faible. * la phase 2 (ph2) dite ascendante, la trajectoire de référence
+est d’abord énergique puis s’infléchie progressivement, la phase 2 se
+termine quand la température T atteint T98% * la phase 3 (ph3) dite de
+maintien, la trajectoire de référence est progressivement assymptotique
+par rapport à Tu, la phase 3 se termine quand la FC1 est effective * la
+phase 4 (ph4) dite de post cuisson, la source de chaleur n’est plus
+sollicitée, le température T va décroitre progressiment jusquà atteindre
+T85% qui déclenche FC2. ### Les points caractéristiques Sur l’axe des
+ordonnées jalonné par : * La température initiale Ti * la température
+T10% qui déclenche la fin de la phase 1 * la température T=55°C
+correspondant au point D (démarrage de la cuisson) * la température T90%
+correspondant à la fin d la phase 2 Sur la courbe T=f(t) : * D
+correspond au démarrage de la cuisson. ### Les vitesses * Vm est la
+vitesse de variation de la température mesurée obtenue en calculant la
+dérivée première de la fonction T=f(t), * Vc est la vitesse de consigne
+à ne pas dépassée, elle est issue du gabarit SELectionné par
+l’utilisateur. ### Les accélérations * Am l’accélération est obtenue en
+calculant la dérivée de la fonction Vm=f(t) * Ac est l’accélération de
+consigne à ne pas dépassée, elle est issue du gabarit SELectionné par
+l’utilisateur. ## Principe de fonctionnement Le principe de
+fonctionnement de la régulation en température est basé un <a
+href="https://fr.wikipedia.org/wiki/Automatique#Asservissement">asservissement
+en boucle fermée</a> selon le schéma synoptique suivant :</p>
+<p><img
+src="https://upload.wikimedia.org/wikipedia/commons/5/57/Schema_boucle_regulation_correcteur.JPG"
+alt="Schéma synoptique" /> <a
+href="https://fr.wikipedia.org/wiki/Automatique#Asservissement">Source
+Wikipédia</a></p>
+<p>Pour lequel : * la consigne de température est donnée par la
+trajectoire de référence corrigée par calcul pour tenir compte de
+l’anticipation dans le futur * la mesure de la température est celle
+mesurée sur le couvercle de la casserole puis corrigée par calcul pour
+tenir compte de l’anticipation dans le futur * l’erreur (ou écart) est
+la différence de température entre les 2 valeus ci-dessus * le
+correcteur calcule la Durée Itérative de chauffe (Dich) * la commande,
+parmi les <a
+href="https://fr.wikipedia.org/wiki/Automatique#Les_diff%C3%A9rentes_techniques">différentes
+techniques</a> existantes, la <a
+href="https://fr.wikipedia.org/wiki/Commande_pr%C3%A9dictive">commande
+prédictive</a> est celle retenue ; elle se basent sur l’utilisation d’un
+modèle dynamique du système pour anticiper son comportement futur. * la
+fonction de transfert du procédé concrétise le Réglage du flux thermique
+(Rfth). Fig. 15<img
+src="https://github.com/AIREL46/SCAO/blob/master/Brevet/SCAO/Power-point/Schema-fonctionnel.png"
+alt="Principe de fonctionnement" /> Dans notre cas le modèle dynamique
+du processus est l’évolution de la température mesurée. En référence au
+brevet, pour calculer la température future Tf, comparons l’évolution
+dans le temps des variations de la température mesurée au déplacement
+d’une automobile, pour connaître par anticipation sa position future, en
+connaissant à l’instant t=0 sa position x0, sa vitesse V0 et son
+accélération A, il suffit d’appliquer la formule du Mouvement Rectiligne
+Uniformément Accéléré (MRUA) :</p>
+<code>
+<center>
+<strong>x(t) = x0 + V0.ta + 1/2A.ta2</strong>
+</center>
+<p></code></p>
+En transposant cette équation à celle de Tf, elle devient : es <code>
+<center>
+<strong>Tf = T + Vm.ta + 1/2.Am.ta2</strong>
+</center>
+<p></code></p>
+<p>Où Vm est la vitesse de variation de la température mesurée obtenue
+en calculant la dérivée première de la fonction T=f(t), l’accélération
+Am est obtenue en calculant la dérivée de la fonction Vm=f(t) , les deux
+équations sont donc successivement :</p>
+<code>
+<center>
+<strong>Vm = 60.dT / p.dt</strong>
+</center>
+<p></code></p>
+<code>
+<center>
+<strong>Am = 60.dVm / p.dt</strong>
+</center>
+<p></code></p>
+<p>où p est la période (durée d’une itération).</p>
+<h1 id="réglage-du-flux-thermique">Réglage du flux thermique</h1>
+<p>Fig. 6<img
+src="https://github.com/AIREL46/SCAO/blob/master/Brevet/SCAO/Power-point/Reglage-du-flux-thermique.png"
+alt="Réglage du flux thermique" /></p>
+</body>
+</html>

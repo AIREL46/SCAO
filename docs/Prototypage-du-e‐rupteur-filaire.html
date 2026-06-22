@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prototypage-du-e‐rupteur-filaire</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Prototypage-du-e‐rupteur-filaire</h1>
+</header>
+<h1 id="prototypage-du-erupteur-filaire">Prototypage du e‐rupteur
+filaire</h1>
+<h2 id="objet">Objet</h2>
+<p>Dans le cadre du projet d’invention du Système de Cuisson
+Intelligente (SCI), l’objet du prototypage du e-rupteur filaire est la
+finalisation du prototype (2025). ## Constitution Il reprend les
+éléments constitutifs de l’<a
+href="https://github.com/AIREL46/SCAO/wiki/Prototypage-du-e-rupteur-e-r-wifi">e-r-wifi</a>
+ainsi que ceux <a
+href="https://github.com/AIREL46/SCAO/wiki/Dossier-de-modification-de-la-e-p-wifi">Dossier-de-modification-de-la-e-p-wifi</a>
+## Plan d’actions : * Intégration dans le coffret électronique Transrack
+l’ensemble des sous-ensembles constituants sur : la platine, la face
+avant, à l’arrière du coffret. ## Coffret Transrack ### Face avant : * 4
+leds : verte pour 230V, verte pour le 230V secouru (230VS), orange pour
+la Dich, rouge pour failure. * 1 bouton poussoir pour le Reset. * une
+embase USB traversanteen magasin. * une embase Ethernet traversante :
+TRU COMPONENTS - <a
+href="https://www.conrad.fr/fr/p/tru-components-tc-9554644-embase-femelle-rj45-a-montage-sur-panneau-d-forme-6-femelle-droit-nombre-de-poles-8p8c-noir-2388661.html?experience=b2c&amp;qwer=Cj0KCQiA49XMBhDRARIsAOOKJHYUKqEAbFq09C1sLhXqh4KswVne5mN1sfxwgJpv73M5IgKugqPkTVMaAih1EALw_wcB&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=SH+-+FR+-+Performance+max+-+High&amp;utm_id=17690685297&amp;gad_source=1&amp;gad_campaignid=22006254941&amp;gclid=Cj0KCQiA49XMBhDRARIsAOOKJHYUKqEAbFq09C1sLhXqh4KswVne5mN1sfxwgJpv73M5IgKugqPkTVMaAih1EALw_wcB">Conrad
+2388661 - 62</a> * un interrupteur double pour 230V et 230VS en magasin.
+* 1 câble Ethernet 30 cm : <a
+href="https://www.conrad.fr/fr/p/lindy-47730-rj45-cable-reseau-cable-patch-cat-6-s-ftp-0-30-m-rouge-1-pc-s-1916907.html">Conrad
+1916907 - 62</a> ### Face arrière ### Regroupement sur un CI unique des
+fonctions suivantes : * carte commande relais selon le projet kicad <a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi.pro">Carte
+commande relais Celduc</a> Accessible localement avec la commande :</p>
+<p><code>kicad SCAO/kicad/e-r-wifi/e-r-wifi.pro</code> * liaison filaire
+<a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf.pro">Liaison
+filaire</a> Accessible localement avec la commande :</p>
+<p><code>kicad SCAO/kicad/e-r-wifi/e-r-wifi-lf/e-r-wifi-lf.pro</code> *
+interface P230V selon le schéma <img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/interface_P230V.png"
+alt="Interface P230V" /></p>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-r-wifi/interface_P230V.png">Interface
+P230V</a></p>
+<ul>
+<li>mesure de courant à l’aide du module <a
+href="https://www.phidgets.com/?tier=3&amp;catid=3&amp;pcid=14&amp;prodid=93">Phidgets
+1122</a>, il est alimenté par une tension de 5V (+ fil rouge, - fil
+noir), il délivre (fil blanc) une tension itc (intensité table cuisson)
+proportionnelle au courant traversé dans les deux foyers rayonnants de
+la table de cuisson. itc est appliqué sur l’entrée A5 du microcontrôleur
+MKR wifi 1010 qui effectue une conversion analogique-digitale. Le <a
+href="https://www.phidgets.com/productfiles/1122/1122_0/Documentation/1122_0_Mechanical.pdf">Mechanical
+drawing</a>.</li>
+</ul>
+</body>
+</html>

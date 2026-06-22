@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prototypage-de-la-e‐poignée-filaire</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Prototypage-de-la-e‐poignée-filaire</h1>
+</header>
+<h1 id="prototypage-de-la-e-poignée-filaire">Prototypage de la e-poignée
+filaire</h1>
+<h2 id="objet">Objet</h2>
+<p>Dans le cadre du projet d’invention du Système de Cuisson
+Intelligente (SCI), l’objet du prototypage de la e-poignée filaire est
+la finalisation du prototype. ## Constitution Elle reprend les éléments
+constitutifs du <a
+href="https://github.com/AIREL46/SCAO/wiki/Dossier-de-modification-de-la-e-p-wifi">Dossier
+de modification de la e-p-wifi</a> en abandonnant la fonction de
+communication wifi ainsi que la batterie LI-ON. ## Plan d’actions : *
+Refaire le circuit imprimé “Shield du MKR wifi 1010” en supprimant la
+batterie LI-ON et en intégrant l’interface de communication filaire
+(précédemmment monté sur un shield en empilement de celui du MKR wifi
+1010). Voir également à la suppression des deux micro-switchs, du bouton
+poussoir et de l’interrupteur de mise en route. * Installer le top. *
+Refaire les pièces produites en impression 3D avec finition peinture et
+laque. ### Refaire le circuit imprimé “Shield du MKR wifi 1010” La
+réalisation est confiée à Atexa Electronique atexa@wanadoo.fr, le
+dossier qui accompagne est constitué de : #### Le schéma électrique
+ci-dessous :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/e-p-filaire.png"
+alt="Schéma électrique du shield mkr_wifi_1010 - version filaire" />
+<figcaption aria-hidden="true">Schéma électrique du shield mkr_wifi_1010
+- version filaire</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/e-p-filaire.png">Schéma
+électrique du shield mkr_wifi_1010 - version filaire</a></p>
+<h4
+id="une-esquisse-du-ci-qui-indique-ses-dimensions-ainsi-que-limplantation-des-principaux-composants">Une
+esquisse du CI qui indique ses dimensions ainsi que l’implantation des
+principaux composants :</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.png"
+alt="Esquisse du CI" />
+<figcaption aria-hidden="true">Esquisse du CI</figcaption>
+</figure>
+<p>Cette esquise est réalisée à partir des fichiers suivants : * <a
+href="https://docs.arduino.cc/resources/datasheets/ABX00023-datasheet.pdf">La
+datasheet du MKR wifi 1010</a>, cette datasheet est donnée ici pour
+information. les schémas mécaniques des pages 10 et 11 ne sont pas
+fiables (manque de précision des dimensions) et je préfère garder et
+compléter les schémas mis en place initialement par mes soins. *
+<code>SCAO/Ping/LibreCAD/MKR1010.dxf</code> *
+<code>SCAO/Ping/LibreCAD/MKR1010-shield.dxf</code> *
+<code>SCAO/kicad/e-p-wifi-shield/e-p-wifi.kicad_pro</code></p>
+<h4 id="une-nomemclature">une nomemclature :</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/nono_shield_mkr_wifi_1010_filaire.png"
+alt="Nomemclature" />
+<figcaption aria-hidden="true">Nomemclature</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/nono_shield_mkr_wifi_1010_filaire.png">Nomemclature</a></p>
+<h4 id="linterface-speaker">L’interface speaker</h4>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/b_speaker.png"
+alt="Interface speaker" /> <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/b_speaker.png">Interface
+speaker</a></p>
+<h3 id="réalisation-et-test-du-shield-du-mkr-wifi-1010">Réalisation et
+test du Shield du MKR wifi 1010</h3>
+<h4 id="réalisation-par-atexa-électronique">Réalisation par Atexa
+électronique</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/shield_mkr_wifi_1010.JPG"
+alt="Crédit photo : Régis Leruste - Shield du MKR wifi 1010 - Version filaire" />
+<figcaption aria-hidden="true">Crédit photo : Régis Leruste - Shield du
+MKR wifi 1010 - Version filaire</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/shield_mkr_wifi_1010.JPG">Crédit
+photo : Régis Leruste - Shield du MKR wifi 1010 - Version
+filaire</a></p>
+<h4 id="tests-du-shield-mkr-wifi-1010">Tests du shield MKR wifi
+1010</h4>
+<p>Je connecte la plateforme MKR wifi 1010 montée sur le shield. C’est
+là que je m’aperçois d’une erreur concernant l’orientation de la
+plateforme. Pour fonctionner correctement, elle nécessite une rotation
+de 180°. cette erreur devra être corrigée, par contre, les tests peuvent
+continuer en montant correctement la plateforme.</p>
+<h5 id="tests-des-leds">Tests des leds :</h5>
+<ul>
+<li>Appliquer 3.3V en D5 → Allumage de la diode D1 verte → OK</li>
+<li>Appliquer 3.3V en D6 → Allumage de la diode D4 jaune → OK</li>
+<li>Appliquer 3.3V en D7 → Allumage de la diode D3 rouge → OK</li>
+<li>Appliquer 3.3V en A4 → Allumage de la diode D2 bleue → OK #####
+Tests de la connectique Ethernet (Prise RJ45 câblée en T568B)</li>
+<li>1 GND (blanc-orange) → OK</li>
+<li>2 VCC → 3.3V (orange) → OK</li>
+<li>3 GND (blanc-vert) → OK</li>
+<li>4 Reset → Reset (bleu) → OK</li>
+<li>5 5V → 5V (blanc-bleu) → OK</li>
+<li>6 P230V → A6 (vert) → OK</li>
+<li>7 itc → A5 (blanc-marron) → OK</li>
+<li>8 cde relais → A3 (marron) → OK</li>
+</ul>
+<h5 id="tests-de-linterface-thermomêtre">Tests de l’interface
+thermomêtre</h5>
+<ul>
+<li>Vérifier la continuité entre le 2 de J1 et D3 → OK</li>
+<li>Mesurer entre le 2 et le 3 de J1 la présence d’une résistance de 4.7
+Kohms → 4.671 kohms ##### Tests du 5V</li>
+<li>Appliquer 5V</li>
+<li>mesurer la tension sur A1 → 2.491 V (pour une valeur théorique de
+2.5 V) ##### Tests du 3.3V</li>
+<li>Appliquer 3.3V</li>
+<li>mesurer la tension sur A0 → 1.649 V (pour une valeur théorique de
+1.65 V)</li>
+<li>mesurer la tension sur le 3 de J1. → 3.291 V (pour une valeur
+théorique de 3.3 V).</li>
+<li>tester la mesure de température à l’aide du programme de test ?.ino
+téléveré dans le MKr wifi 1010, le résultat est OK. ##### Test du
+speaker</li>
+<li>téléverser le programme <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-wifi/test_speaker/test_speaker.ino">test_speaker.ino</a>.
+Résultat : le speaker fonctionne correctement. #### Nouvelle commande
+Atexa</li>
+<li>le schéma électrique reste identique :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/e-p-filaire.png"
+alt="Schéma électrique du shield MKR wifi 1010 en version filaire - Régis Leruste" />
+<figcaption aria-hidden="true">Schéma électrique du shield MKR wifi 1010
+en version filaire - Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/e-p-filaire.png">Schéma
+électrique du shield MKR wifi 1010 en version filaire - Régis
+Leruste</a></p>
+<ul>
+<li>l’esquisse (schéma mécanique) est modifié pour indiquer la position
+de la pin AREF par rapport au shield MKR wifi 1010</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.png"
+alt="Esquisse du shield MKR wifi 1010 en version filaire - Régis Leruste" />
+<figcaption aria-hidden="true">Esquisse du shield MKR wifi 1010 en
+version filaire - Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/MKR1010-shield.png">Esquisse
+du shield MKR wifi 1010 en version filaire - Régis Leruste</a></p>
+<ul>
+<li>la nomenclature reste inchangée :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/nono_shield_mkr_wifi_1010_filaire.png"
+alt="Nomenclature du shield MKR wifi 1010 en version filaire - Régis Leruste" />
+<figcaption aria-hidden="true">Nomenclature du shield MKR wifi 1010 en
+version filaire - Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/nono_shield_mkr_wifi_1010_filaire.png">Nomenclature
+du shield MKR wifi 1010 en version filaire - Régis Leruste</a></p>
+<ul>
+<li>l’implantation TOP fournie par Atexa :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/implantation_TOP.png"
+alt="Implantation TOP du shield MKR wifi 1010 en version filaire - Atexa électronique" />
+<figcaption aria-hidden="true">Implantation TOP du shield MKR wifi 1010
+en version filaire - Atexa électronique</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/implantation_TOP.png">Implantation
+TOP du shield MKR wifi 1010 en version filaire - Atexa électronique</a>
+#### Nouvelle commande LNA ##### Emboîtement des 4 plots du logo dans
+les 4 cylindres du top La problématique est l’ajustement des différents
+rayons afin d’obtenir un assemblage correct. Le représentation
+ci-dessous met en évidence ces différents rayons :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/plot_cylindre.png"
+alt="Emboîtement du plot dans le cylindre - Régis Leruste - Openscad" />
+<figcaption aria-hidden="true">Emboîtement du plot dans le cylindre -
+Régis Leruste - Openscad</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/plot_cylindre.png">Emboîtement
+du plot dans le cylindre - Régis Leruste - Openscad</a> ##### La couleur
+et les quantités: La couleur proposée est le rouge groseille pour toutes
+les pièces, les exeptions : * les 4 plots du top * l’intérieur des
+cylindres verticaux de la jupe * les entretoises. * La composition
+<strong>RVB</strong> du rouge groseille est :
+<strong>207,10,29</strong>. Suite aux échanges avec LNA, le rouge
+groseille n’est pas retenu et il est remplacé par le <strong>rouge
+trafic</strong> correspondant au <strong>RAL 3020</strong>, voir le <a
+href="https://www.toutes-les-couleurs.com/nuancier-ral.php">nuancier
+RAL</a>. * Les quantités sont : unitaires pour la jupe, le top et le
+logo, huit pour les entretoises. ##### Fichiers .stl communiqués à LNA :
+* fichier de la jupe : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/jupe_wifi.stl">SCAO/Ping/openscad/willy/jupe_wifi.stl</a>,
+un fichier.png permet la visualisation de ce fichier :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/jupe_wifi.png"
+alt="La jupe - Régis Leruste" />
+<figcaption aria-hidden="true">La jupe - Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/jupe_wifi.png">La
+jupe - Régis Leruste</a></p>
+<ul>
+<li>fichier du top : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/top.stl">Le
+top - Régis Leruste</a>, un fichier.png permet la visualisation de ce
+fichier :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/top.png"
+alt="Le top - Régis Leruste" />
+<figcaption aria-hidden="true">Le top - Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/top.png">Le
+top - Régis Leruste</a></p>
+<ul>
+<li>fichier du logo : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/Logo.stl">SCAO/Ping/openscad/willy/Logo.stl</a>,
+un fichier.png permet la visualisation de ce fichier :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/Logo.png"
+alt="Le logo - Régis Leruste" />
+<figcaption aria-hidden="true">Le logo - Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/Logo.png">Le
+logo - Régis Leruste</a></p>
+<ul>
+<li>fichier de l’entretoise : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/ent_R.stl">SCAO/Ping/openscad/willy/ent_R.stl</a>,
+un fichier.png permet la visualisation de ce fichier :</li>
+</ul>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/ent_R.png"
+alt="L’entretoise - Régis Leruste" />
+<figcaption aria-hidden="true">L’entretoise - Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/willy/ent_R.png">L’entretoise
+- Régis Leruste</a></p>
+<h3 id="assemblage-de-la-e-poignée-filaire">Assemblage de la e-poignée
+filaire</h3>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/e-p-filaire.JPG"
+alt="Assemblage de la e-poignée filaire - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Assemblage de la e-poignée filaire -
+Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/kicad/e-p-filaire/e-p-filaire.JPG">Assemblage
+de la e-poignée filaire - Crédit photo : Régis Leruste</a> ### Etat des
+lieux du logiciel e-p-wifi.ino et de ses fichiers associés Ensemble des
+fichiers et sous-répertoires du répertoire SCAO/Arduino/e-p-wifi :</p>
+<p><strong>Programme principal : <code>e-p-wifi.ino</code></strong></p>
+<p><strong>Librairies locales :</strong></p>
+<p><code>1_communs.h 1_def_mat.h a_ihm.h arduino_secrets.h b_speaker.h
+c_acq_temp.h d_mes_tensions.h e_bite.h f_communication.h g_horo_chrono.h
+g_wifi_rtc.h h_bilan_eng.h i_reg_temp.h j_visu_ech.h
+k_sleep.h</code></p>
+<p><strong>Fichiers .bin et elf :</strong></p>
+<p><code>e-p-wifi.arduino.samd.mkrwifi1010.bin
+e-p-wifi.arduino.samd.mkrwifi1010.elf</code></p>
+<p><strong>Tutoriel :</strong></p>
+<p><code>tutoriel.txt</code></p>
+<p><strong>Autres fichiers :</strong></p>
+<p><code>b_speaker.pdf b_speaker.png isp.png e-p-wifi.csv e-p-wifi.ods
+isp.JPG stsp.odt</code></p>
+<p><strong>Répertoires :</strong></p>
+<p><code>dia flash_from_SD test_led test_speaker test_temp</code></p>
+<h3
+id="création-du-logiciel-e-p-filaire.ino-et-de-ses-fichiers-associés">Création
+du logiciel e-p-filaire.ino et de ses fichiers associés</h3>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wiki/sci_filaire.png"
+alt="Synoptique du SCI filaire" />
+<figcaption aria-hidden="true">Synoptique du SCI filaire</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/wiki/sci_filaire.png">Synoptique
+du SCI filaire</a></p>
+<p>Les étapes de cette création sont : * Création d’un nouveau
+répertoire : <code>SCAO/Arduino/e-p-filaire</code> * Dans ce répertoire,
+copier le contenu : <code>SCAO/Arduino/e-p-wifi</code> * Supprimer les
+fichiers inutiles * Modification des fichiers.</p>
+<p>L’organisation du logiciel du SCI repose sur ****trois principes****.
+****Le premier**** est une bonne pratique de programmation, quand les
+programmes deviennent longs et que des parties de programmes sont
+utilisables dans différents programmes, est de mettre les définitions,
+fonctions, modules dans des fichiers séparés et les appeler avec l’ordre
+<code>#include</code>. Le mécanisme est bien connu pour les librairies
+Arduino, qui sont dans une zone mémoire réservée et connue du
+compilateur. Dans notre cas, on parlera alors de programme principal,
+e-p-filaire.ino, et de plusieurs programmes élémentaires (ou fonctions
+élémentaires, ou librairies locales, ou modules logiciels) qui ont pour
+extension .h (voir le diagramme d’organisation des logiciels Arduino).
+****Le second**** est l’édition en cinq parties de ces deux catégories
+de programmes intitulées (voir : * <strong>1 Introduction</strong> qui
+comporte uniquement un texte de présentation du programme. Cette
+introduction est précédée par la citation de son auteur et de ses
+droits. * <strong>2 Initialisation</strong> des paramêtres qui comme son
+nom l’indique initialize les différents paramêtres nécessaires au
+programme, il s’agit d’une série d’instructions exécutées une seule
+fois. * <strong>3 Fonctions spécifiques</strong> qui comme son nom
+l’indique correspond à des fonctions spécifiques contenant une séries
+d’instructions exécutées à chaque fois que la fonction est appellée.
+N.B. : les fonctions spécifiques peuvent être inclues dans le programme
+principal quand elles sont courtes où dans d’autres fichiers comme
+expliqué ci-dessus. * <strong>4 Setup</strong> qui comporte une série
+d’instructions exécutées une seule fois. * <strong>5 Loop</strong> qui
+comporte une série d’instructions exécutées à chaque itération (30
+secondes pour le SCI).</p>
+<p><strong>Le troisième</strong> est spécifique de ce projet et consiste
+en l’enchaînement des modules logiciels de
+l’<code>e-p-filaire.ino</code>.</p>
+<h4 id="organisation-des-logiciels-arduino">Organisation des logiciels
+Arduino</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/dia/organisation_arduino_files.png"
+alt="Organisation des logiciels Arduino" />
+<figcaption aria-hidden="true">Organisation des logiciels
+Arduino</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/dia/organisation_arduino_files.png">Organisation
+des logiciels Arduino</a></p>
+<h4 id="edition-des-logiciels-arduino">Edition des logiciels
+Arduino</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/dia/edition_logiciel_arduino.png"
+alt="Edition des logiciels Arduino" />
+<figcaption aria-hidden="true">Edition des logiciels
+Arduino</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/dia/edition_logiciel_arduino.png">Edition
+des logiciels Arduino</a></p>
+<h4 id="enchainement-des-modules-logiciels-e-p-filaire">Enchainement des
+modules logiciels e-p-filaire</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/dia/modules_logiciel.png"
+alt="Enchainement des modules logiciels" />
+<figcaption aria-hidden="true">Enchainement des modules
+logiciels</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/dia/modules_logiciel.png">Enchainement
+des modules logiciels</a> ##### e-p-filaire.ino Lien d’accès Github au
+fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/e-p-filaire.ino">e-p-filaire.ino</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/e-p-filaire.ino</code> ##### communs.h
+Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/communs.h">communs.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/communs.h</code> ##### def_mat.h Lien
+d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/def_mat.h">def_mat.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/def_mat.h</code> ##### a_ihm.h Lien
+d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/a_ihm.h">a_ihm.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/a_ihm.h</code> ##### b_speaker.h Lien
+d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/b_speaker.h">b_speaker.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/b_speaker.h</code> ##### c_acq_temp.h
+Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/c_acq_temp.h">c_acq_temp.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/c_acq_temp.h</code> #####
+d_mes_tensions.h Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/d_mes_tensions.h">d_mes_tensions.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/d_mes_tensions.h</code> ##### e_bite.h
+Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/e_bite.h">e_bite.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/e_bite.h</code> ##### f_communication.h
+Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/f_communication.h">f_communication.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/f_communication.h</code></p>
+<h5 id="g_horo_chrono.h">g_horo_chrono.h</h5>
+<p>Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/g_horo_chrono.h">g_horo_chrono.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/g_horo_chrono.h</code></p>
+<h5 id="h_bilan_eng.h">h_bilan_eng.h</h5>
+<p>Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/h_bilan_eng.h">h_bilan_eng.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/h_bilan_eng.h</code> ##### i_reg_temp.h
+Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/i_reg_temp.h">i_reg_temp.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/i_reg_temp.h</code> ##### j_visu_ech.h
+Lien d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/j_visu_ech.h">j_visu_ech.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/j_visu_ech.h</code> ##### k_sleep.h Lien
+d’accès Github au fichier : <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/k_sleep.h">k_sleep.h</a></p>
+<p>Lien d’accès local au fichier :
+<code>SCAO/Arduino/e-p-filaire/k_sleep.h</code></p>
+<h4 id="organigramme-de-programmation">Organigramme de
+programmation</h4>
+<p>Un <a
+href="https://fr.wikipedia.org/wiki/Organigramme_de_programmation">Organigramme
+de programmation</a> (parfois appelé algorigramme, logigramme ou plus
+rarement ordinogramme) est une représentation graphique normalisée de
+l’enchaînement des opérations et des décisions effectuées par un <a
+href="https://fr.wikipedia.org/wiki/Programme_informatique">programme
+d’ordinateur</a>.</p>
+<p><a href="https://fr.wikipedia.org/wiki/Algorithme">Définition
+Wikipédia d’algorithme</a></p>
+<p><a
+href="https://www.mytopschool.net/mysti2d/activites/polynesie2/ETT/C043/23/algo/index.html?Cours.html">Cours
+sur l’algorithmie</a></p>
+<p>{Définition Wikipédia de ISO
+5807](https://fr.wikipedia.org/wiki/ISO_5807)</p>
+<p><a
+href="https://www.useworkspace.dk/en/docs/getting-started/introduction">Logiciel
+Algobox</a> #### Migration Il est d’usage de séparer prototype
+(déclaration) et implémentation (définition) de classe dans deux
+fichiers : la déclaration se fait dans un <strong>fichier
+header</strong> (dont l’extension est <strong>.h</strong>) alors que la
+définition se fait dans un <strong>fichier source</strong> (d’extension
+: <strong>cpp</strong>). Cette migration passe par une réorganisation
+des fichiers. Les fichiers de type header de l’ancienne version garde
+uniquement la déclaration et un nouveau fichier .cpp est créé dans
+lequel est inclus l’implémentation. Dans l’exemple du fichier
+e-p-filaire.ino, la fonction IHM est incluse par l’instruction :</p>
+<p><code><strong>#include “a_ihm.h”</strong></code></p>
+<p>Dans le fichier a_ihm.h, le code est encadré par les instructions, au
+début : <code>#ifndef A_IHM_H, #define A_IHM_H, #include
+&lt;Arduino.h&gt; et se termine par #endif</code>. A l’intérieur, les
+variables sont déclarées par <code>extern</code> et ne sont pas
+définies. Les fonctions sont déclarées et ne sont pas implémentées.
+L’extrait du fichier a_ihm.h illustre cette explication :</p>
+<p><img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/a_ihm.png"
+alt="Extrait du fichier a_ihm.h" /> <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/a_ihm.png">Extrait
+du fichier a_ihm.h</a></p>
+<p>Dans le fichier a_ihm.cpp, le code commence par trois instructions :
+#include &lt;Arduino.h&gt;, #include “a_ihm.h”, #include “def_mat.h” et
+continu par l’implémentation des fonctions. L’extrait du fichier a_ihm.h
+illustre cette explication :</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/a_ihm_cpp_1.png"
+alt="Extrait 1/2 du fichier a_ihm.cpp" />
+<figcaption aria-hidden="true">Extrait 1/2 du fichier
+a_ihm.cpp</figcaption>
+</figure>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/a_ihm_cpp_2.png"
+alt="Extrait 2/2 du fichier a_ihm.cpp" />
+<figcaption aria-hidden="true">Extrait 2/2 du fichier
+a_ihm.cpp</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/a_ihm_cpp_1.png">Extrait
+1/2 du fichier a_ihm.cpp</a> <a
+href="https://github.com/AIREL46/SCAO/blob/master/Arduino/e-p-filaire/a_ihm_cpp_2.png">et
+extrait 2/2 du fichier a_ihm.cpp</a></p>
+</body>
+</html>

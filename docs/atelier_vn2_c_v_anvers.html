@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>atelier_vn2_c_v_anvers</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">atelier_vn2_c_v_anvers</h1>
+</header>
+<h2 id="anvers">Anvers</h2>
+<h3 id="jeudi-05-décembre-2024---trajet-de-saint-molf-à-anvers">Jeudi 05
+décembre 2024 - Trajet de Saint-Molf à Anvers</h3>
+<p>Je prends un premier TGV qui me dépose à la gare du Mans. Dans
+l’espace d’attente de la gare, je rencontre Myrian étudiant géomètre. Il
+est comme moi natif de Tourcoing et dans l’attente d’un TGV à
+destination de Lille. Quoi de mieux pour engager la conversation, il me
+parle de ses études de géomètre qu’il suit au Mans, je lui parle de mes
+nombreux voyages sur les traces de Vincent et de mon carnet de voyage
+associé. Je lui laisse mon adresse e-mail et lui propose l’envoi de
+liens pour qu’il accède à mes récits.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/train_lille_anvers.png"
+alt="Détail du trajet du train entre Lille et Anvers - Source : SNCB" />
+<figcaption aria-hidden="true">Détail du trajet du train entre Lille et
+Anvers - Source : SNCB</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/train_lille_anvers.png">Détail
+du trajet du train entre Lille et Anvers - Source : SNCB</a></p>
+<p>Dans le train entre Lille et Anvers, j’abandonne la frappe de mon
+récit sur mon iPhone car je réserve sa batterie pour la fonction GPS.
+Elle consomme beaucoup et j’en aurais grand besoin à mon arrivée à
+Anvers pour trouver mon gîte Airb&amp;b. Dès ma montée dans le train, le
+langage de la communication se modifie. L’afficheur de la voiture où je
+suis installé indique : train vers Anvers et non à destination d’Anvers.
+Dans un premier temps, le texte ainsi que les messages diffusés par les
+haut-parleurs sont bilingues français/flamand. Free m’envoie un SMS :
+Avec ou sans mayo, bienvenue en Belgique, bon séjour, suivi d’un baratin
+à rallonge qui m’indique les tarifs sur le sol belge. À partir de
+Courtrai, les messages vocaux et visuels sont maintenant diffusés
+uniquement en flamand. Voilà, je suis maintenant en pays flamand, plus
+rien n’est intelligible pour moi à l’exception de ma destination
+Antwerpen-Centraal le terminus de la ligne. Ce train est un omnibus, il
+désert toutes les gares entre Lille et Anvers, en particulier, plusieurs
+gares au travers de la grande ville de Gand. À mon arrivée en gare
+d’Antwerpen, au moment de rassembler mes bagages, je m’aperçois que la
+sacoche contenant mon respirateur est disparue, je cherche au alentour,
+rien! À l’évidence, mon appareil a été volé. Je me rapproche de la
+responsable du train qui me recommande d’effectuer une déclaration de
+vol auprès de la police. L’heure est trop tardive pour songer à
+l’effectuer dans la foulée, j’attendrai le lendemain pour m’en occuper.
+Maintenant, il s’agit de prendre le métro pour rejoindre mon gîte. Je me
+sens perturbé après cet événement désagréable. Je cafouille pour trouver
+la bonne ligne de métro, acheter mon titre de transport, trouver le bon
+sens sur la ligne. Avec l’aide de mon GPS, je me guide vers le gîte, la
+batterie faiblit, j’arrive devant la maison, je sais que Nicoletta
+travaille à proximité, je l’appelle, elle me parle en mélangeant
+l’anglais, le français et l’espagnol dans la même phrase. La teneur de
+sa phrase est que je dois attendre 5 minutes devant la casa. Je trouve à
+m’abriter de la pluie. J’aurais aimé m’asseoir, je fais une tentative
+sur la valise, je n’insiste pas car je me rends vite compte qu’elle
+n’est pas faite pour cela et que mon poids entraînerait sa destruction.
+Sans tarder Nicoletta arrive, elle m’aide en portant ma valise puis me
+présente à son mari et me fait visiter l’appartement. Après une brève
+conversation, je m’isole dans ma chambre pour me reposer. J’appréhende
+une première nuit sans mon respirateur. Cet appareil m’a été prescrit en
+2008 pour palier à des apnées du sommeil qui à cette époque se
+manifestaient par d’importants ronflements. Dès le lendemain, j’aurai un
+entretien téléphonique avec ORKYN, le fournisseur de l’appareil. Il
+m’indiquera que la sécurité sociale ne participera pas au remplacement
+du matériel tant que je serai dans un pays étranger. A mon retour sur le
+sol français, dans la suite de mon voyage à Auvers-sur-Oise, un nouvel
+appareil sera mis à ma disposition. je serai donc sans assistance
+respiratoire durant quatre nuits. L’avenir me prouvera que ce manque n’a
+été associé à aucun inconvénient majeur. ### Vendredi 06 décembre 2024 -
+Visite du KMSKA et déclaration de vol Aujourd’hui, je visite le musée
+royal des Beaux-Arts d’Anvers (<strong>K</strong>oninklijk
+<strong>M</strong>useum voor <strong>S</strong>chone
+<strong>K</strong>unsten <strong>A</strong>ntwerpen), désigné par le
+sigle <strong>KMSKA</strong>.</p>
+<p>Je m’attarde dans la salle où se trouve le seul tableau de Vincent,
+il est entouré d’autres œuvres, d’artistes ayant un lien avec lui.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Vincent_van_Gogh_-_Aardappelrooister.jpg/1024px-Vincent_van_Gogh_-_Aardappelrooister.jpg"
+alt="Vincent Van Gogh (1853-1890) - Woman digging potatoes (1885) - KMSKA d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - Woman
+digging potatoes (1885) - KMSKA d’Anvers - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Vincent_van_Gogh_-_Aardappelrooister.jpg/1024px-Vincent_van_Gogh_-_Aardappelrooister.jpg">Vincent
+Van Gogh (1853-1890) - Woman digging potatoes (1885) - KMSKA d’Anvers -
+Source : Wikipédia</a></p>
+<p>Je découvre un tableau de <a
+href="https://fr.wikipedia.org/wiki/Charles_de_Groux">Charles De
+Groux</a>, un peintre fréquemment cité par Vincent, il s’agit de <em>The
+coffee roaster</em>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Le_moulin_%C3%A0_caf%C3%A9.jpeg"
+alt="Charles De Groux (1825-1870) - The coffee roaster (1857) - KMSKA museum d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Charles De Groux (1825-1870) - The coffee
+roaster (1857) - KMSKA museum d’Anvers - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/e/e8/Le_moulin_%C3%A0_caf%C3%A9.jpeg">Charles
+De Groux (1825-1870) - The coffee roaster (1857) - KMSKA museum d’Anvers
+- Source : Wikipédia</a></p>
+<p>Les tableaux de Degroux se caractérisent par l’objectivité <a
+href="https://fr.wikipedia.org/wiki/R%C3%A9alisme_(peinture)">réaliste</a>
+avec laquelle il décrit les coutumes et les classes sociales, mais aussi
+par une intensité émotionnelle et spirituelle. De ce même peintre, un
+autre tableau que Vincent admirait beaucoup est <em>Le bénédicité</em>,
+il s’en est inspiré quand il a créé <a
+href="https://fr.wikipedia.org/wiki/Les_Mangeurs_de_pommes_de_terre">Les
+mangeurs de pommes de terre</a>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/8/81/Charles_de_Groux_-_Saying_Grace.jpeg"
+alt="Charles De Groux (1825-1870) - Le bénédicité (1860) - Musée d’Orsay à Paris - Source : Wikipédia" />
+<figcaption aria-hidden="true">Charles De Groux (1825-1870) - Le
+bénédicité (1860) - Musée d’Orsay à Paris - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/8/81/Charles_de_Groux_-_Saying_Grace.jpeg">Charles
+De Groux (1825-1870) - Le bénédicité (1860) - Musée d’Orsay à Paris -
+Source : Wikipédia</a></p>
+<p>Une autre artiste qui a inspiré Vincent est <a
+href="https://fr.wikipedia.org/wiki/Virginie_Demont-Breton">Virginie
+Demont-Breton (1859-1935)</a>. Elle est la fille du peintre Jules Breton
+(Courrières), avec son mari <a
+href="https://fr.wikipedia.org/wiki/Adrien_Demont">Adrien Demont</a>, à
+Wissant, ils font construire la Villa du <a
+href="https://fr.wikipedia.org/wiki/Villa_Le_Typhonium">Typhonium</a>.
+Ils lancent l’<a
+href="https://fr.wikipedia.org/wiki/%C3%89cole_de_Wissant">école de
+Wissant</a> qui était une colonie d’artistes.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Into_the_water%2C_by_Virginie_Demont-Breton.jpg/800px-Into_the_water%2C_by_Virginie_Demont-Breton.jpg"
+alt="Virginie Demont-Breton (1859-1935) - Into the water (1898) - KMSKA d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Virginie Demont-Breton (1859-1935) - Into
+the water (1898) - KMSKA d’Anvers - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Into_the_water%2C_by_Virginie_Demont-Breton.jpg/800px-Into_the_water%2C_by_Virginie_Demont-Breton.jpg">Virginie
+Demont-Breton (1827-1935) - Into the water (1898) - KMSKA d’Anvers -
+Source : Wikipédia</a></p>
+<p>De cette même artiste, une reproduction gravée du tableau <em>L’Homme
+est en mer</em>, exposé au Salon de 1889, servit de modèle à <a
+href="https://fr.wikipedia.org/wiki/Vincent_van_Gogh">Vincent van
+Gogh</a> lors de son séjour à l’asile <a
+href="https://fr.wikipedia.org/wiki/Monast%C3%A8re_Saint-Paul-de-Mausole">Saint-Paul
+de Mausole</a>. Voici ci-dessous le tableau de Vincent :</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/1/1f/%22L%27homme_est_en_mer%22%2C_Vincent_van_Gogh%2C_d%27apr%C3%A8s_Virginie_Demont-Breton.jpg"
+alt="Vincent Van Gogh (1853-1890) - L’Homme est en mer (1889) - Collection particulière" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - L’Homme
+est en mer (1889) - Collection particulière</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/1/1f/%22L%27homme_est_en_mer%22%2C_Vincent_van_Gogh%2C_d%27apr%C3%A8s_Virginie_Demont-Breton.jpg">Vincent
+Van Gogh (1853-1890) - L’Homme est en mer (1889) - Collection
+particulière</a></p>
+<p>Un autre tableau attire mon attention, c’est <a
+href="https://en.wikipedia.org/wiki/The_Wedding_Dance">the wedding
+dance</a> de <a
+href="https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder">Pieter
+Bruegel the Elder</a> :</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Pieter_Bruegel_de_Oude_-_De_bruiloft_dans_%28Detroit%29.jpg/1280px-Pieter_Bruegel_de_Oude_-_De_bruiloft_dans_%28Detroit%29.jpg"
+alt="Pieter Bruegel the Elder (1525–1530 – 9 September 1569) - the wedding dance (1566) - KMSKA Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Pieter Bruegel the Elder (1525–1530 – 9
+September 1569) - the wedding dance (1566) - KMSKA Anvers - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Pieter_Bruegel_de_Oude_-_De_bruiloft_dans_%28Detroit%29.jpg/1280px-Pieter_Bruegel_de_Oude_-_De_bruiloft_dans_%28Detroit%29.jpg">Pieter
+Bruegel the Elder (1525–1530 – 9 September 1569) - the wedding dance
+(1566) - KMSKA Anvers - Source : Wikipédia</a></p>
+<p>Après ma visite au KMSKA suivie de la dégustation d’un steak-tartare
+dans un restaurant proche du musée, je consacre mon après-midi à ma
+déclaration de vol. Le premier saut d’obstacle est de trouver l’endroit
+où se trouve le poste de police. La responsable du train m’a précisé
+qu’il se trouve à une extrémité de la <a
+href="https://fr.wikipedia.org/wiki/Gare_d%27Anvers-Central">gare</a>.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Antwerpen-Centraal_aerial_4.jpg/1024px-Antwerpen-Centraal_aerial_4.jpg"
+alt="Frontal view of Antwerpen-Centraal railway station - Source : Wikipédia" />
+<figcaption aria-hidden="true">Frontal view of Antwerpen-Centraal
+railway station - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Antwerpen-Centraal_aerial_4.jpg/1024px-Antwerpen-Centraal_aerial_4.jpg">Frontal
+view of Antwerpen-Centraal railway station - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Antwerp_Belgium_Central-Station-main-hall-01.jpg/1024px-Antwerp_Belgium_Central-Station-main-hall-01.jpg"
+alt="Salle des pas perdus et son escalier vers les quais - Source : Wikipédia" />
+<figcaption aria-hidden="true">Salle des pas perdus et son escalier vers
+les quais - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Antwerp_Belgium_Central-Station-main-hall-01.jpg/1024px-Antwerp_Belgium_Central-Station-main-hall-01.jpg">Salle
+des pas perdus et son escalier vers les quais - Source :
+Wikipédia</a></p>
+<p>Je reprends donc le métro vers la gare. Y parvenant, j’en profite
+pour apprécier cette belle architecture. En 2009, la gare
+d’Anvers-Central est jugée par le magazine américain <a
+href="https://fr.wikipedia.org/wiki/Newsweek">Newsweek</a> quatrième
+plus belle gare du monde. Après dix bonnes minutes de recherche,
+j’entends enfin la bonne parole auprès d’une agente de la SNCB. Le poste
+de police se trouve maintenant à proximité de la gare Antwerpen-Berchem,
+il suffit de prendre le train pour s’y rendre, voici donc le deuxième
+obstacle à franchir. Trente minutes après, dans cette autre gare, c’est
+madame pipi qui me renseigne très aimablement sur l’endroit où se trouve
+la police. Je suis impressionné par l’importance du lieu. Je suis
+accueilli par des agents de sécurité qui contrôlent mon identité et me
+font ensuite subir le même supplice que dans les aéroports qui se
+finalise par le passage d’un portillon qui déclenche des bips stridents
+et allume des lumières rouges si vous avez oublié de déposer votre
+trousseau de clefs.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/police.JPG"
+alt="Logo de la police d’Anvers - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Logo de la police d’Anvers - Crédit photo
+: Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/police.JPG">Logo
+de la police d’Anvers - Crédit photo : Régis Leruste</a></p>
+<p>Après 2 heures d’attente, je suis reçu par un inspecteur de police
+qui parle un peu le français. Je lui résume les circonstances du vol. Il
+me demande de décliner mon identité et me pose quelques questions. Il
+rédige une <a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/declaration_de_vol.pdf">déclaration</a>.
+À mon retour, muni de la <a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/facture_espirateur.pdf">facture
+du respirateur</a>, j’ai une longue conversation avec mon assureur, en
+la personne d’une charmante dame. Elle épluche toutes les clauses de mon
+contrat pour en final me déclarer que ce risque n’est pas couvert. C’est
+le fait que le vol de la sacoche se soit fait dans un train. Cette
+clause n’est pas prévue au contrat. Voilà, les assureurs ont toujours
+raison, ils leur suffisent de prouver que le risque n’est pas couvert
+par le contrat. Par ailleurs, j’ai fait également une tentative avec
+l’assurance de ma master-card. La réponse a été également négative,
+cette assurance ne couvre que le moyen de paiement. J’ai fait une autre
+tentative auprès de ma mutuelle Malakoff-Humanis. J’attends leur réponse
+sans me faire trop d’illusion. Suite à réflexion, j’ai également mis en
+place un autre scénario. Le respirateur n’a pas été volé et je l’ai
+oublié dans le train Le Mans-Lille quand j’en suis descendu à
+Lille-Europe. J’ai déposé une requête sur la plateforme <a
+href="https://www.sncf-voyageurs.com/fr/contactez-nous/objets-perdus-ou-trouves/">sncf-voyageurs</a>.
+Quarante-huit heures après, j’ai reçu une réponse négative laquelle
+confirme ma présomption de vol. En final, la sécurité sociale m’a
+remboursé un dixième du coût et ma mutuelle a répondu sans aucune
+justification que sa participation serait de zéro euro. Voila, pour moi
+le coût global est d’environ 600 €.</p>
+<h3 id="samedi-07-décembre-2024">Samedi 07 décembre 2024</h3>
+<p>D’Anvers j’effectue sur la journée, l’aller-retour en train pour
+Amsterdam. Le but est l’exposition <em>Vive les impressionnistes</em> au
+Van Gogh Museum.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/d/da/Auguste_Rodin-Burghers_of_Calais_London_%28photo%29.jpg"
+alt="Auguste Rodin (1840-1917) - Les bourgeois de Calais (1911) - Londres, Palais de Westminster" />
+<figcaption aria-hidden="true">Auguste Rodin (1840-1917) - Les bourgeois
+de Calais (1911) - Londres, Palais de Westminster</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/d/da/Auguste_Rodin-Burghers_of_Calais_London_%28photo%29.jpg">Auguste
+Rodin (1840-1917) - Les bourgeois de Calais (1911) - Londres, Palais de
+Westminster</a></p>
+<p>L’exposition temporaire présente <a
+href="https://fr.wikipedia.org/wiki/Auguste_Rodin">Auguste Rodin</a> (7
+sculptures dont les Bourgeois de Calais), Berthe Morisot, <a
+href="https://fr.wikipedia.org/wiki/Edgar_Degas">Edgar Degas</a>,
+Camille Pissarro, Claude Monet, Pierre Auguste Renoir (The clown),
+Gustave Caillebotte. J’ai mieux ressenti les sculptures que les
+peintures, Rodin et Degas en particulier. Beaucoup de peintures viennent
+du musée de Rotterdam. Vincent est peu représenté ce qui me semble
+normal. En effet, Vincent a connu le mouvement impressionniste par son
+frère Théo qui lui en a beaucoup parlé. Par contre, il était un peu
+jeune pour faire partie du mouvement. En 1874, lors de la première
+exposition des impressionnistes, il avait 21 ans et était encore loin de
+savoir qu’il deviendrait peintre. Ce n’est que 12 ans plus tard qu’il a
+rencontré des peintres impressionnistes. Il en a subi l’influence que
+durant sa période parisienne (1886-1888). Sur quelques-uns des tableaux
+de cette période, je ressens cette influence. En dehors de cela, comme
+je l’ai déjà écrit, Vincent exprime la réalité et rien d’autre.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Boulevard_de_Clichy_-_s0094V1962_-_Van_Gogh_Museum.jpg/1024px-Boulevard_de_Clichy_-_s0094V1962_-_Van_Gogh_Museum.jpg"
+alt="Vincent Van Gogh (1853-1890) - Boulevard de Clichy (1887) - Amsterdam Van Gogh museum" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1853-1890) - Boulevard
+de Clichy (1887) - Amsterdam Van Gogh museum</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Boulevard_de_Clichy_-_s0094V1962_-_Van_Gogh_Museum.jpg/1024px-Boulevard_de_Clichy_-_s0094V1962_-_Van_Gogh_Museum.jpg">Vincent
+Van Gogh (1853-1890) - Boulevard de Clichy (1887) - Amsterdam Van Gogh
+museum</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/The_Little_Fourteen-Year-Old_Dancer_MET_DP-14939-005.jpg/800px-The_Little_Fourteen-Year-Old_Dancer_MET_DP-14939-005.jpg"
+alt="Edgar Degas (1834-1917 - Little fourteen years old dance (1880) - Metropolitan Museum of Art, New-York)" />
+<figcaption aria-hidden="true">Edgar Degas (1834-1917 - Little fourteen
+years old dance (1880) - Metropolitan Museum of Art,
+New-York)</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/The_Little_Fourteen-Year-Old_Dancer_MET_DP-14939-005.jpg/800px-The_Little_Fourteen-Year-Old_Dancer_MET_DP-14939-005.jpg">Edgar
+Degas (1834-1917 - Little fourteen years old dance (1880) - Metropolitan
+Museum of Art, New-York)</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pierre-Auguste_Renoir_-_Le_Clown_%28Claude_Renoir%29.jpg/800px-Pierre-Auguste_Renoir_-_Le_Clown_%28Claude_Renoir%29.jpg"
+alt="Pierre Auguste Renoir (1841-1919) - Le Clown (1909)" />
+<figcaption aria-hidden="true">Pierre Auguste Renoir (1841-1919) - Le
+Clown (1909)</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pierre-Auguste_Renoir_-_Le_Clown_%28Claude_Renoir%29.jpg/800px-Pierre-Auguste_Renoir_-_Le_Clown_%28Claude_Renoir%29.jpg">Pierre
+Auguste Renoir (1841-1919) - Le Clown (son fils Claude Renoir)
+(1909)</a></p>
+<p>Après une courte pose, comme d’habitude, je consacre le reste de ma
+visite à l’exposition permanente. Je passe un peu de temps avec les
+mangeurs de pommes de terre puis trois bonnes minutes assis devant son
+dernier tableau : les <a
+href="https://fr.wikipedia.org/wiki/Racines_d%27arbres">racines
+d’arbres</a> de la rue Daubigny à Auvers-sur-Oise.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Vincent_van_Gogh_-_Tree_Roots_and_Trunks_%28F816%29.jpg/1920px-Vincent_van_Gogh_-_Tree_Roots_and_Trunks_%28F816%29.jpg"
+alt="Vincent Van Gogh (1852-1890) - Racines d’arbres (1890 - Amsterdam Van Gogh museum" />
+<figcaption aria-hidden="true">Vincent Van Gogh (1852-1890) - Racines
+d’arbres (1890 - Amsterdam Van Gogh museum</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Vincent_van_Gogh_-_Tree_Roots_and_Trunks_%28F816%29.jpg/1920px-Vincent_van_Gogh_-_Tree_Roots_and_Trunks_%28F816%29.jpg">Vincent
+Van Gogh (1852-1890) - Racines d’arbres (1890 - Amsterdam Van Gogh
+museum</a></p>
+<p>Après ce laps de temps les contours du tableau sont plus précis, les
+couleurs sont plus vives. Je pense que pour regarder de tels tableaux,
+il faudrait une nuit entière après avoir négocié auprès de la direction
+du musée une autorisation spéciale. En écrivant cela, je pense à
+l’autrice <a href="https://fr.wikipedia.org/wiki/Lola_Lafon">Lola
+Lafon</a> qui a passé une nuit entière dans l’annexe de la maison d’Anne
+Franck à Amsterdam. Durant cette nuit, elle s’est imprégné de l’endroit,
+pris des notes pour ensuite écrire un livre magnifique intitulé <em><a
+href="https://www.babelio.com/livres/Lafon-Quand-tu-ecouteras-cette-chanson/1422853">Quand
+tu écouteras cette chanson</a></em>.</p>
+<p>Pour l’exposition temporaire, mes connaissances du monde des
+impressionnistes m’ont paru insuffisantes. Pour l’exposition permanente,
+je m’engouffre de plus en plus dans l’œuvre de Vincent et cela n’est pas
+fait pour me déplaire. ### Dimanche 08 décembre 2024 - Maison Van Gogh
+et quartier de la cathédrale Aujourd’hui dimanche, je m’approche de la
+cathédrale et appréhende le tourisme de masse. Puis en métro, jusqu’à la
+station Handel, avec mon GPS je trouve la maison de Vincent, 224 Lange
+Beeldekensstraat, sur laquelle une plaque commémorative a été apposée.
+Il a occupé la chambre centrale du dernier étage.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/vvg_maison_anvers.JPG"
+alt="Maison Van Gogh d’Anvers - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Maison Van Gogh d’Anvers - Crédit photo :
+Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/vvg_maison_anvers.JPG">Maison
+Van Gogh d’Anvers - Crédit photo : Régis Leruste</a></p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/vvg_maison_anvers_plaque.JPG"
+alt="Palque de la maison Van Gogh d’Anvers - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Palque de la maison Van Gogh d’Anvers -
+Crédit photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/vvg_maison_anvers_plaque.JPG">Palque
+de la maison Van Gogh d’Anvers - Crédit photo : Régis Leruste</a></p>
+<p>J’ai repris le métro pour rejoindre l’académie des beaux-arts où
+Vincent a suivi le cours de <a
+href="https://fr.wikipedia.org/wiki/Charles_Verlat">Charles Verlat
+(1824-1890) - Source : Wikipédia</a>. Ensuite, mon GPS m’a emmené sur le
+quai qui borde l’Escaut là où se trouve le château du Steen :</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Steen.jpg/1024px-Steen.jpg"
+alt="Chateau du Steen - Source : Wikipédia" />
+<figcaption aria-hidden="true">Chateau du Steen - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Steen.jpg/1024px-Steen.jpg">Chateau
+du Steen - Source : Wikipédia</a></p>
+<p>Ce château abrite l’office de tourisme. Là, j’ai posé ma question
+relative à Vincent Van Gogh. Quelles traces ont laissé les trois mois
+qu’il a passés à Anvers? La réponse est celle que j’avais appréhendée.
+Pas grand-chose, sinon une plaque commémorative et un tableau au KMSKA.
+Le tableau n’est d’ailleurs pas l’un de ceux peints à Anvers. En allant
+ensuite boire un verre dans un bar original qui était anciennement les
+archives d’Anvers, j’en ai appris un peu plus.</p>
+<figure>
+<img
+src="https://inhetarchief.be/wp-content/uploads/2023/06/het-archief-antwerpen-0009.jpg"
+alt="Bar Het Archief - Source : inhetarchief.be" />
+<figcaption aria-hidden="true">Bar Het Archief - Source :
+inhetarchief.be</figcaption>
+</figure>
+<p><a
+href="https://inhetarchief.be/wp-content/uploads/2023/06/het-archief-antwerpen-0009.jpg">Bar
+Het Archief - Source : inhetarchief.be</a></p>
+<p>Le propriétaire du bar avec lequel j’ai parlé brièvement est
+également propriétaire d’un autre établissement où Théo est passé lors
+d’un séjour à Anvers. C’est dans ce même bar que j’ai rencontré Rob,
+journaliste à la retraite qui m’a demandé s’il pouvait partager ma
+table. J’ai accepté avec grand plaisir et nous avons parlé de nos vies
+respectives pendant une bonne demi-heure. ### Lundi 09 décembre 2024 -
+Visite guidée de la cathédrale</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Antwerp_-_Cathedral_of_Our_Lady.jpg/800px-Antwerp_-_Cathedral_of_Our_Lady.jpg"
+alt="Cathédrale Notre-Dame d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Cathédrale Notre-Dame d’Anvers - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Antwerp_-_Cathedral_of_Our_Lady.jpg/800px-Antwerp_-_Cathedral_of_Our_Lady.jpg">Cathédrale
+Notre-Dame d’Anvers - Source : Wikipédia</a></p>
+<p>La visite guidée francophone commence à 11 heures, j’arrive avec une
+petite heure d’avance. À l’aide de la brochure délivrée avec le ticket
+d’entrée, j’effectue un repérage des lieux, en particulier les tableaux
+de Rubens. Il y en a quatre et ce sont les plus beaux. À l’approche des
+onze heures, je scrute le lieu de rendez-vous, aucun Français ne montre
+le bout du nez. Je vais à la rencontre de Monique, guide de la visite.
+Nous entamons la conversation. Après quelques minutes, pas de Français à
+l’horizon, j’ai une chance inouïe, Monique sera ma guide et seule
+interlocutrice. Je lui fais remarquer et cela ne semble pas la
+perturber. J’en profite pour lui dire que je marche sur les traces de
+Vincent qui a beaucoup apprécié Rubens. Elle me montre d’abord une très
+belle sculpture d’une artiste inconnue.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/cath_anvers_sculpture.JPG"
+alt="Artiste anonyme (14ème siècle) - Mary with child - Cathédrale Notre-Dame d’Anvers" />
+<figcaption aria-hidden="true">Artiste anonyme (14ème siècle) - Mary
+with child - Cathédrale Notre-Dame d’Anvers</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/cath_anvers_sculpture.JPG">Artiste
+anonyme (14ème siècle) - Mary with child - Cathédrale Notre-Dame
+d’Anvers</a></p>
+<p>Nous enchaînons ensuite sur les quatre tableaux de Rubens. Son
+approche est subtile, elle détaille les personnages, commente les
+couleurs, elle explique le pourquoi du <a
+href="https://fr.wikipedia.org/wiki/Triptyque">triptyque</a> : en
+refermant les deux volets latéraux, les trois parties intérieures de
+l’œuvre sont protégées de la lumière. Le triptyque ainsi refermé fait
+apparaître le tableau peint au recto de ses deux volets latéraux. Je lui
+fais remarquer la beauté des visages féminins. Nous passons ensemble une
+heure et demie, notre échange culturel est d’un grand intérêt. Je la
+remercie chaleureusement pour son excellente prestation. Je reste
+ensuite un bon moment dans l’enceinte de la cathédrale. Il est rare de
+visiter un tel lieu qui accueille autant de richesses culturelles.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Peter_Paul_Rubens_%281577-1640%29_De_kruisoprichting_-_Onze-Lieve-Vrouwekathedraal_%28Antwerpen%29_12-07-2010_14-49-48.JPG/1280px-Peter_Paul_Rubens_%281577-1640%29_De_kruisoprichting_-_Onze-Lieve-Vrouwekathedraal_%28Antwerpen%29_12-07-2010_14-49-48.JPG"
+alt="Pierre Paul Rubens (1577-1640) - L’élévation de la croix (Vers 1610-1611) - Cathédrale Notre-Dame d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Pierre Paul Rubens (1577-1640) -
+L’élévation de la croix (Vers 1610-1611) - Cathédrale Notre-Dame
+d’Anvers - Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Peter_Paul_Rubens_%281577-1640%29_De_kruisoprichting_-_Onze-Lieve-Vrouwekathedraal_%28Antwerpen%29_12-07-2010_14-49-48.JPG/1280px-Peter_Paul_Rubens_%281577-1640%29_De_kruisoprichting_-_Onze-Lieve-Vrouwekathedraal_%28Antwerpen%29_12-07-2010_14-49-48.JPG">Pierre
+Paul Rubens (1577-1640) - L’élévation de la croix (Vers 1610-1611) -
+Cathédrale Notre-Dame d’Anvers - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Peter_Paul_Rubens_-_The_Descent_from_the_Cross_%28Antwerp_Cathedral%29.%2C_c._1613.jpg/800px-Peter_Paul_Rubens_-_The_Descent_from_the_Cross_%28Antwerp_Cathedral%29.%2C_c._1613.jpg"
+alt="Pierre Paul Rubens (1577-1640) - Décente de croix (1612) - Cathédrale Notre-Dame d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Pierre Paul Rubens (1577-1640) - Décente
+de croix (1612) - Cathédrale Notre-Dame d’Anvers - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Peter_Paul_Rubens_-_The_Descent_from_the_Cross_%28Antwerp_Cathedral%29.%2C_c._1613.jpg/800px-Peter_Paul_Rubens_-_The_Descent_from_the_Cross_%28Antwerp_Cathedral%29.%2C_c._1613.jpg">Pierre
+Paul Rubens (1577-1640) - Décente de croix (1612) - Cathédrale
+Notre-Dame d’Anvers - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/1/12/Descent_From_The_Cross.jpg"
+alt="Pierre Paul Rubens (1577-1640) - Triptyque Décente de croix (1612) - Cathédrale Notre-Dame d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Pierre Paul Rubens (1577-1640) -
+Triptyque Décente de croix (1612) - Cathédrale Notre-Dame d’Anvers -
+Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/1/12/Descent_From_The_Cross.jpg">Pierre
+Paul Rubens (1577-1640) - Triptyque Décente de croix (1612) - Cathédrale
+Notre-Dame d’Anvers - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Baroque_Rubens_Assumption-of-Virgin-3.jpg"
+alt="Pierre Paul Rubens (1577-1640) - Assomption de la vierge (1626) - Cathédrale Notre-Dame d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Pierre Paul Rubens (1577-1640) -
+Assomption de la vierge (1626) - Cathédrale Notre-Dame d’Anvers - Source
+: Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/e/ed/Baroque_Rubens_Assumption-of-Virgin-3.jpg">Pierre
+Paul Rubens (1577-1640) - Assomption de la vierge (1626) - Cathédrale
+Notre-Dame d’Anvers - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/6/60/Peter_Paul_Rubens_-_The_Resurrection_of_Christ_-_WGA20209.jpg"
+alt="Pierre Paul Rubens (1577-1640) - Ressurection du Christ (1611-1612) - Cathédrale Notre-Dame d’Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Pierre Paul Rubens (1577-1640) -
+Ressurection du Christ (1611-1612) - Cathédrale Notre-Dame d’Anvers -
+Source : Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/6/60/Peter_Paul_Rubens_-_The_Resurrection_of_Christ_-_WGA20209.jpg">Pierre
+Paul Rubens (1577-1640) - Ressurection du Christ (1611-1612) -
+Cathédrale Notre-Dame d’Anvers - Source : Wikipédia</a></p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Anvers_Maison_Rubens.JPG/1280px-Anvers_Maison_Rubens.JPG"
+alt="Maison Rubens à Anvers - Source : Wikipédia" />
+<figcaption aria-hidden="true">Maison Rubens à Anvers - Source :
+Wikipédia</figcaption>
+</figure>
+<p><a
+href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Anvers_Maison_Rubens.JPG/1280px-Anvers_Maison_Rubens.JPG">Maison
+Rubens à Anvers - Source : Wikipédia</a></p>
+<p>La maison de Rubens est située dans un quartier chic de la ville. Sa
+partie intérieure est actuellement en travaux. Les œuvres qu’elle abrite
+habituellement ne sont donc pas visibles. Je me contente donc de la
+visite du jardin qui offre la visibilité de l’architecture de
+l’habitation. C’est très beau, mais j’aurais eu besoin de quelques
+explications pour mieux m’en imprégner. Voilà, mon séjour à Anvers se
+termine. Je pense que j’ai vu l’essentiel de ce que je voulais voir par
+rapport à Vincent. En résumé : le repérage de la maison où il a habité
+pendant trois mois et la découverte de l’œuvre de Rubens dans la
+cathédrale. C’est la première fois que je visite un musée situé dans une
+cathédrale. C’est la première fois de ma vie que j’ai la chance de
+suivre une conférencière, en la personne de Monique, qui ne s’occupe que
+de moi. Le sentiment que j’ai est que son séjour à Anvers n’a laissé
+quasiment aucune trace dans la mémoire collective des Anversois.
+Dommage, dans la province de la Drenthe, pour un séjour d’une durée
+équivalente, il y a laissé bien davantage de traces. Après avoir relu
+les lettres de Vincent à Théo de cette période anversoise sur ma
+liseuse. A partir de l’édition des <em>Lettres à son frère Théo</em>
+(Les cahiers rouges - Grasset) qui comprend un choix de lettres
+françaises originales et de lettres traduites du hollandais par Georges
+Philippart, elle est préfacée par Charles Terrasse (1893-1982),
+historien de l’art. Il s’agit de 17 lettres numérotées de 436 à 452
+rédigées en néerlandais et donc traduites dans cette édition. Il est à
+noter que les lettres numérotées 437, 445, 449 et 450 sont absentes de
+cet ouvrage. La lettre numérotée 444 a retenu particulièrement mon
+attention. Il y parle des deux tableaux importants de Rubens :
+l’élévation et la descente de croix. Il ressent une forte exaltation en
+regardant ces tableaux, il reconnaît que les femmes sont belles mais sa
+critique est forte et sévère : “<em>Comme tels, ces tableaux sont
+magistraux, mais on doit rien y chercher d’autre.</em>” ; “<em>Rubens
+est superficiel, creux, boursoufflé, voire totalement conventionnel et
+tout autant que Jules Romain et d’autres peintres encore pire de la
+décadence.</em>”. Vincent est en permanence en recherche du réel et il
+ne partage pas certaines approches de l’art de Rubens. Les puristes de
+Rubens qui ont lu cette lettre ont certainement eu une opinion
+défavorable à l’égard de Vincent.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/gateau.JPG"
+alt="Gâteau cuisiné par Nicoleta - Crédit photo : Régis Leruste" />
+<figcaption aria-hidden="true">Gâteau cuisiné par Nicoleta - Crédit
+photo : Régis Leruste</figcaption>
+</figure>
+<p><a
+href="https://github.com/AIREL46/SCAO/blob/master/atelier_e/voyages/anvers_auvers/gateau.JPG">Gâteau
+cuisiné par Nicoleta - Crédit photo : Régis Leruste</a></p>
+<p>Pour ce qui est de mon hébergement, j’ai été reçu par Nicoletta et
+son mari Adrien. Ils sont roumains et ont été charmants avec moi. Elle
+cuisine très bien. Au fil des quatre jours, elle m’a fait goûter un
+gâteau, des sushis au butternut et du potage. Tout était excellent.
+J’apprécie le concept de partage de l’appartement, cuisine et salle de
+bain principalement. Ce concept conduit à l’optimisation, des dépenses,
+qui m’est indispensable en regard de la durée annuelle importante
+(environ 30 jours) que je consacre à ces voyages culturels. ### Mardi 10
+décembre 2024 Trajet Anvers - Auvers-sur-Oise La gare d’Anvers est très
+belle. Je n’ai pas souvenir en avoir vu une aussi belle dans le monde.
+Avant de repartir pour Lille, je prends mon café au royal café, très
+beau également.</p>
+<figure>
+<img
+src="https://img.restaurantguru.com/ra49-Le-Royal-Cafe-image-2022-10-3.jpg"
+alt="Royal café de la gare d’Anvers - Source : https://fr.restaurantguru.com" />
+<figcaption aria-hidden="true">Royal café de la gare d’Anvers - Source :
+https://fr.restaurantguru.com</figcaption>
+</figure>
+<p><a
+href="https://img.restaurantguru.com/ra49-Le-Royal-Cafe-image-2022-10-3.jpg">Royal
+café de la gare d’Anvers - Source :
+https://fr.restaurantguru.com</a></p>
+<p>Je prends un train Inter-Cite (IC), il assure la liaison dans les
+deux sens entre Anvers et Lille-Flandres. Ce n’est pas toujours facile
+d’interpréter les affichages. À Anvers, je monte dans un train que j’ai
+précédent prospecté sur la plateforme SNCB, il est à destination de
+Poperingue. Au moment du contrôle des titres de transport, une charmante
+jeune-femme me renseigne. En gare de Courtrai, le train se sépare en
+deux parties, la tête vers Poperingue, la queue vers Mouscron. Je change
+de voiture pour me conformer à ses indications. À cause de travaux, une
+correspondance par autocar SNCF est prévue à Mouscron. Un passager du
+train me préviens que le temps de correspondance est extrêmement serré,
+il me faut donc être vigilant pour ne pas le louper. Effectivement, pour
+celui qui ne connaît pas ce n’est pas très évident. En conclusion, pour
+faire ce genre de périple il vaut mieux avoir quelques points de repère,
+un touriste lambda a presque toutes les chances de se planter.</p>
+<p>Cliquer sur le lien pour accéder à la suite du voyage : <a
+href="https://github.com/AIREL46/SCAO/wiki/atelier_vn3_c_v_auvers"><strong>█
+█ Auvers-sur-Oise █ █</strong></a></p>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Semaine-15</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Semaine-15</h1>
+</header>
+<h3 id="comprendre-les-microcontroleurs">Comprendre les <a
+href="https://www.coursera.org/learn/microcontroleurs/">Microcontroleurs</a></h3>
+<ol type="1">
+<li>Concernant le MOOC: faire en détail les exercices, le câblage sur la
+breadboard et les quiz. ### Arduino <a
+href="https://store.arduino.cc/genuino-starter-kit">Starter Kit</a></li>
+</ol>
+<h4 id="projet-du-livre-réalisés">Projet du livre réalisés:</h4>
+<ol type="1">
+<li>Projet n°2: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=32">Journal
+du vaisseau spatial</a>;</li>
+</ol>
+<p>Dans ce projet, j’ai créé mon premier programme Arduino pour
+contrôler le comportements de quelques LEDs à l’aide d’un interrupteur.
+J’ai utilisé des variables, une instruction if()… else, et des fonctions
+pour lire l’état d’une entrée et contrôler des sorties.</p>
+<hr />
+<ol start="2" type="1">
+<li>Projet n°3: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=42">Love-o-Meter</a>;</li>
+</ol>
+<p>Ici j’ai utilisé la fonction analogRead() et le moniteur série pour
+observer des changements à l’intérieur de L’Arduino.</p>
+<hr />
+<ol start="3" type="1">
+<li>Projet n°4: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=52">Lampe
+d’ambiance</a>;</li>
+</ol>
+<p>Pour ce projet J’ai utilisé la fonction analogWrite().</p>
+<hr />
+<ol start="4" type="1">
+<li>Projet n°5: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=62">Indicateur
+d’humeur</a>;</li>
+</ol>
+<p>J’ai utilisé un servomoteur contrôler par Arduino en utilisant une
+bibliothèque “#include &lt;servo.h&gt;”.</p>
+<hr />
+<ol start="5" type="1">
+<li>Projet n°6: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=70">Thérémine
+lumineux</a>; Dans ce projet j’ai utilisé la fonction tone() qui ma
+permis de génrer différentes fréquences à l’activation du
+haut-parleur.</li>
+</ol>
+<hr />
+<ol start="6" type="1">
+<li>Projet n°7: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=78">Clavier
+Musical</a>; Pour ce projet je devais faire un clavier musical avec
+quelques résistances et des boutons. J’ai pu utilisés un tableau pour
+regrouper les différentes notes.</li>
+</ol>
+<hr />
+<ol start="7" type="1">
+<li>Projet n°8: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=86">Sablier
+numérique</a>; J’ai réalisé un sablier numérique qui allume une LED
+toutes les 10 minutes (j’ai modifié la valeur à 10 secondes)</li>
+</ol>
+<hr />
+<ol start="8" type="1">
+<li>Projet n°11: <a
+href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf#page=114">Boule
+de cristal</a>; Dans ce projet j’ai réalisé une boule magique, je pose
+une question ensuite je bascule la breadboard et via un écran LCD
+s’affiche la réponse à ma question. Les réponses sont pré-enregistré
+dans le code. Grace à un switch et à la fonction random je l’écran
+affiche une réponse aléatoire. Le boule magique est donc bien évidemment
+truquer.</li>
+</ol>
+<hr />
+<h3 id="installation-dopenscad">Installation d’<a
+href="http://www.openscad.org/downloads.html">openscad</a></h3>
+<h3
+id="réaliser-en-impression-3d-la-jupe-de-la-e-pognée-en-modifiant-le-marquage-433-est-remplacé-par-wifi">Réaliser
+en impression 3D la jupe de la e-pognée en modifiant le marquage : 433
+est remplacé par wifi</h3>
+<ol type="1">
+<li>Pour l’impression 3D: maîtriser le processus à partir d’openscad,
+cura et l’imprimante Ultimaker.</li>
+</ol>
+<p>L’impression de la jupe n’a pas été faite mais le changement du
+marquage 433 par wifi a été réalisé.</p>
+<h3 id="git-étapes">Git (étapes):</h3>
+<h4 id="le-fork">Le Fork:</h4>
+<p>Un fork est une copie d’un répertoire. La création d’un répertoire
+vous permet d’expérimenter librement des modifications sans affecter le
+projet d’origine.</p>
+<ol type="1">
+<li>Fork projet sur GitHub</li>
+</ol>
+<p>J’ai exécuter les commandes dans un terminal dans l’ordre
+suivant:</p>
+<pre><code>git config --global user.name &quot;Baptiste Bouriau&quot;
+git config --global user.email &quot;bouriau.compte@gmail.com&quot;
+git clone https://github.com/BouriauB/SCAO
+git remote add upstream https://github.com/AIREL46/SCAO</code></pre>
+<hr />
+<p>Récupération de nouveaux changements via AIREL46/SCAO:</p>
+<pre><code>git fetch upstream
+git merge upstream/master origin/master #(merge de AIREL46/SCAO vers le repository local)</code></pre>
+<p>Récupération de nouveaux changements via BouriauB/SCAO:</p>
+<pre><code>git fetch origin
+git merge origin/master</code></pre>
+<p>Modification ou création de nouveaux fichiers:</p>
+<pre><code>git add fichier/dossier
+git commit -a -m &quot;raison du commit&quot;
+git push origin master</code></pre>
+<p>Faire un pull request sur GitHub</p>
+<hr />
+<p>Accepter (ou non) le pull request sur GitHub, ensuite pour récupérer
+les changement en local (sur son PC), exécuter les commandes dans
+l’ordre suivant pour les récuperer:</p>
+<pre><code>git fetch origin master
+git merge origin/master</code></pre>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/47318623/56029889-c6a96080-5d1b-11e9-8510-bfcb9a41da8b.png"
+alt="Schéma-git" />
+<figcaption aria-hidden="true">Schéma-git</figcaption>
+</figure>
+</body>
+</html>

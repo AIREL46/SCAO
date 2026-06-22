@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prototypage-de-la-e-poignée-433MHZ-WIFI</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Prototypage-de-la-e-poignée-433MHZ-WIFI</h1>
+</header>
+<h1 id="préliminaire">Préliminaire</h1>
+<p>Le présent <a href="https://fr.wikipedia.org/wiki/Wiki">wiki</a> est
+rédigé par <a href="https://www.baptistebouriau.fr/">Baptiste
+BOURIAU</a> et vérifié par <a
+href="http://fablabo.net/wiki/Utilisateur:LERUSTE_REGIS">Régis
+LERUSTE</a>. Il est publié sur le site <a
+href="https://fr.wikipedia.org/wiki/GitHub">GitHub</a> sous <a
+href="https://fr.wikipedia.org/wiki/Licence_Creative_Commons">licence
+Creative Commons</a> <strong>CC-BY</strong> représenté par le symbole
+ci-dessous :</p>
+<p><img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/CC-BY_icon.svg/88px-CC-BY_icon.svg.png" /></p>
+<p><strong>N.B.</strong> (<strong>CC-BY</strong> - extrait de wikipédia)
+: <em>“l’œuvre peut être librement utilisée, à la condition de
+l’attribuer à l’auteur en citant son nom. Cela ne signifie pas que
+l’auteur est en accord avec l’utilisation qui est fait de ses
+œuvres.”</em></p>
+<p>Ici sera détaillé et explicité toutes les différences par rapport à
+la [[e-poignée 433MHZ V2| Prototypage de la e poignée 433MHZ V2]].</p>
+<h1 id="objet">Objet</h1>
+<p>La e poignée WIFI est la version sans fil de la [[e poignée 433MHZ
+V2| Prototypage de la e poignée 433MHZ V2]]. Elle reprend les même
+principes et est pilotée via une application mobile.</p>
+<h1 id="description-physique">Description physique</h1>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/Assemblage_f_wifi.png"
+alt="Assemblage de la e-p-wifi" />
+<figcaption aria-hidden="true">Assemblage de la e-p-wifi</figcaption>
+</figure>
+<p>La e-p-wifi communique avec un smartphone par wifi. Elle est équipé
+de 2 thermomètres digitaux, une batterie Li-ion 1200mA/h, d’un
+microcontrôleur Arduino MKR wifi 1010. Les composants électroniques sont
+regroupés sur une breadboard Arduino.</p>
+<h1 id="nomenclature">Nomenclature</h1>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niv</th>
+<th>Designation</th>
+<th>Founisseur</th>
+<th>Type</th>
+<th>Reference</th>
+<th>Rep</th>
+<th>Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête hexagonale M3 X 6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td><a
+href="https://www.bricovis.fr/std/vis-tete-cylindrique-7.php#Grille">TH03/006A2</a></td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>MKR WiFi 1010</td>
+<td><a href="https://store.arduino.cc/">Arduino</a></td>
+<td>Achat</td>
+<td><a href="https://store.arduino.cc/mkr-wifi-1010">Arduino MKR WiFi
+1010</a></td>
+<td>3a</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Breadboard</td>
+<td><a href=""></a></td>
+<td>Achat</td>
+<td><a href=""></a></td>
+<td>3b</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>••</td>
+<td>Plate-forme d’essais wifi</td>
+<td><a href="https://bluelab44.fr/">Blue Lab44</a></td>
+<td>IMP3D</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/plateforme-essais-wifi.stl">plateforme-essais-wifi.stl</a></td>
+<td>3c</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête Hexagonale M2x20</td>
+<td><a href=""></a></td>
+<td>Achat</td>
+<td><a href=""></a></td>
+<td>3d</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Entretoise plastique 10mm</td>
+<td><a href=""></a></td>
+<td>Magasin</td>
+<td><a href=""></a></td>
+<td>3e</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Écrou plastique 4mm</td>
+<td><a href=""></a></td>
+<td>Achat</td>
+<td><a href=""></a></td>
+<td>3f</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>LiPo 3.7 V 2000 mAh</td>
+<td><a href=""></a></td>
+<td>Achat</td>
+<td><a href=""></a></td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Entretoise hexagonale M3X10</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Thermomètre digital</td>
+<td><a href=""></a></td>
+<td>Achat</td>
+<td><a href="">DS18B20</a></td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Jupe</td>
+<td><a href="https://bluelab44.fr/">Blue Lab44</a></td>
+<td>IMP3D</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/jupe_wifi.stl">jupe_wifi.stl</a></td>
+<td>8</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Entretoise M3X4.9-8-prof=4.6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>9</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête ronde fendue M3-6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>10</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Rondelle d=3 ep=0.5</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>11</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Isolateur ep=2</td>
+<td><a href="https://bluelab44.fr/">Blue Lab44</a></td>
+<td>IMP3D</td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/isolateur-433-v2.stl">isolateur-433-v2.stl</a></td>
+<td>12</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Libre</td>
+<td></td>
+<td></td>
+<td></td>
+<td>13</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête ronde fendue M3X6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>14</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Entretoise M3X4.9-8-prof=4.6</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td></td>
+<td>15</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Entretoise de fixation ep=10</td>
+<td><a
+href="http://fablabo.net/wiki/Cahier_de_recettes">Olivier</a></td>
+<td><a
+href="http://fablabo.net/wiki/SCAO#Les_ateliers_de_prototypage">Usinage</a></td>
+<td><a
+href="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/ent-fixation.dxf">ent-fixation.dxf</a></td>
+<td>16</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>thermomètre digital</td>
+<td><a href="http://www.conrad.fr">Conrad</a></td>
+<td>Achat</td>
+<td><a
+href="http://www.conrad.fr/ce/fr/product/1123323/CI-linaire-Capteur-de-temprature-Maxim-Integrated-DS18B20-Numrique-local-1-Wire-TO-92-3-1-pcs?queryFromSuggest=true">DS18B20</a></td>
+<td>17</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête hexagonale creuse M4 - 4 (thermomètre digital)</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td><a
+href="https://www.bricovis.fr/std/vis-sans-tete-empreinte-hexagonale-creuse-1.php#Grille">STHCPLA04/004NO</a></td>
+<td>18</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Connexion “masse mécanique”</td>
+<td>Magasin</td>
+<td></td>
+<td></td>
+<td>19</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>•</td>
+<td>Vis à tête hexagonale creuse M4 - 4 (masse mécanique)</td>
+<td><a href="https://www.bricovis.fr/std/accueil.php">Bricovis</a></td>
+<td>Achat</td>
+<td><a
+href="https://www.bricovis.fr/std/vis-sans-tete-empreinte-hexagonale-creuse-1.php#Grille">STHCPLA04/004NO</a></td>
+<td>20</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>•</td>
+<td>Couvercle</td>
+<td></td>
+<td>Achat</td>
+<td></td>
+<td>21</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="description-fonctionnelle">Description fonctionnelle</h1>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wifi/inkscape/e-p-433-wifi.png"
+alt="Schéma fonctionnel de la e-p-wifi" />
+<figcaption aria-hidden="true">Schéma fonctionnel de la
+e-p-wifi</figcaption>
+</figure>
+<p>La e-p-433-wifi reprend la fonction de base de la e-p-433-v2 avec, en
+plus, une fonction wifi, le but étant d’améliorer l’IHM et de
+communiquer avec la poignée à distance grâce à son smartphone.</p>
+<h1 id="description-matérielle">Description matérielle</h1>
+<h2 id="a-constitution-du-couvercle-19">A) <a
+href="https://github.com/AIREL46/SCAO/wiki/Prototypage-de-la-e-poignée-433MHZ-V2">Constitution
+du couvercle [19]</a></h2>
+<h2 id="b-entretoise-de-fixation-16">B) <a
+href="https://github.com/AIREL46/SCAO/wiki/Prototypage-de-la-e-poignée-433MHZ-V2">Entretoise
+de fixation [16]</a></h2>
+<h2 id="c-thermomètres-digitaux-17-et-7">C) <a
+href="https://github.com/AIREL46/SCAO/wiki/Prototypage-de-la-e-poignée-433MHZ-V2">Thermomètres
+digitaux [17] et [7]</a></h2>
+<h2 id="d-la-jupe">D) La jupe</h2>
+<h4 id="objet-1">Objet</h4>
+<p>La jupe habille la partie inférieur de la e-p-433-wifi. Elle garde
+les mêmes caractéristiques que celle de la e-p-433-v2.</p>
+<h4 id="spécificité">Spécificité</h4>
+<p>La jupe n’accueille pas la batterie sur son niveau supérieur. La
+batterie se trouve sur la plate-forme d’essai, de plus l’inscription
+“433”a été modifié par “WIFI”.</p>
+<h4 id="modélisation-3d">Modélisation 3D</h4>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/47318623/58181634-70c9c000-7cac-11e9-9ef9-1d51465d173d.png"
+alt="Modélisation 3D" />
+<figcaption aria-hidden="true">Modélisation 3D</figcaption>
+</figure>
+<h4 id="réalisation">Réalisation</h4>
+<p>Elle est réalisée à partir d’un fichier .stl disponible dans la
+nomenclature, en impression 3D au <a
+href="https://github.com/AIREL46/SCAO/blob/master/wifi/kicad/schema_electrique_e-p-433-wifi.png">BlueLab44</a></p>
+<h2 id="e-lisolateur-12">E) <a
+href="https://github.com/AIREL46/SCAO/wiki/Prototypage-de-la-e-poignée-433MHZ-V2">L’isolateur
+[12]</a></h2>
+<h2 id="f-batterie">F) Batterie</h2>
+<h2 id="g-plate-forme-dessais-équipée-e-p-433-wifi-3">G) Plate-forme
+d’essais équipée e-p-433-wifi [3]</h2>
+<h4 id="objet-2">Objet</h4>
+<p>L’objet de la plate-forme d’essais équipée e-p-433-wifi [3] est de
+grouper touts les composants électroniques à l’exception du thermomètre
+digital [17].</p>
+<h4 id="modélisation-2d">Modélisation 2D</h4>
+<p>Le cadre bleu désigne l’emplacement de la breadboard, le vert celui
+du MKR WiFi 1010 et le rouge l’emplacement de la batterie.</p>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/LibreCAD/plateforme-essais-wifi.png"
+alt="Modélisation 2D" />
+<figcaption aria-hidden="true">Modélisation 2D</figcaption>
+</figure>
+<h4 id="modélisation-3d-1">Modélisation 3D</h4>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/Ping/openscad/plateforme-essais-wifi.png"
+alt="Modélisation 3D" />
+<figcaption aria-hidden="true">Modélisation 3D</figcaption>
+</figure>
+<h4 id="réalisation-1">Réalisation</h4>
+<p>La plate-forme est d’abord dimensionner et dessiné sur papier ensuite
+l’on vient la réaliser un plan en 2D de la pièce sur LibreCAD. La
+réalisation 3D se fait sur OpenSCAD qui par sur la base du fichier 2D.
+Pour l’impression l’on récupère le fichier .stl généré par OpenSCAD pour
+l’ouvrir dans CURA et lancer l’impression.</p>
+<h3 id="schéma-électrique">Schéma électrique</h3>
+<figure>
+<img
+src="https://github.com/AIREL46/SCAO/blob/master/wifi/kicad/schema_electrique_e-p-433-wifi.png"
+alt="schéma électrique e-p-433-wifi" />
+<figcaption aria-hidden="true">schéma électrique
+e-p-433-wifi</figcaption>
+</figure>
+<h2 id="h-arduino-mkr-wifi-1010">H) Arduino <a
+href="https://store.arduino.cc/mkr-wifi-1010">MKR WiFi 1010</a></h2>
+<h3 id="introduction">Introduction</h3>
+<p>Le MKR WIFI 1010 est une amélioration significative du MKR 1000 WIFI.
+Il est équipé d’un module ESP32 fabriqué par U-BLOX. Cette carte a pour
+objectif d’accélérer et de simplifier le prototypage des applications
+IoT basées sur le WiFi grâce à la flexibilité du module ESP32 et à sa
+faible consommation d’énergie.</p>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/47318623/59258160-b3d9dc00-8c37-11e9-8744-bbab05791971.png"
+alt="mkr_wifi_1010" />
+<figcaption aria-hidden="true">mkr_wifi_1010</figcaption>
+</figure>
+<h3 id="description">Description</h3>
+<p>Le MKR WiFi 1010 inclut une puissance de calcul de 32 bits et une
+mémoire flash de 256 Kb. Il possède de nombreuses entrées/sorties mais
+aussi un réseau WiFi sécurisé.</p>
+<p>Son port USB est utilisé pour alimenter la carte. Il possède un
+circuit de charge Li-Po qui permet à l’Arduino MKR WiFi 1010 de
+fonctionner avec une alimentation par batterie. Pour recharger la
+batterie il suffit d’utiliser une alimentation de 5 Volts. De plus le
+passage d’une source à l’autre est automatiquement gérer par le
+microcontrôleur.</p>
+<p>Le MKR WiFi 1010 fonctionne à 3,3 Volts. La tension maximale
+supportés par les entrées/sorties est de 3,3 Volts. Une tension
+supérieur sur n’importe qu’elle des E/S peut endommager la carte.</p>
+<h3 id="spécifications-importantes">Spécifications importantes</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Microcontrôleur</th>
+<th>MCU ARM SAMD21 Cortex-M0 + 32 bits basse consommation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Batterie prise en charge (*)</td>
+<td>Li-Po Single Cell, 3.7V, 700mAh minimum</td>
+</tr>
+<tr class="even">
+<td>Tension de fonctionnement du circuit</td>
+<td>3,3V</td>
+</tr>
+<tr class="odd">
+<td>Broches d’E / S numériques</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>Pins PWM</td>
+<td>12 (0, 1, 2, 3, 4, 5, 6, 7, 8, 10, A3 - ou 18 -, A4 ou 19)</td>
+</tr>
+<tr class="odd">
+<td>Connectivité</td>
+<td>Wifi</td>
+</tr>
+<tr class="even">
+<td>Broches d’entrée analogiques</td>
+<td>7 (ADC 8/10/12 bit)</td>
+</tr>
+<tr class="odd">
+<td>Mémoire flash</td>
+<td>256 Ko</td>
+</tr>
+<tr class="even">
+<td>SRAM</td>
+<td>32 Ko</td>
+</tr>
+<tr class="odd">
+<td>Vitesse de l’horloge</td>
+<td>32,768 kHz (RTC), 48 MHz</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pinout"><a
+href="https://www.henschke-geraetebau.de/dr/pic/MKR_WiFi_1010_Pinout.jpg">PinOut</a></h3>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/47318623/58159942-c6d33f00-7c7d-11e9-9275-698b8d6d5943.png"
+alt="PinOut du MKR WiFi 1010" />
+<figcaption aria-hidden="true">PinOut du MKR WiFi 1010</figcaption>
+</figure>
+<h3 id="schéma-fonctionnel">Schéma fonctionnel</h3>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/47318623/59258684-b6890100-8c38-11e9-81ef-2eee389197ec.png"
+alt="mkr_wifi_1010_inkscape" />
+<figcaption aria-hidden="true">mkr_wifi_1010_inkscape</figcaption>
+</figure>
+<p>Le MKR WiFi 1010 regroupe un certain nombre de fonction. Si l’on
+décompose la plate-forme, on y trouve un microcontrôleur, un module
+WiFi, une partie alimentation avec plusieurs éléments, un système de
+sécurité et une partie Reset avec un bouton poussoir.</p>
+<p>Le microcontrôleur de MKR WiFi 1010 est un <a
+href="https://www.microchip.com/wwwproducts/en/ATsamd21g18">D21G18</a>
+de chez <a href="https://fr.wikipedia.org/wiki/Atmel">Atmel</a>. Il
+possède un processeur allant jusqu’à 48 MHz, une SRAM de 32 Kb et une
+mémoire flash de 256 Kb. Il fonctionne avec une alimentation de 1.63 V à
+3.63 V.</p>
+<p>Pour le WiFi le MKR WiFi 1010 est équipé du modèle <a
+href="https://www.u-blox.com/en/product/nina-w10-series">NINA-W102</a>
+de chez <a href="https://www.u-blox.com/en">u-blox</a>. Il prend en
+charge le wifi, il est conforme à la norme IEEE 802.11 b/g/n et
+fonctionnent sur une bande unique de 2.4 GHz.</p>
+<p>Pour la partie alimentation le MKR WiFi 1010 possède un port USB
+supportant une alimentation de 5 Volts et port permettant d’accueillir
+une batterie Li-Po de 3.7V de 700 mAh minimum. Il possède aussi un
+charger de batterie <a
+href="http://www.ti.com/product/BQ24195?keyMatch=BQ24195C&amp;tisearch=Search-EN-Everything">BQ24195C</a>
+de chez <a href="http://www.ti.com/">Texas Instrument</a>.</p>
+<p>Le MKR WiFi 1010 est aussi équipée d’une puce <a
+href="https://www.microchip.com/wwwproducts/en/ATECC508A">ECC508</a>.
+Elle intègre le protocole de sécurité ECDH (Elliptic Curve Diffie
+Hellman), une méthode ultra-sécurisée pour fournir un accord de clé pour
+le cryptage / décryptage, ainsi que l’authentification par signature
+ECDSA pour le marché de l’Internet des objets (IoT).</p>
+<h1 id="description-logicielle">Description logicielle</h1>
+<p>//TODO</p>
+<h1 id="mesures">Mesures</h1>
+<p>//TODO</p>
+</body>
+</html>
