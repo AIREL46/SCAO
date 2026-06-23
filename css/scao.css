@@ -1,0 +1,35 @@
+body {
+    background-color: yellow !important;
+    font-size: 30px !important;
+}
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;      /* taille du texte */
+    line-height: 1.6;     /* espacement entre les lignes */
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+code {
+    font-size: 0.95em;
+}
+
+table {
+    font-size: 0.95em;
+}
+
+
