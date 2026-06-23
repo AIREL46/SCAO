@@ -1,35 +1,111 @@
+/* =========================
+   BASE PAGE
+========================= */
+
 body {
-    background-color: yellow !important;
-    font-size: 30px !important;
-}
-body {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;      /* taille du texte */
-    line-height: 1.6;     /* espacement entre les lignes */
+    font-size: 18px;
+    line-height: 1.7;
+    color: #222;
+    background-color: #ffffff;
 }
+
+/* conteneur principal */
+body > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   TITRES
+========================= */
 
 h1 {
     font-size: 2.2em;
+    margin-top: 1.2em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
+    margin-top: 1.2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.3em;
+}
+
+/* =========================
+   PARAGRAPHES
+========================= */
+
+p {
+    max-width: 80ch;
+}
+
+/* =========================
+   LIENS
+========================= */
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CODE
+========================= */
+
+pre {
+    background-color: #f6f8fa;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
 }
 
 code {
+    font-family: monospace;
     font-size: 0.95em;
 }
+
+/* =========================
+   TABLEAUX
+========================= */
 
 table {
-    font-size: 0.95em;
+    border-collapse: collapse;
+    width: 100%;
 }
 
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
 
