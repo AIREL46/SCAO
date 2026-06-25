@@ -1,6 +1,9 @@
 /* =========================
    BASE PAGE
 ========================= */
+body {
+    background-color: lightgreen !important;
+}
 
 body {
     margin: 0;
