@@ -23,15 +23,6 @@ cp "$PAGE.md" "$TMP"
 # Transformation des URL GitHub en chemins locaux
 sed -i 's|https://github.com/AIREL46/SCAO/blob/master/||g' "$TMP"
 
-perl -0pi -e '
-s{
-!\[(.*?)\]\((.*?)\)\n+
-\[\1\]\(\2\)
-}{
-![$1]($2)
-}gsx;
-' "$TMP"
-
 echo "=== Conversion HTML ==="
 
 cd "$SITE"
