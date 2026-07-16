@@ -4,7 +4,7 @@ body {
     line-height: 1.2;
     font-size: 24px;
     color: rgb(0, 0, 255);
-    background-color: rgb(250, 240, 230);
+    background-color: rgb(225, 206, 154);
 
     /* largeur type documentation */
     max-width: auto;
@@ -57,7 +57,7 @@ figure img {
     height: auto;
 
     border: 1px solid #ddd;
-    padding: 4px;
+    padding: 14px;
     background: #fff;
 }
 
@@ -85,7 +85,7 @@ pre, code {
 /* Photos personnelles */
 img[src*="/photos/"] {
     display: block;
-    max-width: 500px;
+    max-width: 1000px;
     width: 100%;
     height: auto;
     margin: 1em auto;
